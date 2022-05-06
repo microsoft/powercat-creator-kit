@@ -1,0 +1,69 @@
+{
+  "NamedValues": [
+    {
+      "Kind": "Page",
+      "Name": "CustomPagePoc",
+      "Value": "custompage:cat_custompagepoc_8746c"
+    },
+    {
+      "Kind": "Page",
+      "Name": "DetailView",
+      "Value": "custompage:cr7a3_detailview_dbc11"
+    },
+    {
+      "Kind": "Page",
+      "Name": "CodeReviewPage",
+      "Value": "custompage:cr7a3_codereviewpage_8e396"
+    },
+    {
+      "Kind": "Page",
+      "Name": "StatisticPage",
+      "Value": "custompage:cat_statisticpage_e60c8"
+    },
+    {
+      "Kind": "Page",
+      "Name": "AppCheckerPage",
+      "Value": "custompage:cr7a3_appcheckerpage_c92c6"
+    },
+    {
+      "Kind": "Page",
+      "Name": "StaticCodeAnalysisPage",
+      "Value": "custompage:cat_staticcodeanalysispage_b595a"
+    },
+    {
+      "Kind": "Page",
+      "Name": "CreateReviewPage",
+      "Value": "custompage:cat_createreviewpage_65e38"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Planner",
+      "Value": "custompage:cr047_planner_dbe07"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Roles",
+      "Value": "custompage:cr7a3_roles_569ce"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Reviews",
+      "Value": "custompage:cat_reviews_838fb"
+    },
+    {
+      "Kind": "Page",
+      "Name": "SolutionReviewDetails",
+      "Value": "custompage:cat_solutionreviewdetails_d0b31"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Custom Page Template",
+      "Value": "custompage:cat_custompagetemplate_231d0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Planner_202204120118",
+      "Value": "custompage:cat_plannercopy_91b7b"
+    }
+  ]
+}

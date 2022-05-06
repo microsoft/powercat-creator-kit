@@ -1,0 +1,146 @@
+Spinner As CanvasComponent:
+    AnimatedGIF: |-
+        ="data:image/svg+xml;utf8, " & EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+        <circle cx='50' cy='50' fill='none' stroke='" & If(IsBlank(Spinner.HexColor),LookUp(Spinner.Styles, Name = "PrimaryColor2Value").Value, Spinner.HexColor) & "' stroke-width='4' r='31' stroke-dasharray='146.08405839192537 50.69468613064179'>
+          <animateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1.2048192771084336s' values='0 50 50;360 50 50' keyTimes='0;1'></animateTransform>
+        </circle>
+        </svg>")
+    Fill: =Transparent
+    Height: =1136
+    HexColor: =""
+    IsLoading: =true
+    OnReset: |-
+        =Set(PrimaryColor1Value,                  ColorValue(LookUp(Self.Styles, Name = "PrimaryColor1Value").Value));
+        Set(PrimaryColor1TextValue,              ColorValue(LookUp(Self.Styles, Name = "PrimaryColor1TextValue").Value));
+        Set(PrimaryColor2Value,                  ColorValue(LookUp(Self.Styles, Name = "PrimaryColor2Value").Value));
+        Set(PrimaryColor2TextValue,              ColorValue(LookUp(Self.Styles, Name = "PrimaryColor2TextValue").Value));
+        Set(PrimaryColor3Value,                  ColorValue(LookUp(Self.Styles, Name = "PrimaryColor3Value").Value));
+        Set(PrimaryColor3TextValue,              ColorValue(LookUp(Self.Styles, Name = "PrimaryColor3TextValue").Value));
+        Set(defaultLabelColorValue,              ColorValue(LookUp(Self.Styles, Name = "defaultLabelColorValue").Value));
+        Set(RadiusValue,                         Value(LookUp(Self.Styles,  Name = "RadiusValue").Value));
+        Set(TextBodyFontFaceValue, 			  	 LookUp(Self.Styles, Name = "TextBodyFontFaceValue").Value);
+        Set(PaddingValue, 						 Value(LookUp(Self.Styles, Name = "PaddingValue").Value));
+        Set(TextEmphasisFontSizeValue, 			 Value(LookUp(Self.Styles, Name = "TextEmphasisFontSizeValue").Value));
+        Set(TextEmphasisFontSizePhoneValue,		 Value(LookUp(Self.Styles,Name = "TextEmphasisFontSizePhoneValue").Value));
+        Set(TextBodyFontSizeValue,				 Value(LookUp(Self.Styles, Name = "TextBodyFontSizeValue").Value));
+        Set(TextBodyFontSizePhoneValue,			 Value(LookUp(Self.Styles, Name = "TextBodyFontSizePhoneValue").Value));
+        Set(BackgroundColorValue,				 ColorValue(LookUp(Self.Styles, Name = "BackgroundColorValue").Value));
+        Set(BorderThicknessValue,				 Value(LookUp(Self.Styles, Name = "BorderThicknessValue").Value));
+        Set(FocusedBorderThicknessValue,		 Value(LookUp(Self.Styles, Name = "FocusedBorderThicknessValue").Value));
+    Styles: |-
+        =Table({Name: "PrimaryColor1Value", Value: "#ffffff"},
+        {Name: "PrimaryColor1TextValue", Value: "#292929"},
+        {Name: "PrimaryColor2Value", Value: "#0078d4"},
+        {Name: "PrimaryColor2TextValue", Value: "#ffffff"},
+        {Name: "PrimaryColor3Value", Value: "#303030"},
+        {Name: "PrimaryColor3TextValue", Value: "#080808"},
+        {Name: "PrimaryColor4Value", Value: "#006e7d"},
+        {Name: "defaultLabelColorValue", Value: "#333333"},
+        {Name: "RadiusValue", Value: "0"},
+        {Name: "TextBodyFontFaceValue", Value: "Segoe UI" },
+        {Name: "PaddingValue", Value: "8"},
+        {Name: "TextEmphasisFontSizeValue", Value: "16"},
+        {Name: "TextEmphasisFontSizePhoneValue", Value: "24"},
+        {Name: "TextBodyFontSizeValue", Value: "14"},
+        {Name: "TextBodyFontSizePhoneValue", Value: "21"},
+        {Name: "BackgroundColorValue", Value: "#ffffff"},
+        {Name: "BorderThicknessValue", Value: "0"},
+        {Name: "BorderColorValue", Value: "#FFFFFF"},
+        {Name: "FocusedBorderThicknessValue", Value: "0"},
+        {Name: "BackgroundColorValue", Value :"#FFFFFF"}
+        )
+    Text: ="LOADING..."
+    Visible: =Spinner.IsLoading
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    SpinnerContent As groupContainer.verticalAutoLayoutContainer:
+        Height: =imgLoader.Height + lblLoaderText.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Spinner.Width
+        Y: =Spinner.Height/2-SpinnerContent.Height/2
+        ZIndex: =6
+
+        imgLoader As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderColor: =imgLoader.BorderColor
+            Height: =If(!IsBlank(LookUp(Spinner.Styles, Key = "PreloaderHeight").Value),LookUp(Spinner.Styles, Key = "PreloaderHeight").Value, 82)
+            HoverBorderColor: =ColorFade(imgLoader.BorderColor, 20%)
+            HoverFill: =ColorFade(imgLoader.Fill, 20%)
+            Image: =Spinner.AnimatedGIF
+            LayoutMinHeight: =320
+            LayoutMinWidth: =320
+            PressedBorderColor: =ColorFade(imgLoader.BorderColor, -20%)
+            PressedFill: =ColorFade(imgLoader.Fill, -20%)
+            Width: =If(!IsBlank(LookUp(Spinner.Styles, Key = "PreloaderWidth").Value),LookUp(Spinner.Styles, Key = "PreloaderWidth").Value, 82)
+            X: =Spinner.Width/2- Self.Width/2
+            Y: =Spinner.Height /2 - imgLoader.Height / 2
+            ZIndex: =1
+
+        lblLoaderText As label:
+            Align: =Center
+            AutoHeight: =true
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =If(!IsBlank(Spinner.HexColor),ColorValue(Spinner.HexColor),ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor2Value").Value))
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderColor: =lblLoaderText.BorderColor
+            Font: =If(!IsBlank(LookUp(Spinner.Styles, Key = "Font").Value),LookUp(Spinner.Styles, Key = "Font").Value, Font.'Segoe UI') 
+            Height: =70
+            HoverBorderColor: =lblLoaderText.BorderColor
+            HoverColor: =lblLoaderText.Color
+            HoverFill: =lblLoaderText.Fill
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PressedBorderColor: =lblLoaderText.BorderColor
+            PressedColor: =lblLoaderText.Color
+            PressedFill: =lblLoaderText.Fill
+            Size: =16
+            Text: =Spinner.Text
+            Width: =Spinner.Width
+            Y: =imgLoader.Y + imgLoader.Height
+            ZIndex: =2
+
+    iconRefresh_5 As icon.Reload:
+        AccessibleLabel: ="refresh control"
+        BorderColor: =ColorFade(iconRefresh_5.Fill, -20%)
+        Color: =RGBA(0, 134, 208, 0.1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =ColorFade(iconRefresh_5.Fill, -80%)
+        Fill: =RGBA(0,0,0,0)
+        Height: =37
+        HoverBorderColor: =ColorFade(iconRefresh_5.BorderColor, 20%)
+        HoverColor: =ColorFade(iconRefresh_5.Color, 20%)
+        HoverFill: =ColorFade(iconRefresh_5.Fill, 20%)
+        Icon: =Icon.Reload
+        OnSelect: |-
+            =Set(PrimaryColor1Value,                  ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor1Value").Value));
+            Set(PrimaryColor1TextValue,              ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor1TextValue").Value));
+            Set(PrimaryColor2Value,                  ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor2Value").Value));
+            Set(PrimaryColor2TextValue,              ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor2TextValue").Value));
+            Set(PrimaryColor3Value,                  ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor3Value").Value));
+            Set(PrimaryColor3TextValue,              ColorValue(LookUp(Spinner.Styles, Name = "PrimaryColor3TextValue").Value));
+            Set(defaultLabelColorValue,              ColorValue(LookUp(Spinner.Styles, Name = "defaultLabelColorValue").Value));
+            Set(RadiusValue,                         Value(LookUp(Spinner.Styles,  Name = "RadiusValue").Value));
+            //Set(TextBodyFontFaceValue, 			  	 LookUp(Spinner.Styles, Name = "TextBodyFontFaceValue").Value);
+            Set(PaddingValue, 						 Value(LookUp(Spinner.Styles, Name = "PaddingValue").Value));
+            Set(TextEmphasisFontSizeValue, 			 Value(LookUp(Spinner.Styles, Name = "TextEmphasisFontSizeValue").Value));
+            Set(TextEmphasisFontSizePhoneValue,		 Value(LookUp(Spinner.Styles,Name = "TextEmphasisFontSizePhoneValue").Value));
+            Set(TextBodyFontSizeValue,				 Value(LookUp(Spinner.Styles, Name = "TextBodyFontSizeValue").Value));
+            Set(TextBodyFontSizePhoneValue,			 Value(LookUp(Spinner.Styles, Name = "TextBodyFontSizePhoneValue").Value));
+            Set(BackgroundColorValue,				 ColorValue(LookUp(Spinner.Styles, Name = "BackgroundColorValue").Value));
+            Set(BorderThicknessValue,				 Value(LookUp(Spinner.Styles, Name = "BorderThicknessValue").Value));
+            Set(FocusedBorderThicknessValue,		 Value(LookUp(Spinner.Styles, Name = "FocusedBorderThicknessValue").Value));
+        PressedBorderColor: =ColorFade(iconRefresh_5.BorderColor, -20%)
+        PressedColor: =ColorFade(iconRefresh_5.Color, -20%)
+        PressedFill: =ColorFade(iconRefresh_5.Fill, -20%)
+        Width: =24
+        X: =Spinner.Width
+        ZIndex: =8
+

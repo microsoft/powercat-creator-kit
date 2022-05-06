@@ -1,0 +1,354 @@
+Dialog As CanvasComponent:
+    Buttons: |-
+        =Table({Label: "Cancel", Styles:Table({Name: "PrimaryColor1Value", Value: "#ffffff"},
+        {Name: "PrimaryColor1TextValue", Value: "#292929"},
+        {Name: "PrimaryColor2Value", Value: "#FFFFFF"},
+        {Name: "PrimaryColor2TextValue", Value: "#383837"},
+        {Name: "PrimaryColor3Value", Value: "#303030"},
+        {Name: "PrimaryColor3TextValue", Value: "#080808"},
+        {Name: "PrimaryColor4Value", Value: "#006e7d"},
+        {Name: "defaultLabelColorValue", Value: "#605e5c"},
+        {Name: "RadiusValue", Value: "0"},
+        {Name: "TextBodyFontFaceValue", Value: "Segoe UI" },
+        {Name: "PaddingValue", Value: "8"},
+        {Name: "TextEmphasisFontSizeValue", Value: "16"},
+        {Name: "TextEmphasisFontSizePhoneValue", Value: "24"},
+        {Name: "TextBodyFontSizeValue", Value: "14"},
+        {Name: "TextBodyFontSizePhoneValue", Value: "21"},
+        {Name: "BackgroundColorValue", Value: "#d9d4d4"},
+        {Name: "BorderThicknessValue", Value: "1"},
+        {Name: "BorderColorValue", Value: "#383837"},
+        {Name: "FocusedBorderThicknessValue", Value: "0"}
+        ), Fill:"#FFFFFF", Color:"#0086D0"} ,{Label: "Ok", Styles:Table({Name: "PrimaryColor1Value", Value: "#ffffff"},
+        {Name: "PrimaryColor1TextValue", Value: "#292929"},
+        {Name: "PrimaryColor2Value", Value: "#0078d4"},
+        {Name: "PrimaryColor2TextValue", Value: "#ffffff"},
+        {Name: "PrimaryColor3Value", Value: "#303030"},
+        {Name: "PrimaryColor3TextValue", Value: "#080808"},
+        {Name: "PrimaryColor4Value", Value: "#006e7d"},
+        {Name: "defaultLabelColorValue", Value: "#605e5c"},
+        {Name: "RadiusValue", Value: "0"},
+        {Name: "TextBodyFontFaceValue", Value: "Segoe UI" },
+        {Name: "PaddingValue", Value: "8"},
+        {Name: "TextEmphasisFontSizeValue", Value: "16"},
+        {Name: "TextEmphasisFontSizePhoneValue", Value: "24"},
+        {Name: "TextBodyFontSizeValue", Value: "14"},
+        {Name: "TextBodyFontSizePhoneValue", Value: "21"},
+        {Name: "BackgroundColorValue", Value: "#d9d4d4"},
+        {Name: "BorderThicknessValue", Value: "0"},
+        {Name: "BorderColorValue", Value: "#FFFFFF"},
+        {Name: "FocusedBorderThicknessValue", Value: "0"}
+        ),Fill:"#0086D0", Color:"#FFFFFF"})
+    ContentHeight: =Dialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery.Height
+    ContentWidth: =Dialog.DialogWidth
+    ContentX: = Dialog.Width/2-Dialog.DialogWidth/2
+    ContentY: = Dialog.Height/2-Dialog.DialogHeight/2+DialogHeaderContainer.Height
+    Description: ="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis ?"
+    DialogHeight: =400
+    DialogWidth: =640
+    Fill: =Dialog.OverlayColor
+    Height: =900
+    OnButtonSelect: =
+    OnCloseSelect: =true
+    OnReset: |
+        =Set(PrimaryColor1Value,                  ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor1Value").Value));
+        Set(PrimaryColor1TextValue,              ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor1TextValue").Value));
+        Set(PrimaryColor2Value,                  ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor2Value").Value));
+        Set(PrimaryColor2TextValue,              ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor2TextValue").Value));
+        Set(PrimaryColor3Value,                  ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor3Value").Value));
+        Set(PrimaryColor3TextValue,              ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor3TextValue").Value));
+        Set(defaultLabelColorValue,              ColorValue(LookUp(Dialog.Styles, Name = "defaultLabelColorValue").Value));
+        Set(RadiusValue,                         Value(LookUp(Dialog.Styles,  Name = "RadiusValue").Value));
+        Set(TextBodyFontFaceValue, 			  	 LookUp(Dialog.Styles, Name = "TextBodyFontFaceValue").Value);
+        Set(PaddingValue, 						 Value(LookUp(Dialog.Styles, Name = "PaddingValue").Value));
+        Set(TextEmphasisFontSizeValue, 			 Value(LookUp(Dialog.Styles, Name = "TextEmphasisFontSizeValue").Value));
+        Set(TextEmphasisFontSizePhoneValue,		 Value(LookUp(Dialog.Styles,Name = "TextEmphasisFontSizePhoneValue").Value));
+        Set(TextBodyFontSizeValue,				 Value(LookUp(Dialog.Styles, Name = "TextBodyFontSizeValue").Value));
+        Set(TextBodyFontSizePhoneValue,			 Value(LookUp(Dialog.Styles, Name = "TextBodyFontSizePhoneValue").Value));
+        Set(BackgroundColorValue,				 ColorValue(LookUp(Dialog.Styles, Name = "BackgroundColorValue").Value));
+        Set(BorderThicknessValue,				 Value(LookUp(Dialog.Styles, Name = "BorderThicknessValue").Value));
+        Set(FocusedBorderThicknessValue,		 Value(LookUp(Dialog.Styles, Name = "FocusedBorderThicknessValue").Value));
+    OverlayColor: =RGBA(0, 0, 0, 0.4)
+    SelectedButton: |-
+        ={ Label: ButtonsGallery.Selected.Label }
+    Styles: |-
+        =Table({Name: "PrimaryColor1Value", Value: "#ffffff"},
+        {Name: "PrimaryColor1TextValue", Value: "#292929"},
+        {Name: "PrimaryColor2Value", Value: "#0078d4"},
+        {Name: "PrimaryColor2TextValue", Value: "#ffffff"},
+        {Name: "PrimaryColor3Value", Value: "#303030"},
+        {Name: "PrimaryColor3TextValue", Value: "#080808"},
+        {Name: "PrimaryColor4Value", Value: "#006e7d"},
+        {Name: "defaultLabelColorValue", Value: "#333333"},
+        {Name: "RadiusValue", Value: "0"},
+        {Name: "TextBodyFontFaceValue", Value: "Segoe UI" },
+        {Name: "PaddingValue", Value: "8"},
+        {Name: "TextEmphasisFontSizeValue", Value: "16"},
+        {Name: "TextEmphasisFontSizePhoneValue", Value: "24"},
+        {Name: "TextBodyFontSizeValue", Value: "14"},
+        {Name: "TextBodyFontSizePhoneValue", Value: "21"},
+        {Name: "BackgroundColorValue", Value: "#ffffff"},
+        {Name: "BorderThicknessValue", Value: "0"},
+        {Name: "BorderColorValue", Value: "#FFFFFF"},
+        {Name: "FocusedBorderThicknessValue", Value: "0"},
+        {Name: "BackgroundColorValue", Value :"#FFFFFF"}
+        )
+    SubTitle: ="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis ?"
+    Title: ="Title"
+    Visible: =true
+    Width: =1600
+    X: =0
+    Y: =0
+    ZIndex: =7
+
+    htmlShadow As htmlViewer:
+        Height: =Dialog.Height
+        HtmlText: |-
+            ="<div style=' transform: translate(-50%, -50%);position:absolute;top:50%;left:50%;margin:auto;box-shadow:rgba(0, 0, 0, 0.22) 0px 25.6px 57.6px 0px, rgba(0, 0, 0, 0.18) 0px 4.8px 14.4px 0px;border-radius:2px;padding:0;background-color:" & LookUp(Dialog.Styles, Name = "BackgroundColorValue").Value & ";width:"& Dialog.DialogWidth &"px;height:" & Dialog.DialogHeight  &"px'></div>"
+        Width: =Dialog.Width
+        ZIndex: =1
+
+    DialogRootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Container19 As groupContainer.manualLayoutContainer:
+            LayoutMinHeight: =0
+            ZIndex: =1
+
+        MiddleContainer As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =Min(Dialog.DialogHeight, Parent.Height) 
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinWidth: =0
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            Container19_2 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                LayoutMinWidth: =0
+                ZIndex: =1
+
+            CenterDialogContainer As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Fill: =Transparent
+                FillPortions: =0
+                Height: =Min(Dialog.DialogHeight, Parent.Height) 
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =10
+                PaddingRight: =20
+                PaddingTop: =10
+                Width: =Min(Dialog.DialogWidth, Parent.Width)
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+                DialogHeaderContainer As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =75
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =10
+                    Width: =Dialog.DialogWidth
+                    ZIndex: =1
+
+                    Label3 As label:
+                        BorderColor: =PrimaryColor2Value
+                        Color: =defaultLabelColorValue
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(0,0,0,0)
+                        Fill: =RGBA(0,0,0,0)
+                        FillPortions: =1
+                        Font: =TextBodyFontFaceValue
+                        FontWeight: =Semibold
+                        Height: =60
+                        LineHeight: =20
+                        PaddingBottom: =PaddingValue
+                        PaddingLeft: =24
+                        PaddingRight: =PaddingValue
+                        PaddingTop: =16  
+                        Size: =20
+                        TabIndex: =0
+                        Text: =Dialog.Title
+                        ZIndex: =1
+
+                    Icon2 As icon.Cancel:
+                        AccessibleLabel: ="close button"
+                        BorderColor: =ColorFade(Icon2.Fill, -20%)
+                        Color: =Black
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(244, 244, 244, 1)
+                        DisabledFill: =ColorFade(Icon2.Fill, -80%)
+                        Fill: =RGBA(0,0,0,0)
+                        FocusedBorderThickness: =FocusedBorderThicknessValue
+                        Height: =32
+                        HoverBorderColor: =ColorFade(Icon2.BorderColor, 20%)
+                        HoverColor: =ColorFade(Icon2.Color, 20%)
+                        HoverFill: =ColorFade(Icon2.Color, 90%)
+                        Icon: =Icon.Cancel
+                        OnSelect: =Dialog.OnCloseSelect()
+                        PaddingBottom: =8
+                        PaddingLeft: =8
+                        PaddingRight: =8
+                        PaddingTop: =8
+                        PressedBorderColor: =ColorFade(Icon2.BorderColor, -20%)
+                        PressedColor: =ColorFade(Icon2.Color, -20%)
+                        PressedFill: =ColorFade(Icon2.Fill, -20%)
+                        TabIndex: =1
+                        Width: =32
+                        ZIndex: =2
+
+                DialogContentContainer As groupContainer.manualLayoutContainer:
+                    PaddingBottom: =5
+                    Width: =Dialog.DialogWidth
+                    ZIndex: =2
+
+                    Label3_1 As label:
+                        AutoHeight: =true
+                        BorderColor: =PrimaryColor2Value
+                        Color: =defaultLabelColorValue
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(0,0,0,0)
+                        Fill: =RGBA(0,0,0,0)
+                        Font: =Font.'Segoe UI'
+                        Height: =Parent.Height
+                        PaddingBottom: =10
+                        PaddingLeft: =24
+                        PaddingRight: =24
+                        PaddingTop: =PaddingValue
+                        Size: =TextBodyFontSizeValue
+                        Text: =Dialog.SubTitle
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.Width
+                        ZIndex: =1
+
+                ButtonsGallery As gallery.galleryHorizontal:
+                    AccessibleLabel: ="dialog buttons"
+                    AlignInContainer: =AlignInContainer.End
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    DisabledBorderColor: =ButtonsGallery.BorderColor
+                    DisabledFill: =ButtonsGallery.Fill
+                    FillPortions: =0
+                    Height: =60
+                    HoverBorderColor: =ButtonsGallery.BorderColor
+                    HoverFill: =ButtonsGallery.Fill
+                    Items: =Dialog.Buttons
+                    LoadingSpinnerColor: =ButtonsGallery.BorderColor
+                    OnSelect: =Set(isButtonSelected, true);Set(selectedButton, ThisItem);Set(isDialogOpen,false)
+                    PressedBorderColor: =ButtonsGallery.BorderColor
+                    PressedFill: =ButtonsGallery.Fill
+                    ShowScrollbar: =false
+                    TabIndex: =2
+                    TemplateSize: =If(CountRows(ButtonsGallery.AllItems) > 0, ButtonsGallery.Width / CountRows(ButtonsGallery.AllItems))
+                    Width: =CountRows(ButtonsGallery.AllItems) * 120 + 10
+                    X: =8
+                    ZIndex: =4
+
+                    btnControl As label:
+                        Align: =Center
+                        BorderColor: =ColorValue(LookUp(ThisItem.Styles, Name = "BorderColorValue").Value)
+                        BorderThickness: =LookUp(ThisItem.Styles, Name = "BorderThicknessValue").Value
+                        Color: =ColorValue(LookUp(ThisItem.Styles, Name = "PrimaryColor2TextValue").Value)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Fill: =ColorValue(LookUp(ThisItem.Styles, Name = "PrimaryColor2Value").Value)
+                        FocusedBorderColor: =btnControl.BorderColor
+                        Font: =TextBodyFontFaceValue
+                        Height: =32
+                        HoverBorderColor: =btnControl.BorderColor
+                        HoverColor: =btnControl.Color
+                        HoverFill: =btnControl.Fill
+                        OnSelect: =Dialog.OnButtonSelect()
+                        PressedBorderColor: =btnControl.BorderColor
+                        PressedColor: =btnControl.Color
+                        PressedFill: =btnControl.Fill
+                        Size: =10.5
+                        TabIndex: =2
+                        Text: =ThisItem.Label
+                        Width: =122
+                        Y: =9
+                        ZIndex: =1
+
+            Container19_3 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                LayoutMinWidth: =0
+                ZIndex: =3
+
+        Container19_1 As groupContainer.manualLayoutContainer:
+            ZIndex: =3
+
+    iconRefresh_3 As icon.Reload:
+        AccessibleLabel: ="refresh control"
+        BorderColor: =ColorFade(iconRefresh_3.Fill, -20%)
+        Color: =RGBA(0, 134, 208, 0.1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisabledFill: =ColorFade(iconRefresh_3.Fill, -80%)
+        Fill: =RGBA(0,0,0,0)
+        Height: =37
+        HoverBorderColor: =ColorFade(iconRefresh_3.BorderColor, 20%)
+        HoverColor: =ColorFade(iconRefresh_3.Color, 20%)
+        HoverFill: =ColorFade(iconRefresh_3.Fill, 20%)
+        Icon: =Icon.Reload
+        OnSelect: |-
+            =Set(PrimaryColor1Value,                  ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor1Value").Value));
+            Set(PrimaryColor1TextValue,              ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor1TextValue").Value));
+            Set(PrimaryColor2Value,                  ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor2Value").Value));
+            Set(PrimaryColor2TextValue,              ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor2TextValue").Value));
+            Set(PrimaryColor3Value,                  ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor3Value").Value));
+            Set(PrimaryColor3TextValue,              ColorValue(LookUp(Dialog.Styles, Name = "PrimaryColor3TextValue").Value));
+            Set(defaultLabelColorValue,              ColorValue(LookUp(Dialog.Styles, Name = "defaultLabelColorValue").Value));
+            Set(RadiusValue,                         Value(LookUp(Dialog.Styles,  Name = "RadiusValue").Value));
+            Set(TextBodyFontFaceValue, 			  	 LookUp(Dialog.Styles, Name = "TextBodyFontFaceValue").Value);
+            Set(PaddingValue, 						 Value(LookUp(Dialog.Styles, Name = "PaddingValue").Value));
+            Set(TextEmphasisFontSizeValue, 			 Value(LookUp(Dialog.Styles, Name = "TextEmphasisFontSizeValue").Value));
+            Set(TextEmphasisFontSizePhoneValue,		 Value(LookUp(Dialog.Styles,Name = "TextEmphasisFontSizePhoneValue").Value));
+            Set(TextBodyFontSizeValue,				 Value(LookUp(Dialog.Styles, Name = "TextBodyFontSizeValue").Value));
+            Set(TextBodyFontSizePhoneValue,			 Value(LookUp(Dialog.Styles, Name = "TextBodyFontSizePhoneValue").Value));
+            Set(BackgroundColorValue,				 ColorValue(LookUp(Dialog.Styles, Name = "BackgroundColorValue").Value));
+            Set(BorderThicknessValue,				 Value(LookUp(Dialog.Styles, Name = "BorderThicknessValue").Value));
+            Set(FocusedBorderThicknessValue,		 Value(LookUp(Dialog.Styles, Name = "FocusedBorderThicknessValue").Value));
+        PressedBorderColor: =ColorFade(iconRefresh_3.BorderColor, -20%)
+        PressedColor: =ColorFade(iconRefresh_3.Color, -20%)
+        PressedFill: =ColorFade(iconRefresh_3.Fill, -20%)
+        Width: =24
+        X: =Parent.Width + 10
+        Y: =20
+        ZIndex: =3
+
+    WorkaroundBugHandler_1 As button:
+        BorderColor: =White
+        BorderThickness: =BorderThicknessValue
+        Color: =PrimaryColor2TextValue
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =PrimaryColor2Value
+        FocusedBorderThickness: =BorderThicknessValue
+        Font: =TextBodyFontFaceValue
+        FontWeight: =FontWeight.Semibold
+        HoverBorderColor: =ColorFade(WorkaroundBugHandler_1.BorderColor, 20%)
+        HoverColor: =ColorFade(WorkaroundBugHandler_1.Color, 20%)
+        HoverFill: =ColorFade(WorkaroundBugHandler_1.Fill, 20%)
+        OnSelect: =Dialog.OnButtonSelect()
+        PaddingBottom: =PaddingValue
+        PaddingLeft: =PaddingValue
+        PaddingRight: =PaddingValue
+        PaddingTop: =PaddingValue
+        PressedBorderColor: =WorkaroundBugHandler_1.Fill
+        PressedColor: =WorkaroundBugHandler_1.Fill
+        PressedFill: =WorkaroundBugHandler_1.Color
+        RadiusBottomLeft: =RadiusValue
+        RadiusBottomRight: =RadiusValue
+        RadiusTopLeft: =RadiusValue
+        RadiusTopRight: =RadiusValue
+        Size: =TextEmphasisFontSizeValue
+        Text: ="Button"
+        Visible: =false
+        X: =104
+        Y: =176
+        ZIndex: =5
+

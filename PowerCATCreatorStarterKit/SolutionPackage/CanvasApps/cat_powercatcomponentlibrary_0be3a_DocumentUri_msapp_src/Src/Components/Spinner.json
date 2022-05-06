@@ -1,0 +1,64 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Spinner",
+    "TemplateGuid": "174a744e6baa47b4857cec5814d6422e"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Animated GIF",
+      "Hidden": false,
+      "Name": "AnimatedGIF",
+      "PropertyDataTypeKey": "Image",
+      "Tooltip": "Animated GIF",
+      "Type": "{\"Version\":\"1.323\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Text",
+      "Hidden": false,
+      "Name": "Text",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Text",
+      "Type": "{\"Version\":\"1.323\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "IsLoading",
+      "Hidden": false,
+      "Name": "IsLoading",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Is Loading",
+      "Type": "{\"Version\":\"1.323\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Theme",
+      "Hidden": false,
+      "Name": "Theme",
+      "PropertyDataTypeKey": "Record",
+      "Tooltip": "Theme",
+      "Type": "{\"Version\":\"1.323\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"palette\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"black\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarkAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarker\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themePrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"white\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637866892971599676",
+  "Name": "174a744e6baa47b4857cec5814d6422e",
+  "OverridableProperties": {},
+  "TemplateOriginalName": "723b04d7bcae46baa954bf804c330f04",
+  "Version": "637722065298843820"
+}

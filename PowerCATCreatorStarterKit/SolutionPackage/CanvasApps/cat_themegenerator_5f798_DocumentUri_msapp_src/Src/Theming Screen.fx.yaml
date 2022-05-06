@@ -1,0 +1,72 @@
+"'Theming Screen' As screen":
+    Fill: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =
+
+    RootLayoutContainer_TS_1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(250, 250, 250, 1)
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =App.Width
+        Y: =
+        ZIndex: =1
+
+        PowerCATHeader_TS_1 As Header:
+            ContentWidth: =DesiredMaxWidth
+            Height: =70
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            RightButtonVisible: =false
+            Styles: |-
+                =Table({Name: "PrimaryColor1Value", Value: "#ffffff"},
+                {Name: "PrimaryColor1TextValue", Value: "#ffffff"},
+                {Name: "PrimaryColor2Value", Value: "#0078d4"},
+                {Name: "PrimaryColor2TextValue", Value: "#ffffff"},
+                {Name: "PrimaryColor3Value", Value: "#303030"},
+                {Name: "PrimaryColor3TextValue", Value: "#080808"},
+                {Name: "PrimaryColor4Value", Value: "#006e7d"},
+                {Name: "defaultLabelColorValue", Value: "#ffffff"},
+                {Name: "RadiusValue", Value: "0"},
+                {Name: "TextBodyFontFaceValue", Value: "Segoe UI" },
+                {Name: "PaddingValue", Value: "20"},
+                {Name: "TextEmphasisFontSizeValue", Value: "16"},
+                {Name: "TextEmphasisFontSizePhoneValue", Value: "24"},
+                {Name: "TextBodyFontSizeValue", Value: "14"},
+                {Name: "TextBodyFontSizePhoneValue", Value: "21"},
+                {Name: "BackgroundColorValue", Value: AppTheme.palette.themePrimary},
+                {Name: "BorderThicknessValue", Value: "0"},
+                {Name: "BorderColorValue", Value: "#FFFFFF"},
+                {Name: "FocusedBorderThicknessValue", Value: "0"},
+                {Name: "BackgroundColorValue", Value :"#FFFFFF"},
+                {Name: "FontWeightValue", Value: "600"}
+                )
+            Text: ="Theme Designer"
+            Visible: =true
+            ZIndex: =1
+
+        CenterContainer_TS_1 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =White
+            Height: =
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =200
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =10
+            Width: =DesiredMaxWidth
+            ZIndex: =2
+
+            FluentThemeDesigner1 As FluentThemeDesigner:
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =200
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =2
+

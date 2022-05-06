@@ -1,0 +1,75 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Spinner",
+    "TemplateGuid": "31047709dc134fb1bdcd506eacad6dd9"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Animated GIF",
+      "Hidden": false,
+      "Name": "AnimatedGIF",
+      "PropertyDataTypeKey": "Image",
+      "Tooltip": "Animated GIF",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Text",
+      "Hidden": false,
+      "Name": "Text",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Text",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "IsLoading",
+      "Hidden": false,
+      "Name": "IsLoading",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Is Loading",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Styles",
+      "Hidden": false,
+      "Name": "Styles",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Styles",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Name\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Value\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "HexColor",
+      "Hidden": false,
+      "Name": "HexColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Color",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": true,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637874157057131827",
+  "Name": "31047709dc134fb1bdcd506eacad6dd9",
+  "OverridableProperties": {},
+  "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",
+  "SourceLibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
+  "TemplateOriginalName": "174a744e6baa47b4857cec5814d6422e",
+  "Version": "637722065298843820"
+}

@@ -1,0 +1,115 @@
+"'Home Screen' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    RootLayoutContainer_HS As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(250, 250, 250, 1)
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =App.Width
+        ZIndex: =1
+
+        CommandContainer_HS As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =44
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            "CommandsMenusNavs1 As 'Commands/Menus/Navs'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =44
+                Items: |-
+                    = Table(
+                        {
+                            ItemKey: "New",
+                            ItemIconName: "Add",
+                            ItemDisplayName: "New"
+                        },
+                        {
+                            ItemKey: "Refresh",
+                            ItemIconName: "Refresh",
+                            ItemDisplayName: "Refresh"
+                        },
+                        {
+                            ItemKey: "Help",
+                            ItemIconName: "Help",
+                            ItemDisplayName: "Help"
+                        })
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                ThemeJSON: =AppThemeJson
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        SubheaderContainer_HS As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =70
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            ZIndex: =4
+
+            lbTitleCodeReview As label:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(20, 0, 0, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FillPortions: =1
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                FontWeight: =Semibold
+                Height: =70
+                PaddingLeft: =20
+                Text: ="Header Title"
+                Width: =240
+                Y: =241
+                ZIndex: =1
+
+            SearchBox_1 As SearchBox:
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Styles: |-
+                    =Table({Name: "PrimaryColor1Value", Value: "#ffffff"},
+                    {Name: "PrimaryColor1TextValue", Value: "#292929"},
+                    {Name: "PrimaryColor2Value", Value: "#0078d4"},
+                    {Name: "PrimaryColor2TextValue", Value: "#ffffff"},
+                    {Name: "PrimaryColor3Value", Value: "#303030"},
+                    {Name: "PrimaryColor3TextValue", Value: "#080808"},
+                    {Name: "PrimaryColor4Value", Value: "#006e7d"},
+                    {Name: "defaultLabelColorValue", Value: "#333333"},
+                    {Name: "RadiusValue", Value: "0"},
+                    {Name: "TextBodyFontFaceValue", Value: "Segoe UI" },
+                    {Name: "PaddingValue", Value: "8"},
+                    {Name: "TextEmphasisFontSizeValue", Value: "16"},
+                    {Name: "TextEmphasisFontSizePhoneValue", Value: "24"},
+                    {Name: "TextBodyFontSizeValue", Value: "12"},
+                    {Name: "TextBodyFontSizePhoneValue", Value: "21"},
+                    {Name: "BackgroundColorValue", Value: "#ffffff"},
+                    {Name: "BorderThicknessValue", Value: "0"},
+                    {Name: "BorderColorValue", Value: "#FFFFFF"},
+                    {Name: "FocusedBorderThicknessValue", Value: "0"},
+                    {Name: "BackgroundColorValue", Value :"#FFFFFF"}
+                    )
+                ZIndex: =2
+
+        ContentContainer_HS As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =5
+

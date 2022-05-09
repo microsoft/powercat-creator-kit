@@ -1,0 +1,80 @@
+{
+  "ComponentIndexes": {
+    "SearchBox": 1,
+    "SearchBox_1": 10
+  },
+  "ControlUniqueIds": {
+    "App": 1,
+    "CommandBar1": 18,
+    "CommandContainer_HS": 8,
+    "ContentContainer_HS": 13,
+    "Home Screen": 6,
+    "imgSearch_1": 5,
+    "lbTitleCodeReview": 11,
+    "RootLayoutContainer_HS": 7,
+    "SearchBox": 3,
+    "SearchBox_1": 12,
+    "SubheaderContainer_HS": 10,
+    "txtSearchInput_1": 4
+  },
+  "FunctionParamsInvariantScripts": {},
+  "HeaderLastSavedDateTimeUTC": "05/08/2022 10:25:40",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {
+    "a7b4c150851e48cd9135da59f99e01ba": 0
+  },
+  "OrderComponentTemplate": {
+    "a7b4c150851e48cd9135da59f99e01ba": 0
+  },
+  "OrderDataSource": {},
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "groupContainer": 0,
+    "image": 3,
+    "label": 1,
+    "text": 2
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "CommandBar1": 2,
+    "CommandContainer_HS": 1,
+    "ContentContainer_HS": 6,
+    "Home Screen": 0,
+    "imgSearch_1": 8,
+    "lbTitleCodeReview": 4,
+    "RootLayoutContainer_HS": 0,
+    "SearchBox": 6,
+    "SearchBox_1": 5,
+    "SubheaderContainer_HS": 3,
+    "txtSearchInput_1": 7
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.1505764,
+    "ControlCount": {
+      "a7b4c150851e48cd9135da59f99e01ba": 2,
+      "cat_PowerCAT.CommandsMenusNavs": 1,
+      "groupContainer": 4,
+      "image": 1,
+      "label": 1,
+      "Microsoft_CoreControls_Checkbox": 1,
+      "Microsoft_CoreControls_RadioGroup": 1,
+      "Microsoft_CoreControls_Slider": 1,
+      "pcfDataField": 1,
+      "screen": 1,
+      "text": 1
+    },
+    "DeserializationLoadTime": 7.4442298,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": false
+}

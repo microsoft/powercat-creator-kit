@@ -1,0 +1,62 @@
+SampleAppCodeHeader As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_5.Selected.ItemKey="code",htmlCode_5.Y+htmlCode_5.Height,SampleAppCodeHeader.SampleHeight)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =SampleAppCodeHeader.ComponentHeight
+    SampleCodeHtml: ="Text"
+    SampleHeight: =300
+    Title: ="Sample Title"
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_5 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: =SampleAppCodeHeader.Title
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_5 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_5.Y+htmlCode_5.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    line_5 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_5 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<div style=""background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;""><pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(255, 255, 255); color: rgb(0, 0, 0);"">" & SampleAppCodeHeader.SampleCodeHtml &
+            "</pre></div>"
+        Size: =10
+        Visible: =pivotAppCode_5.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =4
+

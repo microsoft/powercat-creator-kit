@@ -1,0 +1,255 @@
+ElevationSummary As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_14.Selected.ItemKey="code",htmlCode_14.Y+htmlCode_14.Height,600)
+    Fill: =
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_14 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Elevation Summary"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_14 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_14.Y+htmlCode_14.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Visible: =false
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    pivotline_14 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_14 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: =""
+        Size: =10
+        Visible: =pivotAppCode_14.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    Group11 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        galElevations As gallery.galleryVertical:
+            AccessibleLabel: ="Elevations"
+            DisplayMode: =DisplayMode.View
+            Height: =502
+            ItemAccessibleLabel: ="Elevation"
+            Items: |-
+                =Table(
+                    {
+                        Level: 4,
+                        Depth: '''PowerCAT.Elevation.Depth'''.Depth4,
+                        Usage: "Cards
+                Grid item thumbnails",
+                        EnumValue: "'PowerCAT.Elevation.Depth'.Depth4"
+                    },
+                    {
+                        Level: 8,
+                        Depth: '''PowerCAT.Elevation.Depth'''.Depth8,
+                        Usage: "Command bars
+                Command dropdowns
+                Context menus",
+                        EnumValue: "'PowerCAT.Elevation.Depth'.Depth8"
+                    },
+                    {
+                        Level: 16,
+                        Depth: '''PowerCAT.Elevation.Depth'''.Depth16,
+                        Usage: "Teaching callouts
+                Search results dropdown
+                Hover cards
+                Tooltips",
+                        EnumValue: "'PowerCAT.Elevation.Depth'.Depth16"
+                    },
+                    {
+                        Level: 64,
+                        Depth: '''PowerCAT.Elevation.Depth'''.Depth64,
+                        Usage: "Panels
+                Pop up dialogs",
+                        EnumValue: "'PowerCAT.Elevation.Depth'.Depth64"
+                    }
+                )
+            Layout: =Layout.Vertical
+            Selectable: =false
+            TabIndex: =0
+            TemplateSize: =103
+            Visible: =pivotAppCode_14.Selected.ItemKey="app"
+            Width: =627
+            Y: =110
+            ZIndex: =5
+
+            "ElevationGalleryItem As 'Fluent Elevation (0.0.18)'":
+                Depth: =ThisItem.Depth
+                DisplayMode: =DisplayMode.Edit
+                Height: =78
+                Width: =115
+                X: =48
+                Y: =0
+                ZIndex: =1
+
+            lblDepthValue As label:
+                Color: =varTheme.palette.neutralPrimary
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =19
+                Size: =varTheme.fontSizes.s
+                Text: =ThisItem.Level
+                Width: =61
+                Y: =4
+                ZIndex: =2
+
+            lblDepthName As label:
+                Align: =Align.Center
+                Color: =varTheme.palette.neutralPrimary
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =26
+                Size: =varTheme.fontSizes.s
+                Text: ="Depth " & Text(ThisItem.Level)
+                Width: =85
+                X: =63
+                Y: =26
+                ZIndex: =3
+
+            line_12 As rectangle:
+                Fill: =varTheme.palette.neutralTertiary
+                Height: =1
+                Width: =Parent.Width-Self.X*2
+                Y: =97
+                ZIndex: =4
+
+            lblElevationUse As label:
+                AutoHeight: =true
+                Color: =varTheme.palette.neutralPrimary
+                DisplayMode: =DisplayMode.View
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Lighter
+                Height: =38
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =varTheme.fontSizes.s
+                Text: =ThisItem.Usage
+                Width: =187
+                X: =178
+                ZIndex: =5
+
+            lblEnumValue As label:
+                Color: =varTheme.palette.neutralPrimary
+                DisplayMode: =DisplayMode.View
+                Fill: =varTheme.palette.neutralLighter
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Lighter
+                Height: =23
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =8
+                Text: =ThisItem.EnumValue
+                Width: =233
+                X: =365
+                ZIndex: =6
+
+        line_13 As rectangle:
+            DisplayMode: =DisplayMode.View
+            Fill: =varTheme.palette.neutralPrimary
+            Height: =1
+            Visible: =pivotAppCode_14.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X*2
+            Y: =99
+            ZIndex: =6
+
+        lblHeader1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: ="Level"
+            Visible: =pivotAppCode_14.Selected.ItemKey="app"
+            Width: =56
+            Y: =67
+            ZIndex: =7
+
+        lblHeader2 As label:
+            Color: =varTheme.palette.neutralPrimary
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: ="Example"
+            Visible: =pivotAppCode_14.Selected.ItemKey="app"
+            Width: =93
+            X: =44
+            Y: =67
+            ZIndex: =8
+
+        lblHeader3 As label:
+            Color: =varTheme.palette.neutralPrimary
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: ="Usage"
+            Visible: =pivotAppCode_14.Selected.ItemKey="app"
+            Width: =93
+            X: =174
+            Y: =67
+            ZIndex: =9
+
+        lblHeader4 As label:
+            Color: =varTheme.palette.neutralPrimary
+            DisplayMode: =DisplayMode.View
+            FocusedBorderThickness: =1
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: ="Enum Value"
+            Visible: =pivotAppCode_14.Selected.ItemKey="app"
+            Width: =93
+            X: =362
+            Y: =67
+            ZIndex: =10
+

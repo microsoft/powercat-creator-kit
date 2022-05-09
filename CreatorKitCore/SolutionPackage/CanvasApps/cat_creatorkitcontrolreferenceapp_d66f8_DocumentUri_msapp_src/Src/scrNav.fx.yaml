@@ -1,0 +1,98 @@
+scrNav As screen:
+
+    stackRoot_7 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_8.Width
+        ZIndex: =2
+
+        lblTitle_7 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="Fluent Nav (Navigation)"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_7 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="A navigation pane (<code>Nav</code>) provides links to the main areas of an app or site"
+            ZIndex: =2
+
+        TextPanel_1 As TextPanel:
+            LayoutMinHeight: =640
+            Text: |-
+                ="<h2 style=""font-weight:400;"">Best Practices</h2><h3 style=""font-weight:600;"">Layout</h3><ul><li>In larger configurations, the navigation pane is always on-screen, usually on the left of the view. On smaller screens, consider collapsing it into a skinnier version or hiding it behind a menu button (note that <code>Nav</code> does not currently have either of these behaviors built in).</li><li>Don’t overload your navigation pane. Too many items in the <code>Nav</code> is indicative of an app that is poorly organized or trying to do too much.</li></ul>
+                <h3 style=""font-weight:600;"">Content</h3><ul><li>Keep the names of the navigation items brief and clear, rather than trying to be overly specific.</li><li>Use the word that feels right for the navigation. For example, some items may make more sense as nouns (e.g. “Files”), others as adjectives (“Shared”). Use what makes sense for customers, and keep it short!</li><li>Try to keep your app’s nav in a consistent order across platforms. This sort of consistency increases predictability which drives customer confidence, thus retaining and engaging them.</li><li>If using a menu button to expand and collapse the <code>Nav</code>, use the tooltip “Expand navigation” or “Collapse navigation”.</li></ul>"
+            ZIndex: =3
+
+        Container7 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =stackSamplesNav.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            "Elevation2_10 As 'Fluent Elevation (0.0.18)'":
+                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            stackSamplesNav As groupContainer.verticalAutoLayoutContainer:
+                Height: |-
+                    =Label1_2.Height+
+                    NavBasic_1.ComponentHeight +
+                    Self.PaddingTop + Self.PaddingBottom
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =8*varTheme.U
+                PaddingLeft: =8*varTheme.U
+                PaddingRight: =8*varTheme.U
+                PaddingTop: =8*varTheme.U
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Label1_6 As label:
+                    Color: =varTheme.palette.neutralPrimary
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =12*varTheme.U
+                    Size: =varTheme.fontSizes.l
+                    Text: ="Usage"
+                    Width: =228
+                    X: =60
+                    Y: =52
+                    ZIndex: =1
+
+                NavBasic_1 As NavBasic:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =100
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+    LeftNav_8 As LeftNav:
+        Height: =Parent.Height
+        Width: =200
+        ZIndex: =7
+

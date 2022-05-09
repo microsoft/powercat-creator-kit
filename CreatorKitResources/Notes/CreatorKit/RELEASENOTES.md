@@ -1,5 +1,5 @@
 ## First Time Setup Instructions
-- Get started with the CoE Starter Kit Setup: https://docs.microsoft.com/en-us/power-platform/guidance/coe/setup
+- Get started with the Creator Kit Setup: 
 
 ## Upgrade Instructions
-- Upgrading from the latest version of the CoE Starter Kit: https://docs.microsoft.com/power-platform/guidance/coe/after-setup#installing-upgrades
+- Upgrading from the latest version of the Creator Kit: 

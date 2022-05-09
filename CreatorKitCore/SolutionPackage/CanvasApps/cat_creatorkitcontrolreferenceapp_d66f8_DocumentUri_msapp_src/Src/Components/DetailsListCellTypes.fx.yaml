@@ -1,0 +1,469 @@
+DetailsListCellTypes As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_23.Selected.ItemKey="code",htmlCode_23.Y+htmlCode_23.Height,300)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    OnReset: |
+        =Set(
+            varSvgSpinnerImage,
+            "data:image/svg+xml;utf8, " & EncodeUrl(
+                "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+        <circle cx='50' cy='50' fill='none' stroke='#0078d4' stroke-width='4' r='31' stroke-dasharray='146.08405839192537 50.69468613064179'>
+          <animateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1.2048192771084336s' values='0 50 50;360 50 50' keyTimes='0;1'></animateTransform>
+        </circle>
+        </svg>"
+            )
+        );
+        Set(
+            varSvgCheckmarkImage,
+            "data:image/svg+xml," & EncodeUrl(
+                "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+          <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+           <path fill='#76db91'
+        d='M1024 2048q141 0 272 -36.5t244.5 -103.5t207 -160.5t160.5 -207t103.5 -244.5t36.5 -272t-36.5 -272t-103.5 -244.5t-160.5 -207t-207 -160.5t-244.5 -103.5t-272 -36.5t-272 36.5t-244.5 103.5t-207 160.5t-160.5 207t-103.5 244.5t-36.5 272t36.5 272t103.5 244.5t160.5 207t207 160.5t244.5 103.5t272 36.5zM907 701q22 0 42 8.5t35 23.5l429 429q15 15 23 35t8 41q0 22 -8.5 42t-23 34.5t-34.5 23t-42 8.5q-21 0 -41.5 -8t-35.5 -23l-352 -352l-118 118q-32 32 -77 32q-22 0 -42 -8.5t-35 -23.5t-23.5 -34.5t-8.5 -41.5q0 -21 8.5 -41.5t23.5 -35.5l195 -195q15 -15 35.5 -23.5t41.5 -8.5z' />
+          </g>
+        </svg>"
+            )
+        );
+        ClearCollect(
+            colAccounts,
+            {
+                id: "1",
+                name: "Contoso",
+                city: "Redmond",
+                country: "U.S.",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                expand: false,
+                TagColor: "rgb(0, 183, 195)",
+                TagBorderColor: "rgb(0,137,147)",
+                externalimage: "https://via.placeholder.com/100x70",
+                iconimage: "icon:SkypeCircleCheck",
+                svg:varSvgSpinnerImage,
+                tags:["#PowerApps","#PowerPlatform"]
+            },
+            {
+                id: "2",
+                name: "Litware, Inc",
+                city: "Dallas",
+                country: "U.S.",
+                description: "Donec vel pellentesque turpis.",
+                expand: false,
+                TagColor: "rgb(255, 140, 0)",
+                TagBorderColor: "rgb(194,107,0)",
+                externalimage: "https://via.placeholder.com/100x70",
+                iconimage: "icon:SkypeCircleCheck",
+                svg:varSvgCheckmarkImage,
+                tags:["#MsDyn365", "#PowerApps"]
+            }
+        );
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_23 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Cell Types"
+        Width: =630
+        Y: =22
+        ZIndex: =4
+
+    "pivotAppCode_23 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_23.Y+htmlCode_23.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =20
+        ZIndex: =5
+
+    line_15 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =68
+        ZIndex: =6
+
+    htmlCode_23 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">DetailsListCellTypes As CanvasComponent:
+                OnReset: |
+                    =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(
+                        varSvgSpinnerImage,
+                        <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""data:image/svg+xml;utf8, ""</span> &amp; EncodeUrl(
+                            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""&lt;svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'&gt;
+                    &lt;circle cx='50' cy='50' fill='none' stroke='#0078d4' stroke-width='4' r='31' stroke-dasharray='146.08405839192537 50.69468613064179'&gt;
+                      &lt;animateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1.2048192771084336s' values='0 50 50;360 50 50' keyTimes='0;1'&gt;&lt;/animateTransform&gt;
+                    &lt;/circle&gt;
+                    &lt;/svg&gt;""</span>
+                        )
+                    );
+                    <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(
+                        varSvgCheckmarkImage,
+                        <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""data:image/svg+xml,""</span> &amp; EncodeUrl(
+                            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""&lt;svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'&gt;
+                      &lt;g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'&gt;
+                       &lt;path fill='#76db91'
+                    d='M1024 2048q141 0 272 -36.5t244.5 -103.5t207 -160.5t160.5 -207t103.5 -244.5t36.5 -272t-36.5 -272t-103.5 -244.5t-160.5 -207t-207 -160.5t-244.5 -103.5t-272 -36.5t-272 36.5t-244.5 103.5t-207 160.5t-160.5 207t-103.5 244.5t-36.5 272t36.5 272t103.5 244.5t160.5 207t207 160.5t244.5 103.5t272 36.5zM907 701q22 0 42 8.5t35 23.5l429 429q15 15 23 35t8 41q0 22 -8.5 42t-23 34.5t-34.5 23t-42 8.5q-21 0 -41.5 -8t-35.5 -23l-352 -352l-118 118q-32 32 -77 32q-22 0 -42 -8.5t-35 -23.5t-23.5 -34.5t-8.5 -41.5q0 -21 8.5 -41.5t23.5 -35.5l195 -195q15 -15 35.5 -23.5t41.5 -8.5z' /&gt;
+                      &lt;/g&gt;
+                    &lt;/svg&gt;""</span>
+                        )
+                    );
+                    ClearCollect(
+                        colAccounts,
+                        {
+                            id: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""1""</span>,
+                            name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Contoso""</span>,
+                            city: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Redmond""</span>,
+                            country: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""U.S.""</span>,
+                            description: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Lorem ipsum dolor sit amet, consectetur adipiscing elit.""</span>,
+                            expand: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>,
+                            TagColor: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(0, 183, 195)""</span>,
+                            TagBorderColor: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(0,137,147)""</span>,
+                            externalimage: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://via.placeholder.com/100x70""</span>,
+                            iconimage: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""icon:SkypeCircleCheck""</span>,
+                            svg:varSvgSpinnerImage,
+                            tags:[<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""#PowerApps""</span>,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""#PowerPlatform""</span>]
+                        },
+                        {
+                            id: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""2""</span>,
+                            name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Litware, Inc""</span>,
+                            city: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Dallas""</span>,
+                            country: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""U.S.""</span>,
+                            description: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Donec vel pellentesque turpis.""</span>,
+                            expand: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>,
+                            TagColor: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(255, 140, 0)""</span>,
+                            TagBorderColor: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(194,107,0)""</span>,
+                            externalimage: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://via.placeholder.com/100x70""</span>,
+                            iconimage: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""icon:SkypeCircleCheck""</span>,
+                            svg:varSvgCheckmarkImage,
+                            tags:[<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""#MsDyn365""</span>, <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""#PowerApps""</span>]
+                        }
+                    );
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""FluentDetailsListCellTypes As 'Fluent Details List (0.0.13)'.pcfdataset""</span>:
+                    columns_Items: |-
+                        =Table(
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""name""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Account Name""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">100</span>,
+                                ColIsBold:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColCellType: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""link""</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""city""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""City:""</span>,
+                                ColShowAsSubTextOf:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""name""</span>,
+                                ColLabelAbove:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>,
+                                ColIsBold:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>,
+                                ColSubTextRow: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""externalimage""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""External""</span>,
+                                ColCellType:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""image""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">60</span>,
+                                ColImageWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">60</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconimage""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Icon""</span>,
+                                ColCellType:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""clickableimage""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">40</span>,
+                                ColTagColorColumn:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagColor""</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                        
+                            },
+                                {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""svg""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Svg""</span>,
+                                ColCellType:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""clickableimage""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">60</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""country""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tag""</span>,
+                                ColCellType:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""tag""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">70</span>,
+                                ColTagColorColumn: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagColor""</span>,
+                                ColTagBorderColorColumn: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagBorderColor""</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""country""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Indicator""</span>,
+                                ColCellType:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""indicatortag""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">150</span>,
+                                ColTagColorColumn: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagColor""</span>,
+                                ColTagBorderColorColumn: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagBorderColor""</span>,
+                                ColIsBold:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColVerticalAlign: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColInlineLabel:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Status:""</span>,
+                                ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""tags""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tag List""</span>,
+                                ColWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">250</span>,
+                                ColFirstMultiValueBold :<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColMultiValueDelimeter:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"", ""</span>
+                            }
+                        )
+                    Compact: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                    Items: =colAccounts
+                    OnChange: |-
+                        =
+                        If(Self.EventName=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""CellAction""</span>,    Notify(<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""CellAction ""</span> &amp; Self.EventColumn &amp; <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"" ""</span> &amp; Self.EventRowKey))
+                    RecordKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""id""</span>
+                    SelectionType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.SelectionType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Multiple
+                    Theme: =varTheme.themeJSON
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_23.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =68
+        ZIndex: =7
+
+    Group20 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        "ElevationCellTypes As 'Fluent Elevation (0.0.18)'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =FluentDetailsListCellTypes.Height
+            Visible: =pivotAppCode_23.Selected.ItemKey="app"
+            Width: =FluentDetailsListCellTypes.Width
+            X: =FluentDetailsListCellTypes.X
+            Y: =FluentDetailsListCellTypes.Y
+            ZIndex: =1
+
+        "FluentDetailsListCellTypes As 'Fluent Details List (0.0.18)'.pcfdataset":
+            columns_Items: |-
+                =Table(
+                    {
+                        ColName: "name",
+                        ColDisplayName: "Account Name",
+                        ColWidth: 100,
+                        ColIsBold:true,
+                        ColCellType: "link",
+                        ColVerticalAlign: "Center"
+                    },
+                    {
+                        ColName: "city",
+                        ColDisplayName: "City:",
+                        ColShowAsSubTextOf:"name",
+                        ColLabelAbove:false,
+                        ColIsBold:false,
+                        ColSubTextRow: 1,
+                        ColVerticalAlign: "Center"
+                    },
+                    {
+                        ColName: "externalimage",
+                        ColDisplayName: "External",
+                        ColCellType:"image",
+                        ColWidth: 60,
+                        ColImageWidth: 60,
+                        ColVerticalAlign: "Center",
+                        ColHorizontalAlign:"Center",
+                        ColResizable:true
+                    },
+                    {
+                        ColName: "iconimage",
+                        ColDisplayName: "Icon",
+                        ColCellType:"clickableimage",
+                        ColWidth: 40,
+                        ColTagColorColumn:"TagColor",
+                        ColVerticalAlign: "Center",
+                        ColHorizontalAlign:"Center",
+                        ColResizable:true
+                
+                    },
+                     {
+                        ColName: "svg",
+                        ColDisplayName: "Svg",
+                        ColCellType:"clickableimage",
+                        ColWidth: 60,
+                        ColVerticalAlign: "Center",
+                        ColHorizontalAlign:"Center",
+                        ColResizable:true
+                    },
+                    {
+                        ColName: "country",
+                        ColDisplayName: "Tag",
+                        ColCellType:"tag",
+                        ColWidth: 70,
+                        ColTagColorColumn: "TagColor",
+                        ColTagBorderColorColumn: "TagBorderColor",
+                        ColVerticalAlign: "Center",
+                        ColHorizontalAlign:"Center",
+                        ColResizable:true
+                    },
+                    
+                    {
+                        ColName: "country",
+                        ColDisplayName: "Indicator",
+                        ColCellType:"indicatortag",
+                        ColWidth: 150,
+                        ColTagColorColumn: "TagColor",
+                        ColTagBorderColorColumn: "TagBorderColor",
+                        ColIsBold:true,
+                        ColVerticalAlign: "Center",
+                        ColHorizontalAlign:"Center",
+                        ColInlineLabel:"Status:",
+                        ColResizable:true
+                    },
+                     {
+                        ColName: "tags",
+                        ColDisplayName: "Tag List",
+                        ColWidth: 250,
+                        ColFirstMultiValueBold :true,
+                        ColMultiValueDelimeter:", "
+                    }
+                )
+            Compact: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =200
+            Items: =colAccounts
+            OnChange: |-
+                =
+                If(Self.EventName="CellAction",    Notify("CellAction " & Self.EventColumn & " " & Self.EventRowKey))
+            RecordKey: ="id"
+            SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_23.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X*2
+            X: =8
+            Y: =85
+            ZIndex: =3
+
+            city1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="city"
+                FieldName: ="city"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =1
+
+            country1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="country"
+                FieldName: ="country"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =2
+                ZIndex: =2
+
+            description1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="description"
+                FieldName: ="description"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =3
+                ZIndex: =3
+
+            expand1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="expand"
+                FieldName: ="expand"
+                FieldType: ="b"
+                FieldVariantName: ="textualColumn"
+                Order: =4
+                ZIndex: =4
+
+            externalimage1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="externalimage"
+                FieldName: ="externalimage"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =5
+                ZIndex: =5
+
+            iconimage1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="iconimage"
+                FieldName: ="iconimage"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =6
+                ZIndex: =6
+
+            id1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="id"
+                FieldName: ="id"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =7
+                ZIndex: =7
+
+            name1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="name"
+                FieldName: ="name"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =8
+                ZIndex: =8
+
+            TagBorderColor1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="TagBorderColor"
+                FieldName: ="TagBorderColor"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =9
+                ZIndex: =9
+
+            TagColor1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="TagColor"
+                FieldName: ="TagColor"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =10
+                ZIndex: =10
+
+            tags1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="tags"
+                FieldName: ="tags"
+                FieldType: |-
+                    ="*[Value:s]"
+                FieldVariantName: ="textualColumn"
+                Order: =11
+                ZIndex: =11
+
+            svg1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="svg"
+                FieldName: ="svg"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =12
+                ZIndex: =12
+

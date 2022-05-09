@@ -1,0 +1,318 @@
+BreadcrumbBasic As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_27.Selected.ItemKey="code",htmlCode_27.Y+htmlCode_27.Height,450)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_27 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Breadcrumb rendering options"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_27 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_27.Y+htmlCode_27.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    line_11 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_27 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Breadcrumb1 As 'Fluent Breadcrumb (0.0.18)'.pcfdataset""</span>:
+                InputEvent: =varBreadcrumbBasicEvent
+                Items: |-
+                    =Table(
+                        {
+                            ItemDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""1. Home""</span>,
+                            ItemClickable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                        },
+                        {
+                            ItemDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""2. Sports""</span>,
+                            ItemClickable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                        },
+                        {
+                            ItemDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""3. Running (Non-clickable)""</span>,
+                            ItemClickable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                        },
+                        {
+                            ItemDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""4. Shoes""</span>,
+                            ItemClickable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                        },
+                        {
+                            ItemDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""5. All Brands""</span>,
+                            ItemClickable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                        }
+                    )
+                MaxDisplayedItems: =sdlMaxItems.Value
+                OverflowIndex: =sldOverflowIndex.Value
+                Width: |
+                    =Min(Parent.Width,sldBreadcrumbWidth.Value)
+            
+            sldBreadcrumbWidth As slider:
+                Default: =Self.Max
+                Max: =Parent.Width-(Breadcrumb1.X*<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">2</span>)
+            
+            sldOverflowIndex As slider:
+                Default: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">0</span>
+                Max: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">5</span>
+            
+            
+            sdlMaxItems As slider:
+                Default: =Self.Max
+                Max: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">5</span>
+            
+            btnSetFocusBreadCrumb As Button:
+                OnSelect: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varBreadcrumbBasicEvent,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""SetFocus""</span> &amp; Text(Rand()));
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Set Focus""</span>
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_27.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    lblTableWidth_2 As label:
+        Color: =varTheme.palette.neutralPrimary
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =31
+        Size: =varTheme.fontSizes.m
+        Text: |-
+            ="Last Selected: " & Coalesce(Breadcrumb1.Selected.ItemDisplayName,"(none)")
+        Visible: =pivotAppCode_27.Selected.ItemKey="app"
+        Width: =377
+        X: =37
+        Y: =120
+        ZIndex: =17
+
+    Group6 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        "Breadcrumb1 As 'Fluent Breadcrumb (0.0.18)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =54
+            InputEvent: =varBreadcrumbBasicEvent
+            Items: |-
+                =Table(
+                    {
+                        ItemDisplayName: "1. Home",
+                        ItemClickable: true
+                    },
+                    {
+                        ItemDisplayName: "2. Sports",
+                        ItemClickable: true
+                    },
+                    {
+                        ItemDisplayName: "3. Running (Non-clickable)",
+                        ItemClickable: false
+                    },
+                    {
+                        ItemDisplayName: "4. Shoes",
+                        ItemClickable: true
+                    },
+                    {
+                        ItemDisplayName: "5. All Brands",
+                        ItemClickable: true
+                    }
+                )
+            MaxDisplayedItems: =sdlMaxItems.Value
+            OverflowIndex: =sldOverflowIndex.Value
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: |
+                =Min(Parent.Width,sldBreadcrumbWidth.Value)
+            X: =35
+            Y: =56
+            ZIndex: =5
+
+        sldBreadcrumbWidth As slider:
+            AccessibleLabel: ="Width"
+            BorderColor: =
+            Default: =Self.Max
+            FocusedBorderColor: =
+            FocusedBorderThickness: =1
+            HandleSize: =16
+            Max: =Parent.Width-(Breadcrumb1.X*2)
+            RailFill: =varTheme.palette.neutralTertiaryAlt
+            RailThickness: =2
+            ValueFill: =varTheme.palette.neutralPrimary
+            ValueHoverFill: =varTheme.palette.themePrimary
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =169
+            X: =297
+            Y: =162
+            ZIndex: =6
+
+        lblTableWidth_1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =29
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Breadcrumb width:"
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =130
+            X: =37
+            Y: =167
+            ZIndex: =8
+
+        sldOverflowIndex As slider:
+            AccessibleLabel: ="Overflow index"
+            BorderColor: =
+            Default: =0
+            FocusedBorderColor: =
+            FocusedBorderThickness: =1
+            HandleSize: =16
+            Max: =5
+            RailFill: =varTheme.palette.neutralTertiaryAlt
+            RailThickness: =2
+            ValueFill: =varTheme.palette.neutralPrimary
+            ValueHoverFill: =varTheme.palette.themePrimary
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =169
+            X: =297
+            Y: =212
+            ZIndex: =9
+
+        lblOverflow As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =57
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Overflow index:
+                Index that the overflow is shown
+                0 = start of control"
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =260
+            X: =37
+            Y: =204
+            ZIndex: =10
+
+        sdlMaxItems As slider:
+            AccessibleLabel: ="Max Items"
+            BorderColor: =
+            Default: =Self.Max
+            FocusedBorderColor: =
+            FocusedBorderThickness: =1
+            HandleSize: =16
+            Max: =5
+            RailFill: =varTheme.palette.neutralTertiaryAlt
+            RailThickness: =2
+            ValueFill: =varTheme.palette.neutralPrimary
+            ValueHoverFill: =varTheme.palette.themePrimary
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =169
+            X: =297
+            Y: =275
+            ZIndex: =11
+
+        lblMaxItems As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =50
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Max Items:
+                Number of items to show at once.
+                0 = all"
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =274
+            X: =37
+            Y: =270
+            ZIndex: =12
+
+        lblWidthValue As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =29
+            Size: =varTheme.fontSizes.s
+            Text: =sldBreadcrumbWidth.Value
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =130
+            X: =464
+            Y: =141
+            ZIndex: =13
+
+        lblMaxItemsValue As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =29
+            Size: =varTheme.fontSizes.s
+            Text: =sdlMaxItems.Value
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =130
+            X: =464
+            Y: =254
+            ZIndex: =14
+
+        lblOverflowIndexValue As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =29
+            Size: =varTheme.fontSizes.s
+            Text: =sldOverflowIndex.Value
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =130
+            X: =464
+            Y: =191
+            ZIndex: =15
+
+        btnSetFocusBreadCrumb As Button:
+            AccessibleLabel: ="Set Focus"
+            BorderRadius: =1
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: =Set(varBreadcrumbBasicEvent,"SetFocus" & Text(Rand()));
+            Text: ="Set Focus"
+            Visible: =pivotAppCode_27.Selected.ItemKey="app"
+            Width: =120
+            X: =35
+            Y: =347
+            ZIndex: =16
+

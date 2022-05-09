@@ -1,0 +1,301 @@
+DetailsListPaging As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_26.Selected.ItemKey="code",htmlCode_26.Y+htmlCode_26.Height,500)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_26 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Dataverse Paging & Sorting"
+        Width: =630
+        Y: =22
+        ZIndex: =2
+
+    "pivotAppCode_26 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_26.Y+htmlCode_26.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Visible: =false
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =20
+        ZIndex: =3
+
+    line_18 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =68
+        ZIndex: =4
+
+    htmlCode_26 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: =""
+        Size: =10
+        Visible: =pivotAppCode_26.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =68
+        ZIndex: =5
+
+    Group24 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        htmlText_11 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: ="Sorting and paging is automatic when using a Dataverse data source."
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_26.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =86
+            ZIndex: =16
+
+        conGrid As groupContainer.manualLayoutContainer:
+            Height: =350
+            Visible: =pivotAppCode_26.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =120
+            ZIndex: =18
+
+            "ElevationAccounts As 'Fluent Elevation (0.0.18)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height-32-16
+                Visible: =pivotAppCode_26.Selected.ItemKey="app"
+                Width: =Parent.Width-Self.X*2
+                X: =FluentDetailsListAccounts.X
+                Y: =8
+                ZIndex: =1
+
+            "FluentDetailsListAccounts As 'Fluent Details List (0.0.18)'.pcfdataset":
+                columns_Items: |
+                    =Table(
+                        {ColName:"name",ColDisplayName:"Name",ColWidth:300,ColSortable:true,ColIsBold:true,ColResizable:true,ColRowHeader:true},
+                        {ColName:"address1_city",ColDisplayName:"City:",ColShowAsSubTextOf:"name"},
+                        {ColName:"address1_country",ColDisplayName:"Country:",ColShowAsSubTextOf:"name"},
+                        {ColName:"telephone1",ColDisplayName:"Telephone",ColWidth:100,ColSortable:true,ColResizable:true},
+                        {ColName:"primarycontactid",ColDisplayName:"Primary Contact",ColWidth:200,ColSortable:true,ColSortBy:"_primarycontactid_value",ColResizable:true,ColCellType:"link"}
+                    )
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height-64-16
+                InputEvent: =varGridEvent
+                Items: =Search(Accounts,txtSeachAccount.Text,"name")
+                OnChange: |-
+                    =If(Self.EventName="OnRowSelectionChange",Notify("Row Select " & Self.EventRowKey));
+                    
+                    If(Self.EventName="CellAction",Notify("Open Link " &  Self.EventColumn & " " & Self.EventRowKey))
+                OnSelect: =Notify("OnSelect " & Self.EventRowKey)
+                PageSize: =5
+                RecordKey: ="accountid"
+                SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_26.Selected.ItemKey="app"
+                Width: =ElevationAccounts.Width
+                X: =8
+                Y: =40
+                ZIndex: =2
+
+                "'Account Name1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Account Name"
+                    FieldName: ="name"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =1
+
+                "'Main Phone1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Main Phone"
+                    FieldName: ="telephone1"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =2
+                    ZIndex: =2
+
+                "'Address 1: City1' As pcfDataField.textualColumn":
+                    FieldDisplayName: |-
+                        ="Address 1: City"
+                    FieldName: ="address1_city"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =3
+                    ZIndex: =3
+
+                "'Primary Contact1' As pcfDataField":
+                    FieldDisplayName: ="Primary Contact"
+                    FieldName: ="primarycontactid"
+                    FieldType: ="E"
+                    FieldVariantName: ="complexTypeColumn"
+                    Order: =4
+                    ZIndex: =4
+
+                Industry1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="Industry"
+                    FieldName: ="industrycode"
+                    FieldType: ="l"
+                    FieldVariantName: ="textualColumn"
+                    Order: =5
+                    ZIndex: =5
+
+            "cmdAccounts As 'Fluent Command Bar (0.0.18)'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: |-
+                    = Table(
+                        {
+                            ItemKey: "New",
+                            ItemIconName: "Add",
+                            ItemDisplayName: "New"
+                        },
+                        {
+                            ItemKey: "Edit",
+                            ItemIconName: "Edit",
+                            ItemDisplayName: "Edit",
+                            ItemEnabled:CountRows(FluentDetailsListAccounts.SelectedItems)=1
+                        })
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_26.Selected.ItemKey="app"
+                Width: =ElevationAccounts.Width
+                X: =8
+                Y: =ElevationAccounts.Y
+                ZIndex: =3
+
+            txtSeachAccount As text:
+                AccessibleLabel: ="Search for accounts"
+                BorderColor: =RGBA(128,128,128,1)
+                BorderThickness: =1
+                Color: =RGBA(66,66,66,1)
+                Default: =""
+                FocusedBorderColor: =RGBA(0,120,212,1)
+                FocusedBorderThickness: =1
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HintText: ="Search for accounts"
+                HoverBorderColor: =RGBA(66,66,66,1)
+                HoverFill: =
+                PaddingLeft: =5
+                RadiusBottomLeft: =2
+                RadiusBottomRight: =2
+                RadiusTopLeft: =2
+                RadiusTopRight: =2
+                Size: =10.5
+                Visible: =pivotAppCode_26.Selected.ItemKey="app"
+                Width: =200
+                X: =Parent.Width-Self.Width-8
+                Y: =8
+                ZIndex: =4
+
+            lblRecordCount As label:
+                Color: =varTheme.palette.neutralPrimary
+                Font: =Font.'Segoe UI'
+                Height: =32
+                Size: =varTheme.fontSizes.xs
+                Text: =FluentDetailsListAccounts.TotalRecords & " record(s)  " & Text(CountRows(FluentDetailsListAccounts.SelectedItems)+0) & " selected" 
+                Visible: =pivotAppCode_26.Selected.ItemKey="app"
+                Width: =188
+                X: =ElevationAccounts.X
+                Y: =Parent.Height-Self.Height-8
+                ZIndex: =5
+
+            conPagingControls As groupContainer.manualLayoutContainer:
+                Height: =31
+                Visible: =pivotAppCode_26.Selected.ItemKey="app"
+                Width: =180
+                X: =ElevationAccounts.Width-Self.Width
+                Y: =Parent.Height-Self.Height-8
+                ZIndex: =6
+
+                "icoFirst As 'Fluent Icon (0.0.18)'":
+                    DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
+                    Height: =31
+                    IconName: ="Previous"
+                    OnChange: =Set(varGridEvent,"LoadFirstPage" & Text(Rand()));
+                    Theme: =varTheme.themeJSON
+                    Width: =32
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                "icoBack As 'Fluent Icon (0.0.18)'":
+                    DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
+                    Height: =31
+                    IconName: ="Back"
+                    OnChange: =Set(varGridEvent,"LoadPreviousPage" & Text(Rand()));
+                    Theme: =varTheme.themeJSON
+                    Width: =32
+                    X: =32
+                    Y: =0
+                    ZIndex: =2
+
+                lblPageCount As label:
+                    Align: =Align.Center
+                    Color: =varTheme.palette.neutralPrimary
+                    Font: =Font.'Segoe UI'
+                    Height: =31
+                    Size: =varTheme.fontSizes.xs
+                    Text: ="Page " & FluentDetailsListAccounts.PageNumber
+                    Width: =84
+                    X: =64
+                    ZIndex: =3
+
+                "icoNext As 'Fluent Icon (0.0.18)'":
+                    DisplayMode: =If(FluentDetailsListAccounts.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
+                    Height: =31
+                    IconName: ="Forward"
+                    OnChange: =Set(varGridEvent,"LoadNextPage" & Text(Rand()));
+                    Theme: =varTheme.themeJSON
+                    Width: =32
+                    X: =148
+                    Y: =0
+                    ZIndex: =4
+
+            lblNoRecords As label:
+                Align: =Align.Center
+                Color: =varTheme.palette.neutralPrimary
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                Height: =23
+                Size: =varTheme.fontSizes.xs
+                Text: ="No records found"
+                Visible: =FluentDetailsListAccounts.TotalRecords=0
+                Width: =188
+                X: =FluentDetailsListAccounts.Width/2-Self.Width/2+FluentDetailsListAccounts.X
+                Y: =100
+                ZIndex: =7
+
+            "Icon4 As 'Fluent Icon (0.0.18)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                IconName: ="Search"
+                Theme: =varTheme.themeJSON
+                Width: =32
+                X: =txtSeachAccount.X-Self.Width
+                Y: =txtSeachAccount.Y
+                ZIndex: =8
+

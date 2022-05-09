@@ -1,0 +1,236 @@
+ElevationHover As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_15.Selected.ItemKey="code",htmlCode_15.Y+htmlCode_15.Height,320)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_15 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Elevation on actions"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_15 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_15.Y+htmlCode_15.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Visible: =false
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    pivotline_15 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_15 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: =""
+        Size: =10
+        Visible: =pivotAppCode_15.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    Group12 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        "ElevationCard As 'Fluent Elevation (0.0.18)'":
+            Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =""
+            Height: =85
+            HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth16
+            HoverFillColor: =""
+            PaddingLeft: =0
+            PaddingRight: =0
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =297
+            X: =52
+            Y: =205
+            ZIndex: =9
+
+        "AutoWidthLabelCardTag As 'Auto Width Label (0.0.18)'":
+            BorderRadius: =2
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =varTheme.paletteCSS.neutralQuaternaryAlt
+            FontColor: =varTheme.paletteCSS.neutralPrimary
+            Height: =25
+            PaddingBottom: =4
+            PaddingLeft: =4
+            PaddingRight: =4
+            Text: ="Beginner"
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =88
+            X: =129
+            Y: =253
+            ZIndex: =10
+
+        lblPaneTitle As label:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =38
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Text: ="Get started with Power Apps"
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =196
+            X: =129
+            Y: =220
+            ZIndex: =11
+
+        lblCardTime As label:
+            Align: =Align.Right
+            Color: =varTheme.palette.neutralPrimary
+            DisplayMode: =DisplayMode.View
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =22
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Text: ="51 mins"
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =76
+            X: =255
+            Y: =253
+            ZIndex: =12
+
+        recCardLeft As rectangle:
+            Fill: =varTheme.palette.neutralQuaternaryAlt
+            Height: =85
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =68
+            X: =52
+            Y: =205
+            ZIndex: =13
+
+        imgCard As image:
+            Height: =55
+            Image: =monitorMagnifyIcon
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =51
+            X: =60
+            Y: =220
+            ZIndex: =14
+
+        btnCard As button:
+            BorderColor: =
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 0)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =85
+            HoverColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =Transparent
+            OnSelect: =Notify("Get started selected");
+            Text: ="Get started with Power Apps"
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =297
+            X: =52
+            Y: =205
+            ZIndex: =15
+
+    Group13 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        htmlText_9 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: ="Elevation hover effects can be used to draw attention to actions"
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =66
+            ZIndex: =5
+
+        "ElevationAddTask As 'Fluent Elevation (0.0.18)'":
+            Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =""
+            Height: =56
+            HoverDepth: =If(btnAddTaskHeader.DisplayMode<>DisplayMode.Disabled,'''PowerCAT.Elevation.HoverDepth'''.Depth16) // Don't hover when button disabled
+            HoverFillColor: =""
+            PaddingLeft: =0
+            PaddingRight: =0
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =243
+            X: =52
+            Y: =104
+            ZIndex: =6
+
+        "btnAddTaskHeader As 'Fluent Icon (0.0.18)'":
+            DisplayMode: =If(chkActionEnabled.Checked,DisplayMode.Edit,DisplayMode.Disabled)
+            Height: =56
+            HoverFillColor: =varTheme.paletteCSS.neutralLighterAlt
+            IconName: ="Add"
+            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+            OnChange: =Notify("Add Task Selected");
+            Text: ="Add task"
+            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =243
+            X: =52
+            Y: =104
+            ZIndex: =7
+
+        "chkActionEnabled As 'Check box'":
+            AccessibleLabel: ="Add task enabled"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Add task enabled"
+            OnChange: =
+            Visible: =pivotAppCode_15.Selected.ItemKey="app"
+            Width: =160
+            X: =325
+            Y: =104
+            ZIndex: =8
+

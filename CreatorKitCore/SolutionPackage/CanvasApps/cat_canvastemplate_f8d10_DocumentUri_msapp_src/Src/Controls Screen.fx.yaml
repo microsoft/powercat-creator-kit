@@ -1,0 +1,1367 @@
+"'Controls Screen' As screen":
+    Fill: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |
+        =NewForm(Form1);
+        ClearCollect(
+            colTags,
+            {
+                Key: "1",
+                DisplayName: "Pink",
+                TextColor: "rgb(172,45,126)",
+                BackgroundColor: "rgb(251, 221, 240)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(172,45,126)"
+            },
+            {
+                Key: "2",
+                DisplayName: "Red",
+                TextColor: "rgb(117,11,28)",
+                BackgroundColor: "rgb(233,199,205)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(117,11,28)"
+            },
+            {
+                Key: "3",
+                DisplayName: "Yellow",
+                TextColor: "rbg(109,87,0)",
+                BackgroundColor: "rgb(245,237,206)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rbb(109,87,0)"
+            },
+            {
+                Key: "4",
+                DisplayName: "Green",
+                TextColor: "rgb(56, 99, 4)",
+                BackgroundColor: "rgb(219, 235, 199)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(56,99,4)"
+            },
+            {
+                Key: "5",
+                DisplayName: "Blue",
+                TextColor: "rgb(0, 91, 161)",
+                BackgroundColor: "rgb(208, 231, 248)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,91,161)"
+            },
+            {
+                Key: "6",
+                DisplayName: "Purple",
+                TextColor: "rgb(64, 27, 108)",
+                BackgroundColor: "rgb(216, 204, 231)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(64,27,108)"
+            },
+            {
+                Key: "7",
+                DisplayName: "Lime",
+                TextColor: "rgb(64, 96, 20)",
+                BackgroundColor: "rgb(229, 242, 211)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(64,96,20)"
+            },
+            {
+                Key: "8",
+                DisplayName: "Aqua",
+                TextColor: "rgb(0, 102, 102)",
+                BackgroundColor: "rgb(194, 231, 231)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,102,102)"
+            },
+            {
+                Key: "9",
+                DisplayName: "Gray",
+                TextColor: "rgb(93, 90, 88)",
+                BackgroundColor: "rgb(229, 228, 227)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(93,90,88)"
+            },
+            {
+                Key: "10",
+                DisplayName: "Silver",
+                TextColor: "rgb(75, 83, 86)",
+                BackgroundColor: "rgb(234, 238, 239)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(75,83,86)"
+            },
+            {
+                Key: "11",
+                DisplayName: "Orange",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(218, 59, 1)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(165,44,0)"
+            },
+            {
+                Key: "12",
+                DisplayName: "Bronze",
+                TextColor: "rgb(167, 65, 9)",
+                BackgroundColor: "rgb(241, 217, 204)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(167,65,9)"
+            },
+            {
+                Key: "13",
+                DisplayName: "Brown",
+                TextColor: "rgb(77, 41, 28)",
+                BackgroundColor: "rgb(226, 209, 203)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(77,41,28)"
+            },
+            {
+                Key: "14",
+                DisplayName: "Cranberry",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(197, 15, 31)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(149,12,23)"
+            },
+            {
+                Key: "15",
+                DisplayName: "Peach",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(255, 140, 0)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(194,107,0)"
+            },
+            {
+                Key: "16",
+                DisplayName: "Marigold",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(234, 163, 0)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(178,125,0)"
+            },
+            {
+                Key: "17",
+                DisplayName: "Light green",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(19, 161, 14)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(15,122,11)"
+            },
+            {
+                Key: "18",
+                DisplayName: "Dark green",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(11, 106, 11)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(8,81,8)"
+            },
+            {
+                Key: "19",
+                DisplayName: "Teal",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(0, 183, 195)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,137,147)"
+            },
+            {
+                Key: "20",
+                DisplayName: "Light blue",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(52, 136, 200)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(32,84,124)"
+            },
+            {
+                Key: "21",
+                DisplayName: "Dark blue",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(0, 57, 102)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,44,78)"
+            },
+            {
+                Key: "22",
+                DisplayName: "Lavendar",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(113, 96, 235)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(85,73,178)"
+            },
+            {
+                Key: "23",
+                DisplayName: "Plumb",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(119, 0, 77)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(91,0,59)"
+            },
+            {
+                Key: "24",
+                DisplayName: "Light gray",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(122, 117, 116)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(93,89,88)"
+            },
+            {
+                Key: "25",
+                DisplayName: "Dark gray",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(57, 65, 70)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(42,49,52)"
+            }
+        );
+        ClearCollect(colSelectedTags, Filter(colTags, Value(Key) < 4));
+
+    Button1 As Button:
+        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        DisplayMode: =DisplayMode.Edit
+        FillColor: =ColorValue(AppTheme.palette.themePrimary)
+        Height: =32
+        TextColor: =ColorValue(AppTheme.palette.white)
+        Width: =96
+        X: =42
+        Y: =125
+        ZIndex: =1
+
+    "DatePicker1 As 'Date picker'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =210
+        X: =42
+        Y: =174
+        ZIndex: =2
+
+    "TextBox1 As 'Text box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =210
+        X: =42
+        Y: =224
+        ZIndex: =3
+
+    Form1 As form:
+        AcceptsFocus: =false
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DataSource: =Accounts
+        NumberOfColumns: =1
+        Width: =328
+        X: =299
+        Y: =136
+        ZIndex: =4
+
+        "'Created On_DataCard1' As typedDataCard.pcfCoreTextualViewCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="createdon"
+            Default: =ThisItem.'Created On'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"createdon")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Width: =328
+            WidthFit: =true
+            X: =0
+            Y: =3
+            ZIndex: =1
+
+            DataCardKey4 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue4 As 'Text box'":
+                DisplayMode: =DisplayMode.View
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                ZIndex: =2
+
+        Category_DataCard1 As typedDataCard.pcfCoreComboBoxOptionSetSingleEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="accountcategorycode"
+            Default: =ThisItem.Category
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"accountcategorycode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue5.Selected.Value
+            Width: =328
+            WidthFit: =true
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey5 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As combobox:
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                BorderColor: =RGBA(166, 166, 166, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                DefaultSelectedItems: =[Parent.Default]
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                IsSearchable: =false
+                Items: =Choices('Category (Accounts)')
+                PaddingLeft: =12
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(212, 212, 212, 1)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionColor: =RGBA(51, 51, 51, 1)
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectMultiple: =false
+                Size: =10.5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 4
+                ZIndex: =2
+
+            ErrorMessage4 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+            StarVisible4 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =20
+                Text: ="*"
+                VerticalAlignment: =VerticalAlign.Bottom
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey5.Y
+                ZIndex: =4
+
+        "'Account Name_DataCard1' As typedDataCard.pcfCoreTextualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="name"
+            Default: =ThisItem.'Account Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Accounts], DataSourceInfo.MaxLength, "name")
+            Required: =true
+            Update: =DataCardValue1.Value
+            Width: =328
+            WidthFit: =true
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+            DataCardKey1 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue1 As 'Text box'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Required: =Parent.Required
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage1 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue1.Y + DataCardValue1.Height
+                ZIndex: =3
+
+            StarVisible1 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey1.Y
+                ZIndex: =4
+
+        "'Main Phone_DataCard1' As typedDataCard.pcfCoreTextualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="telephone1"
+            Default: =ThisItem.'Main Phone'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"telephone1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Accounts], DataSourceInfo.MaxLength, "telephone1")
+            Required: =false
+            Update: =DataCardValue2.Value
+            Width: =328
+            WidthFit: =true
+            X: =0
+            Y: =1
+            ZIndex: =5
+
+            DataCardKey2 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue2 As 'Text box'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Required: =Parent.Required
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                ZIndex: =2
+
+            ErrorMessage2 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+            StarVisible2 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey2.Y
+                ZIndex: =4
+
+        "'Address 1: City_DataCard1' As typedDataCard.pcfCoreTextualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="address1_city"
+            Default: |-
+                =ThisItem.'Address 1: City'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"address1_city")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Accounts], DataSourceInfo.MaxLength, "address1_city")
+            Required: =false
+            Update: =DataCardValue3.Value
+            Width: =328
+            WidthFit: =true
+            X: =0
+            Y: =2
+            ZIndex: =5
+
+            DataCardKey3 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue3 As 'Text box'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Required: =Parent.Required
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =24
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 4
+                ZIndex: =2
+
+            ErrorMessage3 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+            StarVisible3 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey3.Y
+                ZIndex: =4
+
+    "btnAddTaskHeader As 'Fluent Icon (0.0.16)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =42
+        HoverFillColor: =
+        IconName: ="Add"
+        IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+        OnChange: =Notify("Button Clicked")
+        Text: ="Add Task"
+        TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+        Visible: =true
+        Width: =200 
+        X: =919
+        Y: =536
+        ZIndex: =6
+
+    "Elevation1 As 'Fluent Elevation (0.0.16)'":
+        Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
+        DisplayMode: =DisplayMode.Edit
+        Height: =89
+        Width: =197
+        X: =668
+        Y: =373
+        ZIndex: =7
+
+    "Elevation1_1 As 'Fluent Elevation (0.0.16)'":
+        Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
+        DisplayMode: =DisplayMode.Edit
+        Height: =341
+        Width: =197
+        X: =668
+        Y: =489
+        ZIndex: =8
+
+    "Elevation1_2 As 'Fluent Elevation (0.0.16)'":
+        Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
+        DisplayMode: =DisplayMode.Edit
+        Height: =89
+        Width: =197
+        X: =668
+        Y: =260
+        ZIndex: =9
+
+    "Elevation1_3 As 'Fluent Elevation (0.0.16)'":
+        Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+        DisplayMode: =DisplayMode.Edit
+        Height: =89
+        Width: =197
+        X: =668
+        Y: =155
+        ZIndex: =10
+
+    "picTags As 'Fluent Picker (0.0.16)'.pcfdataset":
+        BorderRadius: =8
+        DisplayMode: =DisplayMode.Edit
+        Error: =false
+        FontSize: =12
+        Height: =36
+        HintText: ="Search for label"
+        InputEvent: =
+        ItemHeight: =0
+        Items: =Sort(colSelectedTags,Key)
+        MinimumSearchTermLength: =1
+        OnChange: |
+            =If(
+                Self.TagEvent = "Add",
+                With(
+                    {
+                        selected: LookUp(
+                            colTags,
+                            Key = Self.TagKey
+                        )
+                    },
+                    If(
+                        !IsBlank(selected) && IsBlank(LookUp(colSelectedTags,Key=selected.Key)),
+                        Collect(
+                            colSelectedTags,
+                            {
+                                Key: selected.Key,
+                                DisplayName: selected.DisplayName,
+                                TextColor: selected.TextColor,
+                                BackgroundColor: selected.BackgroundColor,
+                                BorderColor: selected.BorderColor,
+                                HoverBorderColor: selected.HoverBorderColor
+                            }
+                        )
+                    );
+                )
+            );
+            If(
+                Self.TagEvent = "Remove",
+                RemoveIf(
+                    colSelectedTags,
+                    Key = Text(Self.TagKey)
+                )
+            );
+        Suggestions_Items: |-
+            =Filter(
+                Search(colTags,Self.SearchTerm,"DisplayName"),
+                !(Key in colSelectedTags.Key))
+                
+        SuggestionsBackgroundColor: ="BackgroundColor"
+        SuggestionsBorderColor: ="BorderColor"
+        SuggestionsDisplayName: ="DisplayName"       
+        SuggestionsHoverBackgroundColor: =""
+        SuggestionsHoverBorderColor: ="HoverBorderColor"
+        SuggestionsIconName: =""
+        SuggestionsKey: ="Key"
+        SuggestionsSubDisplayName: =""
+        SuggestionsTextColor: ="TextColor"
+        TagMaxWidth: =200
+        TagsBackgroundColor: ="BackgroundColor"
+        TagsBorderColor: ="BorderColor"
+        TagsDisplayName: ="DisplayName"
+        TagsError: =""
+        TagsHoverBorderColor: ="HoverBorderColor"
+        TagsKey: ="Key"
+        TagsTextColor: ="TextColor"
+        Visible: =true
+        Width: =400
+        X: =916
+        Y: =191
+        ZIndex: =11
+
+        BackgroundColor1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="BackgroundColor"
+            FieldName: ="BackgroundColor"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =6
+
+        BorderColor1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="BorderColor"
+            FieldName: ="BorderColor"
+            FieldVariantName: ="textualColumn"
+            Order: =2
+            ZIndex: =7
+
+        HoverBorderColor1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="HoverBorderColor"
+            FieldName: ="HoverBorderColor"
+            FieldVariantName: ="textualColumn"
+            Order: =3
+            ZIndex: =8
+
+        TextColor1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="TextColor"
+            FieldName: ="TextColor"
+            FieldVariantName: ="textualColumn"
+            Order: =4
+            ZIndex: =9
+
+        Key1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Key"
+            FieldName: ="Key"
+            FieldVariantName: ="textualColumn"
+            Order: =5
+            ZIndex: =10
+
+        DisplayName1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="DisplayName"
+            FieldName: ="DisplayName"
+            FieldVariantName: ="textualColumn"
+            Order: =6
+            ZIndex: =11
+
+    "comTabs As 'Commands/Menus/Navs'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =42
+        InputEvent: =
+        Items: |-
+            =Table(
+                {
+                    ItemKey: "tabFile",
+                    ItemDisplayName: "File"
+                },
+                {
+                    ItemKey: "tabHome",
+                    ItemDisplayName: "Home"
+                },
+                {
+                    ItemKey: "tabView",
+                    ItemDisplayName: "View"
+                },
+                {
+                    ItemKey: "tabAction",
+                    ItemDisplayName: "Action"
+                }
+            )
+        OnChange: =Notify("Selected Tab", Self.SelectedKey)
+        OnSelect: =
+        RenderSize: ='''PowerCAT.CommandsMenusNavs.RenderSize'''.Large
+        RenderType: ='''PowerCAT.CommandsMenusNavs.RenderType'''.PivotLinks
+        SelectedKey: =
+        ThemeJSON: =AppThemeJson
+        Width: =369
+        X: =916
+        Y: =295
+        ZIndex: =12
+
+        ItemDisplayName1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="ItemDisplayName"
+            FieldName: ="ItemDisplayName"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =12
+
+        ItemKey1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="ItemKey"
+            FieldName: ="ItemKey"
+            FieldVariantName: ="textualColumn"
+            Order: =2
+            ZIndex: =13
+
+        ItemCount1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="ItemCount"
+            FieldName: ="ItemCount"
+            FieldVariantName: ="textualColumn"
+            Order: =3
+            ZIndex: =14
+
+    Label1 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Forms"
+        Width: =320
+        X: =327
+        Y: =104
+        ZIndex: =13
+
+    Label1_1 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Elevation"
+        Width: =320
+        X: =668
+        Y: =123
+        ZIndex: =14
+
+    Label1_2 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Picker"
+        Width: =320
+        X: =916
+        Y: =159
+        ZIndex: =15
+
+    Label1_3 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Primitive Controls"
+        Width: =150
+        X: =42
+        Y: =93
+        ZIndex: =16
+
+    Label1_4 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Pivot"
+        Width: =320
+        X: =916
+        Y: =253
+        ZIndex: =17
+
+    Label1_5 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Command Bar"
+        Width: =320
+        X: =916
+        Y: =377
+        ZIndex: =19
+
+    Label1_6 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Action Button"
+        Width: =320
+        X: =916
+        Y: =498
+        ZIndex: =20
+
+    Label1_7 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Nav"
+        Width: =320
+        X: =916
+        Y: =605
+        ZIndex: =22
+
+    "cmpDetailsList_1 As 'Fluent Details List (0.0.16)'.pcfdataset":
+        columns_Items: |
+            =Table({ColName:"name",ColDisplayName:"Name",ColWidth:200,ColSortable:true,ColIsBold:true,ColResizable:true},
+            {ColName:"address1_city",ColDisplayName:"City:",ColShowAsSubTextOf:"name"},
+            {ColName:"address1_country",ColDisplayName:"Country:",ColShowAsSubTextOf:"name"},
+            {ColName:"telephone1",ColDisplayName:"Telephone",ColWidth:100,ColSortable:true,ColResizable:true},
+            {ColName:"primarycontactid",ColDisplayName:"Primary Contact",ColWidth:200,ColSortable:true,
+            ColSortBy:"_primarycontactid_value",ColResizable:true,ColCellType:"link"}
+            )
+        DisplayMode: =DisplayMode.Edit
+        Height: =695
+        InputEvent: ="LoadFirstPage" & Text(Rand())
+        Items: |
+            =Accounts
+        OnChange: |-
+            =If(Self.EventName="OnRowSelectionChange",Notify("Row Select " & Self.EventRowKey));
+            
+            If(Self.EventName="CellAction",Notify("Open Link " &  Self.EventColumn & " " & Self.EventRowKey))
+        PageSize: =25
+        RaiseOnRowSelectionChangeEvent: =false
+        SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+        Theme: =AppThemeJson
+        Visible: =true
+        Width: =529
+        X: =1391
+        Y: =116
+        ZIndex: =23
+
+        "'Account Name1_1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Account Name"
+            FieldName: ="name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =1
+
+        "'Address 1: City1_1' As pcfDataField.textualColumn":
+            FieldDisplayName: |-
+                ="Address 1: City"
+            FieldName: ="address1_city"
+            FieldVariantName: ="textualColumn"
+            Order: =3
+            ZIndex: =3
+
+        "'Address 2: City1_1' As pcfDataField.textualColumn":
+            FieldDisplayName: |-
+                ="Address 2: City"
+            FieldName: ="address2_city"
+            FieldVariantName: ="textualColumn"
+            Order: =5
+            ZIndex: =9
+
+        Account1_1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Account"
+            FieldName: ="accountid"
+            FieldVariantName: ="textualColumn"
+            Order: =8
+            ZIndex: =11
+
+        "'Account Number1_1' As pcfDataField.textualColumn":
+            FieldDisplayName: ="Account Number"
+            FieldName: ="accountnumber"
+            FieldVariantName: ="textualColumn"
+            Order: =8
+            ZIndex: =12
+
+        "'Address 1: Country/Region1_1' As pcfDataField.textualColumn":
+            FieldDisplayName: |-
+                ="Address 1: Country/Region"
+            FieldName: ="address1_country"
+            FieldVariantName: ="textualColumn"
+            Order: =9
+            ZIndex: =14
+
+        "'Primary Contact1_1' As pcfDataField":
+            FieldDisplayName: ="Primary Contact"
+            FieldName: ="primarycontactid"
+            FieldVariantName: ="complexTypeColumn"
+            Order: =7
+            ZIndex: =15
+
+    Label1_8 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: |-
+            ="Details
+             List"
+        Width: =320
+        X: =1434
+        Y: =48
+        ZIndex: =24
+
+    "btnAddTaskHeader_1 As 'Fluent Icon (0.0.16)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =34
+        HoverFillColor: =
+        IconName: ="Heart"
+        IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+        OnChange: =Notify("Button Clicked")
+        Text: ="Add Task"
+        TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+        Visible: =true
+        Width: =36
+        X: =1036
+        Y: =493
+        ZIndex: =25
+
+    Label1_9 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =24
+        FontWeight: =FontWeight.Semibold
+        Height: =124
+        Text: ="The quick brown fox jumps over the lazy dog"
+        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+        Width: =533
+        X: =40
+        Y: =531
+        ZIndex: =26
+
+    Label1_10 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Heading 1"
+        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+        Width: =150
+        X: =40
+        Y: =510
+        ZIndex: =27
+
+    Label1_11 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =20
+        FontWeight: =FontWeight.Semibold
+        Height: =124
+        Text: ="The quick brown fox jumps over the lazy dog"
+        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+        Width: =533
+        X: =40
+        Y: =664
+        ZIndex: =28
+
+    Label1_12 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Heading 2"
+        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading2
+        Width: =150
+        X: =41
+        Y: =652
+        ZIndex: =29
+
+    Label1_13 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =14
+        FontWeight: =FontWeight.Semibold
+        Height: =36
+        Text: ="The quick brown fox jumps over the lazy dog"
+        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading4
+        Width: =533
+        X: =41
+        Y: =830
+        ZIndex: =30
+
+    Label1_14 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =12
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Heading 3"
+        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading2
+        Width: =150
+        X: =42
+        Y: =794
+        ZIndex: =31
+
+    Label1_15 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontSize: =36
+        FontWeight: =FontWeight.Semibold
+        Height: =92
+        Text: ="Controls"
+        Width: =328
+        X: =55
+        Y: =0
+        ZIndex: =32
+
+    Spinner_1 As Spinner:
+        Height: =196
+        Visible: =Spinner_1.IsLoading
+        Width: =304
+        X: =608
+        Y: =866
+        ZIndex: =33
+
+    ExpandMenu_1 As ExpandMenu:
+        Theme: =AppTheme
+        Width: =34
+        X: =1370
+        Y: =165
+        ZIndex: =34
+
+    Label1_16 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Expander"
+        Width: =90
+        X: =1334
+        Y: =48
+        ZIndex: =35
+
+    Label1_17 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Picker"
+        Width: =320
+        X: =668
+        Y: =866
+        ZIndex: =36
+
+    Label1_18 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Breadcrumb"
+        Width: =134
+        X: =918
+        Y: =48
+        ZIndex: =40
+
+    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.16)'.pcfdataset":
+        AccessibilityLabel: ="Fluent UI Breadcrumb"
+        DisplayMode: =DisplayMode.Edit
+        Height: =48
+        Items: |-
+            =Table(
+                {
+                    ItemKey: "1",
+                    ItemDisplayName: "General",
+                    ItemClickable: true
+                },
+                {
+                    ItemKey: "2",
+                    ItemDisplayName: "Document",
+                    ItemClickable: true
+                },
+                {
+                    ItemKey: "3",
+                    ItemDisplayName: "File 3",
+                    ItemClickable: true
+                },
+                {
+                    ItemKey: "4",
+                    ItemDisplayName: "File 4(Non-Clickable)",
+                    ItemClickable: false
+                },
+                {
+                    ItemKey: "5",
+                    ItemDisplayName: "File 5"
+                },
+                {
+                    ItemKey: "6",
+                    ItemDisplayName: "File 6",
+                    ItemClickable: true
+                },
+                {
+                    ItemKey: "7",
+                    ItemDisplayName: "File 7",
+                    ItemClickable: true
+                }
+            )
+        MaxDisplayedItems: =5
+        OverflowIndex: =2
+        Width: =654
+        X: =912
+        Y: =75
+        ZIndex: =41
+
+    "ContextMenu1 As 'Fluent Context Menu (0.0.16)'.pcfdataset":
+        BackgroundColor: |-
+            ="#FFFFFF"
+        Chevron: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =43
+        Items: |
+            =Table(
+            
+                {
+                    ItemKey: "File",
+                    ItemIconName: "save",
+                    ItemDisplayName: "Save",
+                    ItemOverflow:true
+                },
+                 {
+                    ItemKey: "Delete",
+                    ItemIconName: "Delete",
+                    ItemDisplayName: "Delete",
+                    ItemOverflow:true
+                },
+                {
+                    ItemKey: "EditComplete",
+                    ItemIconName: "CheckMark",
+                    ItemDisplayName: "CheckMark",
+                    ItemIconOnly: true,
+                    ItemFarItem:true
+                }
+            )
+        Theme: =AppThemeJson
+        Width: =114
+        X: =1202
+        Y: =474
+        ZIndex: =43
+
+    "Checkbox1 As 'Check box'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Width: =160
+        X: =42
+        Y: =283
+        ZIndex: =44
+
+    "RadioGroup1 As 'Radio group'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =100
+        Items: =["Option1", "Option2"]
+        Width: =320
+        X: =42
+        Y: =332
+        ZIndex: =45
+
+        Value1 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Value"
+            FieldName: ="Value"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =6
+
+    Slider1 As Slider:
+        DisplayMode: =DisplayMode.Edit
+        Height: =64
+        Width: =257
+        X: =42
+        Y: =432
+        ZIndex: =46
+
+    "Nav1 As 'Fluent Nav (0.0.16)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =398
+        Items: |-
+            =Table(
+                {
+                    ItemKey: "1",
+                    ItemDisplayName: "Home with Icon & Custom color",
+                    ItemIconName: "Home",
+                    ItemIconColor: "Green"
+                },
+                {
+                    ItemKey: "2",
+                    ItemDisplayName: "Documents",
+                    ItemExpanded: true
+                },
+                {
+                    ItemKey: "3",
+                    ItemDisplayName: "Contents"
+                },
+                {
+                    ItemKey: "4",
+                    ItemDisplayName: "Item Invisible",
+                    ItemVisible: false
+                },
+                {
+                    ItemKey: "5",
+                    ItemDisplayName: "Quick Reference Guide",
+                    ItemParentKey: "3",
+                    ItemIconName: "Document"
+                },
+                {
+                    ItemKey: "6",
+                    ItemDisplayName: "Folder 1",
+                    ItemParentKey: "2",
+                    isExpanded: false
+                },
+                {
+                    ItemKey: "7",
+                    ItemDisplayName: "Folder 2",
+                    ItemParentKey: "6"
+                },
+                {
+                    ItemKey: "8",
+                    ItemDisplayName: "Folder 3",
+                    ItemParentKey: "7"
+                },
+                {
+                    ItemKey: "9",
+                    ItemDisplayName: "Folder 4",
+                    ItemParentKey: "8"
+                },
+                {
+                    ItemKey: "10",
+                    ItemDisplayName: "File 6",
+                    ItemParentKey: "9",
+                    ItemIconName: "DocumentSet",
+                    ItemIconColor: "Purple"
+                },
+                {
+                    ItemKey: "11",
+                    ItemDisplayName: "Schedule Appointment",
+                    ItemIconName: "Calendar",
+                    ItemIconColor: "Blue"
+                },
+                {
+                    ItemKey: "12",
+                    ItemDisplayName: "Quick Action"
+                },
+                {
+                    ItemKey: "13",
+                    ItemDisplayName: "Set Reminder",
+                    ItemParentKey: "12",
+                    ItemIconName: "Clock",
+                    ItemIconColor: "Brown"
+                },
+                {
+                    ItemKey: "14",
+                    ItemDisplayName: "To do list",
+                    ItemParentKey: "12",
+                    ItemIconName: "List",
+                    ItemIconColor: "Orange"
+                },
+                {
+                    ItemKey: "15",
+                    ItemDisplayName: "Power CAT Group",
+                    ItemParentKey: "12",
+                    ItemIconName: "Group"
+                }
+            )
+        SelectedKey: =""
+        Width: =422
+        X: =912
+        Y: =651
+        ZIndex: =47
+
+    "CommandBar1 As 'Fluent Command Bar (0.0.16)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =72
+        Items: |-
+            = Table({ItemKey: "new",ItemDisplayName: "New",ItemIconName: "Add"},
+                       {ItemKey: "edit",ItemDisplayName: "Edit",ItemIconName: "Edit"},
+                      {ItemKey: "delete",ItemDisplayName: "Delete",ItemIconName: "Delete"},
+                      {ItemKey: "refresh",ItemDisplayName: "Refresh",ItemIconName: "refresh"},
+                      {ItemKey: "help",ItemDisplayName: "Help",ItemIconName: "help"}
+                )
+        Theme: =AppThemeJson
+        Width: =548
+        X: =912
+        Y: =409
+        ZIndex: =48
+

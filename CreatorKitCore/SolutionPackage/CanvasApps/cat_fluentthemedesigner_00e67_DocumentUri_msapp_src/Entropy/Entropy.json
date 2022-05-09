@@ -1,0 +1,52 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "MainContentContainer": 5,
+    "rootContainer": 4,
+    "Theme Designer Screen": 3,
+    "ThemeDesigner": 7,
+    "ThemeJSONRichTxt": 6
+  },
+  "FunctionParamsInvariantScripts": {},
+  "HeaderLastSavedDateTimeUTC": "05/09/2022 11:30:48",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "varParsedTheme": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "groupContainer": 0,
+    "richTextEditor": 1
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "MainContentContainer": 1,
+    "rootContainer": 0,
+    "Theme Designer Screen": 0,
+    "ThemeDesigner": 3,
+    "ThemeJSONRichTxt": 2
+  },
+  "ResourcesJsonIndices": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.0847713,
+    "ControlCount": {
+      "cat_PowerCAT.ThemeDesigner": 1,
+      "groupContainer": 2,
+      "richTextEditor": 1,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 4.3047708,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": false
+}

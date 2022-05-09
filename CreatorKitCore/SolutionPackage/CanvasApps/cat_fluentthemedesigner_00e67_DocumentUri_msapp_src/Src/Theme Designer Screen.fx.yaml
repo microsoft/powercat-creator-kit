@@ -1,0 +1,43 @@
+"'Theme Designer Screen' As screen":
+
+    rootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =3
+
+        MainContentContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =Parent.Height
+            LayoutGap: =3
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =3
+
+            ThemeJSONRichTxt As richTextEditor:
+                BorderColor: =RGBA(179, 179, 179, 1)
+                Default: =If(IsBlank(varThemeJSON),"Select the color(s) & Click on Export Theme to generate theme in JSON format.", varThemeJSON)
+                Height: =Parent.Height
+                Width: =Parent.Width * 0.25
+                ZIndex: =1
+
+            "ThemeDesigner As 'Fluent Theme Designer (0.0.18)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                OnChange: |-
+                    =Set(varThemeJSON, ThemeDesigner.ThemeJSON);
+                    ClearCollect(varParsedTheme,MatchAll(varThemeJSON,"(?:\""|\')(?<key>[\w\d]+)(?:\""|\')(?:\:\s*)(?:\""|\')?(?<value>[#\w\s-]*)(?:\""|\')?"));
+                    Set(trimmedThemeProperties,Concat(varParsedTheme,Concatenate(" ",key,": "&Char(34)&value&Char(34)&",")));
+                    Set(finalThemeJSON,Left(trimmedThemeProperties,Len(trimmedThemeProperties)-1));
+                    Set(varThemeJSON,Concatenate("{ palette: ","{ ",finalThemeJSON,"}}"));
+                Width: =Parent.Width * 0.75
+                X: =0
+                Y: =0
+                ZIndex: =2
+

@@ -15,7 +15,7 @@
                                         {
                                             "aadGroupId":  "#{canvasshare.aadGroupId.cat_creatorkitcontrolreferenceapp_d66f8}#",
                                             "canvasNameInSolution":  "cat_creatorkitcontrolreferenceapp_d66f8",
-                                            "canvasDisplayName":  "Creator Kit Control Reference App",
+                                            "canvasDisplayName":  "Creator Kit Reference App",
                                             "roleName":  "#{canvasshare.roleName.cat_creatorkitcontrolreferenceapp_d66f8}#"
                                         },
                                         {

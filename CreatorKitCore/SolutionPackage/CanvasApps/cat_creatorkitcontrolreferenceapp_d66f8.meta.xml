@@ -5,11 +5,11 @@
   <Status>Ready</Status>
   <CreatedByClientVersion>3.22043.28.0</CreatedByClientVersion>
   <MinClientVersion>3.22043.28.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1439","primaryDeviceHeight":"597","sienaVersion":"20220508T110446Z-3.22044.29.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22043.28","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}</Tags>
+  <Tags>{"primaryDeviceWidth":"1439","primaryDeviceHeight":"597","sienaVersion":"20220508T192733Z-3.22043.28.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22043.28","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
-  <DisplayName>Creator Kit Control Reference App</DisplayName>
+  <DisplayName>Creator Kit Reference App</DisplayName>
   <Description xsi:nil="true"></Description>
   <CommitMessage xsi:nil="true"></CommitMessage>
   <Publisher xsi:nil="true"></Publisher>

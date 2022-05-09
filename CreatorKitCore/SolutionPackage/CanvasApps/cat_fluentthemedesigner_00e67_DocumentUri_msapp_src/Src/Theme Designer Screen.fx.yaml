@@ -1,43 +1,88 @@
 "'Theme Designer Screen' As screen":
 
-    rootContainer As groupContainer.verticalAutoLayoutContainer:
+    MainContentContainer As groupContainer.horizontalAutoLayoutContainer:
         Height: =Parent.Height
-        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =3
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
         Width: =Parent.Width
-        ZIndex: =3
+        ZIndex: =4
 
-        MainContentContainer As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
+        "ThemeDesigner As 'Fluent Theme Designer (0.0.18)'":
+            AlignInContainer: =AlignInContainer.Stretch
+            DisplayMode: =DisplayMode.Edit
+            FillPortions: =1
             Height: =Parent.Height
-            LayoutGap: =3
-            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
-            LayoutMinHeight: =100
-            LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            Width: =Parent.Width
-            ZIndex: =3
+            LayoutMinHeight: =200
+            LayoutMinWidth: =200
+            OnChange: |-
+                =If(varThemeJSON <> ThemeDesigner.ThemeJSON || (ThemeDesigner.PrimaryColor = varPrimaryColor && ThemeDesigner.TextColor = varTextColor && ThemeDesigner.BackgroundColor = varBackGroundColor),
+                Set(varThemeJSON, ThemeDesigner.ThemeJSON);
+                //Creating key value pair of theme properties
+                ClearCollect(varParsedTheme,MatchAll(varThemeJSON,"(?:\""|\')(?<key>[\w\d]+)(?:\""|\')(?:\:\s*)(?:\""|\')?(?<value>[#\w\s-]*)(?:\""|\')?"));
+                If(CountRows(varParsedTheme) > 0,
+                UpdateContext({showHidePanel:!showHidePanel});
+                Set(trimmedThemeProperties,Concat(varParsedTheme,Concatenate(" ",key,": "&Char(34)&value&Char(34)&",")));
+                // Removing last comma
+                Set(finalThemeJSON,Left(trimmedThemeProperties,Len(trimmedThemeProperties)-1));
+                Set(varAppThemeJSON,Concatenate("{ palette: ","{ ",finalThemeJSON,"}}")));
+                Set(varPrimaryColor,ThemeDesigner.PrimaryColor);
+                Set(varTextColor,ThemeDesigner.TextColor);
+                Set(varBackGroundColor,ThemeDesigner.BackgroundColor));
+            PrimaryColor: |-
+                ="#0078d4"
+            Width: =Parent.Width * 0.75
+            X: =0
+            Y: =0
+            ZIndex: =2
 
-            ThemeJSONRichTxt As richTextEditor:
-                BorderColor: =RGBA(179, 179, 179, 1)
-                Default: =If(IsBlank(varThemeJSON),"Select the color(s) & Click on Export Theme to generate theme in JSON format.", varThemeJSON)
-                Height: =Parent.Height
-                Width: =Parent.Width * 0.25
-                ZIndex: =1
+    Panel_1 As Panel:
+        Buttons: |-
+            =Table({Label: "Close", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
+        DialogWidth: =400
+        Fill: =Panel_1.OverlayColor
+        OnButtonSelect: |-
+            =UpdateContext({showHidePanel:false})
+        OnCloseSelect: |-
+            =UpdateContext({showHidePanel:false})
+        Subtitle: =
+        Title: ="Export Theme"
+        Visible: =showHidePanel
+        Width: =App.Width
+        ZIndex: =5
 
-            "ThemeDesigner As 'Fluent Theme Designer (0.0.18)'":
-                DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
-                OnChange: |-
-                    =Set(varThemeJSON, ThemeDesigner.ThemeJSON);
-                    ClearCollect(varParsedTheme,MatchAll(varThemeJSON,"(?:\""|\')(?<key>[\w\d]+)(?:\""|\')(?:\:\s*)(?:\""|\')?(?<value>[#\w\s-]*)(?:\""|\')?"));
-                    Set(trimmedThemeProperties,Concat(varParsedTheme,Concatenate(" ",key,": "&Char(34)&value&Char(34)&",")));
-                    Set(finalThemeJSON,Left(trimmedThemeProperties,Len(trimmedThemeProperties)-1));
-                    Set(varThemeJSON,Concatenate("{ palette: ","{ ",finalThemeJSON,"}}"));
-                Width: =Parent.Width * 0.75
-                X: =0
-                Y: =0
-                ZIndex: =2
+    ExportContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =Panel_1.ContentHeight
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =10
+        PaddingTop: =20
+        Visible: =Panel_1.Visible
+        Width: =Panel_1.ContentWidth
+        X: =Panel_1.ContentX - 20
+        Y: =Panel_1.ContentY
+        ZIndex: =6
+
+        Label1 As label:
+            AutoHeight: =true
+            Font: =Font.'Segoe UI'
+            PaddingBottom: =10
+            PaddingRight: =10
+            PaddingTop: =0
+            Text: ="This code block creates the theme you can use in your app OnStart. You can copy paste to replace the existin theme by setting the global variable AppTheme to this code."
+            ZIndex: =1
+
+        HtmlText2 As htmlViewer:
+            BorderColor: =RGBA(179, 179, 179, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            FillPortions: =1
+            Font: =Font.'Courier New'
+            HtmlText: =If(IsBlank(varAppThemeJSON),"Select the color(s) & Click on Export Theme to generate theme in JSON format.", varAppThemeJSON)
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            Size: =12
+            ZIndex: =2
 

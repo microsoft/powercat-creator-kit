@@ -1,9 +1,0 @@
-.ActionList button.is-checked {
-    /* Show checked command bar buttons */
-    background-color: rgb(237, 235, 233);
-}
-
-.ActionList .is-checked {
-    /* Show checked command bar buttons */
-    background-color: rgb(237, 235, 233);
-}

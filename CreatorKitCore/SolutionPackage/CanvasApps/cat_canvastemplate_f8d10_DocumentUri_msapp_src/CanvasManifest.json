@@ -90,7 +90,7 @@
     "AppName": "Canvas Template",
     "BackgroundColor": "rgba(0, 120, 212, 1)",
     "IconColor": "RGBA(255,255,255,1)",
-    "IconName": "Edit",
+    "IconName": "Page",
     "LogoFileName": "logo.jpg",
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,

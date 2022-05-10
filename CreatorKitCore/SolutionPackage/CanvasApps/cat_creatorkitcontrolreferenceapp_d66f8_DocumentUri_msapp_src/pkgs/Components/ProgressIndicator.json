@@ -5,38 +5,20 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Card",
-    "TemplateGuid": "3a261ed1de734ed7847eecc63ccdc641"
+    "Name": "ProgressIndicator",
+    "TemplateGuid": "79bdfcb26b5f46609035121e3fae59af"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
   "CustomProperties": [
     {
       "Category": 0,
-      "DisplayName": "Card Title",
+      "DisplayName": "Value",
       "Hidden": false,
-      "Name": "CardTitle",
-      "PropertyDataTypeKey": "String",
+      "Name": "Value",
+      "PropertyDataTypeKey": "Number",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
-    },
-    {
-      "Category": 0,
-      "DisplayName": "Card User",
-      "Hidden": false,
-      "Name": "CardUser",
-      "PropertyDataTypeKey": "Record",
-      "Tooltip": "Card User",
-      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Email\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"FullName\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"Image\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}]}}"
-    },
-    {
-      "Category": 0,
-      "DisplayName": "Image",
-      "Hidden": false,
-      "Name": "Image",
-      "PropertyDataTypeKey": "Image",
-      "Tooltip": "The image to be displayed in the card",
-      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -56,11 +38,11 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637876036622438741",
-  "Name": "3a261ed1de734ed7847eecc63ccdc641",
+  "LastModifiedTimestamp": "637877301618775071",
+  "Name": "79bdfcb26b5f46609035121e3fae59af",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",
   "SourceLibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
-  "TemplateOriginalName": "f183da62fef74e21b02ec98e8b6bfe80",
-  "Version": "637722065298992325"
+  "TemplateOriginalName": "33750a84e06043cbb776fbb640114aaf",
+  "Version": "637722065298991695"
 }

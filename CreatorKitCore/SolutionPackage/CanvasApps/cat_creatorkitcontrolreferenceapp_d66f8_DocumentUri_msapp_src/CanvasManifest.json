@@ -83,11 +83,11 @@
     "FileID": "5ce42851-0ed6-4006-afb9-782f4343bf30",
     "Id": "778d4def-b605-4275-8403-6c218bd678a3",
     "InstrumentationKey": "",
-    "Name": "Creator Kit Control Reference App",
+    "Name": "Creator Kit Reference App",
     "OriginatingVersion": "1.323"
   },
   "PublishInfo": {
-    "AppName": "Creator Kit Control Reference App",
+    "AppName": "Creator Kit Reference App",
     "BackgroundColor": "RGBA(0,176,240,1)",
     "IconColor": "RGBA(255,255,255,1)",
     "IconName": "Edit",
@@ -113,6 +113,10 @@
     "scrTagPicker",
     "scrElevation",
     "scrKeyboardShortcut",
+    "scrSpinner",
+    "scrProgressIndicator",
+    "scrDialog",
+    "scrPanel",
     "scrBreadcrumb",
     "scrTemplate"
   ]

@@ -3,7 +3,7 @@
   "BackgroundColor": "Background color",
   "BorderColor": "Border color",
   "Chevron": "Chevron",
-  "ContextMenu": "Fluent Context Menu (0.0.16)",
+  "ContextMenu": "Fluent Context Menu (0.0.20)",
   "ContextMenu_Desc": "Context Menu component",
   "InputEvent": "Input event",
   "TextAlignment": "Text alignment",

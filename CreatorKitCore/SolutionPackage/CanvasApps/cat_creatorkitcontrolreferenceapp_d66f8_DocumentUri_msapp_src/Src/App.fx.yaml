@@ -112,12 +112,12 @@ App As appinfo:
             {ItemKey:"taglist",ItemDisplayName:"Tag List",ItemParentKey:"galleries_pickers",TargetScreen:scrTagList},
         
             {ItemKey:"progress",ItemDisplayName:"Progress"},
-            {ItemKey:"spinner",ItemDisplayName:"Spinner",ItemParentKey:"progress",TargetScreen:scrElevation},
-            {ItemKey:"progressIndicator",ItemDisplayName:"Progress Indicator",ItemParentKey:"progress",TargetScreen:scrKeyboardShortcut},
+            {ItemKey:"spinner",ItemDisplayName:"Spinner",ItemParentKey:"progress",TargetScreen:scrSpinner},
+            {ItemKey:"progressIndicator",ItemDisplayName:"Progress Indicator",ItemParentKey:"progress",TargetScreen:scrProgressIndicator},
         
             {ItemKey:"surfaces",ItemDisplayName:"Surfaces"},
-            {ItemKey:"panel",ItemDisplayName:"Panel",ItemParentKey:"surfaces",TargetScreen:scrElevation},
-            {ItemKey:"dialog",ItemDisplayName:"Dialog",ItemParentKey:"surfaces",TargetScreen:scrKeyboardShortcut},
+            {ItemKey:"panel",ItemDisplayName:"Panel",ItemParentKey:"surfaces",TargetScreen:scrPanel},
+            {ItemKey:"dialog",ItemDisplayName:"Dialog",ItemParentKey:"surfaces",TargetScreen:scrDialog},
         
             {ItemKey:"utilities",ItemDisplayName:"Utilities"},
             {ItemKey:"elevation",ItemDisplayName:"Elevation",ItemParentKey:"utilities",TargetScreen:scrElevation},

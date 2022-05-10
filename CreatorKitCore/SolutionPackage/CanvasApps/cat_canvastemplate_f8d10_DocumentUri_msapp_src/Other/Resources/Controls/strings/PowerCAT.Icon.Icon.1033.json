@@ -1,5 +1,6 @@
 {
   "AccessibilityLabel": "Accessibility label",
+  "AccessibilityLabel_Desc": "The label to add to the table aria description",
   "BorderColor": "Border color",
   "BorderRadius": "Border radius",
   "FillColor": "Fill color",
@@ -9,7 +10,7 @@
   "HoverFillColor": "Hover fill color",
   "HoverFontColor": "Hover font color",
   "HoverIconColor": "Hover icon color",
-  "Icon": "Fluent Icon (0.0.16)",
+  "Icon": "Fluent Icon (0.0.20)",
   "Icon_Desc": "Icon component",
   "IconColor": "Icon color",
   "IconName": "Icon name",

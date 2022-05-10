@@ -1,4 +1,4 @@
-FluentIcon As CanvasComponent:
+CustomIcon As CanvasComponent:
     GetIcon(IconName As String, HexColor As String):
         IconName:
             Default: ="Text"
@@ -11,7 +11,7 @@ FluentIcon As CanvasComponent:
                     "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 " & 2068 & " 2048'>
                   <g transform='matrix(1 0 0 -1 0 2048),rotate(0, 2068,1024)'>
                    <path fill='" & If(IsBlank(HexColor), "#222222", HexColor) & "'
-                d='" & FluentIcon.GetIconPath(IconName) & "' />
+                d='" & CustomIcon.GetIconPath(IconName) & "' />
                   </g>
                 </svg>"
                 )
@@ -9111,12 +9111,12 @@ FluentIcon As CanvasComponent:
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledFill: =RGBA(0, 0, 0, 0)
         FocusedBorderThickness: =4
-        Height: =FluentIcon.Height
+        Height: =CustomIcon.Height
         HoverBorderColor: =RGBA(0, 0, 0, 0)
         HoverFill: =RGBA(0, 0, 0, 0)
-        Image: =FluentIcon.GetIcon(FluentIcon.Name,If(IsBlank(FluentIcon.HexColor),FluentIcon.Theme.palette.themePrimary, FluentIcon.HexColor))
+        Image: =CustomIcon.GetIcon(CustomIcon.Name,If(IsBlank(CustomIcon.HexColor),CustomIcon.Theme.palette.themePrimary, CustomIcon.HexColor))
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedFill: =RGBA(0, 0, 0, 0)
-        Width: =FluentIcon.Width
+        Width: =CustomIcon.Width
         ZIndex: =4
 

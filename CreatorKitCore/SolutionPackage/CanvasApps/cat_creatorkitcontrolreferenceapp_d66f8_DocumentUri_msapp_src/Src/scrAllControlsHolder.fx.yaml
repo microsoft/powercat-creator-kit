@@ -184,3 +184,9 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =4
 
+    Header_11 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Width: =App.Width
+        ZIndex: =2
+

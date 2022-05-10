@@ -13,6 +13,7 @@ scrKeyboardShortcut As screen:
         PaddingTop: =2*varTheme.U
         Width: =Parent.Width-Self.X
         X: =LeftNav_15.Width
+        Y: =Header_15.Height
         ZIndex: =2
 
         lblTitle_14 As label:
@@ -84,5 +85,12 @@ scrKeyboardShortcut As screen:
     LeftNav_15 As LeftNav:
         Height: =Parent.Height
         Width: =200
+        Y: =Header_15.Height
         ZIndex: =7
+
+    Header_15 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Width: =App.Width
+        ZIndex: =8
 

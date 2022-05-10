@@ -603,7 +603,7 @@
                 Y: =DataCardKey3.Y
                 ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (0.0.16)'":
+    "btnAddTaskHeader As 'Fluent Icon (0.0.20)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
@@ -618,7 +618,7 @@
         Y: =536
         ZIndex: =6
 
-    "Elevation1 As 'Fluent Elevation (0.0.16)'":
+    "Elevation1 As 'Fluent Elevation (0.0.20)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -627,7 +627,7 @@
         Y: =373
         ZIndex: =7
 
-    "Elevation1_1 As 'Fluent Elevation (0.0.16)'":
+    "Elevation1_1 As 'Fluent Elevation (0.0.20)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =341
@@ -636,7 +636,7 @@
         Y: =489
         ZIndex: =8
 
-    "Elevation1_2 As 'Fluent Elevation (0.0.16)'":
+    "Elevation1_2 As 'Fluent Elevation (0.0.20)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -645,7 +645,7 @@
         Y: =260
         ZIndex: =9
 
-    "Elevation1_3 As 'Fluent Elevation (0.0.16)'":
+    "Elevation1_3 As 'Fluent Elevation (0.0.20)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -654,7 +654,7 @@
         Y: =155
         ZIndex: =10
 
-    "picTags As 'Fluent Picker (0.0.16)'.pcfdataset":
+    "picTags As 'Fluent Picker (0.0.20)'.pcfdataset":
         BorderRadius: =8
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -768,61 +768,6 @@
             Order: =6
             ZIndex: =11
 
-    "comTabs As 'Commands/Menus/Navs'.pcfdataset":
-        DisplayMode: =DisplayMode.Edit
-        Height: =42
-        InputEvent: =
-        Items: |-
-            =Table(
-                {
-                    ItemKey: "tabFile",
-                    ItemDisplayName: "File"
-                },
-                {
-                    ItemKey: "tabHome",
-                    ItemDisplayName: "Home"
-                },
-                {
-                    ItemKey: "tabView",
-                    ItemDisplayName: "View"
-                },
-                {
-                    ItemKey: "tabAction",
-                    ItemDisplayName: "Action"
-                }
-            )
-        OnChange: =Notify("Selected Tab", Self.SelectedKey)
-        OnSelect: =
-        RenderSize: ='''PowerCAT.CommandsMenusNavs.RenderSize'''.Large
-        RenderType: ='''PowerCAT.CommandsMenusNavs.RenderType'''.PivotLinks
-        SelectedKey: =
-        ThemeJSON: =AppThemeJson
-        Width: =369
-        X: =916
-        Y: =295
-        ZIndex: =12
-
-        ItemDisplayName1 As pcfDataField.textualColumn:
-            FieldDisplayName: ="ItemDisplayName"
-            FieldName: ="ItemDisplayName"
-            FieldVariantName: ="textualColumn"
-            Order: =1
-            ZIndex: =12
-
-        ItemKey1 As pcfDataField.textualColumn:
-            FieldDisplayName: ="ItemKey"
-            FieldName: ="ItemKey"
-            FieldVariantName: ="textualColumn"
-            Order: =2
-            ZIndex: =13
-
-        ItemCount1 As pcfDataField.textualColumn:
-            FieldDisplayName: ="ItemCount"
-            FieldName: ="ItemCount"
-            FieldVariantName: ="textualColumn"
-            Order: =3
-            ZIndex: =14
-
     Label1 As Label:
         DisplayMode: =DisplayMode.Edit
         FontWeight: =FontWeight.Semibold
@@ -869,8 +814,8 @@
         Height: =32
         Text: ="Pivot"
         Width: =320
-        X: =916
-        Y: =253
+        X: =912
+        Y: =302
         ZIndex: =17
 
     Label1_5 As Label:
@@ -903,7 +848,7 @@
         Y: =605
         ZIndex: =22
 
-    "cmpDetailsList_1 As 'Fluent Details List (0.0.16)'.pcfdataset":
+    "cmpDetailsList_1 As 'Fluent Details List (0.0.20)'.pcfdataset":
         columns_Items: |
             =Table({ColName:"name",ColDisplayName:"Name",ColWidth:200,ColSortable:true,ColIsBold:true,ColResizable:true},
             {ColName:"address1_city",ColDisplayName:"City:",ColShowAsSubTextOf:"name"},
@@ -922,12 +867,12 @@
             
             If(Self.EventName="CellAction",Notify("Open Link " &  Self.EventColumn & " " & Self.EventRowKey))
         PageSize: =25
-        RaiseOnRowSelectionChangeEvent: =false
+        RaiseOnRowSelectionChangeEvent: =true
         SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
         Theme: =AppThemeJson
         Visible: =true
-        Width: =529
-        X: =1391
+        Width: =516
+        X: =1404
         Y: =116
         ZIndex: =23
 
@@ -995,7 +940,7 @@
         Y: =48
         ZIndex: =24
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (0.0.16)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (0.0.20)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -1102,10 +1047,11 @@
         ZIndex: =33
 
     ExpandMenu_1 As ExpandMenu:
+        Height: =267
         Theme: =AppTheme
         Width: =34
         X: =1370
-        Y: =165
+        Y: =570
         ZIndex: =34
 
     Label1_16 As Label:
@@ -1138,7 +1084,7 @@
         Y: =48
         ZIndex: =40
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.16)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.20)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -1186,7 +1132,7 @@
         Y: =75
         ZIndex: =41
 
-    "ContextMenu1 As 'Fluent Context Menu (0.0.16)'.pcfdataset":
+    "ContextMenu1 As 'Fluent Context Menu (0.0.20)'.pcfdataset":
         BackgroundColor: |-
             ="#FFFFFF"
         Chevron: =true
@@ -1253,7 +1199,7 @@
         Y: =432
         ZIndex: =46
 
-    "Nav1 As 'Fluent Nav (0.0.16)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =398
         Items: |-
@@ -1349,7 +1295,7 @@
         Y: =651
         ZIndex: =47
 
-    "CommandBar1 As 'Fluent Command Bar (0.0.16)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =72
         Items: |-
@@ -1364,4 +1310,32 @@
         X: =912
         Y: =409
         ZIndex: =48
+
+    "Pivot1 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =44
+        Items: |-
+            =Table(
+                {
+                    ItemKey: "tabFile",
+                    ItemDisplayName: "File"
+                },
+                {
+                    ItemKey: "tabHome",
+                    ItemDisplayName: "Home"
+                },
+                {
+                    ItemKey: "tabView",
+                    ItemDisplayName: "View"
+                },
+                {
+                    ItemKey: "tabAction",
+                    ItemDisplayName: "Action"
+                }
+            )
+        Theme: =AppThemeJson
+        Width: =476
+        X: =911
+        Y: =333
+        ZIndex: =49
 

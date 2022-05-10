@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Picker" xml:space="preserve">
-    <value>Fluent Picker (0.0.16)</value>
+    <value>Fluent Picker (0.0.20)</value>
     <comment/>
   </data>
   <data name="Picker_Desc" xml:space="preserve">
@@ -303,6 +303,10 @@
   </data>
   <data name="ItemHeight" xml:space="preserve">
     <value>Item height</value>
+    <comment/>
+  </data>
+  <data name="Aria_TagRemove" xml:space="preserve">
+    <value>Remove</value>
     <comment/>
   </data>
 </root>

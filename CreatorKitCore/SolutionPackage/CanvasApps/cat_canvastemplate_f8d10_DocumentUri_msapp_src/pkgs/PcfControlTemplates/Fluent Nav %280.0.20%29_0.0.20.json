@@ -378,7 +378,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Fluent Nav (0.0.16)",
+  "Name": "Fluent Nav (0.0.20)",
   "Properties": [
     {
       "Category": "data",
@@ -904,13 +904,13 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.16\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/6558a774-5b46-4608-8a92-1c08bbf91ebe-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0vfs05k2n.dac020S0Resources0Controls0PowerCAT.Nav.bundle.js?sv=2017-04-17&sr=b&sig=%2FdrEqQgorFHRZ4i19vAuEJRY9g8AbJvY93P8HtI725A%3D&spr=https&se=2022-05-09T11%3A01%3A09Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/af693f8c-9e46-429d-bbae-ae309b6cb9d1-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work02uubwyve.hxc060S0Resources0Controls0PowerCAT.Nav.bundle.js?sv=2017-04-17&sr=b&sig=%2BNtR0vbrgLa5rD5ZvGcOxy5uV7Yy%2FWNBx3r15CtJt5A%3D&spr=https&se=2022-05-11T10%3A22%3A15Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Nav/PowerCAT.Nav.bundle.js",
       "Type": 0
     },
@@ -931,7 +931,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/6558a774-5b46-4608-8a92-1c08bbf91ebe-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0vfs05k2n.dac020S0Resources0Controls0strings%252fPowerCAT.Nav.FluentNav.1033.json?sv=2017-04-17&sr=b&sig=%2BCcGpIzo2C2%2BSjTcc13huK7vXkpLA4dRiPsUdeLIqLg%3D&spr=https&se=2022-05-09T11%3A01%3A09Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/af693f8c-9e46-429d-bbae-ae309b6cb9d1-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work02uubwyve.hxc060S0Resources0Controls0strings%252fPowerCAT.Nav.FluentNav.1033.json?sv=2017-04-17&sr=b&sig=3JC22doV01Eq3ivceM5hBMa8mwKBNVNLiLeHFWXbSe0%3D&spr=https&se=2022-05-11T10%3A22%3A15Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Nav/strings/PowerCAT.Nav.FluentNav.1033.json",
       "Type": 5
     },
@@ -939,7 +939,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Nav\":\"Fluent Nav (0.0.16)\",\"Nav_Desc\":\"Nav component\",\"AccessibilityLabel\":\"Accessibility label\",\"Theme\":\"Theme\",\"InputEvent\":\"Input event\",\"TextAlignment\":\"Text alignment\",\"SelectedKey\":\"Selected key\",\"CollapseByDefault\":\"Collapse By Default\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Nav\":\"Fluent Nav (0.0.20)\",\"Nav_Desc\":\"Nav component\",\"AccessibilityLabel\":\"Accessibility label\",\"Theme\":\"Theme\",\"InputEvent\":\"Input event\",\"TextAlignment\":\"Text alignment\",\"SelectedKey\":\"Selected key\",\"CollapseByDefault\":\"Collapse By Default\"}}}",
       "Type": 3
     },
     {
@@ -964,5 +964,5 @@
       "Type": 4
     }
   ],
-  "Version": "0.0.16"
+  "Version": "0.0.20"
 }

@@ -1,7 +1,7 @@
 Dialog As CanvasComponent:
     Buttons: |-
         =Table({Label: "Cancel", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } ,{Label: "Ok", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
-    ContentHeight: =Dialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery.Height
+    ContentHeight: =Dialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
     ContentWidth: =Dialog.DialogWidth
     ContentX: = Dialog.Width/2-Dialog.DialogWidth/2
     ContentY: = Dialog.Height/2-Dialog.DialogHeight/2+DialogHeaderContainer.Height
@@ -15,7 +15,7 @@ Dialog As CanvasComponent:
     OnReset: =
     OverlayColor: =RGBA(0, 0, 0, 0.4)
     SelectedButton: |-
-        ={ Label: ButtonsGallery.Selected.Label }
+        ={ Label: ButtonsGallery_2.Selected.Label }
     SubTitle: ="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis ?"
     Theme: |-
         ={
@@ -49,7 +49,7 @@ Dialog As CanvasComponent:
     Width: =1600
     X: =0
     Y: =0
-    ZIndex: =7
+    ZIndex: =6
 
     htmlShadow As htmlViewer:
         Height: =Dialog.Height

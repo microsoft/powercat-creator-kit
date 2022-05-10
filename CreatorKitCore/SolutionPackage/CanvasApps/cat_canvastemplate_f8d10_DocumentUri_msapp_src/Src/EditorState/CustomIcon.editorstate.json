@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "FluentIcon": {
+    "CustomIcon": {
       "AllowAccessToGlobals": false,
       "ControlPropertyState": [
         "Fill",
@@ -69,10 +69,25 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "FluentIcon",
+      "Name": "CustomIcon",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "Theme",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HexColor",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "GetIconPath",
+          "RuleProviderType": "System"
+        },
         {
           "Category": "Data",
           "PropertyName": "GetIcon",
@@ -85,17 +100,12 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "GetIcon_HexColor",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "GetIcon_IconName",
           "RuleProviderType": "System"
         },
         {
           "Category": "Data",
-          "PropertyName": "GetIconPath",
+          "PropertyName": "GetIcon_HexColor",
           "RuleProviderType": "System"
         },
         {
@@ -104,13 +114,23 @@
           "RuleProviderType": "System"
         },
         {
-          "Category": "Data",
-          "PropertyName": "HexColor",
+          "Category": "Design",
+          "PropertyName": "X",
           "RuleProviderType": "System"
         },
         {
-          "Category": "Data",
-          "PropertyName": "Theme",
+          "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Width",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Fill",
           "RuleProviderType": "System"
         },
         {
@@ -121,26 +141,6 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Fill",
           "RuleProviderType": "System"
         },
         {
@@ -459,6 +459,11 @@
         },
         {
           "Category": "Design",
+          "PropertyName": "Height",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
           "PropertyName": "ImagePosition",
           "RuleProviderType": "Unknown"
         },
@@ -480,11 +485,6 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
         {
@@ -607,5 +607,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "FluentIcon"
+  "TopParentName": "CustomIcon"
 }

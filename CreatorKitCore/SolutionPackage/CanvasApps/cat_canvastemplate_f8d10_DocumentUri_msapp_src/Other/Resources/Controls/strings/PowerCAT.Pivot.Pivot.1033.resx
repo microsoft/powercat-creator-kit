@@ -117,8 +117,36 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CommandsMenusNavs" xml:space="preserve">
-    <value>Commands/Menus/Navs</value>
+  <data name="Pivot" xml:space="preserve">
+    <value>Fluent Pivot (0.0.20)</value>
+    <comment/>
+  </data>
+  <data name="Pivot_Desc" xml:space="preserve">
+    <value>Fluent Pivot (0.0.20)</value>
+    <comment/>
+  </data>
+  <data name="AccessibilityLabel" xml:space="preserve">
+    <value>Accessibility label</value>
+    <comment/>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment/>
+  </data>
+  <data name="SelectedKey" xml:space="preserve">
+    <value>Selected key</value>
+    <comment/>
+  </data>
+  <data name="RenderType" xml:space="preserve">
+    <value>Render type</value>
+    <comment/>
+  </data>
+  <data name="InputEvent" xml:space="preserve">
+    <value>Input event</value>
+    <comment/>
+  </data>
+  <data name="RenderSize" xml:space="preserve">
+    <value>Render size</value>
     <comment/>
   </data>
 </root>

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Icon" xml:space="preserve">
-    <value>Fluent Icon (0.0.16)</value>
+    <value>Fluent Icon (0.0.20)</value>
     <comment/>
   </data>
   <data name="Icon_Desc" xml:space="preserve">
@@ -127,6 +127,10 @@
   </data>
   <data name="AccessibilityLabel" xml:space="preserve">
     <value>Accessibility label</value>
+    <comment/>
+  </data>
+  <data name="AccessibilityLabel_Desc" xml:space="preserve">
+    <value>The label to add to the table aria description</value>
     <comment/>
   </data>
   <data name="Theme" xml:space="preserve">

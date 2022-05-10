@@ -1540,7 +1540,14 @@
           "NameMapSourceSchema": "?"
         },
         "Buttons",
-        "SelectedButton",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "{ Label: ButtonsGallery.Selected.Label }",
+          "InvariantPropertyName": "SelectedButton",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -1644,6 +1651,7 @@
         },
         {
           "Category": "Data",
+          "NameMap": "{\"Label\":\"Label\"}",
           "PropertyName": "SelectedButton",
           "RuleProviderType": "System"
         },

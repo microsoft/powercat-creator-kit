@@ -351,7 +351,7 @@ TagPickerBasic As CanvasComponent:
                 columns_Items: |-
                     =Table({ColName:"name",ColDisplayName:"Tag",ColWidth:(Self.Width/2),ColRowHeader:true},{ColName:"icon",ColDisplayName:"Icon",ColWidth:(Self.Width/2)-100})
                 DisplayMode: =DisplayMode.Edit
-                FillPortions: =Value("1")
+                FillPortions: =1
                 Height: =200
                 Items: =colSimpleTags
                 LayoutMinHeight: =200

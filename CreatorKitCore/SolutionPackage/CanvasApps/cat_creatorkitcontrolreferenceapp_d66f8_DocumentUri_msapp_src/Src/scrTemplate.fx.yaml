@@ -13,6 +13,7 @@ scrTemplate As screen:
         PaddingTop: =2*varTheme.U
         Width: =Parent.Width-Self.X
         X: =LeftNav_2.Width
+        Y: =Header_17.Height
         ZIndex: =2
 
         lblTitle_1 As label:
@@ -48,5 +49,12 @@ scrTemplate As screen:
     LeftNav_2 As LeftNav:
         Height: =Parent.Height
         Width: =200
+        Y: =Header_17.Height
         ZIndex: =7
+
+    Header_17 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Width: =App.Width
+        ZIndex: =8
 

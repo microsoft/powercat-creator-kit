@@ -14,6 +14,7 @@ scrResizableTextArea As screen:
         PaddingTop: =
         Width: =Parent.Width-Self.X
         X: =LeftNav_7.Width
+        Y: =Header_2.Height - 20
         ZIndex: =2
 
         lblTitle_6 As label:
@@ -105,7 +106,14 @@ scrResizableTextArea As screen:
                     ZIndex: =3
 
     LeftNav_7 As LeftNav:
-        Height: =Parent.Height
+        Height: =Parent.Height - 20
         Width: =200
+        Y: =Header_2.Height
         ZIndex: =7
+
+    Header_2 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Width: =App.Width
+        ZIndex: =8
 

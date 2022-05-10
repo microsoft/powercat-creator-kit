@@ -13,7 +13,7 @@ scrAutoWidthLabel As screen:
         PaddingTop: =2*varTheme.U
         Width: =Parent.Width-Self.X
         X: =LeftNav_5.Width
-        Y: =Header_1.Height
+        Y: =Header_1.Height - 20
         ZIndex: =2
 
         lblTitle_4 As label:
@@ -99,14 +99,14 @@ scrAutoWidthLabel As screen:
     LeftNav_5 As LeftNav:
         ChildTabPriority: =true
         EnableChildFocus: =true
-        Height: =768
+        Height: =App.Height - 20
         Width: =200
         Y: =Header_1.Height
         ZIndex: =7
 
     Header_1 As Header:
         RightButtonVisible: =false
-        Text: ="CREATOR KIT Controls Reference"
+        Text: ="CREATOR KIT Reference App"
         Width: =App.Width
         ZIndex: =8
 

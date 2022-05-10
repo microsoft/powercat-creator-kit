@@ -39,7 +39,7 @@ scrKeyboardShortcut As screen:
             LayoutMinWidth: =250
             ZIndex: =3
 
-            "Elevation2_18 As 'Fluent Elevation (0.0.18)'":
+            "Elevation2_18 As 'Fluent Elevation (0.0.20)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height

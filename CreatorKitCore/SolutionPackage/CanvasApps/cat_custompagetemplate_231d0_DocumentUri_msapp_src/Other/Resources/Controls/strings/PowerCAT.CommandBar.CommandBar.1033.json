@@ -1,7 +1,8 @@
 {
   "AccessibilityLabel": "Accessibility label",
-  "CommandBar": "Fluent Command Bar (0.0.16)",
+  "CommandBar": "Fluent Command Bar (0.0.20)",
   "CommandBar_Desc": "Command Bar component",
   "InputEvent": "Input event",
+  "Items": "Items",
   "Theme": "Theme"
 }

@@ -844,7 +844,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Resizable Text Area (0.0.18)",
+  "Name": "Resizable Text Area (0.0.20)",
   "Properties": [
     {
       "Category": "data",
@@ -2232,20 +2232,20 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.18\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0PowerCAT.ResizableTextarea.bundle.js?sv=2017-04-17&sr=b&sig=aNrzQG9oKH%2FGkBUAdT%2BXx4DM3TK85Y0AihNYNkD52Yk%3D&spr=https&se=2022-05-07T23%3A16%3A02Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0PowerCAT.ResizableTextarea.bundle.js?sv=2017-04-17&sr=b&sig=1z7EmGMzC4EYpzQrYUpbWjlpw0mfXEt6Lxj3dHtggSM%3D&spr=https&se=2022-05-11T20%3A27%3A45Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.ResizableTextarea/PowerCAT.ResizableTextarea.bundle.js",
       "Type": 0
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0css%252fPowerCAT.ResizableTextarea.ResizableTextarea.css?sv=2017-04-17&sr=b&sig=1wDEQNUJsSweKhhbb2lchEGjIDGXM95vWOnzBlXVQKA%3D&spr=https&se=2022-05-07T23%3A16%3A02Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0css%252fPowerCAT.ResizableTextarea.ResizableTextarea.css?sv=2017-04-17&sr=b&sig=IkTvB7i5lc5Kx6DbbRAm%2F8skLmP7QMAbfLXjUPQHQfI%3D&spr=https&se=2022-05-11T20%3A27%3A45Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.ResizableTextarea/css/PowerCAT.ResizableTextarea.ResizableTextarea.css",
       "Type": 1
     },
@@ -2266,7 +2266,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 14,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0strings%252fPowerCAT.ResizableTextarea.ResizableTextarea.1033.json?sv=2017-04-17&sr=b&sig=jpKr%2BrUl8Vyv%2BwVmj5%2BrLPCK%2FCYZ4E3uMN2nshUtyfQ%3D&spr=https&se=2022-05-07T23%3A16%3A02Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0strings%252fPowerCAT.ResizableTextarea.ResizableTextarea.1033.json?sv=2017-04-17&sr=b&sig=WGZ71DenNkJ64hp9LiJFOV%2FkmjigLGA26ULcsuNIA4o%3D&spr=https&se=2022-05-11T20%3A27%3A45Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.ResizableTextarea/strings/PowerCAT.ResizableTextarea.ResizableTextarea.1033.json",
       "Type": 5
     },
@@ -2274,7 +2274,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 14,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ResizableTextarea\":\"Resizable Text Area (0.0.18)\",\"ResizableTextarea_Desc\":\"A text area control that allows the user to resize and outputs the updated dimensions\",\"Text\":\"Text\",\"Text_Desc\":\"The default value that the control will have when the control is reset, or the default value is changed. This allows the control to work in a similar way to controls inside canvas app forms. \",\"Default\":\"Default\",\"Default_Desc\":\"The default value that the control will have when the control is reset, or the default value is changed. This allows the control to work in a similar way to controls inside canvas app forms. \",\"MaxLength\":\"Max length\",\"MaxLength_Desc\":\"The maximum number of characters that can be entered\",\"HintText\":\"Hint text\",\"EmptyPlaceholderText\":\"Empty placeholder text\",\"ResizedHeight\":\"Resized height\",\"ResizedWidth\":\"Resized width\",\"DefaultHeight\":\"Default height\",\"DefaultHeight_desc\":\"The height to set the text area to initially. If this is not set in a canvas app/custom page, the size will default to the code component height. For model-driven apps, this is required since the form does not provide an initial height.\",\"DefaultWidth\":\"Default width\",\"DefaultWidth_Desc\":\"The width to set the text area to initially. If this is not set in a canvas app/custom page, the size will default to the code component height. For model-driven apps, this is not required, since the default width will be the width of the form column.\",\"MinHeight\":\"Min height\",\"MaxHeight\":\"Max height\",\"MinWidth\":\"Min width\",\"MaxWidth\":\"Max width\",\"PaddingLeft\":\"Padding left\",\"PaddingRight\":\"Padding right\",\"PaddingTop\":\"Padding top\",\"PaddingBottom\":\"Padding bottom\",\"LeftPaddingAdjustment\":\"Left padding adjustment\",\"AllowResize\":\"Allow resize\",\"EnableSpellCheck\":\"Enable spell check\",\"FontName\":\"Font\",\"FontSize\":\"Font size\",\"FontColor\":\"Font color\",\"FontWeight\":\"Font weight\",\"DisabledFontColor\":\"Disabled font color\",\"DisabledFontWeight\":\"Disabled font weight\",\"FocusFontColor\":\"Focus font color\",\"FocusFontWeight\":\"Focus font weight\",\"HoverFontColor\":\"Hover font color\",\"HoverFontWeight\":\"Hover font weight\",\"HintFontColor\":\"Hint font color\",\"HintFontWeight\":\"Hint font weight\",\"FillColor\":\"Fill color\",\"DisabledFillColor\":\"Disabled fill color\",\"FocusFillColor\":\"Focus fill color\",\"HoverFillColor\":\"Hover fill color\",\"DisabledHoverFillColor\":\"Disabled hover fill color\",\"BorderColor\":\"Border color\",\"BorderThickness\":\"Border thickness\",\"BorderRadius\":\"Border radius\",\"DisabledBorderColor\":\"Disabled border color\",\"FocusBorderColor\":\"Focus border color\",\"FocusBorderThickness\":\"Focus border thickness\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderThickness\":\"Hover border thickness\",\"RenderBorderStyle\":\"Render border style\",\"AccessibilityLabel\":\"Accessibility label\",\"InputEvent\":\"Input event\",\"FontSizeUnits\":\"Font size units\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ResizableTextarea\":\"Resizable Text Area (0.0.20)\",\"ResizableTextarea_Desc\":\"A text area control that allows the user to resize and outputs the updated dimensions\",\"Text\":\"Text\",\"Text_Desc\":\"The default value that the control will have when the control is reset, or the default value is changed. This allows the control to work in a similar way to controls inside canvas app forms. \",\"Default\":\"Default\",\"Default_Desc\":\"The default value that the control will have when the control is reset, or the default value is changed. This allows the control to work in a similar way to controls inside canvas app forms. \",\"MaxLength\":\"Max length\",\"MaxLength_Desc\":\"The maximum number of characters that can be entered\",\"HintText\":\"Hint text\",\"EmptyPlaceholderText\":\"Empty placeholder text\",\"ResizedHeight\":\"Resized height\",\"ResizedWidth\":\"Resized width\",\"DefaultHeight\":\"Default height\",\"DefaultHeight_desc\":\"The height to set the text area to initially. If this is not set in a canvas app/custom page, the size will default to the code component height. For model-driven apps, this is required since the form does not provide an initial height.\",\"DefaultWidth\":\"Default width\",\"DefaultWidth_Desc\":\"The width to set the text area to initially. If this is not set in a canvas app/custom page, the size will default to the code component height. For model-driven apps, this is not required, since the default width will be the width of the form column.\",\"MinHeight\":\"Min height\",\"MaxHeight\":\"Max height\",\"MinWidth\":\"Min width\",\"MaxWidth\":\"Max width\",\"PaddingLeft\":\"Padding left\",\"PaddingRight\":\"Padding right\",\"PaddingTop\":\"Padding top\",\"PaddingBottom\":\"Padding bottom\",\"LeftPaddingAdjustment\":\"Left padding adjustment\",\"AllowResize\":\"Allow resize\",\"EnableSpellCheck\":\"Enable spell check\",\"FontName\":\"Font\",\"FontSize\":\"Font size\",\"FontColor\":\"Font color\",\"FontWeight\":\"Font weight\",\"DisabledFontColor\":\"Disabled font color\",\"DisabledFontWeight\":\"Disabled font weight\",\"FocusFontColor\":\"Focus font color\",\"FocusFontWeight\":\"Focus font weight\",\"HoverFontColor\":\"Hover font color\",\"HoverFontWeight\":\"Hover font weight\",\"HintFontColor\":\"Hint font color\",\"HintFontWeight\":\"Hint font weight\",\"FillColor\":\"Fill color\",\"DisabledFillColor\":\"Disabled fill color\",\"FocusFillColor\":\"Focus fill color\",\"HoverFillColor\":\"Hover fill color\",\"DisabledHoverFillColor\":\"Disabled hover fill color\",\"BorderColor\":\"Border color\",\"BorderThickness\":\"Border thickness\",\"BorderRadius\":\"Border radius\",\"DisabledBorderColor\":\"Disabled border color\",\"FocusBorderColor\":\"Focus border color\",\"FocusBorderThickness\":\"Focus border thickness\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderThickness\":\"Hover border thickness\",\"RenderBorderStyle\":\"Render border style\",\"AccessibilityLabel\":\"Accessibility label\",\"InputEvent\":\"Input event\",\"FontSizeUnits\":\"Font size units\"}}}",
       "Type": 3
     },
     {
@@ -2285,5 +2285,5 @@
       "Type": 0
     }
   ],
-  "Version": "0.0.18"
+  "Version": "0.0.20"
 }

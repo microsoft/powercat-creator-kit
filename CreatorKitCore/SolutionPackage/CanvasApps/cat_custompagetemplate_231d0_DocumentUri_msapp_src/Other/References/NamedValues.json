@@ -62,8 +62,13 @@
     },
     {
       "Kind": "Page",
-      "Name": "Planner_202204120118",
+      "Name": "Planner_202205081105",
       "Value": "custompage:cat_plannercopy_91b7b"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Accounts Custom Page",
+      "Value": "custompage:cat_accountscustom_d3f96"
     }
   ]
 }

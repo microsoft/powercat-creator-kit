@@ -18,7 +18,7 @@ ElevationSummary As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_14 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_14 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -111,7 +111,7 @@ ElevationSummary As CanvasComponent:
             Y: =110
             ZIndex: =5
 
-            "ElevationGalleryItem As 'Fluent Elevation (0.0.18)'":
+            "ElevationGalleryItem As 'Fluent Elevation (0.0.20)'":
                 Depth: =ThisItem.Depth
                 DisplayMode: =DisplayMode.Edit
                 Height: =78

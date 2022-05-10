@@ -22,6 +22,7 @@
             LayoutMinWidth: =640
             RightButtonVisible: =false
             Text: ="APPLICATION TITLE"
+            Theme: =AppTheme
             Visible: =true
 
         CenterContainer_TS As groupContainer.verticalAutoLayoutContainer:

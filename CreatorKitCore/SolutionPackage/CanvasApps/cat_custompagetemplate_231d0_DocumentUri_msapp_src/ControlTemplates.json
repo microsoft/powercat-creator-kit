@@ -13,7 +13,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Fluent Command Bar (0.0.16)": {
+  "Fluent Command Bar (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.CommandBar",
@@ -25,8 +25,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.CommandBar",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Command Bar (0.0.16)",
-    "Version": "0.0.16"
+    "TemplateDisplayName": "Fluent Command Bar (0.0.20)",
+    "Version": "0.0.20"
   },
   "groupContainer": {
     "CustomGroupControlTemplateName": "",

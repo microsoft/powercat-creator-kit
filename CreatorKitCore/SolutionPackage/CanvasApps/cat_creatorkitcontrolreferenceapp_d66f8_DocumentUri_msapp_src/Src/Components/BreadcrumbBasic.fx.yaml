@@ -18,7 +18,7 @@ BreadcrumbBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_27 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_27 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -125,7 +125,7 @@ BreadcrumbBasic As CanvasComponent:
         Y: =40
         ZIndex: =17
 
-        "Breadcrumb1 As 'Fluent Breadcrumb (0.0.18)'.pcfdataset":
+        "Breadcrumb1 As 'Fluent Breadcrumb (0.0.20)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =54
             InputEvent: =varBreadcrumbBasicEvent

@@ -13,7 +13,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Auto Width Label (0.0.18)": {
+  "Auto Width Label (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.AutoWidthLabel",
@@ -25,8 +25,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.AutoWidthLabel",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Auto Width Label (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Auto Width Label (0.0.20)",
+    "Version": "0.0.20"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -87,7 +87,7 @@
     "TemplateDisplayName": "Combo box",
     "Version": "1.5.0"
   },
-  "Fluent Breadcrumb (0.0.18)": {
+  "Fluent Breadcrumb (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Breadcrumb",
@@ -99,10 +99,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Breadcrumb",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Breadcrumb (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Breadcrumb (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Command Bar (0.0.18)": {
+  "Fluent Command Bar (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.CommandBar",
@@ -114,10 +114,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.CommandBar",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Command Bar (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Command Bar (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Context Menu (0.0.18)": {
+  "Fluent Context Menu (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.ContextMenu",
@@ -129,10 +129,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.ContextMenu",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Context Menu (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Context Menu (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Details List (0.0.18)": {
+  "Fluent Details List (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.FluentDetailsList",
@@ -144,10 +144,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.FluentDetailsList",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Details List (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Details List (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Elevation (0.0.18)": {
+  "Fluent Elevation (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Elevation",
@@ -159,10 +159,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Elevation",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Elevation (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Elevation (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Icon (0.0.18)": {
+  "Fluent Icon (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Icon",
@@ -174,10 +174,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Icon",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Icon (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Icon (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Nav (0.0.18)": {
+  "Fluent Nav (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Nav",
@@ -189,10 +189,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Nav",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Nav (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Nav (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Picker (0.0.18)": {
+  "Fluent Picker (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Picker",
@@ -204,10 +204,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Picker",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Picker (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Picker (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Pivot (0.0.18)": {
+  "Fluent Pivot (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Pivot",
@@ -219,10 +219,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Pivot",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Pivot (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Pivot (0.0.20)",
+    "Version": "0.0.20"
   },
-  "Fluent Tag List (0.0.18)": {
+  "Fluent Tag List (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.TagList",
@@ -234,8 +234,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.TagList",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Tag List (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Tag List (0.0.20)",
+    "Version": "0.0.20"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",
@@ -335,7 +335,7 @@
     "OverridableProperties": {},
     "Version": "2.2.0"
   },
-  "Keyboard Shortcuts (0.0.18)": {
+  "Keyboard Shortcuts (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.KeyboardShortcuts",
@@ -347,8 +347,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.KeyboardShortcuts",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Keyboard Shortcuts (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Keyboard Shortcuts (0.0.20)",
+    "Version": "0.0.20"
   },
   "label": {
     "CustomGroupControlTemplateName": "",
@@ -407,7 +407,7 @@
     "OverridableProperties": {},
     "Version": "2.3.0"
   },
-  "Resizable Text Area (0.0.18)": {
+  "Resizable Text Area (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.ResizableTextarea",
@@ -419,8 +419,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.ResizableTextarea",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Resizable Text Area (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Resizable Text Area (0.0.20)",
+    "Version": "0.0.20"
   },
   "screen": {
     "CustomGroupControlTemplateName": "",

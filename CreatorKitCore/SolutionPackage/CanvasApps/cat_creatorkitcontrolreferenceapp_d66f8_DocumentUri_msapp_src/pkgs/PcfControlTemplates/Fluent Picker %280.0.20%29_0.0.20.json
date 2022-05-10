@@ -488,7 +488,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Fluent Picker (0.0.18)",
+  "Name": "Fluent Picker (0.0.20)",
   "Properties": [
     {
       "Category": "data",
@@ -1724,20 +1724,20 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.18\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0PowerCAT.Picker.bundle.js?sv=2017-04-17&sr=b&sig=Oh%2BHP47NAR5CX1GaVUcT%2BMXiwEEYzWcnXddiXfNgNZw%3D&spr=https&se=2022-05-07T23%3A16%3A03Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0PowerCAT.Picker.bundle.js?sv=2017-04-17&sr=b&sig=C%2BXRRf3bkHACELDd1TC7VW8jQp%2BJdxidWuxt0E3HJgo%3D&spr=https&se=2022-05-11T20%3A27%3A47Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Picker/PowerCAT.Picker.bundle.js",
       "Type": 0
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0css%252fPowerCAT.Picker.TagPicker.css?sv=2017-04-17&sr=b&sig=wD%2BCC7F3WvjPBHNFSGWcV%2FcSlrjiB2531qykmJUqvuk%3D&spr=https&se=2022-05-07T23%3A16%3A03Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0css%252fPowerCAT.Picker.TagPicker.css?sv=2017-04-17&sr=b&sig=PmwG%2BTA%2BDV4IZ6Moog0vqBnaoH61cvLcR8UnxwUBesc%3D&spr=https&se=2022-05-11T20%3A27%3A47Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Picker/css/PowerCAT.Picker.TagPicker.css",
       "Type": 1
     },
@@ -1758,7 +1758,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 14,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0strings%252fPowerCAT.Picker.TagPicker.1033.json?sv=2017-04-17&sr=b&sig=g9vfFoZPI18QgiyDzhwNiSUzM3%2BzY3twGowS%2BeiOr6A%3D&spr=https&se=2022-05-07T23%3A16%3A03Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0strings%252fPowerCAT.Picker.TagPicker.1033.json?sv=2017-04-17&sr=b&sig=FuGMGx21zc3F56zxgFpaOetjFa%2BW9dfv7j0KZTH5Amc%3D&spr=https&se=2022-05-11T20%3A27%3A47Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Picker/strings/PowerCAT.Picker.TagPicker.1033.json",
       "Type": 5
     },
@@ -1766,7 +1766,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 14,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Picker\":\"Fluent Picker (0.0.18)\",\"Picker_Desc\":\"Allows picking string tags from one dataset and adding to another\",\"TagMaxWidth\":\"Tag max width\",\"TagMaxWidth_Desc\":\"The maximum width that tags can grow to before the text is truncated\",\"SearchTermToShortMessage\":\"Search term to short message\",\"SearchTermToShortMessage_Desc\":\"The message to display if the search term is less than the 'Minimum Search Term Length' parameter - e.g. 'Keep typing'\",\"NoSuggestionFoundMessage\":\"No suggestion found message\",\"NoSuggestionFoundMessage_Desc\":\"The message to display when no suggestions match the search term\",\"MinimumSearchTermLength\":\"Minimum search term length\",\"MinimumSearchTermLength_Desc\":\"The minimum number of characters that must be entered before a suggestion search is performed\",\"MaxTags\":\"Max tags\",\"MaxTags_Desc\":\"The maximum number of tags that can be added\",\"TagDisplayName\":\"Tag display name\",\"TagDisplayName_Desc\":\"The name of the tag aded or removed\",\"TagEvent\":\"Tag event\",\"TagEvent_Desc\":\"The type of event raised (Add/Remove)\",\"TagKey\":\"Tag key\",\"TagKey_Desc\":\"The key of the tag that raise the event\",\"SearchTerm\":\"Search term\",\"SearchTerm_Desc\":\"The search term entered that should be used when filtering suggestions\",\"Tags\":\"Tags\",\"TagsKey\":\"Tags key\",\"TagsDisplayName\":\"Tags display name\",\"TagsDisplayName_Desc\":\"The column to use as the tag display name\",\"Suggestions\":\"Suggestions\",\"SuggestionDisplayName\":\"Suggestion display name\",\"SuggestionDisplayName_Desc\":\"The column to use as the suggestions line 1\",\"SuggestionSubDisplayName\":\"Suggestion sub display name\",\"SuggestionSubDisplayName_Desc\":\"The column to use as the suggestions line 2\",\"InputEvent\":\"Input event\",\"InputEvent_Desc\":\"Signals an event - add a random element to make each event unique\",\"Error\":\"Error\",\"Error_Desc\":\"True if the control is in an error state\",\"AutoHeight\":\"Auto height\",\"AutoHeight_Desc\":\"The height that the control grows to when the tags do not fit the width available\",\"AccessibilityLabel\":\"Accessibility label\",\"AccessibilityLabel_Desc\":\"The label to add to the table aria description\",\"TagError\":\"Tag error\",\"TagError_Desc\":\"Set to true to indicate an error on the added tag\",\"HintText\":\"Hint text\",\"HintText_Desc\":\"The text to display when no text input is provided\",\"AllowFreeText\":\"Allow free text\",\"AllowFreeText_Desc\":\"'Allow free text mode' allows freetext entry with resolving to a suggestion\",\"Theme\":\"Theme\",\"FontSize\":\"Font size\",\"BorderRadius\":\"Border radius\",\"ItemHeight\":\"Item height\",\"Aria_TagRemove\":\"Remove\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Picker\":\"Fluent Picker (0.0.20)\",\"Picker_Desc\":\"Allows picking string tags from one dataset and adding to another\",\"TagMaxWidth\":\"Tag max width\",\"TagMaxWidth_Desc\":\"The maximum width that tags can grow to before the text is truncated\",\"SearchTermToShortMessage\":\"Search term to short message\",\"SearchTermToShortMessage_Desc\":\"The message to display if the search term is less than the 'Minimum Search Term Length' parameter - e.g. 'Keep typing'\",\"NoSuggestionFoundMessage\":\"No suggestion found message\",\"NoSuggestionFoundMessage_Desc\":\"The message to display when no suggestions match the search term\",\"MinimumSearchTermLength\":\"Minimum search term length\",\"MinimumSearchTermLength_Desc\":\"The minimum number of characters that must be entered before a suggestion search is performed\",\"MaxTags\":\"Max tags\",\"MaxTags_Desc\":\"The maximum number of tags that can be added\",\"TagDisplayName\":\"Tag display name\",\"TagDisplayName_Desc\":\"The name of the tag aded or removed\",\"TagEvent\":\"Tag event\",\"TagEvent_Desc\":\"The type of event raised (Add/Remove)\",\"TagKey\":\"Tag key\",\"TagKey_Desc\":\"The key of the tag that raise the event\",\"SearchTerm\":\"Search term\",\"SearchTerm_Desc\":\"The search term entered that should be used when filtering suggestions\",\"Tags\":\"Tags\",\"TagsKey\":\"Tags key\",\"TagsDisplayName\":\"Tags display name\",\"TagsDisplayName_Desc\":\"The column to use as the tag display name\",\"Suggestions\":\"Suggestions\",\"SuggestionDisplayName\":\"Suggestion display name\",\"SuggestionDisplayName_Desc\":\"The column to use as the suggestions line 1\",\"SuggestionSubDisplayName\":\"Suggestion sub display name\",\"SuggestionSubDisplayName_Desc\":\"The column to use as the suggestions line 2\",\"InputEvent\":\"Input event\",\"InputEvent_Desc\":\"Signals an event - add a random element to make each event unique\",\"Error\":\"Error\",\"Error_Desc\":\"True if the control is in an error state\",\"AutoHeight\":\"Auto height\",\"AutoHeight_Desc\":\"The height that the control grows to when the tags do not fit the width available\",\"AccessibilityLabel\":\"Accessibility label\",\"AccessibilityLabel_Desc\":\"The label to add to the table aria description\",\"TagError\":\"Tag error\",\"TagError_Desc\":\"Set to true to indicate an error on the added tag\",\"HintText\":\"Hint text\",\"HintText_Desc\":\"The text to display when no text input is provided\",\"AllowFreeText\":\"Allow free text\",\"AllowFreeText_Desc\":\"'Allow free text mode' allows freetext entry with resolving to a suggestion\",\"Theme\":\"Theme\",\"FontSize\":\"Font size\",\"BorderRadius\":\"Border radius\",\"ItemHeight\":\"Item height\",\"Aria_TagRemove\":\"Remove\"}}}",
       "Type": 3
     },
     {
@@ -1791,5 +1791,5 @@
       "Type": 4
     }
   ],
-  "Version": "0.0.18"
+  "Version": "0.0.20"
 }

@@ -20,7 +20,7 @@ ContextMenuSimple As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_12 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_12 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -177,7 +177,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =250
             ZIndex: =1
 
-        "ContextMenuStandard As 'Fluent Context Menu (0.0.18)'.pcfdataset":
+        "ContextMenuStandard As 'Fluent Context Menu (0.0.20)'.pcfdataset":
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -278,7 +278,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =60
             ZIndex: =10
 
-        "ContextMenuStyled As 'Fluent Context Menu (0.0.18)'.pcfdataset":
+        "ContextMenuStyled As 'Fluent Context Menu (0.0.20)'.pcfdataset":
             BackgroundColor: =ddFillColor.Selected.BackgroundColor
             BorderColor: =ddFillColor.Selected.HoverBorderColor
             Chevron: =chkShowChevron.Checked

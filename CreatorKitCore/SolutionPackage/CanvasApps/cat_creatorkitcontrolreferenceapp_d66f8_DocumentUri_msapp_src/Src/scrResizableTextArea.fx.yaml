@@ -55,7 +55,7 @@ scrResizableTextArea As screen:
             LayoutMinWidth: =250
             ZIndex: =6
 
-            "Elevation2_7 As 'Fluent Elevation (0.0.18)'":
+            "Elevation2_7 As 'Fluent Elevation (0.0.20)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height

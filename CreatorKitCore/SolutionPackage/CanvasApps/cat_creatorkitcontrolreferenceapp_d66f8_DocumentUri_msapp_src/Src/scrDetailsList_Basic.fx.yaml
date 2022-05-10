@@ -52,7 +52,7 @@ scrDetailsList_Basic As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_14 As 'Fluent Elevation (0.0.18)'":
+            "Elevation2_14 As 'Fluent Elevation (0.0.20)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height

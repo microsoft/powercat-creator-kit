@@ -18,7 +18,7 @@ PivotShowHidePivotItem As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode_3 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_3 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -126,7 +126,7 @@ PivotShowHidePivotItem As CanvasComponent:
             Y: =163
             ZIndex: =8
 
-        "Pivot2 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+        "Pivot2 As 'Fluent Pivot (0.0.20)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =47
             Items: |-

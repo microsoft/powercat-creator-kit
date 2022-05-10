@@ -55,7 +55,7 @@ scrProgressIndicator As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_22 As 'Fluent Elevation (0.0.18)'":
+            "Elevation2_22 As 'Fluent Elevation (0.0.20)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -117,14 +117,11 @@ scrProgressIndicator As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_33 As 'Fluent Pivot (0.0.18)'.pcfdataset":
-                        AlignInContainer: =AlignInContainer.End
+                    "pivotAppCode_33 As 'Fluent Pivot (0.0.20)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-
                             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         OnSelect: =
                         RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
                         SelectedKey: ="app"
@@ -170,17 +167,16 @@ scrProgressIndicator As screen:
                     PaddingTop: =20
                     ZIndex: =8
 
+                    ProgressIndicator_1 As ProgressIndicator:
+                        Fill: =RGBA(240, 240, 240, 0)
+                        LayoutMinHeight: =640
+
                     Label1 As label:
                         Font: =Font.'Segoe UI'
                         FontWeight: =FontWeight.Semibold
                         Size: =11
                         Text: ="Example title"
                         ZIndex: =1
-
-                    ProgressIndicator_1 As ProgressIndicator:
-                        Fill: =RGBA(240, 240, 240, 0)
-                        LayoutMinHeight: =640
-                        ZIndex: =2
 
     LeftNav_20 As LeftNav:
         Height: =Parent.Height

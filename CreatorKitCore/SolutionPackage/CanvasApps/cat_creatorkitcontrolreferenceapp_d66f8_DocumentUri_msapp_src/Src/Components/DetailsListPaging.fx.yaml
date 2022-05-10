@@ -18,7 +18,7 @@ DetailsListPaging As CanvasComponent:
         Y: =22
         ZIndex: =2
 
-    "pivotAppCode_26 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_26 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -85,7 +85,7 @@ DetailsListPaging As CanvasComponent:
             Y: =120
             ZIndex: =18
 
-            "ElevationAccounts As 'Fluent Elevation (0.0.18)'":
+            "ElevationAccounts As 'Fluent Elevation (0.0.20)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height-32-16
                 Visible: =pivotAppCode_26.Selected.ItemKey="app"
@@ -94,7 +94,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =8
                 ZIndex: =1
 
-            "FluentDetailsListAccounts As 'Fluent Details List (0.0.18)'.pcfdataset":
+            "FluentDetailsListAccounts As 'Fluent Details List (0.0.20)'.pcfdataset":
                 columns_Items: |
                     =Table(
                         {ColName:"name",ColDisplayName:"Name",ColWidth:300,ColSortable:true,ColIsBold:true,ColResizable:true,ColRowHeader:true},
@@ -163,7 +163,7 @@ DetailsListPaging As CanvasComponent:
                     Order: =5
                     ZIndex: =5
 
-            "cmdAccounts As 'Fluent Command Bar (0.0.18)'.pcfdataset":
+            "cmdAccounts As 'Fluent Command Bar (0.0.20)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Items: |-
@@ -231,7 +231,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =Parent.Height-Self.Height-8
                 ZIndex: =6
 
-                "icoFirst As 'Fluent Icon (0.0.18)'":
+                "icoFirst As 'Fluent Icon (0.0.20)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Previous"
@@ -242,7 +242,7 @@ DetailsListPaging As CanvasComponent:
                     Y: =0
                     ZIndex: =1
 
-                "icoBack As 'Fluent Icon (0.0.18)'":
+                "icoBack As 'Fluent Icon (0.0.20)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Back"
@@ -264,7 +264,7 @@ DetailsListPaging As CanvasComponent:
                     X: =64
                     ZIndex: =3
 
-                "icoNext As 'Fluent Icon (0.0.18)'":
+                "icoNext As 'Fluent Icon (0.0.20)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Forward"
@@ -289,7 +289,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =100
                 ZIndex: =7
 
-            "Icon4 As 'Fluent Icon (0.0.18)'":
+            "Icon4 As 'Fluent Icon (0.0.20)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 IconName: ="Search"

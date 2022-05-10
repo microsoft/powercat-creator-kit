@@ -295,7 +295,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "Theme",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "{\n\tpalette: {\n\t\tthemePrimary: \"#0078d4\",\n\t\tthemeLighterAlt: \"#eff6fc\",\n\t\tthemeLighter: \"#deecf9\",\n\t\tthemeLight: \"#c7e0f4\",\n\t\tthemeTertiary: \"#71afe5\",\n\t\tthemeSecondary: \"#2b88d8\",\n\t\tthemeDarkAlt: \"#106ebe\",\n\t\tthemeDark: \"#005a9e\",\n\t\tthemeDarker: \"#004578\",\n\t\tneutralLighterAlt: \"#faf9f8\",\n\t\tneutralLighter: \"#f3f2f1\",\n\t\tneutralLight: \"#edebe9\",\n\t\tneutralQuaternaryAlt: \"#e1dfdd\",\n\t\tneutralQuaternary: \"#d0d0d0\",\n\t\tneutralTertiaryAlt: \"#c8c6c4\",\n\t\tneutralTertiary: \"#a19f9d\",\n\t\tneutralSecondary: \"#605e5c\",\n\t\tneutralPrimaryAlt: \"#3b3a39\",\n\t\tneutralPrimary: \"#323130\",\n\t\tneutralDark: \"#201f1e\",\n\t\tblack: \"#000000\",\n\t\twhite: \"#ffffff\"\n\t}\n}",
+          "InvariantPropertyName": "Theme",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -441,8 +448,9 @@
         },
         {
           "Category": "Data",
+          "NameMap": "{\"palette\":\"palette\"}",
           "PropertyName": "Theme",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",

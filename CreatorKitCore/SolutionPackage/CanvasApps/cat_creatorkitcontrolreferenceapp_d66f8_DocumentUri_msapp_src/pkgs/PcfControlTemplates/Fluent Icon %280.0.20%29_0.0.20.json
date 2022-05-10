@@ -503,7 +503,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Fluent Icon (0.0.18)",
+  "Name": "Fluent Icon (0.0.20)",
   "Properties": [
     {
       "Category": "data",
@@ -1111,13 +1111,13 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.18\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0PowerCAT.Icon.bundle.js?sv=2017-04-17&sr=b&sig=xrZA6WwbiQ1eoh3nFWfYRywKWMXiZGnuj%2FXh6Nq5fmk%3D&spr=https&se=2022-05-07T23%3A16%3A00Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0PowerCAT.Icon.bundle.js?sv=2017-04-17&sr=b&sig=fZ5YLALCK478EV7R9wuPy7qahH0Zv6dyAfkFyTLLTpw%3D&spr=https&se=2022-05-11T20%3A27%3A43Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Icon/PowerCAT.Icon.bundle.js",
       "Type": 0
     },
@@ -1138,7 +1138,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0strings%252fPowerCAT.Icon.Icon.1033.json?sv=2017-04-17&sr=b&sig=LE7r%2FW2n2tL3CujAUlmBR1NnKGlpC4FzxLP%2BuKmgCuM%3D&spr=https&se=2022-05-07T23%3A16%3A00Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0strings%252fPowerCAT.Icon.Icon.1033.json?sv=2017-04-17&sr=b&sig=mTZoMKS1anlgN34ik9NtGNGntI8zTyYH6UdKwbDkLjg%3D&spr=https&se=2022-05-11T20%3A27%3A44Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.Icon/strings/PowerCAT.Icon.Icon.1033.json",
       "Type": 5
     },
@@ -1146,7 +1146,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Icon\":\"Fluent Icon (0.0.18)\",\"Icon_Desc\":\"Icon component\",\"AccessibilityLabel\":\"Accessibility label\",\"AccessibilityLabel_Desc\":\"The label to add to the table aria description\",\"Theme\":\"Theme\",\"InputEvent\":\"Input event\",\"IconName\":\"Icon name\",\"IconType\":\"Icon type\",\"Text\":\"Text\",\"TextAlignment\":\"Text alignment\",\"IconColor\":\"Icon color\",\"HoverIconColor\":\"Hover icon color\",\"IconSize\":\"Icon size\",\"FontSize\":\"Font size\",\"FontColor\":\"Font color\",\"HoverFontColor\":\"Hover font color\",\"FillColor\":\"Fill color\",\"HoverFillColor\":\"Hover fill color\",\"BorderColor\":\"Border color\",\"HoverBorderColor\":\"Hover border color\",\"BorderRadius\":\"Border radius\",\"OutputEvent\":\"Output event\",\"IconTypeIconButton\":\"Icon button\",\"IconTypeActionButton\":\"Action button\",\"IconTypeIcon\":\"Icon only\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"Icon\":\"Fluent Icon (0.0.20)\",\"Icon_Desc\":\"Icon component\",\"AccessibilityLabel\":\"Accessibility label\",\"AccessibilityLabel_Desc\":\"The label to add to the table aria description\",\"Theme\":\"Theme\",\"InputEvent\":\"Input event\",\"IconName\":\"Icon name\",\"IconType\":\"Icon type\",\"Text\":\"Text\",\"TextAlignment\":\"Text alignment\",\"IconColor\":\"Icon color\",\"HoverIconColor\":\"Hover icon color\",\"IconSize\":\"Icon size\",\"FontSize\":\"Font size\",\"FontColor\":\"Font color\",\"HoverFontColor\":\"Hover font color\",\"FillColor\":\"Fill color\",\"HoverFillColor\":\"Hover fill color\",\"BorderColor\":\"Border color\",\"HoverBorderColor\":\"Hover border color\",\"BorderRadius\":\"Border radius\",\"OutputEvent\":\"Output event\",\"IconTypeIconButton\":\"Icon button\",\"IconTypeActionButton\":\"Action button\",\"IconTypeIcon\":\"Icon only\"}}}",
       "Type": 3
     },
     {
@@ -1171,5 +1171,5 @@
       "Type": 4
     }
   ],
-  "Version": "0.0.18"
+  "Version": "0.0.20"
 }

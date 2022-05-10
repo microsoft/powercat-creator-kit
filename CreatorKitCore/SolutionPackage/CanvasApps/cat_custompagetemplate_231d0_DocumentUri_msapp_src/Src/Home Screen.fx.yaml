@@ -21,9 +21,8 @@
             LayoutMode: =LayoutMode.Auto
             ZIndex: =3
 
-            "CommandBar1 As 'Fluent Command Bar (0.0.16)'.pcfdataset":
+            "CommandBar1 As 'Fluent Command Bar (0.0.20)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
-                FillPortions: =1
                 Height: =200
                 Items: |-
                     = Table(
@@ -42,10 +41,8 @@
                             ItemIconName: "Help",
                             ItemDisplayName: "Help"
                         })
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 Theme: =AppThemeJson
-                Width: =200
+                Width: =600 
                 X: =0
                 Y: =0
                 ZIndex: =1

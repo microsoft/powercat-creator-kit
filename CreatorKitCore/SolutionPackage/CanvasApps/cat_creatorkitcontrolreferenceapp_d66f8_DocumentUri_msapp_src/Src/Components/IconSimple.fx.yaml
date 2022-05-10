@@ -18,7 +18,7 @@ IconSimple As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_11 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_11 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -163,7 +163,7 @@ IconSimple As CanvasComponent:
         Y: =40
         ZIndex: =14
 
-        "iconStandard As 'Fluent Icon (0.0.18)'":
+        "iconStandard As 'Fluent Icon (0.0.20)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit
@@ -183,7 +183,7 @@ IconSimple As CanvasComponent:
             Y: =124
             ZIndex: =5
 
-        "iconCustomColor As 'Fluent Icon (0.0.18)'":
+        "iconCustomColor As 'Fluent Icon (0.0.20)'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             HoverIconColor: =""
@@ -224,7 +224,7 @@ IconSimple As CanvasComponent:
             Y: =120
             ZIndex: =10
 
-        "gridIcons As 'Fluent Details List (0.0.18)'.pcfdataset":
+        "gridIcons As 'Fluent Details List (0.0.20)'.pcfdataset":
             columns_Items: |-
                 =Table(
                     {
@@ -281,7 +281,7 @@ IconSimple As CanvasComponent:
             Y: =120
             ZIndex: =12
 
-        "icoSearch As 'Fluent Icon (0.0.18)'":
+        "icoSearch As 'Fluent Icon (0.0.20)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit

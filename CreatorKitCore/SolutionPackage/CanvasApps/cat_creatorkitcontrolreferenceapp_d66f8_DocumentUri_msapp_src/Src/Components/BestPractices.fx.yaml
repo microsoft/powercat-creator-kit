@@ -20,7 +20,7 @@ BestPractices As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "Elevation2_4 As 'Fluent Elevation (0.0.18)'":
+    "Elevation2_4 As 'Fluent Elevation (0.0.20)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height
@@ -117,7 +117,7 @@ BestPractices As CanvasComponent:
                     X: =32
                     ZIndex: =1
 
-                "Icon2_1 As 'Fluent Icon (0.0.18)'":
+                "Icon2_1 As 'Fluent Icon (0.0.20)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     IconColor: |-
@@ -152,7 +152,7 @@ BestPractices As CanvasComponent:
                     X: =32
                     ZIndex: =1
 
-                "Icon2_2 As 'Fluent Icon (0.0.18)'":
+                "Icon2_2 As 'Fluent Icon (0.0.20)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     IconColor: |-

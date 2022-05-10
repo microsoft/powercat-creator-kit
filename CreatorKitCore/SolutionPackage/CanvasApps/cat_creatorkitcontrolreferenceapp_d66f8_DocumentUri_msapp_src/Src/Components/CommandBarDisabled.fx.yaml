@@ -18,7 +18,7 @@ CommandBarDisabled As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode_2 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_2 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -126,7 +126,7 @@ CommandBarDisabled As CanvasComponent:
             Y: =84
             ZIndex: =2
 
-        "commandBar_2 As 'Fluent Command Bar (0.0.18)'.pcfdataset":
+        "commandBar_2 As 'Fluent Command Bar (0.0.20)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Items: |-

@@ -32,7 +32,7 @@ ProgressIndicator As CanvasComponent:
     Width: =640
     X: =0
     Y: =0
-    ZIndex: =1
+    ZIndex: =2
 
     rectProgressBar As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)

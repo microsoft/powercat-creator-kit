@@ -71,7 +71,7 @@ DetailsListCellTypes As CanvasComponent:
         Y: =22
         ZIndex: =4
 
-    "pivotAppCode_23 As 'Fluent Pivot (0.0.18)'.pcfdataset":
+    "pivotAppCode_23 As 'Fluent Pivot (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -262,7 +262,7 @@ DetailsListCellTypes As CanvasComponent:
         Y: =40
         ZIndex: =8
 
-        "ElevationCellTypes As 'Fluent Elevation (0.0.18)'":
+        "ElevationCellTypes As 'Fluent Elevation (0.0.20)'":
             DisplayMode: =DisplayMode.Edit
             Height: =FluentDetailsListCellTypes.Height
             Visible: =pivotAppCode_23.Selected.ItemKey="app"
@@ -271,7 +271,7 @@ DetailsListCellTypes As CanvasComponent:
             Y: =FluentDetailsListCellTypes.Y
             ZIndex: =1
 
-        "FluentDetailsListCellTypes As 'Fluent Details List (0.0.18)'.pcfdataset":
+        "FluentDetailsListCellTypes As 'Fluent Details List (0.0.20)'.pcfdataset":
             columns_Items: |-
                 =Table(
                     {

@@ -1,6 +1,6 @@
 {
   "AccessibilityLabel": "Accessibility label",
-  "Breadcrumb": "Fluent Breadcrumb (0.0.18)",
+  "Breadcrumb": "Fluent Breadcrumb (0.0.20)",
   "Breadcrumb_Desc": "Breadcrumb component",
   "InputEvent": "Input event",
   "MaxDisplayedItems": "Max displayed items",

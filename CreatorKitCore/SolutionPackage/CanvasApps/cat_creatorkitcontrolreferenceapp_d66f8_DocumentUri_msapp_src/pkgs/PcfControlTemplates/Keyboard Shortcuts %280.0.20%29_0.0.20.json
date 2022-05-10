@@ -327,7 +327,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Keyboard Shortcuts (0.0.18)",
+  "Name": "Keyboard Shortcuts (0.0.20)",
   "Properties": [
     {
       "Category": "data",
@@ -466,13 +466,13 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.18\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0PowerCAT.KeyboardShortcuts.bundle.js?sv=2017-04-17&sr=b&sig=bxTwsxntK%2FBclXLgUp04RJG88m4IsKm4w8%2FUwdfmylw%3D&spr=https&se=2022-05-07T23%3A16%3A05Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0PowerCAT.KeyboardShortcuts.bundle.js?sv=2017-04-17&sr=b&sig=7LTc0Zq8qVqAwGHO587yzxOBNKHBpRTqMTJwzYm34hg%3D&spr=https&se=2022-05-11T20%3A27%3A48Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.KeyboardShortcuts/PowerCAT.KeyboardShortcuts.bundle.js",
       "Type": 0
     },
@@ -493,7 +493,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodneu.blob.core.windows.net/9a25d28a-b75d-4565-b7fd-62d41fcdec76-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App970work0ijeh1rb0.51y020S0Resources0Controls0strings%252fPowerCAT.KeyboardShortcuts.KeyboardShortcuts.1033.json?sv=2017-04-17&sr=b&sig=9nPtLIhZI2RjPWP736coUU3QwgVl1eAaErwRgebkgNM%3D&spr=https&se=2022-05-07T23%3A16%3A05Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/249a495f-2e25-4b7e-b4fd-2f4e4c6af098-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0le2ygpua.mee020S0Resources0Controls0strings%252fPowerCAT.KeyboardShortcuts.KeyboardShortcuts.1033.json?sv=2017-04-17&sr=b&sig=OCm3D6ZGSMhj1A07auroNmkQxID23psT%2FRVaD86nWhM%3D&spr=https&se=2022-05-11T20%3A27%3A49Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.KeyboardShortcuts/strings/PowerCAT.KeyboardShortcuts.KeyboardShortcuts.1033.json",
       "Type": 5
     },
@@ -501,7 +501,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"KeyboardShortcuts\":\"Keyboard Shortcuts (0.0.18)\",\"KeyboardShortcuts_Desc\":\"Adds Keyboard Shortcut events to Canvas Apps\",\"KeyConfig\":\"Key config\",\"KeyConfig_Desc\":\"Key Config e.g. [\\\"alt + a\\\",\\\"f1\\\",\\\"ctrl + alt + k\\\"]\",\"OnKey\":\"On key\",\"OnKey_Desc\":\"Returns the key that is pressed.\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"KeyboardShortcuts\":\"Keyboard Shortcuts (0.0.20)\",\"KeyboardShortcuts_Desc\":\"Adds Keyboard Shortcut events to Canvas Apps\",\"KeyConfig\":\"Key config\",\"KeyConfig_Desc\":\"Key Config e.g. [\\\"alt + a\\\",\\\"f1\\\",\\\"ctrl + alt + k\\\"]\",\"OnKey\":\"On key\",\"OnKey_Desc\":\"Returns the key that is pressed.\"}}}",
       "Type": 3
     },
     {
@@ -512,5 +512,5 @@
       "Type": 0
     }
   ],
-  "Version": "0.0.18"
+  "Version": "0.0.20"
 }

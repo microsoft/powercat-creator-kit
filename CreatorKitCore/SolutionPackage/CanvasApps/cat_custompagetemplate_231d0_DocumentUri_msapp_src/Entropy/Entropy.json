@@ -5,7 +5,7 @@
   },
   "ControlUniqueIds": {
     "App": 1,
-    "CommandBar1": 18,
+    "CommandBar1": 9,
     "CommandContainer_HS": 8,
     "ContentContainer_HS": 13,
     "Home Screen": 6,
@@ -18,7 +18,7 @@
     "txtSearchInput_1": 4
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "05/08/2022 10:25:40",
+  "HeaderLastSavedDateTimeUTC": "05/10/2022 20:30:40",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
@@ -59,21 +59,17 @@
   },
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.1505764,
+    "AnalysisLoadTime": 0.1697178,
     "ControlCount": {
       "a7b4c150851e48cd9135da59f99e01ba": 2,
-      "cat_PowerCAT.CommandsMenusNavs": 1,
+      "cat_PowerCAT.CommandBar": 1,
       "groupContainer": 4,
       "image": 1,
       "label": 1,
-      "Microsoft_CoreControls_Checkbox": 1,
-      "Microsoft_CoreControls_RadioGroup": 1,
-      "Microsoft_CoreControls_Slider": 1,
-      "pcfDataField": 1,
       "screen": 1,
       "text": 1
     },
-    "DeserializationLoadTime": 7.4442298,
+    "DeserializationLoadTime": 4.3576945,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": false

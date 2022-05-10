@@ -13,7 +13,7 @@ LeftNav As CanvasComponent:
         Width: =navMain.Width
         ZIndex: =1
 
-    "navMain As 'Fluent Nav (0.0.18)'.pcfdataset":
+    "navMain As 'Fluent Nav (0.0.20)'.pcfdataset":
         CollapseByDefault: =true
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height-Self.Y

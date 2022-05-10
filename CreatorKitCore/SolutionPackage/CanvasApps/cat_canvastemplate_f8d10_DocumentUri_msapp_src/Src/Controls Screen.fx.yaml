@@ -222,6 +222,7 @@
     "DatePicker1 As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        IconFill: =
         Width: =210
         X: =42
         Y: =174
@@ -614,8 +615,8 @@
         TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
         Visible: =true
         Width: =200 
-        X: =919
-        Y: =536
+        X: =915
+        Y: =521
         ZIndex: =6
 
     "Elevation1 As 'Fluent Elevation (0.0.20)'":
@@ -814,8 +815,8 @@
         Height: =32
         Text: ="Pivot"
         Width: =320
-        X: =912
-        Y: =302
+        X: =917
+        Y: =264
         ZIndex: =17
 
     Label1_5 As Label:
@@ -825,17 +826,17 @@
         Text: ="Command Bar"
         Width: =320
         X: =916
-        Y: =377
+        Y: =361
         ZIndex: =19
 
     Label1_6 As Label:
         DisplayMode: =DisplayMode.Edit
         FontWeight: =FontWeight.Semibold
-        Height: =32
+        Height: =29
         Text: ="Action Button"
-        Width: =320
-        X: =916
-        Y: =498
+        Width: =182
+        X: =919
+        Y: =485
         ZIndex: =20
 
     Label1_7 As Label:
@@ -951,8 +952,8 @@
         TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
         Visible: =true
         Width: =36
-        X: =1036
-        Y: =493
+        X: =1022
+        Y: =525
         ZIndex: =25
 
     Label1_9 As Label:
@@ -1011,8 +1012,8 @@
         Text: ="The quick brown fox jumps over the lazy dog"
         TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading4
         Width: =533
-        X: =41
-        Y: =830
+        X: =42
+        Y: =820
         ZIndex: =30
 
     Label1_14 As Label:
@@ -1039,19 +1040,19 @@
         ZIndex: =32
 
     Spinner_1 As Spinner:
-        Height: =196
+        Height: =164
         Visible: =Spinner_1.IsLoading
         Width: =304
         X: =608
-        Y: =866
+        Y: =898
         ZIndex: =33
 
     ExpandMenu_1 As ExpandMenu:
-        Height: =267
+        Height: =403
         Theme: =AppTheme
-        Width: =34
-        X: =1370
-        Y: =570
+        Width: =42
+        X: =1390
+        Y: =141
         ZIndex: =34
 
     Label1_16 As Label:
@@ -1068,7 +1069,7 @@
         DisplayMode: =DisplayMode.Edit
         FontWeight: =FontWeight.Semibold
         Height: =32
-        Text: ="Picker"
+        Text: ="Spinner"
         Width: =320
         X: =668
         Y: =866
@@ -1163,8 +1164,8 @@
             )
         Theme: =AppThemeJson
         Width: =114
-        X: =1202
-        Y: =474
+        X: =1186
+        Y: =510
         ZIndex: =43
 
     "Checkbox1 As 'Check box'":
@@ -1297,7 +1298,7 @@
 
     "CommandBar1 As 'Fluent Command Bar (0.0.20)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
-        Height: =72
+        Height: =52
         Items: |-
             = Table({ItemKey: "new",ItemDisplayName: "New",ItemIconName: "Add"},
                        {ItemKey: "edit",ItemDisplayName: "Edit",ItemIconName: "Edit"},
@@ -1308,7 +1309,7 @@
         Theme: =AppThemeJson
         Width: =548
         X: =912
-        Y: =409
+        Y: =390
         ZIndex: =48
 
     "Pivot1 As 'Fluent Pivot (0.0.20)'.pcfdataset":
@@ -1335,7 +1336,17 @@
             )
         Theme: =AppThemeJson
         Width: =476
-        X: =911
-        Y: =333
+        X: =916
+        Y: =295
         ZIndex: =49
+
+    Label1_19 As Label:
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        Text: ="Context Menu"
+        Width: =182
+        X: =1188
+        Y: =474
+        ZIndex: =50
 

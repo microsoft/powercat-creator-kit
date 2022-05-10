@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="KeyboardShortcuts" xml:space="preserve">
-        <value>Keyboard Shortcuts (0.0.18)</value>
+        <value>Keyboard Shortcuts (0.0.20)</value>
     </data>
     <data name="KeyboardShortcuts_Desc" xml:space="preserve">
         <value>Adds Keyboard Shortcut events to Canvas Apps</value>

@@ -48,7 +48,7 @@ Panel As CanvasComponent:
     Width: =1600
     X: =0
     Y: =0
-    ZIndex: =3
+    ZIndex: =4
 
     htmlShadow_4 As htmlViewer:
         Height: =Panel.Height

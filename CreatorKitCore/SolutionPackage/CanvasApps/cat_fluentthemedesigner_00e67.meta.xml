@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cat_fluentthemedesigner_00e67</Name>
-  <AppVersion>2022-05-09T14:58:36Z</AppVersion>
+  <AppVersion>2022-05-11T16:11:31Z</AppVersion>
   <Status>Ready</Status>
-  <CreatedByClientVersion>3.22043.28.0</CreatedByClientVersion>
-  <MinClientVersion>3.22043.28.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1919","primaryDeviceHeight":"858","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22043.28","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220509T133025Z-3.22043.28.0"}</Tags>
+  <CreatedByClientVersion>3.22044.32.0</CreatedByClientVersion>
+  <MinClientVersion>3.22044.32.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22044.32","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220509T145836Z-3.22051.28.0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
-  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <BackgroundColor>rgba(0, 120, 212, 1)</BackgroundColor>
   <DisplayName>Fluent Theme Designer</DisplayName>
   <Description xsi:nil="true"></Description>
   <CommitMessage xsi:nil="true"></CommitMessage>

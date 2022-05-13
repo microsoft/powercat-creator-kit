@@ -147,7 +147,7 @@ Panel As CanvasComponent:
                 Icon2_2 As icon.Cancel:
                     AccessibleLabel: ="close button"
                     BorderColor: =ColorFade(Icon2_2.Fill, -20%)
-                    Color: =Black
+                    Color: =ColorValue(Panel.Theme.palette.neutralPrimary)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     DisabledFill: =ColorFade(Icon2_2.Fill, -80%)
@@ -173,7 +173,7 @@ Panel As CanvasComponent:
             Label_PanelContent As label:
                 AutoHeight: =true
                 BorderColor: =
-                Color: =
+                Color: =ColorValue(Panel.Theme.palette.neutralPrimary)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(0,0,0,0)
                 Fill: =RGBA(0,0,0,0)
@@ -240,7 +240,7 @@ Panel As CanvasComponent:
                     BorderThickness: =0
                     ButtonType: =ThisItem.ButtonType
                     DisplayMode: =DisplayMode.Edit
-                    FillColor: =
+                    FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themePrimary))
                     Height: =32
                     HideFromAssistiveTechnologies: =false
                     Italic: =false
@@ -249,7 +249,7 @@ Panel As CanvasComponent:
                     PaddingTop: =0
                     Strikethrough: =false
                     Text: =ThisItem.Label
-                    TextColor: =
+                    TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.white))
                     Underline: =false
                     VerticalAlignment: ="middle"
                     Width: =96

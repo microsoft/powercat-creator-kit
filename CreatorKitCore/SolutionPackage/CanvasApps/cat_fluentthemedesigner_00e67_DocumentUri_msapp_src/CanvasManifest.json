@@ -88,10 +88,10 @@
   },
   "PublishInfo": {
     "AppName": "Fluent Theme Designer",
-    "BackgroundColor": "RGBA(0,176,240,1)",
+    "BackgroundColor": "rgba(0, 120, 212, 1)",
     "IconColor": "RGBA(255,255,255,1)",
-    "IconName": "Edit",
-    "LogoFileName": "",
+    "IconName": "",
+    "LogoFileName": "logo.jpg",
     "PublishDataLocally": false,
     "PublishResourcesLocally": false,
     "PublishTarget": "player",

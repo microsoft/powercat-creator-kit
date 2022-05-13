@@ -349,7 +349,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Fluent Theme Designer (0.0.18)",
+  "Name": "Fluent Theme Designer (0.0.20)",
   "Properties": [
     {
       "Category": "data",
@@ -538,13 +538,13 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.18\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.20\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/55347009-fba3-4a11-bd4b-b4ca47adb6d8-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0m5t1v0bm.v20020S0Resources0Controls0PowerCAT.ThemeDesigner.bundle.js?sv=2017-04-17&sr=b&sig=ydAK4BhkTzA9slWXeiOHHow5s2GHdxlFEDXkaXJpQtw%3D&spr=https&se=2022-05-10T11%3A41%3A10Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/7cddb3b7-93da-4fc7-abe9-5a5c072b2365-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work04low02o3.rno020S0Resources0Controls0PowerCAT.ThemeDesigner.bundle.js?sv=2017-04-17&sr=b&sig=MzAbJnR%2F2KVrZwe7vxRv%2FT%2BVEeIYj8UtB0AVHeK3Vns%3D&spr=https&se=2022-05-12T15%3A59%3A34Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.ThemeDesigner/PowerCAT.ThemeDesigner.bundle.js",
       "Type": 0
     },
@@ -565,7 +565,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/55347009-fba3-4a11-bd4b-b4ca47adb6d8-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0m5t1v0bm.v20020S0Resources0Controls0strings%252fPowerCAT.ThemeDesigner.FluentThemeDesigner.1033.json?sv=2017-04-17&sr=b&sig=Qk8h5SaARGnaphqJ1DMNvcLHNhx7IZFKaj13YxJuvMw%3D&spr=https&se=2022-05-10T11%3A41%3A10Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/7cddb3b7-93da-4fc7-abe9-5a5c072b2365-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work04low02o3.rno020S0Resources0Controls0strings%252fPowerCAT.ThemeDesigner.FluentThemeDesigner.1033.json?sv=2017-04-17&sr=b&sig=A9EAj%2FWt%2FVWDdjm6KfZfB7Y7pCfWIbXH%2Bnmp81KlGbY%3D&spr=https&se=2022-05-12T15%3A59%3A34Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.ThemeDesigner/strings/PowerCAT.ThemeDesigner.FluentThemeDesigner.1033.json",
       "Type": 5
     },
@@ -573,7 +573,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 13,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ThemeDesigner\":\"Fluent Theme Designer (0.0.18)\",\"ThemeJSON\":\"Theme\",\"PrimaryColor\":\"Primary Color\",\"TextColor\":\"Text Color\",\"BackgroundColor\":\"Background Color\",\"ThemeGenerator\":\"Fluent Theme Designer\",\"ThemeDesigner_Desc\":\"A theme designer component to generate Theme JSON\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"ThemeDesigner\":\"Fluent Theme Designer (0.0.20)\",\"ThemeJSON\":\"Theme\",\"PrimaryColor\":\"Primary Color\",\"TextColor\":\"Text Color\",\"BackgroundColor\":\"Background Color\",\"ThemeGenerator\":\"Fluent Theme Designer\",\"ThemeDesigner_Desc\":\"A theme designer component to generate Theme JSON\"}}}",
       "Type": 3
     },
     {
@@ -598,5 +598,5 @@
       "Type": 4
     }
   ],
-  "Version": "0.0.18"
+  "Version": "0.0.20"
 }

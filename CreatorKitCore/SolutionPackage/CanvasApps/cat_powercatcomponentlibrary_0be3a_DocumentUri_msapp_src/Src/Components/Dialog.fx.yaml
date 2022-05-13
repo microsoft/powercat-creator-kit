@@ -215,7 +215,7 @@ Dialog As CanvasComponent:
                         PaddingTop: =0
                         Strikethrough: =false
                         Text: =ThisItem.Label
-                        TextColor: =
+                        TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.white))
                         Underline: =false
                         VerticalAlignment: ="middle"
                         Width: =96

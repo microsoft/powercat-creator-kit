@@ -28,7 +28,7 @@
     "TemplateDisplayName": "Button",
     "Version": "1.5.2"
   },
-  "Fluent Theme Designer (0.0.18)": {
+  "Fluent Theme Designer (0.0.20)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.ThemeDesigner",
@@ -40,8 +40,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.ThemeDesigner",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Theme Designer (0.0.18)",
-    "Version": "0.0.18"
+    "TemplateDisplayName": "Fluent Theme Designer (0.0.20)",
+    "Version": "0.0.20"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",

@@ -48,7 +48,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "TextColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "TextColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "BorderColor",
         "BorderRadius",
         "BorderStyle",
@@ -1653,7 +1660,7 @@
           "Category": "Data",
           "NameMap": "{\"Label\":\"Label\"}",
           "PropertyName": "SelectedButton",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",

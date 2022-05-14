@@ -202,7 +202,7 @@ NavBasic As CanvasComponent:
         Height: =115
         HtmlText: |-
             ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""navControl As 'Fluent Nav (0.0.13)'.pcfdataset""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""navControl As 'Fluent Nav'.pcfdataset""</span>:
                 DisplayMode: =DisplayMode.Edit
                 Items: |-
                     =Table(

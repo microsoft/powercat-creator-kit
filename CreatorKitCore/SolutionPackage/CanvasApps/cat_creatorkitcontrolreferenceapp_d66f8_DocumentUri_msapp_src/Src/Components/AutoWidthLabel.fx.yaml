@@ -50,7 +50,7 @@ AutoWidthLabel As CanvasComponent:
         Height: =115
         HtmlText: |-
             ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">lblExampleTitle_9 As label:
-                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""AutoWidthLabel_Words As 'Auto Width Label (0.0.13)'""</span>:
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""AutoWidthLabel_Words As 'Auto Width Label'""</span>:
                     Text: |-
                         =Concat(
                             ForAll(

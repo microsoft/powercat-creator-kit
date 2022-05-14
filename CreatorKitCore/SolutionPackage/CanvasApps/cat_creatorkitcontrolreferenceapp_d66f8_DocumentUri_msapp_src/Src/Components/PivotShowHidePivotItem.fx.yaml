@@ -55,7 +55,7 @@ PivotShowHidePivotItem As CanvasComponent:
             <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowFirstPivot As 'Check box'""</span>:
                 Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
             
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Pivot2 As 'Fluent Pivot (0.0.13)'.pcfdataset""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Pivot2 As 'Fluent Pivot'.pcfdataset""</span>:
                 Items: |-
                     =Table(
                         {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""foo""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Foo""</span>,ItemVisible:chkShowFirstPivot.Checked},

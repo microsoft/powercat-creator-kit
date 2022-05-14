@@ -49,7 +49,7 @@ KeyboardShortcuts As CanvasComponent:
         Font: =Font.'Courier New'
         Height: =115
         HtmlText: |-
-            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""KeyboardShortcutsSample As 'Keyboard Shortcuts (0.0.18)'""</span>:
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""KeyboardShortcutsSample As 'Keyboard Shortcuts'""</span>:
                 KeyConfig: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""[""</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""alt + f""</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"",""</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""alt + l""</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"",""</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""alt + e""</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""]""</span>
                 OnChange: |-
                     =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varKeyPressed,$<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""{Self.OnKey} {Text(Rand())}""</span>);

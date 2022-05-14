@@ -57,7 +57,7 @@ PivotItemStyles As CanvasComponent:
                 Text: =Coalesce(Pivot2_1.Selected.ItemKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
                 
             
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Pivot2_1 As 'Fluent Pivot (0.0.13)'.pcfdataset""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Pivot2_1 As 'Fluent Pivot'.pcfdataset""</span>:
                 Items: |-
                     =Table(
                         {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""myfiles""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""My Files""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Emoji2""</span>},

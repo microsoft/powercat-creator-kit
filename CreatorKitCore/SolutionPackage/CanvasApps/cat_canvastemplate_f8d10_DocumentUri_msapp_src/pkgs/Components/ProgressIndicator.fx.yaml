@@ -1,5 +1,5 @@
 ProgressIndicator As CanvasComponent:
-    Fill: =RGBA(0, 0, 0, 0)
+    Fill: =ColorValue(ProgressIndicator.Theme.palette.neutralLight)
     Height: =2
     Theme: |-
         ={
@@ -37,11 +37,10 @@ ProgressIndicator As CanvasComponent:
     rectProgressBar As rectangle:
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
-        BorderThickness: =2
         DisabledFill: =RGBA(166, 166, 166, 1)
         Fill: =ColorValue(ProgressIndicator.Theme.palette.themePrimary)
         FocusedBorderThickness: =4
-        Height: =4
+        Height: =2
         HoverFill: =RGBA(0, 120, 212, 1)
         PressedFill: =RGBA(0, 120, 212, 1)
         Width: =(ProgressIndicator.Value * ProgressIndicator.Width )/100

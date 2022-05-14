@@ -49,7 +49,7 @@ TagListBasic As CanvasComponent:
         Font: =Font.'Courier New'
         Height: =115
         HtmlText: |-
-            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagListStyled As 'Fluent Tag List (0.0.13)'.pcfdataset""</span>:
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagListStyled As 'Fluent Tag List'.pcfdataset""</span>:
                 BorderRadius: =If(chkRounded_1.Checked,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">8</span>)
                 ItemBackgroundColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
                 ItemBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>

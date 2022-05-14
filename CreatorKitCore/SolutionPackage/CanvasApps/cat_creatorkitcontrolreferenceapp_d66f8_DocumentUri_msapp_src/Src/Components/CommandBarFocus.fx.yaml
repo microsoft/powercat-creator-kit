@@ -49,7 +49,7 @@ CommandBarFocus As CanvasComponent:
         Font: =Font.'Courier New'
         Height: =115
         HtmlText: |-
-            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_4 As 'Fluent Command Bar (0.0.13)'.pcfdataset""</span>:
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_4 As 'Fluent Command Bar'.pcfdataset""</span>:
                 DisplayMode: =DisplayMode.Edit
                 Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
                 InputEvent: =varEvent

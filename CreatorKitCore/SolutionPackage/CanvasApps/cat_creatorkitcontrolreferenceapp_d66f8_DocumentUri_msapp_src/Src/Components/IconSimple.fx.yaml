@@ -50,7 +50,7 @@ IconSimple As CanvasComponent:
         Height: =115
         HtmlText: |-
             ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconStandard As 'Fluent Icon (0.0.13)'""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconStandard As 'Fluent Icon'""</span>:
                 BorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
                 BorderRadius: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">0</span>
                 DisplayMode: =DisplayMode.Edit
@@ -66,7 +66,7 @@ IconSimple As CanvasComponent:
                 Theme: =varTheme.themeJSON
                 Width: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
             
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconCustomColor As 'Fluent Icon (0.0.13)'""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconCustomColor As 'Fluent Icon)'""</span>:
                 DisplayMode: =DisplayMode.Edit
                 Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
                 HoverIconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
@@ -87,7 +87,7 @@ IconSimple As CanvasComponent:
                 Y: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">120</span>
                 ZIndex: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">10</span>
             
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""gridIcons As 'Fluent Details List (0.0.13)'.pcfdataset""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""gridIcons As 'Fluent Details List'.pcfdataset""</span>:
                 columns_Items: |-
                     =Table(
                         {
@@ -134,7 +134,7 @@ IconSimple As CanvasComponent:
                 Value: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
                 Width: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">235</span>
             
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""icoSearch As 'Fluent Icon (0.0.13)'""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""icoSearch As 'Fluent Icon'""</span>:
                 BorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
                 BorderRadius: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">0</span>
                 DisplayMode: =DisplayMode.Edit

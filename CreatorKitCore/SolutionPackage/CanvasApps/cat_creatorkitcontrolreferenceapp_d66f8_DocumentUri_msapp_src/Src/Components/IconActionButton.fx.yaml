@@ -51,7 +51,7 @@ IconActionButton As CanvasComponent:
         Font: =Font.'Courier New'
         Height: =115
         HtmlText: |-
-            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconActionButtonStandard As 'Fluent Icon (0.0.13)'""</span>:
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconActionButtonStandard As 'Fluent Icon'""</span>:
                 BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
                 DisplayMode: =DisplayMode.Edit
                 FillColor: =If(chkFill.Checked,varTheme.paletteCSS.themePrimary)

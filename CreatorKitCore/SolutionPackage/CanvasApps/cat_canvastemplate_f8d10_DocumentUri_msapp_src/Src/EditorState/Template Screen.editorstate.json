@@ -376,14 +376,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "App.Width",
-          "InvariantPropertyName": "ContentWidth",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        }
+        "ContentWidth"
       ],
       "DynamicProperties": [
         {

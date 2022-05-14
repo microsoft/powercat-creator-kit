@@ -51,7 +51,7 @@ ContextMenuSimple As CanvasComponent:
         Font: =Font.'Courier New'
         Height: =115
         HtmlText: |-
-            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ContextMenuStandard As 'Fluent Context Menu (0.0.13)'.pcfdataset""</span>:
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ContextMenuStandard As 'Fluent Context Menu'.pcfdataset""</span>:
                 Chevron: =chkShowChevron.Checked
                 DisplayMode: =DisplayMode.Edit
                 InputEvent: =varSetFocusContextMenu

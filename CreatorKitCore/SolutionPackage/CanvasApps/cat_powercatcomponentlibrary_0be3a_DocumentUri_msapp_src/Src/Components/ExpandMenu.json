@@ -74,6 +74,35 @@
       "PropertyDataTypeKey": "Record",
       "Tooltip": "Theme",
       "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"palette\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"black\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarkAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarker\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themePrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"white\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "GetMenuIconPath",
+      "Hidden": true,
+      "Name": "GetMenuIconPath",
+      "PropertyDataTypeKey": "String",
+      "PropertyScopeKey": {
+        "PropertyScopeRuleNamespaceKey": "8",
+        "PropertyScopeRulesKey": [
+          {
+            "DisplayName": "GetMenuIconPath_IconName",
+            "Name": "GetMenuIconPath_IconName",
+            "PropertyDataTypeKey": "String",
+            "ScopeVariableInfo": {
+              "DependencyType": "New",
+              "Description": "IconName",
+              "IsRequired": true,
+              "ResolveExpands": false,
+              "ResolveSelects": false,
+              "ScopeVariableName": "IconName"
+            },
+            "Tooltip": "IconName",
+            "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+          }
+        ]
+      },
+      "Tooltip": "GetMenuIconPath",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -84,7 +113,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637879798131742162",
+  "LastModifiedTimestamp": "637880891929937921",
   "Name": "952d39d80fc84420b772a5058b19d909",
   "OverridableProperties": {},
   "TemplateOriginalName": "a1e958b5009442a8ab4f2657bc58f9de",

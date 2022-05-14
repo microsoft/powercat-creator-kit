@@ -54,7 +54,7 @@ CommandBarColors As CanvasComponent:
                 Text: =Coalesce(commandBar_1.Selected.ItemKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
                 
             
-            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_1 As 'Fluent Command Bar (0.0.13)'.pcfdataset""</span>:
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_1 As 'Fluent Command Bar'.pcfdataset""</span>:
                 DisplayMode: =DisplayMode.Edit
                 Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
                 Items: |-

@@ -12,6 +12,8 @@
         "ThemeDesigner As 'Fluent Theme Designer (0.0.20)'":
             DisplayMode: =DisplayMode.Edit
             Height: =Parent.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =200
             OnChange: |-
                 =If(varThemeJSON <> ThemeDesigner.ThemeJSON || (ThemeDesigner.PrimaryColor = varPrimaryColor && ThemeDesigner.TextColor = varTextColor && ThemeDesigner.BackgroundColor = varBackGroundColor),
                 Set(varThemeJSON, ThemeDesigner.ThemeJSON);
@@ -28,7 +30,7 @@
                 Set(varBackGroundColor,ThemeDesigner.BackgroundColor));
             PrimaryColor: |-
                 ="#0078d4"
-            Width: =Parent.Width * 0.75
+            Width: =Parent.Width
             X: =0
             Y: =0
             ZIndex: =2

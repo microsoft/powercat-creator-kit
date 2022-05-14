@@ -1,9 +1,0 @@
-Screen1 As screen:
-    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-
-    Header_1 As Header:
-        Fill: =ColorValue(LookUp(Header_1.Styles, Key = "BackgroundColorValue").Value)
-        Text: ="Home"
-        Width: =640
-        ZIndex: =4
-

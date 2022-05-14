@@ -98,6 +98,7 @@ App As appinfo:
             {ItemKey:"commands_menus_navs",ItemDisplayName:"Commands, Menus & Navs"},
              {ItemKey:"breadcrumb",ItemDisplayName:"Breadcrumb",ItemParentKey:"commands_menus_navs",TargetScreen:scrBreadcrumb},
             {ItemKey:"commandbar",ItemDisplayName:"CommandBar",ItemParentKey:"commands_menus_navs",TargetScreen:scrCommandBar},
+            {ItemKey:"expandmenu",ItemDisplayName:"ExpandMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrExpandMenu},
             {ItemKey:"contextmenu",ItemDisplayName:"ContextMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrContextMenu},
             {ItemKey:"nav",ItemDisplayName:"Nav",ItemParentKey:"commands_menus_navs",TargetScreen:scrNav},
             {ItemKey:"pivot",ItemDisplayName:"Pivot",ItemParentKey:"commands_menus_navs",TargetScreen:scrPivot},

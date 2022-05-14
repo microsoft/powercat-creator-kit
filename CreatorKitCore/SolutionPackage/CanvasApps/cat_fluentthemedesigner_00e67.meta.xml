@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cat_fluentthemedesigner_00e67</Name>
-  <AppVersion>2022-05-11T16:11:31Z</AppVersion>
+  <AppVersion>2022-05-14T02:27:37Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.22044.32.0</CreatedByClientVersion>
   <MinClientVersion>3.22044.32.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22044.32","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220509T145836Z-3.22051.28.0"}</Tags>
+  <Tags>{"primaryDeviceWidth":"3199","primaryDeviceHeight":"1499","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22044.32","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220511T161131Z-3.22044.32.0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(0, 120, 212, 1)</BackgroundColor>

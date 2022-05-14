@@ -48,7 +48,7 @@ Panel As CanvasComponent:
     Width: =1600
     X: =0
     Y: =0
-    ZIndex: =4
+    ZIndex: =6
 
     htmlShadow_4 As htmlViewer:
         Height: =Panel.Height
@@ -146,7 +146,7 @@ Panel As CanvasComponent:
                 Icon2_4 As icon.Cancel:
                     AccessibleLabel: ="close button"
                     BorderColor: =ColorFade(Icon2_4.Fill, -20%)
-                    Color: =Black
+                    Color: =ColorValue(Panel.Theme.palette.neutralPrimary)
                     DisabledFill: =ColorFade(Icon2_4.Fill, -80%)
                     Fill: =RGBA(0,0,0,0)
                     FocusedBorderThickness: =0
@@ -170,7 +170,7 @@ Panel As CanvasComponent:
             Label_PanelContent As label:
                 AutoHeight: =true
                 BorderColor: =
-                Color: =
+                Color: =ColorValue(Panel.Theme.palette.neutralPrimary)
                 DisabledFill: =RGBA(0,0,0,0)
                 Fill: =RGBA(0,0,0,0)
                 Font: ='Segoe UI'
@@ -234,7 +234,7 @@ Panel As CanvasComponent:
                     BorderThickness: =0
                     ButtonType: =ThisItem.ButtonType
                     DisplayMode: =DisplayMode.Edit
-                    FillColor: =
+                    FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themePrimary))
                     Height: =32
                     HideFromAssistiveTechnologies: =false
                     Italic: =false
@@ -243,7 +243,7 @@ Panel As CanvasComponent:
                     PaddingTop: =0
                     Strikethrough: =false
                     Text: =ThisItem.Label
-                    TextColor: =
+                    TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.white))
                     Underline: =false
                     VerticalAlignment: ="middle"
                     Width: =96

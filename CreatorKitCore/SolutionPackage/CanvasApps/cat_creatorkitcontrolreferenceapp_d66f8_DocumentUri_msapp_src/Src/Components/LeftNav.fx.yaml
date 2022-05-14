@@ -31,7 +31,7 @@ LeftNav As CanvasComponent:
         Font: =Font.'Segoe UI'
         Height: =20
         Size: =8
-        Text: ="Version 0.0.18"
+        Text: ="Version 0.0.20"
         Width: =100
         X: =Parent.Width-Self.Width
         Y: =Parent.Height-Self.Height

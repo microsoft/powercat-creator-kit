@@ -98,8 +98,6 @@
     "UserLocale": "en-US"
   },
   "ScreenOrder": [
-    "Screen1",
-    "Detail View FAQ",
-    "Screen3"
+    "Screen1"
   ]
 }

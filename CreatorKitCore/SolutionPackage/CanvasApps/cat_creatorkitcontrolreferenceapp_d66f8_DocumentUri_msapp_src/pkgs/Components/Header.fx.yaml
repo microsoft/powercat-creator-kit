@@ -98,7 +98,7 @@ Header As CanvasComponent:
     Width: =1600 
     X: =0
     Y: =0
-    ZIndex: =1
+    ZIndex: =2
 
     htmlDropShadow As htmlViewer:
         Height: =69

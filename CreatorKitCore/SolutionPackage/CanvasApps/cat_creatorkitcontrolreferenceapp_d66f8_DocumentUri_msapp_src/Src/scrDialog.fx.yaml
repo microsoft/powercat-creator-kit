@@ -120,6 +120,8 @@ scrDialog As screen:
                         Height: =49
                         Items: |-
                             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
                         OnSelect: =
                         RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
                         SelectedKey: ="app"

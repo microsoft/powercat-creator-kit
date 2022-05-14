@@ -187,6 +187,8 @@ TagPickerBasic As CanvasComponent:
                 HintText: =If(chkAllowFreeText.Checked,"Search for tags or enter a new one","Search for tags")
                 InputEvent: =varFocusTabEvent
                 Items: =colSimpleTags
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
                 MinimumSearchTermLength: =0
                 OnChange: |-
                     =If(Self.TagEvent = "Add",
@@ -328,6 +330,8 @@ TagPickerBasic As CanvasComponent:
                 Items: |-
                     =Table({ItemKey:"delete",ItemIconName:"Delete",ItemDisplayName:"Remove selected",ItemEnabled:CountRows(FluentDetailsListTagsSelected.SelectedItems)>0},
                     {ItemKey:"removeall",ItemIconName:"AlertSolid",ItemDisplayName:"Remove all"})
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
                 OnChange: =
                 OnSelect: |-
                     =If(Self.Selected.ItemKey="delete",
@@ -349,6 +353,8 @@ TagPickerBasic As CanvasComponent:
                 DisplayMode: =DisplayMode.Edit
                 Height: =200
                 Items: =colSimpleTags
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
                 SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
                 Theme: =varTheme.themeJSON
                 Width: =200

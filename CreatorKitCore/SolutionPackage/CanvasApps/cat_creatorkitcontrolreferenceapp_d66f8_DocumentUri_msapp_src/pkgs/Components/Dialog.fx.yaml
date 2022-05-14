@@ -49,7 +49,7 @@ Dialog As CanvasComponent:
     Width: =1600
     X: =0
     Y: =0
-    ZIndex: =3
+    ZIndex: =5
 
     htmlShadow As htmlViewer:
         Height: =Dialog.Height
@@ -210,7 +210,7 @@ Dialog As CanvasComponent:
                         PaddingTop: =0
                         Strikethrough: =false
                         Text: =ThisItem.Label
-                        TextColor: =
+                        TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.white))
                         Underline: =false
                         VerticalAlignment: ="middle"
                         Width: =96

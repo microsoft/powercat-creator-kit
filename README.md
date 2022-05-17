@@ -56,10 +56,6 @@ The more information you can provide, the more likely someone will be successful
 
 Observe the inline guidelines of the Issue template.
 
-## Asking and Answering Questions
-
-Join the [discussions](https://github.com/microsoft/powercat-creator-kit/discussions) and ask your question or contribute by answering questions from others. This is a great way to contribute by helping the Creator Kit community.
-
 
 ## Setup Instructions and Documentation
 

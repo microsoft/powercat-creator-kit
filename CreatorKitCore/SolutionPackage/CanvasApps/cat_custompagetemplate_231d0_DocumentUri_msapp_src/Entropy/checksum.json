@@ -1,6 +1,6 @@
 {
   "ClientBuildDetails": {
-    "CommitHash": "bda5ac5989c42bbe0f67bc6c4a4065fdc1dd9828",
+    "CommitHash": "bca458009ca7b4981b06b8218f44c2a06cf26585",
     "IsLocalBuild": false
   },
   "ClientPerFileChecksums": {
@@ -17,12 +17,12 @@
     "References\\Templates.json": "C8_IuWs7gld6ncnkfmakCJBuKnQvqNSGytvqCh2j5CnGIs=",
     "References\\Themes.json": "C8_3iaRXxnWrkN8kJH8dBQ4f3H/PGWcgdU3RI3nMwkVfWI=",
     "Resources\\Controls\\css\\PowerCAT.CommandBar.CommandBar.css": "C8_wenY5cJT7A5VJLv0766sYfxJRdUjZ3/n8jp86umgiI8=",
-    "Resources\\Controls\\PowerCAT.CommandBar.bundle.js": "C8_1P/eJlYO/bGBGzWKpWML/GiguYoFWCO7FCg7jVsjfZ8=",
+    "Resources\\Controls\\PowerCAT.CommandBar.bundle.js": "C8_dVzhccAtU9Ic99h/00pkjzhMA3uiHJWUp5RRIh7M4Qk=",
     "Resources\\Controls\\strings\\PowerCAT.CommandBar.CommandBar.1033.json": "C8_KxnGuxZR8OmjXRmHhZ3LDTgYnXaczfRDAqkAiPDVntU=",
     "Resources\\Controls\\strings\\PowerCAT.CommandBar.CommandBar.1033.resx": "C8_pPqHzJss28CaCNlgNIB0xNCYmxYkcL/cdJQDoOBfYqw=",
     "Resources\\PublishInfo.json": "C8_ePwrkAHarfJZCttv62ByAinWy4hyLWtl+jfTw+okiRA="
   },
-  "ClientStampedChecksum": "C8_YIYr1BAOpJoG+YNazAmM4wZSpxIeVl1dqAYQco54iTM=",
+  "ClientStampedChecksum": "C8_czXOeJEBgFLF1e2l6DgATPgygKp2AZkrifBQ6WH2w6Q=",
   "ServerPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_hm6YiRAb3XXF+dGSGF8nrgMNUHVL8eF7pPShuO3uyks=",
     "Components\\3.json": "C8_2Ctht6env/US6XYTeHPlZZc93trR4CeG262i0toHXwE=",

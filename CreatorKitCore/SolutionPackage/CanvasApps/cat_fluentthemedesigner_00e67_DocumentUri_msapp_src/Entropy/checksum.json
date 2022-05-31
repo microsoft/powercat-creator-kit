@@ -1,6 +1,6 @@
 {
   "ClientBuildDetails": {
-    "CommitHash": "bda5ac5989c42bbe0f67bc6c4a4065fdc1dd9828",
+    "CommitHash": "bca458009ca7b4981b06b8218f44c2a06cf26585",
     "IsLocalBuild": false
   },
   "ClientPerFileChecksums": {
@@ -24,13 +24,13 @@
     "References\\Resources.json": "C8_Q2f+BDf7lAQi9jxMdToVpsrRkk1mnBXS5CdIoyrvsOA=",
     "References\\Templates.json": "C8_ZjZT9rd7j6d9v81RU1EcUxvPwmZy0gzu1yKyFCNmwWM=",
     "References\\Themes.json": "C8_ICevVr7hFBimNEmK/6NDb4YE2H0Ri8BUiWgASaENw7U=",
-    "Resources\\Controls\\PowerCAT.ThemeDesigner.bundle.js": "C8_HMAeXhOInCY80myz1qXX+DxQjYGZ8wTw4PO9b/VPd9Q=",
+    "Resources\\Controls\\PowerCAT.ThemeDesigner.bundle.js": "C8_22QXcxePnICSGMd0H3QjEXN3VJpOOXoRiRN+PwkfZcY=",
     "Resources\\Controls\\strings\\PowerCAT.ThemeDesigner.FluentThemeDesigner.1033.json": "C8_T+XaudNekKRsm9hhgwD8HkDBqa77tSTj9RKYY9IJFyU=",
     "Resources\\Controls\\strings\\PowerCAT.ThemeDesigner.FluentThemeDesigner.1033.resx": "C8_obHFK7ngxq4KD+2rzVZp0QUoXj9AbrxOJypysj6tzyw=",
     "Resources\\PublishInfo.json": "C8_t43qRFFO2wA3UocT4ChMwlMGdc8noLoBenez4Rx8sy8=",
     "Resources\\y5kh4ra2.jpg": "C8_DHeNOGvADL9IXP8Ki8dHYR+2BYqldUW1PA0v04/0dAw="
   },
-  "ClientStampedChecksum": "C8_e4u5nTdk0+6dLEw3v/ddCjOxTPn28MIUNvL5uM+Mvzw=",
+  "ClientStampedChecksum": "C8_uLUbtpwmdfJyx+69lyeL3Oh7zRNN5rB8PxU9/uOeRgs=",
   "ServerPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_0qt88Y5TdpYhhOMP0F+i4toT8ps4WHlFWbqsjMGJoIQ=",
     "Assets\\Images\\10bbc3d5-f32d-49e9-9505-b4ac5fe60ac4.svg": "C8_VRnnK3emxukLUYRXdf7mbMJ2vXwpqvMAAAYpu1eTg3Q=",

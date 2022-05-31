@@ -1,6 +1,6 @@
 {
   "ClientBuildDetails": {
-    "CommitHash": "bda5ac5989c42bbe0f67bc6c4a4065fdc1dd9828",
+    "CommitHash": "bca458009ca7b4981b06b8218f44c2a06cf26585",
     "IsLocalBuild": false
   },
   "ClientPerFileChecksums": {
@@ -44,15 +44,15 @@
     "Resources\\Controls\\css\\PowerCAT.Elevation.Elevation.css": "C8_VIxhy+982XLmqyd2+eXbeWvZmEWiXk7JI9beEbZS434=",
     "Resources\\Controls\\css\\PowerCAT.FluentDetailsList.DetailsList.css": "C8_V06sSvqme5+4hCqpmIHYC0eS5wNEC7FH7dNqSLcweFM=",
     "Resources\\Controls\\css\\PowerCAT.Picker.TagPicker.css": "C8_WL+QbC3Z2gXLlWHlPeVcTf6h3oxu7oUtWanMpWs5pX8=",
-    "Resources\\Controls\\PowerCAT.Breadcrumb.bundle.js": "C8_/9PEQt08jdWiZ/XcyPdtGQDHJcMz5oQfKT5s42i1gn0=",
-    "Resources\\Controls\\PowerCAT.CommandBar.bundle.js": "C8_1P/eJlYO/bGBGzWKpWML/GiguYoFWCO7FCg7jVsjfZ8=",
-    "Resources\\Controls\\PowerCAT.ContextMenu.bundle.js": "C8_CBR1qFN4RgCcpebaiGeNThHnUQaCd9v/zTDlzPqnIxY=",
-    "Resources\\Controls\\PowerCAT.Elevation.bundle.js": "C8_CNgkpt3tiSbOu+E36uraqnVdWf2OVew8syWixRM3aAM=",
-    "Resources\\Controls\\PowerCAT.FluentDetailsList.bundle.js": "C8_r+ZLQhp0MQCFQKLNSCXU6IAFGCWYgLaH3bJu9QJ28f4=",
-    "Resources\\Controls\\PowerCAT.Icon.bundle.js": "C8_LzmQH3+9y8GxRd34K7/gl+ogc6ByT3bDEUE/S2l9rMI=",
-    "Resources\\Controls\\PowerCAT.Nav.bundle.js": "C8_KHNnBnhhreI+HWx9GDJyY2vwN5/pBhSCzqgnQmYm0Mw=",
-    "Resources\\Controls\\PowerCAT.Picker.bundle.js": "C8_DSZuud5GWVsc1M3pd1mnHiJKlaOdK2dV2+T61XM5ZLw=",
-    "Resources\\Controls\\PowerCAT.Pivot.bundle.js": "C8_gFHx2yb4TnQD1MHe4PD4UhCOrSsO7L9jw5j1Zh3qLCc=",
+    "Resources\\Controls\\PowerCAT.Breadcrumb.bundle.js": "C8_ofaWCcX3w646QkG/o38vJUGCoX48PW6Aul+EzPJO/6I=",
+    "Resources\\Controls\\PowerCAT.CommandBar.bundle.js": "C8_dVzhccAtU9Ic99h/00pkjzhMA3uiHJWUp5RRIh7M4Qk=",
+    "Resources\\Controls\\PowerCAT.ContextMenu.bundle.js": "C8_04Gpjc/mcyYHH9lvANDmXHZtoOWaVXOw26b0Z/gM2DQ=",
+    "Resources\\Controls\\PowerCAT.Elevation.bundle.js": "C8_4SgHj1XKCBjSkbVLaAnsh8aNiHQlogkZkj2bb9FFGak=",
+    "Resources\\Controls\\PowerCAT.FluentDetailsList.bundle.js": "C8_n0VWXAZIKpC3t+4oFWn5NzUosyECm25ASeS/3wgjB+E=",
+    "Resources\\Controls\\PowerCAT.Icon.bundle.js": "C8_styK6vTCr2p5Gy5oS6z+DL0O6Oo1+ru3IIuf5kms4l4=",
+    "Resources\\Controls\\PowerCAT.Nav.bundle.js": "C8_3HUEh0xjEdDeRAXI2YZBE4RTpPA0FzA38gbd/DtTPM4=",
+    "Resources\\Controls\\PowerCAT.Picker.bundle.js": "C8_cterM45Z+dfa6JoMcMGsvpzQT2iv2WfnR+F6NsJHqWg=",
+    "Resources\\Controls\\PowerCAT.Pivot.bundle.js": "C8_67SmTzfYswZDDlRcM7JJ098n0NYfH8v6PffWyHtt88w=",
     "Resources\\Controls\\strings\\PowerCAT.Breadcrumb.Breadcrumb.1033.json": "C8_hS1et8weSZysiEuNua7OsK486ZqcIgJ8eNQLYtF8dWQ=",
     "Resources\\Controls\\strings\\PowerCAT.Breadcrumb.Breadcrumb.1033.resx": "C8_tcY+okAUFX2inov/o01O4pWTTPz6dX5dkzrlyZBf4H8=",
     "Resources\\Controls\\strings\\PowerCAT.CommandBar.CommandBar.1033.json": "C8_KxnGuxZR8OmjXRmHhZ3LDTgYnXaczfRDAqkAiPDVntU=",
@@ -73,7 +73,7 @@
     "Resources\\Controls\\strings\\PowerCAT.Pivot.Pivot.1033.resx": "C8_XSALAiQt/xZoQ9yi/aSeqkrcOg/AC39dJfTA28WcNwU=",
     "Resources\\PublishInfo.json": "C8_6fZRDvOvc48FmGo5xKnjdWuYoogqON4992X7uB1IT5Q="
   },
-  "ClientStampedChecksum": "C8_3IEUeG1K6F/V07+V2I6iESEUfNCCxpNmijuncqWXmhA=",
+  "ClientStampedChecksum": "C8_vHgZdlEB6y3c8r9qq26Cg+onMPhxW2xcgigmCJVblaM=",
   "ServerPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_X5nK8ROvZxY4Q2eIV+pdBx2M/FPyk5XJHvkh7MikuLo=",
     "AppTests\\2.json": "C8_9eSYP+qQ9+CH6Yfci8WSh6WvKgbGnewk7bREZYmvsiE=",

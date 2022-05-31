@@ -93,23 +93,23 @@ Spinner As CanvasComponent:
             Y: =imgLoader.Y + imgLoader.Height
             ZIndex: =2
 
-    iconRefresh_5 As icon.Reload:
+    iconRefresh As icon.Reload:
         AccessibleLabel: ="refresh control"
-        BorderColor: =ColorFade(iconRefresh_5.Fill, -20%)
+        BorderColor: =ColorFade(iconRefresh.Fill, -20%)
         Color: =RGBA(0, 134, 208, 0.1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        DisabledFill: =ColorFade(iconRefresh_5.Fill, -80%)
+        DisabledFill: =ColorFade(iconRefresh.Fill, -80%)
         Fill: =RGBA(0,0,0,0)
         Height: =37
-        HoverBorderColor: =ColorFade(iconRefresh_5.BorderColor, 20%)
-        HoverColor: =ColorFade(iconRefresh_5.Color, 20%)
-        HoverFill: =ColorFade(iconRefresh_5.Fill, 20%)
+        HoverBorderColor: =ColorFade(iconRefresh.BorderColor, 20%)
+        HoverColor: =ColorFade(iconRefresh.Color, 20%)
+        HoverFill: =ColorFade(iconRefresh.Fill, 20%)
         Icon: =Icon.Reload
         OnSelect: =
-        PressedBorderColor: =ColorFade(iconRefresh_5.BorderColor, -20%)
-        PressedColor: =ColorFade(iconRefresh_5.Color, -20%)
-        PressedFill: =ColorFade(iconRefresh_5.Fill, -20%)
+        PressedBorderColor: =ColorFade(iconRefresh.BorderColor, -20%)
+        PressedColor: =ColorFade(iconRefresh.Color, -20%)
+        PressedFill: =ColorFade(iconRefresh.Fill, -20%)
         Width: =24
         X: =Spinner.Width
         ZIndex: =8

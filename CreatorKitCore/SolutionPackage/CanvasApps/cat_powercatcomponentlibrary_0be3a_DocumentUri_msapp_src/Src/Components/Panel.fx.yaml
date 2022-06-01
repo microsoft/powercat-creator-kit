@@ -6,7 +6,7 @@ Panel As CanvasComponent:
     ContentX: =PanelContentContainer.X + CenterPanelContainer.X + CenterPanelContainer.PaddingLeft
     ContentY: = PanelHeaderContainer.Height + CenterPanelContainer.Y
     Description: =""
-    DialogWidth: =340
+    DialogWidth: =400
     Fill: =Panel.OverlayColor
     Height: =App.Height
     OnButtonSelect: =

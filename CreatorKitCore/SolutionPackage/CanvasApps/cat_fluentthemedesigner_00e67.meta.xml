@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cat_fluentthemedesigner_00e67</Name>
-  <AppVersion>2022-05-14T02:27:37Z</AppVersion>
+  <AppVersion>2022-06-01T20:02:27Z</AppVersion>
   <Status>Ready</Status>
-  <CreatedByClientVersion>3.22044.32.0</CreatedByClientVersion>
-  <MinClientVersion>3.22044.32.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"3199","primaryDeviceHeight":"1499","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22044.32","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220511T161131Z-3.22044.32.0"}</Tags>
+  <CreatedByClientVersion>3.22052.27.0</CreatedByClientVersion>
+  <MinClientVersion>3.22052.27.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1679","primaryDeviceHeight":"778","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22052.27","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220517T153330Z-3.22051.27.0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(0, 120, 212, 1)</BackgroundColor>
@@ -17,14 +17,14 @@
   <ConnectionReferences>{}</ConnectionReferences>
   <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{},"components":[{"componentName":"CustomControl","identifier":"cat_PowerCAT.ThemeDesigner","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}}]}}</DatabaseReferences>
   <AppComponents>[]</AppComponents>
-  <AppComponentDependencies>[]</AppComponentDependencies>
+  <AppComponentDependencies>[{"appComponentName":"6da4b2f929d240969e49e05e10e720ce","appName":"2f6b0e93-7676-4072-ab3d-0644915eb4ff","appComponentLibraryName":"81e5e6a9-c44c-4745-94af-8b1fdb4ee232","appComponentLibraryVersion":"2022-06-01T19:34:47Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"439a778f-f966-4fad-b85c-706b1c34dcfa"}]</AppComponentDependencies>
   <CanConsumeAppPass>1</CanConsumeAppPass>
   <CanvasAppType>0</CanvasAppType>
   <BypassConsent>0</BypassConsent>
   <AdminControlBypassConsent>0</AdminControlBypassConsent>
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
-  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"","logicalname":"cat_PowerCAT.ThemeDesigner","componenttype":66,"componenttypeplatformname":"CustomControl"}]}</CdsDependencies>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"","logicalname":"cat_PowerCAT.ThemeDesigner","componenttype":66,"componenttypeplatformname":"CustomControl"},{"logicalname":"cat_powercatcomponentlibrary_0be3a","componenttype":300,"componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
   <IsCustomizable>1</IsCustomizable>
   <BackgroundImageUri>/CanvasApps/cat_fluentthemedesigner_00e67_BackgroundImageUri</BackgroundImageUri>
   <DocumentUri>/CanvasApps/cat_fluentthemedesigner_00e67_DocumentUri.msapp</DocumentUri>

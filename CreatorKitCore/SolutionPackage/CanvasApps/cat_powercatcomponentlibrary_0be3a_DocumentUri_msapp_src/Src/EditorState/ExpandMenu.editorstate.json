@@ -71,7 +71,7 @@
           "Category": "Data",
           "NameMap": "{\"Icon\":\"Icon\",\"Label\":\"Label\",\"Screen\":\"Screen\"}",
           "PropertyName": "Items",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",

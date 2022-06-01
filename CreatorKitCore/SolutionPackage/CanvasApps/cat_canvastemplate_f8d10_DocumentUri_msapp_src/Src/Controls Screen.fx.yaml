@@ -971,6 +971,7 @@
         OnChange: =Notify("Button Clicked")
         Text: ="Add Task"
         TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+        Theme: =AppThemeJson
         Visible: =true
         Width: =36
         X: =1022
@@ -12672,7 +12673,7 @@
         Width: =1920
         ZIndex: =51
 
-    Button1_3 As Button:
+    btnOpenDialog As Button:
         ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
         DisplayMode: =DisplayMode.Edit
         FillColor: =ColorValue(AppTheme.palette.themePrimary)
@@ -12686,7 +12687,7 @@
         Y: =809
         ZIndex: =52
 
-    Button1_4 As Button:
+    btnOpenPanel As Button:
         ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
         DisplayMode: =DisplayMode.Edit
         FillColor: =ColorValue(AppTheme.palette.themePrimary)
@@ -12701,13 +12702,390 @@
         ZIndex: =53
 
     Panel_1 As Panel:
+        DialogWidth: =400
         Fill: =Panel_1.OverlayColor
         OnButtonSelect: |-
             =UpdateContext({showPanel:false})
         OnCloseSelect: |-
             =UpdateContext({showPanel:false})
+        Subtitle: =""
         Theme: =AppTheme
         Visible: =showPanel
         Width: =1920
         ZIndex: =54
+
+    PanelContentForm As form:
+        AcceptsFocus: =false
+        BorderColor: =RGBA(166, 166, 166, 1)
+        DataSource: =Accounts
+        DefaultMode: =FormMode.New
+        Height: =Panel_1.ContentHeight
+        NumberOfColumns: =1
+        Visible: =Panel_1.Visible
+        Width: =Panel_1.ContentWidth
+        X: =Panel_1.ContentX
+        Y: =Panel_1.ContentY
+        ZIndex: =55
+
+        Category_DataCard1_1 As typedDataCard.pcfCoreComboBoxOptionSetSingleEditCard:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="accountcategorycode"
+            Default: =ThisItem.Category
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"accountcategorycode")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Update: =DataCardValue5_1.Selected.Value
+            Width: =360
+            WidthFit: =true
+            X: =0
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey5_1 As Label:
+                AutoHeight: =true
+                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =0
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5_1 As combobox:
+                AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                BorderColor: =RGBA(166, 166, 166, 1)
+                ChevronBackground: =RGBA(255, 255, 255, 1)
+                ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                ChevronFill: =RGBA(33, 33, 33, 1)
+                ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                Color: =RGBA(51, 51, 51, 1)
+                DefaultSelectedItems: =[Parent.Default]
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                FocusedBorderThickness: =2
+                Font: =Font.'Segoe UI'
+                Height: =32
+                HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverColor: =RGBA(51, 51, 51, 1)
+                HoverFill: =RGBA(212, 212, 212, 1)
+                IsSearchable: =false
+                Items: =Choices('Category (Accounts)')
+                PaddingLeft: =12
+                PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(212, 212, 212, 1)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectionColor: =RGBA(51, 51, 51, 1)
+                SelectionFill: =RGBA(0, 120, 212, 1)
+                SelectMultiple: =false
+                Size: =10.5
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 48
+                Y: =DataCardKey5_1.Y + DataCardKey5_1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage4_1 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                ZIndex: =3
+
+            StarVisible4_1 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =20
+                Text: ="*"
+                VerticalAlignment: =VerticalAlign.Bottom
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey5_1.Y
+                ZIndex: =4
+
+        "'Created On_DataCard1_1' As typedDataCard.pcfCoreTextualViewCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="createdon"
+            Default: =ThisItem.'Created On'
+            DisplayMode: =DisplayMode.View
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"createdon")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            Required: =false
+            Width: =360
+            WidthFit: =true
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey4_1 As Label:
+                AutoHeight: =true
+                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =0
+                Y: =9
+                ZIndex: =1
+
+            "DataCardValue4_1 As 'Text box'":
+                DisplayMode: =DisplayMode.View
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =0
+                Y: =DataCardKey4_1.Y + DataCardKey4_1.Height + 4
+                ZIndex: =2
+
+        "'Account Name_DataCard1_1' As typedDataCard.pcfCoreTextualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="name"
+            Default: =ThisItem.'Account Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Accounts], DataSourceInfo.MaxLength, "name")
+            Required: =true
+            Update: =DataCardValue1_1.Value
+            Width: =360
+            WidthFit: =true
+            X: =0
+            Y: =0
+            ZIndex: =5
+
+            DataCardKey1_1 As Label:
+                AutoHeight: =true
+                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =0
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue1_1 As 'Text box'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Required: =Parent.Required
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =0
+                Y: =DataCardKey1_1.Y + DataCardKey1_1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage1_1 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue1_1.Y + DataCardValue1_1.Height
+                ZIndex: =3
+
+            StarVisible1_1 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =74
+                Y: =DataCardKey1_1.Y
+                ZIndex: =4
+
+        "'Address 1: City_DataCard1_1' As typedDataCard.pcfCoreTextualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="address1_city"
+            Default: |-
+                =ThisItem.'Address 1: City'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"address1_city")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Accounts], DataSourceInfo.MaxLength, "address1_city")
+            Required: =false
+            Update: =DataCardValue3_1.Value
+            Width: =360
+            WidthFit: =true
+            X: =0
+            Y: =3
+            ZIndex: =5
+
+            DataCardKey3_1 As Label:
+                AutoHeight: =true
+                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =0
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue3_1 As 'Text box'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Required: =Parent.Required
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =0
+                Y: =DataCardKey3_1.Y + DataCardKey3_1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage3_1 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                ZIndex: =3
+
+            StarVisible3_1 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey3_1.Y
+                ZIndex: =4
+
+        "'Main Phone_DataCard1_1' As typedDataCard.pcfCoreTextualEditCard":
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="telephone1"
+            Default: =ThisItem.'Main Phone'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Accounts],DataSourceInfo.DisplayName,"telephone1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =70
+            MaxLength: =DataSourceInfo([@Accounts], DataSourceInfo.MaxLength, "telephone1")
+            Required: =false
+            Update: =DataCardValue2_1.Value
+            Width: =360
+            WidthFit: =true
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            DataCardKey2_1 As Label:
+                AutoHeight: =true
+                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =22
+                Text: =Parent.DisplayName
+                Tooltip: =Parent.DisplayName
+                VerticalAlignment: =VerticalAlign.Bottom
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =0
+                Y: =10
+                ZIndex: =1
+
+            "DataCardValue2_1 As 'Text box'":
+                AccessibleLabel: =Parent.DisplayName
+                DisplayMode: =Parent.DisplayMode
+                FontSize: =10.5
+                Height: =32
+                Mode: ="SingleLine"
+                Required: =Parent.Required
+                Tooltip: =Parent.DisplayName
+                Value: =Parent.Default
+                Width: =Parent.Width - 48
+                X: =0
+                Y: =DataCardKey2_1.Y + DataCardKey2_1.Height + 4
+                ZIndex: =2
+
+            ErrorMessage2_1 As Label:
+                AutoHeight: =true
+                Color: =Color.Red
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =9
+                Height: =30
+                Text: =Parent.Error
+                Tooltip: =Parent.Error
+                Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                Width: =Parent.Width - 48
+                Wrap: =true
+                X: =24
+                Y: =DataCardValue2_1.Y + DataCardValue2_1.Height
+                ZIndex: =3
+
+            StarVisible2_1 As Label:
+                Alignment: =Align.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                X: =0
+                Y: =DataCardKey2_1.Y
+                ZIndex: =4
 

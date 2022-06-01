@@ -5,7 +5,7 @@
         LayoutGap: =3
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
-        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
         Width: =Parent.Width
         ZIndex: =4
 
@@ -38,7 +38,6 @@
     Panel_1 As Panel:
         Buttons: |-
             =Table({Label: "Close", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
-        DialogWidth: =400
         Fill: =Panel_1.OverlayColor
         OnButtonSelect: |-
             =UpdateContext({showHidePanel:false})

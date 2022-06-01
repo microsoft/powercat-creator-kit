@@ -387,6 +387,13 @@
       "Values": {
         "Information": "553dee04-0442-416c-933a-d3b6d0c2ae60"
       }
+    },
+    {
+      "Kind": "default.cds_transactioncurrency_forms",
+      "Namespace": "Currencies (Forms)",
+      "Values": {
+        "Information": "b56b6d35-1e69-436b-ba86-78127d36e8aa"
+      }
     }
   ]
 }

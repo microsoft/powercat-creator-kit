@@ -4,9 +4,9 @@
     "InstanceCount": 1,
     "LibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",
     "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
-    "LibraryVersion": null,
+    "LibraryVersion": "2022-06-01T19:34:47Z",
     "OriginalComponentDefinitionTemplateId": "6da4b2f929d240969e49e05e10e720ce",
     "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
-    "SourceLastTimeSaved": "2022-05-14T02:06:14.763+00:00"
+    "SourceLastTimeSaved": "2022-06-01T19:34:51.11+00:00"
   }
 ]

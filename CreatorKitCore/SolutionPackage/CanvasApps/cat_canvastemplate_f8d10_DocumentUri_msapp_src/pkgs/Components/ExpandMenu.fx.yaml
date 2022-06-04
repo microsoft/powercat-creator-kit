@@ -11278,6 +11278,7 @@ ExpandMenu As CanvasComponent:
                         }
                     )
                 , Name=IconName).Path
+    DefaultExpandValue: =false
     Fill: =ColorValue(ExpandMenu.Theme.palette.white)
     Height: =640
     IsExpanded: =IsOpen
@@ -11291,7 +11292,7 @@ ExpandMenu As CanvasComponent:
         )
     OnButtonSelect: =true
     OnExpandSelect: =true
-    OnReset: =
+    OnReset: =Set(IsOpen, ExpandMenu.DefaultExpandValue)
     SelectedItem: =glExpandMenu.Selected
     Theme: |-
         ={
@@ -11320,7 +11321,7 @@ ExpandMenu As CanvasComponent:
         		white: "#ffffff"
         	}
         }
-    Width: =46
+    Width: =If(!Self.IsExpanded, 46, 221)
     X: =0
     Y: =0
     ZIndex: =1

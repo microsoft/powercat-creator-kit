@@ -13,7 +13,7 @@ scrKeyboardShortcut As screen:
         PaddingTop: =2*varTheme.U
         Width: =Parent.Width-Self.X
         X: =LeftNav_15.Width
-        Y: =Header_15.Height
+        Y: =Header_15.Height - 20
         ZIndex: =2
 
         lblTitle_14 As label:
@@ -83,7 +83,7 @@ scrKeyboardShortcut As screen:
                     ZIndex: =2
 
     LeftNav_15 As LeftNav:
-        Height: =Parent.Height
+        Height: =Parent.Height - 20
         Width: =200
         Y: =Header_15.Height
         ZIndex: =7

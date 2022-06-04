@@ -32,6 +32,11 @@
         "Social Profiles": "7bb87dfd-ec3e-4ed9-8e3e-5725d3067295",
         "Update Contact": "26843818-6508-4afe-9342-5fae2ebf15ca"
       }
+    },
+    {
+      "Kind": "default.cds_organization_forms",
+      "Namespace": "Organizations (Forms)",
+      "Values": {}
     }
   ]
 }

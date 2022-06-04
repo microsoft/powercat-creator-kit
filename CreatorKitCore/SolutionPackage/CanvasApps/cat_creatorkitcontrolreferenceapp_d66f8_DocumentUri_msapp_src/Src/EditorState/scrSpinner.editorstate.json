@@ -316,7 +316,14 @@
           "PropertyName": "LayoutMinWidth"
         },
         {
-          "ControlPropertyState": "LayoutMinHeight",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "100",
+            "InvariantPropertyName": "LayoutMinHeight",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinHeight",
@@ -3220,7 +3227,14 @@
         "LayoutJustifyContent",
         "LayoutGap",
         "LayoutOverflowX",
-        "LayoutOverflowY",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "LayoutOverflowY",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LayoutWrap",
         "ZIndex",
         {

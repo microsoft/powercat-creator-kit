@@ -671,7 +671,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "BackButtonVisible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BackButtonVisible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
@@ -748,7 +755,7 @@
         {
           "Category": "Data",
           "PropertyName": "BackButtonVisible",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",

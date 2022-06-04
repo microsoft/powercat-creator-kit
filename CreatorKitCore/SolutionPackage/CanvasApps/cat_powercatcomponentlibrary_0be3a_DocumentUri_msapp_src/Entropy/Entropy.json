@@ -76,13 +76,13 @@
     "txtSearchInput_1": 43
   },
   "FunctionParamsInvariantScripts": {},
-  "HeaderLastSavedDateTimeUTC": "06/01/2022 19:34:45",
+  "HeaderLastSavedDateTimeUTC": "06/04/2022 02:48:14",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {},
   "LocalDatabaseReferencesAsEmpty": false,
   "LocalResourceFileNames": {},
   "LocalResourceRootPaths": {},
-  "OldLogoFileName": "uuhwg44x.jpg",
+  "OldLogoFileName": "pya40amd.jpg",
   "OrderComponentMetadata": {
     "174a744e6baa47b4857cec5814d6422e": 0,
     "2e88179d732a402184a767c94eab038b": 3,
@@ -194,7 +194,7 @@
   },
   "TemplateVersions": {},
   "VolatileProperties": {
-    "AnalysisLoadTime": 0.7878253,
+    "AnalysisLoadTime": 0.8212895,
     "ControlCount": {
       "174a744e6baa47b4857cec5814d6422e": 1,
       "2e88179d732a402184a767c94eab038b": 1,
@@ -203,7 +203,7 @@
       "45ef3b58cba141ccb72325a8844e9634": 1,
       "599bd02396dc426681a20784c48547f9": 1,
       "6da4b2f929d240969e49e05e10e720ce": 1,
-      "952d39d80fc84420b772a5058b19d909": 1,
+      "952d39d80fc84420b772a5058b19d909": 2,
       "gallery": 3,
       "galleryTemplate": 3,
       "groupContainer": 19,
@@ -217,7 +217,7 @@
       "screen": 1,
       "text": 1
     },
-    "DeserializationLoadTime": 2.1845084,
+    "DeserializationLoadTime": 4.480723,
     "ErrorCount": 0
   },
   "WasLocalDatabaseReferencesEmpty": false

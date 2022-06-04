@@ -13,7 +13,7 @@ scrElevation As screen:
         PaddingTop: =2*varTheme.U
         Width: =Parent.Width-Self.X
         X: =LeftNav_14.Width
-        Y: =Header_14.Height
+        Y: =Header_14.Height - 20
         ZIndex: =2
 
         lblTitle_13 As label:
@@ -92,9 +92,9 @@ scrElevation As screen:
                     ZIndex: =4
 
     LeftNav_14 As LeftNav:
-        Height: =Parent.Height
+        Height: =Parent.Height - 20
         Width: =200
-        Y: =Header_14.Height
+        Y: =Header_14.Height 
         ZIndex: =7
 
     Header_14 As Header:

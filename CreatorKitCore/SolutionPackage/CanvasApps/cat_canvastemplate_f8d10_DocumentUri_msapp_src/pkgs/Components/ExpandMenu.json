@@ -82,7 +82,7 @@
       "Name": "GetMenuIconPath",
       "PropertyDataTypeKey": "String",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "8",
+        "PropertyScopeRuleNamespaceKey": "43",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "GetMenuIconPath_IconName",
@@ -103,6 +103,16 @@
       },
       "Tooltip": "GetMenuIconPath",
       "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "DefaultExpandValue",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "DefaultExpandValue",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Default Value for Expand Menu",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -113,7 +123,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637896950290700650",
+  "LastModifiedTimestamp": "637899082419808074",
   "Name": "bd39799415284ddcb45ab979ce59d4af",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

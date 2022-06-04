@@ -862,7 +862,8 @@
         "IsNavigationEnabled",
         "Theme",
         "GetMenuIconPath_IconName",
-        "GetMenuIconPath"
+        "GetMenuIconPath",
+        "DefaultExpandValue"
       ],
       "DynamicProperties": [
         {
@@ -953,6 +954,11 @@
         {
           "Category": "Data",
           "PropertyName": "GetMenuIconPath",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DefaultExpandValue",
           "RuleProviderType": "System"
         },
         {
@@ -1057,7 +1063,8 @@
         "IsNavigationEnabled",
         "Theme",
         "GetMenuIconPath_IconName",
-        "GetMenuIconPath"
+        "GetMenuIconPath",
+        "DefaultExpandValue"
       ],
       "DynamicProperties": [
         {
@@ -1158,6 +1165,11 @@
           "RuleProviderType": "System"
         },
         {
+          "Category": "Data",
+          "PropertyName": "DefaultExpandValue",
+          "RuleProviderType": "System"
+        },
+        {
           "Category": "Design",
           "PropertyName": "ZIndex",
           "RuleProviderType": "Unknown"
@@ -1165,12 +1177,12 @@
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -1180,7 +1192,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "System"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -3484,7 +3496,14 @@
         "LayoutJustifyContent",
         "LayoutGap",
         "LayoutOverflowX",
-        "LayoutOverflowY",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "LayoutOverflowY",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LayoutWrap",
         "ZIndex",
         {

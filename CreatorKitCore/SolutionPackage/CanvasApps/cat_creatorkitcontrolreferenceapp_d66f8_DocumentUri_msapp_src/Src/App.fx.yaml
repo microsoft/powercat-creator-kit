@@ -1,7 +1,8 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |-
-        =Set(varTheme, {
+    OnStart: |
+        =
+        Set(varTheme, {
           palette: {
             themePrimary: ColorValue("#0078d4"),
             themeLighterAlt: ColorValue("#eff6fc"),
@@ -387,4 +388,7 @@ App As appinfo:
         {Task: 3,Tag: "5"},{Task: 3,Tag: "21"},
         {Task: 4,Tag: "5"}
         );
+        
+        //show enable PCF dialog if we find out
+        Set(ShowHideDialog,  If(!IsEmpty(Organizations), !First(Organizations).'Enable Custom Controls in canvas PowerApps feature for this organization', false));
 

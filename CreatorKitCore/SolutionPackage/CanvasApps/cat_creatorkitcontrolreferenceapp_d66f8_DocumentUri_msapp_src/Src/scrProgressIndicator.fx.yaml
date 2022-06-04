@@ -51,7 +51,8 @@ scrProgressIndicator As screen:
             ZIndex: =3
 
         conSamplesSpinner_1 As groupContainer.manualLayoutContainer:
-            LayoutMinHeight: =100
+            LayoutMinHeight: |
+                =500
             LayoutMinWidth: =250
             ZIndex: =4
 

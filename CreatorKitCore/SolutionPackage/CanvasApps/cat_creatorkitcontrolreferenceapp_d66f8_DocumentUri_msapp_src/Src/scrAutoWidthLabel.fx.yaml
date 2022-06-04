@@ -14,7 +14,7 @@ scrAutoWidthLabel As screen:
         Width: =Parent.Width-Self.X
         X: =LeftNav_5.Width
         Y: =Header_1.Height - 20
-        ZIndex: =2
+        ZIndex: =1
 
         lblTitle_4 As label:
             Color: =varTheme.palette.neutralPrimary
@@ -102,11 +102,92 @@ scrAutoWidthLabel As screen:
         Height: =App.Height - 20
         Width: =200
         Y: =Header_1.Height
-        ZIndex: =7
+        ZIndex: =2
 
     Header_1 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
         Width: =App.Width
-        ZIndex: =8
+        ZIndex: =3
+
+    PCFDialog As Dialog:
+        Buttons: =
+        ContentHeight: =PCFDialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
+        ContentWidth: =PCFDialog.DialogWidth
+        ContentX: = PCFDialog.Width/2-PCFDialog.DialogWidth/2
+        ContentY: = PCFDialog.Height/2-PCFDialog.DialogHeight/2+DialogHeaderContainer.Height
+        DialogHeight: =700
+        DialogWidth: =1100
+        Fill: =PCFDialog.OverlayColor
+        Height: =App.Height
+        OnCloseSelect: =Set(ShowHideDialog, false)
+        SubTitle: =""
+        Title: ="Code components required to run this app your environment !"
+        Visible: =ShowHideDialog
+        Width: =App.Width
+        ZIndex: =4
+
+    PCFExperience As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =PCFDialog.ContentHeight
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =20
+        PaddingRight: =20
+        Visible: =PCFDialog.Visible
+        Width: =PCFDialog.ContentWidth
+        X: =PCFDialog.ContentX
+        Y: =PCFDialog.ContentY
+        ZIndex: =5
+
+        imgPCFReq As image:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(230, 230, 230, 1)
+            FillPortions: =1
+            FocusedBorderThickness: =4
+            Height: =
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(230, 230, 230, 1)
+            Image: =PCFEnable
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =PCFExperience.Visible
+            Width: =
+            ZIndex: =1
+
+        lblPCFExperience As label:
+            Align: =Align.Center
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            LayoutMinWidth: =500
+            PaddingLeft: =20
+            PaddingRight: =20
+            Text: |-
+                ="IMPORTANT: Please delete the creator kit solution, enable code components in your environment settings and then in re-import the solution ! See documentation for more details:"
+            ZIndex: =2
+
+        Label2 As label:
+            AlignInContainer: =AlignInContainer.Stretch
+            Color: =RGBA(0, 121, 187, 1)
+            LayoutMinWidth: =700
+            OnSelect: |-
+                =Launch("https://docs.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature", {}, LaunchTarget.New)
+            Size: =12
+            Text: |-
+                ="https://docs.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature"
+            Underline: =true
+            ZIndex: =4
 

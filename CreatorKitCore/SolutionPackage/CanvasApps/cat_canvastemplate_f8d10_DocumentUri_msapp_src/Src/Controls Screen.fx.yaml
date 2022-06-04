@@ -12702,7 +12702,6 @@
         ZIndex: =53
 
     Panel_1 As Panel:
-        DialogWidth: =400
         Fill: =Panel_1.OverlayColor
         OnButtonSelect: |-
             =UpdateContext({showPanel:false})

@@ -103,6 +103,16 @@
       },
       "Tooltip": "GetMenuIconPath",
       "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "DefaultExpandValue",
+      "Hidden": false,
+      "IsResettable": true,
+      "Name": "DefaultExpandValue",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Default Value for Expand Menu",
+      "Type": "{\"Version\":\"1.324\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -113,7 +123,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637897060977019747",
+  "LastModifiedTimestamp": "637899072963619237",
   "Name": "952d39d80fc84420b772a5058b19d909",
   "OverridableProperties": {},
   "TemplateOriginalName": "a1e958b5009442a8ab4f2657bc58f9de",

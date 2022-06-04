@@ -112,7 +112,7 @@ scrIcon As screen:
         ZIndex: =7
 
     Header_3 As Header:
-        RightButtonVisible: =false
+        BackButtonVisible: =true
         Text: ="CREATOR KIT Reference App"
         Width: =App.Width
         ZIndex: =8

@@ -50,7 +50,8 @@ scrSpinner As screen:
             ZIndex: =3
 
         conSamplesSpinner As groupContainer.manualLayoutContainer:
-            LayoutMinHeight: =100
+            LayoutMinHeight: |
+                =500
             LayoutMinWidth: =250
             ZIndex: =4
 

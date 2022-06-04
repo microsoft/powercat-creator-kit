@@ -53,7 +53,7 @@ scrPanel As screen:
             ZIndex: =3
 
         conSamplesDialog_1 As groupContainer.manualLayoutContainer:
-            LayoutMinHeight: =100
+            LayoutMinHeight: =500
             LayoutMinWidth: =250
             ZIndex: =4
 

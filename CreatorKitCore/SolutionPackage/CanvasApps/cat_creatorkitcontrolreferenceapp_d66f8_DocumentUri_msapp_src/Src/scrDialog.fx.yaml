@@ -52,7 +52,7 @@ scrDialog As screen:
             ZIndex: =3
 
         conSamplesDialog As groupContainer.manualLayoutContainer:
-            LayoutMinHeight: =100
+            LayoutMinHeight: =500
             LayoutMinWidth: =250
             ZIndex: =5
 
@@ -70,9 +70,9 @@ scrDialog As screen:
                 Y: =0
                 ZIndex: =1
 
-            stackSamplesSpinner_1 As groupContainer.verticalAutoLayoutContainer:
+            stackSamplesDialog1 As groupContainer.verticalAutoLayoutContainer:
                 Height: |-
-                    =
+                    =Container1_1.Height +
                     pivotAppCode_31.Height + 300 +
                     Self.PaddingTop + Self.PaddingBottom
                 LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -85,7 +85,7 @@ scrDialog As screen:
                 Width: =Parent.Width
                 ZIndex: =2
 
-                lblUsageSpinner_1 As label:
+                lblUsageDialog_1 As label:
                     Color: =varTheme.palette.neutralPrimary
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -96,6 +96,7 @@ scrDialog As screen:
                     ZIndex: =1
 
                 Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     FillPortions: =0
                     Height: =45
                     LayoutMinHeight: =100
@@ -161,6 +162,7 @@ scrDialog As screen:
                     ZIndex: =6
 
                 Container3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
@@ -203,6 +205,10 @@ scrDialog As screen:
     Dialog_1 As Dialog:
         Buttons: |-
             =Table({Label: "Send", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary},{Label: "Don't send", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } )
+        ContentHeight: =Dialog_1.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
+        ContentWidth: =Dialog_1.DialogWidth
+        ContentX: = Dialog_1.Width/2-Dialog_1.DialogWidth/2
+        ContentY: = Dialog_1.Height/2-Dialog_1.DialogHeight/2+DialogHeaderContainer.Height
         DialogHeight: =220
         DialogWidth: =500
         Fill: =Dialog_1.OverlayColor

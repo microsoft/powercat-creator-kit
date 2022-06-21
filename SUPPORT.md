@@ -1,25 +1,33 @@
-# TODO: The maintainer of this repo has not yet edited this file
-
-**REPO OWNER**: Do you want Customer Service & Support (CSS) support for this product/project?
-
-- **No CSS support:** Fill out this template with information about how to file issues and get help.
-- **Yes CSS support:** Fill out an intake form at [aka.ms/spot](https://aka.ms/spot). CSS will work with/help you to determine next steps. More details also available at [aka.ms/onboardsupport](https://aka.ms/onboardsupport).
-- **Not sure?** Fill out a SPOT intake as though the answer were "Yes". CSS will help you decide.
-
-*Then remove this first heading from this SUPPORT.MD file before publishing your repo.*
-
 # Support
 
-## How to file issues and get help  
+## Report a Bug or submit a Feature Request
 
-This project uses GitHub Issues to track bugs and feature requests. Please search the existing 
-issues before filing new issues to avoid duplicates.  For new issues, file your bug or 
-feature request as a new Issue.
+Have you found a bug in the Creator Kit or do you want to suggest a new feature? Either way, please let us now by filing an issue while observing the following guidelines
 
-For help and questions about using this project, please **REPO MAINTAINER: INSERT INSTRUCTIONS HERE 
-FOR HOW TO ENGAGE REPO OWNERS OR COMMUNITY FOR HELP. COULD BE A STACK OVERFLOW TAG OR OTHER
-CHANNEL. WHERE WILL YOU HELP PEOPLE?**.
+### Look for an existing issue
+
+Before submitting your issue please search the [issues](https://github.com/microsoft/powercat-creator-kit/issues) to ensure your issue has not already been reported
+
+If your bug or feature request has already been reported, join the conversation by commenting and adding your reaction. Please use reactions to vote and not "+1" comments.
+
+- 👍 - upvote
+- 👎 - downvote
+
+### Submitting your Issue
+
+Select the Issue template that matches the solution for which you want to submit an issue.
+
+![image](https://user-images.githubusercontent.com/8174072/167647654-4c9947ce-23cf-437a-9d20-96960a9e4580.png)
+
+
+File a single issue per problem and feature request. Do not enumerate multiple bugs or feature requests in the same issue.
+
+Do not add your issue as a comment to an existing issue unless it's for the identical input. Many issues look similar, but have different causes.
+
+The more information you can provide, the more likely someone will be successful at reproducing the issue and finding a fix.
+
+Observe the inline guidelines of the Issue template.
 
 ## Microsoft Support Policy  
 
-Support for this **PROJECT or PRODUCT** is limited to the resources listed above.
+Support for this project is limited to the resources listed above.

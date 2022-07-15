@@ -1,7 +1,7 @@
 ---
 name: Creator Kit Bug report
 about: Report an bug or issue with a component in the Creator Kit to help us improve
-title: "[Creator Starter Kit] BUG:"
+title: "[BUG]:"
 labels: bug, needs triage
 assignees: slaouist
 

@@ -18,7 +18,7 @@ TagsInGalleries As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_20 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_20 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -134,7 +134,7 @@ TagsInGalleries As CanvasComponent:
             Y: =54
             ZIndex: =5
 
-            "ElevationTask As 'Fluent Elevation (0.0.20)'":
+            "ElevationTask As 'Fluent Elevation (0.0.21)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =TagListInGallery.Y+TagListInGallery.AutoHeight+lblTaskName.Height+16
                 PaddingBottom: =8
@@ -159,7 +159,7 @@ TagsInGalleries As CanvasComponent:
                 Y: =TagListInGallery.Y+TagListInGallery.AutoHeight
                 ZIndex: =2
 
-            "TagListInGallery As 'Fluent Tag List (0.0.20)'.pcfdataset":
+            "TagListInGallery As 'Fluent Tag List (0.0.21)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =13.5
                 Height: =33

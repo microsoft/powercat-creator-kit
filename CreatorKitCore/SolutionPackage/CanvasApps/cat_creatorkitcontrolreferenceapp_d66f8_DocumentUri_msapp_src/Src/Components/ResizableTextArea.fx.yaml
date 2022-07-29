@@ -18,7 +18,7 @@ ResizableTextArea As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_6 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_6 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -232,7 +232,7 @@ ResizableTextArea As CanvasComponent:
             Y: =16
             ZIndex: =1
 
-            "txtDescription As 'Resizable Text Area (0.0.20)'":
+            "txtDescription As 'Resizable Text Area (0.0.21)'":
                 AccessibilityLabel: ="Sample Resizable Textarea"
                 AllowResize: =ddResizeLimit.Selected.Key
                 BorderColor: |-

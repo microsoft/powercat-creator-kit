@@ -18,7 +18,7 @@ DetailsListPaging As CanvasComponent:
         Y: =22
         ZIndex: =2
 
-    "pivotAppCode_26 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_26 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -85,7 +85,7 @@ DetailsListPaging As CanvasComponent:
             Y: =120
             ZIndex: =18
 
-            "ElevationAccounts As 'Fluent Elevation (0.0.20)'":
+            "ElevationAccounts As 'Fluent Elevation (0.0.21)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height-32-16
                 Visible: =pivotAppCode_26.Selected.ItemKey="app"
@@ -94,7 +94,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =8
                 ZIndex: =1
 
-            "FluentDetailsListAccounts As 'Fluent Details List (0.0.20)'.pcfdataset":
+            "FluentDetailsListAccounts As 'Fluent Details List (0.0.21)'.pcfdataset":
                 columns_Items: |
                     =Table(
                         {ColName:"name",ColDisplayName:"Name",ColWidth:300,ColSortable:true,ColIsBold:true,ColResizable:true,ColRowHeader:true},
@@ -107,6 +107,7 @@ DetailsListPaging As CanvasComponent:
                 Height: =Parent.Height-64-16
                 InputEvent: =varGridEvent
                 Items: =Search(Accounts,txtSeachAccount.Text,"name")
+                LargeDatasetPaging: =false
                 OnChange: |-
                     =If(Self.EventName="OnRowSelectionChange",Notify("Row Select " & Self.EventRowKey));
                     
@@ -163,7 +164,7 @@ DetailsListPaging As CanvasComponent:
                     Order: =5
                     ZIndex: =5
 
-            "cmdAccounts As 'Fluent Command Bar (0.0.20)'.pcfdataset":
+            "cmdAccounts As 'Fluent Command Bar (0.0.21)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Items: |-
@@ -216,7 +217,7 @@ DetailsListPaging As CanvasComponent:
                 Font: =Font.'Segoe UI'
                 Height: =32
                 Size: =varTheme.fontSizes.xs
-                Text: =FluentDetailsListAccounts.TotalRecords & " record(s)  " & Text(CountRows(FluentDetailsListAccounts.SelectedItems)+0) & " selected" 
+                Text: =If(FluentDetailsListAccounts.TotalRecords>-1, FluentDetailsListAccounts.TotalRecords & " record(s)  ") & Text(CountRows(FluentDetailsListAccounts.SelectedItems)+0) & " selected" 
                 Visible: =pivotAppCode_26.Selected.ItemKey="app"
                 Width: =188
                 X: =ElevationAccounts.X
@@ -231,7 +232,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =Parent.Height-Self.Height-8
                 ZIndex: =6
 
-                "icoFirst As 'Fluent Icon (0.0.20)'":
+                "icoFirst As 'Fluent Icon (0.0.21)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Previous"
@@ -242,7 +243,7 @@ DetailsListPaging As CanvasComponent:
                     Y: =0
                     ZIndex: =1
 
-                "icoBack As 'Fluent Icon (0.0.20)'":
+                "icoBack As 'Fluent Icon (0.0.21)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Back"
@@ -264,7 +265,7 @@ DetailsListPaging As CanvasComponent:
                     X: =64
                     ZIndex: =3
 
-                "icoNext As 'Fluent Icon (0.0.20)'":
+                "icoNext As 'Fluent Icon (0.0.21)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Forward"
@@ -289,7 +290,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =100
                 ZIndex: =7
 
-            "Icon4 As 'Fluent Icon (0.0.20)'":
+            "Icon4 As 'Fluent Icon (0.0.21)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 IconName: ="Search"

@@ -4,6 +4,7 @@ ContextMenuSimple As CanvasComponent:
         If(pivotAppCode_12.Selected.ItemKey="code",htmlCode_12.Y+htmlCode_12.Height,300)
     Fill: =RGBA(0, 0, 0, 0)
     Height: =Self.ComponentHeight
+    OnReset: =
     Width: =640
     X: =0
     Y: =0
@@ -20,7 +21,7 @@ ContextMenuSimple As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_12 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_12 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -108,8 +109,10 @@ ContextMenuSimple As CanvasComponent:
                 Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show Chevron""</span>
             
             <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ContextMenuStyled As 'Fluent Context Menu (0.0.13)'.pcfdataset""</span>:
-                BackgroundColor: =ddFillColor.Selected.BackgroundColor
-                BorderColor: =ddFillColor.Selected.HoverBorderColor
+                FillColor: =ddFillColor.Selected.BackgroundColor
+                FontColor: =ddFillColor.Selected.TextColor
+                BorderColor: =""transparent""
+                HoverBorderColor: =ddFillColor.Selected.HoverBorderColor
                 Chevron: =chkShowChevron.Checked
                 DisplayMode: =DisplayMode.Edit
                 Items: |-
@@ -177,7 +180,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =250
             ZIndex: =1
 
-        "ContextMenuStandard As 'Fluent Context Menu (0.0.20)'.pcfdataset":
+        "ContextMenuStandard As 'Fluent Context Menu (0.0.21)'.pcfdataset":
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -278,23 +281,30 @@ ContextMenuSimple As CanvasComponent:
             Y: =60
             ZIndex: =10
 
-        "ContextMenuStyled As 'Fluent Context Menu (0.0.20)'.pcfdataset":
-            BackgroundColor: =ddFillColor.Selected.BackgroundColor
-            BorderColor: =ddFillColor.Selected.HoverBorderColor
+        "ContextMenuStyled As 'Fluent Context Menu (0.0.21)'.pcfdataset":
+            BorderColor: ="transparent"
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
+            FillColor: =ddFillColor.Selected.BackgroundColor
+            FontColor: =ddFillColor.Selected.TextColor
             Height: =32
+            HoverBorderColor: =ddFillColor.Selected.HoverBorderColor
+            HoverFillColor: =
+            HoverFontColor: =
             Items: |-
                 =Table(
                     {ItemKey:"root",ItemDisplayName:"Click for ContextualMenu"},
                     {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add"},
                     {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconName:"Add",ItemIconColor:"salmon"},
                     {ItemKey:"share",ItemDisplayName:"Share",ItemIconName:"Share"},
+                    {ItemDivider:true},
                     {ItemKey:"print",ItemDisplayName:"Print",ItemIconName:"Print"},
                     {ItemKey:"printall",ItemDisplayName:"Print all",ItemIconName:"Print",ItemParentKey:"print"},
                     {ItemKey:"printpages",ItemDisplayName:"Print specific pages",ItemIconName:"Page",ItemParentKey:"print"},
+                    {ItemKey:"print-autosize",ItemDisplayName:"Auto Size",ItemIconName:"PictureStretch",ItemParentKey:"print",ItemChecked:!!varAutoPlayChecked},
                     {ItemKey:"music",ItemDisplayName:"Music",ItemIconName:"MusicInCollectionFill",ItemEnabled:false}
                 )
+            OnSelect: =If(Self.Selected.ItemKey="print-autosize",Set(varAutoPlayChecked,!varAutoPlayChecked))
             TextAlignment: =ddAlignmentMenu.Selected.Key
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_12.Selected.ItemKey="app"

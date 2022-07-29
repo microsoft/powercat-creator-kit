@@ -1,6 +1,6 @@
 {
   "AutoWidth": "Auto width",
-  "AutoWidthLabel": "Auto Width Label (0.0.20)",
+  "AutoWidthLabel": "Auto Width Label (0.0.21)",
   "AutoWidthLabel_Desc": "A label that will automatically expand width wise and return the new width",
   "BorderColor": "Border color",
   "BorderRadius": "Border radius",

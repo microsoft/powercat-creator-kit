@@ -49,7 +49,7 @@ scrCommandBar As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_2 As 'Fluent Elevation (0.0.20)'":
+            "Elevation2_2 As 'Fluent Elevation (0.0.21)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height

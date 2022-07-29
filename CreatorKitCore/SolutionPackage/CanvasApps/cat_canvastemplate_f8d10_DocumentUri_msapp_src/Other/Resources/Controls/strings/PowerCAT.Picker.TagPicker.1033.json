@@ -21,7 +21,7 @@
   "MinimumSearchTermLength_Desc": "The minimum number of characters that must be entered before a suggestion search is performed",
   "NoSuggestionFoundMessage": "No suggestion found message",
   "NoSuggestionFoundMessage_Desc": "The message to display when no suggestions match the search term",
-  "Picker": "Fluent Picker (0.0.20)",
+  "Picker": "Fluent Picker (0.0.21)",
   "Picker_Desc": "Allows picking string tags from one dataset and adding to another",
   "SearchTerm": "Search term",
   "SearchTerm_Desc": "The search term entered that should be used when filtering suggestions",

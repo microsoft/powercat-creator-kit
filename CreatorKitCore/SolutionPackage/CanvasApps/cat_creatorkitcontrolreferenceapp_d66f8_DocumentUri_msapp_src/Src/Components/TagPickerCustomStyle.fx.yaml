@@ -18,7 +18,7 @@ TagPickerCustomStyle As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_18 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_18 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -142,7 +142,7 @@ TagPickerCustomStyle As CanvasComponent:
         Y: =40
         ZIndex: =11
 
-        "PickerTags As 'Fluent Picker (0.0.20)'.pcfdataset":
+        "PickerTags As 'Fluent Picker (0.0.21)'.pcfdataset":
             BorderRadius: =If(chkRounded.Checked,8)
             DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
             Error: =false
@@ -213,7 +213,7 @@ TagPickerCustomStyle As CanvasComponent:
             Y: =160
             ZIndex: =6
 
-        "IconTags As 'Fluent Icon (0.0.20)'":
+        "IconTags As 'Fluent Icon (0.0.21)'":
             DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
             Height: =32
             IconName: ="Tag"

@@ -18,7 +18,7 @@ DetailsListResponsive As CanvasComponent:
         Y: =22
         ZIndex: =1
 
-    "pivotAppCode_22 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_22 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -122,7 +122,7 @@ DetailsListResponsive As CanvasComponent:
         Y: =40
         ZIndex: =10
 
-        "ElevationResponsive As 'Fluent Elevation (0.0.20)'":
+        "ElevationResponsive As 'Fluent Elevation (0.0.21)'":
             DisplayMode: =DisplayMode.Edit
             Height: =FluentDetailsListResponsive.Height
             Visible: =pivotAppCode_22.Selected.ItemKey="app"
@@ -131,7 +131,7 @@ DetailsListResponsive As CanvasComponent:
             Y: =FluentDetailsListResponsive.Y
             ZIndex: =5
 
-        "FluentDetailsListResponsive As 'Fluent Details List (0.0.20)'.pcfdataset":
+        "FluentDetailsListResponsive As 'Fluent Details List (0.0.21)'.pcfdataset":
             columns_Items: |-
                 =With({
                     // If there is a selection column, we remove the width and the padding

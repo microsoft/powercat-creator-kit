@@ -55,7 +55,7 @@ scrSpinner As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_19 As 'Fluent Elevation (0.0.20)'":
+            "Elevation2_19 As 'Fluent Elevation (0.0.21)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -115,13 +115,11 @@ scrSpinner As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_30 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+                    "pivotAppCode_30 As 'Fluent Pivot (0.0.21)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-
                             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         OnSelect: =
                         RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
                         SelectedKey: ="app"

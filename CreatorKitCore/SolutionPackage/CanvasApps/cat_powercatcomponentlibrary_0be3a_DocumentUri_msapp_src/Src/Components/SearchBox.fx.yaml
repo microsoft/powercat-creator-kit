@@ -1,7 +1,10 @@
 SearchBox As CanvasComponent:
+    ClearButton: =false
+    Default: =""
     Fill: =RGBA(0, 0, 0, 0)
     Height: =36
     HintText: ="Search"
+    OnReset: =Set(DefaultValue, SearchBox.Default)
     SearchText: =txtSearchInput_1.Text
     Theme: |-
         ={
@@ -37,8 +40,9 @@ SearchBox As CanvasComponent:
 
     txtSearchInput_1 As text:
         BorderColor: =RGBA(166, 166, 166, 1)
+        Clear: =SearchBox.ClearButton
         Color: =RGBA(51, 51, 51, 1)
-        Default: =
+        Default: =DefaultValue
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -97,5 +101,5 @@ SearchBox As CanvasComponent:
         Width: =33
         X: =1
         Y: =1
-        ZIndex: =2
+        ZIndex: =3
 

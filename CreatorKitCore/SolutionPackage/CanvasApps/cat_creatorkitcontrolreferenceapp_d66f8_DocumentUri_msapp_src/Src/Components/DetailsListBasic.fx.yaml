@@ -53,7 +53,7 @@ DetailsListBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_21 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_21 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -282,7 +282,7 @@ DetailsListBasic As CanvasComponent:
         Y: =40
         ZIndex: =19
 
-        "FluentDetailsListBasic As 'Fluent Details List (0.0.20)'.pcfdataset":
+        "FluentDetailsListBasic As 'Fluent Details List (0.0.21)'.pcfdataset":
             AlternateRowColor: =If(chkAltRowColor.Checked,varTheme.paletteCSS.neutralLighterAlt)
             columns_Items: |-
                 =With({
@@ -471,8 +471,8 @@ DetailsListBasic As CanvasComponent:
                 )
             Text: =""
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
-            Width: =153
-            X: =55
+            Width: =130
+            X: =77
             Y: =61
             ZIndex: =7
 
@@ -491,9 +491,9 @@ DetailsListBasic As CanvasComponent:
             Height: =33
             Size: =varTheme.fontSizes.s
             Text: |-
-                ="Align:"
+                ="Selection:"
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
-            Width: =54
+            Width: =77
             Y: =60
             ZIndex: =8
 
@@ -561,7 +561,7 @@ DetailsListBasic As CanvasComponent:
             Y: =164
             ZIndex: =13
 
-        "icoSearch_1 As 'Fluent Icon (0.0.20)'":
+        "icoSearch_1 As 'Fluent Icon (0.0.21)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit

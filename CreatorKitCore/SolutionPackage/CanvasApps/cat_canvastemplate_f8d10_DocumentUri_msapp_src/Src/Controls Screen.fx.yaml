@@ -222,7 +222,7 @@
     "DatePicker1 As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        IconFill: =
+        IconFill: =RGBA(246, 88, 16, 1)
         Width: =210
         X: =42
         Y: =174
@@ -611,7 +611,7 @@
                 Y: =DataCardKey3.Y
                 ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (0.0.20)'":
+    "btnAddTaskHeader As 'Fluent Icon (0.0.21)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
@@ -627,7 +627,7 @@
         Y: =521
         ZIndex: =6
 
-    "Elevation1 As 'Fluent Elevation (0.0.20)'":
+    "Elevation1 As 'Fluent Elevation (0.0.21)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -636,7 +636,7 @@
         Y: =373
         ZIndex: =7
 
-    "Elevation1_1 As 'Fluent Elevation (0.0.20)'":
+    "Elevation1_1 As 'Fluent Elevation (0.0.21)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -647,7 +647,7 @@
         Y: =489
         ZIndex: =8
 
-    "Elevation1_2 As 'Fluent Elevation (0.0.20)'":
+    "Elevation1_2 As 'Fluent Elevation (0.0.21)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -656,7 +656,7 @@
         Y: =260
         ZIndex: =9
 
-    "Elevation1_3 As 'Fluent Elevation (0.0.20)'":
+    "Elevation1_3 As 'Fluent Elevation (0.0.21)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
@@ -668,7 +668,7 @@
         Y: =155
         ZIndex: =10
 
-    "picTags As 'Fluent Picker (0.0.20)'.pcfdataset":
+    "picTags As 'Fluent Picker (0.0.21)'.pcfdataset":
         BorderRadius: =0
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -869,7 +869,7 @@
         Y: =605
         ZIndex: =22
 
-    "cmpDetailsList_1 As 'Fluent Details List (0.0.20)'.pcfdataset":
+    "cmpDetailsList_1 As 'Fluent Details List (0.0.21)'.pcfdataset":
         columns_Items: |
             =Table({ColName:"name",ColDisplayName:"Name",ColWidth:200,ColSortable:true,ColIsBold:true,ColResizable:true},
             {ColName:"address1_city",ColDisplayName:"City:",ColShowAsSubTextOf:"name"},
@@ -962,7 +962,7 @@
         Y: =48
         ZIndex: =24
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (0.0.20)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (0.0.21)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -12393,7 +12393,7 @@
         Y: =48
         ZIndex: =40
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.20)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.21)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -12442,8 +12442,7 @@
         Y: =75
         ZIndex: =41
 
-    "ContextMenu1 As 'Fluent Context Menu (0.0.20)'.pcfdataset":
-        BackgroundColor: =AppTheme.palette.white
+    "ContextMenu1 As 'Fluent Context Menu (0.0.21)'.pcfdataset":
         Chevron: =true
         DisplayMode: =DisplayMode.Edit
         Height: =53
@@ -12509,7 +12508,7 @@
         Y: =432
         ZIndex: =46
 
-    "Nav1 As 'Fluent Nav (0.0.20)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =398
         Items: |-
@@ -12606,7 +12605,7 @@
         Y: =651
         ZIndex: =47
 
-    "CommandBar1 As 'Fluent Command Bar (0.0.20)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =52
         Items: |-
@@ -12622,7 +12621,7 @@
         Y: =390
         ZIndex: =48
 
-    "Pivot1 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "Pivot1 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Items: |-
@@ -12662,6 +12661,10 @@
         ZIndex: =50
 
     Dialog_1 As Dialog:
+        ContentHeight: =Dialog_1.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
+        ContentWidth: =Dialog_1.DialogWidth
+        ContentX: = Dialog_1.Width/2-Dialog_1.DialogWidth/2
+        ContentY: = Dialog_1.Height/2-Dialog_1.DialogHeight/2+DialogHeaderContainer.Height
         Fill: =Dialog_1.OverlayColor
         Height: =1080
         OnButtonSelect: |-

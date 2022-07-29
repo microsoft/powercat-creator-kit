@@ -18,7 +18,7 @@ TagListBasic As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_19 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_19 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -133,7 +133,7 @@ TagListBasic As CanvasComponent:
         Y: =40
         ZIndex: =13
 
-        "ElevationTagListBasic As 'Fluent Elevation (0.0.20)'":
+        "ElevationTagListBasic As 'Fluent Elevation (0.0.21)'":
             DisplayMode: =DisplayMode.Edit
             Height: =200
             Visible: =pivotAppCode_19.Selected.ItemKey="app"
@@ -142,7 +142,7 @@ TagListBasic As CanvasComponent:
             Y: =60
             ZIndex: =1
 
-        "TagListStyled As 'Fluent Tag List (0.0.20)'.pcfdataset":
+        "TagListStyled As 'Fluent Tag List (0.0.21)'.pcfdataset":
             BorderRadius: =If(chkRounded_1.Checked,8)
             DisplayMode: =DisplayMode.Edit
             Height: =37

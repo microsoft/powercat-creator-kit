@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ContextMenu" xml:space="preserve">
-    <value>Fluent Context Menu (0.0.20)</value>
+    <value>Fluent Context Menu (0.0.21)</value>
     <comment/>
   </data>
   <data name="ContextMenu_Desc" xml:space="preserve">
@@ -145,13 +145,48 @@
     <value>Chevron</value>
     <comment/>
   </data>
-  <data name="BackgroundColor" xml:space="preserve">
-    <value>Background color</value>
+  <data name="IconColor" xml:space="preserve">
+    <value>Icon color</value>
+    <comment/>
+  </data>
+  <data name="HoverIconColor" xml:space="preserve">
+    <value>Hover icon color</value>
+    <comment/>
+  </data>
+  <data name="IconSize" xml:space="preserve">
+    <value>Icon size</value>
+    <comment/>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Font size</value>
+    <comment/>
+  </data>
+  <data name="FontColor" xml:space="preserve">
+    <value>Font color</value>
+    <comment/>
+  </data>
+  <data name="HoverFontColor" xml:space="preserve">
+    <value>Hover font color</value>
+    <comment/>
+  </data>
+  <data name="FillColor" xml:space="preserve">
+    <value>Fill color</value>
+    <comment/>
+  </data>
+  <data name="HoverFillColor" xml:space="preserve">
+    <value>Hover fill color</value>
     <comment/>
   </data>
   <data name="BorderColor" xml:space="preserve">
     <value>Border color</value>
     <comment/>
   </data>
-  
+  <data name="HoverBorderColor" xml:space="preserve">
+    <value>Hover border color</value>
+    <comment/>
+  </data>
+  <data name="BorderRadius" xml:space="preserve">
+    <value>Border radius</value>
+    <comment/>
+  </data>
 </root>

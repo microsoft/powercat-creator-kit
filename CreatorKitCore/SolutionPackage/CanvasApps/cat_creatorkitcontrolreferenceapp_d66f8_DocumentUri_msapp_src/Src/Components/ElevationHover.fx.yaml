@@ -18,7 +18,7 @@ ElevationHover As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_15 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_15 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -63,7 +63,7 @@ ElevationHover As CanvasComponent:
         Y: =40
         ZIndex: =16
 
-        "ElevationCard As 'Fluent Elevation (0.0.20)'":
+        "ElevationCard As 'Fluent Elevation (0.0.21)'":
             Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
             DisplayMode: =DisplayMode.Edit
             FillColor: =""
@@ -78,7 +78,7 @@ ElevationHover As CanvasComponent:
             Y: =205
             ZIndex: =9
 
-        "AutoWidthLabelCardTag As 'Auto Width Label (0.0.20)'":
+        "AutoWidthLabelCardTag As 'Auto Width Label (0.0.21)'":
             BorderRadius: =2
             DisplayMode: =DisplayMode.Edit
             FillColor: =varTheme.paletteCSS.neutralQuaternaryAlt
@@ -190,7 +190,7 @@ ElevationHover As CanvasComponent:
             Y: =66
             ZIndex: =5
 
-        "ElevationAddTask As 'Fluent Elevation (0.0.20)'":
+        "ElevationAddTask As 'Fluent Elevation (0.0.21)'":
             Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
             DisplayMode: =DisplayMode.Edit
             FillColor: =""
@@ -205,7 +205,7 @@ ElevationHover As CanvasComponent:
             Y: =104
             ZIndex: =6
 
-        "btnAddTaskHeader As 'Fluent Icon (0.0.20)'":
+        "btnAddTaskHeader As 'Fluent Icon (0.0.21)'":
             DisplayMode: =If(chkActionEnabled.Checked,DisplayMode.Edit,DisplayMode.Disabled)
             Height: =56
             HoverFillColor: =varTheme.paletteCSS.neutralLighterAlt

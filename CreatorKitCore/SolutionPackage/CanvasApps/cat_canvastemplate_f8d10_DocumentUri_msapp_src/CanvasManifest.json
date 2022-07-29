@@ -1,8 +1,8 @@
 {
   "FormatVersion": "0.24",
   "Header": {
-    "DocVersion": "1.324",
-    "MinVersionToLoad": "1.324",
+    "DocVersion": "1.325",
+    "MinVersionToLoad": "1.325",
     "MSAppStructureVersion": "2.0"
   },
   "Properties": {
@@ -20,6 +20,7 @@
       "componentauthoring": true,
       "copyandmerge": false,
       "datatablev2control": true,
+      "dataverseactionsenabled": false,
       "delaycontrolrendering": true,
       "delayloadscreens": true,
       "disablecdsfileandlargeimage": false,
@@ -42,9 +43,11 @@
       "enhanceddelegation": true,
       "enhancedgalleryinitialization": true,
       "errorhandling": true,
+      "expandedsavedatasupport": true,
       "exportimportcomponents2": true,
       "externalmessage": false,
       "formuladataprefetch": true,
+      "formularepair": true,
       "generatedebugpublishedapp": true,
       "herocontrols": false,
       "improvedmediacapture": false,

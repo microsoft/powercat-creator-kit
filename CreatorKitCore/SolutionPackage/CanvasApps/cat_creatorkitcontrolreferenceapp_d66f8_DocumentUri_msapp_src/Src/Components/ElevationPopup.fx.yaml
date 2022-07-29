@@ -18,7 +18,7 @@ ElevationPopup As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_16 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_16 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -102,7 +102,7 @@ ElevationPopup As CanvasComponent:
             Y: =49
             ZIndex: =5
 
-        "ElevationPopupOverlay As 'Fluent Elevation (0.0.20)'":
+        "ElevationPopupOverlay As 'Fluent Elevation (0.0.21)'":
             DarkOverlay: =chkDarkPadding.Checked
             Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
             DisplayMode: =DisplayMode.Edit
@@ -144,7 +144,7 @@ ElevationPopup As CanvasComponent:
             Y: =180
             ZIndex: =8
 
-        "CommandBarRightActions As 'Fluent Command Bar (0.0.20)'.pcfdataset":
+        "CommandBarRightActions As 'Fluent Command Bar (0.0.21)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Items: |-

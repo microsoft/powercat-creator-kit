@@ -12,7 +12,7 @@ MultiHtmlSectionText As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "Elevation2_5 As 'Fluent Elevation (0.0.20)'":
+    "Elevation2_5 As 'Fluent Elevation (0.0.21)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height

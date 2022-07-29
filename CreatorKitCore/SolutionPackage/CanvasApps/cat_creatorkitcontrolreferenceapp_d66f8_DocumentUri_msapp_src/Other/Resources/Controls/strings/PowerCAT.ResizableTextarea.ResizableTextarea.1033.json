@@ -49,7 +49,7 @@
   "PaddingRight": "Padding right",
   "PaddingTop": "Padding top",
   "RenderBorderStyle": "Render border style",
-  "ResizableTextarea": "Resizable Text Area (0.0.20)",
+  "ResizableTextarea": "Resizable Text Area (0.0.21)",
   "ResizableTextarea_Desc": "A text area control that allows the user to resize and outputs the updated dimensions",
   "ResizedHeight": "Resized height",
   "ResizedWidth": "Resized width",

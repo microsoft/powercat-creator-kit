@@ -359,7 +359,8 @@
           "InvariantPropertyName": "ComponentHeight",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "OnReset"
       ],
       "DynamicProperties": [
         {
@@ -465,6 +466,11 @@
           "Category": "Design",
           "PropertyName": "Fill",
           "RuleProviderType": "System"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnReset",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",

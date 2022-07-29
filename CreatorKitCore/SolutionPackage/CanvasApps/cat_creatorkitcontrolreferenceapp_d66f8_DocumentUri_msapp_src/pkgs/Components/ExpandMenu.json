@@ -82,7 +82,7 @@
       "Name": "GetMenuIconPath",
       "PropertyDataTypeKey": "String",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "908",
+        "PropertyScopeRuleNamespaceKey": "512",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "GetMenuIconPath_IconName",
@@ -123,7 +123,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637898754732212478",
+  "LastModifiedTimestamp": "637909129572340055",
   "Name": "4c7ff047895f46eaa7bbf2ab53db1517",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

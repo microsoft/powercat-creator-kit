@@ -50,7 +50,7 @@ DetailsListExpand As CanvasComponent:
         Y: =22
         ZIndex: =1
 
-    "pivotAppCode_24 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_24 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -184,7 +184,7 @@ DetailsListExpand As CanvasComponent:
         Y: =40
         ZIndex: =7
 
-        "ElevationExpand As 'Fluent Elevation (0.0.20)'":
+        "ElevationExpand As 'Fluent Elevation (0.0.21)'":
             DisplayMode: =DisplayMode.Edit
             Height: =FluentDetailsListDetailsListExpand.Height
             Visible: =pivotAppCode_24.Selected.ItemKey="app"
@@ -193,7 +193,7 @@ DetailsListExpand As CanvasComponent:
             Y: =FluentDetailsListDetailsListExpand.Y
             ZIndex: =5
 
-        "FluentDetailsListDetailsListExpand As 'Fluent Details List (0.0.20)'.pcfdataset":
+        "FluentDetailsListDetailsListExpand As 'Fluent Details List (0.0.21)'.pcfdataset":
             columns_Items: |-
                 =Table(
                     {

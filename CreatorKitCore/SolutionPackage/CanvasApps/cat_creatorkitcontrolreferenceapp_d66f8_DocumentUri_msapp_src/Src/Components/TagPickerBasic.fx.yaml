@@ -18,7 +18,7 @@ TagPickerBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_17 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_17 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -128,7 +128,7 @@ TagPickerBasic As CanvasComponent:
         Y: =45
         ZIndex: =4
 
-    "Elevation5 As 'Fluent Elevation (0.0.20)'":
+    "Elevation5 As 'Fluent Elevation (0.0.21)'":
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height-Self.Y
         PaddingBottom: =8
@@ -179,7 +179,7 @@ TagPickerBasic As CanvasComponent:
                 Y: =62
                 ZIndex: =1
 
-            "PickerTagsSimple As 'Fluent Picker (0.0.20)'.pcfdataset":
+            "PickerTagsSimple As 'Fluent Picker (0.0.21)'.pcfdataset":
                 AllowFreeText: =chkAllowFreeText.Checked
                 DisplayMode: =DisplayMode.Edit
                 Error: =CountRows(colSimpleTags)>=5
@@ -187,8 +187,6 @@ TagPickerBasic As CanvasComponent:
                 HintText: =If(chkAllowFreeText.Checked,"Search for tags or enter a new one","Search for tags")
                 InputEvent: =varFocusTabEvent
                 Items: =colSimpleTags
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 MinimumSearchTermLength: =0
                 OnChange: |-
                     =If(Self.TagEvent = "Add",
@@ -324,14 +322,12 @@ TagPickerBasic As CanvasComponent:
                 Y: =62
                 ZIndex: =1
 
-            "CommandBarTags As 'Fluent Command Bar (0.0.20)'.pcfdataset":
+            "CommandBarTags As 'Fluent Command Bar (0.0.21)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Items: |-
                     =Table({ItemKey:"delete",ItemIconName:"Delete",ItemDisplayName:"Remove selected",ItemEnabled:CountRows(FluentDetailsListTagsSelected.SelectedItems)>0},
                     {ItemKey:"removeall",ItemIconName:"AlertSolid",ItemDisplayName:"Remove all"})
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 OnChange: =
                 OnSelect: |-
                     =If(Self.Selected.ItemKey="delete",
@@ -347,14 +343,12 @@ TagPickerBasic As CanvasComponent:
                 Y: =0
                 ZIndex: =2
 
-            "FluentDetailsListTagsSelected As 'Fluent Details List (0.0.20)'.pcfdataset":
+            "FluentDetailsListTagsSelected As 'Fluent Details List (0.0.21)'.pcfdataset":
                 columns_Items: |-
                     =Table({ColName:"name",ColDisplayName:"Tag",ColWidth:(Self.Width/2),ColRowHeader:true},{ColName:"icon",ColDisplayName:"Icon",ColWidth:(Self.Width/2)-100})
                 DisplayMode: =DisplayMode.Edit
                 Height: =200
                 Items: =colSimpleTags
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
                 Theme: =varTheme.themeJSON
                 Width: =200

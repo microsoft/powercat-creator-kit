@@ -20,7 +20,7 @@ IconActionButton As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_10 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_10 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -167,7 +167,7 @@ IconActionButton As CanvasComponent:
         Y: =40
         ZIndex: =17
 
-        "iconActionButtonStandard As 'Fluent Icon (0.0.20)'":
+        "iconActionButtonStandard As 'Fluent Icon (0.0.21)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             FillColor: =If(chkFill.Checked,varTheme.paletteCSS.themePrimary)
@@ -205,7 +205,7 @@ IconActionButton As CanvasComponent:
             Y: =115
             ZIndex: =6
 
-        "iconActionButtonCustom As 'Fluent Icon (0.0.20)'":
+        "iconActionButtonCustom As 'Fluent Icon (0.0.21)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             FontColor: ="green"
@@ -226,7 +226,7 @@ IconActionButton As CanvasComponent:
             Y: =158
             ZIndex: =7
 
-        "iconButtonCustom As 'Fluent Icon (0.0.20)'":
+        "iconButtonCustom As 'Fluent Icon (0.0.21)'":
             BorderRadius: =3
             DisplayMode: =DisplayMode.Edit
             FontColor: =""
@@ -261,7 +261,7 @@ IconActionButton As CanvasComponent:
             Y: =56
             ZIndex: =9
 
-        "iconButtonStandard As 'Fluent Icon (0.0.20)'":
+        "iconButtonStandard As 'Fluent Icon (0.0.21)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             Height: =32

@@ -23,7 +23,7 @@ ResizableTextArea_Controlled As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_8 As 'Fluent Pivot (0.0.20)'.pcfdataset":
+    "pivotAppCode_8 As 'Fluent Pivot (0.0.21)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -132,7 +132,7 @@ ResizableTextArea_Controlled As CanvasComponent:
             Y: =164
             ZIndex: =2
 
-        "ResizableTextarea_Default1 As 'Resizable Text Area (0.0.20)'":
+        "ResizableTextarea_Default1 As 'Resizable Text Area (0.0.21)'":
             AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
             Default: =varDefaultValue
             DisplayMode: =DisplayMode.Edit
@@ -173,7 +173,7 @@ ResizableTextArea_Controlled As CanvasComponent:
             Y: =375
             ZIndex: =14
 
-        "ResizableTextarea_Default2 As 'Resizable Text Area (0.0.20)'":
+        "ResizableTextarea_Default2 As 'Resizable Text Area (0.0.21)'":
             AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
             Default: =
             DisplayMode: =DisplayMode.Edit

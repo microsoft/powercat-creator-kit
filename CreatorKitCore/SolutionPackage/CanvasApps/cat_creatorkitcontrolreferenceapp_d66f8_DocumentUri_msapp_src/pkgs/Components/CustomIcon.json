@@ -27,7 +27,7 @@
       "Name": "GetIcon",
       "PropertyDataTypeKey": "String",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "942",
+        "PropertyScopeRuleNamespaceKey": "546",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "GetIcon_IconName",
@@ -71,7 +71,7 @@
       "Name": "GetIconPath",
       "PropertyDataTypeKey": "String",
       "PropertyScopeKey": {
-        "PropertyScopeRuleNamespaceKey": "942",
+        "PropertyScopeRuleNamespaceKey": "546",
         "PropertyScopeRulesKey": [
           {
             "DisplayName": "GetIconPath_IconName",
@@ -120,7 +120,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637898754732383738",
+  "LastModifiedTimestamp": "637909129572093255",
   "Name": "78b3c355ff18453fbb636b1b69f6d564",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

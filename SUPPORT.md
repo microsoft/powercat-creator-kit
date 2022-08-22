@@ -2,7 +2,7 @@
 
 ## Report a Bug or submit a Feature Request
 
-Have you found a bug in the Creator Kit or do you want to suggest a new feature? Either way, please let us now by filing an issue while observing the following guidelines
+Have you found a bug in the Creator Kit or do you want to suggest a new feature? Either way, please let us now by filing an issue while observing the following guidelines.
 
 ### Look for an existing issue
 
@@ -12,6 +12,8 @@ If your bug or feature request has already been reported, join the conversation 
 
 - 👍 - upvote
 - 👎 - downvote
+
+Upvote the [backlog](https://github.com/microsoft/powercat-creator-kit/issues?q=is%3Aissue+is%3Aopen+label%3Abacklog) components you would like to use to help the team prioritize development.
 
 ### Submitting an Issue
 

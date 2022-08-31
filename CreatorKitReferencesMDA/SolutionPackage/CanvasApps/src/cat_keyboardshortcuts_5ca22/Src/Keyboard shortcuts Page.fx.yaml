@@ -1,0 +1,433 @@
+"'Keyboard shortcuts Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =
+        
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            ZIndex: =3
+
+            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_1.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_1.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,1).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_1 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,1).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_1.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =Container1.Height + Container1_2.Height + Container1_3.Height + lblLastKeyboardshortcut.Height + 50
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_1.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Container1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        FillPortions: =0
+                        Height: =50
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =1
+
+                        lblFirstName As htmlViewer:
+                            Color: =AppTheme.palette.neutralPrimary
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HtmlText: |-
+                                ="<u><b>F</b></u>irst Name (<i>Alt + f</i>):"
+                            Size: =AppTheme.fontSizes.s
+                            Width: =162
+                            X: =32
+                            Y: =60
+                            ZIndex: =1
+
+                        "txtFirstName As 'Resizable Text Area (0.0.22)'":
+                            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.None
+                            BorderColor: |-
+                                ="#808080"
+                            BorderRadius: =1
+                            Default: =""
+                            DefaultHeight: =32
+                            DisplayMode: =DisplayMode.Edit
+                            EmptyPlaceholderText: =""
+                            EnableSpellCheck: ='''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No
+                            FillPortions: =1
+                            FocusBorderColor: =AppTheme.paletteCSS.themePrimary
+                            FocusBorderThickness: =2
+                            FontColor: =AppTheme.paletteCSS.neutralDark
+                            FontName: ="'SegoeUI', 'Segoe UI'"
+                            FontSize: =14
+                            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+                            Height: =32
+                            HintText: ="First Name"
+                            HoverBorderColor: =AppTheme.paletteCSS.neutralDark
+                            HoverBorderThickness: =1
+                            InputEvent: =varFirstNameFocus
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            MaxHeight: =32
+                            MaxWidth: =Parent.Width
+                            MinHeight: =32
+                            PaddingBottom: =4
+                            PaddingLeft: =8
+                            PaddingTop: =8
+                            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+                            ResizedHeight: =32
+                            ResizedWidth: =32
+                            Text: =""
+                            Visible: =true
+                            Width: =235
+                            X: =194
+                            Y: =60
+                            ZIndex: =2
+
+                        "KeyboardShortcutsSample As 'Keyboard Shortcuts (0.0.22)'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            KeyConfig: ="[""alt + f"",""alt + l"",""alt + e""]"
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(varKeyPressed,$"{Self.OnKey} {Text(Rand())}");
+                                If(Self.OnKey="alt + f",Set(varFirstNameFocus,"SetFocus" & Text(Rand())));
+                                If(Self.OnKey="alt + l",Set(varLastNameFocus,"SetFocus" & Text(Rand())));
+                                If(Self.OnKey="alt + e",Set(varEmailFocus,"SetFocus" & Text(Rand())));
+                            Visible: =true
+                            Width: =165
+                            X: =475
+                            Y: =60
+                            ZIndex: =3
+
+                    Container1_2 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        FillPortions: =0
+                        Height: =50
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =2
+
+                        lblLastName As htmlViewer:
+                            Color: =AppTheme.palette.neutralPrimary
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HtmlText: |-
+                                ="<u><b>L</b></u>ast Name (<i>Alt + l</i>):"
+                            Size: =AppTheme.fontSizes.s
+                            Width: =162
+                            X: =32
+                            Y: =111
+                            ZIndex: =1
+
+                        "txtLastName As 'Resizable Text Area (0.0.22)'":
+                            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.None
+                            BorderColor: |-
+                                ="#808080"
+                            BorderRadius: =1
+                            Default: =""
+                            DefaultHeight: =32
+                            DisplayMode: =DisplayMode.Edit
+                            EmptyPlaceholderText: =""
+                            EnableSpellCheck: ='''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No
+                            FillPortions: =1
+                            FocusBorderColor: =AppTheme.paletteCSS.themePrimary
+                            FocusBorderThickness: =2
+                            FontColor: =AppTheme.paletteCSS.neutralDark
+                            FontName: ="'SegoeUI', 'Segoe UI'"
+                            FontSize: =14
+                            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+                            Height: =32
+                            HintText: ="Last Name"
+                            HoverBorderColor: =AppTheme.paletteCSS.neutralDark
+                            HoverBorderThickness: =1
+                            InputEvent: =varLastNameFocus
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            MaxHeight: =32
+                            MaxWidth: =Parent.Width
+                            MinHeight: =32
+                            PaddingBottom: =4
+                            PaddingLeft: =8
+                            PaddingTop: =8
+                            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+                            ResizedHeight: =32
+                            ResizedWidth: =32
+                            Text: =""
+                            Visible: =true
+                            Width: =235
+                            X: =162
+                            Y: =111
+                            ZIndex: =2
+
+                    Container1_3 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        FillPortions: =0
+                        Height: =50
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =3
+
+                        lblEmail As htmlViewer:
+                            Color: =AppTheme.palette.neutralPrimary
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HtmlText: |-
+                                ="<u><b>E</b></u>mail (<i>Alt + e</i>):"
+                            Size: =AppTheme.fontSizes.s
+                            Width: =162
+                            X: =32
+                            Y: =161
+                            ZIndex: =1
+
+                        "txtEmail As 'Resizable Text Area (0.0.22)'":
+                            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.None
+                            BorderColor: |-
+                                ="#808080"
+                            BorderRadius: =1
+                            Default: =""
+                            DefaultHeight: =32
+                            DisplayMode: =DisplayMode.Edit
+                            EmptyPlaceholderText: =""
+                            EnableSpellCheck: ='''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No
+                            FillPortions: =1
+                            FocusBorderColor: =AppTheme.paletteCSS.themePrimary
+                            FocusBorderThickness: =2
+                            FontColor: =AppTheme.paletteCSS.neutralDark
+                            FontName: ="'SegoeUI', 'Segoe UI'"
+                            FontSize: =14
+                            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+                            Height: =32
+                            HintText: ="Email address"
+                            HoverBorderColor: =AppTheme.paletteCSS.neutralDark
+                            HoverBorderThickness: =1
+                            InputEvent: =varEmailFocus
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            MaxHeight: =32
+                            MaxWidth: =Parent.Width
+                            MinHeight: =32
+                            PaddingBottom: =4
+                            PaddingLeft: =8
+                            PaddingTop: =8
+                            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+                            ResizedHeight: =32
+                            ResizedWidth: =32
+                            Text: =""
+                            Visible: =true
+                            Width: =235
+                            X: =162
+                            Y: =161
+                            ZIndex: =2
+
+                    lblLastKeyboardshortcut As label:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =AppTheme.palette.neutralPrimary
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =36
+                        Size: =AppTheme.fontSizes.m
+                        Text: |-
+                            ="Last key pressed: " & KeyboardShortcutsSample.OnKey
+                        Width: =386
+                        X: =32
+                        Y: =220
+                        ZIndex: =4
+

@@ -1,0 +1,269 @@
+TagPickerCustomStyle As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_18.Selected.ItemKey="code",htmlCode_18.Y+htmlCode_18.Height,400)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_18 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Tag Picker Custom Styles"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_18 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_18.Y+htmlCode_18.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    pivotline_18 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_18 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""PickerTags As 'Fluent Picker (0.0.13)'.pcfdataset""</span>:
+                BorderRadius: =If(chkRounded.Checked,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">8</span>)
+                DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
+                <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Error</span>: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                FontSize: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">14</span>
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                HintText: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Search for color""</span>
+                InputEvent: =varColorTagsEvent
+                ItemHeight: =If(chkLargeTags.Checked,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">42</span>)
+                Items: =colSelectedTags
+                MinimumSearchTermLength: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>
+                OnChange: |
+                    =If(
+                        Self.TagEvent = <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add""</span>,
+                        With(
+                            {
+                                selected: LookUp(
+                                    colTags,
+                                    Key = Self.TagKey
+                                )
+                            },
+                            If(
+                                !IsBlank(selected) &amp;&amp; IsBlank(LookUp(colSelectedTags,Key=selected.Key)),
+                                Collect(
+                                    colSelectedTags,
+                                    {
+                                        Key: selected.Key,
+                                        DisplayName: selected.DisplayName,
+                                        TextColor: selected.TextColor,
+                                        BackgroundColor: selected.BackgroundColor,
+                                        BorderColor: selected.BorderColor,
+                                        HoverBorderColor: selected.HoverBorderColor
+                                    }
+                                )
+                            );
+                        )
+                    );
+                    If(
+                        Self.TagEvent = <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Remove""</span>,
+                        RemoveIf(
+                            colSelectedTags,
+                            Key = Text(Self.TagKey)
+                        )
+                    );
+                Suggestions_Items: |-
+                    =Filter(
+                        Search(colTags,Self.SearchTerm,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>),
+                        !(Key <span class=""hljs-keyword"" style=""font-weight: 700;"">in</span> colSelectedTags.Key))
+                SuggestionsBackgroundColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
+                SuggestionsBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BorderColor""</span>
+                SuggestionsDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>       
+                SuggestionsHoverBackgroundColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
+                SuggestionsHoverBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
+                SuggestionsIconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
+                SuggestionsKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
+                SuggestionsSubDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
+                SuggestionsTextColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
+                TagsBackgroundColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
+                TagsBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BorderColor""</span>
+                TagsDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
+                TagsError: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
+                TagsHoverBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
+                TagsKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
+                TagsTextColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_18.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkEnablePicker As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Enabled""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkLargeTags As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Large Tags""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkRounded As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Rounded Tags""</span>
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_18.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    Group15 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        "PickerTags As 'Fluent Picker (1.0.6-beta)'.pcfdataset":
+            BorderRadius: =If(chkRounded.Checked,8)
+            DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
+            Error: =false
+            FontSize: =14
+            Height: =32
+            HintText: ="Search for color"
+            InputEvent: =varColorTagsEvent
+            ItemHeight: =If(chkLargeTags.Checked,42)
+            Items: =colSelectedTags
+            MinimumSearchTermLength: =1
+            OnChange: |
+                =If(
+                    Self.TagEvent = "Add",
+                    With(
+                        {
+                            selected: LookUp(
+                                colTags,
+                                Key = Self.TagKey
+                            )
+                        },
+                        If(
+                            !IsBlank(selected) && IsBlank(LookUp(colSelectedTags,Key=selected.Key)),
+                            Collect(
+                                colSelectedTags,
+                                {
+                                    Key: selected.Key,
+                                    DisplayName: selected.DisplayName,
+                                    TextColor: selected.TextColor,
+                                    BackgroundColor: selected.BackgroundColor,
+                                    BorderColor: selected.BorderColor,
+                                    HoverBorderColor: selected.HoverBorderColor
+                                }
+                            )
+                        );
+                    )
+                );
+                If(
+                    Self.TagEvent = "Remove",
+                    RemoveIf(
+                        colSelectedTags,
+                        Key = Text(Self.TagKey)
+                    )
+                );
+            Suggestions_Items: |-
+                =Filter(
+                    Search(colTags,Self.SearchTerm,"DisplayName"),
+                    !(Key in colSelectedTags.Key))
+            SuggestionsBackgroundColor: ="BackgroundColor"
+            SuggestionsBorderColor: ="BorderColor"
+            SuggestionsDisplayName: ="DisplayName"       
+            SuggestionsHoverBackgroundColor: =""
+            SuggestionsHoverBorderColor: ="HoverBorderColor"
+            SuggestionsIconName: =""
+            SuggestionsKey: ="Key"
+            SuggestionsSubDisplayName: =""
+            SuggestionsTextColor: ="TextColor"
+            TagsBackgroundColor: ="BackgroundColor"
+            TagsBorderColor: ="BorderColor"
+            TagsDisplayName: ="DisplayName"
+            TagsError: =""
+            TagsHoverBorderColor: ="HoverBorderColor"
+            TagsKey: ="Key"
+            TagsTextColor: ="TextColor"
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_18.Selected.ItemKey="app"
+            Width: =578
+            X: =52
+            Y: =160
+            ZIndex: =6
+
+        "IconTags As 'Fluent Icon (1.0.6-beta)'":
+            DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
+            Height: =32
+            IconName: ="Tag"
+            IconSize: =24
+            IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+            OnChange: =Set(varColorTagsEvent,"SetFocus" & Text(Rand()))
+            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Center
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_18.Selected.ItemKey="app"
+            Width: =32
+            X: =15
+            Y: =160
+            ZIndex: =7
+
+        "chkEnablePicker As 'Check box'":
+            AccessibleLabel: ="Enabled"
+            Checked: =true
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Enabled"
+            OnChange: =
+            Visible: =pivotAppCode_18.Selected.ItemKey="app"
+            Width: =160
+            X: =52
+            Y: =64
+            ZIndex: =8
+
+        "chkLargeTags As 'Check box'":
+            AccessibleLabel: ="Large tags"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Large Tags"
+            OnChange: =
+            Visible: =pivotAppCode_18.Selected.ItemKey="app"
+            Width: =160
+            X: =52
+            Y: =96
+            ZIndex: =9
+
+        "chkRounded As 'Check box'":
+            AccessibleLabel: ="Rounded tags"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Rounded Tags"
+            OnChange: =
+            Visible: =pivotAppCode_18.Selected.ItemKey="app"
+            Width: =160
+            X: =176
+            Y: =64
+            ZIndex: =10
+

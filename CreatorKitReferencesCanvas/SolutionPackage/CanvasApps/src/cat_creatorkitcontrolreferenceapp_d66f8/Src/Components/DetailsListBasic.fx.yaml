@@ -1,0 +1,622 @@
+DetailsListBasic As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_21.Selected.ItemKey="code",htmlCode_21.Y+htmlCode_21.Height,640)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    OnReset: |-
+        =ClearCollect(colRowImages,
+        {name:"pdf",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pdf.svg"},
+        {name:"png",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/photo.svg"},
+        {name:"pdf",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pptx.svg"},
+        {name:"docx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/docx.svg"},
+        {name:"xlsx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/xlsx.svg"});
+        
+        Set(varLipsum,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac sapien eu ipsum iaculis iaculis. Aenean tincidunt, orci vel molestie posuere, ligula justo commodo erat, ut finibus ipsum risus scelerisque tellus. Donec vel pellentesque turpis. Nullam semper purus ac arcu lacinia, quis viverra eros fermentum. Proin tincidunt hendrerit ante, eu hendrerit ex vestibulum sit amet. Mauris dui odio, congue id iaculis sit amet, lacinia id felis. Fusce non vulputate ipsum, at imperdiet massa. Fusce vitae eleifend mauris, sed semper eros. Aenean varius ex accumsan velit porttitor pharetra. Sed eget sagittis sapien, ut porta augue. Aenean commodo lacus eu tortor tempus, eget luctus justo rhoncus. Aenean malesuada, elit molestie scelerisque convallis, massa tortor luctus mauris, non auctor nunc tortor ut erat. Vivamus non vehicula neque, quis eleifend felis. Pellentesque arcu ipsum, commodo eu libero et, placerat pretium orci. Nulla quis ultricies lacus.");
+        
+        ClearCollect(colFiles,
+            ForAll(Sequence(100) As Row,
+            With({
+                randomStart:RandBetween(1,Len(varLipsum)-10),
+                format:Index(colRowImages,RandBetween(1,CountRows(colRowImages)))},
+                {  
+                    Index:Row.Value,
+                    Icon:format.url,
+                    Name:Mid(varLipsum,randomStart,RandBetween(4,10)) & "." & format.name,
+                    Number:RandBetween(1,100000),
+                    Description: Mid(varLipsum,1,RandBetween(30,Len(varLipsum))),
+                    DateModified:Text(DateAdd(Now(),RandBetween(1,30)*-1,Days)),
+                    Status:"Open",
+                    StatusCol:"green",
+                    StatusIcon:"icon:SkypeCircleCheck",
+                    StatusColor:"#4B832D",
+                    SubText1: Mid(varLipsum,1,RandBetween(30,150)),
+                    SubText2: Mid(varLipsum,1,RandBetween(30,150)),
+                    SubText3: Mid(varLipsum,1,RandBetween(30,150))
+                })
+            )
+        );
+        
+        Set(varSortFiles,"Name");
+        Set(varSortFilesAsc,true);
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_21 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Details List Basic"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_21 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_21.Y+htmlCode_21.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    pivotline_21 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_21 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">DetailsListBasic As CanvasComponent:
+                OnReset: |-
+                    =ClearCollect(colRowImages,
+                    {name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""pdf""</span>,url:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pdf.svg""</span>},
+                    {name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""png""</span>,url:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://static2.sharepointonline.com/files/fabric/assets/item-types/16/photo.svg""</span>},
+                    {name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""pdf""</span>,url:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pptx.svg""</span>},
+                    {name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""docx""</span>,url:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://static2.sharepointonline.com/files/fabric/assets/item-types/16/docx.svg""</span>},
+                    {name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""xlsx""</span>,url:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""https://static2.sharepointonline.com/files/fabric/assets/item-types/16/xlsx.svg""</span>});
+                    
+                    <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varLipsum,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac sapien eu ipsum iaculis iaculis. Aenean tincidunt, orci vel molestie posuere, ligula justo commodo erat, ut finibus ipsum risus scelerisque tellus. Donec vel pellentesque turpis. Nullam semper purus ac arcu lacinia, quis viverra eros fermentum. Proin tincidunt hendrerit ante, eu hendrerit ex vestibulum sit amet. Mauris dui odio, congue id iaculis sit amet, lacinia id felis. Fusce non vulputate ipsum, at imperdiet massa. Fusce vitae eleifend mauris, sed semper eros. Aenean varius ex accumsan velit porttitor pharetra. Sed eget sagittis sapien, ut porta augue. Aenean commodo lacus eu tortor tempus, eget luctus justo rhoncus. Aenean malesuada, elit molestie scelerisque convallis, massa tortor luctus mauris, non auctor nunc tortor ut erat. Vivamus non vehicula neque, quis eleifend felis. Pellentesque arcu ipsum, commodo eu libero et, placerat pretium orci. Nulla quis ultricies lacus.""</span>);
+                    
+                    ClearCollect(colFiles,
+                        ForAll(Sequence(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">100</span>) As Row,
+                        With({
+                            randomStart:RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,Len(varLipsum)<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">-10</span>),
+                            format:Index(colRowImages,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,CountRows(colRowImages)))},
+                            {  
+                                Index:Row.Value,
+                                Icon:format.url,
+                                Name:Mid(varLipsum,randomStart,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">4</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">10</span>)) &amp; <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"".""</span> &amp; format.name,
+                                <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Number</span>:RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">100000</span>),
+                                Description: Mid(varLipsum,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">30</span>,Len(varLipsum))),
+                                DateModified:Text(DateAdd(Now(),RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">30</span>)*<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">-1</span>,Days)),
+                                Status:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Open""</span>,
+                                StatusCol:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""green""</span>,
+                                StatusIcon:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""icon:SkypeCircleCheck""</span>,
+                                StatusColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""#4B832D""</span>,
+                                SubText1: Mid(varLipsum,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">30</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">150</span>)),
+                                SubText2: Mid(varLipsum,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">30</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">150</span>)),
+                                SubText3: Mid(varLipsum,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">30</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">150</span>))
+                            })
+                        )
+                    );
+                    
+                    <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varSortFiles,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>);
+                    <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varSortFilesAsc,<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>);
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""FluentDetailsListBasic As 'Fluent Details List (0.0.13)'.pcfdataset""</span>:
+                    AlternateRowColor: =If(chkAltRowColor.Checked,varTheme.paletteCSS.neutralLighterAlt)
+                    columns_Items: |-
+                        =With({
+                            <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// If there is a selection column, we remove the width and the padding</span>
+                            availableWidth:Self.Width-If(ddSelectionMode.Selected.Name&lt;&gt;<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""None""</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>+<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">16</span>),
+                            padding:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>,
+                            scrollWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">20</span>,
+                            collapsedModifiedOn:chkCollapseCols.Checked,
+                            multiLineDescription: chkWrapDescription.Checked
+                            },
+                        Table(
+                            {
+                                ColName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Icon""</span>,ColDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>,ColWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>,ColCellType:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""image""</span>,ColImageWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">16</span>,ColVerticalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""top""</span>,ColPaddingTop:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">4</span>
+                            },
+                            {
+                                ColName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>,ColDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>,ColSortable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ColWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">200</span>,ColRowHeader:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                            },
+                            {
+                                ColName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Description""</span>,ColDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Description""</span>,ColSortable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColWidth:availableWidth-scrollWidth<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">-32</span>-(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">200</span>+padding)-If(collapsedModifiedOn,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">0</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">100</span>+padding),ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColMultiLine:multiLineDescription
+                            },
+                            {
+                                ColName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DateModified""</span>,ColDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Date Modified""</span>,ColSortable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColWidth:If(collapsedModifiedOn,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">200</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">100</span>),ColResizable:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ColShowAsSubTextOf:If(collapsedModifiedOn,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>),
+                                ColInlineLabel:If(collapsedModifiedOn,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Modified:""</span>)
+                            }
+                        )
+                        )
+                    Compact: =chkCompact.Checked
+                    CurrentSortColumn: =varSortFiles
+                    CurrentSortDirection: =If(varSortFilesAsc,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.CurrentSortDirection'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Ascending,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.CurrentSortDirection'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Descending)
+                    DisplayMode: =DisplayMode.Edit
+                    HeaderVisible: =chkShowHeader.Checked
+                    Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">362</span>
+                    Items: |-
+                        =SortByColumns(
+                            Search(colFiles,txtSearchFiles.Value,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>),
+                            varSortFiles,
+                            If(varSortFilesAsc,SortOrder.Ascending,SortOrder.Descending)
+                        )
+                    OnChange: |-
+                        =If(
+                            Self.EventName = <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Sort""</span>,
+                            <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varSortFiles,Self.SortEventColumn);
+                            <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varSortFilesAsc,Self.SortEventDirection = <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.SortEventDirection'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Ascending);
+                        );
+                        
+                        If(Self.EventName=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""CellAction""</span>,Notify(<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Cell Action ""</span> &amp; Self.EventRowKey));
+                    OnSelect: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varRowSelectedBasic,Self.Selected);
+                    PageSize: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">2000</span>
+                    RaiseOnRowSelectionChangeEvent: =
+                    SelectionType: =ddSelectionMode.Selected.Key
+                    Theme: =varTheme.themeJSON
+                    Visible: =pivotAppCode_21.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+                    Width: =Parent.Width
+                    X: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">0</span>
+                    Y: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">199</span>
+            
+                    Description2 As pcfDataField.textualColumn:
+                        FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Description""</span>
+                        FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Description""</span>
+                        FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                        FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                    Icon3 As pcfDataField.textualColumn:
+                        FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Icon""</span>
+                        FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Icon""</span>
+                        FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                        FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                    Index2 As pcfDataField.textualColumn:
+                        FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Index""</span>
+                        FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Index""</span>
+                        FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""n""</span>
+                        FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                    Name2 As pcfDataField.textualColumn:
+                        FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>
+                        FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>
+                        FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                        FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                    DateModified1 As pcfDataField.textualColumn:
+                        FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DateModified""</span>
+                        FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DateModified""</span>
+                        FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                        FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ddSelectionMode As 'Combo box'.pcfdataset""</span>:
+                    DefaultSelectedItems: |-
+                        =Table({Name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""None""</span>})
+                    DisplayMode: =DisplayMode.Edit
+                    Items: |-
+                        =Table(
+                            {
+                                Name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""None""</span>,
+                                Key: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.SelectionType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.None
+                            },
+                            {
+                                Name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Single""</span>,
+                                Key: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.SelectionType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Single
+                            },
+                            {
+                                Name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Multple""</span>,
+                                Key: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.SelectionType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Multiple
+                            }
+                        )
+            
+                    Name5_3 As pcfDataField.textualColumn:
+                        FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>
+                        FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>
+                        FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkCompact As 'Check box'""</span>:
+                    Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                    Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Compact mode""</span>
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowHeader As 'Check box'""</span>:
+                    Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                    Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show header""</span>
+               
+                lblRecordCountTop As label:
+                    Text: =$<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""{FluentDetailsListBasic.TotalRecords} record{If(FluentDetailsListBasic.TotalRecords&gt;1,""</span>s<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"")} ({0+CountRows(FluentDetailsListBasic.SelectedItems)} selected)""</span>
+            
+                lblLastRowSelected As label:
+                    Text: |-
+                        =$<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Last row selected (double-click or Enter when focused): {Coalesce(varRowSelectedBasic.Name,""</span>(none)<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">"")}""</span>
+            
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""txtSearchFiles As 'Text box'""</span>:
+                    Placeholder: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Search files""</span>
+                    Value: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkAltRowColor As 'Check box'""</span>:
+                    Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                    Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Alternate Row Color""</span>
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkWrapDescription As 'Check box'""</span>:
+                    Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                    Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Wrap description""</span>
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkCollapseCols As 'Check box'""</span>:
+                    Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                    Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Collapse Columns""</span>
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_21.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    Group18 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =19
+
+        "FluentDetailsListBasic As 'Fluent Details List (1.0.6-beta)'.pcfdataset":
+            AlternateRowColor: =If(chkAltRowColor.Checked,varTheme.paletteCSS.neutralLighterAlt)
+            columns_Items: |-
+                =With({
+                    // If there is a selection column, we remove the width and the padding
+                    availableWidth:Self.Width-If(ddSelectionMode.Selected.Name<>"None",32+16),
+                    padding:32,
+                    scrollWidth:20,
+                    collapsedModifiedOn:chkCollapseCols.Checked,//If(collapsed,0,100-padding),
+                    multiLineDescription: chkWrapDescription.Checked
+                    },
+                Table(
+                    {
+                        ColName:"Icon",ColDisplayName:"",ColWidth:32,ColCellType:"image",ColImageWidth:16,ColVerticalAlign:"top",ColPaddingTop:4
+                    },
+                    {
+                        ColName:"Name",ColDisplayName:"Name",ColSortable:true,ColWidth:200,ColRowHeader:true,
+                        ColResizable:true
+                    },
+                    {
+                        ColName:"Description",ColDisplayName:"Description",ColSortable:true,
+                        ColWidth:availableWidth-scrollWidth-32-(200+padding)-If(collapsedModifiedOn,0,100+padding),ColResizable:true,
+                        ColMultiLine:multiLineDescription
+                    },
+                    {
+                        ColName:"DateModified",ColDisplayName:"Date Modified",ColSortable:true,
+                        ColWidth:If(collapsedModifiedOn,200,100),ColResizable:true,ColShowAsSubTextOf:If(collapsedModifiedOn,"Name"),
+                        ColInlineLabel:If(collapsedModifiedOn,"Modified:")
+                    }
+                )
+                )
+            Compact: =chkCompact.Checked
+            CurrentSortColumn: =varSortFiles
+            CurrentSortDirection: =If(varSortFilesAsc,'''PowerCAT.FluentDetailsList.CurrentSortDirection'''.Ascending,'''PowerCAT.FluentDetailsList.CurrentSortDirection'''.Descending)
+            DisplayMode: =DisplayMode.Edit
+            HeaderVisible: =chkShowHeader.Checked
+            Height: =362
+            Items: |-
+                =SortByColumns(
+                    Search(colFiles,txtSearchFiles.Value,"Name"),
+                    varSortFiles,
+                    If(varSortFilesAsc,SortOrder.Ascending,SortOrder.Descending)
+                )
+            OnChange: |-
+                =If(
+                    Self.EventName = "Sort",
+                    Set(varSortFiles,Self.SortEventColumn);
+                    Set(varSortFilesAsc,Self.SortEventDirection = '''PowerCAT.FluentDetailsList.SortEventDirection'''.Ascending);
+                );
+                
+                If(Self.EventName="CellAction",Notify("Cell Action " & Self.EventRowKey));
+            OnSelect: =Set(varRowSelectedBasic,Self.Selected);
+            PageSize: =2000
+            RaiseOnRowSelectionChangeEvent: =
+            SelectionType: =ddSelectionMode.Selected.Key
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =Parent.Width
+            X: =0
+            Y: =199
+            ZIndex: =5
+
+            Description2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Description"
+                FieldName: ="Description"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =1
+
+            Icon3 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Icon"
+                FieldName: ="Icon"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =2
+                ZIndex: =2
+
+            Index2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Index"
+                FieldName: ="Index"
+                FieldType: ="n"
+                FieldVariantName: ="textualColumn"
+                Order: =3
+                ZIndex: =3
+
+            Name2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Name"
+                FieldName: ="Name"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =4
+                ZIndex: =4
+
+            Number2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Number"
+                FieldName: ="Number"
+                FieldType: ="n"
+                FieldVariantName: ="textualColumn"
+                Order: =5
+                ZIndex: =5
+
+            Status2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Status"
+                FieldName: ="Status"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =6
+                ZIndex: =6
+
+            StatusCol2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="StatusCol"
+                FieldName: ="StatusCol"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =7
+                ZIndex: =7
+
+            StatusColor2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="StatusColor"
+                FieldName: ="StatusColor"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =8
+                ZIndex: =8
+
+            StatusIcon2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="StatusIcon"
+                FieldName: ="StatusIcon"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =9
+                ZIndex: =9
+
+            SubText12 As pcfDataField.textualColumn:
+                FieldDisplayName: ="SubText1"
+                FieldName: ="SubText1"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =10
+                ZIndex: =10
+
+            SubText22 As pcfDataField.textualColumn:
+                FieldDisplayName: ="SubText2"
+                FieldName: ="SubText2"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =11
+                ZIndex: =11
+
+            SubText32 As pcfDataField.textualColumn:
+                FieldDisplayName: ="SubText3"
+                FieldName: ="SubText3"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =12
+                ZIndex: =12
+
+            DateModified1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="DateModified"
+                FieldName: ="DateModified"
+                FieldType: ="s"
+                FieldVariantName: ="textualColumn"
+                Order: =13
+                ZIndex: =13
+
+        "ddSelectionMode As 'Combo box'.pcfdataset":
+            AccessibleLabel: ="Align"
+            DefaultSelectedItems: |-
+                =Table({Name:"None"})
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: |-
+                =Table(
+                    {
+                        Name: "None",
+                        Key: '''PowerCAT.FluentDetailsList.SelectionType'''.None
+                    },
+                    {
+                        Name: "Single",
+                        Key: '''PowerCAT.FluentDetailsList.SelectionType'''.Single
+                    },
+                    {
+                        Name: "Multple",
+                        Key: '''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                    }
+                )
+            Text: =""
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =130
+            X: =77
+            Y: =61
+            ZIndex: =7
+
+            Name5_3 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Name"
+                FieldName: ="Name"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =11
+
+        lblAlignDetailsListBasic As label:
+            Align: =Align.Right
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Selection:"
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =77
+            Y: =60
+            ZIndex: =8
+
+        "chkCompact As 'Check box'":
+            AccessibleLabel: ="Compact mode"
+            Checked: =true
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Compact mode"
+            OnChange: =
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =160
+            X: =221
+            Y: =61
+            ZIndex: =9
+
+        "chkShowHeader As 'Check box'":
+            AccessibleLabel: ="Show header"
+            Checked: =true
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Show header"
+            OnChange: =
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =160
+            X: =381
+            Y: =61
+            ZIndex: =10
+
+        lblRecordCountTop As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =$"{FluentDetailsListBasic.TotalRecords} record{If(FluentDetailsListBasic.TotalRecords>1,"s")} ({0+CountRows(FluentDetailsListBasic.SelectedItems)} selected)"
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =268
+            X: =287
+            Y: =162
+            ZIndex: =11
+
+        lblLastRowSelected As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =27
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                =$"Last row selected (double-click or Enter when focused): {Coalesce(varRowSelectedBasic.Name,"(none)")}"
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =561
+            ZIndex: =12
+
+        "txtSearchFiles As 'Text box'":
+            AccessibleLabel: ="Search files"
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Placeholder: ="Search files"
+            Value: =""
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =235
+            X: =38
+            Y: =164
+            ZIndex: =13
+
+        "icoSearch_1 As 'Fluent Icon (1.0.6-beta)'":
+            BorderColor: =""
+            BorderRadius: =0
+            DisplayMode: =DisplayMode.Edit
+            Height: =28
+            HoverIconColor: =""
+            IconColor: =varTheme.paletteCSS.themePrimary
+            IconName: ="Search"
+            IconSize: =20
+            IconType: ='''PowerCAT.Icon.IconType'''.Icon
+            InputEvent: =varSetFocusActionButton
+            Text: =""
+            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =25
+            X: =txtSearchFiles.X-Self.Width
+            Y: =166
+            ZIndex: =14
+
+        "chkAltRowColor As 'Check box'":
+            AccessibleLabel: ="Alternate row color"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Alternate Row Color"
+            OnChange: =
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =160
+            X: =221
+            Y: =98
+            ZIndex: =15
+
+        "chkWrapDescription As 'Check box'":
+            AccessibleLabel: ="Wrap description"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Wrap description"
+            OnChange: =
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =160
+            X: =381
+            Y: =98
+            ZIndex: =16
+
+        "chkCollapseCols As 'Check box'":
+            AccessibleLabel: ="Collapse columns"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Collapse Columns"
+            OnChange: =
+            Visible: =pivotAppCode_21.Selected.ItemKey="app"
+            Width: =160
+            X: =381
+            Y: =130
+            ZIndex: =17
+

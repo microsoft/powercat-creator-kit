@@ -1,0 +1,201 @@
+PivotItemStyles As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_4.Selected.ItemKey="code",htmlCode_4.Y+htmlCode_4.Height,300)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_4 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Pivot Item Styles"
+        Width: =630
+        Y: =2
+        ZIndex: =3
+
+    "pivotAppCode_4 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_4.Y+htmlCode_4.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =4
+
+    line_4 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =5
+
+    htmlCode_4 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkRenderLarge As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Render Large""</span>
+            
+            lblSelectedKey_5 As label:
+                Text: =Coalesce(Pivot2_1.Selected.ItemKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
+                
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Pivot2_1 As 'Fluent Pivot'.pcfdataset""</span>:
+                Items: |-
+                    =Table(
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""myfiles""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""My Files""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Emoji2""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""recent""</span>,ItemCount:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">23</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Recent""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""placeholder""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Placeholder""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Globe""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""sharedwithme""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Shared with me""</span>,ItemCount:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Ringer""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""customcolor""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Custom Icon Color""</span>,ItemCount:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">10</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Globe""</span>}
+                    )
+                RenderSize: =If(chkRenderLarge.Checked,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Pivot.RenderSize'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Large,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Pivot.RenderSize'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Normal)
+                RenderType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Pivot.RenderType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.PivotLinks
+                SelectedKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""bas""</span>
+                Theme: =varTheme.themeJSON
+                Width: =sldWidth_2.Value-Self.X
+            
+            sldWidth As slider:
+                Max: =Parent.Width
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_4.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    "chkRenderLarge As 'Check box'":
+        AccessibleLabel: ="Render large"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Render Large"
+        OnChange: =
+        Visible: =pivotAppCode_4.Selected.ItemKey="app"
+        Width: =160
+        X: =27
+        Y: =169
+        ZIndex: =14
+
+    Group3 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =14
+
+        lblSelectedKey_5 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =Coalesce(Pivot2_1.Selected.ItemKey,"(none)") 
+            Visible: =pivotAppCode_4.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =180
+            Y: =97
+            ZIndex: =1
+
+        lblSelected_5 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Pivot.Selected:"
+            Visible: =pivotAppCode_4.Selected.ItemKey="app"
+            Width: =174
+            X: =12
+            Y: =96
+            ZIndex: =2
+
+        "Pivot2_1 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =47
+            Items: |-
+                =Table(
+                    {ItemKey:"myfiles",ItemDisplayName:"My Files",ItemIconName:"Emoji2"},
+                    {ItemKey:"recent",ItemCount:23,ItemIconName:"Recent"},
+                    {ItemKey:"placeholder",ItemDisplayName:"Placeholder",ItemIconName:"Globe"},
+                    {ItemKey:"sharedwithme",ItemDisplayName:"Shared with me",ItemCount:1,ItemIconName:"Ringer"},
+                    {ItemKey:"customcolor",ItemDisplayName:"Custom Icon Color",ItemCount:10,ItemIconName:"Globe"}
+                )
+            RenderSize: =If(chkRenderLarge.Checked,'''PowerCAT.Pivot.RenderSize'''.Large,'''PowerCAT.Pivot.RenderSize'''.Normal)
+            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+            SelectedKey: ="bas"
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_4.Selected.ItemKey="app"
+            Width: =sldWidth_2.Value-Self.X
+            X: =20
+            Y: =49
+            ZIndex: =8
+
+        htmlText_2 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: ="Pivot Items can have custom icons and an option number of items in brackets. When the selected item is in the overflow it will be moved out to ensure it is visible."
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_4.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =214
+            ZIndex: =11
+
+        sldWidth_2 As slider:
+            AccessibleLabel: ="Width"
+            BorderColor: =
+            Default: =Self.Max
+            FocusedBorderColor: =
+            FocusedBorderThickness: =1
+            HandleSize: =16
+            Height: =27
+            Max: =Parent.Width
+            RailFill: =varTheme.palette.neutralTertiaryAlt
+            RailThickness: =2
+            ValueFill: =varTheme.palette.neutralPrimary
+            ValueHoverFill: =varTheme.palette.themePrimary
+            Visible: =pivotAppCode_4.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =86
+            Y: =142
+            ZIndex: =12
+
+        lblWidth_1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Width:"
+            Visible: =pivotAppCode_4.Selected.ItemKey="app"
+            Width: =174
+            X: =20
+            Y: =136
+            ZIndex: =13
+

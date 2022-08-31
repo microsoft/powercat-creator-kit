@@ -1,0 +1,193 @@
+ElevationPopup As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_16.Selected.ItemKey="code",htmlCode_16.Y+htmlCode_16.Height,640)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_16 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Elevation on popups"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_16 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_16.Y+htmlCode_16.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    pivotline_16 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_16 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ElevationPopupOverlay As 'Fluent Elevation (0.0.13)'""</span>:
+                DarkOverlay: =chkDarkPadding.Checked
+                Depth: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Elevation.Depth'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Depth64
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height-Self.Y
+                HoverDepth: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Elevation.HoverDepth'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Depth64
+                PaddingBottom: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">64</span>
+                PaddingLeft: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">64</span>
+                PaddingRight: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">64</span>
+                PaddingTop: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">64</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkDarkPadding As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                DisplayMode: =DisplayMode.Edit
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show dark padding""</span>
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_16.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    Group14 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =11
+
+        htmlText_10 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: |-
+                ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id velit et turpis sagittis rhoncus. Donec luctus sed lacus eget gravida. Mauris vel metus vitae augue efficitur iaculis sit amet sit amet sem. Morbi vitae dui lobortis mi cursus rhoncus ut in tellus. Quisque consectetur velit a massa blandit, ac lacinia mi fermentum. Sed congue eu sapien id tincidunt. Aenean ut nibh non magna mattis fermentum vitae a ligula. Phasellus bibendum imperdiet lacinia. Cras aliquet aliquet felis, et aliquam purus tempus sed. Nullam eleifend lacus ac arcu rutrum bibendum. Donec nec orci tortor. Sed fringilla condimentum turpis id pretium. In lectus ex, pretium id elementum euismod, tempor id justo. Cras porttitor turpis in risus placerat bibendum.
+                
+                Nulla facilisi. Suspendisse faucibus augue non venenatis mollis. In efficitur venenatis nisl, vitae gravida felis fringilla a. Aliquam erat volutpat. Aenean nec dictum velit, a iaculis turpis. Duis eu tellus ante. Sed et condimentum quam, vel blandit sapien. Morbi non sodales mauris. Praesent vel interdum dolor. Donec eu eleifend odio. Nam turpis risus, iaculis et accumsan at, accumsan eu diam.
+                
+                Morbi porta nisi eget massa ornare pellentesque. Suspendisse pharetra vestibulum sapien, in tincidunt velit vulputate ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Integer ullamcorper lorem non mollis mattis. Praesent malesuada vestibulum neque, mattis lacinia libero sodales sed. Suspendisse congue leo et odio tempus, ac accumsan tortor volutpat. Aenean condimentum rhoncus ipsum. Phasellus convallis fringilla tortor. Sed sollicitudin eros a sagittis dictum. Phasellus fermentum volutpat leo. Maecenas sed enim semper, dapibus nulla id, rutrum orci. Morbi egestas tempor enim nec tempor.
+                
+                Donec ac eros dictum, euismod enim nec, tempus ex. Maecenas non congue ante. Etiam mattis bibendum lectus sit amet tincidunt. Mauris consectetur augue eget venenatis gravida. Aliquam sed lacinia odio. Fusce eleifend, elit quis tristique vestibulum, orci lacus congue risus, imperdiet rutrum lorem orci nec quam. Etiam scelerisque tellus at tincidunt auctor.
+                
+                In varius leo eget tortor scelerisque, eu porttitor felis aliquet. Suspendisse efficitur ut lorem ut scelerisque. Nullam elit risus, vulputate in nulla a, tempus lacinia lorem. Sed feugiat dolor tortor, at eleifend erat hendrerit ut. Donec ullamcorper ante nec libero fermentum convallis. Nullam pulvinar scelerisque tempor. Nunc quis lectus nisi. Vestibulum tristique fringilla iaculis. Nullam tincidunt nulla non auctor mattis. Vivamus id venenatis elit. Quisque eu orci eget elit tempus pellentesque quis egestas augue."
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_16.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =49
+            ZIndex: =5
+
+        "ElevationPopupOverlay As 'Fluent Elevation (1.0.6-beta)'":
+            DarkOverlay: =chkDarkPadding.Checked
+            Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.Height-Self.Y
+            HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth64
+            PaddingBottom: =64
+            PaddingLeft: =64
+            PaddingRight: =64
+            PaddingTop: =64
+            Visible: =pivotAppCode_16.Selected.ItemKey="app"
+            Width: =Parent.Width
+            X: =0
+            Y: =49
+            ZIndex: =6
+
+        "chkDarkPadding As 'Check box'":
+            AccessibleLabel: ="Show dark padding"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Show dark padding"
+            OnChange: =
+            Visible: =pivotAppCode_16.Selected.ItemKey="app"
+            Width: =160
+            X: =108
+            Y: =264
+            ZIndex: =7
+
+        lblSelected_23 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =60
+            Size: =varTheme.fontSizes.s
+            Text: ="Elevation can be used to focus on popup dialogs, with an option dark overlay in the padding of the component"
+            Visible: =pivotAppCode_16.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X*2
+            X: =92
+            Y: =180
+            ZIndex: =8
+
+        "CommandBarRightActions As 'Fluent Command Bar (1.0.6-beta)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: |-
+                =Table(
+                
+                    {
+                        ItemKey: "CopyTask",
+                        ItemIconName: "Copy",
+                        ItemDisplayName: "Copy task",
+                        ItemOverflow:true
+                    },
+                     {
+                        ItemKey: "Delete",
+                        ItemIconName: "Delete",
+                        ItemDisplayName: "Delete",
+                        ItemOverflow:true
+                    },
+                    {
+                        ItemKey: "Close",
+                        ItemIconName: "Cancel",
+                        ItemIconOnly: true,
+                        ItemFarItem:true
+                    }
+                
+                )
+            OnSelect: =
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_16.Selected.ItemKey="app"
+            Width: =80
+            X: =Parent.Width-64-Self.Width-8
+            Y: =122
+            ZIndex: =9
+
+        lblPopupTitle As Label:
+            Color: =varTheme.palette.themeDarkAlt
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =varTheme.fontSizes.l
+            FontWeight: =FontWeight.Semibold
+            Height: =52
+            Text: ="Dialog Title"
+            Visible: =pivotAppCode_16.Selected.ItemKey="app"
+            Width: =320
+            X: =76
+            Y: =118
+            ZIndex: =10
+

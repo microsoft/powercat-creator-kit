@@ -1,0 +1,356 @@
+IconActionButton As CanvasComponent:
+    ComponentHeight: |-
+        =
+        If(pivotAppCode_10.Selected.ItemKey="code",htmlCode_10.Y+htmlCode_10.Height,300)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_10 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Icon/Action Buttons"
+        Width: =630
+        Y: =2
+        ZIndex: =1
+
+    "pivotAppCode_10 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_10.Y+htmlCode_10.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =2
+
+    pivotline_10 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =3
+
+    htmlCode_10 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconActionButtonStandard As 'Fluent Icon'""</span>:
+                BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =If(chkFill.Checked,varTheme.paletteCSS.themePrimary)
+                FontColor: =If(chkFill.Checked,varTheme.paletteCSS.white)
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">35</span>
+                HoverBorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiary)
+                HoverFillColor: =If(chkFill.Checked,varTheme.paletteCSS.themeDarker,varTheme.paletteCSS.neutralLighter)
+                IconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""AddFriend""</span>
+                IconType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.IconType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.ActionButton
+                InputEvent: =varSetFocusActionButton
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Create account""</span>
+                TextAlignment: =ddAlignment.Selected.Key
+                Theme: =varTheme.themeJSON
+            
+            btnSetFocusActionButton As Button:
+                BorderRadius: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>
+                BorderStyle: =BorderStyle.Solid
+                BorderThickness: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>
+                ButtonType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'Microsoft.CoreControls.Button.ButtonType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Standard
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">35</span>
+                OnSelect: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varSetFocusActionButton,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""SetFocus""</span> &amp; Text(Rand()));
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Set focus""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconActionButtonCustom As 'Fluent Icon (0.0.13)'""</span>:
+                BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""green""</span>
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">35</span>
+                HoverBorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiary)
+                HoverFontColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""darkgreen""</span>
+                HoverIconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""darkred""</span>
+                IconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""red""</span>
+                IconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""AddFriend""</span>
+                IconType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.IconType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.ActionButton
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Custom colors""</span>
+                TextAlignment: =ddAlignment.Selected.Key
+                Theme: =varTheme.themeJSON
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconButtonCustom As 'Fluent Icon (0.0.13)'""</span>:
+                BorderRadius: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">3</span>
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                HoverIconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""darkred""</span>
+                IconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""red""</span>
+                IconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""AddFriend""</span>
+                IconType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.IconType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.IconButon
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Custom colors""</span>
+                TextAlignment: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Left
+                Theme: =varTheme.themeJSON
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""iconButtonStandard As 'Fluent Icon (0.0.13)'""</span>:
+                BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                IconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""AddFriend""</span>
+                IconType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.IconType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.IconButon
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Create account""</span>
+                TextAlignment: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Left
+                Theme: =varTheme.themeJSON
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowBorder As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show Border""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkFill As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show Fill""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ddAlignment As 'Combo box'.pcfdataset""</span>:
+                DefaultSelectedItems: |-
+                    =Table({Name:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Left""</span>})
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                Items: |-
+                    =Table(
+                        {
+                            Name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Left""</span>,
+                            Key: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Left
+                        },
+                        {
+                            Name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                            Key: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Center
+                        },
+                        {
+                            Name: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Right""</span>,
+                            Key: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Icon.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Right
+                        }
+                    )
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>
+            
+                Name5_1 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_10.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =4
+
+    Group8 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =17
+
+        "iconActionButtonStandard As 'Fluent Icon (1.0.6-beta)'":
+            BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
+            DisplayMode: =DisplayMode.Edit
+            FillColor: =If(chkFill.Checked,varTheme.paletteCSS.themePrimary)
+            FontColor: =If(chkFill.Checked,varTheme.paletteCSS.white)
+            Height: =35
+            HoverBorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiary)
+            HoverFillColor: =If(chkFill.Checked,varTheme.paletteCSS.themeDarker,varTheme.paletteCSS.neutralLighter)
+            HoverIconColor: =""
+            IconColor: =""
+            IconName: ="AddFriend"
+            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+            InputEvent: =varSetFocusActionButton
+            Text: ="Create account"
+            TextAlignment: =ddAlignment.Selected.Key
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =209
+            X: =30
+            Y: =110
+            ZIndex: =5
+
+        btnSetFocusActionButton As Button:
+            AccessibleLabel: ="Set focus"
+            BorderRadius: =1
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            OnSelect: =Set(varSetFocusActionButton,"SetFocus" & Text(Rand()));
+            Text: ="Set focus"
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =142
+            X: =441
+            Y: =115
+            ZIndex: =6
+
+        "iconActionButtonCustom As 'Fluent Icon (1.0.6-beta)'":
+            BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
+            DisplayMode: =DisplayMode.Edit
+            FontColor: ="green"
+            Height: =35
+            HoverBorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiary)
+            HoverFontColor: ="darkgreen"
+            HoverIconColor: ="darkred"
+            IconColor: ="red"
+            IconName: ="AddFriend"
+            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+            InputEvent: =
+            Text: ="Custom colors"
+            TextAlignment: =ddAlignment.Selected.Key
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =209
+            X: =30
+            Y: =158
+            ZIndex: =7
+
+        "iconButtonCustom As 'Fluent Icon (1.0.6-beta)'":
+            BorderRadius: =3
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =""
+            Height: =32
+            HoverFontColor: =""
+            HoverIconColor: ="darkred"
+            IconColor: ="red"
+            IconName: ="AddFriend"
+            IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+            InputEvent: =
+            Text: ="Custom colors"
+            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =32
+            X: =75
+            Y: =217
+            ZIndex: =8
+
+        htmlText_8 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: ="Icon Buttons and Action Buttons can be selected and raise the OnChange event."
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =56
+            ZIndex: =9
+
+        "iconButtonStandard As 'Fluent Icon (1.0.6-beta)'":
+            BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            HoverIconColor: =""
+            IconColor: =""
+            IconName: ="AddFriend"
+            IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+            InputEvent: =
+            Text: ="Create account"
+            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =32
+            X: =30
+            Y: =217
+            ZIndex: =12
+
+        "chkShowBorder As 'Check box'":
+            AccessibleLabel: ="Show border"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Show Border"
+            OnChange: =
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =160
+            X: =281
+            Y: =133
+            ZIndex: =13
+
+        "chkFill As 'Check box'":
+            AccessibleLabel: ="Show fill"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Show Fill"
+            OnChange: =
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =160
+            X: =281
+            Y: =101
+            ZIndex: =14
+
+        "ddAlignment As 'Combo box'.pcfdataset":
+            AccessibleLabel: ="Align"
+            DefaultSelectedItems: |-
+                =Table({Name:"Left"})
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: |-
+                =Table(
+                    {
+                        Name: "Left",
+                        Key: '''PowerCAT.Icon.TextAlignment'''.Left
+                    },
+                    {
+                        Name: "Center",
+                        Key: '''PowerCAT.Icon.TextAlignment'''.Center
+                    },
+                    {
+                        Name: "Right",
+                        Key: '''PowerCAT.Icon.TextAlignment'''.Right
+                    }
+                )
+            Text: =""
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =153
+            X: =336
+            Y: =166
+            ZIndex: =15
+
+            Name5_1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Name"
+                FieldName: ="Name"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =11
+
+        lblAlign As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Align:"
+            Visible: =pivotAppCode_10.Selected.ItemKey="app"
+            Width: =54
+            X: =281
+            Y: =165
+            ZIndex: =16
+

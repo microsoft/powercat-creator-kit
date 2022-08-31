@@ -1,0 +1,60 @@
+scrTemplate As screen:
+
+    stackRoot_1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_2.Width
+        Y: =Header_17.Height
+        ZIndex: =2
+
+        lblTitle_1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="Component Name"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_1 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="Lorem Ipsum"
+            ZIndex: =2
+
+        BestPractices_2 As BestPractices:
+            Donts: |
+                =Table(
+                    {text:"Don't do this."},
+                    {text:"Don't do that."}
+                )
+            Dos: |
+                =Table(
+                    {text:"Do this."},
+                    {text:"Do that."}
+                )
+            LayoutMinHeight: =640
+            Visible: =true
+            ZIndex: =3
+
+    LeftNav_2 As LeftNav:
+        Height: =Parent.Height
+        Width: =200
+        Y: =Header_17.Height
+        ZIndex: =7
+
+    Header_17 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Width: =App.Width
+        ZIndex: =8
+

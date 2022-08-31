@@ -1,0 +1,155 @@
+CommandBarColors As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_1.Selected.ItemKey="code",htmlCode_1.Y+htmlCode_1.Height,160)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    OnReset: =
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_1 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="CommandBar custom icon colors"
+        Width: =630
+        Y: =2
+        ZIndex: =4
+
+    "pivotAppCode_1 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_1.Y+htmlCode_1.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =5
+
+    line_1 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    htmlCode_1 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">lblSelectedKey_1 As label:
+                Text: =Coalesce(commandBar_1.Selected.ItemKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
+                
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_1 As 'Fluent Command Bar'.pcfdataset""</span>:
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                Items: |-
+                    =Table(
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""New""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""emailMessage""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Email message""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Mail""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(0, 191, 255)""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""calendarEvent""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Calendar event""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Calendar""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(0, 0, 0)""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>},
+                    
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>},
+                            {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""uploadfile""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""File""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>},
+                            {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""uploadfolder""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Folder""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>, ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>},
+                    
+                        <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// Force these items to overflow</span>
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""move""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Move to...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""MoveToFolder""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""copy""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Copy to...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Copy""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rename""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Rename...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Edit""</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                    
+                        <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// Far Items</span>
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""tile""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Grid view""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tiles""</span>,ItemIconOnly:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemFarItem:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""info""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Info""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Info""</span>,ItemIconOnly:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemIconColor:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rgb(232, 17, 35)""</span>,ItemFarItem:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>}
+                    )
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_1.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+                Width: =Parent.Width-Self.X
+                X: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">12</span>
+                Y: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">53</span>
+                ZIndex: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">3</span>
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_1.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =7
+
+    Group1_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =8
+
+        lblSelectedKey_1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =Coalesce(commandBar_1.Selected.ItemKey,"(none)") 
+            Visible: =pivotAppCode_1.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =180
+            Y: =85
+            ZIndex: =1
+
+        lblSelected_1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Command Selected Key:"
+            Visible: =pivotAppCode_1.Selected.ItemKey="app"
+            Width: =174
+            X: =12
+            Y: =84
+            ZIndex: =2
+
+        "commandBar_1 As 'Fluent Command Bar (1.0.6-beta)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: |-
+                =Table(
+                    {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add",ItemIconColor:"rgb(232, 17, 35)"},
+                    {ItemKey:"emailMessage",ItemDisplayName:"Email message",ItemIconName:"Mail",ItemIconColor:"rgb(0, 191, 255)",ItemParentKey:"newItem"},
+                    {ItemKey:"calendarEvent",ItemDisplayName:"Calendar event",ItemIconName:"Calendar",ItemIconColor:"rgb(0, 0, 0)",ItemParentKey:"newItem"},
+                
+                    {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconColor:"rgb(35, 135, 135)",ItemIconName:"Upload"},
+                        {ItemKey:"uploadfile",ItemDisplayName:"File",ItemIconName:"Upload",ItemIconColor:"rgb(232, 17, 35)",ItemParentKey:"upload"},
+                        {ItemKey:"uploadfolder",ItemDisplayName:"Folder",ItemIconName:"Upload", ItemIconColor:"rgb(35, 135, 135)",ItemParentKey:"upload"},
+                
+                    // Force these items to overflow
+                    {ItemKey:"move",ItemDisplayName:"Move to...",ItemIconName:"MoveToFolder",ItemIconColor:"rgb(232, 17, 35)",ItemOverflow:true},
+                    {ItemKey:"copy",ItemDisplayName:"Copy to...",ItemIconName:"Copy",ItemIconColor:"rgb(232, 17, 35)",ItemOverflow:true},
+                    {ItemKey:"rename",ItemDisplayName:"Rename...",ItemIconName:"Edit",ItemIconColor:"rgb(232, 17, 35)",ItemOverflow:true},
+                
+                    // Far Items
+                    {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemIconColor:"rgb(232, 17, 35)",ItemFarItem:true},
+                    {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemIconColor:"rgb(232, 17, 35)",ItemFarItem:true}
+                )
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_1.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =12
+            Y: =53
+            ZIndex: =3
+

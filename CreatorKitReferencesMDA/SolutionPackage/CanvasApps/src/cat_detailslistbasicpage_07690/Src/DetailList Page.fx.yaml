@@ -1,0 +1,2190 @@
+"'DetailList Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =
+        
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            Width: =App.Width
+            ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =""
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =Parent.Width-MainContainer.PaddingLeft-MainContainer.PaddingRight - 20
+            Width: =App.Width
+            ZIndex: =2
+
+            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ComponentGuidanceContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentGuidance.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentGuidance.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentGuidance As Recomendation:
+                AdditionalContent: =currentComp.Guidance
+                Donts: =
+                Dos: =
+                Height: =ComponentGuidance.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =4
+
+            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_1.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_1.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =LookUp(currentCompSamplesCol,Name = "DetailsListBasicSample1").Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_1 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =LookUp(currentCompSamplesCol,Name = "DetailsListBasicSample1").CodeSnippet
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_1.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.manualLayoutContainer:
+                    LayoutMinHeight: =600
+                    LayoutMinWidth: =250
+                    PaddingBottom: =2
+                    PaddingLeft: =20
+                    PaddingRight: =30
+                    PaddingTop: =2
+                    ZIndex: =3
+
+                    "ddSelectionMode As 'Combo box'.pcfdataset":
+                        AccessibleLabel: ="Align"
+                        DefaultSelectedItems: |-
+                            =Table({Name:"None"})
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table(
+                                {
+                                    Name: "None",
+                                    Key: '''PowerCAT.FluentDetailsList.SelectionType'''.None
+                                },
+                                {
+                                    Name: "Single",
+                                    Key: '''PowerCAT.FluentDetailsList.SelectionType'''.Single
+                                },
+                                {
+                                    Name: "Multple",
+                                    Key: '''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                                }
+                            )
+                        Text: =""
+                        Visible: =true
+                        Width: =130
+                        X: =117
+                        Y: =41
+                        ZIndex: =1
+
+                        Name5_3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Name"
+                            FieldName: ="Name"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =11
+
+                    lblAlignDetailsListBasic As label:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =AppTheme.palette.neutralPrimary
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Lighter
+                        Height: =33
+                        Size: =AppTheme.fontSizes.s
+                        Text: |-
+                            ="Selection:"
+                        Width: =77
+                        X: =40
+                        Y: =40
+                        ZIndex: =2
+
+                    "chkCompact As 'Check box'":
+                        AccessibleLabel: ="Compact mode"
+                        Checked: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Compact mode"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =261
+                        Y: =41
+                        ZIndex: =3
+
+                    "chkShowHeader As 'Check box'":
+                        AccessibleLabel: ="Show header"
+                        Checked: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Show header"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =421
+                        Y: =41
+                        ZIndex: =4
+
+                    lblRecordCountTop As label:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =AppTheme.palette.neutralPrimary
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Lighter
+                        Height: =32
+                        Size: =AppTheme.fontSizes.s
+                        Text: =$"{FluentDetailsListBasic.TotalRecords} record{If(FluentDetailsListBasic.TotalRecords>1,"s")} ({0+CountRows(FluentDetailsListBasic.SelectedItems)} selected)"
+                        Width: =268
+                        X: =327
+                        Y: =142
+                        ZIndex: =5
+
+                    lblLastRowSelected As label:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =AppTheme.palette.neutralPrimary
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Lighter
+                        Height: =27
+                        Size: =AppTheme.fontSizes.s
+                        Text: |-
+                            =$"Last row selected (double-click or Enter when focused): {Coalesce(varRowSelectedBasic.Name,"(none)")}"
+                        Width: =Parent.Width - Parent.PaddingRight
+                        X: =Parent.PaddingLeft
+                        Y: =563
+                        ZIndex: =6
+
+                    "txtSearchFiles As 'Text box'":
+                        AccessibleLabel: ="Search files"
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Placeholder: ="Search files"
+                        Value: =""
+                        Visible: =true
+                        Width: =235
+                        X: =78
+                        Y: =144
+                        ZIndex: =7
+
+                    "chkAltRowColor As 'Check box'":
+                        AccessibleLabel: ="Alternate row color"
+                        Checked: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Alternate Row Color"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =261
+                        Y: =78
+                        ZIndex: =9
+
+                    "chkWrapDescription As 'Check box'":
+                        AccessibleLabel: ="Wrap description"
+                        Checked: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Wrap description"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =421
+                        Y: =78
+                        ZIndex: =10
+
+                    "chkCollapseCols As 'Check box'":
+                        AccessibleLabel: ="Collapse columns"
+                        Checked: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Collapse Columns"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =421
+                        Y: =110
+                        ZIndex: =11
+
+                    "FluentDetailsListBasic As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        AlternateRowColor: =If(chkAltRowColor.Checked,AppTheme.paletteCSS.neutralLighterAlt)
+                        columns_Items: |-
+                            =With({
+                                // If there is a selection column, we remove the width and the padding
+                                availableWidth:Self.Width-If(ddSelectionMode.Selected.Name<>"None",32+16),
+                                padding:32,
+                                scrollWidth:20,
+                                collapsedModifiedOn:chkCollapseCols.Checked,//If(collapsed,0,100-padding),
+                                multiLineDescription: chkWrapDescription.Checked
+                                },
+                            Table(
+                                {
+                                    ColName:"Icon",ColDisplayName:"",ColWidth:32,ColCellType:"image",ColImageWidth:16,ColVerticalAlign:"top",ColPaddingTop:4
+                                },
+                                {
+                                    ColName:"Name",ColDisplayName:"Name",ColSortable:true,ColWidth:200,ColRowHeader:true,
+                                    ColResizable:true
+                                },
+                                {
+                                    ColName:"Description",ColDisplayName:"Description",ColSortable:true,
+                                    ColWidth:availableWidth-scrollWidth-32-(200+padding)-If(collapsedModifiedOn,0,100+padding),ColResizable:true,
+                                    ColMultiLine:multiLineDescription
+                                },
+                                {
+                                    ColName:"DateModified",ColDisplayName:"Date Modified",ColSortable:true,
+                                    ColWidth:If(collapsedModifiedOn,200,100),ColResizable:true,ColShowAsSubTextOf:If(collapsedModifiedOn,"Name"),
+                                    ColInlineLabel:If(collapsedModifiedOn,"Modified:")
+                                }
+                            )
+                            )
+                        Compact: =chkCompact.Checked
+                        CurrentSortColumn: =varSortFiles
+                        DisplayMode: =DisplayMode.Edit
+                        HeaderVisible: =chkShowHeader.Checked
+                        Height: =344
+                        Items: |-
+                            =SortByColumns(
+                                Search(colFiles,txtSearchFiles.Value,"Name"),
+                                varSortFiles,
+                                If(varSortFilesAsc,SortOrder.Ascending,SortOrder.Descending)
+                            )
+                        OnChange: |-
+                            =If(
+                                Self.EventName = "Sort",
+                                Set(varSortFiles,Self.SortEventColumn);
+                                Set(varSortFilesAsc,Self.SortEventDirection = '''PowerCAT.FluentDetailsList.SortEventDirection'''.Ascending);
+                            );
+                            
+                            If(Self.EventName="CellAction",Notify("Cell Action " & Self.EventRowKey));
+                        OnSelect: =Set(varRowSelectedBasic,Self.Selected);
+                        PageSize: =2000
+                        SelectionType: =ddSelectionMode.Selected.Key
+                        Theme: =AppThemeJson
+                        Width: =Parent.Width - Parent.PaddingRight
+                        X: =Parent.PaddingLeft
+                        Y: =212
+                        ZIndex: =12
+
+                        DateModified1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="DateModified"
+                            FieldName: ="DateModified"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =13
+
+                        Description1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Description"
+                            FieldName: ="Description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =14
+
+                        Icon1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Icon"
+                            FieldName: ="Icon"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =15
+
+                        Index1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Index"
+                            FieldName: ="Index"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =16
+
+                        Name1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Name"
+                            FieldName: ="Name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =17
+
+                        Number1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Number"
+                            FieldName: ="Number"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =18
+
+                        Status1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Status"
+                            FieldName: ="Status"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =19
+
+                        StatusCol1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="StatusCol"
+                            FieldName: ="StatusCol"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =20
+
+                        SubText31 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="SubText3"
+                            FieldName: ="SubText3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =21
+
+                        SubText21 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="SubText2"
+                            FieldName: ="SubText2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =22
+
+                        SubText11 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="SubText1"
+                            FieldName: ="SubText1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =23
+
+                        StatusIcon1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="StatusIcon"
+                            FieldName: ="StatusIcon"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =12
+                            ZIndex: =24
+
+                        StatusColor1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="StatusColor"
+                            FieldName: ="StatusColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =13
+                            ZIndex: =25
+
+        ExampleContainer_2 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_2.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =6
+
+            "Elevation_5 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Visible: =true
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_2.Height + If(pivotAppCode_2.Selected.ItemKey="app", ComponentExample1_1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_1.Height + ExampleHeader_2.PaddingTop + ExampleHeader_2.PaddingBottom+ If(pivotAppCode_2.Selected.ItemKey="code",htmlCodeSnippet_1.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_4 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_4.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =LookUp(currentCompSamplesCol,Name = "RightAlignSample").Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_2 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_1 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_1 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =LookUp(currentCompSamplesCol,Name = "RightAlignSample").CodeSnippet
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_2.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_1 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =300
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =300
+                    PaddingBottom: =2
+                    PaddingLeft: =20
+                    PaddingRight: =30
+                    PaddingTop: =2
+                    ZIndex: =3
+
+                    sldWidth As slider:
+                        AccessibleLabel: ="Table width"
+                        BorderColor: =
+                        Default: =Self.Max
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderColor: =
+                        FocusedBorderThickness: =1
+                        HandleFill: =RGBA(255, 255, 255, 1)
+                        HandleSize: =16
+                        Max: =Parent.Width-16
+                        RailFill: =AppTheme.palette.neutralTertiaryAlt
+                        RailThickness: =2
+                        ValueFill: =AppTheme.palette.neutralPrimary
+                        ValueHoverFill: =AppTheme.palette.themePrimary
+                        Width: =169
+                        X: =139
+                        Y: =244
+                        ZIndex: =1
+
+                    "chkLongList As 'Check box'":
+                        AccessibleLabel: ="Filder to first 3 rows"
+                        Checked: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Filter to first 3 rows"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =45
+                        Y: =212
+                        ZIndex: =2
+
+                    lblTableWidth As label:
+                        Align: =Align.Right
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =AppTheme.palette.neutralPrimary
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Lighter
+                        Height: =18
+                        Size: =AppTheme.fontSizes.s
+                        Text: |-
+                            ="Table width:"
+                        Width: =94
+                        X: =24
+                        Y: =255
+                        ZIndex: =3
+
+                    "FluentDetailsListRightalignCol As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        columns_Items: |-
+                            =With({
+                                // If there is a selection column, we remove the width and the padding
+                                availableWidth:Self.Width-Self.X*2,
+                                padding:32,
+                                iconWidth:40,
+                                statusWidth:40,
+                                scrollWidth:20
+                                },
+                                Table(
+                                    {
+                                        ColName: "Icon",
+                                        ColDisplayName: "",
+                                        ColWidth: iconWidth,
+                                        ColSortable: false,
+                                        ColCellType: "Image",
+                                        ColImageWidth: 18,
+                                        ColVerticalAlign:"Center",
+                                        ColHorizontalAlign:"Center"
+                                    },
+                                    {
+                                        ColName: "Name",
+                                        ColDisplayName: "Name",
+                                        ColWidth: availableWidth-scrollWidth-iconWidth-padding-scrollWidth-padding,
+                                        ColSortable: true,
+                                        ColResizable: true,
+                                        ColSortBy: "Index",
+                                        ColIsBold:true,
+                                        ColVerticalAlign:"Center"
+                                    },
+                                    {
+                                        ColName: "StatusIcon",
+                                        ColDisplayName: "Status",
+                                        ColWidth:statusWidth,
+                                        ColSortable: false,
+                                        ColCellType: "ClickableImage",
+                                        ColImageWidth: 18,
+                                        ColTagColorColumn:"StatusCol",
+                                        ColVerticalAlign:"Center",
+                                        ColHorizontalAlign:"Right"
+                                
+                                    }
+                                )
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =200
+                        Items: =FirstN(colRows,If(!chkLongList.Checked,CountRows(colRows),3))
+                        Width: =sldWidth.Value - Parent.PaddingRight
+                        X: =Parent.PaddingLeft 
+                        Y: =12
+                        ZIndex: =4
+
+                        Description2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Description"
+                            FieldName: ="Description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =26
+
+                        Icon3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Icon"
+                            FieldName: ="Icon"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =27
+
+                        Image1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Image"
+                            FieldName: ="Image"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =28
+
+                        Index2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Index"
+                            FieldName: ="Index"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =29
+
+                        Name2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Name"
+                            FieldName: ="Name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =30
+
+                        Number2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Number"
+                            FieldName: ="Number"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =31
+
+                        StatusCol2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="StatusCol"
+                            FieldName: ="StatusCol"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =32
+
+                        StatusColor2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="StatusColor"
+                            FieldName: ="StatusColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =33
+
+                        Status2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Status"
+                            FieldName: ="Status"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =34
+
+                        StatusIcon2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="StatusIcon"
+                            FieldName: ="StatusIcon"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =35
+
+                        SubText12 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="SubText1"
+                            FieldName: ="SubText1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =36
+
+                        SubText22 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="SubText2"
+                            FieldName: ="SubText2"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =12
+                            ZIndex: =37
+
+                        SubText32 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="SubText3"
+                            FieldName: ="SubText3"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =13
+                            ZIndex: =38
+
+        ExampleContainer_3 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_3.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =7
+
+            "Elevation_6 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_3.Height + If(pivotAppCode_3.Selected.ItemKey="app", ComponentExample1_2.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_2.Height + ExampleHeader_3.PaddingTop + ExampleHeader_3.PaddingBottom+ If(pivotAppCode_3.Selected.ItemKey="code",htmlCodeSnippet_2.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_2 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_5 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_5.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =LookUp(currentCompSamplesCol,Name = "DetailListCellTypesExample1").Usage 
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_3 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_2.Y+htmlCodeSnippet_2.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_2 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_2 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =LookUp(currentCompSamplesCol,Name = "DetailListCellTypesExample1").CodeSnippet
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_3.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_2 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =220
+                    LayoutMinHeight: =600
+                    LayoutMinWidth: =250
+                    PaddingBottom: =2
+                    PaddingLeft: =20
+                    PaddingRight: =30
+                    PaddingTop: =2
+                    ZIndex: =3
+
+                    "FluentDetailsListElevation As 'Fluent Elevation (0.0.22)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =FluentDetailsListCellTypes.Height
+                        Width: =FluentDetailsListCellTypes.Width
+                        X: =FluentDetailsListCellTypes.X
+                        Y: =FluentDetailsListCellTypes.Y
+                        ZIndex: =1
+
+                    "FluentDetailsListCellTypes As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        AlternateRowColor: =
+                        columns_Items: |-
+                            =Table(
+                                {
+                                    ColName: "name",
+                                    ColDisplayName: "Account Name",
+                                    ColWidth: 100,
+                                    ColIsBold:true,
+                                    ColCellType: "link",
+                                    ColVerticalAlign: "Center"
+                                },
+                                {
+                                    ColName: "city",
+                                    ColDisplayName: "City:",
+                                    ColShowAsSubTextOf:"name",
+                                    ColLabelAbove:false,
+                                    ColIsBold:false,
+                                    ColSubTextRow: 1,
+                                    ColVerticalAlign: "Center"
+                                },
+                                {
+                                    ColName: "externalimage",
+                                    ColDisplayName: "External",
+                                    ColCellType:"image",
+                                    ColWidth: 60,
+                                    ColImageWidth: 60,
+                                    ColVerticalAlign: "Center",
+                                    ColHorizontalAlign:"Center",
+                                    ColResizable:true
+                                },
+                                {
+                                    ColName: "iconimage",
+                                    ColDisplayName: "Icon",
+                                    ColCellType:"clickableimage",
+                                    ColWidth: 40,
+                                    ColTagColorColumn:"TagColor",
+                                    ColVerticalAlign: "Center",
+                                    ColHorizontalAlign:"Center",
+                                    ColResizable:true
+                            
+                                },
+                                 {
+                                    ColName: "svg",
+                                    ColDisplayName: "Svg",
+                                    ColCellType:"clickableimage",
+                                    ColWidth: 60,
+                                    ColVerticalAlign: "Center",
+                                    ColHorizontalAlign:"Center",
+                                    ColResizable:true
+                                },
+                                {
+                                    ColName: "country",
+                                    ColDisplayName: "Tag",
+                                    ColCellType:"tag",
+                                    ColWidth: 70,
+                                    ColTagColorColumn: "TagColor",
+                                    ColTagBorderColorColumn: "TagBorderColor",
+                                    ColVerticalAlign: "Center",
+                                    ColHorizontalAlign:"Center",
+                                    ColResizable:true
+                                },
+                                
+                                {
+                                    ColName: "country",
+                                    ColDisplayName: "Indicator",
+                                    ColCellType:"indicatortag",
+                                    ColWidth: 150,
+                                    ColTagColorColumn: "TagColor",
+                                    ColTagBorderColorColumn: "TagBorderColor",
+                                    ColIsBold:true,
+                                    ColVerticalAlign: "Center",
+                                    ColHorizontalAlign:"Center",
+                                    ColInlineLabel:"Status:",
+                                    ColResizable:true
+                                },
+                                 {
+                                    ColName: "tags",
+                                    ColDisplayName: "Tag List",
+                                    ColWidth: 250,
+                                    ColFirstMultiValueBold :true,
+                                    ColMultiValueDelimeter:", "
+                                }
+                            )
+                        Compact: =false
+                        CurrentSortColumn: =""
+                        DisplayMode: =DisplayMode.Edit
+                        HeaderVisible: =true
+                        Height: =181
+                        Items: =colAccounts
+                        OnChange: |-
+                            =
+                            If(Self.EventName="CellAction",    Notify("CellAction " & Self.EventColumn & " " & Self.EventRowKey))
+                        OnSelect: =false
+                        PageSize: =150
+                        RecordKey: ="id"
+                        SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                        Theme: =AppThemeJson
+                        Width: =Parent.Width - Parent.PaddingRight
+                        X: =20
+                        Y: =8
+                        ZIndex: =2
+
+                        city1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="city"
+                            FieldName: ="city"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =39
+
+                        country1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="country"
+                            FieldName: ="country"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =40
+
+                        description1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="description"
+                            FieldName: ="description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =41
+
+                        expand1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="expand"
+                            FieldName: ="expand"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =42
+
+                        externalimage1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="externalimage"
+                            FieldName: ="externalimage"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =43
+
+                        iconimage1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="iconimage"
+                            FieldName: ="iconimage"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =44
+
+                        id1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="id"
+                            FieldName: ="id"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =45
+
+                        name1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="name"
+                            FieldName: ="name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =46
+
+                        svg1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="svg"
+                            FieldName: ="svg"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =47
+
+                        TagBorderColor1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="TagBorderColor"
+                            FieldName: ="TagBorderColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =48
+
+                        TagColor1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="TagColor"
+                            FieldName: ="TagColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =49
+
+                        tags1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="tags"
+                            FieldName: ="tags"
+                            FieldType: |-
+                                ="*[Value:s]"
+                            FieldVariantName: ="textualColumn"
+                            Order: =12
+                            ZIndex: =50
+
+        ExampleContainer_4 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_4.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =8
+
+            "Elevation_7 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Visible: =true
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_4.Height + If(pivotAppCode_4.Selected.ItemKey="app", ComponentExample1_3.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_4 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_3.Height + ExampleHeader_4.PaddingTop + ExampleHeader_4.PaddingBottom+ If(pivotAppCode_4.Selected.ItemKey="code",htmlCodeSnippet_3.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_3 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_6 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_6.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =LookUp(currentCompSamplesCol,Name = "DetailListCellTypesExample2").Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_4 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_3.Y+htmlCodeSnippet_3.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_3 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_3 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =LookUp(currentCompSamplesCol,Name = "DetailListCellTypesExample2").CodeSnippet
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_4.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_3 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =240
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =300
+                    PaddingBottom: =2
+                    PaddingLeft: =20
+                    PaddingRight: =30
+                    PaddingTop: =2
+                    ZIndex: =3
+
+                    "FluentDetailsListExapndElevation As 'Fluent Elevation (0.0.22)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =FluentDetailsListDetailsListExpand.Height
+                        Width: =FluentDetailsListDetailsListExpand.Width
+                        X: =FluentDetailsListDetailsListExpand.X
+                        Y: =FluentDetailsListDetailsListExpand.Y
+                        ZIndex: =1
+
+                    "FluentDetailsListDetailsListExpand As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        columns_Items: |-
+                            =Table(
+                                {
+                                    ColName: "name",
+                                    ColDisplayName: "Account Name",
+                                    ColWidth: Self.Width-32-32-48,
+                                    ColIsBold:true,
+                                    ColResizable:true
+                                },
+                                {
+                                    ColName: "city",
+                                    ColDisplayName: "City:",
+                                    ColShowAsSubTextOf:"name",
+                                    ColLabelAbove:false,
+                                    ColIsBold:true,
+                                    ColSubTextRow: 1
+                                },
+                                {
+                                    ColName: "country",
+                                    ColDisplayName: "Country:",
+                                    ColShowAsSubTextOf:"name",
+                                    ColLabelAbove:false,
+                                    ColIsBold:true,
+                                    ColSubTextRow: 1
+                                },
+                                {
+                                    ColName: "description",
+                                    ColDisplayName: "",
+                                    ColShowAsSubTextOf:"name",
+                                    ColLabelAbove:false,
+                                    ColIsBold:false,
+                                    ColSubTextRow: 2
+                                },
+                                 {
+                                    ColName: "expand",
+                                    ColDisplayName:"",
+                                    ColCellType:"expand",
+                                    ColRightAligned:true,
+                                    ColWidth: 32
+                                }
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =200
+                        Items: =colAccountsExpand
+                        OnChange: |-
+                            =If(Self.EventName="CellAction" && Self.EventColumn="expand",
+                                With(LookUp(colAccountsExpand,id=Self.EventRowKey) As Row,
+                                    Patch(colAccountsExpand,Row,{expand:!Row.expand})
+                                )
+                            );
+                        RecordKey: ="id"
+                        SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                        Theme: =AppThemeJson
+                        Width: =Parent.Width-Self.X*2
+                        X: =40
+                        Y: =12
+                        ZIndex: =2
+
+                        city2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="city"
+                            FieldName: ="city"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =51
+
+                        country2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="country"
+                            FieldName: ="country"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =52
+
+                        description2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="description"
+                            FieldName: ="description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =53
+
+                        expand2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="expand"
+                            FieldName: ="expand"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =54
+
+                        externalimage2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="externalimage"
+                            FieldName: ="externalimage"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =55
+
+                        iconimage2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="iconimage"
+                            FieldName: ="iconimage"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =56
+
+                        id2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="id"
+                            FieldName: ="id"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =57
+
+                        name2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="name"
+                            FieldName: ="name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =58
+
+                        tags2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="tags"
+                            FieldName: ="tags"
+                            FieldType: |-
+                                ="*[Value:s]"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =59
+
+                        TagColor2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="TagColor"
+                            FieldName: ="TagColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =60
+
+                        TagBorderColor2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="TagBorderColor"
+                            FieldName: ="TagBorderColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =11
+                            ZIndex: =61
+
+                        svg2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="svg"
+                            FieldName: ="svg"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =12
+                            ZIndex: =62
+
+        ExampleContainer_5 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_5.Height
+            LayoutMinHeight: =300
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =9
+
+            "Elevation_8 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Visible: =true
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_5.Height + If(pivotAppCode_5.Selected.ItemKey="app", ComponentExample1_4.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                ExampleHeader_5 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_4.Height + ExampleHeader_5.PaddingTop + ExampleHeader_5.PaddingBottom+ If(pivotAppCode_5.Selected.ItemKey="code",htmlCodeSnippet_4.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_4 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_7 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_7.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =LookUp(currentCompSamplesCol,Name = "DetailListCellTypesExample3").Usage 
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_5 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_4.Y+htmlCodeSnippet_4.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_4 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_4 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =LookUp(currentCompSamplesCol,Name = "DetailListCellTypesExample3").CodeSnippet
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_5.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_4 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =240
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =300
+                    PaddingBottom: =2
+                    PaddingLeft: =20
+                    PaddingRight: =30
+                    PaddingTop: =2
+                    ZIndex: =2
+
+                    "FluentDetailsListLayoutElevation As 'Fluent Elevation (0.0.22)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =FluentDetailsListLayout.Height
+                        Width: =FluentDetailsListLayout.Width
+                        X: =FluentDetailsListLayout.X
+                        Y: =FluentDetailsListLayout.Y
+                        ZIndex: =1
+
+                    "FluentDetailsListLayout As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        columns_Items: |-
+                            =With({
+                                // If there is a selection column, we remove the width and the padding
+                                availableWidth:Self.Width-Parent.PaddingRight-Self.X,
+                                padding:32,
+                                iconWidth:24,
+                                reviewWidth:100,
+                                scrollWidth:20
+                                },
+                                Table(
+                                    // Main Columns
+                                    {
+                                        ColName: "iconimage",
+                                        ColCellType:"image",
+                                        ColImageColor:"blue",
+                                        ColVerticalAlign: "center",
+                                        ColHorizontalAlign: "center",
+                                        ColWidth:iconWidth
+                                    },
+                                    {
+                                        ColName: "heading",
+                                        ColDisplayName: "Project Name",
+                                        ColWidth: availableWidth-iconWidth-padding-reviewWidth-padding-scrollWidth,
+                                        ColIsBold:false,
+                                        ColRowHeader:true,
+                                        ColHideWhenBlank:true,
+                                        ColPaddingTop:0,
+                                        ColVerticalAlign: "center",
+                                        ColMultiLine:true
+                                    },
+                                    {
+                                        ColName: "review",
+                                        ColCellType:"link",
+                                        ColHideWhenBlank:true,
+                                        ColWidth:100,
+                                        ColHorizontalAlign:"right"
+                                    },
+                                    // Sub text columns
+                                    {
+                                        ColName: "name",
+                                        ColShowAsSubTextOf:"heading",
+                                        ColSubTextRow:0,
+                                        ColPaddingLeft:30,
+                                        ColHideWhenBlank:true,
+                                        ColVerticalAlign: "center"
+                                    },
+                                    {
+                                        ColName: "tag",
+                                        ColShowAsSubTextOf:"heading",
+                                        ColCellType:"tag",
+                                        ColTagColorColumn: "TagColor",
+                                        ColTagBorderColorColumn: "TagBorderColor",
+                                        ColSubTextRow:0,
+                                        ColHideWhenBlank:true,
+                                        ColHorizontalAlign:"center",
+                                        ColPaddingLeft:16,
+                                        ColPaddingTop:8,
+                                        ColVerticalAlign: "center"
+                                    },
+                                    {
+                                        ColName: "score",
+                                        ColShowAsSubTextOf:"review",
+                                        ColCellType:"tag",
+                                        ColHideWhenBlank:true,
+                                        ColHorizontalAlign:"right"
+                                    
+                                    }
+                                )
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =200
+                        Items: =colLayoutRows
+                        OnChange: |-
+                            =If(Self.EventName="CellAction" && Self.EventColumn="review",
+                                With({selectedItem:LookUp(colLayoutRows,id=Self.EventRowKey)},
+                                    If(selectedItem.selectable,
+                                        Notify($"Review {selectedItem.name}");
+                                    );
+                                );
+                            );
+                        OnSelect: |
+                            =
+                            If(Self.Selected.selectable,
+                                Notify($"Review {Self.Selected.name}");
+                            );
+                        RecordCanSelect: ="selectable"
+                        RecordKey: ="id"
+                        SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.None
+                        Theme: =AppThemeJson
+                        Width: =Parent.Width - Parent.PaddingRight - Self.X
+                        X: =40
+                        Y: =0
+                        ZIndex: =2
+
+                        heading1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="heading"
+                            FieldName: ="heading"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =63
+
+                        iconimage3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="iconimage"
+                            FieldName: ="iconimage"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =64
+
+                        id3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="id"
+                            FieldName: ="id"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =65
+
+                        name3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="name"
+                            FieldName: ="name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =66
+
+                        review1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="review"
+                            FieldName: ="review"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =67
+
+                        score1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="score"
+                            FieldName: ="score"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =68
+
+                        selectable1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="selectable"
+                            FieldName: ="selectable"
+                            FieldType: ="b"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =69
+
+                        tag1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="tag"
+                            FieldName: ="tag"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =8
+                            ZIndex: =70
+
+                        TagColor3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="TagColor"
+                            FieldName: ="TagColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =9
+                            ZIndex: =71
+
+                        TagBorderColor3 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="TagBorderColor"
+                            FieldName: ="TagBorderColor"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =10
+                            ZIndex: =72
+
+        ComponentGuidanceContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentGuidance_1.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =10
+
+            "Elevation_3 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentGuidance_1.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentGuidance_1 As Recomendation:
+                AdditionalContent: =LookUp(currentCompSamplesCol,Name = "PagingSortingSample").CodeSnippet
+                Donts: =
+                Dos: =
+                Header: =LookUp(currentCompSamplesCol,Name = "PagingSortingSample").Usage & " Best Practices"
+                Height: =ComponentGuidance_1.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_6 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_6.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =11
+
+            "Elevation_9 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_6 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_6.Height + If(pivotAppCode_6.Selected.ItemKey="app", ComponentExample1_5.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_6 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_5.Height + ExampleHeader_6.PaddingTop + ExampleHeader_6.PaddingBottom+ If(pivotAppCode_6.Selected.ItemKey="code",htmlCodeSnippet_5.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_5 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_8 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_8.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =LookUp(currentCompSamplesCol,Name = "PagingSortingSample").Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_6 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_5.Y+htmlCodeSnippet_5.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Visible: =false
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_5 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_5 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_6.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_5 As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =420
+                    LayoutMinHeight: =600
+                    LayoutMinWidth: =250
+                    PaddingBottom: =2
+                    PaddingLeft: =20
+                    PaddingRight: =30
+                    PaddingTop: =2
+                    ZIndex: =3
+
+                    "FluentDetailsListElevation_1 As 'Fluent Elevation (0.0.22)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =FluentDetailsListAccounts.Height
+                        Width: =FluentDetailsListAccounts.Width
+                        X: =FluentDetailsListAccounts.X
+                        Y: =FluentDetailsListAccounts.Y
+                        ZIndex: =1
+
+                    "FluentDetailsListAccounts As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        AlternateRowColor: =
+                        columns_Items: |
+                            =Table(
+                                {ColName:"name",ColDisplayName:"Name",ColWidth:300,ColSortable:true,ColIsBold:true,ColResizable:true,ColRowHeader:true},
+                                {ColName:"address1_city",ColDisplayName:"City:",ColShowAsSubTextOf:"name"},
+                                {ColName:"address1_country",ColDisplayName:"Country:",ColShowAsSubTextOf:"name"},
+                                {ColName:"telephone1",ColDisplayName:"Telephone",ColWidth:100,ColSortable:true,ColResizable:true},
+                                {ColName:"primarycontactid",ColDisplayName:"Primary Contact",ColWidth:200,ColSortable:true,ColSortBy:"_primarycontactid_value",ColResizable:true,ColCellType:"link"}
+                            )
+                        Compact: =false
+                        CurrentSortColumn: =""
+                        DisplayMode: =DisplayMode.Edit
+                        HeaderVisible: =true
+                        Height: =270
+                        InputEvent: =varGridEvent
+                        Items: =Search(Accounts,txtSeachAccount.Text,"name")
+                        OnChange: |-
+                            =
+                            If(Self.EventName="CellAction",    Notify("CellAction " & Self.EventColumn & " " & Self.EventRowKey))
+                        OnSelect: =false
+                        PageSize: =5
+                        RecordKey: ="accountid"
+                        SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                        Theme: =AppThemeJson
+                        Width: =Parent.Width - Parent.PaddingRight
+                        X: =13
+                        Y: =64
+                        ZIndex: =2
+
+                        "'Account Name1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Account Name"
+                            FieldName: ="name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =6
+
+                        "'Main Phone1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Main Phone"
+                            FieldName: ="telephone1"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =7
+
+                        "'Address 1: City1' As pcfDataField.textualColumn":
+                            FieldDisplayName: |-
+                                ="Address 1: City"
+                            FieldName: ="address1_city"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =8
+
+                        "'Primary Contact1' As pcfDataField":
+                            FieldDisplayName: ="Primary Contact"
+                            FieldName: ="primarycontactid"
+                            FieldType: ="E"
+                            FieldVariantName: ="complexTypeColumn"
+                            Order: =4
+                            ZIndex: =9
+
+                    conPagingControls As groupContainer.manualLayoutContainer:
+                        Height: =35
+                        Width: =183
+                        X: =FluentDetailsListAccounts.Width - Self.Width
+                        Y: =FluentDetailsListAccounts.Y+FluentDetailsListAccounts.Height
+                        ZIndex: =3
+
+                        HorizontalconPagingControls As groupContainer.horizontalAutoLayoutContainer:
+                            Height: =32
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =181
+                            ZIndex: =1
+
+                            "icoFirst As 'Fluent Icon (0.0.22)'":
+                                DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
+                                FontSize: =0
+                                Height: =32
+                                IconName: ="Previous"
+                                IconSize: =0
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: =Set(varGridEvent,"LoadFirstPage" & Text(Rand()));
+                                Theme: =AppThemeJson
+                                Width: =32
+                                X: =32
+                                Y: =32
+                                ZIndex: =1
+
+                            "icoBack As 'Fluent Icon (0.0.22)'":
+                                DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
+                                FontSize: =0
+                                Height: =32
+                                IconName: ="Back"
+                                IconSize: =0
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: =Set(varGridEvent,"LoadPreviousPage" & Text(Rand()));
+                                Theme: =AppThemeJson
+                                Width: =32
+                                X: =32
+                                Y: =32
+                                ZIndex: =2
+
+                            lblPageCount As label:
+                                Align: =Align.Center
+                                BorderColor: =RGBA(0, 18, 107, 1)
+                                Color: =AppTheme.palette.neutralPrimary
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Segoe UI'
+                                Height: =31
+                                Size: =AppTheme.fontSizes.xs
+                                Text: ="Page " & FluentDetailsListAccounts.PageNumber
+                                Width: =84
+                                X: =64
+                                ZIndex: =4
+
+                            "icoNext As 'Fluent Icon (0.0.22)'":
+                                DisplayMode: =If(FluentDetailsListAccounts.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
+                                FontSize: =0
+                                Height: =32
+                                IconName: ="Forward"
+                                IconSize: =0
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: =Set(varGridEvent,"LoadNextPage" & Text(Rand()));
+                                Theme: =AppThemeJson
+                                Width: =32
+                                X: =32
+                                Y: =32
+                                ZIndex: =5
+
+                    txtSeachAccount As text:
+                        AccessibleLabel: ="Search for accounts"
+                        BorderColor: =RGBA(128,128,128,1)
+                        Color: =RGBA(66,66,66,1)
+                        Default: =""
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderColor: =RGBA(0,120,212,1)
+                        FocusedBorderThickness: =1
+                        Font: =Font.'Segoe UI'
+                        Height: =32
+                        HintText: ="Search for accounts"
+                        HoverBorderColor: =RGBA(66,66,66,1)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =2
+                        RadiusBottomRight: =2
+                        RadiusTopLeft: =2
+                        RadiusTopRight: =2
+                        Size: =10.5
+                        Width: =221
+                        X: =1070
+                        Y: =32
+                        ZIndex: =4
+
+                    lblRecordCount As label:
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: =AppTheme.palette.neutralPrimary
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        Height: =32
+                        Size: =AppTheme.fontSizes.xs
+                        Text: =If(FluentDetailsListAccounts.TotalRecords>-1, FluentDetailsListAccounts.TotalRecords & " record(s)  ") & Text(CountRows(FluentDetailsListAccounts.SelectedItems)+0) & " selected" 
+                        Width: =188
+                        X: =30
+                        Y: =FluentDetailsListAccounts.Y+FluentDetailsListAccounts.Height
+                        ZIndex: =5
+
+                    htmlText_11 As htmlViewer:
+                        AutoHeight: =true
+                        Color: =AppTheme.palette.neutralPrimary
+                        Font: =Font.'Segoe UI'
+                        HtmlText: ="Sorting and paging is automatic when using a Dataverse data source."
+                        PaddingBottom: =0
+                        PaddingLeft: =8
+                        PaddingRight: =8
+                        PaddingTop: =0
+                        Size: =AppTheme.fontSizes.s
+                        Width: =Parent.Width
+                        X: =8
+                        ZIndex: =6
+
+                    "icoSearch As 'Fluent Icon (0.0.22)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        IconName: ="Search"
+                        Theme: =AppThemeJson
+                        Width: =32
+                        X: =1038
+                        Y: =32
+                        ZIndex: =7
+
+                    "cmdAccounts As 'Fluent Command Bar (0.0.22)'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            = Table(
+                                {
+                                    ItemKey: "New",
+                                    ItemIconName: "Add",
+                                    ItemDisplayName: "New"
+                                },
+                                {
+                                    ItemKey: "Edit",
+                                    ItemIconName: "Edit",
+                                    ItemDisplayName: "Edit",
+                                    ItemEnabled:CountRows(FluentDetailsListAccounts.SelectedItems)=1
+                                })
+                        Theme: =AppThemeJson
+                        Width: =200
+                        X: =13
+                        Y: =32
+                        ZIndex: =8
+

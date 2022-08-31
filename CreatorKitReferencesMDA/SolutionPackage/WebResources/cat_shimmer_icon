@@ -1,0 +1,7 @@
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+  <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+   <path fill=''
+d='M0 896h640v-640h-640v640zM128 384h384v384h-384v-384zM0 1792h640v-640h-640v640zM128 1280h384v384h-384v-384zM2048 1664v-128h-1152v128h1152zM1664 1280h-768v128h768v-128zM896 768h1152v-128h-1152v128zM896 512h768v-128h-768v128z' />
+  </g>
+
+</svg>

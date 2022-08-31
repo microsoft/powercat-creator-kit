@@ -1,0 +1,25 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cat_components_forms",
+      "Namespace": "Components_1 (Forms)",
+      "Values": {
+        "Information": "e1da15a6-b9e3-4d4a-b88f-de722df0a3e8"
+      }
+    },
+    {
+      "Kind": "default.cds_cat_components_forms",
+      "Namespace": "Components (Forms)",
+      "Values": {
+        "Information": "e1da15a6-b9e3-4d4a-b88f-de722df0a3e8"
+      }
+    },
+    {
+      "Kind": "default.cds_importfile_forms",
+      "Namespace": "Imports (Forms)",
+      "Values": {
+        "Importfile": "f3ad23ab-72f5-4221-81e3-0ab5f761c49c"
+      }
+    }
+  ]
+}

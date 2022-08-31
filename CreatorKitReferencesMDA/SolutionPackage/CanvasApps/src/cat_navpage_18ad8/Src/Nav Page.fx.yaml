@@ -1,0 +1,438 @@
+"'Nav Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =
+        
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            Width: =App.Width
+            ZIndex: =2
+
+            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ComponentGuidanceContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentGuidance.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =4
+
+            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentGuidance.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentGuidance As Recomendation:
+                AdditionalContent: =currentComp.Guidance
+                Donts: =
+                Dos: =
+                Height: =500
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =5
+
+            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_1.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_1.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,1).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_1 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,1).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_1.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =Container1.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_1.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Container1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =300
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        "navControl As 'Fluent Nav (0.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =295
+                            Items: |-
+                                =Table(
+                                    {ItemKey:"page",ItemDisplayName:"Pages"},
+                                    {ItemKey:"activity",ItemDisplayName:"Activity",ItemParentKey:"page"},
+                                    {ItemKey:"news",ItemDisplayName:"News",ItemParentKey:"page",ItemVisible:chkVisibleNav.Checked},
+                                    {ItemKey:"morepages",ItemDisplayName:"More pages"},
+                                    {ItemKey:"settings",ItemDisplayName:"Settings",ItemParentKey:"morepages",ItemIconName:"News",ItemIconColor:If(chkCustomIconColor.Checked,"red")},
+                                    {ItemKey:"notes",ItemDisplayName:"Notes",ItemParentKey:"morepages",ItemEnabled:chkEnableNav.Checked}
+                                )
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varNavSelected,Self.Selected.ItemKey)
+                            SelectedKey: =varNavSelected
+                            Theme: =AppThemeJson
+                            Visible: =true
+                            Width: =200
+                            X: =14
+                            Y: =63
+                            ZIndex: =11
+
+                        Container2 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =12
+
+                            "chkEnableNav As 'Check box'":
+                                AccessibleLabel: ="Enable notes link"
+                                Checked: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Label: ="Enable Notes Link"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                Visible: =true
+                                Width: =160
+                                X: =39
+                                Y: =11
+                                ZIndex: =1
+
+                            "chkVisibleNav As 'Check box'":
+                                AccessibleLabel: ="Show news link"
+                                Checked: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Label: ="Show News Link"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                Visible: =true
+                                Width: =160
+                                X: =39
+                                Y: =32
+                                ZIndex: =2
+
+                            "chkCustomIconColor As 'Check box'":
+                                AccessibleLabel: ="Custom icon color"
+                                Checked: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Label: ="Custom Icon Color"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                Visible: =true
+                                Width: =160
+                                X: =39
+                                Y: =64
+                                ZIndex: =3
+
+                            btnSelectNews As Button:
+                                AccessibleLabel: ="Select news"
+                                BorderRadius: =1
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: =Set(varNavSelected,"news")
+                                Text: ="Select News"
+                                Visible: =true
+                                Width: =120
+                                X: =39
+                                Y: =134
+                                ZIndex: =4
+
+                            btnSelectActivity As Button:
+                                AccessibleLabel: ="Select activity"
+                                BorderRadius: =1
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: =Set(varNavSelected,"activity")
+                                Text: ="Select Activity"
+                                Visible: =true
+                                Width: =120
+                                X: =39
+                                Y: =96
+                                ZIndex: =9
+
+                            Container3 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =10
+
+                                lblPivotSelected As label:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =AppTheme.palette.neutralPrimary
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Lighter
+                                    Height: =32
+                                    Size: =AppTheme.fontSizes.s
+                                    Text: |-
+                                        ="Pivot Selected Key:"
+                                    Width: =160
+                                    X: =78
+                                    Y: =166
+                                    ZIndex: =1
+
+                                lblPivotSelectedKeyValue As label:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =AppTheme.palette.neutralPrimary
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =32
+                                    Size: =AppTheme.fontSizes.s
+                                    Text: =Coalesce(navControl.Selected.ItemKey,"(none)") 
+                                    Width: =200
+                                    X: =160
+                                    Y: =166
+                                    ZIndex: =2
+
+                            Container3_2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =11
+
+                                lblContextVariable As label:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =AppTheme.palette.neutralPrimary
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Lighter
+                                    Height: =32
+                                    Size: =AppTheme.fontSizes.s
+                                    Text: |-
+                                        ="Context Variable:"
+                                    Width: =160
+                                    X: =78
+                                    Y: =186
+                                    ZIndex: =1
+
+                                lblContextVariableValue As label:
+                                    BorderColor: =RGBA(0, 18, 107, 1)
+                                    Color: =AppTheme.palette.neutralPrimary
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =32
+                                    Size: =AppTheme.fontSizes.s
+                                    Text: =Coalesce(varNavSelected,"(none)") 
+                                    Width: =200
+                                    X: =160
+                                    Y: =186
+                                    ZIndex: =2
+

@@ -1,0 +1,393 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |
+        =
+        Set(varTheme, {
+          palette: {
+            themePrimary: ColorValue("#0078d4"),
+            themeLighterAlt: ColorValue("#eff6fc"),
+            themeLighter: ColorValue("#deecf9"),
+            themeLight: ColorValue("#c7e0f4"),
+            themeTertiary: ColorValue("#71afe5"),
+            themeSecondary: ColorValue("#2b88d8"),
+            themeDarkAlt: ColorValue("#106ebe"),
+            themeDark: ColorValue("#005a9e"),
+            themeDarker: ColorValue("#004578"),
+            neutralLighterAlt: ColorValue("#faf9f8"),
+            neutralLighter: ColorValue("#f3f2f1"),
+            neutralLight: ColorValue("#edebe9"),
+            neutralQuaternaryAlt: ColorValue("#e1dfdd"),
+            neutralQuaternary: ColorValue("#d0d0d0"),
+            neutralTertiaryAlt: ColorValue("#c8c6c4"),
+            neutralTertiary: ColorValue("#a19f9d"),
+            neutralSecondary: ColorValue("#605e5c"),
+            neutralPrimaryAlt: ColorValue("#3b3a39"),
+            neutralPrimary:ColorValue("#323130"),
+            neutralDark: ColorValue("#201f1e"),
+            black: ColorValue("#000000"),
+            white: ColorValue("#ffffff")
+          },
+          paletteCSS: {
+            themePrimary: "#0078d4",
+            themeLighterAlt: "#eff6fc",
+            themeLighter: "#deecf9",
+            themeLight: "#c7e0f4",
+            themeTertiary: "#71afe5",
+            themeSecondary: "#2b88d8",
+            themeDarkAlt: "#106ebe",
+            themeDark: "#005a9e",
+            themeDarker: "#004578",
+            neutralLighterAlt: "#faf9f8",
+            neutralLighter: "#f3f2f1",
+            neutralLight: "#edebe9",
+            neutralQuaternaryAlt: "#e1dfdd",
+            neutralQuaternary: "#d0d0d0",
+            neutralTertiaryAlt: "#c8c6c4",
+            neutralTertiary: "#a19f9d",
+            neutralSecondary: "#605e5c",
+            neutralPrimaryAlt: "#3b3a39",
+            neutralPrimary:"#323130",
+            neutralDark: "#201f1e",
+            black: "#000000",
+            white: "#ffffff"
+          },
+          themeJSON:"{""palette"":{
+          ""themePrimary"": ""#0078d4"",
+          ""themeLighterAlt"": ""#eff6fc"",
+          ""themeLighter"": ""#deecf9"",
+          ""themeLight"": ""#c7e0f4"",
+          ""themeTertiary"": ""#71afe5"",
+          ""themeSecondary"": ""#2b88d8"",
+          ""themeDarkAlt"": ""#106ebe"",
+          ""themeDark"": ""#005a9e"",
+          ""themeDarker"": ""#004578"",
+          ""neutralLighterAlt"": ""#faf9f8"",
+          ""neutralLighter"": ""#f3f2f1"",
+          ""neutralLight"": ""#edebe9"",
+          ""neutralQuaternaryAlt"": ""#e1dfdd"",
+          ""neutralQuaternary"": ""#d0d0d0"",
+          ""neutralTertiaryAlt"": ""#c8c6c4"",
+          ""neutralTertiary"": ""#a19f9d"",
+          ""neutralSecondary"": ""#605e5c"",
+          ""neutralPrimaryAlt"": ""#3b3a39"",
+          ""neutralPrimary"": ""#323130"",
+          ""neutralDark"": ""#201f1e"",
+          ""black"": ""#000000"",
+          ""white"": ""#ffffff""
+        }
+        }",
+        fontSizes:  {
+            xs:10,
+        	s:11,
+        	m:13,
+        	l:16,
+        	xl:20
+            },
+        U:4
+        }
+        );
+        
+        
+        Set(varDefaultTab,"app");
+        
+        ClearCollect(colScreens,
+            {ItemKey:"inputs",ItemDisplayName:"Basic Inputs"},
+            {ItemKey:"autowidth",ItemDisplayName:"Auto Width Label",ItemParentKey:"inputs",TargetScreen:scrAutoWidthLabel},
+            {ItemKey:"icon",ItemDisplayName:"Icon",ItemParentKey:"inputs",TargetScreen:scrIcon},
+            {ItemKey:"resizabletextarea",ItemDisplayName:"Resizable Text Area",ItemParentKey:"inputs",TargetScreen:scrResizableTextArea},
+        
+            {ItemKey:"commands_menus_navs",ItemDisplayName:"Commands, Menus & Navs"},
+             {ItemKey:"breadcrumb",ItemDisplayName:"Breadcrumb",ItemParentKey:"commands_menus_navs",TargetScreen:scrBreadcrumb},
+            {ItemKey:"commandbar",ItemDisplayName:"CommandBar",ItemParentKey:"commands_menus_navs",TargetScreen:scrCommandBar},
+            {ItemKey:"expandmenu",ItemDisplayName:"ExpandMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrExpandMenu},
+            {ItemKey:"contextmenu",ItemDisplayName:"ContextMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrContextMenu},
+            {ItemKey:"nav",ItemDisplayName:"Nav",ItemParentKey:"commands_menus_navs",TargetScreen:scrNav},
+            {ItemKey:"pivot",ItemDisplayName:"Pivot",ItemParentKey:"commands_menus_navs",TargetScreen:scrPivot},
+        
+            {ItemKey:"detailslist",ItemDisplayName:"DetailsList"},
+            {ItemKey:"detailslist_basic",ItemDisplayName:"Basic",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Basic},
+            {ItemKey:"detailslist_celltypes",ItemDisplayName:"Cell Types",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_CellTypes},
+            {ItemKey:"detailslist_sortingpaging",ItemDisplayName:"Paging",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Sorting},
+        
+            {ItemKey:"galleries_pickers",ItemDisplayName:"Pickers"},
+            {ItemKey:"basic_tags",ItemDisplayName:"Tags Picker",ItemParentKey:"galleries_pickers",TargetScreen:scrTagPicker},
+            {ItemKey:"taglist",ItemDisplayName:"Tag List",ItemParentKey:"galleries_pickers",TargetScreen:scrTagList},
+        
+            {ItemKey:"progress",ItemDisplayName:"Progress"},
+            {ItemKey:"spinner",ItemDisplayName:"Spinner",ItemParentKey:"progress",TargetScreen:scrSpinner},
+            {ItemKey:"progressIndicator",ItemDisplayName:"Progress Indicator",ItemParentKey:"progress",TargetScreen:scrProgressIndicator},
+        
+            {ItemKey:"surfaces",ItemDisplayName:"Surfaces"},
+            {ItemKey:"panel",ItemDisplayName:"Panel",ItemParentKey:"surfaces",TargetScreen:scrPanel},
+            {ItemKey:"dialog",ItemDisplayName:"Dialog",ItemParentKey:"surfaces",TargetScreen:scrDialog},
+        
+            {ItemKey:"utilities",ItemDisplayName:"Utilities"},
+            {ItemKey:"elevation",ItemDisplayName:"Elevation",ItemParentKey:"utilities",TargetScreen:scrElevation},
+            {ItemKey:"keyboardshortcut",ItemDisplayName:"Keyboard Shortcuts",ItemParentKey:"utilities",TargetScreen:scrKeyboardShortcut}
+        );
+        
+        // Create test collections
+        ClearCollect(colIcons,{name:"icon:AppIconDefault"},{name:"icon:ChatBot"},{name:"icon:Flow"},{name:"icon:Library"},{name:"icon:SidePanel"},{name:"icon:Table"});
+        Set(varLipsum,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac sapien eu ipsum iaculis iaculis. Aenean tincidunt, orci vel molestie posuere, ligula justo commodo erat, ut finibus ipsum risus scelerisque tellus. Donec vel pellentesque turpis. Nullam semper purus ac arcu lacinia, quis viverra eros fermentum. Proin tincidunt hendrerit ante, eu hendrerit ex vestibulum sit amet. Mauris dui odio, congue id iaculis sit amet, lacinia id felis. Fusce non vulputate ipsum, at imperdiet massa. Fusce vitae eleifend mauris, sed semper eros. Aenean varius ex accumsan velit porttitor pharetra. Sed eget sagittis sapien, ut porta augue. Aenean commodo lacus eu tortor tempus, eget luctus justo rhoncus. Aenean malesuada, elit molestie scelerisque convallis, massa tortor luctus mauris, non auctor nunc tortor ut erat. Vivamus non vehicula neque, quis eleifend felis. Pellentesque arcu ipsum, commodo eu libero et, placerat pretium orci. Nulla quis ultricies lacus.");
+        ClearCollect(colRows,
+            ForAll(Sequence(100) As Row,{  
+                Index:Row.Value,
+                Icon:Last(FirstN(colIcons,RandBetween(1,CountRows(colIcons)))).name,
+                Name:"Row " & Text(Row.Value),
+                Number:RandBetween(1,100000),
+                Description: Mid(varLipsum,1,RandBetween(30,Len(varLipsum))),
+                Image: "https://via.placeholder.com/100x70",
+                Status:"Open",
+                StatusCol:"green",
+                StatusIcon:"icon:SkypeCircleCheck",
+                StatusColor:"#4B832D",
+                SubText1: Mid(varLipsum,1,RandBetween(30,150)),
+                SubText2: Mid(varLipsum,1,RandBetween(30,150)),
+                SubText3: Mid(varLipsum,1,RandBetween(30,150))
+            }));
+        
+        ClearCollect(colComponentTypes,{name:"App",icon:"AppIconDefault"},{name:"ChatBot", icon:"ChatBot"},{name:"Flow",icon:"Flow"},{name:"Component Library",icon:"Library"},{name:"Column",icon:"SidePanel"},{name:"Table",icon:"Table"});
+        
+        ClearCollect(colSimpleTags,LookUp(colComponentTypes,name="App"),LookUp(colComponentTypes,name="ChatBot"),LookUp(colComponentTypes,name="Flow"));
+        ClearCollect(
+            colTags,
+            {
+                Key: "1",
+                DisplayName: "Pink",
+                TextColor: "rgb(172,45,126)",
+                BackgroundColor: "rgb(251, 221, 240)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(172,45,126)"
+            },
+            {
+                Key: "2",
+                DisplayName: "Red",
+                TextColor: "rgb(117,11,28)",
+                BackgroundColor: "rgb(233,199,205)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(117,11,28)"
+            },
+            {
+                Key: "3",
+                DisplayName: "Yellow",
+                TextColor: "rbg(109,87,0)",
+                BackgroundColor: "rgb(245,237,206)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rbb(109,87,0)"
+            },
+            {
+                Key: "4",
+                DisplayName: "Green",
+                TextColor: "rgb(56, 99, 4)",
+                BackgroundColor: "rgb(219, 235, 199)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(56,99,4)"
+            },
+            {
+                Key: "5",
+                DisplayName: "Blue",
+                TextColor: "rgb(0, 91, 161)",
+                BackgroundColor: "rgb(208, 231, 248)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,91,161)"
+            },
+            {
+                Key: "6",
+                DisplayName: "Purple",
+                TextColor: "rgb(64, 27, 108)",
+                BackgroundColor: "rgb(216, 204, 231)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(64,27,108)"
+            },
+            {
+                Key: "7",
+                DisplayName: "Lime",
+                TextColor: "rgb(64, 96, 20)",
+                BackgroundColor: "rgb(229, 242, 211)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(64,96,20)"
+            },
+            {
+                Key: "8",
+                DisplayName: "Aqua",
+                TextColor: "rgb(0, 102, 102)",
+                BackgroundColor: "rgb(194, 231, 231)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,102,102)"
+            },
+            {
+                Key: "9",
+                DisplayName: "Gray",
+                TextColor: "rgb(93, 90, 88)",
+                BackgroundColor: "rgb(229, 228, 227)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(93,90,88)"
+            },
+            {
+                Key: "10",
+                DisplayName: "Silver",
+                TextColor: "rgb(75, 83, 86)",
+                BackgroundColor: "rgb(234, 238, 239)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(75,83,86)"
+            },
+            {
+                Key: "11",
+                DisplayName: "Orange",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(218, 59, 1)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(165,44,0)"
+            },
+            {
+                Key: "12",
+                DisplayName: "Bronze",
+                TextColor: "rgb(167, 65, 9)",
+                BackgroundColor: "rgb(241, 217, 204)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(167,65,9)"
+            },
+            {
+                Key: "13",
+                DisplayName: "Brown",
+                TextColor: "rgb(77, 41, 28)",
+                BackgroundColor: "rgb(226, 209, 203)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(77,41,28)"
+            },
+            {
+                Key: "14",
+                DisplayName: "Cranberry",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(197, 15, 31)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(149,12,23)"
+            },
+            {
+                Key: "15",
+                DisplayName: "Peach",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(255, 140, 0)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(194,107,0)"
+            },
+            {
+                Key: "16",
+                DisplayName: "Marigold",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(234, 163, 0)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(178,125,0)"
+            },
+            {
+                Key: "17",
+                DisplayName: "Light green",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(19, 161, 14)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(15,122,11)"
+            },
+            {
+                Key: "18",
+                DisplayName: "Dark green",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(11, 106, 11)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(8,81,8)"
+            },
+            {
+                Key: "19",
+                DisplayName: "Teal",
+                TextColor: "rgb(0, 0, 0)",
+                BackgroundColor: "rgb(0, 183, 195)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,137,147)"
+            },
+            {
+                Key: "20",
+                DisplayName: "Light blue",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(52, 136, 200)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(32,84,124)"
+            },
+            {
+                Key: "21",
+                DisplayName: "Dark blue",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(0, 57, 102)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(0,44,78)"
+            },
+            {
+                Key: "22",
+                DisplayName: "Lavendar",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(113, 96, 235)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(85,73,178)"
+            },
+            {
+                Key: "23",
+                DisplayName: "Plumb",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(119, 0, 77)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(91,0,59)"
+            },
+            {
+                Key: "24",
+                DisplayName: "Light gray",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(122, 117, 116)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(93,89,88)"
+            },
+            {
+                Key: "25",
+                DisplayName: "Dark gray",
+                TextColor: "rgb(255, 255, 255)",
+                BackgroundColor: "rgb(57, 65, 70)",
+                BorderColor: "transparent",
+                HoverBorderColor: "rgb(42,49,52)"
+            }
+        );
+        
+        ClearCollect(colSelectedTags,LookUp(colTags,DisplayName="Marigold"),LookUp(colTags,DisplayName="Yellow"),LookUp(colTags,DisplayName="Plumb"));
+        
+        ClearCollect(colSimpleTagList,LookUp(colTags,DisplayName="Marigold"),LookUp(colTags,DisplayName="Yellow"),LookUp(colTags,DisplayName="Plumb"));
+        
+        
+        ClearCollect(
+            colTasks,
+            {
+                Task: 1,
+                Name: "Finalize kickoff",
+                Description: "Curabitur vitae hendrerit felis."
+            },
+            {
+                Task: 2,
+                Name: "Refine objectives",
+                Description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vitae hendrerit felis. Vivamus ultricies egestas lorem nec vehicula. Mauris et hendrerit nisi. Morbi blandit, risus ac facilisis euismod, neque massa lacinia lacus, eget pulvinar odio orci vitae diam. Nam ac faucibus neque. Fusce ultrices elementum semper. Sed viverra neque leo, sed rutrum magna iaculis et."
+            },
+            {
+                Task: 3,
+                Name: "Plan resources",
+                Description: "Lorem ipsum dolor sit amet,."
+            },
+            {
+                Task: 4,
+                Name: "Team Updates",
+                Description: "Sed viverra neque leo, sed rutrum magna iaculis et."
+            });
+        
+        ClearCollect(colTaskTags,
+        {Task: 1,Tag: "1"},{Task: 1,Tag: "2"},{Task: 1,Tag: "3"},{Task: 1,Tag: "4"},{Task: 1,Tag: "5"},{Task: 1,Tag: "6"},{Task: 1,Tag: "7"},
+        {Task: 2,Tag: "18"},{Task: 2,Tag: "3"},{Task: 2,Tag: "4"},{Task: 2,Tag: "5"},
+        {Task: 3,Tag: "5"},{Task: 3,Tag: "21"},
+        {Task: 4,Tag: "5"}
+        );
+        
+        //show enable PCF dialog if we find out
+        //Set(ShowHideDialog,  If(!IsEmpty(Organizations), !First(Organizations).'Enable Custom Controls in canvas PowerApps feature for this organization', false));
+

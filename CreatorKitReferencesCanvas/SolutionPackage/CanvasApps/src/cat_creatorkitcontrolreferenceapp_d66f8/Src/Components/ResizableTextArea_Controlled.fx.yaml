@@ -1,0 +1,270 @@
+ResizableTextArea_Controlled As CanvasComponent:
+    ComponentHeight: |-
+        =
+        If(pivotAppCode_8.Selected.ItemKey="code",htmlCode_8.Y+htmlCode_8.Height,550)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    OnReset: |-
+        =Set(varDefaultValue,"Default Value1");
+        Set(varDefaultValue2,"Default Value2");
+    Width: =600
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_8 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Text Binding Default"
+        Width: =630
+        Y: =2
+        ZIndex: =3
+
+    "pivotAppCode_8 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_8.Y+htmlCode_8.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =4
+
+    line_8 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =5
+
+    htmlCode_8 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">ResizableTextArea_Controlled As CanvasComponent:
+                OnReset: |-
+                    =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varDefaultValue,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Default Value1""</span>);
+                    <span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varDefaultValue2,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Default Value2""</span>);
+            
+                lblText1 As label:
+                    Size: =varTheme.fontSizes.s
+                    Text: =ResizableTextarea_Default1.Text
+                    Width: =Parent.Width-Self.X
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ResizableTextarea_Default1 As 'Resizable Text Area (0.0.13)'""</span>:
+                    AllowResize: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.ResizableTextarea.AllowResize'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Horizontal
+                    Default: =varDefaultValue
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">46</span>
+                    InputEvent: =varResizableTextAreaEvent2
+                    ResizedHeight: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">40</span>
+            
+                lblText2 As label:
+                    Text: =ResizableTextarea_Default2.Text
+            
+                <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ResizableTextarea_Default2 As 'Resizable Text Area (0.0.13)'""</span>:
+                    InputEvent: =varDefaultValue
+                    OnChange: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varDefaultValue2,Self.Text);
+                    Text: =varDefaultValue2
+            
+            
+                btnResetUsingEvent As Button:
+                    OnSelect: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varResizableTextAreaEvent2,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ResetText""</span> &amp; Text(Rand()));
+                    Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Reset to default using event""</span>
+            
+                btnResetUsingVariable As Button:
+                    OnSelect: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varDefaultValue2,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Default Value2""</span>);
+                    Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Reset to default using variable""</span>
+            
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_8.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =24
+
+        lblText1 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =ResizableTextarea_Default1.Text
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =81
+            Y: =165
+            ZIndex: =1
+
+        lblSelected_8 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Text: "
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =61
+            X: =20
+            Y: =164
+            ZIndex: =2
+
+        "ResizableTextarea_Default1 As 'Resizable Text Area (1.0.6-beta)'":
+            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+            Default: =varDefaultValue
+            DisplayMode: =DisplayMode.Edit
+            Height: =46
+            InputEvent: =varResizableTextAreaEvent2
+            ResizedHeight: =40
+            Text: ="Default Value"
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =209
+            X: =20
+            Y: =110
+            ZIndex: =12
+
+        lblText2 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =ResizableTextarea_Default2.Text
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =81
+            Y: =375
+            ZIndex: =13
+
+        lblSelected_9 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =31
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Text: "
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =61
+            X: =20
+            Y: =375
+            ZIndex: =14
+
+        "ResizableTextarea_Default2 As 'Resizable Text Area (1.0.6-beta)'":
+            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+            Default: =
+            DisplayMode: =DisplayMode.Edit
+            Height: =43
+            InputEvent: =varDefaultValue
+            OnChange: =Set(varDefaultValue2,Self.Text);
+            ResizedHeight: =40
+            Text: =varDefaultValue2
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =209
+            X: =20
+            Y: =321
+            ZIndex: =15
+
+        btnResetUsingEvent As Button:
+            AccessibleLabel: ="Reset to default using event"
+            BorderRadius: =1
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            OnSelect: =Set(varResizableTextAreaEvent2,"ResetText" & Text(Rand()));
+            Text: ="Reset to default using event"
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =142
+            X: =20
+            Y: =200
+            ZIndex: =16
+
+        btnResetUsingVariable As Button:
+            AccessibleLabel: ="Reset to default using variable"
+            BorderRadius: =1
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            DisplayMode: =DisplayMode.Edit
+            Height: =35
+            OnSelect: =Set(varDefaultValue2,"Default Value2");
+            Text: ="Reset to default using variable"
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =142
+            X: =20
+            Y: =407
+            ZIndex: =17
+
+        htmlText_6 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: ="When using forms, the Default Property is used to receive the default text, and the Reset event can be set inside the Form Reset"
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =61
+            ZIndex: =18
+
+        htmlText_7 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: ="When binding to a context variable or global variable, the default can be updated by simply updating the bound variable, and keeping it in sync with the current text box value inside the OnChange event"
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =249
+            ZIndex: =21
+
+        line_9 As rectangle:
+            Fill: =varTheme.palette.neutralTertiary
+            Height: =1
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =Parent.Width-32
+            X: =16
+            Y: =245
+            ZIndex: =22
+
+        line_10 As rectangle:
+            Fill: =varTheme.palette.neutralTertiary
+            Height: =1
+            Visible: =pivotAppCode_8.Selected.ItemKey="app"
+            Width: =Parent.Width-32
+            X: =16
+            Y: =60
+            ZIndex: =23
+

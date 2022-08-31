@@ -1,0 +1,327 @@
+DetailsListResponsive As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_22.Selected.ItemKey="code",htmlCode_22.Y+htmlCode_22.Height,450)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_22 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Right align columns"
+        Width: =630
+        Y: =22
+        ZIndex: =1
+
+    "pivotAppCode_22 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_22.Y+htmlCode_22.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =20
+        ZIndex: =2
+
+    line_14 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =68
+        ZIndex: =3
+
+    htmlCode_22 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""FluentDetailsListResponsive As 'Fluent Details List'.pcfdataset""</span>:
+                columns_Items: |-
+                    =With({
+                        availableWidth:Self.Width,
+                        padding:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>,
+                        iconWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">40</span>,
+                        statusWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">40</span>,
+                        scrollWidth:<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">20</span>
+                        },
+                        Table(
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Icon""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""""</span>,
+                                ColWidth: iconWidth,
+                                ColSortable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>,
+                                ColCellType: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Image""</span>,
+                                ColImageWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">18</span>,
+                                ColVerticalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Name""</span>,
+                                ColWidth: availableWidth-scrollWidth-iconWidth-padding-scrollWidth-padding,
+                                ColSortable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColResizable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColSortBy: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Index""</span>,
+                                ColIsBold:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,
+                                ColVerticalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>
+                            },
+                            {
+                                ColName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""StatusIcon""</span>,
+                                ColDisplayName: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Status""</span>,
+                                ColWidth:statusWidth,
+                                ColSortable: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>,
+                                ColCellType: <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ClickableImage""</span>,
+                                ColImageWidth: <span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">18</span>,
+                                ColTagColorColumn:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""StatusCol""</span>,
+                                ColVerticalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Center""</span>,
+                                ColHorizontalAlign:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Right""</span>
+                        
+                            }
+                        )
+                    )
+                Compact: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                Items: =FirstN(colRows,If(!chkLongList.Checked,CountRows(colRows),<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">3</span>))
+                SelectionType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.FluentDetailsList.SelectionType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.None
+                Theme: =varTheme.themeJSON
+                Width: =sldWidth.Value
+            
+            sldWidth As slider:
+                Default: =Self.Max
+                Max: =Parent.Width<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">-16</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkLongList As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Filter to first 3 rows""</span>
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_22.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =68
+        ZIndex: =4
+
+    Group19 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        "ElevationResponsive As 'Fluent Elevation (1.0.6-beta)'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =FluentDetailsListResponsive.Height
+            Visible: =pivotAppCode_22.Selected.ItemKey="app"
+            Width: =FluentDetailsListResponsive.Width
+            X: =FluentDetailsListResponsive.X
+            Y: =FluentDetailsListResponsive.Y
+            ZIndex: =5
+
+        "FluentDetailsListResponsive As 'Fluent Details List (1.0.6-beta)'.pcfdataset":
+            columns_Items: |-
+                =With({
+                    // If there is a selection column, we remove the width and the padding
+                    availableWidth:Self.Width,
+                    padding:32,
+                    iconWidth:40,
+                    statusWidth:40,
+                    scrollWidth:20
+                    },
+                    Table(
+                        {
+                            ColName: "Icon",
+                            ColDisplayName: "",
+                            ColWidth: iconWidth,
+                            ColSortable: false,
+                            ColCellType: "Image",
+                            ColImageWidth: 18,
+                            ColVerticalAlign:"Center",
+                            ColHorizontalAlign:"Center"
+                        },
+                        {
+                            ColName: "Name",
+                            ColDisplayName: "Name",
+                            ColWidth: availableWidth-scrollWidth-iconWidth-padding-scrollWidth-padding,
+                            ColSortable: true,
+                            ColResizable: true,
+                            ColSortBy: "Index",
+                            ColIsBold:true,
+                            ColVerticalAlign:"Center"
+                        },
+                        {
+                            ColName: "StatusIcon",
+                            ColDisplayName: "Status",
+                            ColWidth:statusWidth,
+                            ColSortable: false,
+                            ColCellType: "ClickableImage",
+                            ColImageWidth: 18,
+                            ColTagColorColumn:"StatusCol",
+                            ColVerticalAlign:"Center",
+                            ColHorizontalAlign:"Right"
+                    
+                        }
+                    )
+                )
+            Compact: =true
+            DisplayMode: =DisplayMode.Edit
+            Height: =200
+            Items: =FirstN(colRows,If(!chkLongList.Checked,CountRows(colRows),3))
+            SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.None
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_22.Selected.ItemKey="app"
+            Width: =sldWidth.Value
+            X: =8
+            Y: =89
+            ZIndex: =6
+
+            Description1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Description"
+                FieldName: ="Description"
+                FieldVariantName: ="textualColumn"
+                Order: =1
+                ZIndex: =1
+
+            Icon2 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Icon"
+                FieldName: ="Icon"
+                FieldVariantName: ="textualColumn"
+                Order: =2
+                ZIndex: =2
+
+            Image1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Image"
+                FieldName: ="Image"
+                FieldVariantName: ="textualColumn"
+                Order: =3
+                ZIndex: =3
+
+            Index1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Index"
+                FieldName: ="Index"
+                FieldVariantName: ="textualColumn"
+                Order: =4
+                ZIndex: =4
+
+            Name1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Name"
+                FieldName: ="Name"
+                FieldVariantName: ="textualColumn"
+                Order: =5
+                ZIndex: =5
+
+            Number1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Number"
+                FieldName: ="Number"
+                FieldVariantName: ="textualColumn"
+                Order: =6
+                ZIndex: =6
+
+            Status1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="Status"
+                FieldName: ="Status"
+                FieldVariantName: ="textualColumn"
+                Order: =7
+                ZIndex: =7
+
+            StatusCol1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="StatusCol"
+                FieldName: ="StatusCol"
+                FieldVariantName: ="textualColumn"
+                Order: =8
+                ZIndex: =8
+
+            StatusColor1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="StatusColor"
+                FieldName: ="StatusColor"
+                FieldVariantName: ="textualColumn"
+                Order: =9
+                ZIndex: =9
+
+            StatusIcon1 As pcfDataField.textualColumn:
+                FieldDisplayName: ="StatusIcon"
+                FieldName: ="StatusIcon"
+                FieldVariantName: ="textualColumn"
+                Order: =10
+                ZIndex: =10
+
+            SubText11 As pcfDataField.textualColumn:
+                FieldDisplayName: ="SubText1"
+                FieldName: ="SubText1"
+                FieldVariantName: ="textualColumn"
+                Order: =11
+                ZIndex: =11
+
+            SubText21 As pcfDataField.textualColumn:
+                FieldDisplayName: ="SubText2"
+                FieldName: ="SubText2"
+                FieldVariantName: ="textualColumn"
+                Order: =12
+                ZIndex: =12
+
+            SubText31 As pcfDataField.textualColumn:
+                FieldDisplayName: ="SubText3"
+                FieldName: ="SubText3"
+                FieldVariantName: ="textualColumn"
+                Order: =13
+                ZIndex: =13
+
+        sldWidth As slider:
+            AccessibleLabel: ="Table width"
+            BorderColor: =
+            Default: =Self.Max
+            FocusedBorderColor: =
+            FocusedBorderThickness: =1
+            HandleSize: =16
+            Max: =Parent.Width-16
+            RailFill: =varTheme.palette.neutralTertiaryAlt
+            RailThickness: =2
+            ValueFill: =varTheme.palette.neutralPrimary
+            ValueHoverFill: =varTheme.palette.themePrimary
+            Visible: =pivotAppCode_22.Selected.ItemKey="app"
+            Width: =169
+            X: =113
+            Y: =333
+            ZIndex: =7
+
+        "chkLongList As 'Check box'":
+            AccessibleLabel: ="Filder to first 3 rows"
+            Checked: =true
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Filter to first 3 rows"
+            OnChange: =
+            Visible: =pivotAppCode_22.Selected.ItemKey="app"
+            Width: =160
+            X: =22
+            Y: =301
+            ZIndex: =8
+
+        lblTableWidth As label:
+            Align: =Align.Right
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =18
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Table width:"
+            Visible: =pivotAppCode_22.Selected.ItemKey="app"
+            Width: =94
+            X: =8
+            Y: =344
+            ZIndex: =9
+

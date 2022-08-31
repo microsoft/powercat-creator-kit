@@ -1,0 +1,192 @@
+PivotShowHidePivotItem As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_3.Selected.ItemKey="code",htmlCode_3.Y+htmlCode_3.Height,300)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_3 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="CommandBar with overflowing menu items"
+        Width: =630
+        Y: =2
+        ZIndex: =4
+
+    "pivotAppCode_3 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_3.Y+htmlCode_3.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =5
+
+    line_3 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    htmlCode_3 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">lblSelectedKey_3 As label:
+                Text: =Coalesce(Pivot2.Selected.ItemKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowFirstPivot As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Pivot2 As 'Fluent Pivot'.pcfdataset""</span>:
+                Items: |-
+                    =Table(
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""foo""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Foo""</span>,ItemVisible:chkShowFirstPivot.Checked},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""bar""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Bar""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""bas""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Bas""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""biz""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Biz""</span>}
+                    )
+                RenderType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.Pivot.RenderType'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.PivotTabs
+                SelectedKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""bas""</span>
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_3.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+            
+            lblSelectedKey_4 As label:
+                Text: =Coalesce(Pivot2.SelectedKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_3.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =7
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =13
+
+        lblSelectedKey_3 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =Coalesce(Pivot2.Selected.ItemKey,"(none)") 
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =180
+            Y: =97
+            ZIndex: =1
+
+        lblSelected_3 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Pivot.Selected:"
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =174
+            X: =12
+            Y: =96
+            ZIndex: =2
+
+        "chkShowFirstPivot As 'Check box'":
+            AccessibleLabel: ="Show first pivot item"
+            Checked: =true
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Show first pivot item"
+            OnChange: =
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =160
+            X: =26
+            Y: =163
+            ZIndex: =8
+
+        "Pivot2 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =47
+            Items: |-
+                =Table(
+                    {ItemKey:"foo",ItemDisplayName:"Foo",ItemVisible:chkShowFirstPivot.Checked},
+                    {ItemKey:"bar",ItemDisplayName:"Bar"},
+                    {ItemKey:"bas",ItemDisplayName:"Bas"},
+                    {ItemKey:"biz",ItemDisplayName:"Biz"}
+                )
+            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+            SelectedKey: ="bas"
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =510
+            X: =20
+            Y: =49
+            ZIndex: =9
+
+        lblSelectedKey_4 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =Coalesce(Pivot2.SelectedKey,"(none)") 
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =180
+            Y: =122
+            ZIndex: =10
+
+        lblSelected_4 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="SelectedKey:"
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =174
+            X: =12
+            Y: =121
+            ZIndex: =11
+
+        htmlText_1 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: |-
+                ="Check the checkbox above to show/hide the first pivot item.
+                The selected item will not change when the number of pivot items changes.
+                If the selected item was removed, the new first item will be selected. Note: You will need to handle this change in your app."
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_3.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =213
+            ZIndex: =12
+

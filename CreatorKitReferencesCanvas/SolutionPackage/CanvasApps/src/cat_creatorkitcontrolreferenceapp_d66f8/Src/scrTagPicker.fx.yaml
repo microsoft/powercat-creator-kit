@@ -1,0 +1,108 @@
+scrTagPicker As screen:
+
+    stackRoot_11 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_12.Width
+        Y: =Header_13.Height - 20
+        ZIndex: =2
+
+        lblTitle_11 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="Fluent Tag Picker"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_11 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="Pickers are used to select one or more items, such as tags or files, from a large list."
+            ZIndex: =2
+
+        TextPanel_2 As TextPanel:
+            LayoutMinHeight: =640
+            Text: |-
+                ="
+                <h2 style=""font-weight:600"">Best practices</h2>
+                <h3 style=""font-weight:600"">Layout</h3><ul><li>Use a picker to quickly search for a few tags or files.</li><li>Use a picker to manage a group of tags or files.</li></ul>"
+            ZIndex: =4
+
+        Container8 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: |-
+                =Label1_2.Height+
+                TagPickerBasic_1.ComponentHeight + 
+                TagPickerCustomStyle_1.ComponentHeight +
+                Self.PaddingTop + Self.PaddingBottom
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            "Elevation2_12 As 'Fluent Elevation (1.0.6-beta)'":
+                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            Container9 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =8*varTheme.U
+                PaddingLeft: =8*varTheme.U
+                PaddingRight: =8*varTheme.U
+                PaddingTop: =8*varTheme.U
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Label1_8 As label:
+                    Color: =varTheme.palette.neutralPrimary
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =12*varTheme.U
+                    Size: =varTheme.fontSizes.l
+                    Text: ="Usage"
+                    Width: =228
+                    ZIndex: =1
+
+                TagPickerBasic_1 As TagPickerBasic:
+                    LayoutMinHeight: =640
+                    ZIndex: =2
+
+                TagPickerCustomStyle_1 As TagPickerCustomStyle:
+                    LayoutMinHeight: =640
+                    ZIndex: =3
+
+    LeftNav_12 As LeftNav:
+        Height: =Parent.Height - 20
+        Width: =200
+        Y: =Header_13.Height
+        ZIndex: =7
+
+    Header_13 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Width: =App.Width
+        ZIndex: =8
+

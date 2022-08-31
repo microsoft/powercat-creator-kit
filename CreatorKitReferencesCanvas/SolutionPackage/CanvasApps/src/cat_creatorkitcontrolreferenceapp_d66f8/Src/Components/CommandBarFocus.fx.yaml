@@ -1,0 +1,194 @@
+CommandBarFocus As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_7.Selected.ItemKey="code",htmlCode_7.Y+htmlCode_7.Height,300)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_7 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Set focus and tab order"
+        Width: =630
+        Y: =2
+        ZIndex: =4
+
+    "pivotAppCode_7 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_7.Y+htmlCode_7.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =5
+
+    line_7 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    htmlCode_7 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_4 As 'Fluent Command Bar'.pcfdataset""</span>:
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                InputEvent: =varEvent
+                Items: |-
+                    =Table(
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""New""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""emailMessage""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Email message""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Mail""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""calendarEvent""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Calendar event""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Calendar""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>},
+                    
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>},
+                            {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""uploadfile""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""File""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>},
+                            {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""uploadfolder""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Folder""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>},
+                    
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""share""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Share""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Share""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""download""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Download""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Download""</span>},
+                    
+                        <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// Force these items to overflow</span>
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""move""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Move to...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""MoveToFolder""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""copy""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Copy to...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Copy""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rename""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Rename...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Edit""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                    
+                        <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// Far Items</span>
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""tile""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Grid view""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tiles""</span>,ItemIconOnly:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemFarItem:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""info""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Info""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Info""</span>,ItemIconOnly:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemFarItem:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>}
+                    )
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_7.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+                Width: =Parent.Width-Self.X
+            
+            btnSetfocus As Button:
+                OnSelect: =<span class=""hljs-built_in"" style=""color: rgb(57, 115, 0);"">Set</span>(varEvent,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""SetFocus""</span> &amp; Text(Rand()))
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Set Focus on Command Bar""</span>
+                
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""txtFirstTab As 'Text box'""</span>:
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""txtSecondTab As 'Text box'""</span>:
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+            
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_7.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =7
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =12
+
+        "commandBar_4 As 'Fluent Command Bar (1.0.6-beta)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            InputEvent: =varEvent
+            Items: |-
+                =Table(
+                    {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add"},
+                    {ItemKey:"emailMessage",ItemDisplayName:"Email message",ItemIconName:"Mail",ItemParentKey:"newItem"},
+                    {ItemKey:"calendarEvent",ItemDisplayName:"Calendar event",ItemIconName:"Calendar",ItemParentKey:"newItem"},
+                
+                    {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconName:"Upload"},
+                        {ItemKey:"uploadfile",ItemDisplayName:"File",ItemParentKey:"upload"},
+                        {ItemKey:"uploadfolder",ItemDisplayName:"Folder",ItemParentKey:"upload"},
+                
+                    {ItemKey:"share",ItemDisplayName:"Share",ItemIconName:"Share"},
+                    {ItemKey:"download",ItemDisplayName:"Download",ItemIconName:"Download"},
+                
+                    // Force these items to overflow
+                    {ItemKey:"move",ItemDisplayName:"Move to...",ItemIconName:"MoveToFolder",ItemOverflow:true},
+                    {ItemKey:"copy",ItemDisplayName:"Copy to...",ItemIconName:"Copy",ItemOverflow:true},
+                    {ItemKey:"rename",ItemDisplayName:"Rename...",ItemIconName:"Edit",ItemOverflow:true},
+                
+                    // Far Items
+                    {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemFarItem:true},
+                    {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemFarItem:true}
+                )
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_7.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =12
+            Y: =101
+            ZIndex: =3
+
+        btnSetfocus As Button:
+            AccessibleLabel: ="Set Focus on Command Bar"
+            BorderRadius: =1
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =1
+            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            OnSelect: =Set(varEvent,"SetFocus" & Text(Rand()))
+            Text: ="Set Focus on Command Bar"
+            Visible: =pivotAppCode_7.Selected.ItemKey="app"
+            Width: =210
+            X: =12
+            Y: =145
+            ZIndex: =8
+
+        "txtFirstTab As 'Text box'":
+            AccessibleLabel: ="Textbox 1"
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Visible: =pivotAppCode_7.Selected.ItemKey="app"
+            Width: =235
+            X: =12
+            Y: =58
+            ZIndex: =9
+
+        "txtSecondTab As 'Text box'":
+            AccessibleLabel: ="Text box 2"
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Visible: =pivotAppCode_7.Selected.ItemKey="app"
+            Width: =235
+            X: =260
+            Y: =58
+            ZIndex: =10
+
+        htmlText_3 As htmlViewer:
+            AutoHeight: =true
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            HtmlText: |-
+                ="The tab order should flow between the first two textboxes, the command bar (arrow keys to navigate) and then the button. 
+                Use the button to programmatically set focus on the command bar."
+            PaddingBottom: =0
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =0
+            Size: =varTheme.fontSizes.s
+            Visible: =pivotAppCode_7.Selected.ItemKey="app"
+            Width: =Parent.Width
+            Y: =195
+            ZIndex: =11
+

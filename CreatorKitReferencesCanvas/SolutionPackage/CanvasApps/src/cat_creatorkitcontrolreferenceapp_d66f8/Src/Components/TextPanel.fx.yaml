@@ -1,0 +1,37 @@
+TextPanel As CanvasComponent:
+    ComponentHeight: =htmlText.Height
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Text: ="Text"
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "Elevation2_1 As 'Fluent Elevation (1.0.6-beta)'":
+        Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+        DisplayMode: =DisplayMode.Edit
+        Height: =Parent.Height
+        HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+        PaddingBottom: =8
+        PaddingLeft: =8
+        PaddingRight: =8
+        PaddingTop: =8
+        Width: =Parent.Width
+        X: =0
+        Y: =0
+        ZIndex: =1
+
+    htmlText As htmlViewer:
+        AutoHeight: =true
+        Color: =varTheme.palette.neutralPrimary
+        Font: =Font.'Segoe UI'
+        HtmlText: =Parent.Text
+        PaddingBottom: =8*varTheme.U
+        PaddingLeft: =8*varTheme.U
+        PaddingRight: =8*varTheme.U
+        PaddingTop: =8*varTheme.U
+        Size: =varTheme.fontSizes.s
+        Width: =Parent.Width
+        ZIndex: =3
+

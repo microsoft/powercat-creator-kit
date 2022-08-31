@@ -1,0 +1,10 @@
+{
+  "AccessibilityLabel": "Accessibility label",
+  "Label": "Label",
+  "LabelPosition": "Label Position",
+  "Spinner": "Fluent Spinner (0.0.22)",
+  "Spinner_desc": "Fluent UI Spinner",
+  "SpinnerAlignment": "Spinner Alignment",
+  "SpinnerSize": "Spinner Size",
+  "Theme": "Theme"
+}

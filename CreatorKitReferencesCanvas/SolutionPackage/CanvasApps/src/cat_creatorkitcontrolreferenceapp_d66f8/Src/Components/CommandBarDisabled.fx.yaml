@@ -1,0 +1,172 @@
+CommandBarDisabled As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_2.Selected.ItemKey="code",htmlCode_2.Y+htmlCode_2.Height,160)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_2 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="CommandBar with disabled items"
+        Width: =630
+        Y: =2
+        ZIndex: =4
+
+    "pivotAppCode_2 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_2.Y+htmlCode_2.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =5
+
+    line_2 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    htmlCode_2 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);"">lblSelectedKey_2 As label:
+                Text: =Coalesce(commandBar_2.Selected.ItemKey,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""(none)""</span>) 
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""commandBar_2 As 'Fluent Command Bar'.pcfdataset""</span>:
+                DisplayMode: =DisplayMode.Edit
+                Height: =<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">32</span>
+                Items: |-
+                    =Table(
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""New""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""emailMessage""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Email message""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Mail""</span>,ItemEnabled:chkEnable_1.Checked,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""calendarEvent""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Calendar event""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Calendar""</span>,ItemEnabled:chkEnable_1.Checked,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""newItem""</span>},
+                    
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Upload""</span>,ItemEnabled:chkEnable_1.Checked},
+                            {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""uploadfile""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""File""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>},
+                            {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""uploadfolder""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Folder""</span>,ItemParentKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""upload""</span>},
+                    
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""share""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Share""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Share""</span>,ItemEnabled:chkEnable_1.Checked},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""download""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Download""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Download""</span>,ItemEnabled:chkEnable_1.Checked},
+                    
+                        <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// Force these items to overflow</span>
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""move""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Move to...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""MoveToFolder""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemEnabled:chkEnable_1.Checked},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""copy""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Copy to...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Copy""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemEnabled:chkEnable_1.Checked},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""rename""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Rename...""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Edit""</span>,ItemOverflow:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemEnabled:chkEnable_1.Checked},
+                    
+                        <span class=""hljs-comment"" style=""color: rgb(136, 136, 136);"">// Far Items</span>
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""tile""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Grid view""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tiles""</span>,ItemIconOnly:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemFarItem:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemEnabled:chkEnable_1.Checked},
+                        {ItemKey:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""info""</span>,ItemDisplayName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Info""</span>,ItemIconName:<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Info""</span>,ItemIconOnly:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemFarItem:<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>,ItemEnabled:chkEnable_1.Checked}
+                    )
+                Theme: =varTheme.themeJSON
+                Visible: =pivotAppCode_2.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+                Width: =Parent.Width-Self.X
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkEnable_1 As 'Check box'""</span>:
+                Checked: =fals
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Enable Commands""</span>
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_2.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =7
+
+    grpFluentSample_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =10
+
+        lblSelectedKey_2 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            Size: =varTheme.fontSizes.s
+            Text: =Coalesce(commandBar_2.Selected.ItemKey,"(none)") 
+            Visible: =pivotAppCode_2.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =180
+            Y: =85
+            ZIndex: =1
+
+        lblSelected_2 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Lighter
+            Height: =33
+            Size: =varTheme.fontSizes.s
+            Text: |-
+                ="Command Selected Key:"
+            Visible: =pivotAppCode_2.Selected.ItemKey="app"
+            Width: =174
+            X: =12
+            Y: =84
+            ZIndex: =2
+
+        "commandBar_2 As 'Fluent Command Bar (1.0.6-beta)'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Items: |-
+                =Table(
+                    {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add",ItemSplit:true},
+                    {ItemKey:"emailMessage",ItemDisplayName:"Email message",ItemIconName:"Mail",ItemEnabled:chkEnable_1.Checked,ItemParentKey:"newItem"},
+                    {ItemKey:"calendarEvent",ItemDisplayName:"Calendar event",ItemIconName:"Calendar",ItemEnabled:chkEnable_1.Checked,ItemParentKey:"newItem"},
+                
+                    {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconName:"Upload",ItemEnabled:chkEnable_1.Checked},
+                        {ItemKey:"uploadfile",ItemDisplayName:"File",ItemParentKey:"upload"},
+                        {ItemKey:"uploadfolder",ItemDisplayName:"Folder",ItemParentKey:"upload"},
+                
+                    {ItemKey:"share",ItemDisplayName:"Share",ItemIconName:"Share",ItemEnabled:chkEnable_1.Checked},
+                    {ItemKey:"download",ItemDisplayName:"Download",ItemIconName:"Download",ItemEnabled:chkEnable_1.Checked},
+                
+                    // Force these items to overflow
+                    {ItemKey:"move",ItemDisplayName:"Move to...",ItemIconName:"MoveToFolder",ItemOverflow:true,ItemEnabled:chkEnable_1.Checked},
+                    {ItemKey:"copy",ItemDisplayName:"Copy to...",ItemIconName:"Copy",ItemOverflow:true,ItemEnabled:chkEnable_1.Checked},
+                    {ItemKey:"rename",ItemDisplayName:"Rename...",ItemIconName:"Edit",ItemOverflow:true,ItemEnabled:chkEnable_1.Checked},
+                
+                    // Far Items
+                    {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemFarItem:true,ItemEnabled:chkEnable_1.Checked},
+                    {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemFarItem:true,ItemEnabled:chkEnable_1.Checked}
+                )
+            Theme: =varTheme.themeJSON
+            Visible: =pivotAppCode_2.Selected.ItemKey="app"
+            Width: =Parent.Width-Self.X
+            X: =12
+            Y: =53
+            ZIndex: =3
+
+        "chkEnable_1 As 'Check box'":
+            AccessibleLabel: ="Emable Commands"
+            Checked: =false
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Label: ="Enable Commands"
+            Visible: =pivotAppCode_2.Selected.ItemKey="app"
+            Width: =160
+            X: =20
+            Y: =117
+            ZIndex: =8
+

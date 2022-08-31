@@ -24,15 +24,35 @@ variables:
 - group: alm-accelerator-variable-group
 
 steps:
-# Download the artifacts from the latest deployment of CenterofExcellenceAuditComponents to production.
+# Download the artifacts from the latest deployment of CreatorKitCore to production.
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
     project: 'creator-starter-kit'
-    pipeline: '681' #CenterofExcellenceAuditComponents buildId
+    pipeline: '681' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitCore*.zip'
   displayName: 'Download Creator Kit Core solution'
+
+# Download the artifacts from the latest deployment of CreatorKitReferencesCanvas to production.
+- task: DownloadPipelineArtifact@2
+  inputs:
+    source: 'specific'
+    project: 'creator-starter-kit'
+    pipeline: '1558' #Production buildId
+    runVersion: 'latest'
+    patterns: '**/CreatorKitReferencesCanvas*.zip'
+  displayName: 'Download Creator Kit Canvas solution'
+
+# Download the artifacts from the latest deployment of CreatorKitReferencesMDA to production.
+- task: DownloadPipelineArtifact@2
+  inputs:
+    source: 'specific'
+    project: 'creator-starter-kit'
+    pipeline: '1560' #Production buildId
+    runVersion: 'latest'
+    patterns: '**/CreatorKitReferencesMDA*.zip'
+  displayName: 'Download Creator Kit Model solution'
 
 - powershell: |
     New-Item -Path $(Pipeline.Workspace)\releaseassets -ItemType Directory
@@ -55,6 +75,8 @@ steps:
     New-Item -Path $(Pipeline.Workspace)\assetstaging -ItemType Directory
 
     Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitCore*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
+    Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitReferencesCanvas*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
+    Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitReferencesMDA*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
     
     $compress = @{
       Path = '$(Pipeline.Workspace)\assetstaging\*.*'

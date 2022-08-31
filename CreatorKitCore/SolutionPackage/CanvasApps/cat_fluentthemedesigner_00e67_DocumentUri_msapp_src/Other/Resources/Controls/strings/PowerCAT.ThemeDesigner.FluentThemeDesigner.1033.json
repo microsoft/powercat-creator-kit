@@ -1,9 +1,0 @@
-{
-  "BackgroundColor": "Background Color",
-  "PrimaryColor": "Primary Color",
-  "TextColor": "Text Color",
-  "ThemeDesigner": "Fluent Theme Designer (0.0.20)",
-  "ThemeDesigner_Desc": "A theme designer component to generate Theme JSON",
-  "ThemeGenerator": "Fluent Theme Designer",
-  "ThemeJSON": "Theme"
-}

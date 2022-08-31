@@ -1,0 +1,49 @@
+{
+    "ActivateFlowConfiguration":  [
+
+                                  ],
+    "ConnectorShareWithGroupTeamConfiguration":  [
+
+                                                 ],
+    "SolutionComponentOwnershipConfiguration":  [
+
+                                                ],
+    "FlowShareWithGroupTeamConfiguration":  [
+
+                                            ],
+    "AadGroupCanvasConfiguration":  [
+                                        {
+                                            "aadGroupId":  "#{canvasshare.aadGroupId.cat_creatorkitcontrolreferenceapp_d66f8}#",
+                                            "canvasNameInSolution":  "cat_creatorkitcontrolreferenceapp_d66f8",
+                                            "canvasDisplayName":  "Creator Kit Reference App",
+                                            "roleName":  "#{canvasshare.roleName.cat_creatorkitcontrolreferenceapp_d66f8}#"
+                                        },
+                                        {
+                                            "aadGroupId":  "#{canvasshare.aadGroupId.cat_fluentthemedesigner_00e67}#",
+                                            "canvasNameInSolution":  "cat_fluentthemedesigner_00e67",
+                                            "canvasDisplayName":  "Fluent Theme Designer",
+                                            "roleName":  "#{canvasshare.roleName.cat_fluentthemedesigner_00e67}#"
+                                        },
+                                        {
+                                            "aadGroupId":  "#{canvasshare.aadGroupId.cat_canvastemplate_f8d10}#",
+                                            "canvasNameInSolution":  "cat_canvastemplate_f8d10",
+                                            "canvasDisplayName":  "Canvas Template",
+                                            "roleName":  "#{canvasshare.roleName.cat_canvastemplate_f8d10}#"
+                                        },
+                                        {
+                                            "aadGroupId":  "#{canvasshare.aadGroupId.cat_custompagetemplate_231d0}#",
+                                            "canvasNameInSolution":  "cat_custompagetemplate_231d0",
+                                            "canvasDisplayName":  "Custom Page Template",
+                                            "roleName":  "#{canvasshare.roleName.cat_custompagetemplate_231d0}#"
+                                        },
+                                        {
+                                            "aadGroupId":  "#{canvasshare.aadGroupId.cat_powercatcomponentlibrary_0be3a}#",
+                                            "canvasNameInSolution":  "cat_powercatcomponentlibrary_0be3a",
+                                            "canvasDisplayName":  "Power CAT Component Library",
+                                            "roleName":  "#{canvasshare.roleName.cat_powercatcomponentlibrary_0be3a}#"
+                                        }
+                                    ],
+    "AadGroupTeamConfiguration":  [
+
+                                  ]
+}

@@ -1,8 +1,0 @@
-{
-  "KeyboardShortcuts": "Keyboard Shortcuts (0.0.21)",
-  "KeyboardShortcuts_Desc": "Adds Keyboard Shortcut events to Canvas Apps",
-  "KeyConfig": "Key config",
-  "KeyConfig_Desc": "Key Config e.g. [\"alt + a\",\"f1\",\"ctrl + alt + k\"]",
-  "OnKey": "On key",
-  "OnKey_Desc": "Returns the key that is pressed."
-}

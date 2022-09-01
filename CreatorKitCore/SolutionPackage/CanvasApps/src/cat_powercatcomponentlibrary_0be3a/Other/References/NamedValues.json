@@ -1,0 +1,209 @@
+{
+  "NamedValues": [
+    {
+      "Kind": "Page",
+      "Name": "CustomPagePoc",
+      "Value": "custompage:cat_custompagepoc_8746c"
+    },
+    {
+      "Kind": "Page",
+      "Name": "DetailView",
+      "Value": "custompage:cr7a3_detailview_dbc11"
+    },
+    {
+      "Kind": "Page",
+      "Name": "CodeReviewPage",
+      "Value": "custompage:cr7a3_codereviewpage_8e396"
+    },
+    {
+      "Kind": "Page",
+      "Name": "StatisticPage",
+      "Value": "custompage:cat_statisticpage_e60c8"
+    },
+    {
+      "Kind": "Page",
+      "Name": "AppCheckerPage",
+      "Value": "custompage:cr7a3_appcheckerpage_c92c6"
+    },
+    {
+      "Kind": "Page",
+      "Name": "StaticCodeAnalysisPage",
+      "Value": "custompage:cat_staticcodeanalysispage_b595a"
+    },
+    {
+      "Kind": "Page",
+      "Name": "CreateReviewPage",
+      "Value": "custompage:cat_createreviewpage_65e38"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Planner",
+      "Value": "custompage:cr047_planner_dbe07"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Roles",
+      "Value": "custompage:cr7a3_roles_569ce"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Reviews",
+      "Value": "custompage:cat_reviews_838fb"
+    },
+    {
+      "Kind": "Page",
+      "Name": "SolutionReviewDetails",
+      "Value": "custompage:cat_solutionreviewdetails_d0b31"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Custom Page Template",
+      "Value": "custompage:cat_custompagetemplate_231d0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Planner_202205081105",
+      "Value": "custompage:cat_plannercopy_91b7b"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Accounts Custom Page",
+      "Value": "custompage:cat_accountscustom_d3f96"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Command Bar Page",
+      "Value": "custompage:cat_creatorkitreferencepage_60a17"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Elevation Page",
+      "Value": "custompage:cat_elevationpage_28669"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Shimmer Page",
+      "Value": "custompage:cat_shimmerpage_9b5cd"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Nav Page",
+      "Value": "custompage:cat_navpage_18ad8"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Resizable Text Area",
+      "Value": "custompage:cat_resizabletextarea_eb7d1"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Home Page",
+      "Value": "custompage:cat_homepage_8d348"
+    },
+    {
+      "Kind": "Page",
+      "Name": "ProgressIndicator Page",
+      "Value": "custompage:cat_progressindicatorpage_9ea28"
+    },
+    {
+      "Kind": "Page",
+      "Name": "App - copy",
+      "Value": "custompage:cat_appcopy_25287"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Keyboard shortcuts",
+      "Value": "custompage:cat_keyboardshortcuts_5ca22"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Dialog Page",
+      "Value": "custompage:cat_dialogpanel_15d96"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Panel Page",
+      "Value": "custompage:cat_detailslistbasicpage_46cc7"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Pivot Page",
+      "Value": "custompage:cat_pivotpage_f0b2a"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Auto Width Label Page",
+      "Value": "custompage:cat_autowidthlabel_53db5"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Calendar Page",
+      "Value": "custompage:cat_calendarpage_cb349"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Spinner Page",
+      "Value": "custompage:cat_spinnerpage_39ec0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Tag Picker",
+      "Value": "custompage:cat_tagpicker_ca530"
+    },
+    {
+      "Kind": "Page",
+      "Name": "TEST",
+      "Value": "custompage:cat_test_8c031"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Expand Menu",
+      "Value": "custompage:cat_expandmenu_e71c4"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Thale-Forecast-Page",
+      "Value": "custompage:cat_thaleforecastpage_6e4c2"
+    },
+    {
+      "Kind": "Page",
+      "Name": "ContextMenu Page",
+      "Value": "custompage:cat_contextmenupage_7df18"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Breadcrumb Page",
+      "Value": "custompage:cat_breadcrumbpage_8963e"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Icon Page",
+      "Value": "custompage:cat_iconpage_e2422"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Tag List",
+      "Value": "custompage:cat_taglist_6a134"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Details List - Cell Types",
+      "Value": "custompage:cat_detailslistcelltypes_4e54e"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Details List - Paging",
+      "Value": "custompage:cat_detailslistpaging_6d101"
+    },
+    {
+      "Kind": "Page",
+      "Name": "DetailsList Page",
+      "Value": "custompage:cat_detailslistbasicpage_07690"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Shimmer",
+      "Value": "custompage:cat_shimmer_687ea"
+    }
+  ]
+}

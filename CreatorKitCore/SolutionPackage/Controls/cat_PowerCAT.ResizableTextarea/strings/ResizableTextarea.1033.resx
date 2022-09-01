@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="ResizableTextarea" xml:space="preserve">
-        <value>Resizable Text Area (1.0.6-beta)</value>
+        <value>Resizable Text Area (1.0.8)</value>
         <comment/>
     </data>
     <data name="ResizableTextarea_Desc" xml:space="preserve">

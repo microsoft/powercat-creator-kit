@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModuleSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SiteMapUniqueName>cat_CreatorKitReferenceApp</SiteMapUniqueName>
+  <EnableCollapsibleGroups>False</EnableCollapsibleGroups>
+  <ShowHome>False</ShowHome>
+  <ShowPinned>False</ShowPinned>
+  <ShowRecents>False</ShowRecents>
+  <SiteMap IntroducedVersion="7.0.0.0">
+    <Area Id="area_7daa3e65" ResourceId="SitemapDesigner.NewTitle" DescriptionResourceId="SitemapDesigner.NewTitle" ShowGroups="true" IntroducedVersion="7.0.0.0">
+      <Titles>
+        <Title LCID="1033" Title="Components" />
+      </Titles>
+      <Group Id="group_48e761f9" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Welcome" />
+        </Titles>
+        <SubArea Id="subarea_fb1e9ae7" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_home_icon" Icon="/WebResources/cat_home_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_homepage_8d348">
+          <Titles>
+            <Title LCID="1033" Title="Home" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_91eed3b6" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Basic Inputs" />
+        </Titles>
+        <SubArea Id="subarea_540734d5" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" Icon="/WebResources/msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_autowidthlabel_53db5">
+          <Titles>
+            <Title LCID="1033" Title="Auto Width Label" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_ac17a218" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_generic_icon" Icon="/WebResources/cat_generic_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_iconpage_e2422">
+          <Titles>
+            <Title LCID="1033" Title="Icon" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_57cc8a93" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_resizabletextarea_icon" Icon="/WebResources/cat_resizabletextarea_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_resizabletextarea_eb7d1">
+          <Titles>
+            <Title LCID="1033" Title="Resizable Text Area" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_5ddbc918" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Commands, Menus &amp; Navs" />
+        </Titles>
+        <SubArea Id="subarea_bc4ba80c" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_commandbar_icon" Icon="/WebResources/cat_commandbar_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_creatorkitreferencepage_60a17">
+          <Titles>
+            <Title LCID="1033" Title="Command Bar" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_81978cf9" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_breadcrumbicon" Icon="/WebResources/cat_breadcrumbicon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_breadcrumbpage_8963e">
+          <Titles>
+            <Title LCID="1033" Title="Breadcrumb" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_97cbb583" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_expandmenu_icon" Icon="/WebResources/cat_expandmenu_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_expandmenu_e71c4">
+          <Titles>
+            <Title LCID="1033" Title="Expand Menu" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_b4566d59" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_nav_icon" Icon="/WebResources/cat_nav_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_navpage_18ad8">
+          <Titles>
+            <Title LCID="1033" Title="Nav" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_2de55b6c" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_pivot_icon" Icon="/WebResources/cat_pivot_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_pivotpage_f0b2a">
+          <Titles>
+            <Title LCID="1033" Title="Pivot" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_234e3c99" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_contextmenu_icon" Icon="/WebResources/cat_contextmenu_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_contextmenupage_7df18">
+          <Titles>
+            <Title LCID="1033" Title="ContextMenu" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_c699157d" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Items &amp; Lists" />
+        </Titles>
+        <SubArea Id="subarea_28dbbdca" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_patternicon" Icon="/WebResources/cat_patternicon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_detailslistbasicpage_07690">
+          <Titles>
+            <Title LCID="1033" Title="DetailsList" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_2685dae6" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/AppCommon/ControlWS/HeaderIconImages/UserManagement.svg" Icon="/WebResources/AppCommon/ControlWS/HeaderIconImages/UserManagement.svg" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_facepilepage_13c32">
+          <Titles>
+            <Title LCID="1033" Title="Facepile" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_9ff11ab1" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Pickers" />
+        </Titles>
+        <SubArea Id="subarea_f53b4ef0" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_calendar_icon" Icon="/WebResources/cat_calendar_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_calendarpage_cb349">
+          <Titles>
+            <Title LCID="1033" Title="Calendar" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_0888c796" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_tagpicker_icon" Icon="/WebResources/cat_tagpicker_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_tagpicker_ca530">
+          <Titles>
+            <Title LCID="1033" Title="Tag Picker" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_97a06065" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_patternicon" Icon="/WebResources/cat_patternicon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_taglist_6a134">
+          <Titles>
+            <Title LCID="1033" Title="Tag List" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_f0df0cda" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Progress" />
+        </Titles>
+        <SubArea Id="subarea_56ca775e" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_spinner_icon" Icon="/WebResources/cat_spinner_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_spinnerpage_39ec0">
+          <Titles>
+            <Title LCID="1033" Title="Spinner" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_d94f7c03" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_progressindicator_icon" Icon="/WebResources/cat_progressindicator_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_progressindicatorpage_9ea28">
+          <Titles>
+            <Title LCID="1033" Title="Progress Indicator" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_360f35af" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Surfaces" />
+        </Titles>
+        <SubArea Id="subarea_f63e6f1b" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_panel_icon" Icon="/WebResources/cat_panel_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_detailslistbasicpage_46cc7">
+          <Titles>
+            <Title LCID="1033" Title="Panel" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_e905e7dd" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_dialog_icon" Icon="/WebResources/cat_dialog_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_dialogpanel_15d96">
+          <Titles>
+            <Title LCID="1033" Title="Dialog" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_f6d440fc" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_shimmer_icon" Icon="/WebResources/cat_shimmer_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_shimmerpage_9b5cd">
+          <Titles>
+            <Title LCID="1033" Title="Shimmer" />
+          </Titles>
+        </SubArea>
+      </Group>
+      <Group Id="group_af66a065" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <Titles>
+          <Title LCID="1033" Title="Utilities" />
+        </Titles>
+        <SubArea Id="subarea_4889823a" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_elevation_icon" Icon="/WebResources/cat_elevation_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_elevationpage_28669">
+          <Titles>
+            <Title LCID="1033" Title="Elevation Page" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_c27dc4c1" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_keyboard_icon" Icon="/WebResources/cat_keyboard_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_keyboardshortcuts_5ca22">
+          <Titles>
+            <Title LCID="1033" Title="Keyboard shortcuts" />
+          </Titles>
+        </SubArea>
+      </Group>
+    </Area>
+  </SiteMap>
+  <LocalizedNames>
+    <LocalizedName description="Creator Kit Reference App" languagecode="1033" />
+  </LocalizedNames>
+</AppModuleSiteMap>

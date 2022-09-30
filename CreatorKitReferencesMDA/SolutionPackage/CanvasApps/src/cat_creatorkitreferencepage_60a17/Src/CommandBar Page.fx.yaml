@@ -1,0 +1,666 @@
+"'CommandBar Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =
+        
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Visible: =true
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ComponentGuidanceContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentGuidance.DesiredHeight
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =4
+
+            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentGuidance.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentGuidance As Recomendation:
+                Donts: =AddColumns(Filter(currentCompCol,  Recommended = false), "Text",Practice)
+                Dos: =AddColumns(Filter(currentCompCol,  Recommended = true), "Text",Practice)
+                Height: =ComponentGuidance.DesiredHeight 
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =5
+
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_6.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_6.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =First(currentCompSamplesCol).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,1).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_6.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =60
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    "commandBar As 'Fluent Command Bar (1.0.8)'.pcfdataset":
+                        AccessibilityLabel: ="Command Bar"
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table(
+                                {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add"},
+                                {ItemKey:"emailMessage",ItemDisplayName:"Email message",ItemIconName:"Mail",ItemParentKey:"newItem"},
+                                {ItemKey:"calendarEvent",ItemDisplayName:"Calendar event",ItemIconName:"Calendar",ItemParentKey:"newItem"},
+                            
+                                {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconName:"Upload"},
+                                    {ItemKey:"uploadfile",ItemDisplayName:"File",ItemParentKey:"upload"},
+                                    {ItemKey:"uploadfolder",ItemDisplayName:"Folder",ItemParentKey:"upload"},
+                            
+                                {ItemKey:"share",ItemDisplayName:"Share",ItemIconName:"Share"},
+                                {ItemKey:"download",ItemDisplayName:"Download",ItemIconName:"Download"},
+                            
+                                // Force these items to overflow
+                                {ItemKey:"move",ItemDisplayName:"Move to...",ItemIconName:"MoveToFolder",ItemOverflow:true},
+                                {ItemKey:"copy",ItemDisplayName:"Copy to...",ItemIconName:"Copy",ItemOverflow:true},
+                                {ItemKey:"rename",ItemDisplayName:"Rename...",ItemIconName:"Edit",ItemOverflow:true},
+                            
+                                // Far Items
+                                {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemFarItem:true},
+                                {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemFarItem:true}
+                            )
+                        Theme: =AppThemeJson
+                        Visible: =true
+                        Width: =
+                        X: =12
+                        Y: =53
+                        ZIndex: =1
+
+        ExampleContainer_2 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_2.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =6
+
+            "Elevation_5 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_2.Height + ComponentExample1_1.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_1.Height + ExampleHeader_2.PaddingTop + ExampleHeader_2.PaddingBottom+ If(pivotAppCode_7.Selected.ItemKey="code",htmlCodeSnippet_1.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_4 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_4.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,2).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_7 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_1 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_1 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 1 ,Index(currentCompSamplesCol,2).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_7.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =60
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_7.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    "commandBar_1 As 'Fluent Command Bar (1.0.8)'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table(
+                                {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add",ItemIconColor:"rgb(232, 17, 35)"},
+                                {ItemKey:"emailMessage",ItemDisplayName:"Email message",ItemIconName:"Mail",ItemIconColor:"rgb(0, 191, 255)",ItemParentKey:"newItem"},
+                                {ItemKey:"calendarEvent",ItemDisplayName:"Calendar event",ItemIconName:"Calendar",ItemIconColor:"rgb(0, 0, 0)",ItemParentKey:"newItem"},
+                            
+                                {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconColor:"rgb(35, 135, 135)",ItemIconName:"Upload"},
+                                    {ItemKey:"uploadfile",ItemDisplayName:"File",ItemIconName:"Upload",ItemIconColor:"rgb(232, 17, 35)",ItemParentKey:"upload"},
+                                    {ItemKey:"uploadfolder",ItemDisplayName:"Folder",ItemIconName:"Upload", ItemIconColor:"rgb(35, 135, 135)",ItemParentKey:"upload"},
+                            
+                                // Force these items to overflow
+                                {ItemKey:"move",ItemDisplayName:"Move to...",ItemIconName:"MoveToFolder",ItemIconColor:"rgb(232, 17, 35)",ItemOverflow:true},
+                                {ItemKey:"copy",ItemDisplayName:"Copy to...",ItemIconName:"Copy",ItemIconColor:"rgb(232, 17, 35)",ItemOverflow:true},
+                                {ItemKey:"rename",ItemDisplayName:"Rename...",ItemIconName:"Edit",ItemIconColor:"rgb(232, 17, 35)",ItemOverflow:true},
+                            
+                                // Far Items
+                                {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemIconColor:"rgb(232, 17, 35)",ItemFarItem:true},
+                                {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemIconColor:"rgb(232, 17, 35)",ItemFarItem:true}
+                            )
+                        Theme: =AppThemeJson
+                        Visible: =true
+                        Width: =Parent.Width-Self.X
+                        X: =12
+                        Y: =53
+                        ZIndex: =3
+
+                    Container1 As groupContainer.horizontalAutoLayoutContainer:
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        lblSelected_1 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =33
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Command Selected Key:"
+                            Width: =174
+                            X: =12
+                            Y: =31
+                            ZIndex: =1
+
+                        lblSelectedKey_1 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            Size: =AppTheme.fontSizes.s
+                            Text: =Coalesce(commandBar_1.Selected.ItemKey,"(none)") 
+                            Width: =200
+                            X: =156
+                            Y: =1
+                            ZIndex: =2
+
+        ExampleContainer_3 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_3.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =7
+
+            "Elevation_6 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_3.Height + ComponentExample1_2.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_2.Height + ExampleHeader_3.PaddingTop + ExampleHeader_3.PaddingBottom+ If(pivotAppCode_8.Selected.ItemKey="code",htmlCodeSnippet_2.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_2 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_5 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_5.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,3).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_8 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_2.Y+htmlCodeSnippet_2.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_2 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_2 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 2 ,Index(currentCompSamplesCol,3).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_8.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =commandBar_2.Height + Container1_2.Height + chkEnable_1.Height + 20
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_8.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    "commandBar_2 As 'Fluent Command Bar (1.0.8)'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table(
+                                {ItemKey:"newItem",ItemDisplayName:"New",ItemIconName:"Add",ItemSplit:true},
+                                {ItemKey:"emailMessage",ItemDisplayName:"Email message",ItemIconName:"Mail",ItemEnabled:chkEnable_1.Checked,ItemParentKey:"newItem"},
+                                {ItemKey:"calendarEvent",ItemDisplayName:"Calendar event",ItemIconName:"Calendar",ItemEnabled:chkEnable_1.Checked,ItemParentKey:"newItem"},
+                            
+                                {ItemKey:"upload",ItemDisplayName:"Upload",ItemIconName:"Upload",ItemEnabled:chkEnable_1.Checked},
+                                    {ItemKey:"uploadfile",ItemDisplayName:"File",ItemParentKey:"upload"},
+                                    {ItemKey:"uploadfolder",ItemDisplayName:"Folder",ItemParentKey:"upload"},
+                            
+                                {ItemKey:"share",ItemDisplayName:"Share",ItemIconName:"Share",ItemEnabled:chkEnable_1.Checked},
+                                {ItemKey:"download",ItemDisplayName:"Download",ItemIconName:"Download",ItemEnabled:chkEnable_1.Checked},
+                            
+                                // Force these items to overflow
+                                {ItemKey:"move",ItemDisplayName:"Move to...",ItemIconName:"MoveToFolder",ItemOverflow:true,ItemEnabled:chkEnable_1.Checked},
+                                {ItemKey:"copy",ItemDisplayName:"Copy to...",ItemIconName:"Copy",ItemOverflow:true,ItemEnabled:chkEnable_1.Checked},
+                                {ItemKey:"rename",ItemDisplayName:"Rename...",ItemIconName:"Edit",ItemOverflow:true,ItemEnabled:chkEnable_1.Checked},
+                            
+                                // Far Items
+                                {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemFarItem:true,ItemEnabled:chkEnable_1.Checked},
+                                {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemFarItem:true,ItemEnabled:chkEnable_1.Checked}
+                            )
+                        Theme: =AppThemeJson
+                        Visible: =true
+                        Width: =Parent.Width-Self.X
+                        X: =12
+                        Y: =53
+                        ZIndex: =1
+
+                    Container1_2 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lblSelected_2 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =33
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Command Selected Key:"
+                            Width: =174
+                            X: =12
+                            Y: =31
+                            ZIndex: =1
+
+                        lblSelectedKey_2 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            Size: =AppTheme.fontSizes.s
+                            Text: =Coalesce(commandBar_2.Selected.ItemKey,"(none)") 
+                            Width: =200
+                            X: =156
+                            Y: =1
+                            ZIndex: =2
+
+                    "chkEnable_1 As 'Check box'":
+                        AccessibleLabel: ="Emable Commands"
+                        Checked: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Enable Commands"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =160
+                        Visible: =true
+                        Width: =160
+                        X: =20
+                        Y: =117
+                        ZIndex: =3
+

@@ -1,0 +1,94 @@
+"'Home Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =
+        
+
+    "Elevation_1 As 'Fluent Elevation (1.0.8)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =App.Height
+        PaddingBottom: =8
+        PaddingLeft: =8
+        PaddingRight: =8
+        PaddingTop: =8
+        Width: =Parent.Width
+        X: =0
+        Y: =0
+        ZIndex: =1
+
+    MinMaxContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =Transparent
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =20
+        PaddingRight: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        LeftContainer As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =If(App.Width < 1280, 0,1)
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            Width: =0
+            ZIndex: =1
+
+        MidContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =If(App.Width < 1280, 1,0)
+            Height: =App.Height
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =700
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =50
+            PaddingRight: =50
+            Width: =1280
+            ZIndex: =2
+
+            Image1 As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Height: =250
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =CreatorKitLogo
+                LayoutMinHeight: =250
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =250
+                ZIndex: =2
+
+            ComponentDescription_1 As ControlInfo:
+                Description: |-
+                    ="<div style=""font-size:16px""><p>The Creator Kit helps you create Power Apps experiences on the web and mobile platforms with easy-to-use sample controls and components. The kit contains a component library, several commonly used <a href=""/en-us/power-apps/developer/component-framework/overview"" data-linktype=""absolute-path"">Power Apps component framework controls</a>, and other utilities that increase developer productivity.</p>
+                    <p>All controls and components included in the kit use the <a href=""https://developer.microsoft.com/fluentui#/"" data-linktype=""external"">Fluent UI</a> framework to help you easily create consistent, beautiful, and effective user experiences for custom business applications.</p>
+                    <p>Use this app to learn about each component, get recommended best practices for the optimal user experience, interact with each component, and see behind the properties to the implementation code that enables their behavior. We recommend exploring the components of interest in the reference app before you use them in an actual app.</p>
+                    <ul>
+                    <li>Observe how the component behaves and renders data.</li>
+                    <li>Select the <strong>Code</strong> tab to see the underlying Power Fx formulas.</li>
+                    <li>Learn best practices from the inline guidance related to the control.</li>
+                    </ul></div>"
+                FillPortions: =1
+                Height: =ComponentDescription_1.DesiredHeight
+                LayoutMinHeight: =640
+                LayoutMinWidth: =60
+                Width: =600
+                ZIndex: =3
+
+        RightContainer As groupContainer.manualLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =If(App.Width < 1280, 0,1)
+            LayoutMinHeight: =100
+            LayoutMinWidth: =0
+            Width: =0
+            ZIndex: =3
+

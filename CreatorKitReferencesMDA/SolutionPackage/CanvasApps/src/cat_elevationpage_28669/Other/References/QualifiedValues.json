@@ -1,0 +1,44 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cat_components_forms",
+      "Namespace": "Components (Forms)",
+      "Values": {
+        "Information": "e1da15a6-b9e3-4d4a-b88f-de722df0a3e8"
+      }
+    },
+    {
+      "Kind": "default.cds_cat_componentsinfo_forms",
+      "Namespace": "Components Infos (Forms)",
+      "Values": {
+        "Information": "1800f8d4-d68b-461a-9a92-e3d757687d4b"
+      }
+    },
+    {
+      "Kind": "default.cds_cat_componentsample_forms",
+      "Namespace": "Component Samples (Forms)",
+      "Values": {
+        "Information": "56481375-ddd0-44d1-96ea-d2bc3a41043a"
+      }
+    },
+    {
+      "Kind": "default.cds_bulkdeletefailure_forms",
+      "Namespace": "Bulk Delete Failures (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_admin_dataversetables_forms",
+      "Namespace": "Dataverse Tables (Forms)",
+      "Values": {
+        "Information": "fb0c4428-e248-42b2-90fe-d50ba3bae104"
+      }
+    },
+    {
+      "Kind": "default.cds_cat_components_forms",
+      "Namespace": "Components_1 (Forms)",
+      "Values": {
+        "Information": "e1da15a6-b9e3-4d4a-b88f-de722df0a3e8"
+      }
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "ComponentIndexes": {
+    "ControlInfo": 2,
+    "Recomendation": 1
+  },
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Container1_1": 10,
+    "Container3_1": 16,
+    "ControlInfo": 3,
+    "DosDontsContainer": 9,
+    "galDonts_2": 18,
+    "galDos_2": 12,
+    "galleryTemplate2_4": 13,
+    "galleryTemplate2_5": 19,
+    "htmlText": 22,
+    "htmlText_1": 5,
+    "icoRight_2": 15,
+    "icoWrong_2": 21,
+    "lblBestPractices": 8,
+    "lblDo_2": 14,
+    "lblDont_2": 20,
+    "lblDonts_2": 17,
+    "lblDos_2": 11,
+    "Main Screen": 23,
+    "MainContainer": 7,
+    "MainContainer_4": 4,
+    "Recomendation": 6
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "08/29/2022 19:56:27",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {
+    "40879e85aa83466aa6d96c2b739344c1": 1,
+    "e3aff6ca45694181b12142d9bb47a897": 0
+  },
+  "OrderComponentTemplate": {
+    "40879e85aa83466aa6d96c2b739344c1": 1,
+    "e3aff6ca45694181b12142d9bb47a897": 0
+  },
+  "OrderDataSource": {
+    "CustomGallerySample": 1,
+    "DropDownSample": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "gallery": 3,
+    "groupContainer": 0,
+    "htmlViewer": 1,
+    "icon": 4,
+    "label": 2
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "Container1_1": 3,
+    "Container3_1": 9,
+    "ControlInfo": 0,
+    "DosDontsContainer": 2,
+    "galDonts_2": 11,
+    "galDos_2": 5,
+    "galleryTemplate2_4": 6,
+    "galleryTemplate2_5": 12,
+    "htmlText": 15,
+    "htmlText_1": 17,
+    "icoRight_2": 8,
+    "icoWrong_2": 14,
+    "lblBestPractices": 1,
+    "lblDo_2": 7,
+    "lblDont_2": 13,
+    "lblDonts_2": 10,
+    "lblDos_2": 4,
+    "Main Screen": 0,
+    "MainContainer": 0,
+    "MainContainer_4": 16,
+    "Recomendation": 0
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.25902890000000001,
+    "ControlCount": {
+      "40879e85aa83466aa6d96c2b739344c1": 1,
+      "e3aff6ca45694181b12142d9bb47a897": 1,
+      "gallery": 2,
+      "galleryTemplate": 2,
+      "groupContainer": 5,
+      "htmlViewer": 2,
+      "icon": 2,
+      "label": 5,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 0.87018830000000003,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": true
+}

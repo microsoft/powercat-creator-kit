@@ -1,0 +1,129 @@
+{
+  "ComponentIndexes": {
+    "ComponentDescription_1": 1,
+    "ControlInfo": 1,
+    "Recomendation": 2
+  },
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "ComponentDescription_1": 27,
+    "Container1_1": 10,
+    "Container3_1": 16,
+    "ControlInfo": 3,
+    "DosDontsContainer": 9,
+    "Elevation_1": 24,
+    "galDonts_2": 18,
+    "galDos_2": 12,
+    "galleryTemplate2_4": 13,
+    "galleryTemplate2_5": 19,
+    "Home Page": 23,
+    "htmlText": 22,
+    "htmlText_1": 5,
+    "icoRight_2": 15,
+    "icoWrong_2": 21,
+    "Image1": 28,
+    "lblBestPractices": 8,
+    "lblDo_2": 14,
+    "lblDont_2": 20,
+    "lblDonts_2": 17,
+    "lblDos_2": 11,
+    "LeftContainer": 29,
+    "MainContainer_1": 7,
+    "MainContainer_4": 4,
+    "MidContainer": 26,
+    "MinMaxContainer": 25,
+    "Recomendation": 6,
+    "RightContainer": 30
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "09/01/2022 01:57:18",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {
+    "CreatorKitLogo": "2dbe364a-dd78-43c7-8a61-925abeacae00.png"
+  },
+  "LocalResourceRootPaths": {
+    "CreatorKitLogo": "https://docserverpwaprodeus.blob.core.windows.net/bcf857ed-b1ca-4d96-bb55-b4f166effa69-1/resource/Assets0Images02dbe364a-dd78-43c7-8a61-925abeacae00.png?sv=2017-04-17&sr=b&sig=2FVPHYBp8NgMnS49wAThjGNpSWKQuvUNYhh8NkN%2FSbs%3D&spr=https&se=2022-09-02T02%3A11%3A12Z&sp=r"
+  },
+  "OrderComponentMetadata": {
+    "42cb70e0d91745edb293f349994d1e71": 0,
+    "cc444167e700457b9f60737081fd38b7": 1
+  },
+  "OrderComponentTemplate": {
+    "42cb70e0d91745edb293f349994d1e71": 0,
+    "cc444167e700457b9f60737081fd38b7": 1
+  },
+  "OrderDataSource": {
+    "CustomGallerySample": 0
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {},
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "gallery": 4,
+    "groupContainer": 0,
+    "htmlViewer": 1,
+    "icon": 5,
+    "image": 2,
+    "label": 3
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "ComponentDescription_1": 3,
+    "Container1_1": 12,
+    "Container3_1": 18,
+    "ControlInfo": 0,
+    "DosDontsContainer": 11,
+    "Elevation_1": 0,
+    "galDonts_2": 20,
+    "galDos_2": 14,
+    "galleryTemplate2_4": 15,
+    "galleryTemplate2_5": 21,
+    "Home Page": 0,
+    "htmlText": 24,
+    "htmlText_1": 8,
+    "icoRight_2": 17,
+    "icoWrong_2": 23,
+    "Image1": 4,
+    "lblBestPractices": 10,
+    "lblDo_2": 16,
+    "lblDont_2": 22,
+    "lblDonts_2": 19,
+    "lblDos_2": 13,
+    "LeftContainer": 5,
+    "MainContainer_1": 9,
+    "MainContainer_4": 7,
+    "MidContainer": 2,
+    "MinMaxContainer": 1,
+    "Recomendation": 0,
+    "RightContainer": 6
+  },
+  "ResourcesJsonIndices": {
+    "Image-CreatorKitLogo": 1,
+    "Image-SampleImage": 0
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.221723,
+    "ControlCount": {
+      "42cb70e0d91745edb293f349994d1e71": 2,
+      "cat_PowerCAT.Elevation": 1,
+      "cc444167e700457b9f60737081fd38b7": 1,
+      "gallery": 2,
+      "galleryTemplate": 2,
+      "groupContainer": 9,
+      "htmlViewer": 2,
+      "icon": 2,
+      "image": 1,
+      "label": 5,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 2.2294630999999998,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": false
+}

@@ -1,0 +1,717 @@
+ResizableTextAreaPage As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_1 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ComponentGuidanceContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentGuidance.DesiredHeight
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =4
+
+            "Elevation_2 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentGuidance.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentGuidance As Recomendation:
+                Donts: =AddColumns(Filter(currentCompCol,  Recommended = false), "Text",Practice)
+                Dos: =AddColumns(Filter(currentCompCol,  Recommended = true), "Text",Practice)
+                Height: =ComponentGuidance.DesiredHeight 
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =5
+
+            "Elevation_4 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height + Self.PaddingBottom
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_6.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_6.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,2).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,2).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_6.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: = Example_Container.Height + Example_Properties_Container.Height + Self.LayoutGap
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =320
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Example_Container As groupContainer.manualLayoutContainer:
+                        Height: =txtDescription.ResizedHeight
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        ZIndex: =2
+
+                        "txtDescription As 'Resizable Text Area (1.0.9)'":
+                            AccessibilityLabel: ="Sample Resizable Textarea"
+                            AllowResize: =ddResizeLimit.Selected.Key
+                            BorderColor: |-
+                                ="#808080"
+                            DisplayMode: =DisplayMode.Edit
+                            EnableSpellCheck: =If(chkSpellCheck.Checked,'''PowerCAT.ResizableTextarea.EnableSpellCheck'''.Yes,'''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No)
+                            FocusBorderColor: =AppTheme.paletteCSS.themePrimary
+                            FontColor: =AppTheme.paletteCSS.neutralDark
+                            FontName: ="'SegoeUI', 'Segoe UI'"
+                            FontSize: =14
+                            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+                            Height: =100
+                            HintText: ="Enter text"
+                            HoverBorderColor: =AppTheme.paletteCSS.neutralDark
+                            InputEvent: =varEvent
+                            MaxHeight: =400
+                            MaxWidth: =Parent.Width
+                            MinHeight: =60
+                            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+                            ResizedHeight: =100
+                            ResizedWidth: =640
+                            Text: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    Example_Properties_Container As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Height: =450
+                        LayoutMinHeight: =150
+                        LayoutMinWidth: =250
+                        X: =40
+                        Y: =40
+                        ZIndex: =3
+
+                        btnSetFocusOnTextArea As Button:
+                            AccessibleLabel: ="Set focus on text area"
+                            BorderRadius: =1
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Set(varEvent,"SetFocus" & Text(Rand()))
+                            Text: ="Set Focus on Text Area"
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =210
+                            X: =60
+                            Y: =68
+                            ZIndex: =1
+
+                        btnResetSize As Button:
+                            AccessibleLabel: ="Reset size"
+                            BorderRadius: =1
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Set(varEvent,"ResetSize" & Text(Rand()))
+                            Text: ="Reset Size"
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =210
+                            X: =289
+                            Y: =68
+                            ZIndex: =2
+
+                        lblText_6 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =31
+                            Size: =AppTheme.fontSizes.s
+                            Text: =txtDescription.Text
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =Parent.Width - Self.X
+                            X: =92
+                            Y: =2
+                            ZIndex: =3
+
+                        lblLabel_6 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =33
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Text:"
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =81
+                            X: =7
+                            ZIndex: =4
+
+                        "ddResizeLimit As 'Combo box'.pcfdataset":
+                            AccessibleLabel: ="Constrain"
+                            DefaultSelectedItems: |-
+                                =Table({Name:"Vertical"})
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: |-
+                                =Table(
+                                    {
+                                        Name: "Both",
+                                        Key: '''PowerCAT.ResizableTextarea.AllowResize'''.Both
+                                    },
+                                    {
+                                        Name: "Vertical",
+                                        Key: '''PowerCAT.ResizableTextarea.AllowResize'''.Vertical
+                                    },
+                                    {
+                                        Name: "Horizontal",
+                                        Key: '''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+                                    },
+                                    {
+                                        Name: "None",
+                                        Key: '''PowerCAT.ResizableTextarea.AllowResize'''.None
+                                    }
+                                )
+                            Text: =""
+                            Width: =320
+                            X: =78
+                            Y: =30
+                            ZIndex: =5
+
+                            Name5 As pcfDataField.textualColumn:
+                                FieldDisplayName: ="Name"
+                                FieldName: ="Name"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =11
+
+                        lblSelected_7 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =33
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Constrain:"
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =81
+                            X: =7
+                            Y: =30
+                            ZIndex: =6
+
+                        htmlText_4 As htmlViewer:
+                            AutoHeight: =true
+                            Color: =AppTheme.palette.neutralPrimary
+                            Font: =Font.'Segoe UI'
+                            HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,2).Description)
+                            PaddingBottom: =0
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =0
+                            Size: =AppTheme.fontSizes.s
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =Parent.Width
+                            Y: =107
+                            ZIndex: =7
+
+                        "chkSpellCheck As 'Check box'":
+                            AccessibleLabel: ="Allow spell check"
+                            Checked: =false
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Label: ="Allow Spell Check"
+                            OnChange: =
+                            Visible: =pivotAppCode_6.Selected.ItemKey="app"
+                            Width: =160
+                            X: =418
+                            Y: =30
+                            ZIndex: =8
+
+        ExampleContainer_2 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_2.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =6
+
+            "Elevation_5 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height + Self.PaddingBottom
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_2.Height + If(pivotAppCode_7.Selected.ItemKey="app", ComponentExample1_1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =2
+
+                ExampleHeader_2 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_1.Height + ExampleHeader_2.PaddingTop + ExampleHeader_2.PaddingBottom+ If(pivotAppCode_7.Selected.ItemKey="code",htmlCodeSnippet_1.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_4 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_4.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,1).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_7 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_1 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_1 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 1 ,Index(currentCompSamplesCol,1).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_7.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1_1 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Example2ContentContainer.Height
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_7.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Example2ContentContainer As groupContainer.manualLayoutContainer:
+                        FillPortions: =0
+                        Height: =450
+                        LayoutMinHeight: =550
+                        LayoutMinWidth: =250
+                        Width: =Parent.Width
+                        X: =40
+                        Y: =40
+                        ZIndex: =2
+
+                        lblText1 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            Size: =AppTheme.fontSizes.s
+                            Text: =ResizableTextarea_Default1.Text
+                            Width: =Parent.Width-Self.X
+                            X: =75
+                            Y: =108
+                            ZIndex: =1
+
+                        lblSelected_8 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =32
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Text: "
+                            Width: =61
+                            X: =36
+                            Y: =108
+                            ZIndex: =2
+
+                        lblSelected_9 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =31
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Text: "
+                            Width: =61
+                            X: =36
+                            Y: =343
+                            ZIndex: =4
+
+                        btnResetUsingEvent As Button:
+                            AccessibleLabel: ="Reset to default using event"
+                            BorderRadius: =1
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =35
+                            OnSelect: =Set(varResizableTextAreaEvent2,"ResetText" & Text(Rand()));
+                            Text: ="Reset to default using event"
+                            Visible: =true
+                            Width: =142
+                            X: =32
+                            Y: =155
+                            ZIndex: =5
+
+                        btnResetUsingVariable As Button:
+                            AccessibleLabel: ="Reset to default using variable"
+                            BorderRadius: =1
+                            BorderStyle: =BorderStyle.Solid
+                            BorderThickness: =1
+                            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =35
+                            OnSelect: =Set(varDefaultValue2,"Default Value2");
+                            Text: ="Reset to default using variable"
+                            Visible: =true
+                            Width: =142
+                            X: =32
+                            Y: =395
+                            ZIndex: =6
+
+                        htmlText_7 As htmlViewer:
+                            AutoHeight: =true
+                            Color: =AppTheme.palette.neutralPrimary
+                            Font: =Font.'Segoe UI'
+                            HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,1).Description)
+                            PaddingBottom: =0
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =0
+                            Size: =AppTheme.fontSizes.s
+                            Width: =Parent.Width
+                            ZIndex: =7
+
+                        htmlText_8 As htmlViewer:
+                            AutoHeight: =true
+                            Color: =AppTheme.palette.neutralPrimary
+                            Font: =Font.'Segoe UI'
+                            HtmlText: ="When binding to a context variable or global variable, the default can be updated by simply updating the bound variable, and keeping it in sync with the current text box value inside the OnChange event"
+                            PaddingBottom: =0
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =0
+                            Size: =AppTheme.fontSizes.s
+                            Width: =Parent.Width
+                            Y: =224
+                            ZIndex: =8
+
+                        line_9 As rectangle:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Fill: =AppTheme.palette.neutralTertiary
+                            Height: =1
+                            Width: =Parent.Width-32
+                            X: =32
+                            Y: =199
+                            ZIndex: =9
+
+                        "ResizableTextarea_Default1 As 'Resizable Text Area (1.0.9)'":
+                            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+                            Default: ="Default Value1"
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =63
+                            InputEvent: =varResizableTextAreaEvent2
+                            ResizedHeight: =46
+                            ResizedWidth: =209
+                            Text: ="Default Value"
+                            Width: =281
+                            X: =32
+                            Y: =37
+                            ZIndex: =11
+
+                        "ResizableTextarea_Default2 As 'Resizable Text Area (1.0.9)'":
+                            Default: =
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =63
+                            ResizedHeight: =63
+                            ResizedWidth: =281
+                            Text: =varDefaultValue2
+                            Width: =281
+                            X: =32
+                            Y: =281
+                            ZIndex: =12
+
+                        lblText2 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            Size: =AppTheme.fontSizes.s
+                            Text: =ResizableTextarea_Default2.Text
+                            Width: =1172
+                            X: =75
+                            Y: =343
+                            ZIndex: =13
+

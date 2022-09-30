@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>cat_CreatorKitReferenceApp</UniqueName>
+  <IntroducedVersion>1.0.0.0</IntroducedVersion>
+  <WebResourceId>e4e1dfd0-4720-ed11-b83e-00224828ea0f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="62" schemaName="cat_CreatorKitReferenceApp" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Creator Kit Reference App" languagecode="1033" />
+  </LocalizedNames>
+  <appelements>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_autowidthlabel_53db5">
+      <canvasappid>
+        <name>cat_autowidthlabel_53db5</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_autowidthlabel_53db5</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_breadcrumbpage_8963e">
+      <canvasappid>
+        <name>cat_breadcrumbpage_8963e</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_breadcrumbpage_8963e</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_calendarpage_cb349">
+      <canvasappid>
+        <name>cat_calendarpage_cb349</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_calendarpage_cb349</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_contextmenupage_7df18">
+      <canvasappid>
+        <name>cat_contextmenupage_7df18</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_contextmenupage_7df18</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_creatorkitreferencepage_60a17">
+      <canvasappid>
+        <name>cat_creatorkitreferencepage_60a17</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_creatorkitreferencepage_60a17</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_detailslistbasicpage_07690">
+      <canvasappid>
+        <name>cat_detailslistbasicpage_07690</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_detailslistbasicpage_07690</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_detailslistbasicpage_46cc7">
+      <canvasappid>
+        <name>cat_detailslistbasicpage_46cc7</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_detailslistbasicpage_46cc7</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_dialogpanel_15d96">
+      <canvasappid>
+        <name>cat_dialogpanel_15d96</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_dialogpanel_15d96</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_elevationpage_28669">
+      <canvasappid>
+        <name>cat_elevationpage_28669</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_elevationpage_28669</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_expandmenu_e71c4">
+      <canvasappid>
+        <name>cat_expandmenu_e71c4</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_expandmenu_e71c4</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_facepilepage_13c32">
+      <canvasappid>
+        <name>cat_facepilepage_13c32</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_facepilepage_13c32</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_homepage_8d348">
+      <canvasappid>
+        <name>cat_homepage_8d348</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_homepage_8d348</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_iconpage_e2422">
+      <canvasappid>
+        <name>cat_iconpage_e2422</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_iconpage_e2422</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_keyboardshortcuts_5ca22">
+      <canvasappid>
+        <name>cat_keyboardshortcuts_5ca22</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_keyboardshortcuts_5ca22</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_navpage_18ad8">
+      <canvasappid>
+        <name>cat_navpage_18ad8</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_navpage_18ad8</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_pivotpage_f0b2a">
+      <canvasappid>
+        <name>cat_pivotpage_f0b2a</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_pivotpage_f0b2a</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_progressindicatorpage_9ea28">
+      <canvasappid>
+        <name>cat_progressindicatorpage_9ea28</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_progressindicatorpage_9ea28</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_resizabletextarea_eb7d1">
+      <canvasappid>
+        <name>cat_resizabletextarea_eb7d1</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_resizabletextarea_eb7d1</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_shimmerpage_9b5cd">
+      <canvasappid>
+        <name>cat_shimmerpage_9b5cd</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_shimmerpage_9b5cd</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_spinnerpage_39ec0">
+      <canvasappid>
+        <name>cat_spinnerpage_39ec0</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_spinnerpage_39ec0</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_taglist_6a134">
+      <canvasappid>
+        <name>cat_taglist_6a134</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_taglist_6a134</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_tagpicker_ca530">
+      <canvasappid>
+        <name>cat_tagpicker_ca530</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_tagpicker_ca530</name>
+    </appelement>
+  </appelements>
+</AppModule>

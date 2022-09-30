@@ -1,0 +1,185 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |
+        =Set(AppTheme, {
+          palette: {
+            themePrimary: ColorValue("#0078d4"),
+            themeLighterAlt: ColorValue("#eff6fc"),
+            themeLighter: ColorValue("#deecf9"),
+            themeLight: ColorValue("#c7e0f4"),
+            themeTertiary: ColorValue("#71afe5"),
+            themeSecondary: ColorValue("#2b88d8"),
+            themeDarkAlt: ColorValue("#106ebe"),
+            themeDark: ColorValue("#005a9e"),
+            themeDarker: ColorValue("#004578"),
+            neutralLighterAlt: ColorValue("#faf9f8"),
+            neutralLighter: ColorValue("#f3f2f1"),
+            neutralLight: ColorValue("#edebe9"),
+            neutralQuaternaryAlt: ColorValue("#e1dfdd"),
+            neutralQuaternary: ColorValue("#d0d0d0"),
+            neutralTertiaryAlt: ColorValue("#c8c6c4"),
+            neutralTertiary: ColorValue("#a19f9d"),
+            neutralSecondary: ColorValue("#605e5c"),
+            neutralPrimaryAlt: ColorValue("#3b3a39"),
+            neutralPrimary:ColorValue("#323130"),
+            neutralDark: ColorValue("#201f1e"),
+            black: ColorValue("#000000"),
+            white: ColorValue("#ffffff")
+          },
+          paletteCSS: {
+            themePrimary: "#0078d4",
+            themeLighterAlt: "#eff6fc",
+            themeLighter: "#deecf9",
+            themeLight: "#c7e0f4",
+            themeTertiary: "#71afe5",
+            themeSecondary: "#2b88d8",
+            themeDarkAlt: "#106ebe",
+            themeDark: "#005a9e",
+            themeDarker: "#004578",
+            neutralLighterAlt: "#faf9f8",
+            neutralLighter: "#f3f2f1",
+            neutralLight: "#edebe9",
+            neutralQuaternaryAlt: "#e1dfdd",
+            neutralQuaternary: "#d0d0d0",
+            neutralTertiaryAlt: "#c8c6c4",
+            neutralTertiary: "#a19f9d",
+            neutralSecondary: "#605e5c",
+            neutralPrimaryAlt: "#3b3a39",
+            neutralPrimary:"#323130",
+            neutralDark: "#201f1e",
+            black: "#000000",
+            white: "#ffffff"
+          },
+        fontSizes:  {
+            xs:10,
+        	s:11,
+        	m:13,
+        	l:16,
+        	xl:20
+            },
+        U:4
+        
+        });
+        Set(AppThemeJson, JSON(AppTheme));
+        
+        Set(currentComp, LookUp(
+                    Components,
+                    Name = "Keyboard shortcuts"
+                )
+        );
+        
+        ClearCollect(
+            currentCompCol,
+            Filter(ComponentInfos, Components = currentComp.Components)
+        );
+        
+        ClearCollect(
+            currentCompSamplesCol,
+            Filter(ComponentSamples,Components = currentComp.Components)
+        );
+        
+        ClearCollect(colRowImages,
+        {name:"pdf",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pdf.svg"},
+        {name:"png",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/photo.svg"},
+        {name:"pdf",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pptx.svg"},
+        {name:"docx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/docx.svg"},
+        {name:"xlsx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/xlsx.svg"});
+        
+        Set(varLipsum,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac sapien eu ipsum iaculis iaculis. Aenean tincidunt, orci vel molestie posuere, ligula justo commodo erat, ut finibus ipsum risus scelerisque tellus. Donec vel pellentesque turpis. Nullam semper purus ac arcu lacinia, quis viverra eros fermentum. Proin tincidunt hendrerit ante, eu hendrerit ex vestibulum sit amet. Mauris dui odio, congue id iaculis sit amet, lacinia id felis. Fusce non vulputate ipsum, at imperdiet massa. Fusce vitae eleifend mauris, sed semper eros. Aenean varius ex accumsan velit porttitor pharetra. Sed eget sagittis sapien, ut porta augue. Aenean commodo lacus eu tortor tempus, eget luctus justo rhoncus. Aenean malesuada, elit molestie scelerisque convallis, massa tortor luctus mauris, non auctor nunc tortor ut erat. Vivamus non vehicula neque, quis eleifend felis. Pellentesque arcu ipsum, commodo eu libero et, placerat pretium orci. Nulla quis ultricies lacus.");
+        
+        ClearCollect(colFiles,
+            ForAll(Sequence(100) As Row,
+            With({
+                randomStart:RandBetween(1,Len(varLipsum)-10),
+                format:Index(colRowImages,RandBetween(1,CountRows(colRowImages)))},
+                {  
+                    Index:Row.Value,
+                    Icon:format.url,
+                    Name:Mid(varLipsum,randomStart,RandBetween(4,10)) & "." & format.name,
+                    Number:RandBetween(1,100000),
+                    Description: Mid(varLipsum,1,RandBetween(30,Len(varLipsum))),
+                    DateModified:Text(DateAdd(Now(),RandBetween(1,30)*-1,Days)),
+                    Status:"Open",
+                    StatusCol:"green",
+                    StatusIcon:"icon:SkypeCircleCheck",
+                    StatusColor:"#4B832D",
+                    SubText1: Mid(varLipsum,1,RandBetween(30,150)),
+                    SubText2: Mid(varLipsum,1,RandBetween(30,150)),
+                    SubText3: Mid(varLipsum,1,RandBetween(30,150))
+                })
+            )
+        );
+        ClearCollect(colIcons,{name:"icon:AppIconDefault"},{name:"icon:ChatBot"},{name:"icon:Flow"},{name:"icon:Library"},{name:"icon:SidePanel"},{name:"icon:Table"});
+        Set(varLipsum,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ac sapien eu ipsum iaculis iaculis. Aenean tincidunt, orci vel molestie posuere, ligula justo commodo erat, ut finibus ipsum risus scelerisque tellus. Donec vel pellentesque turpis. Nullam semper purus ac arcu lacinia, quis viverra eros fermentum. Proin tincidunt hendrerit ante, eu hendrerit ex vestibulum sit amet. Mauris dui odio, congue id iaculis sit amet, lacinia id felis. Fusce non vulputate ipsum, at imperdiet massa. Fusce vitae eleifend mauris, sed semper eros. Aenean varius ex accumsan velit porttitor pharetra. Sed eget sagittis sapien, ut porta augue. Aenean commodo lacus eu tortor tempus, eget luctus justo rhoncus. Aenean malesuada, elit molestie scelerisque convallis, massa tortor luctus mauris, non auctor nunc tortor ut erat. Vivamus non vehicula neque, quis eleifend felis. Pellentesque arcu ipsum, commodo eu libero et, placerat pretium orci. Nulla quis ultricies lacus.");
+        ClearCollect(colRows,
+            ForAll(Sequence(100) As Row,{  
+                Index:Row.Value,
+                Icon:Last(FirstN(colIcons,RandBetween(1,CountRows(colIcons)))).name,
+                Name:"Row " & Text(Row.Value),
+                Number:RandBetween(1,100000),
+                Description: Mid(varLipsum,1,RandBetween(30,Len(varLipsum))),
+                Image: "https://via.placeholder.com/100x70",
+                Status:"Open",
+                StatusCol:"green",
+                StatusIcon:"icon:SkypeCircleCheck",
+                StatusColor:"#4B832D",
+                SubText1: Mid(varLipsum,1,RandBetween(30,150)),
+                SubText2: Mid(varLipsum,1,RandBetween(30,150)),
+                SubText3: Mid(varLipsum,1,RandBetween(30,150))
+            }));
+        
+        Set(varSortFiles,"Name");
+        Set(varSortFilesAsc,true);
+        Set(
+            varSvgSpinnerImage,
+            "data:image/svg+xml;utf8, " & EncodeUrl(
+                "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' style='margin: auto; display: block; shape-rendering: auto;' width='200px' height='200px' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'>
+        <circle cx='50' cy='50' fill='none' stroke='#0078d4' stroke-width='4' r='31' stroke-dasharray='146.08405839192537 50.69468613064179'>
+          <animateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1.2048192771084336s' values='0 50 50;360 50 50' keyTimes='0;1'></animateTransform>
+        </circle>
+        </svg>"
+            )
+        );
+        Set(
+            varSvgCheckmarkImage,
+            "data:image/svg+xml," & EncodeUrl(
+                "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+          <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
+           <path fill='#76db91'
+        d='M1024 2048q141 0 272 -36.5t244.5 -103.5t207 -160.5t160.5 -207t103.5 -244.5t36.5 -272t-36.5 -272t-103.5 -244.5t-160.5 -207t-207 -160.5t-244.5 -103.5t-272 -36.5t-272 36.5t-244.5 103.5t-207 160.5t-160.5 207t-103.5 244.5t-36.5 272t36.5 272t103.5 244.5t160.5 207t207 160.5t244.5 103.5t272 36.5zM907 701q22 0 42 8.5t35 23.5l429 429q15 15 23 35t8 41q0 22 -8.5 42t-23 34.5t-34.5 23t-42 8.5q-21 0 -41.5 -8t-35.5 -23l-352 -352l-118 118q-32 32 -77 32q-22 0 -42 -8.5t-35 -23.5t-23.5 -34.5t-8.5 -41.5q0 -21 8.5 -41.5t23.5 -35.5l195 -195q15 -15 35.5 -23.5t41.5 -8.5z' />
+          </g>
+        </svg>"
+            )
+        );
+        ClearCollect(
+            colAccounts,
+            {
+                id: "1",
+                name: "Contoso",
+                city: "Redmond",
+                country: "U.S.",
+                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+                expand: false,
+                TagColor: "rgb(0, 183, 195)",
+                TagBorderColor: "rgb(0,137,147)",
+                externalimage: "https://via.placeholder.com/100x70",
+                iconimage: "icon:SkypeCircleCheck",
+                svg:varSvgSpinnerImage,
+                tags:["#PowerApps","#PowerPlatform"]
+            },
+            {
+                id: "2",
+                name: "Litware, Inc",
+                city: "Dallas",
+                country: "U.S.",
+                description: "Donec vel pellentesque turpis.",
+                expand: false,
+                TagColor: "rgb(255, 140, 0)",
+                TagBorderColor: "rgb(194,107,0)",
+                externalimage: "https://via.placeholder.com/100x70",
+                iconimage: "icon:SkypeCircleCheck",
+                svg:varSvgCheckmarkImage,
+                tags:["#MsDyn365", "#PowerApps"]
+            }
+        );
+

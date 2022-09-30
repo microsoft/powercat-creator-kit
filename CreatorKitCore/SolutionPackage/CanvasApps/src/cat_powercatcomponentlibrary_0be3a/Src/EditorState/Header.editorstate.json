@@ -150,7 +150,7 @@
           "Category": "Data",
           "NameMap": "{\"palette\":\"palette\"}",
           "PropertyName": "Theme",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "System"
         },
         {
           "Category": "Data",

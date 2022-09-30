@@ -194,6 +194,16 @@
       "Kind": "Page",
       "Name": "Shimmer",
       "Value": "custompage:cat_shimmer_687ea"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile",
+      "Value": "custompage:cat_facepile_10ba0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile Page",
+      "Value": "custompage:cat_facepilepage_13c32"
     }
   ]
 }

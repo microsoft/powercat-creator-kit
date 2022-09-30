@@ -97,14 +97,15 @@ App As appinfo:
             {ItemKey:"resizabletextarea",ItemDisplayName:"Resizable Text Area",ItemParentKey:"inputs",TargetScreen:scrResizableTextArea},
         
             {ItemKey:"commands_menus_navs",ItemDisplayName:"Commands, Menus & Navs"},
-             {ItemKey:"breadcrumb",ItemDisplayName:"Breadcrumb",ItemParentKey:"commands_menus_navs",TargetScreen:scrBreadcrumb},
+            {ItemKey:"breadcrumb",ItemDisplayName:"Breadcrumb",ItemParentKey:"commands_menus_navs",TargetScreen:scrBreadcrumb},
             {ItemKey:"commandbar",ItemDisplayName:"CommandBar",ItemParentKey:"commands_menus_navs",TargetScreen:scrCommandBar},
             {ItemKey:"expandmenu",ItemDisplayName:"ExpandMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrExpandMenu},
             {ItemKey:"contextmenu",ItemDisplayName:"ContextMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrContextMenu},
             {ItemKey:"nav",ItemDisplayName:"Nav",ItemParentKey:"commands_menus_navs",TargetScreen:scrNav},
             {ItemKey:"pivot",ItemDisplayName:"Pivot",ItemParentKey:"commands_menus_navs",TargetScreen:scrPivot},
-        
-            {ItemKey:"detailslist",ItemDisplayName:"DetailsList"},
+            {ItemKey:"itemsnlist",ItemDisplayName:"Items & Lists"},
+            {ItemKey:"facepile",ItemDisplayName:"Facepile",ItemParentKey:"itemsnlist",TargetScreen:scrFacepile},
+            {ItemKey:"detailslist",ItemDisplayName:"DetailsList",ItemParentKey:"itemsnlist"},
             {ItemKey:"detailslist_basic",ItemDisplayName:"Basic",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Basic},
             {ItemKey:"detailslist_celltypes",ItemDisplayName:"Cell Types",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_CellTypes},
             {ItemKey:"detailslist_sortingpaging",ItemDisplayName:"Paging",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Sorting},
@@ -388,6 +389,39 @@ App As appinfo:
         {Task: 4,Tag: "5"}
         );
         
+        ClearCollect(
+            UserPersonas,
+            AddColumns(
+               // Get first 10 users who have email ID - optional
+                FirstN(
+                    Filter(
+                        Office365Users.SearchUser(),
+                        Mail <> Blank()
+                    ),
+                    10
+                ),
+                "ItemPersonaKey",
+                Mail,
+                "ItemPersonaName",
+                DisplayName,
+                "IsImage",
+                false,
+                "ItemPersonaImageInfo",
+                //Get base64 image data
+                Substitute(
+                    JSON(
+                        Office365Users.UserPhotoV2(Id),
+                        JSONFormat.IncludeBinaryData
+                    ),
+                    """",
+                    ""
+                ),
+                "ItemPersonaPresence",
+                "Away",
+                "ItemPersonaClickable",
+                true
+            )
+        );
         //show enable PCF dialog if we find out
         //Set(ShowHideDialog,  If(!IsEmpty(Organizations), !First(Organizations).'Enable Custom Controls in canvas PowerApps feature for this organization', false));
 

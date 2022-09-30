@@ -50,12 +50,18 @@ scrSpinner As screen:
             ZIndex: =3
 
         conSamplesSpinner As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =stackSamplesKeyboard_1.Height
             LayoutMinHeight: |
                 =500
             LayoutMinWidth: =250
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
             ZIndex: =4
 
-            "Elevation2_19 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_19 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -69,12 +75,9 @@ scrSpinner As screen:
                 Y: =0
                 ZIndex: =1
 
-            stackSamplesSpinner As groupContainer.verticalAutoLayoutContainer:
-                Height: |-
-                    =lblUsageSpinner.Height+
-                    pivotAppCode_30.Height +
-                    //Spinner_1.Height +
-                    Self.PaddingTop + Self.PaddingBottom
+            stackSamplesKeyboard_1 As groupContainer.verticalAutoLayoutContainer:
+                ContentLanguage: =stackSamplesKeyboard_1.Height
+                Height: =lblUsageKeyboard_1.Height + SpinnerComp_1.ComponentHeight+Self.PaddingTop + Self.PaddingBottom
                 LayoutAlignItems: =LayoutAlignItems.Stretch
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutMode: =LayoutMode.Auto
@@ -83,9 +86,9 @@ scrSpinner As screen:
                 PaddingRight: =8*varTheme.U
                 PaddingTop: =8*varTheme.U
                 Width: =Parent.Width
-                ZIndex: =2
+                ZIndex: =3
 
-                lblUsageSpinner As label:
+                lblUsageKeyboard_1 As label:
                     Color: =varTheme.palette.neutralPrimary
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Semibold
@@ -95,80 +98,10 @@ scrSpinner As screen:
                     Width: =228
                     ZIndex: =1
 
-                Container1 As groupContainer.horizontalAutoLayoutContainer:
-                    FillPortions: =0
-                    Height: =45
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
+                SpinnerComp_1 As SpinnerComp:
+                    LayoutMinHeight: =640
+                    Width: =Parent.Width
                     ZIndex: =2
-
-                    lblExampleTitle_29 As label:
-                        Color: =varTheme.palette.neutralPrimaryAlt
-                        FillPortions: =1
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =35
-                        Size: =varTheme.fontSizes.m
-                        Text: ="Basic Spinner"
-                        Width: =630
-                        Y: =2
-                        ZIndex: =1
-
-                    "pivotAppCode_30 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =49
-                        Items: |-
-                            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
-                        OnSelect: =
-                        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
-                        SelectedKey: ="app"
-                        Theme: =varTheme.themeJSON
-                        Width: =174
-                        X: =Parent.Width-Self.Width
-                        Y: =0
-                        ZIndex: =2
-
-                line_20 As rectangle:
-                    Fill: =varTheme.palette.neutralTertiary
-                    Height: =1
-                    Width: =Parent.Width
-                    Y: =48
-                    ZIndex: =4
-
-                htmlCode_29 As htmlViewer:
-                    AutoHeight: =true
-                    BorderColor: =varTheme.palette.neutralPrimary
-                    BorderStyle: =BorderStyle.Solid
-                    BorderThickness: =1
-                    Color: =varTheme.palette.neutralPrimary
-                    DisplayMode: =DisplayMode.View
-                    Font: =Font.'Courier New'
-                    Height: =115
-                    HtmlText: |-
-                        ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Spinner (0.0.18)'""</span>:
-                        
-                            IsLoading: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>    
-                            Visible: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">true</span>
-                        </pre>"
-                    Size: =10
-                    Visible: =pivotAppCode_30.Selected.ItemKey="code"
-                    Width: =Parent.Width
-                    Y: =45
-                    ZIndex: =6
-
-            "Spinner1 As 'Fluent Spinner (1.0.6-beta) Preview'":
-                DisplayMode: =DisplayMode.Edit
-                Height: =200
-                Label: ="Loading"
-                SpinnerSize: ='''PowerCAT.Spinner.SpinnerSize'''.Large
-                Theme: =varTheme.themeJSON
-                Width: =200
-                X: =172
-                Y: =144
-                ZIndex: =3
 
     LeftNav_17 As LeftNav:
         Height: =Parent.Height - 20
@@ -179,6 +112,5 @@ scrSpinner As screen:
     Header_18 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

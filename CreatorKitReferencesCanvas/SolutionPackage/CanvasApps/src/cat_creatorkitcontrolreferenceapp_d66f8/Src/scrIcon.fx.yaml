@@ -67,7 +67,7 @@ scrIcon As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_8 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_8 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -114,6 +114,5 @@ scrIcon As screen:
     Header_3 As Header:
         BackButtonVisible: =true
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

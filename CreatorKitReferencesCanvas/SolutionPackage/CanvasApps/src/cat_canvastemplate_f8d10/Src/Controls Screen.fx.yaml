@@ -208,6 +208,11 @@
         );
         ClearCollect(colSelectedTags, Filter(colTags, Value(Key) < 4));
 
+    SearchBox_1 As SearchBox:
+        X: =1580
+        Y: =29
+        ZIndex: =1
+
     Button1 As Button:
         ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
         DisplayMode: =DisplayMode.Edit
@@ -217,7 +222,7 @@
         Width: =96
         X: =42
         Y: =115
-        ZIndex: =1
+        ZIndex: =2
 
     "DatePicker1 As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
@@ -226,7 +231,7 @@
         Width: =210
         X: =42
         Y: =154
-        ZIndex: =2
+        ZIndex: =3
 
     "TextBox1 As 'Text box'":
         ColorBackground: =ColorValue(AppTheme.palette.white)
@@ -236,9 +241,9 @@
         Width: =210
         X: =42
         Y: =204
-        ZIndex: =3
+        ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (0.0.22)'":
+    "btnAddTaskHeader As 'Fluent Icon (1.0.8)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
@@ -254,7 +259,7 @@
         Y: =551
         ZIndex: =5
 
-    "Elevation1 As 'Fluent Elevation (0.0.22)'":
+    "Elevation1 As 'Fluent Elevation (1.0.8)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -263,7 +268,7 @@
         Y: =353
         ZIndex: =6
 
-    "Elevation1_1 As 'Fluent Elevation (0.0.22)'":
+    "Elevation1_1 As 'Fluent Elevation (1.0.8)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -274,7 +279,7 @@
         Y: =469
         ZIndex: =7
 
-    "Elevation1_2 As 'Fluent Elevation (0.0.22)'":
+    "Elevation1_2 As 'Fluent Elevation (1.0.8)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -283,7 +288,7 @@
         Y: =240
         ZIndex: =8
 
-    "Elevation1_3 As 'Fluent Elevation (0.0.22)'":
+    "Elevation1_3 As 'Fluent Elevation (1.0.8)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
@@ -295,7 +300,7 @@
         Y: =135
         ZIndex: =9
 
-    "picTags As 'Fluent Picker (0.0.22)'.pcfdataset":
+    "picTags As 'Fluent Picker (1.0.8)'.pcfdataset":
         BorderRadius: =0
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -418,7 +423,7 @@
         Width: =320
         X: =668
         Y: =90
-        ZIndex: =12
+        ZIndex: =11
 
     Label1_2 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -428,7 +433,7 @@
         Width: =320
         X: =916
         Y: =189
-        ZIndex: =13
+        ZIndex: =12
 
     Label1_3 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -439,7 +444,7 @@
         Width: =150
         X: =42
         Y: =73
-        ZIndex: =14
+        ZIndex: =13
 
     Label1_4 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -450,7 +455,7 @@
         Width: =320
         X: =917
         Y: =294
-        ZIndex: =15
+        ZIndex: =14
 
     Label1_5 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -461,7 +466,7 @@
         Width: =320
         X: =916
         Y: =391
-        ZIndex: =16
+        ZIndex: =15
 
     Label1_6 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -472,7 +477,7 @@
         Width: =182
         X: =919
         Y: =515
-        ZIndex: =17
+        ZIndex: =16
 
     Label1_7 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -483,9 +488,9 @@
         Width: =320
         X: =1468
         Y: =78
-        ZIndex: =18
+        ZIndex: =17
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (0.0.22)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.8)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -499,7 +504,7 @@
         Width: =36
         X: =1022
         Y: =555
-        ZIndex: =20
+        ZIndex: =18
 
     Label1_15 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -511,7 +516,7 @@
         Width: =328
         X: =38
         Y: =0
-        ZIndex: =21
+        ZIndex: =19
 
     ExpandMenu_1 As ExpandMenu:
         Fill: =ColorValue(ExpandMenu_1.Theme.palette.white)
@@ -11795,7 +11800,7 @@
         Width: =If(Self.IsExpanded,400,36)
         X: =920
         Y: =646
-        ZIndex: =22
+        ZIndex: =20
 
     Label1_16 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -11806,7 +11811,7 @@
         Width: =90
         X: =920
         Y: =613
-        ZIndex: =23
+        ZIndex: =21
 
     Label1_17 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -11816,7 +11821,7 @@
         Width: =320
         X: =306
         Y: =93
-        ZIndex: =24
+        ZIndex: =22
 
     Label1_18 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -11827,9 +11832,9 @@
         Width: =134
         X: =918
         Y: =78
-        ZIndex: =25
+        ZIndex: =23
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.22)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.8)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -11876,9 +11881,9 @@
         Width: =530
         X: =912
         Y: =105
-        ZIndex: =26
+        ZIndex: =24
 
-    "ContextMenu1 As 'Fluent Context Menu (0.0.22)'.pcfdataset":
+    "ContextMenu1 As 'Fluent Context Menu (1.0.8)'.pcfdataset":
         Chevron: =true
         DisplayMode: =DisplayMode.Edit
         Height: =53
@@ -11909,7 +11914,7 @@
         Width: =114
         X: =1186
         Y: =540
-        ZIndex: =27
+        ZIndex: =25
 
     "Checkbox1 As 'Check box'":
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -11918,7 +11923,7 @@
         Width: =160
         X: =42
         Y: =263
-        ZIndex: =28
+        ZIndex: =26
 
     "RadioGroup1 As 'Radio group'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
@@ -11927,7 +11932,7 @@
         Width: =320
         X: =42
         Y: =312
-        ZIndex: =29
+        ZIndex: =27
 
         Value1 As pcfDataField.textualColumn:
             FieldDisplayName: ="Value"
@@ -11942,9 +11947,9 @@
         Width: =257
         X: =42
         Y: =412
-        ZIndex: =30
+        ZIndex: =28
 
-    "Nav1 As 'Fluent Nav (0.0.22)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (1.0.8)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =690
         Items: |-
@@ -12039,9 +12044,9 @@
         Width: =422
         X: =1468
         Y: =135
-        ZIndex: =31
+        ZIndex: =29
 
-    "CommandBar1 As 'Fluent Command Bar (0.0.22)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (1.0.8)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -12055,9 +12060,9 @@
         Width: =458
         X: =912
         Y: =420
-        ZIndex: =32
+        ZIndex: =30
 
-    "Pivot1 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+    "Pivot1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Items: |-
@@ -12083,7 +12088,7 @@
         Width: =476
         X: =916
         Y: =325
-        ZIndex: =33
+        ZIndex: =31
 
     Label1_19 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -12094,7 +12099,7 @@
         Width: =182
         X: =1188
         Y: =504
-        ZIndex: =34
+        ZIndex: =32
 
     btnOpenDialog As Button:
         ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
@@ -12108,7 +12113,7 @@
         Width: =135
         X: =1729
         Y: =985
-        ZIndex: =35
+        ZIndex: =33
 
     btnOpenPanel As Button:
         ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
@@ -12122,9 +12127,9 @@
         Width: =135
         X: =1580
         Y: =985
-        ZIndex: =36
+        ZIndex: =34
 
-    "Elevation1_4 As 'Fluent Elevation (0.0.22)'":
+    "Elevation1_4 As 'Fluent Elevation (1.0.8)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -12133,9 +12138,9 @@
         Width: =499
         X: =99
         Y: =760
-        ZIndex: =37
+        ZIndex: =35
 
-    "Calendar1 As 'Fluent Calendar (0.0.22)'":
+    "Calendar1 As 'Fluent Calendar (1.0.8) Preview'":
         DayPickerVisible: =true
         DisplayMode: =DisplayMode.Edit
         Height: =239
@@ -12149,26 +12154,17 @@
         Width: =438
         X: =111
         Y: =760
-        ZIndex: =38
+        ZIndex: =36
 
-    "Shimmer1 As 'Fluent Shimmer (0.0.22)'.pcfdataset":
+    "Shimmer1 As 'Fluent Shimmer (1.0.8) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =205
         Items: |-
             =Table({ItemKey:"1",ItemWidth:"20",ItemHeight:20,ItemRowKey:"1",ItemType:"circle"},{ItemKey:"2",ItemWidth:"10",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"3",ItemWidth:"90",ItemHeight:10,ItemRowKey:"1",ItemType:"line"})
-        rows_Items: |-
-            =Table(
-                {
-                    RowKey: "1",
-                    RowOrder:1,
-                    RowCount:6,
-                    RowWidth: 100
-                }
-            )
         Width: =169
         X: =680
         Y: =554
-        ZIndex: =39
+        ZIndex: =37
 
     Label1_22 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -12179,9 +12175,9 @@
         Width: =125
         X: =684
         Y: =503
-        ZIndex: =40
+        ZIndex: =38
 
-    "Spinner1 As 'Fluent Spinner (0.0.22)'":
+    "Spinner1 As 'Fluent Spinner (1.0.8) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =60
         Label: ="Loading..."
@@ -12192,25 +12188,9 @@
         Width: =95
         X: =395
         Y: =126
-        ZIndex: =41
-
-    Panel_1 As Panel:
-        Fill: =Panel_1.OverlayColor
-        OnButtonSelect: |-
-            =UpdateContext({showPanel:false})
-        OnCloseSelect: |-
-            =UpdateContext({showPanel:false})
-        Subtitle: =""
-        Theme: =AppTheme
-        Visible: =showPanel
-        Width: =1920
-        ZIndex: =42
+        ZIndex: =39
 
     Dialog_1 As Dialog:
-        ContentHeight: =Dialog_1.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
-        ContentWidth: =Dialog_1.DialogWidth
-        ContentX: = Dialog_1.Width/2-Dialog_1.DialogWidth/2
-        ContentY: = Dialog_1.Height/2-Dialog_1.DialogHeight/2+DialogHeaderContainer.Height
         Fill: =Dialog_1.OverlayColor
         Height: =1080
         OnButtonSelect: |-
@@ -12220,7 +12200,7 @@
         Theme: =AppTheme
         Visible: =showDialog
         Width: =1920
-        ZIndex: =43
+        ZIndex: =40
 
     PanelContentForm As form:
         AcceptsFocus: =false
@@ -12234,7 +12214,7 @@
         Width: =Panel_1.ContentWidth
         X: =Panel_1.ContentX
         Y: =90
-        ZIndex: =44
+        ZIndex: =41
 
         "'Created On_DataCard1_1' As typedDataCard.pcfCoreTextualViewCard":
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -12425,15 +12405,15 @@
                 Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-    "Shimmer2 As 'Fluent Shimmer (0.0.22)'.pcfdataset":
+    "Shimmer2 As 'Fluent Shimmer (1.0.8) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =140
         Width: =295
         X: =303
         Y: =244
-        ZIndex: =45
+        ZIndex: =42
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (0.0.22)'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.8) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =74
         Label: ="Title here"
@@ -12442,13 +12422,7 @@
         Width: =280
         X: =320
         Y: =676
-        ZIndex: =46
-
-    SearchBox_1 As SearchBox:
-        OnReset: =Set(DefaultValue, SearchBox_1.Default)
-        X: =1580
-        Y: =29
-        ZIndex: =47
+        ZIndex: =43
 
     Label1_20 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -12458,7 +12432,7 @@
         Width: =320
         X: =306
         Y: =207
-        ZIndex: =48
+        ZIndex: =44
 
     Label1_21 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -12468,7 +12442,7 @@
         Width: =320
         X: =308
         Y: =628
-        ZIndex: =49
+        ZIndex: =45
 
     Label1_23 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -12478,5 +12452,39 @@
         Width: =320
         X: =99
         Y: =714
-        ZIndex: =50
+        ZIndex: =46
+
+    Panel_1 As Panel:
+        Fill: =Panel_1.OverlayColor
+        OnButtonSelect: |-
+            =UpdateContext({showPanel:false})
+        OnCloseSelect: |-
+            =UpdateContext({showPanel:false})
+        Subtitle: =""
+        Theme: =AppTheme
+        Visible: =showPanel
+        Width: =1920
+        ZIndex: =47
+
+    "Facepile1 As 'Fluent Facepile (%VERSION%)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =38
+        MaxDisplayablePersonas: =1
+        ShowAddButton: =true
+        Theme: =AppThemeJson
+        Width: =326
+        X: =300
+        Y: =374
+        ZIndex: =48
+
+    Label1_8 As Label:
+        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="Facepile"
+        Width: =275
+        X: =299
+        Y: =319
+        ZIndex: =49
 

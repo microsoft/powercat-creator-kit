@@ -49,7 +49,7 @@ scrCommandBar As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_2 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_2 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -116,6 +116,5 @@ scrCommandBar As screen:
     Header_4 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

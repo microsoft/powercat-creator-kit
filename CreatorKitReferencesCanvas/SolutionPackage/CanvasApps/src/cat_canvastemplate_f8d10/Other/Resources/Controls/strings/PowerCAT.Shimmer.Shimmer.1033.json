@@ -1,8 +1,8 @@
 {
   "AccessibilityLabel": "Accessibility label",
-  "Shimmer": "Fluent Shimmer (0.0.22)",
+  "RowCount": "Row Count",
+  "Shimmer": "Fluent Shimmer (1.0.8) Preview",
   "Shimmer_Desc": "Shimmer component",
-  "ShimmerWidth": "Shimmer Width",
   "SpacebetweenShimmer": "Space between Shimmer",
   "Theme": "Theme"
 }

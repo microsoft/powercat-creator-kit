@@ -55,6 +55,5 @@ scrTemplate As screen:
     Header_17 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

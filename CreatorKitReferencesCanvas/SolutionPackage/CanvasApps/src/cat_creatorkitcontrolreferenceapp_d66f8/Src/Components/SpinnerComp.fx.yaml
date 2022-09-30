@@ -1,0 +1,335 @@
+SpinnerComp As CanvasComponent:
+    ComponentHeight: =varAutoHeight
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "SpinnerElevation As 'Fluent Elevation (1.0.9)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =181
+        Width: =359
+        X: =44
+        Y: =65
+        ZIndex: =1
+
+    "ddSpinnerSize As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table( {
+                    Name: "Medium",
+                    Key: "2"
+                })
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table(
+                {
+                    Name: "Extra Small",
+                    Key: "0"
+                },
+                {
+                    Name: "Small",
+                    Key: "1"
+                },
+                {
+                    Name: "Medium",
+                    Key: "2"
+                },
+                {
+                    Name: "Large",
+                    Key: "3"
+                }
+            )
+        Text: =""
+        Width: =175
+        X: =194
+        Y: =261
+        ZIndex: =2
+
+        Name5_6 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblSpinnerSize As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Spinner Size :"
+        Width: =126
+        X: =42
+        Y: =261
+        ZIndex: =3
+
+    "ddSpinnerAlignment As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table( {
+                    Name: "Center",
+                    Key: "0"
+                })
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table(
+                {
+                    Name: "Center",
+                    Key: "0"
+                },
+                {
+                    Name: "Left",
+                    Key: "1"
+                },
+                {
+                    Name: "Right",
+                    Key: "2"
+                }
+            )
+        Text: =""
+        Width: =175
+        X: =194
+        Y: =307
+        ZIndex: =4
+
+        Name5_7 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblSpinnerAlignment As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Spinner Alignment :"
+        Width: =126
+        X: =42
+        Y: =307
+        ZIndex: =5
+
+    "'ddLabel Position' As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table( {
+                    Name: "Bottom",
+                    Key: "Bottom"
+                })
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table(
+                {
+                    Name: "Bottom",
+                    Key: "Bottom"
+                },
+                {
+                    Name: "Right",
+                    Key: "Right"
+                },
+                {
+                    Name: "Left",
+                    Key: "Left"
+                },
+                {
+                    Name: "Top",
+                    Key: "Top"
+                }
+            )
+        Text: =""
+        Width: =175
+        X: =194
+        Y: =352
+        ZIndex: =6
+
+        Name5_8 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    "'lblLabel Position :' As Label":
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Label Position :"
+        Width: =126
+        X: =42
+        Y: =349
+        ZIndex: =7
+
+    "SpinnerLabelInputbox As 'Text box'":
+        AccessibleLabel: ="Spinner Label Input"
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnChange: =
+        Placeholder: ="Spinner label here..."
+        Value: ="Loading..."
+        Width: =288
+        X: =194
+        Y: =398
+        ZIndex: =8
+
+    lblSpinnerlbl As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Spinner Label :"
+        Width: =126
+        X: =42
+        Y: =398
+        ZIndex: =9
+
+    "Spinner1_1 As 'Fluent Spinner (1.0.9) Preview'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =158
+        Label: =SpinnerLabelInputbox.Value
+        LabelPosition: ='ddLabel Position'.Selected.Key
+        SpinnerAlignment: =ddSpinnerAlignment.Selected.Key
+        SpinnerSize: =ddSpinnerSize.Selected.Key
+        Theme: =varTheme.themeJSON
+        Width: =327
+        X: =57
+        Y: =77
+        ZIndex: =10
+
+    lblExampleTitle_35 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Basic Spinner"
+        Width: =630
+        Y: =2
+        ZIndex: =11
+
+    "pivotAppCode_35 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",450,htmlCode_35.Y+htmlCode_35.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =12
+
+    line_26 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =13
+
+    htmlCode_35 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: #f0f0f0; color: #444444;""><span class=""hljs-string"" style=""color: #880000;"">'Fluent Spinner'</span>:
+            	Label: varLabel,
+            	sliderPercentComplete.Value,
+            	Theme: AppThemeJson,
+            	SpinnerSize:ddSpinnerSize.Selected.key,
+            	SpinnerAlignment:ddSpinnerAlignment.Selected.key,
+            	LabelPosition:'ddLabel Position'.Selected.Name,""ddSpinnerAlignment""</span>:
+                        DefaultSelectedItems: Table( {
+            					Name: ""Center"",
+            					Key: ""0""
+            				})
+                        DisplayMode:DisplayMode.Edit
+                        Height:32
+                        Items: |-
+                            =Table(
+            					{
+            						Name: ""Center"",
+            						Key: ""0""
+            					},
+            					{
+            						Name: ""Right"",
+            						Key: ""1""
+            					},
+            					{
+            						Name: ""Left"",
+            						Key: ""2""
+            					}
+            				)
+                        Text:""
+            	 LabelPosition:'ddLabel Position'.Selected.Name""ddSpinnerAlignment""</span>:
+                        DefaultSelectedItems: |-
+                            =Table( {
+            					Name: ""Bottom"",
+            					Key: ""Bottom""
+            				})
+                        DisplayMode:DisplayMode.Edit
+                        Height:32
+                        Items: Table(
+            					{
+            						Name: ""Bottom"",
+            						Key: ""Bottom""
+            					},
+            					{
+            						Name: ""Right"",
+            						Key: ""Right""
+            					},
+            					{
+            						Name: ""Left"",
+            						Key: ""Left""
+            					},
+            					{
+            						Name: ""Top"",
+            						Key: ""Top""
+            					}
+            				)
+                        Text:""
+            	  LabelPosition:'ddLabel Position'.Selected.Name<span class=""hljs-string"" style=""color: #880000;"">""ddSpinnerSize ""</span>:
+                        DefaultSelectedItems: Table( {
+            					Name: ""Medium"",
+            					Key: ""2""
+            				})
+                        DisplayMode:DisplayMode.Edit
+                        Height:32
+                        Items: |-
+                            =Table(
+            					{
+            						Name: ""Extra Small"",
+            						Key: ""0""
+            					},
+            					{
+            						Name: ""Small"",
+            						Key: ""1""
+            					},
+            					{
+            						Name: ""Medium"",
+            						Key: ""2""
+            					},
+            					{
+            						Name: ""Large"",
+            						Key: ""3""
+            					}
+            				)
+                        Text:""SpinnerLabelInputbox""</span>:
+                        OnChange:UpdateContext({varLabel:Self.Value});
+                        Value:varLabel
+            </pre></div>"
+        Size: =10
+        Visible: =pivotAppCode_35.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =14
+

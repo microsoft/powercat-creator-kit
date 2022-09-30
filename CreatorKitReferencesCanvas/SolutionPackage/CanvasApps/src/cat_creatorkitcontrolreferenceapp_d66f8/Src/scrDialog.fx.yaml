@@ -56,7 +56,7 @@ scrDialog As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_20 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_20 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -116,7 +116,7 @@ scrDialog As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_31 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+                    "pivotAppCode_31 As 'Fluent Pivot (1.0.9)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-
@@ -199,12 +199,15 @@ scrDialog As screen:
     Header_19 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 
     Dialog_1 As Dialog:
         Buttons: |-
             =Table({Label: "Send", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary},{Label: "Don't send", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } )
+        ContentHeight: =Dialog_1.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
+        ContentWidth: =Dialog_1.DialogWidth
+        ContentX: = Dialog_1.Width/2-Dialog_1.DialogWidth/2
+        ContentY: = Dialog_1.Height/2-Dialog_1.DialogHeight/2+DialogHeaderContainer.Height
         DialogHeight: =220
         DialogWidth: =500
         Fill: =Dialog_1.OverlayColor

@@ -39,7 +39,7 @@ scrKeyboardShortcut As screen:
             LayoutMinWidth: =250
             ZIndex: =3
 
-            "Elevation2_18 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_18 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -91,6 +91,5 @@ scrKeyboardShortcut As screen:
     Header_15 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

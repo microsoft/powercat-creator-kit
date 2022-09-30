@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="Shimmer" xml:space="preserve">
-        <value>Fluent Shimmer (0.0.22)</value>
+        <value>Fluent Shimmer (1.0.8) Preview</value>
     </data>
     <data name="AccessibilityLabel" xml:space="preserve">
         <value>Accessibility label</value>
@@ -133,7 +133,7 @@
     <data name="SpacebetweenShimmer" xml:space="preserve">
         <value>Space between Shimmer</value>
     </data>
-    <data name="ShimmerWidth" xml:space="preserve">
-        <value>Shimmer Width</value>
+    <data name="RowCount" xml:space="preserve">
+        <value>Row Count</value>
     </data>
 </root>

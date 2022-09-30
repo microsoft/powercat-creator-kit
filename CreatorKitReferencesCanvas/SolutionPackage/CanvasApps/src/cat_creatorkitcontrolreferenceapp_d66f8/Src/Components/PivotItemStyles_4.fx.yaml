@@ -1,0 +1,9 @@
+PivotItemStyles_4 As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_29.Selected.ItemKey="code",htmlCode_34.Y+htmlCode_34.Height,300)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

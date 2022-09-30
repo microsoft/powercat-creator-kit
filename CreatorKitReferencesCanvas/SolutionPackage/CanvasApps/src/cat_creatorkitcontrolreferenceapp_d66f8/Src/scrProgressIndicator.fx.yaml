@@ -51,12 +51,14 @@ scrProgressIndicator As screen:
             ZIndex: =3
 
         conSamplesSpinner_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =stackSamplesSpinner_3.Height
             LayoutMinHeight: |
                 =500
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_22 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_22 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -72,8 +74,7 @@ scrProgressIndicator As screen:
 
             stackSamplesSpinner_3 As groupContainer.verticalAutoLayoutContainer:
                 Height: |-
-                    =lblUsageSpinner_3.Height+
-                    pivotAppCode_33.Height +
+                    =ProgressIndicator_1.ComponentHeight +
                     300+
                     Self.PaddingTop + Self.PaddingBottom
                 LayoutAlignItems: =LayoutAlignItems.Stretch
@@ -86,102 +87,11 @@ scrProgressIndicator As screen:
                 Width: =Parent.Width
                 ZIndex: =2
 
-                lblUsageSpinner_3 As label:
-                    Color: =varTheme.palette.neutralPrimary
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Semibold
-                    Height: =12*varTheme.U
-                    Size: =varTheme.fontSizes.l
-                    Text: ="Usage"
-                    Width: =228
-                    ZIndex: =1
-
-                Container1_3 As groupContainer.horizontalAutoLayoutContainer:
-                    FillPortions: =0
-                    Height: =45
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    ZIndex: =2
-
-                    lblExampleTitle_32 As label:
-                        Color: =varTheme.palette.neutralPrimaryAlt
-                        FillPortions: =1
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =35
-                        Size: =varTheme.fontSizes.m
-                        Text: |-
-                            ="Default ProgressIndicator
-                            "
-                        Width: =630
-                        Y: =2
-                        ZIndex: =1
-
-                    "pivotAppCode_33 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =49
-                        Items: |-
-                            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
-                        OnSelect: =
-                        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
-                        SelectedKey: ="app"
-                        Theme: =varTheme.themeJSON
-                        Width: =174
-                        X: =Parent.Width-Self.Width
-                        Y: =0
-                        ZIndex: =2
-
-                line_23 As rectangle:
-                    Fill: =varTheme.palette.neutralTertiary
-                    Height: =1
-                    Width: =Parent.Width
-                    Y: =48
-                    ZIndex: =4
-
-                htmlCode_32 As htmlViewer:
-                    AutoHeight: =true
-                    BorderColor: =varTheme.palette.neutralPrimary
-                    BorderStyle: =BorderStyle.Solid
-                    BorderThickness: =1
-                    Color: =varTheme.palette.neutralPrimary
-                    DisplayMode: =DisplayMode.View
-                    Font: =Font.'Courier New'
-                    Height: =115
-                    HtmlText: |-
-                        ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ProgressIndicator (0.0.18)'""</span>:
-                        
-                            Value: <span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">30</span>    
-                           
-                        </pre>"
-                    Size: =10
-                    Visible: =pivotAppCode_33.Selected.ItemKey="code"
-                    Width: =Parent.Width
-                    Y: =45
-                    ZIndex: =6
-
-                Container4 As groupContainer.verticalAutoLayoutContainer:
-                    LayoutDirection: =LayoutDirection.Vertical
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    LayoutMode: =LayoutMode.Auto
-                    PaddingTop: =20
-                    ZIndex: =8
-
-                    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.6-beta) Preview'":
-                        BarHeight: =5
-                        DisplayMode: =DisplayMode.Edit
-                        Height: =200
-                        Label: ="Example title"
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
-                        PercentComplete: =0.5
-                        Width: =400
-                        X: =0
-                        Y: =0
-                        ZIndex: =2
+                ProgressIndicator_1 As ProgressIndicator:
+                    FillPortions: =1
+                    Height: =500
+                    LayoutMinHeight: =640
+                    ZIndex: =9
 
     LeftNav_20 As LeftNav:
         Height: =Parent.Height
@@ -192,6 +102,5 @@ scrProgressIndicator As screen:
     Header_21 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

@@ -21,7 +21,7 @@ SampleAppCodeHeader As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_5 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+    "pivotAppCode_5 As 'Fluent Pivot (1.0.9)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-

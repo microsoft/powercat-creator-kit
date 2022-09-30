@@ -44,7 +44,7 @@ scrContextMenu As screen:
             Width: =Parent.Width
             ZIndex: =4
 
-            "Elevation2_9 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_9 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -100,6 +100,5 @@ scrContextMenu As screen:
     Header_5 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

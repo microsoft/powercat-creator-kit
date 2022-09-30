@@ -63,7 +63,7 @@ scrDetailsList_Sorting As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_16 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_16 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -114,6 +114,5 @@ scrDetailsList_Sorting As screen:
     Header_10 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 

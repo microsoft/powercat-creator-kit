@@ -23,13 +23,14 @@ App As appinfo:
                     neutralTertiary: "#a19f9d",
                     neutralSecondary: "#605e5c",
                     neutralPrimaryAlt: "#3b3a39",
-                    neutralPrimary:"#323130",
+                    neutralPrimary: "#323130",
                     neutralDark: "#201f1e",
                     black: "#000000",
                     white: "#ffffff"
                 }
             }
         );
+        
         Set(
             AppThemeJson,
             JSON(

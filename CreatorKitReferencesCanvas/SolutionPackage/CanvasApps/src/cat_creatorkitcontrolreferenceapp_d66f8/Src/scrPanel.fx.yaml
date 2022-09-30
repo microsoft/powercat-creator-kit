@@ -57,7 +57,7 @@ scrPanel As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_21 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation2_21 As 'Fluent Elevation (1.0.9)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -116,7 +116,7 @@ scrPanel As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_32 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+                    "pivotAppCode_32 As 'Fluent Pivot (1.0.9)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-
@@ -198,7 +198,6 @@ scrPanel As screen:
     Header_20 As Header:
         RightButtonVisible: =false
         Text: ="CREATOR KIT Reference App"
-        Width: =App.Width
         ZIndex: =8
 
     Panel_1 As Panel:

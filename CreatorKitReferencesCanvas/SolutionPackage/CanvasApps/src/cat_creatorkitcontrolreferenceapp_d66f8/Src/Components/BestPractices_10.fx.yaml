@@ -1,0 +1,22 @@
+BestPractices_10 As CanvasComponent:
+    Donts: |
+        =Table(
+            {text:"Fill the command bar completely from left to right."},
+            {text:"Use icons only for commands in larger widths."},
+            {text:"Display more than 2-3 items on the right side of the bar (or left side in left to right experiences)."}
+        )
+    Dos: |
+        =Table(
+            {text:"Sort commands in order of importance from left to right or right to left depending on the culture."},
+            {text:"Organize commands into logical groupings."},
+            {text:"Display no more than 5-7 commands."},
+            {text:"Use overflow to house less frequently-used commands."},
+            {text:"In small breakpoints, only have the most recognizable commands render as icon only."}
+        )
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =360
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

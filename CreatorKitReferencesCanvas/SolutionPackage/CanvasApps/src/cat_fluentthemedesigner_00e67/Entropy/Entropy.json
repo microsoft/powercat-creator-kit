@@ -1,0 +1,141 @@
+{
+  "ComponentIndexes": {
+    "Panel": 1,
+    "Panel_1": 1
+  },
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 38,
+    "ButtonsGallery_1": 36,
+    "CenterPanelContainer": 29,
+    "ContainerLeftSpace": 28,
+    "ContainerRightSpace": 39,
+    "ExportContainer": 22,
+    "galleryTemplate2_2": 37,
+    "htmlShadow_4": 26,
+    "HtmlText2": 24,
+    "Icon2_2": 32,
+    "Label_PanelContent": 33,
+    "Label1": 23,
+    "Label3_2": 31,
+    "MainContentContainer": 19,
+    "Panel": 25,
+    "Panel_1": 21,
+    "PanelContentContainer": 34,
+    "PanelHeaderContainer": 30,
+    "PanelRootContainer_1": 27,
+    "Separation_3": 35,
+    "Theme Designer Screen": 18,
+    "ThemeDesigner": 20
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "06/01/2022 20:02:26",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {
+    "Basic Animations": "56f6a85f-cae6-47f9-a218-c0b1818b4a29.svg",
+    "document-preview": "96a54f40-9a06-4168-86ad-57e7d68f4de0.png",
+    "Edit": "d860e507-5595-4c14-9aa7-98005d3327eb.svg",
+    "Forward": "71cc7f66-c1a4-4cc8-9c8f-ad6ac64dd0e2.svg",
+    "Illustration_9bc": "e46e0324-60ff-4d7d-b87e-b2c8be203043.jpg",
+    "Lock": "10bbc3d5-f32d-49e9-9505-b4ac5fe60ac4.svg",
+    "Photo1_3abc": "588cdd2b-fd42-4775-ac7c-ba52d69addeb.jpg",
+    "shadow": "439fbbc8-0abe-4635-a2e6-a3149d18cd69.png",
+    "Unlock": "991a10f6-283f-42eb-853a-472578b6be7c.svg"
+  },
+  "LocalResourceRootPaths": {
+    "Basic Animations": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images056f6a85f-cae6-47f9-a218-c0b1818b4a29.svg?sv=2017-04-17&sr=b&sig=p9TgSBtFrgCMo8jQlFOrUPL%2B2HuemHpBXMRyPHaC7QM%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "document-preview": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images096a54f40-9a06-4168-86ad-57e7d68f4de0.png?sv=2017-04-17&sr=b&sig=7xr4TLr924Q1l5ANzU4i6LtbjhyYFlqpKkcriiganEo%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "Edit": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images0d860e507-5595-4c14-9aa7-98005d3327eb.svg?sv=2017-04-17&sr=b&sig=8Zb5cMtC94jpGRN05mu7juGq%2F1QL61IIhFj%2BZjp%2BSwY%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "Forward": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images071cc7f66-c1a4-4cc8-9c8f-ad6ac64dd0e2.svg?sv=2017-04-17&sr=b&sig=RS4yGyr0%2FL6U%2FwxgKZV2cB%2FS7%2FWvRAsIe0%2FOwjB%2FQes%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "Illustration_9bc": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images0e46e0324-60ff-4d7d-b87e-b2c8be203043.jpg?sv=2017-04-17&sr=b&sig=BECCXpmn7O0LiAVMv73xq2UL9h2UC4Ik389h2sIaRlg%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "Lock": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images010bbc3d5-f32d-49e9-9505-b4ac5fe60ac4.svg?sv=2017-04-17&sr=b&sig=lhGOxcDh%2B3AjRruoKa%2Fu1bDwixljAi%2BhNQjG9gX4GtQ%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "Photo1_3abc": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images0588cdd2b-fd42-4775-ac7c-ba52d69addeb.jpg?sv=2017-04-17&sr=b&sig=8%2FRnMuq2vmq9unzOBacdT6%2F%2BdQATQQiilE2isAyQe58%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "shadow": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images0439fbbc8-0abe-4635-a2e6-a3149d18cd69.png?sv=2017-04-17&sr=b&sig=i3MKjERhzDqlAbcxdW9M6yDmHKc3Ut4HO9onZOfLmBg%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r",
+    "Unlock": "https://docserverpwaprodwus.blob.core.windows.net/53ebc694-4b3e-4bd5-947e-5fb0d227854e-1/resource/Assets0Images0991a10f6-283f-42eb-853a-472578b6be7c.svg?sv=2017-04-17&sr=b&sig=%2BlcJw4LfMFqyRxYlzr%2B%2B6WQpwOmHQL1hd4xXQL59Mr8%3D&spr=https&se=2022-06-02T20%3A14%3A27Z&sp=r"
+  },
+  "OldLogoFileName": "y5kh4ra2.jpg",
+  "OrderComponentMetadata": {
+    "831d3fd2a9584ee7825c86ac19030096": 0
+  },
+  "OrderComponentTemplate": {
+    "831d3fd2a9584ee7825c86ac19030096": 0
+  },
+  "OrderDataSource": {
+    "CustomGallerySample": 0,
+    "varParsedTheme": 1
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {
+    "Microsoft_CoreControls_Button": 0
+  },
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "gallery": 5,
+    "groupContainer": 0,
+    "htmlViewer": 1,
+    "icon": 3,
+    "label": 2,
+    "rectangle": 4
+  },
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 18,
+    "ButtonsGallery_1": 16,
+    "CenterPanelContainer": 9,
+    "ContainerLeftSpace": 8,
+    "ContainerRightSpace": 19,
+    "ExportContainer": 3,
+    "galleryTemplate2_2": 17,
+    "htmlShadow_4": 6,
+    "HtmlText2": 5,
+    "Icon2_2": 12,
+    "Label_PanelContent": 13,
+    "Label1": 4,
+    "Label3_2": 11,
+    "MainContentContainer": 0,
+    "Panel": 0,
+    "Panel_1": 2,
+    "PanelContentContainer": 14,
+    "PanelHeaderContainer": 10,
+    "PanelRootContainer_1": 7,
+    "Separation_3": 15,
+    "Theme Designer Screen": 0,
+    "ThemeDesigner": 1
+  },
+  "ResourcesJsonIndices": {
+    "Image-Basic Animations": 0,
+    "Image-document-preview": 1,
+    "Image-Edit": 3,
+    "Image-Forward": 2,
+    "Image-Illustration_9bc": 8,
+    "Image-Lock": 7,
+    "Image-Photo1_3abc": 4,
+    "Image-shadow": 5,
+    "Image-Unlock": 6
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.26476369999999999,
+    "ControlCount": {
+      "831d3fd2a9584ee7825c86ac19030096": 3,
+      "cat_PowerCAT.ThemeDesigner": 1,
+      "gallery": 2,
+      "galleryTemplate": 2,
+      "groupContainer": 14,
+      "htmlViewer": 3,
+      "icon": 2,
+      "label": 5,
+      "Microsoft_CoreControls_Button": 2,
+      "rectangle": 2,
+      "screen": 1
+    },
+    "DeserializationLoadTime": 6.2715047999999998,
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": false
+}

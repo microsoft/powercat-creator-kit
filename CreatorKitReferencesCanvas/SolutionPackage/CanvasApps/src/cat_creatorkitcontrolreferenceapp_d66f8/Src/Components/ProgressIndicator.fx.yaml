@@ -1,0 +1,204 @@
+ProgressIndicator As CanvasComponent:
+    ComponentHeight: =varAutoHeight
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "LblinputTextBox As 'Text box'":
+        AccessibleLabel: ="Label input box"
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: =LblinputTextBox.Value
+        OnChange: =
+        Value: ="Example label"
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =320
+        X: =169
+        Y: =223
+        ZIndex: =1
+
+    "ResizableTextarea1_1 As 'Resizable Text Area (1.0.9)'":
+        Default: =""
+        DisplayMode: =DisplayMode.Edit
+        Height: =61
+        HintText: ="Include description here..."
+        OnChange: =
+        Text: ="Description"
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =390
+        X: =169
+        Y: =269
+        ZIndex: =2
+
+    lblLabel As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Description:"
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =131
+        X: =29
+        Y: =269
+        ZIndex: =3
+
+    lblDescription As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Label :"
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =131
+        X: =29
+        Y: =223
+        ZIndex: =4
+
+    sliderPercentComplete As Slider:
+        AccessibleLabel: ="Percentage Complete Slider"
+        DisplayMode: =DisplayMode.Edit
+        Height: =29
+        Max: =100
+        Step: =1
+        Value: =30
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =319
+        X: =170
+        Y: =126
+        ZIndex: =5
+
+    lblPercentComp As Label:
+        AutoHeight: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Percentage Complete :"
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =150
+        X: =29
+        Y: =126
+        ZIndex: =6
+
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.9) Preview'":
+        Description: =ResizableTextarea1_1.Text
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: =LblinputTextBox.Value
+        PercentComplete: =sliderPercentComplete.Value
+        Theme: =varTheme.themeJSON
+        TypeofIndicator: =ddTypeofIndicator.Selected.key
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =603
+        X: =29
+        Y: =66
+        ZIndex: =7
+
+    "ddTypeofIndicator As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table({Name:"Default Indicator"})
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table({Name:"Default Indicator",key:DefaultIndicator},{Name:"Indeterminate Indicator", key:IndeterminateIndicator})
+        Text: =""
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =320
+        X: =170
+        Y: =173
+        ZIndex: =8
+
+        Name5_9 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblTypeofIndicator As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Type of Indicator :"
+        Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
+        Width: =131
+        X: =29
+        Y: =173
+        ZIndex: =9
+
+    lblExampleTitle_29 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="Progress Indicator Usage"
+        Width: =630
+        Y: =2
+        ZIndex: =10
+
+    "pivotAppCode_30 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",350,htmlCode_29.Y+htmlCode_29.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =11
+
+    line_20 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =12
+
+    htmlCode_29 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: #f0f0f0; color: #444444;""><span class=""hljs-string"" style=""color: #880000;"">ProgressIndicator</span>:
+            	Label: varLabel,
+            	Description: varDescription,
+            	PercentComplete: sliderPercentComplete.Value,
+            	Theme: AppThemeJson,
+            	TypeofIndicator:ddTypeofIndicator.Selected.key,	
+            <span class=""hljs-string"" style=""color: #880000;"">sliderPercentComplete</span>:
+            	Value: 30
+            <span style=""color: #880000;"">inputTextBox</span>:
+                        Value: =""varLabel""
+            <span style=""color: #880000;"">txtDescription</span>:
+                        AllowResize: =ddResizeLimit.Selected.Key
+                        BorderColor: |-
+                            =""#808080""
+                        BorderRadius: =1
+                        Default: =""varDescription""
+                        HintText: =""Include description here...""
+            <span class=""hljs-string"" style=""color: #880000;"">ddTypeofIndicator</span>:
+                        DefaultSelectedItems: |-
+                            =Table({Name:""Default Indicator""})
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table({Name:""Default Indicator"",key:DefaultIndicator},
+            				{Name:""Indeterminate Indicator"", key:IndeterminateIndicator})
+                        Text: =""""
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_30.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =13
+

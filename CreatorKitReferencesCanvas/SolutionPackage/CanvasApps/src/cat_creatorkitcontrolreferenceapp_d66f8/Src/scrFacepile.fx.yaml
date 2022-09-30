@@ -1,0 +1,114 @@
+scrFacepile As screen:
+    OnVisible: =
+
+    stackRoot_21 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_22.Width
+        Y: =Header_23.Height - 20
+        ZIndex: =2
+
+        lblTitle_23 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="Fluent Facepile"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_25 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="A face pile (Facepile) displays a list of personas. Each circle represents a person and contains their image or initials. Often this control is used when sharing who has access to a specific view or file, or when assigning someone a task within a workflow."
+            ZIndex: =2
+
+        comDescription_24 As TextPanel:
+            LayoutMinHeight: =640
+            Text: |-
+                ="<h2><span>Layout</span></h2>
+                <ul><li><span >The face pile empty state should only include an ""Add"" button. Another variant is to use an input field with placeholder text instructing people to add a person. See the people picker component for the menu used to add people to the face pile list.</span></li>
+                <li><span >When there is only one person in the face pile, consider using their name next to the face or initials.</span></li>
+                <li><span >When there is a need to show the face pile expanded into a vertical list, include a downward chevron button. Selecting the chevron opens a standard list view of people.</span></li>
+                <li><span >When the face pile exceeds a max number of 5 people, show a button at the end of the list indicating how many are not being shown. Clicking or tapping on the overflow would open a standard list view of people.</span></li>
+                <li><span >The component can include an ""Add"" button which can be used for quickly adding a person to the list.</span></li>
+                <li><span >When hovering over a person in the face pile, include a tooltip or people card that offers more information about that person.</span></li>
+                </ul>"
+            ZIndex: =3
+
+        Container2_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =stackPivotSamples_1.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =4
+
+            "Elevation2_24 As 'Fluent Elevation (1.0.9)'":
+                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            stackPivotSamples_1 As groupContainer.verticalAutoLayoutContainer:
+                ContentLanguage: |-
+                    =Label1_2.Height+
+                    Facepile_1.ComponentHeight + 
+                    Self.PaddingTop + Self.PaddingBottom
+                Height: |-
+                    =Label1_2.Height+
+                    Facepile_1.ComponentHeight + 
+                    Self.PaddingTop + Self.PaddingBottom
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =8*varTheme.U
+                PaddingLeft: =8*varTheme.U
+                PaddingRight: =8*varTheme.U
+                PaddingTop: =8*varTheme.U
+                Width: =Parent.Width
+                ZIndex: =2
+
+                lblTitle_1_24 As label:
+                    Color: =varTheme.palette.neutralPrimary
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =12*varTheme.U
+                    Size: =varTheme.fontSizes.l
+                    Text: = "Usage"
+                    Width: =228
+                    X: =60
+                    Y: =52
+                    ZIndex: =1
+
+                Facepile_1 As Facepile:
+                    LayoutMinHeight: =640
+                    ZIndex: =3
+
+    LeftNav_22 As LeftNav:
+        Height: =Parent.Height - 20
+        Width: =200
+        Y: =Header_23.Height
+        ZIndex: =7
+
+    Header_23 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        ZIndex: =8
+

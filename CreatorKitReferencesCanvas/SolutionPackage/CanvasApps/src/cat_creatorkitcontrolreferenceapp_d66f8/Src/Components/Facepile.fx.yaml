@@ -1,0 +1,250 @@
+Facepile As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_29.Selected.ItemKey="code",htmlCode_34.Y+htmlCode_34.Height,430)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    lblExampleTitle_34 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="With Office365Users connector"
+        Width: =630
+        Y: =2
+        ZIndex: =3
+
+    "pivotAppCode_29 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_34.Y+htmlCode_34.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =4
+
+    line_25 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =5
+
+    htmlCode_34 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: #f0f0f0; color: #444444;""><span class=""hljs-string"" style=""color: #880000;"">Facepile</span>:
+                Screen-Onvisible: ClearCollect(
+                UserPersonas,
+                AddColumns(
+                   // Get first 10 users who have email ID - optional
+                    FirstN(
+                        Filter(
+                            Office365Users.SearchUser(),
+                            Mail <> Blank()
+                        ),
+                        10
+                    ),
+                    ""ItemPersonaKey"",
+                    Mail,
+                    ""ItemPersonaName"",
+                    DisplayName,
+                    ""IsImage"",
+                    false,
+                    ""ItemPersonaImageInfo"",
+                    //Get base64 image data
+                    Substitute(
+                        JSON(
+                            Office365Users.UserPhotoV2(Id),
+                            JSONFormat.IncludeBinaryData
+                        ),
+                        """",
+                        ""
+                    ),
+                    ""ItemPersonaPresence"",
+                    ""Away"",
+                    ""ItemPersonaClickable"",
+                    true
+            		)
+            	);
+            	Items: UserPersonas,
+            	PersonaSize:ddPersonaSize.Selected.key,
+            	ImageShouldFadeIn:chkImageShouldFadeIn.Checked,
+            	Theme: AppThemeJSON
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_29.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =6
+
+    "Facepile1 As 'Fluent Facepile (1.0.9) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =58
+        ImageShouldFadeIn: =chkImageShouldFadeIn.Checked
+        Items: =UserPersonas
+        MaxDisplayablePersonas: =sliderMaxDisplayPersona.Value
+        OnChange: |-
+            =Switch(
+                Self.EventName,
+                "PersonaEvent",
+                //Pick one depending upon the data source
+                //Incase of Office365Users 
+                Notify(Self.Selected.ItemPersonaKey),
+                "AddButtonEvent",
+                //Define logic to Add Users
+                Notify("Add Users"),
+                "OverFlowButtonEvent",
+                //Define logic to Show more information
+                Notify("Show More Information")
+            )
+        OverflowButtonType: =ddOverflowBtnType.Selected.key
+        PersonaSize: =ddPersonaSize.Selected.key
+        ShowAddButton: =chkShowAddButton.Checked
+        Theme: =varTheme.themeJSON
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =530
+        X: =36
+        Y: =80
+        ZIndex: =7
+
+    sliderMaxDisplayPersona As Slider:
+        AccessibleLabel: ="Percentage Complete Slider"
+        DisplayMode: =DisplayMode.Edit
+        Height: =29
+        Max: =5
+        Step: =1
+        Value: =3
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =319
+        X: =253
+        Y: =169
+        ZIndex: =8
+
+    lblMaxPersonaDisplayable As Label:
+        AutoHeight: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =29
+        Text: |-
+            ="Maximum displayable personas :"
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =212
+        X: =41
+        Y: =169
+        ZIndex: =9
+
+    "ddPersonaSize As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table({Name:"Size 32",key:'''PowerCAT.Facepile.PersonaSize'''.Size32})
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table({Name:"Size 8",key:'''PowerCAT.Facepile.PersonaSize'''.Size8},
+            {Name:"Size 24",key:'''PowerCAT.Facepile.PersonaSize'''.Size24},
+            {Name:"Size 32",key:'''PowerCAT.Facepile.PersonaSize'''.Size32},
+            {Name:"Size 48",key:'''PowerCAT.Facepile.PersonaSize'''.Size48},
+            {Name:"Size 56",key:'''PowerCAT.Facepile.PersonaSize'''.Size56})
+        Text: =""
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =120
+        X: =265
+        Y: =214
+        ZIndex: =10
+
+        Name5_4 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblPersonaSize As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Persona Size :"
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =131
+        X: =41
+        Y: =214
+        ZIndex: =11
+
+    "chkImageShouldFadeIn As 'Check box'":
+        AccessibleLabel: ="Allow spell check"
+        Checked: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Image Should FadeIn"
+        OnChange: =
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =160
+        X: =41
+        Y: =335
+        ZIndex: =12
+
+    "ddOverflowBtnType As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table({Name:"Descriptive",key:'''PowerCAT.Facepile.OverflowButtonType'''.descriptive})
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table({Name:"None",key:'''PowerCAT.Facepile.OverflowButtonType'''.none},
+            {Name:"Descriptive",key:'''PowerCAT.Facepile.OverflowButtonType'''.descriptive},
+            {Name:"More",key:'''PowerCAT.Facepile.OverflowButtonType'''.more},
+            {Name:"Down Arrow",key:'''PowerCAT.Facepile.OverflowButtonType'''.downArrow})
+        Text: =""
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =120
+        X: =265
+        Y: =256
+        ZIndex: =13
+
+        Name5_5 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblOverflowBtnType As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Text: |-
+            ="Overflow button type :"
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =180
+        X: =41
+        Y: =256
+        ZIndex: =14
+
+    "chkShowAddButton As 'Check box'":
+        AccessibleLabel: ="Allow spell check"
+        Checked: =true
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Show Add Button"
+        OnChange: =
+        Visible: =pivotAppCode_29.Selected.ItemKey="app"
+        Width: =160
+        X: =41
+        Y: =294
+        ZIndex: =15
+

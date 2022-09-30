@@ -1,0 +1,84 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": false,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Recomendation",
+    "TemplateGuid": "cc444167e700457b9f60737081fd38b7"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Dos",
+      "Hidden": false,
+      "Name": "Dos",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "Dos",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Donts",
+      "Hidden": false,
+      "Name": "Donts",
+      "PropertyDataTypeKey": "Table",
+      "Tooltip": "A custom property",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"Text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Header",
+      "Hidden": false,
+      "Name": "Header",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Header",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "DesiredHeight",
+      "Hidden": true,
+      "Name": "DesiredHeight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Desired Height",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Additional Content",
+      "Hidden": false,
+      "Name": "AdditionalContent",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Addional Content",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Theme",
+      "Hidden": false,
+      "Name": "Theme",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Theme",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": true,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "637975907287304670",
+  "Name": "cc444167e700457b9f60737081fd38b7",
+  "OverridableProperties": {},
+  "SourceLibraryId": "1d359ef2-019d-4dc2-b3cd-9267774d0f16",
+  "SourceLibraryLogicalName": "cr7a3_compdescription_1c3b2",
+  "TemplateOriginalName": "40879e85aa83466aa6d96c2b739344c1",
+  "Version": "637953103901404237"
+}

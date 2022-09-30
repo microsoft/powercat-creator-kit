@@ -1,0 +1,179 @@
+Recomendation As CanvasComponent:
+    AdditionalContent: =""
+    DesiredHeight: =MainContainer.Height
+    Donts: |-
+        =Table({Text: "SampleText"},{Text:"2nd item"})
+    Dos: |-
+        =Table({Text: "SampleText"},{Text:"2nd item"})
+    Fill: =RGBA(0, 0, 0, 0)
+    Header: ="Best Practices"
+    Height: =Recomendation.DesiredHeight
+    Theme: ="Text"
+    Width: =1100
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =DosDontsContainer.Height + lblBestPractices.Height + Self.PaddingTop + Self.PaddingBottom + htmlText.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =20
+        PaddingLeft: =30
+        PaddingRight: =30
+        PaddingTop: =20
+        Width: =Parent.Width
+        ZIndex: =1
+
+        lblBestPractices As label:
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingLeft: =0
+            Size: =16
+            Text: =Recomendation.Header
+            Width: =560
+            ZIndex: =1
+
+        DosDontsContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =Max(Container1_1.Height, Container3_1.Height) //Parent.Height - lblBestPractices.Height - Parent.PaddingTop - Parent.PaddingBottom
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =112
+            LayoutMinWidth: =Parent.Width
+            LayoutMode: =LayoutMode.Auto
+            Visible: =!(IsBlank(Recomendation.Donts) && IsBlank(Recomendation.Dos))
+            Width: =Parent.Width - Parent.PaddingRight - Parent.PaddingLeft
+            ZIndex: =3
+
+            Container1_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =galDos_2.Height + lblDo_2.PaddingTop + lblDo_2.PaddingBottom + lblDo_2.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =200
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                lblDos_2 As label:
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    PaddingLeft: =0
+                    Text: ="Do"
+                    Width: =Parent.Width * 0.5
+                    ZIndex: =1
+
+                galDos_2 As gallery.variableTemplateHeightGallery:
+                    AccessibleLabel: ="List of Dos"
+                    FillPortions: =0
+                    Height: =CountRows(Self.AllItems) * Self.TemplateHeight + 30
+                    Items: =Recomendation.Dos
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    TabIndex: =
+                    TemplatePadding: =0
+                    TemplateSize: =40
+                    Width: =Parent.Width * 0.5
+                    ZIndex: =2
+
+                    icoRight_2 As icon.Add:
+                        Color: =RGBA(54, 176, 75, 1)
+                        DisplayMode: =DisplayMode.View
+                        Height: =20
+                        Icon: =Icon.Check
+                        PaddingBottom: =2
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        PaddingTop: =2
+                        Width: =20
+                        Y: =5
+                        ZIndex: =1
+
+                    lblDo_2 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =29
+                        Size: =11
+                        Text: =ThisItem.Text
+                        Width: =Parent.TemplateWidth-icoRight_2.Width
+                        X: =20
+                        ZIndex: =2
+
+            Container3_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                Height: =lblDont_2.Height + lblDont_2.PaddingTop + lblDont_2.PaddingBottom + galDonts_2.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+                lblDonts_2 As label:
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    PaddingLeft: =0
+                    Text: ="Dont"
+                    Width: =Parent.Width * 0.5
+                    ZIndex: =1
+
+                galDonts_2 As gallery.variableTemplateHeightGallery:
+                    AccessibleLabel: ="List of Donts"
+                    FillPortions: =0
+                    Height: =CountRows(Self.AllItems) * Self.TemplateHeight + 20
+                    Items: =Recomendation.Donts
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    TabIndex: =0
+                    TemplatePadding: =0
+                    TemplateSize: =40
+                    Width: =Parent.Width * 0.5
+                    ZIndex: =2
+
+                    icoWrong_2 As icon.Add:
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisplayMode: =DisplayMode.View
+                        Height: =20
+                        Icon: =Icon.Cancel
+                        PaddingBottom: =2
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        PaddingTop: =2
+                        Width: =20
+                        Y: =5
+                        ZIndex: =1
+
+                    lblDont_2 As label:
+                        AutoHeight: =true
+                        Font: =Font.'Segoe UI'
+                        Height: =29
+                        Size: =11
+                        Text: =ThisItem.Text
+                        Width: =Parent.TemplateWidth-icoWrong_2.Width
+                        X: =20
+                        ZIndex: =2
+
+        htmlText As htmlViewer:
+            AlignInContainer: =AlignInContainer.Stretch
+            AutoHeight: =true
+            Color: =Black
+            Font: =Font.'Segoe UI'
+            HtmlText: =Recomendation.AdditionalContent
+            LayoutMinHeight: =70
+            LayoutMinWidth: =560
+            PaddingBottom: =8
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =8
+            Size: =12
+            Width: =Parent.Width
+            ZIndex: =4
+

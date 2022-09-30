@@ -1,0 +1,9 @@
+"'Dataverse Screen' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    Header_3 As Header:
+        BackButtonVisible: =true
+        OnBackSelect: =Back()
+        Text: =App.ActiveScreen.Name
+        Width: =App.Width
+

@@ -1,0 +1,370 @@
+"'ContextMenu Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =
+        
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            Width: =App.Width
+            ZIndex: =2
+
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Visible: =true
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =5
+
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_1.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_1.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,1).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,1).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_1.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =400
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    Visible: =pivotAppCode_1.Selected.ItemKey="app"
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    "ContextMenuStandard As 'Fluent Context Menu (1.0.8)'.pcfdataset":
+                        Chevron: =chkShowChevron.Checked
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        InputEvent: =varSetFocusContextMenu
+                        Items: |-
+                            = Table(
+                                {ItemKey:"root",ItemDisplayName:"Click for ContextualMenu"},
+                                {ItemKey:"newItem",ItemDisplayName:"New"},
+                                {ItemKey:"rename",ItemDisplayName:"Rename"},
+                                {ItemKey:"edit",ItemDisplayName:"Edit"},
+                                {ItemKey:"properties",ItemDisplayName:"Properties"},
+                                {ItemKey:"disabled",ItemDisplayName:"Disabled item",ItemEnabled:false}
+                            )
+                        OnChange: =
+                        TextAlignment: =ddAlignmentMenu.Selected.Key
+                        Theme: =AppThemeJson
+                        Visible: =true
+                        Width: =235
+                        X: =30
+                        Y: =100
+                        ZIndex: =1
+
+                    Container1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lblSelectedStandardMenu As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =33
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Context Menu Selected:"
+                            Width: =174
+                            X: =12
+                            Y: =132
+                            ZIndex: =1
+
+                        lblSelectedKeyStandardMenu As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =33
+                            OnSelect: =Notify("ds")
+                            Size: =AppTheme.fontSizes.s
+                            Text: =Coalesce(ContextMenuStandard.Selected.ItemKey,"(none)") 
+                            Width: =183
+                            X: =168
+                            Y: =132
+                            ZIndex: =2
+
+                    "chkShowChevron As 'Check box'":
+                        AccessibleLabel: ="Show chevron"
+                        Checked: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Show Chevron"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =160
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =424
+                        Y: =60
+                        ZIndex: =3
+
+                    Container1_2 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        lblAlignMenu As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =AppTheme.palette.neutralPrimary
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Lighter
+                            Height: =33
+                            Size: =AppTheme.fontSizes.s
+                            Text: |-
+                                ="Align:"
+                            Width: =54
+                            X: =376
+                            Y: =101
+                            ZIndex: =1
+
+                        "ddAlignmentMenu As 'Combo box'.pcfdataset":
+                            AccessibleLabel: ="Align"
+                            DefaultSelectedItems: |-
+                                =Table({Name:"Left"})
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: |-
+                                =Table(
+                                    {
+                                        Name: "Left",
+                                        Key: '''PowerCAT.ContextMenu.TextAlignment'''.Left
+                                    },
+                                    {
+                                        Name: "Center",
+                                        Key: '''PowerCAT.ContextMenu.TextAlignment'''.Center
+                                    },
+                                    {
+                                        Name: "Right",
+                                        Key: '''PowerCAT.ContextMenu.TextAlignment'''.Right
+                                    }
+                                )
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =""
+                            Visible: =true
+                            Width: =153
+                            X: =55
+                            Y: =1
+                            ZIndex: =2
+
+                            Name5_2 As pcfDataField.textualColumn:
+                                FieldDisplayName: ="Name"
+                                FieldName: ="Name"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =11
+
+                    btnSetFocusMenu As Button:
+                        AccessibleLabel: ="Set focus"
+                        AlignInContainer: =AlignInContainer.Start
+                        BorderRadius: =1
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =35
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: =Set(varSetFocusContextMenu,"SetFocus" & Text(Rand()));
+                        Text: ="Set focus"
+                        Visible: =true
+                        Width: =154
+                        X: =431
+                        Y: =247
+                        ZIndex: =5
+

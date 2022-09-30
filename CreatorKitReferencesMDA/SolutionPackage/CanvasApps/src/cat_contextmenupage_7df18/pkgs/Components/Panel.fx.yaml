@@ -102,7 +102,6 @@ Panel As CanvasComponent:
             LayoutMode: =LayoutMode.Auto
             PaddingBottom: =10
             PaddingLeft: =20
-            PaddingRight: =20
             PaddingTop: =10
             Width: =Panel.DialogWidth
             X: =40
@@ -243,6 +242,7 @@ Panel As CanvasComponent:
                     FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themePrimary))
                     Height: =32
                     HideFromAssistiveTechnologies: =false
+                    HoverFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themeDark))
                     Italic: =false
                     OnSelect: =Panel.OnButtonSelect()
                     PaddingBottom: =0

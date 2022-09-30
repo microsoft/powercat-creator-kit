@@ -13,7 +13,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Auto Width Label (0.0.22)": {
+  "Auto Width Label (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.AutoWidthLabel",
@@ -25,8 +25,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.AutoWidthLabel",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Auto Width Label (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Auto Width Label (1.0.8)",
+    "Version": "1.0.8"
   },
   "Button": {
     "CustomGroupControlTemplateName": "",
@@ -43,7 +43,7 @@
     "TemplateDisplayName": "Button",
     "Version": "1.5.2"
   },
-  "Fluent Breadcrumb (0.0.22)": {
+  "Fluent Breadcrumb (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Breadcrumb",
@@ -55,10 +55,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Breadcrumb",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Breadcrumb (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Fluent Breadcrumb (1.0.8)",
+    "Version": "1.0.8"
   },
-  "Fluent Elevation (0.0.22)": {
+  "Fluent Elevation (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Elevation",
@@ -70,10 +70,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Elevation",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Elevation (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Fluent Elevation (1.0.8)",
+    "Version": "1.0.8"
   },
-  "Fluent Pivot (0.0.22)": {
+  "Fluent Pivot (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Pivot",
@@ -85,8 +85,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Pivot",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Pivot (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Fluent Pivot (1.0.8)",
+    "Version": "1.0.8"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",

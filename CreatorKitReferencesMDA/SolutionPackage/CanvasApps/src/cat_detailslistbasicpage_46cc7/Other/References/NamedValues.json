@@ -194,6 +194,16 @@
       "Kind": "Page",
       "Name": "Tag List",
       "Value": "custompage:cat_taglist_6a134"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile",
+      "Value": "custompage:cat_facepile_10ba0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile Page",
+      "Value": "custompage:cat_facepilepage_13c32"
     }
   ]
 }

@@ -27,11 +27,11 @@ ControlInfo As CanvasComponent:
         htmlText_1 As htmlViewer:
             AlignInContainer: =AlignInContainer.Stretch
             AutoHeight: =true
-            Color: =
             Font: =Font.'Segoe UI'
-            HtmlText: =ControlInfo.Description
+            HtmlText: |-
+                ="<div style=""font-weight:400"">" & ControlInfo.Description & "</div>"
             LayoutMinHeight: =70
-            LayoutMinWidth: =560
+            LayoutMinWidth: =100
             PaddingBottom: =8
             PaddingLeft: =8
             PaddingRight: =8

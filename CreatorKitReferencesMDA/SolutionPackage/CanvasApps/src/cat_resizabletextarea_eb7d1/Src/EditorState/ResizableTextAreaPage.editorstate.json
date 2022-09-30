@@ -2465,7 +2465,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerSubHeader",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -2679,7 +2679,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ContainerSubHeader_1",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -3475,7 +3475,14 @@
           "PropertyName": "FillPortions"
         },
         {
-          "ControlPropertyState": "AlignInContainer",
+          "ControlPropertyState": {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "AlignInContainer",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Property": {
             "Category": "Design",
             "PropertyName": "AlignInContainer",
@@ -5436,7 +5443,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCodeSnippet",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -5758,7 +5765,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCodeSnippet_1",
-      "ParentIndex": 2,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10650,7 +10657,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "recSeperator",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -10848,7 +10855,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "recSeperator_1",
-      "ParentIndex": 1,
+      "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

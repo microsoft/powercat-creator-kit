@@ -34,6 +34,7 @@ Recomendation As CanvasComponent:
             Height: =70
             LayoutMinHeight: =70
             LayoutMinWidth: =560
+            PaddingLeft: =0
             Size: =16
             Text: =Recomendation.Header
             Width: =560
@@ -45,7 +46,7 @@ Recomendation As CanvasComponent:
             Height: =Max(Container1_1.Height, Container3_1.Height) //Parent.Height - lblBestPractices.Height - Parent.PaddingTop - Parent.PaddingBottom
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutMinHeight: =112
-            LayoutMinWidth: =250
+            LayoutMinWidth: =Parent.Width
             LayoutMode: =LayoutMode.Auto
             Visible: =!(IsBlank(Recomendation.Donts) && IsBlank(Recomendation.Dos))
             Width: =Parent.Width - Parent.PaddingRight - Parent.PaddingLeft
@@ -55,7 +56,7 @@ Recomendation As CanvasComponent:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 Height: =galDos_2.Height + lblDo_2.PaddingTop + lblDo_2.PaddingBottom + lblDo_2.Height
                 LayoutDirection: =LayoutDirection.Vertical
-                LayoutMinHeight: =100
+                LayoutMinHeight: =200
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =3
@@ -68,19 +69,22 @@ Recomendation As CanvasComponent:
                     FontWeight: =FontWeight.Semibold
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
+                    PaddingLeft: =0
                     Size: =13
                     Text: ="Do"
                     Width: =Parent.Width * 0.5
                     ZIndex: =1
 
                 galDos_2 As gallery.variableTemplateHeightGallery:
+                    AccessibleLabel: ="List of Dos"
                     BorderColor: =RGBA(0, 18, 107, 1)
                     FillPortions: =0
-                    Height: =CountRows(Self.AllItems) * Self.TemplateHeight + 20
+                    Height: =CountRows(Self.AllItems) * Self.TemplateHeight + 30
                     Items: =Recomendation.Dos
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
+                    TabIndex: =
                     TemplatePadding: =0
                     TemplateSize: =40
                     Width: =Parent.Width * 0.5
@@ -108,7 +112,6 @@ Recomendation As CanvasComponent:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Lighter
                         Height: =29
                         Size: =11
                         Text: =ThisItem.Text
@@ -133,12 +136,14 @@ Recomendation As CanvasComponent:
                     FontWeight: =FontWeight.Semibold
                     LayoutMinHeight: =70
                     LayoutMinWidth: =560
+                    PaddingLeft: =0
                     Size: =13
                     Text: ="Dont"
                     Width: =Parent.Width * 0.5
                     ZIndex: =1
 
                 galDonts_2 As gallery.variableTemplateHeightGallery:
+                    AccessibleLabel: ="List of Donts"
                     BorderColor: =RGBA(0, 18, 107, 1)
                     FillPortions: =0
                     Height: =CountRows(Self.AllItems) * Self.TemplateHeight + 20
@@ -146,6 +151,7 @@ Recomendation As CanvasComponent:
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
+                    TabIndex: =0
                     TemplatePadding: =0
                     TemplateSize: =40
                     Width: =Parent.Width * 0.5
@@ -173,7 +179,6 @@ Recomendation As CanvasComponent:
                         Color: =RGBA(0, 0, 0, 1)
                         DisabledColor: =RGBA(166, 166, 166, 1)
                         Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Lighter
                         Height: =29
                         Size: =11
                         Text: =ThisItem.Text

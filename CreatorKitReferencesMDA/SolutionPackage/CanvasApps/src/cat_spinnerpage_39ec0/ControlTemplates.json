@@ -13,7 +13,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Auto Width Label (0.0.22)": {
+  "Auto Width Label (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.AutoWidthLabel",
@@ -25,8 +25,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.AutoWidthLabel",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Auto Width Label (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Auto Width Label (1.0.8)",
+    "Version": "1.0.8"
   },
   "Button": {
     "CustomGroupControlTemplateName": "",
@@ -58,7 +58,7 @@
     "TemplateDisplayName": "Combo box",
     "Version": "1.5.0"
   },
-  "Fluent Elevation (0.0.22)": {
+  "Fluent Elevation (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Elevation",
@@ -70,10 +70,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Elevation",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Elevation (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Fluent Elevation (1.0.8)",
+    "Version": "1.0.8"
   },
-  "Fluent Pivot (0.0.22)": {
+  "Fluent Pivot (1.0.8)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Pivot",
@@ -85,10 +85,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Pivot",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Pivot (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Fluent Pivot (1.0.8)",
+    "Version": "1.0.8"
   },
-  "Fluent Spinner (0.0.22)": {
+  "Fluent Spinner (1.0.8) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Spinner",
@@ -100,8 +100,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Spinner",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Spinner (0.0.22)",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "Fluent Spinner (1.0.8) Preview",
+    "Version": "1.0.8"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",

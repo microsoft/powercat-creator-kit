@@ -3,8 +3,8 @@ Panel As CanvasComponent:
         =Table({Label: "Cancel", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } ,{Label: "Ok", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
     ContentHeight: =PanelContentContainer.Height
     ContentWidth: =PanelContentContainer.Width
-    ContentX: =PanelContentContainer.X + CenterPanelContainer.X + CenterPanelContainer.PaddingLeft
-    ContentY: = PanelHeaderContainer.Height + CenterPanelContainer.Y
+    ContentX: =PanelContentContainer.X + CenterPanelContainer.X
+    ContentY: = PanelHeaderContainer.Height + Label_PanelContent.Height +  CenterPanelContainer.Y
     Description: =""
     DialogWidth: =400
     Fill: =Panel.OverlayColor
@@ -48,7 +48,7 @@ Panel As CanvasComponent:
     Width: =1600
     X: =0
     Y: =0
-    ZIndex: =3
+    ZIndex: =1
 
     htmlShadow_4 As htmlViewer:
         Height: =Panel.Height
@@ -102,7 +102,6 @@ Panel As CanvasComponent:
             LayoutMode: =LayoutMode.Auto
             PaddingBottom: =10
             PaddingLeft: =20
-            PaddingRight: =20
             PaddingTop: =10
             Width: =Panel.DialogWidth
             X: =40
@@ -178,7 +177,7 @@ Panel As CanvasComponent:
                 DisabledFill: =RGBA(0,0,0,0)
                 Fill: =RGBA(0,0,0,0)
                 Font: ='Segoe UI'
-                Height: =Parent.Height
+                Height: =If( !IsBlank(Self.Text), Parent.Height, 0)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =560
                 PaddingBottom: =10
@@ -243,6 +242,7 @@ Panel As CanvasComponent:
                     FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themePrimary))
                     Height: =32
                     HideFromAssistiveTechnologies: =false
+                    HoverFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themeDark))
                     Italic: =false
                     OnSelect: =Panel.OnButtonSelect()
                     PaddingBottom: =0

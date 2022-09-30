@@ -180,7 +180,7 @@
             "Name": "htmlText_1",
             "Parent": "MainContainer_4",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 37,
+            "PublishOrderIndex": 23,
             "Rules": [
               {
                 "Category": "Data",
@@ -432,7 +432,7 @@
         "Name": "MainContainer_4",
         "Parent": "ControlInfo",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 36,
+        "PublishOrderIndex": 22,
         "Rules": [
           {
             "Category": "Design",
@@ -622,7 +622,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637975259321011239",
+    "LastModifiedTimestamp": "638001568487722036",
     "Name": "ControlInfo",
     "Rules": [
       {
@@ -712,7 +712,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637975259321011239",
+  "LastModifiedTimestamp": "638001568487722036",
   "Name": "42cb70e0d91745edb293f349994d1e71",
   "OverridableProperties": {},
   "SourceLibraryId": "1d359ef2-019d-4dc2-b3cd-9267774d0f16",

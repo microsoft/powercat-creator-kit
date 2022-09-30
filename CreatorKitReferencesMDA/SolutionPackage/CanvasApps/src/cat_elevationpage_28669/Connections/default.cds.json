@@ -85,14 +85,6 @@
         "PCFExternalServiceUsageAllowed": false
       },
       "ComponentName": "CustomControl",
-      "Identifier": "cat_PowerCAT.AutoWidthLabel",
-      "IdentifierType": 0
-    },
-    {
-      "Capabilities": {
-        "PCFExternalServiceUsageAllowed": false
-      },
-      "ComponentName": "CustomControl",
       "Identifier": "cat_PowerCAT.Elevation",
       "IdentifierType": 0
     },
@@ -110,6 +102,14 @@
       },
       "ComponentName": "CustomControl",
       "Identifier": "cat_PowerCAT.Elevation",
+      "IdentifierType": 0
+    },
+    {
+      "Capabilities": {
+        "PCFExternalServiceUsageAllowed": false
+      },
+      "ComponentName": "CustomControl",
+      "Identifier": "cat_PowerCAT.AutoWidthLabel",
       "IdentifierType": 0
     }
   ],

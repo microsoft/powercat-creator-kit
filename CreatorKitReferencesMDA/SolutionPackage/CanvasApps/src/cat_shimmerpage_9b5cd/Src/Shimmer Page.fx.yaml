@@ -30,15 +30,13 @@
             PaddingRight: =10
             ZIndex: =2
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
                 FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
                 FontWeight: ="600"
                 Height: =45
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 PaddingRight: =10
                 Text: =currentComp.Name
                 Width: =Self.AutoWidth
@@ -68,7 +66,7 @@
             LayoutMinWidth: =250
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -93,7 +91,7 @@
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance.Height
                 PaddingBottom: =8
@@ -120,7 +118,7 @@
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -178,13 +176,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_1 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -238,7 +234,7 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    "Shimmer1 As 'Fluent Shimmer (0.0.22)'.pcfdataset":
+                    "Shimmer1 As 'Fluent Shimmer (1.0.8) Preview'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =200
                         Items: |-
@@ -268,8 +264,6 @@
                                     ItemHeight: 20,
                                     ItemType: "line"
                                 })
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         RowCount: =3
                         Width: =200
                         X: =0

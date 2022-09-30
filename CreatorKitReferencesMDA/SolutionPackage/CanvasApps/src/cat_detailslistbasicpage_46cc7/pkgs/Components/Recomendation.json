@@ -161,7 +161,7 @@
                     "Name": "lblDos_2",
                     "Parent": "Container1_1",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 41,
+                    "PublishOrderIndex": 27,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -436,7 +436,7 @@
                         "Name": "galleryTemplate2_4",
                         "Parent": "galDos_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 43,
+                        "PublishOrderIndex": 29,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -582,7 +582,7 @@
                         "Name": "lblDo_2",
                         "Parent": "galDos_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 44,
+                        "PublishOrderIndex": 30,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -970,7 +970,7 @@
                         "Name": "icoRight_2",
                         "Parent": "galDos_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 45,
+                        "PublishOrderIndex": 31,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -1298,7 +1298,7 @@
                     "Name": "galDos_2",
                     "Parent": "Container1_1",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 42,
+                    "PublishOrderIndex": 28,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1577,7 +1577,7 @@
                 "Name": "Container1_1",
                 "Parent": "DosDontsContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 40,
+                "PublishOrderIndex": 26,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1855,7 +1855,7 @@
                     "Name": "lblDonts_2",
                     "Parent": "Container3_1",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 47,
+                    "PublishOrderIndex": 33,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2130,7 +2130,7 @@
                         "Name": "galleryTemplate2_5",
                         "Parent": "galDonts_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 49,
+                        "PublishOrderIndex": 35,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -2276,7 +2276,7 @@
                         "Name": "lblDont_2",
                         "Parent": "galDonts_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 50,
+                        "PublishOrderIndex": 36,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -2664,7 +2664,7 @@
                         "Name": "icoWrong_2",
                         "Parent": "galDonts_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 51,
+                        "PublishOrderIndex": 37,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -2985,7 +2985,7 @@
                     "Name": "galDonts_2",
                     "Parent": "Container3_1",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 48,
+                    "PublishOrderIndex": 34,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3250,7 +3250,7 @@
                 "Name": "Container3_1",
                 "Parent": "DosDontsContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 46,
+                "PublishOrderIndex": 32,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3503,7 +3503,7 @@
             "Name": "DosDontsContainer",
             "Parent": "MainContainer_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 39,
+            "PublishOrderIndex": 25,
             "Rules": [
               {
                 "Category": "Design",
@@ -3770,7 +3770,7 @@
             "Name": "lblBestPractices",
             "Parent": "MainContainer_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 52,
+            "PublishOrderIndex": 38,
             "Rules": [
               {
                 "Category": "Data",
@@ -4196,7 +4196,7 @@
             "Name": "htmlText",
             "Parent": "MainContainer_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 53,
+            "PublishOrderIndex": 39,
             "Rules": [
               {
                 "Category": "Data",
@@ -4448,7 +4448,7 @@
         "Name": "MainContainer_1",
         "Parent": "Recomendation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 38,
+        "PublishOrderIndex": 24,
         "Rules": [
           {
             "Category": "Design",
@@ -4649,7 +4649,7 @@
       },
       "Theme"
     ],
-    "LastModifiedTimestamp": "637975259321135418",
+    "LastModifiedTimestamp": "638001568487829772",
     "Name": "Recomendation",
     "Rules": [
       {
@@ -4799,7 +4799,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637975259321135418",
+  "LastModifiedTimestamp": "638001568487829772",
   "Name": "cc444167e700457b9f60737081fd38b7",
   "OverridableProperties": {},
   "SourceLibraryId": "1d359ef2-019d-4dc2-b3cd-9267774d0f16",

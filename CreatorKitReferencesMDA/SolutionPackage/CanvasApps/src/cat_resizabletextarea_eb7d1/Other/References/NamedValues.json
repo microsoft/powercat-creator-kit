@@ -172,18 +172,8 @@
     },
     {
       "Kind": "Page",
-      "Name": "Details List - Cell Types",
-      "Value": "custompage:cat_detailslistcelltypes_4e54e"
-    },
-    {
-      "Kind": "Page",
       "Name": "Home Page",
       "Value": "custompage:cat_homepage_8d348"
-    },
-    {
-      "Kind": "Page",
-      "Name": "Details List - Paging",
-      "Value": "custompage:cat_detailslistpaging_6d101"
     },
     {
       "Kind": "Page",
@@ -207,8 +197,13 @@
     },
     {
       "Kind": "Page",
-      "Name": "Auto Width Label Page 2",
-      "Value": "custompage:cat_autowidthlabelpage2_a1271"
+      "Name": "Facepile",
+      "Value": "custompage:cat_facepile_10ba0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile Page",
+      "Value": "custompage:cat_facepilepage_13c32"
     }
   ]
 }

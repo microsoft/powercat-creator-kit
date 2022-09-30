@@ -1,0 +1,426 @@
+"'Calendar Page' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =ClearCollect(
+            UserPersonas,
+            AddColumns(
+               // Get first 10 users who have email ID - optional
+                FirstN(
+                    Filter(
+                        Office365Users.SearchUser(),
+                        Mail <> Blank()
+                    ),
+                    10
+                ),
+                "ItemPersonaKey",
+                Mail,
+                "ItemPersonaName",
+                DisplayName,
+                "IsImage",
+                false,
+                "ItemPersonaImageInfo",
+                //Get base64 image data
+                Substitute(
+                    JSON(
+                        Office365Users.UserPhotoV2(Id),
+                        JSONFormat.IncludeBinaryData
+                    ),
+                    """",
+                    ""
+                ),
+                "ItemPersonaPresence",
+                "Away",
+                "ItemPersonaClickable",
+                true
+            )
+        );
+
+    MainContainer As groupContainer.verticalAutoLayoutContainer:
+        Fill: =AppTheme.palette.neutralLight
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowX: =LayoutOverflow.Scroll
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingBottom: =20
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =20
+        Width: =App.Width
+        ZIndex: =2
+
+        ComponentHeader As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =300
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            Width: =App.Width
+            ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =20
+                FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
+                FontWeight: ="600"
+                Height: =45
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                PaddingRight: =10
+                Text: =currentComp.Name
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            lblMaturity As Label:
+                AlignInContainer: =AlignInContainer.Start
+                Alignment: =Align.Justify
+                Color: =Green
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: =If(currentComp.'Component Maturity' <> "GA", currentComp.'Component Maturity')
+                Width: =320
+                X: =40
+                Y: =40
+                ZIndex: =2
+
+        ComponentDescriptionContainer As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =2
+
+            "Elevation_1 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription As ControlInfo:
+                Description: =currentComp.'Components Description'
+                Height: =ComponentDescription.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ComponentDescriptionContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription_1.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_2 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription_1.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription_1 As ControlInfo:
+                Description: =currentComp.Guidance
+                Height: =ComponentDescription_1.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_1.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =4
+
+            "Elevation_4 As 'Fluent Elevation (1.0.9)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_1.Height + If(pivotAppCode_1.Selected.ItemKey="app", ComponentExample1.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader.Height + ExampleHeader_1.PaddingTop + ExampleHeader_1.PaddingBottom+ If(pivotAppCode_1.Selected.ItemKey="code",htmlCodeSnippet.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_3 As label:
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_3.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =560
+                            Size: =18
+                            Text: =Index(currentCompSamplesCol,1).Usage
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_1 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =AppThemeJson
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: =If(CountRows(currentCompSamplesCol) > 0 ,Index(currentCompSamplesCol,1).CodeSnippet)
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_1.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ComponentExample1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =350
+                    LayoutMinHeight: =430
+                    LayoutMinWidth: =250
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+                    sliderMaxDisplayPersona As Slider:
+                        AccessibleLabel: ="Percentage Complete Slider"
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =29
+                        Max: =5
+                        Step: =1
+                        Value: =3
+                        Visible: =true
+                        Width: =319
+                        X: =254
+                        Y: =98
+                        ZIndex: =3
+
+                    lblMaxPersonaDisplayable As Label:
+                        AutoHeight: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =29
+                        Text: |-
+                            ="Maximum displayable personas :"
+                        Visible: =true
+                        Width: =212
+                        X: =42
+                        Y: =98
+                        ZIndex: =4
+
+                    "ddPersonaSize As 'Combo box'.pcfdataset":
+                        AccessibleLabel: ="Constrain"
+                        DefaultSelectedItems: |-
+                            =Table({Name:"Size 32",key:'''PowerCAT.Facepile.PersonaSize'''.Size32})
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table({Name:"Size 8",key:'''PowerCAT.Facepile.PersonaSize'''.Size8},
+                            {Name:"Size 24",key:'''PowerCAT.Facepile.PersonaSize'''.Size24},
+                            {Name:"Size 32",key:'''PowerCAT.Facepile.PersonaSize'''.Size32},
+                            {Name:"Size 48",key:'''PowerCAT.Facepile.PersonaSize'''.Size48},
+                            {Name:"Size 56",key:'''PowerCAT.Facepile.PersonaSize'''.Size56})
+                        Text: =""
+                        Width: =120
+                        X: =189
+                        Y: =143
+                        ZIndex: =5
+
+                        Name5 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Name"
+                            FieldName: ="Name"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =11
+
+                    lblPersonaSize As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Text: |-
+                            ="Persona Size :"
+                        Width: =131
+                        X: =42
+                        Y: =143
+                        ZIndex: =6
+
+                    "chkImageShouldFadeIn As 'Check box'":
+                        AccessibleLabel: ="Allow spell check"
+                        Checked: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Image Should FadeIn"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =42
+                        Y: =264
+                        ZIndex: =7
+
+                    "ddOverflowBtnType As 'Combo box'.pcfdataset":
+                        AccessibleLabel: ="Constrain"
+                        DefaultSelectedItems: |-
+                            =Table({Name:"Descriptive",key:'''PowerCAT.Facepile.OverflowButtonType'''.descriptive})
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table({Name:"None",key:'''PowerCAT.Facepile.OverflowButtonType'''.none},
+                            {Name:"Descriptive",key:'''PowerCAT.Facepile.OverflowButtonType'''.descriptive},
+                            {Name:"More",key:'''PowerCAT.Facepile.OverflowButtonType'''.more},
+                            {Name:"Down Arrow",key:'''PowerCAT.Facepile.OverflowButtonType'''.downArrow})
+                        Text: =""
+                        Width: =120
+                        X: =189
+                        Y: =185
+                        ZIndex: =8
+
+                        Name5_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Name"
+                            FieldName: ="Name"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =11
+
+                    lblOverflowBtnType As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Text: |-
+                            ="Overflow button type :"
+                        Width: =180
+                        X: =42
+                        Y: =185
+                        ZIndex: =9
+
+                    "chkShowAddButton As 'Check box'":
+                        AccessibleLabel: ="Allow spell check"
+                        Checked: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Label: ="Show Add Button"
+                        OnChange: =
+                        Visible: =true
+                        Width: =160
+                        X: =42
+                        Y: =223
+                        ZIndex: =10
+
+                    "Facepile1 As 'Fluent Facepile (1.0.9) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =58
+                        ImageShouldFadeIn: =chkImageShouldFadeIn.Checked
+                        Items: =UserPersonas
+                        MaxDisplayablePersonas: =sliderMaxDisplayPersona.Value
+                        OnChange: |-
+                            =Switch(
+                                Self.EventName,
+                                "PersonaEvent",
+                                //Pick one depending upon the data source
+                                //Incase of Office365Users 
+                                Notify(Self.Selected.ItemPersonaKey),
+                                "AddButtonEvent",
+                                //Define logic to Add Users
+                                Notify("Add Users"),
+                                "OverFlowButtonEvent",
+                                //Define logic to Show more information
+                                Notify("Show More Information")
+                            )
+                        OverflowButtonType: =ddOverflowBtnType.Selected.key
+                        PersonaSize: =ddPersonaSize.Selected.key
+                        ShowAddButton: =chkShowAddButton.Checked
+                        Theme: =AppThemeJson
+                        Visible: =true
+                        Width: =530
+                        X: =42
+                        Y: =25
+                        ZIndex: =11
+
+            lbladditionalInfo As Label:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: =Index(currentCompSamplesCol,1).Description
+                Width: =Parent.Width * 0.5
+                X: =42
+                Y: =390
+                ZIndex: =5
+

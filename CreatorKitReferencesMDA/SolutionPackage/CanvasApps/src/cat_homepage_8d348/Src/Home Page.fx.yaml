@@ -4,7 +4,7 @@
         =
         
 
-    "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+    "Elevation_1 As 'Fluent Elevation (1.0.8)'":
         DisplayMode: =DisplayMode.Edit
         Height: =App.Height
         PaddingBottom: =8
@@ -69,14 +69,14 @@
 
             ComponentDescription_1 As ControlInfo:
                 Description: |-
-                    ="<p>The Creator Kit helps you create Power Apps experiences on the web and mobile platforms with easy-to-use sample controls and components. The kit contains a component library, several commonly used <a href=""/en-us/power-apps/developer/component-framework/overview"" data-linktype=""absolute-path"">Power Apps component framework controls</a>, and other utilities that increase developer productivity.</p>
+                    ="<div style=""font-size:16px""><p>The Creator Kit helps you create Power Apps experiences on the web and mobile platforms with easy-to-use sample controls and components. The kit contains a component library, several commonly used <a href=""/en-us/power-apps/developer/component-framework/overview"" data-linktype=""absolute-path"">Power Apps component framework controls</a>, and other utilities that increase developer productivity.</p>
                     <p>All controls and components included in the kit use the <a href=""https://developer.microsoft.com/fluentui#/"" data-linktype=""external"">Fluent UI</a> framework to help you easily create consistent, beautiful, and effective user experiences for custom business applications.</p>
                     <p>Use this app to learn about each component, get recommended best practices for the optimal user experience, interact with each component, and see behind the properties to the implementation code that enables their behavior. We recommend exploring the components of interest in the reference app before you use them in an actual app.</p>
                     <ul>
                     <li>Observe how the component behaves and renders data.</li>
                     <li>Select the <strong>Code</strong> tab to see the underlying Power Fx formulas.</li>
                     <li>Learn best practices from the inline guidance related to the control.</li>
-                    </ul>"
+                    </ul></div>"
                 FillPortions: =1
                 Height: =ComponentDescription_1.DesiredHeight
                 LayoutMinHeight: =640

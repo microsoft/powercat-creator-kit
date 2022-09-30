@@ -90,6 +90,13 @@
       <iscustomizable>1</iscustomizable>
       <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_expandmenu_e71c4</name>
     </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_facepilepage_13c32">
+      <canvasappid>
+        <name>cat_facepilepage_13c32</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_facepilepage_13c32</name>
+    </appelement>
     <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_homepage_8d348">
       <canvasappid>
         <name>cat_homepage_8d348</name>

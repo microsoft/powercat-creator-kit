@@ -182,23 +182,8 @@
     },
     {
       "Kind": "Page",
-      "Name": "Details List - Cell Types",
-      "Value": "custompage:cat_detailslistcelltypes_4e54e"
-    },
-    {
-      "Kind": "Page",
-      "Name": "Details List - Paging",
-      "Value": "custompage:cat_detailslistpaging_6d101"
-    },
-    {
-      "Kind": "Page",
       "Name": "DetailsList Page",
       "Value": "custompage:cat_detailslistbasicpage_07690"
-    },
-    {
-      "Kind": "Page",
-      "Name": "Auto Width Label Page 2",
-      "Value": "custompage:cat_autowidthlabelpage2_a1271"
     },
     {
       "Kind": "Page",

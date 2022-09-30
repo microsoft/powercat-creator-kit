@@ -211,7 +211,7 @@ Header As CanvasComponent:
             Height: =50
             LayoutMinHeight: =70
             LayoutMinWidth: =300
-            Text: =Upper(Header.Text)
+            Text: =Header.Text
             Width: =Parent.Width
             ZIndex: =3
 

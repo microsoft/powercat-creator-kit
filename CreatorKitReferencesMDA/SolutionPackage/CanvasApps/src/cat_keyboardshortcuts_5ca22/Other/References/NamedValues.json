@@ -117,11 +117,6 @@
     },
     {
       "Kind": "Page",
-      "Name": "Details List - Cell Types",
-      "Value": "custompage:cat_detailslistcelltypes_4e54e"
-    },
-    {
-      "Kind": "Page",
       "Name": "Resizable Text Area",
       "Value": "custompage:cat_resizabletextarea_eb7d1"
     },
@@ -129,11 +124,6 @@
       "Kind": "Page",
       "Name": "Home Page",
       "Value": "custompage:cat_homepage_8d348"
-    },
-    {
-      "Kind": "Page",
-      "Name": "Details List - Paging",
-      "Value": "custompage:cat_detailslistpaging_6d101"
     },
     {
       "Kind": "Page",
@@ -204,11 +194,6 @@
       "Kind": "Page",
       "Name": "Tag List",
       "Value": "custompage:cat_taglist_6a134"
-    },
-    {
-      "Kind": "Page",
-      "Name": "Auto Width Label Page 2",
-      "Value": "custompage:cat_autowidthlabelpage2_a1271"
     }
   ]
 }

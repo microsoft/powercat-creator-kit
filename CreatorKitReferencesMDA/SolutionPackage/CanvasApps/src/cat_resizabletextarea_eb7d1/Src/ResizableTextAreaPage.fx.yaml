@@ -28,15 +28,13 @@ ResizableTextAreaPage As screen:
             PaddingRight: =10
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.9)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
                 FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
                 FontWeight: ="600"
                 Height: =45
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 PaddingRight: =10
                 Text: =currentComp.Name
                 Width: =Self.AutoWidth
@@ -67,7 +65,7 @@ ResizableTextAreaPage As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.9)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -93,7 +91,7 @@ ResizableTextAreaPage As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.9)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance.DesiredHeight
                 PaddingBottom: =8
@@ -120,7 +118,7 @@ ResizableTextAreaPage As screen:
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.9)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height + Self.PaddingBottom
                 PaddingBottom: =8
@@ -178,13 +176,11 @@ ResizableTextAreaPage As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_6 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.9)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -241,12 +237,10 @@ ResizableTextAreaPage As screen:
                     ZIndex: =2
 
                     Example_Container As groupContainer.manualLayoutContainer:
-                        Height: =txtDescription.Height
-                        LayoutMinHeight: =100
-                        LayoutMinWidth: =250
+                        Height: =txtDescription.ResizedHeight
                         ZIndex: =2
 
-                        "txtDescription As 'Resizable Text Area (0.0.22)'":
+                        "txtDescription As 'Resizable Text Area (1.0.9)'":
                             AccessibilityLabel: ="Sample Resizable Textarea"
                             AllowResize: =ddResizeLimit.Selected.Key
                             BorderColor: |-
@@ -436,7 +430,7 @@ ResizableTextAreaPage As screen:
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_5 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.9)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height + Self.PaddingBottom
                 PaddingBottom: =8
@@ -494,13 +488,11 @@ ResizableTextAreaPage As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_7 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_7 As 'Fluent Pivot (1.0.9)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -675,7 +667,7 @@ ResizableTextAreaPage As screen:
                             Y: =199
                             ZIndex: =9
 
-                        "ResizableTextarea_Default1 As 'Resizable Text Area (0.0.22)'":
+                        "ResizableTextarea_Default1 As 'Resizable Text Area (1.0.9)'":
                             AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
                             Default: ="Default Value1"
                             DisplayMode: =DisplayMode.Edit
@@ -689,7 +681,7 @@ ResizableTextAreaPage As screen:
                             Y: =37
                             ZIndex: =11
 
-                        "ResizableTextarea_Default2 As 'Resizable Text Area (0.0.22)'":
+                        "ResizableTextarea_Default2 As 'Resizable Text Area (1.0.9)'":
                             Default: =
                             DisplayMode: =DisplayMode.Edit
                             Height: =63

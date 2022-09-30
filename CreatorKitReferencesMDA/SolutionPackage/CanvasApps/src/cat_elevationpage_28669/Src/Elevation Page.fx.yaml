@@ -31,15 +31,13 @@
             Width: =App.Width
             ZIndex: =2
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
                 FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
                 FontWeight: ="600"
                 Height: =45
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 PaddingRight: =10
                 Text: =currentComp.Name
                 Width: =Self.AutoWidth
@@ -70,7 +68,7 @@
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -85,6 +83,7 @@
             ComponentDescription As ControlInfo:
                 Description: =currentComp.'Components Description'
                 Height: =ComponentDescription.DesiredHeight
+                Visible: =true
                 Width: =Parent.Width
                 ZIndex: =2
 
@@ -96,7 +95,7 @@
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -154,13 +153,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_1 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -248,7 +245,7 @@
                             Width: =250
                             ZIndex: =2
 
-                            "Elevation3 As 'Fluent Elevation (0.0.22)'":
+                            "Elevation3 As 'Fluent Elevation (1.0.8)'":
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =180
                                 PaddingBottom: =10
@@ -355,7 +352,7 @@
                             Width: =250
                             ZIndex: =2
 
-                            "Elevation3_1 As 'Fluent Elevation (0.0.22)'":
+                            "Elevation3_1 As 'Fluent Elevation (1.0.8)'":
                                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =180
@@ -465,7 +462,7 @@
                             Width: =250
                             ZIndex: =2
 
-                            "Elevation3_2 As 'Fluent Elevation (0.0.22)'":
+                            "Elevation3_2 As 'Fluent Elevation (1.0.8)'":
                                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =180
@@ -572,7 +569,7 @@
                             Width: =250
                             ZIndex: =2
 
-                            "Elevation3_3 As 'Fluent Elevation (0.0.22)'":
+                            "Elevation3_3 As 'Fluent Elevation (1.0.8)'":
                                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =180
@@ -646,7 +643,7 @@
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_5 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -704,13 +701,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_2 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_2 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -787,7 +782,7 @@
                         LayoutMinWidth: =250
                         ZIndex: =2
 
-                        "ElevationAddTask As 'Fluent Elevation (0.0.22)'":
+                        "ElevationAddTask As 'Fluent Elevation (1.0.8)'":
                             Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                             DisplayMode: =DisplayMode.Edit
                             FillColor: =""
@@ -802,7 +797,7 @@
                             Y: =10
                             ZIndex: =1
 
-                        "btnAddTaskHeader As 'Fluent Icon (0.0.22)'":
+                        "btnAddTaskHeader As 'Fluent Icon (1.0.8)'":
                             DisplayMode: =If(chkActionEnabled.Checked,DisplayMode.Edit,DisplayMode.Disabled)
                             Height: =56
                             HoverFillColor: =AppTheme.paletteCSS.neutralLighterAlt
@@ -857,7 +852,7 @@
                         LayoutMinWidth: =250
                         ZIndex: =2
 
-                        "ElevationCard As 'Fluent Elevation (0.0.22)'":
+                        "ElevationCard As 'Fluent Elevation (1.0.8)'":
                             Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                             DisplayMode: =DisplayMode.Edit
                             FillColor: =""
@@ -937,15 +932,12 @@
                                     LayoutMode: =LayoutMode.Auto
                                     ZIndex: =2
 
-                                    "AutoWidthLabelCardTag As 'Auto Width Label (0.0.22)'":
+                                    "AutoWidthLabelCardTag As 'Auto Width Label (1.0.8)'":
                                         BorderRadius: =2
                                         DisplayMode: =DisplayMode.Edit
                                         FillColor: =AppTheme.paletteCSS.neutralQuaternaryAlt
-                                        FillPortions: =1
                                         FontColor: =AppTheme.paletteCSS.neutralPrimary
                                         Height: =25
-                                        LayoutMinHeight: =200
-                                        LayoutMinWidth: =60
                                         PaddingBottom: =4
                                         PaddingLeft: =4
                                         PaddingRight: =4

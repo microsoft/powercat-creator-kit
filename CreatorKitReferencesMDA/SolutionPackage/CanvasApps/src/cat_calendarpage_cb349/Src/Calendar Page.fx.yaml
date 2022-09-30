@@ -31,7 +31,7 @@
             Width: =App.Width
             ZIndex: =2
 
-            "AutoWidthLabel1 As 'Auto Width Label (1.0.6-beta)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
@@ -68,7 +68,7 @@
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -94,7 +94,7 @@
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_2 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance.Height
                 PaddingBottom: =8
@@ -111,6 +111,7 @@
                 Donts: =
                 Dos: =
                 Height: =450
+                Visible: =true
                 Width: =Parent.Width
                 ZIndex: =2
 
@@ -122,7 +123,7 @@
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (1.0.6-beta)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -180,7 +181,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_1 As 'Fluent Pivot (1.0.6-beta)'.pcfdataset":
+                        "pivotAppCode_1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -293,7 +294,7 @@
                         Y: =32
                         ZIndex: =2
 
-                    "CalendarElevation As 'Fluent Elevation (1.0.6-beta)'":
+                    "CalendarElevation As 'Fluent Elevation (1.0.8)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =263
                         Width: =499
@@ -301,7 +302,7 @@
                         Y: =24
                         ZIndex: =3
 
-                    "Calendar1 As 'Fluent Calendar (1.0.6-beta) Preview'":
+                    "Calendar1 As 'Fluent Calendar (1.0.8) Preview'":
                         DayPickerVisible: =If(chkDayPicker.Checked,true)
                         DisplayMode: =DisplayMode.Edit                            
                         FirstDayOfWeek: =ddFirstDayofWeek.Selected.Name

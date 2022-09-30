@@ -28,15 +28,13 @@
             PaddingRight: =10
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
                 FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
                 FontWeight: ="600"
                 Height: =45
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 PaddingRight: =10
                 Text: =currentComp.Name
                 Width: =Self.AutoWidth
@@ -67,7 +65,7 @@
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -93,7 +91,7 @@
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance.DesiredHeight
                 PaddingBottom: =8
@@ -120,7 +118,7 @@
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height + Self.PaddingBottom
                 PaddingBottom: =8
@@ -178,13 +176,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_6 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -277,7 +273,7 @@
                             Width: =Parent.Width
                             ZIndex: =2
 
-                            "IconStandard As 'Fluent Icon (0.0.22)'":
+                            "IconStandard As 'Fluent Icon (1.0.8)'":
                                 DisplayMode: =DisplayMode.Edit
                                 FontSize: =32
                                 Height: =50
@@ -285,14 +281,12 @@
                                 IconName: =Coalesce(gridIcons.Selected.IconName, "AddFriend")
                                 IconSize: =32
                                 IconType: ='''PowerCAT.Icon.IconType'''.Icon
-                                LayoutMinHeight: =200
-                                LayoutMinWidth: =200
                                 Width: =35
                                 X: =80
                                 Y: =0
                                 ZIndex: =1
 
-                            "IconCustomColor As 'Fluent Icon (0.0.22)'":
+                            "IconCustomColor As 'Fluent Icon (1.0.8)'":
                                 DisplayMode: =DisplayMode.Edit
                                 FontSize: =32
                                 Height: =50
@@ -300,8 +294,6 @@
                                 IconName: =Coalesce(gridIcons.Selected.IconName, "AddFriend")
                                 IconSize: =32
                                 IconType: ='''PowerCAT.Icon.IconType'''.Icon
-                                LayoutMinHeight: =200
-                                LayoutMinWidth: =200
                                 Width: =35
                                 X: =80
                                 Y: =0
@@ -319,7 +311,7 @@
                                 Y: =60
                                 ZIndex: =3
 
-                        "IconSearch As 'Fluent Icon (0.0.22)'":
+                        "IconSearch As 'Fluent Icon (1.0.8)'":
                             DisplayMode: =DisplayMode.Edit
                             FontSize: =25
                             Height: =50
@@ -327,8 +319,6 @@
                             IconName: ="Search"
                             IconSize: =25
                             IconType: ='''PowerCAT.Icon.IconType'''.Icon
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             Theme: =AppThemeJson
                             Width: =35
                             X: =85
@@ -349,7 +339,7 @@
                             Y: =0
                             ZIndex: =4
 
-                    "gridIcons As 'Fluent Details List (0.0.22)'.pcfdataset":
+                    "gridIcons As 'Fluent Details List (1.0.8)'.pcfdataset":
                         columns_Items: |-
                             =Table(
                                 {
@@ -372,8 +362,6 @@
                         Height: =150
                         Items: =Search(FluentIcons,txtSearchIcons.Value,"IconName")
                         LargeDatasetPaging: =true
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         PageSize: =3000
                         SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Single
                         Theme: =AppThemeJson
@@ -407,7 +395,7 @@
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_5 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height + Self.PaddingBottom
                 PaddingBottom: =8
@@ -465,13 +453,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_7 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_7 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -545,7 +531,7 @@
                         Y: =40
                         ZIndex: =2
 
-                        "iconActionButtonCustom As 'Fluent Icon (0.0.22)'":
+                        "iconActionButtonCustom As 'Fluent Icon (1.0.8)'":
                             BorderColor: =If(chkShowBorder.Checked,AppTheme.paletteCSS.neutralTertiaryAlt)
                             DisplayMode: =DisplayMode.Edit
                             FillColor: =
@@ -659,7 +645,7 @@
                             Y: =59
                             ZIndex: =12
 
-                        "iconActionButtonStandard As 'Fluent Icon (0.0.22)'":
+                        "iconActionButtonStandard As 'Fluent Icon (1.0.8)'":
                             BorderColor: =If(chkShowBorder.Checked,AppTheme.paletteCSS.neutralTertiaryAlt)
                             DisplayMode: =DisplayMode.Edit
                             FillColor: =If(chkFill.Checked,AppTheme.paletteCSS.themePrimary)
@@ -678,7 +664,7 @@
                             Y: =18
                             ZIndex: =13
 
-                        "iconButtonStandard As 'Fluent Icon (0.0.22)'":
+                        "iconButtonStandard As 'Fluent Icon (1.0.8)'":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             IconName: ="AddFriend"
@@ -688,7 +674,7 @@
                             Y: =100
                             ZIndex: =14
 
-                        "iconButtonCustom As 'Fluent Icon (0.0.22)'":
+                        "iconButtonCustom As 'Fluent Icon (1.0.8)'":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             HoverIconColor: ="darkred"

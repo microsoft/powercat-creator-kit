@@ -30,15 +30,13 @@
             PaddingRight: =10
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
                 FontSizeUnits: ='''PowerCAT.AutoWidthLabel.FontSizeUnits'''.Pt
                 FontWeight: ="600"
                 Height: =45
-                LayoutMinHeight: =200
-                LayoutMinWidth: =200
                 PaddingRight: =10
                 Text: =currentComp.Name
                 Width: =Self.AutoWidth
@@ -69,7 +67,7 @@
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -84,6 +82,7 @@
             ComponentDescription As ControlInfo:
                 Description: =currentComp.'Components Description'
                 Height: =ComponentDescription.DesiredHeight
+                Visible: =true
                 Width: =Parent.Width
                 ZIndex: =2
 
@@ -95,7 +94,7 @@
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance.DesiredHeight
                 PaddingBottom: =8
@@ -122,7 +121,7 @@
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -180,13 +179,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_6 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -239,7 +236,7 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    "commandBar As 'Fluent Command Bar (0.0.22)'.pcfdataset":
+                    "commandBar As 'Fluent Command Bar (1.0.8)'.pcfdataset":
                         AccessibilityLabel: ="Command Bar"
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
@@ -265,8 +262,6 @@
                                 {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemFarItem:true},
                                 {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemFarItem:true}
                             )
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         Theme: =AppThemeJson
                         Visible: =true
                         Width: =
@@ -282,7 +277,7 @@
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_5 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -340,13 +335,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_7 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_7 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_1.Y+htmlCodeSnippet_1.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -399,7 +392,7 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    "commandBar_1 As 'Fluent Command Bar (0.0.22)'.pcfdataset":
+                    "commandBar_1 As 'Fluent Command Bar (1.0.8)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
                         Items: |-
@@ -421,8 +414,6 @@
                                 {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemIconColor:"rgb(232, 17, 35)",ItemFarItem:true},
                                 {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemIconColor:"rgb(232, 17, 35)",ItemFarItem:true}
                             )
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         Theme: =AppThemeJson
                         Visible: =true
                         Width: =Parent.Width-Self.X
@@ -473,7 +464,7 @@
             Width: =App.Width
             ZIndex: =7
 
-            "Elevation_6 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_6 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -531,13 +522,11 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_8 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_8 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
                                 =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
-                            LayoutMinHeight: =200
-                            LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_2.Y+htmlCodeSnippet_2.Height))
                             RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
@@ -591,7 +580,7 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    "commandBar_2 As 'Fluent Command Bar (0.0.22)'.pcfdataset":
+                    "commandBar_2 As 'Fluent Command Bar (1.0.8)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
                         Items: |-
@@ -616,8 +605,6 @@
                                 {ItemKey:"tile",ItemDisplayName:"Grid view",ItemIconName:"Tiles",ItemIconOnly:true,ItemFarItem:true,ItemEnabled:chkEnable_1.Checked},
                                 {ItemKey:"info",ItemDisplayName:"Info",ItemIconName:"Info",ItemIconOnly:true,ItemFarItem:true,ItemEnabled:chkEnable_1.Checked}
                             )
-                        LayoutMinHeight: =200
-                        LayoutMinWidth: =200
                         Theme: =AppThemeJson
                         Visible: =true
                         Width: =Parent.Width-Self.X

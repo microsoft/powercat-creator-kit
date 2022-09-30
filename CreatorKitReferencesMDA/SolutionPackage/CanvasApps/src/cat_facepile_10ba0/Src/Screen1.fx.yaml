@@ -1,0 +1,15 @@
+Screen1 As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    "Facepile1 As 'Fluent Facepile (%VERSION%)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =85
+        MaxDisplayablePersonas: =2
+        OverflowButtonType: ='''PowerCAT.Facepile.OverflowButtonType'''.downArrow
+        PersonaSize: ='''PowerCAT.Facepile.PersonaSize'''.Size48
+        ShowAddButton: =true
+        Width: =668
+        X: =360
+        Y: =243
+        ZIndex: =1
+

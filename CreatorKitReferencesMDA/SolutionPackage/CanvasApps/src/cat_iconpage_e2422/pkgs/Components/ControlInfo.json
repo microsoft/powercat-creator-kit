@@ -141,11 +141,18 @@
                 }
               },
               {
-                "ControlPropertyState": "LayoutMinWidth",
+                "ControlPropertyState": {
+                  "AFDDataSourceName": "",
+                  "AutoRuleBindingEnabled": false,
+                  "AutoRuleBindingString": "",
+                  "InvariantPropertyName": "LayoutMinWidth",
+                  "IsLockable": false,
+                  "NameMapSourceSchema": "?"
+                },
                 "PropertyName": "LayoutMinWidth",
                 "Rule": {
                   "Category": "Design",
-                  "InvariantScript": "560",
+                  "InvariantScript": "100",
                   "Property": "LayoutMinWidth",
                   "RuleProviderType": "Unknown"
                 }
@@ -615,7 +622,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "637971738166018099",
+    "LastModifiedTimestamp": "637975931670720026",
     "Name": "ControlInfo",
     "Rules": [
       {
@@ -705,7 +712,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637971738166018099",
+  "LastModifiedTimestamp": "637975931670720026",
   "Name": "42cb70e0d91745edb293f349994d1e71",
   "OverridableProperties": {},
   "SourceLibraryId": "1d359ef2-019d-4dc2-b3cd-9267774d0f16",

@@ -66,7 +66,7 @@
         </SubArea>
         <SubArea Id="subarea_2de55b6c" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_pivot_icon" Icon="/WebResources/cat_pivot_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_pivotpage_f0b2a">
           <Titles>
-            <Title LCID="1033" Title="Pivot Page" />
+            <Title LCID="1033" Title="Pivot" />
           </Titles>
         </SubArea>
         <SubArea Id="subarea_234e3c99" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_contextmenu_icon" Icon="/WebResources/cat_contextmenu_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_contextmenupage_7df18">
@@ -82,6 +82,11 @@
         <SubArea Id="subarea_28dbbdca" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_patternicon" Icon="/WebResources/cat_patternicon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_detailslistbasicpage_07690">
           <Titles>
             <Title LCID="1033" Title="DetailsList" />
+          </Titles>
+        </SubArea>
+        <SubArea Id="subarea_2685dae6" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/AppCommon/ControlWS/HeaderIconImages/UserManagement.svg" Icon="/WebResources/AppCommon/ControlWS/HeaderIconImages/UserManagement.svg" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_facepilepage_13c32">
+          <Titles>
+            <Title LCID="1033" Title="Facepile" />
           </Titles>
         </SubArea>
       </Group>

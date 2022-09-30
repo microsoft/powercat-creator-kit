@@ -30,7 +30,7 @@
             PaddingRight: =10
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
@@ -69,7 +69,7 @@
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -94,7 +94,7 @@
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =200
                 PaddingBottom: =8
@@ -110,6 +110,7 @@
                 Donts: =AddColumns(Filter(currentCompCol,  Recommended = false), "Text",Practice)
                 Dos: =AddColumns(Filter(currentCompCol,  Recommended = true), "Text",Practice)
                 Height: =200
+                Visible: =true
                 Width: =Parent.Width
                 ZIndex: =2
 
@@ -121,7 +122,7 @@
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -179,7 +180,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_6 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.8)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -239,7 +240,7 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    "Breadcrumb1 As 'Fluent Breadcrumb (0.0.22)'.pcfdataset":
+                    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.8)'.pcfdataset":
                         AlignInContainer: =AlignInContainer.Start
                         DisplayMode: =DisplayMode.Edit
                         Height: =50

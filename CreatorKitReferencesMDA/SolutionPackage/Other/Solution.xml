@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22074.168" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22084.202" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesMDA</UniqueName>
     <LocalizedNames>
@@ -116,6 +116,8 @@
       <RootComponent type="300" schemaName="cat_dialogpanel_15d96" behavior="0" />
       <RootComponent type="300" schemaName="cat_elevationpage_28669" behavior="0" />
       <RootComponent type="300" schemaName="cat_expandmenu_e71c4" behavior="0" />
+      <RootComponent type="300" schemaName="cat_facepilepage_13c32" behavior="0" />
+      <RootComponent type="300" schemaName="cat_facepile_10ba0" behavior="0" />
       <RootComponent type="300" schemaName="cat_homepage_8d348" behavior="0" />
       <RootComponent type="300" schemaName="cat_iconpage_e2422" behavior="0" />
       <RootComponent type="300" schemaName="cat_keyboardshortcuts_5ca22" behavior="0" />
@@ -160,6 +162,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
+        <Dependent type="300" schemaName="cat_facepilepage_13c32" displayName="Facepile Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
         <Dependent type="300" schemaName="cat_navpage_18ad8" displayName="Nav Page" />
       </MissingDependency>
       <MissingDependency>
@@ -179,7 +185,7 @@
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.1929)" />
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.1959)" />
         <Dependent type="62" schemaName="cat_CreatorKitReferenceApp" />
       </MissingDependency>
       <MissingDependency>
@@ -221,6 +227,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
         <Dependent type="300" schemaName="cat_expandmenu_e71c4" displayName="Expand Menu" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cat_facepilepage_13c32" displayName="Facepile Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
@@ -328,6 +338,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
+        <Dependent type="300" schemaName="cat_facepilepage_13c32" displayName="Facepile Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_homepage_8d348" displayName="Home Page" />
       </MissingDependency>
       <MissingDependency>
@@ -369,6 +383,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_tagpicker_ca530" displayName="Tag Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
+        <Dependent type="300" schemaName="cat_facepilepage_13c32" displayName="Facepile Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
@@ -453,6 +471,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
         <Dependent type="300" schemaName="cat_expandmenu_e71c4" displayName="Expand Menu" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
+        <Dependent type="300" schemaName="cat_facepilepage_13c32" displayName="Facepile Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />

@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cat_homepage_8d348</Name>
-  <AppVersion>2022-08-29T20:48:11Z</AppVersion>
+  <AppVersion>2022-09-01T01:57:20Z</AppVersion>
   <Status>Ready</Status>
-  <CreatedByClientVersion>3.22082.8.0</CreatedByClientVersion>
-  <MinClientVersion>3.22082.8.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"2559","primaryDeviceHeight":"1322","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22082.8","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220822T211325Z-3.22081.14.0"}</Tags>
+  <CreatedByClientVersion>3.22083.16.0</CreatedByClientVersion>
+  <MinClientVersion>3.22083.16.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1366","primaryDeviceHeight":"768","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22083.16","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20220901T013848Z-3.22083.16.0"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>

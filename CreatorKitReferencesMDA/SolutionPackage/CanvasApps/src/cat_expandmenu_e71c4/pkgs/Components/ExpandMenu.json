@@ -1759,7 +1759,7 @@
       "GetMenuIconPath",
       "DefaultExpandValue"
     ],
-    "LastModifiedTimestamp": "637975260252025432",
+    "LastModifiedTimestamp": "637975927026315704",
     "Name": "ExpandMenu",
     "Rules": [
       {
@@ -1988,7 +1988,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "637975260252025432",
+  "LastModifiedTimestamp": "637975927026315704",
   "Name": "d664635d98b749abb197a43c79f5bf8f",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

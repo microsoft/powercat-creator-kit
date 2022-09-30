@@ -31,7 +31,7 @@ ControlInfo As CanvasComponent:
             HtmlText: |-
                 ="<div style=""font-weight:400"">" & ControlInfo.Description & "</div>"
             LayoutMinHeight: =70
-            LayoutMinWidth: =560
+            LayoutMinWidth: =100
             PaddingBottom: =8
             PaddingLeft: =8
             PaddingRight: =8

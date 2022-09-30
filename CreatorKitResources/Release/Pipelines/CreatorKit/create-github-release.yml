@@ -88,7 +88,7 @@ steps:
 
 - template: Pipelines\Templates\create-release-github.yml@PipelineRepo
   parameters:
-    gitHubApiUrl: 'https://api.github.com/repos/microsoft/powercat-creator-kit'
+    gitHubApiUrl: 'microsoft/powercat-creator-kit'
     solutionName: 'CreatorKit'
     solutionDisplayName: 'Creator Kit'
     releaseMonth: ${{parameters.ReleaseMonthNumber}}

@@ -88,6 +88,7 @@
       <RootComponent type="66" schemaName="cat_PowerCAT.CommandBar" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ContextMenu" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Elevation" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.Facepile" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.FluentDetailsList" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Icon" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.KeyboardShortcuts" behavior="0" />

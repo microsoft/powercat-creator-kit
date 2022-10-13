@@ -69,7 +69,7 @@ resources:
   - repository: PipelineRepo
     type: github
     ref: main
-    endpoint: creator-starter-kit
+    endpoint: powercat-alm
     name: Microsoft/coe-alm-accelerator-templates
 
 variables:

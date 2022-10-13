@@ -91,6 +91,10 @@ stages:
       path: 'PipelineUtils'
       displayName: 'Checkout Pipeline Branch'
 
+    # Checkout our GitHub Branch
+    - checkout: self
+      displayName: 'Checkout Source Branch'    
+    
     # Other tasks, which use the PowerApps PowerShell cmdlets, need the environment guid.  Setting it for future use.
     - template: Pipelines\Templates\export-Solution.yml@PipelineRepo
       parameters:

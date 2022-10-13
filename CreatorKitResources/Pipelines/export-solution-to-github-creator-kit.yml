@@ -74,7 +74,7 @@ resources:
     type: github
     ref: main
     endpoint: creator-starter-kit
-    name: Microsoft/powercat-creator-kit
+    name: Microsoft/coe-alm-accelerator-templates
 
 variables:
 - group: alm-accelerator-variable-group

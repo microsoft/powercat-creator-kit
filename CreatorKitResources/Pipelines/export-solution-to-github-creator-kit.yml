@@ -72,6 +72,7 @@ resources:
     name: Microsoft/powercat-creator-kit
   - repository: PipelineRepo
     type: github
+    ref: main
     endpoint: creator-starter-kit
     name: Microsoft/powercat-creator-kit
 

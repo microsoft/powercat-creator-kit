@@ -33,32 +33,34 @@ SearchBox As CanvasComponent:
         		white: "#ffffff"
         	}
         }
+    Underlined: =false
     Width: =300
     X: =0
     Y: =0
     ZIndex: =1
 
     txtSearchInput_1 As text:
-        BorderColor: =RGBA(166, 166, 166, 1)
+        BorderColor: =If( SearchBox.Underlined, RGBA(0,0,0,0), ColorValue(SearchBox.Theme.palette.neutralTertiary))
+        BorderThickness: =If( SearchBox.Underlined, 0, 1)
         Clear: =SearchBox.ClearButton
-        Color: =RGBA(51, 51, 51, 1)
+        Color: =ColorValue(SearchBox.Theme.palette.black)
         Default: =DefaultValue
         DisabledBorderColor: =RGBA(0, 0, 0, 0)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 0, 0, 0)
-        FocusedBorderColor: =txtSearchInput_1.BorderColor
+        FocusedBorderColor: =Coalesce(ColorValue(SearchBox.Theme.palette.themePrimary),Self.BorderColor)
         FocusedBorderThickness: =2
         Font: =Font.'Segoe UI'
         Height: =32
         HintText: =SearchBox.HintText
-        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        HoverBorderColor: =If( SearchBox.Underlined, RGBA(0,0,0,0), Self.BorderColor)
         HoverColor: =RGBA(51, 51, 51, 1)
         HoverFill: =RGBA(255, 255, 255, 1)
         PaddingBottom: =0
         PaddingLeft: =40
         PaddingTop: =0
-        PressedBorderColor: =RGBA(0, 120, 212, 1)
+        PressedBorderColor: =If( SearchBox.Underlined, RGBA(0,0,0,0), Coalesce(ColorValue(SearchBox.Theme.palette.themePrimary),Self.BorderColor))
         PressedColor: =RGBA(51, 51, 51, 1)
         PressedFill: =RGBA(255, 255, 255, 1)
         RadiusBottomLeft: =2
@@ -102,4 +104,20 @@ SearchBox As CanvasComponent:
         X: =1
         Y: =1
         ZIndex: =3
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DisabledFill: =RGBA(166, 166, 166, 1)
+        Fill: =Coalesce(ColorValue(SearchBox.Theme.palette.neutralTertiary), RGBA(51,51,51,1))
+        FocusedBorderThickness: =4
+        Height: =1
+        HoverFill: =RGBA(0, 120, 212, 1)
+        PressedFill: =RGBA(0, 120, 212, 1)
+        Visible: =SearchBox.Underlined
+        Width: =297
+        X: =1
+        Y: =33
+        ZIndex: =4
 

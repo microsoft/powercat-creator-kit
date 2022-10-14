@@ -56,6 +56,15 @@
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "A custom property",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Underlined",
+      "Hidden": false,
+      "Name": "Underlined",
+      "PropertyDataTypeKey": "Boolean",
+      "Tooltip": "Whether the SearchBox is underlined",
+      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"_MinPrimitive\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -66,7 +75,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001552541996808",
+  "LastModifiedTimestamp": "638010682466059976",
   "Name": "45ef3b58cba141ccb72325a8844e9634",
   "OverridableProperties": {},
   "Version": "637722065298942590"

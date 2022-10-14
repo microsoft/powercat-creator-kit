@@ -204,6 +204,11 @@
       "Kind": "Page",
       "Name": "Facepile Page",
       "Value": "custompage:cat_facepilepage_13c32"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Azure DevOps Projects",
+      "Value": "custompage:cat_azuredevopsprojects_80ae5"
     }
   ]
 }

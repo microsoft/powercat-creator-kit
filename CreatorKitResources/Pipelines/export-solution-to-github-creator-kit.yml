@@ -4,19 +4,18 @@
 # -Ensuring user can be part of the commit (instead of a generic user), thereby enabling tracking of who made what changes
 # -Reuse for any solution in any Dataverse environment
 
-# The following variables need to be set when the pipeline is queued to run:
-# Project: The name of the Azure DevOps Project to which we are exporting our solution.
-# Repo: The name of the Azure DevOps Repo to which we are exporting our solution.
+# The following parameters need to be set when the pipeline is queued to run:
 # Branch: The name of the Azure DevOps Branch in the Repo above to which we are exporting our solution.
 # BranchToCreate: The name of the new Azure DevOps Branch to create in the Repo above to which we are exporting our solution (Optional).
 # CommitMessage: The commit message for this commit.
+# Data: Additional Data (e.g. JSON Payload) for the export to configure deployment pipelines
 # Email: The email of the user performing the commit.
-# ServiceConnectionUrl: The url of the service connection to Power Platform from which we'll be pulling the solution.
+# Project: The name of the Azure DevOps Project to which we are exporting our solution.
+# Repo: The name of the Azure DevOps Repo to which we are exporting our solution.
 # ServiceConnectionName: The name of the service connection to Power Platform from which we'll be pulling the solution.
+# ServiceConnectionUrl: The url of the service connection to Power Platform from which we'll be pulling the solution.
 # SolutionName: The name of the solution being exported (i.e. Not the Display Name).
 # UserName: The Display name of the user performing the commit.
-# Data: Additional Data (e.g. JSON Payload) for the export to configure deployment pipelines
-# PipelineId to create a Github release for the CoE Starter Kit solution
 # PortalSiteName: Power Apps Portal/Power Pages website name
 parameters:
 - name: Branch
@@ -89,14 +88,14 @@ stages:
     # Checkout Pipelines
     - checkout: PipelineRepo
       path: 'PipelineUtils'
+      ref: mochs-aa4pp-3856-githubsc
       displayName: 'Checkout Pipeline Branch'
 
     # Checkout our GitHub Branch
     - checkout: self
       displayName: 'Checkout Source Branch'    
     
-    # Other tasks, which use the PowerApps PowerShell cmdlets, need the environment guid.  Setting it for future use.
-    - template: Pipelines\Templates\export-Solution.yml@PipelineRepo
+    - template: Pipelines\Templates\export-Solution-github.yml@PipelineRepo
       parameters:
         gitAccessUrl: $(GitAccessUrl)
         project: ${{parameters.Project}}
@@ -110,20 +109,3 @@ stages:
         solutionName: ${{parameters.SolutionName}}
         userName: ${{parameters.UserName}}
         configurationData: ${{parameters.Data}}
-
-
-    # Checkout our Azure DevOps Branch
-    - checkout: git://${{parameters.Project}}/${{parameters.Repo}}@${{parameters.Branch}}
-      path: 'DevopsSource'
-      displayName: 'Checkout Source Branch'
-      condition: and(succeeded(), ne('${{parameters.BranchToCreate}}', 'Commit to existing branch specified in Branch parameter'), ne('${{parameters.BranchToCreate}}', '${{parameters.SolutionName}}')) # If an empty value is passed for the BranchToCreate variable, then skip this task
-
-  # If BranchToCreate variable value is not '', then push to the branch specified in the BranchToCreate variable
-    - script: |
-       git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" fetch --all
-       git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" checkout -b ${{parameters.BranchToCreate}}
-       git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push --set-upstream origin ${{parameters.BranchToCreate}}
-      workingDirectory: $(Pipeline.Workspace)\DevopsSource
-      displayName: 'Push to Azure DevOps ${{parameters.BranchToCreate}} Remote Branch'
-      condition: and(succeeded(), ne('${{parameters.BranchToCreate}}', 'Commit to existing branch specified in Branch parameter'), ne('${{parameters.BranchToCreate}}', '${{parameters.SolutionName}}')) # If an empty value is not passed for the BranchToCreate variable, then run this task
-            

@@ -93,7 +93,7 @@ steps:
     solutionDisplayName: 'Creator Kit'
     releaseMonth: ${{parameters.ReleaseMonthNumber}}
     releaseYear: ${{parameters.ReleaseYearNumber}}
-    connectionName: 'creator-starter-kit'
+    connectionName: 'powercat-alm'
     releaseNotesPath: 'CreatorKitResources/Release/Notes/'
     issueClosingComment: 'This has been fixed in the latest release.'
     closeIssues: ${{parameters.CloseMilestoneIssues}}

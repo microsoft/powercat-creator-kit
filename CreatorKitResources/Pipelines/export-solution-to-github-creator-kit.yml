@@ -88,7 +88,6 @@ stages:
     # Checkout Pipelines
     - checkout: PipelineRepo
       path: 'PipelineUtils'
-      ref: mochs-aa4pp-3856-githubsc
       displayName: 'Checkout Pipeline Branch'
 
     # Checkout our GitHub Branch

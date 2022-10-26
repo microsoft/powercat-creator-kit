@@ -15,7 +15,7 @@ resources:
   - repository: PipelineRepo  # repository name (DO NOT CHANGE THIS VALUE) 
     type: github
     ref: main # If your pipeline templates are in a branch other than the default branch specify the branch here. Otherwise the default branch will be used by default.
-    endpoint: creator-starter-kit # Specifies the GitHub service connection for this setup.
+    endpoint: powercat-alm # Specifies the GitHub service connection for this setup.
     name: Microsoft/coe-alm-accelerator-templates  #This is the name of the repo in the current project in Azure Devops that has the pipeline templates. If the repo is in a different project you can specify the project and repo using the format ProjectContainingTheBuildTemplates/RepositoryContainingTheBuildTemplates (https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema#type)
 pool:
   vmImage: 'windows-2019'
@@ -24,15 +24,35 @@ variables:
 - group: alm-accelerator-variable-group
 
 steps:
-# Download the artifacts from the latest deployment of CenterofExcellenceAuditComponents to production.
+# Download the artifacts from the latest deployment of CreatorKitCore to production.
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
     project: 'creator-starter-kit'
-    pipeline: '681' #CenterofExcellenceAuditComponents buildId
+    pipeline: '681' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitCore*.zip'
   displayName: 'Download Creator Kit Core solution'
+
+# Download the artifacts from the latest deployment of CreatorKitReferencesCanvas to production.
+- task: DownloadPipelineArtifact@2
+  inputs:
+    source: 'specific'
+    project: 'creator-starter-kit'
+    pipeline: '1558' #Production buildId
+    runVersion: 'latest'
+    patterns: '**/CreatorKitReferencesCanvas*.zip'
+  displayName: 'Download Creator Kit Canvas solution'
+
+# Download the artifacts from the latest deployment of CreatorKitReferencesMDA to production.
+- task: DownloadPipelineArtifact@2
+  inputs:
+    source: 'specific'
+    project: 'creator-starter-kit'
+    pipeline: '1560' #Production buildId
+    runVersion: 'latest'
+    patterns: '**/CreatorKitReferencesMDA*.zip'
+  displayName: 'Download Creator Kit Model solution'
 
 - powershell: |
     New-Item -Path $(Pipeline.Workspace)\releaseassets -ItemType Directory
@@ -55,6 +75,8 @@ steps:
     New-Item -Path $(Pipeline.Workspace)\assetstaging -ItemType Directory
 
     Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitCore*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
+    Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitReferencesCanvas*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
+    Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitReferencesMDA*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
     
     $compress = @{
       Path = '$(Pipeline.Workspace)\assetstaging\*.*'
@@ -66,12 +88,12 @@ steps:
 
 - template: Pipelines\Templates\create-release-github.yml@PipelineRepo
   parameters:
-    gitHubApiUrl: 'https://api.github.com/repos/microsoft/coe-starter-kit'
+    gitHubApiUrl: 'microsoft/powercat-creator-kit'
     solutionName: 'CreatorKit'
     solutionDisplayName: 'Creator Kit'
     releaseMonth: ${{parameters.ReleaseMonthNumber}}
     releaseYear: ${{parameters.ReleaseYearNumber}}
-    connectionName: 'creator-starter-kit'
+    connectionName: 'powercat-alm'
     releaseNotesPath: 'CreatorKitResources/Release/Notes/'
     issueClosingComment: 'This has been fixed in the latest release.'
     closeIssues: ${{parameters.CloseMilestoneIssues}}

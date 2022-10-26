@@ -17,6 +17,8 @@ The Creator Kit is a Power Platform managed solution file that contains the foll
 
 The Creator Kit GitHub Repo contains the source, releases, issues and backlog items of [all components](https://docs.microsoft.com/power-platform/guidance/creator-kit/creator-kit-explained?branch=power-platform-pr-creator-kit) that are part of the Creator Kit.
 
+Source code for the Code Components can be found here: https://github.com/Microsoft/powercat-code-components
+
 ## Latest Release
 
 The latest shipped version is available via **[Releases](https://github.com/microsoft/powercat-creator-kit/releases)**. From there, you can download the latest version of all managed solutions that have been tested and are ready for use. 
@@ -55,10 +57,6 @@ Do not add your issue as a comment to an existing issue unless it's for the iden
 The more information you can provide, the more likely someone will be successful at reproducing the issue and finding a fix.
 
 Observe the inline guidelines of the Issue template.
-
-## Asking and Answering Questions
-
-Join the [discussions](https://github.com/microsoft/powercat-creator-kit/discussions) and ask your question or contribute by answering questions from others. This is a great way to contribute by helping the Creator Kit community.
 
 
 ## Setup Instructions and Documentation

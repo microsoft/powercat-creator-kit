@@ -6,7 +6,7 @@
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />
   <Import Project="$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props" Condition="Exists('$(PowerAppsTargetsPath)\Microsoft.PowerApps.VisualStudio.Solution.props')" />
   <PropertyGroup>
-    <ProjectGuid>c6df33a3-5653-4e1d-a2f6-c2eab02b2193</ProjectGuid>
+    <ProjectGuid>cce76b0d-6cdc-456f-9aa1-fbd7754f0e0a</ProjectGuid>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <!--Remove TargetFramework when this is available in 16.1-->
     <TargetFramework>net462</TargetFramework>
@@ -41,9 +41,4 @@
   <PropertyGroup>
     <SolutionPackageType>Both</SolutionPackageType>
   </PropertyGroup>
-
-  <PropertyGroup>
-    <SolutionPackageType>Both</SolutionPackageType>
-  </PropertyGroup>
-
 </Project>

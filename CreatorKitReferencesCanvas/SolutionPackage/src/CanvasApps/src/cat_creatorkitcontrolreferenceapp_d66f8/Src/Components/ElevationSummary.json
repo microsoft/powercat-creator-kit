@@ -90,7 +90,7 @@
         "Name": "pivotAppCode_14",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 534,
+        "PublishOrderIndex": 546,
         "Rules": [
           {
             "Category": "Data",
@@ -282,7 +282,7 @@
         "Name": "lblExampleTitle_14",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 535,
+        "PublishOrderIndex": 547,
         "Rules": [
           {
             "Category": "Data",
@@ -657,7 +657,7 @@
         "Name": "htmlCode_14",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 537,
+        "PublishOrderIndex": 549,
         "Rules": [
           {
             "Category": "Data",
@@ -864,7 +864,7 @@
         "Name": "pivotline_14",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 538,
+        "PublishOrderIndex": 550,
         "Rules": [
           {
             "Category": "Design",
@@ -1109,7 +1109,7 @@
         "Name": "lblHeader1",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 539,
+        "PublishOrderIndex": 551,
         "Rules": [
           {
             "Category": "Data",
@@ -1510,7 +1510,7 @@
         "Name": "lblHeader2",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 540,
+        "PublishOrderIndex": 552,
         "Rules": [
           {
             "Category": "Data",
@@ -1911,7 +1911,7 @@
         "Name": "lblHeader3",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 541,
+        "PublishOrderIndex": 553,
         "Rules": [
           {
             "Category": "Data",
@@ -2312,7 +2312,7 @@
         "Name": "lblHeader4",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 542,
+        "PublishOrderIndex": 554,
         "Rules": [
           {
             "Category": "Data",
@@ -2661,7 +2661,7 @@
         "Name": "line_13",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 543,
+        "PublishOrderIndex": 555,
         "Rules": [
           {
             "Category": "Design",
@@ -2812,7 +2812,7 @@
             "Name": "galleryTemplate4",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 545,
+            "PublishOrderIndex": 557,
             "Rules": [
               {
                 "Category": "Data",
@@ -2882,7 +2882,7 @@
             "Name": "ElevationGalleryItem",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 546,
+            "PublishOrderIndex": 558,
             "Rules": [
               {
                 "Category": "Data",
@@ -3095,7 +3095,7 @@
             "Name": "lblElevationUse",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 547,
+            "PublishOrderIndex": 559,
             "Rules": [
               {
                 "Category": "Data",
@@ -3517,7 +3517,7 @@
             "Name": "lblEnumValue",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 548,
+            "PublishOrderIndex": 560,
             "Rules": [
               {
                 "Category": "Data",
@@ -3889,7 +3889,7 @@
             "Name": "lblDepthValue",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 549,
+            "PublishOrderIndex": 561,
             "Rules": [
               {
                 "Category": "Data",
@@ -4262,7 +4262,7 @@
             "Name": "lblDepthName",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 550,
+            "PublishOrderIndex": 562,
             "Rules": [
               {
                 "Category": "Data",
@@ -4590,7 +4590,7 @@
             "Name": "line_12",
             "Parent": "galElevations",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 551,
+            "PublishOrderIndex": 563,
             "Rules": [
               {
                 "Category": "Design",
@@ -4791,7 +4791,7 @@
         "Name": "galElevations",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 544,
+        "PublishOrderIndex": 556,
         "Rules": [
           {
             "Category": "Data",
@@ -5009,7 +5009,7 @@
         "Name": "Group11",
         "Parent": "ElevationSummary",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 536,
+        "PublishOrderIndex": 548,
         "Rules": [
           {
             "Category": "Design",
@@ -5089,7 +5089,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174028630",
+    "LastModifiedTimestamp": "638023846524382441",
     "Name": "ElevationSummary",
     "Rules": [
       {
@@ -5164,7 +5164,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174028630",
+  "LastModifiedTimestamp": "638023846524382441",
   "Name": "6ced7cc8eb5d473b9411c74727139cba",
   "OverridableProperties": {},
   "Version": "637866901157200851"

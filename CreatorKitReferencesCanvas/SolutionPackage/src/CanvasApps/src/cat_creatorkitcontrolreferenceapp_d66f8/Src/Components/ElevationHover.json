@@ -90,7 +90,7 @@
         "Name": "pivotAppCode_15",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 552,
+        "PublishOrderIndex": 564,
         "Rules": [
           {
             "Category": "Data",
@@ -282,7 +282,7 @@
         "Name": "lblExampleTitle_15",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 553,
+        "PublishOrderIndex": 565,
         "Rules": [
           {
             "Category": "Data",
@@ -657,7 +657,7 @@
         "Name": "htmlCode_15",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 555,
+        "PublishOrderIndex": 567,
         "Rules": [
           {
             "Category": "Data",
@@ -864,7 +864,7 @@
         "Name": "pivotline_15",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 556,
+        "PublishOrderIndex": 568,
         "Rules": [
           {
             "Category": "Design",
@@ -1105,7 +1105,7 @@
         "Name": "htmlText_9",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 557,
+        "PublishOrderIndex": 569,
         "Rules": [
           {
             "Category": "Data",
@@ -1363,7 +1363,7 @@
         "Name": "ElevationAddTask",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 558,
+        "PublishOrderIndex": 570,
         "Rules": [
           {
             "Category": "Data",
@@ -1585,7 +1585,7 @@
         "Name": "btnAddTaskHeader",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 559,
+        "PublishOrderIndex": 571,
         "Rules": [
           {
             "Category": "Data",
@@ -1761,7 +1761,7 @@
         "Name": "chkActionEnabled",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 560,
+        "PublishOrderIndex": 572,
         "Rules": [
           {
             "Category": "Data",
@@ -1949,7 +1949,7 @@
         "Name": "ElevationCard",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 561,
+        "PublishOrderIndex": 573,
         "Rules": [
           {
             "Category": "Data",
@@ -2096,7 +2096,7 @@
         "Name": "recCardLeft",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 562,
+        "PublishOrderIndex": 574,
         "Rules": [
           {
             "Category": "Design",
@@ -2343,7 +2343,7 @@
         "Name": "btnCard",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 563,
+        "PublishOrderIndex": 575,
         "Rules": [
           {
             "Category": "Data",
@@ -2639,7 +2639,7 @@
         "Name": "imgCard",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 564,
+        "PublishOrderIndex": 576,
         "Rules": [
           {
             "Category": "Data",
@@ -2995,7 +2995,7 @@
         "Name": "lblPaneTitle",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 565,
+        "PublishOrderIndex": 577,
         "Rules": [
           {
             "Category": "Data",
@@ -3348,7 +3348,7 @@
         "Name": "AutoWidthLabelCardTag",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 566,
+        "PublishOrderIndex": 578,
         "Rules": [
           {
             "Category": "Data",
@@ -3617,7 +3617,7 @@
         "Name": "lblCardTime",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 567,
+        "PublishOrderIndex": 579,
         "Rules": [
           {
             "Category": "Data",
@@ -3911,7 +3911,7 @@
         "Name": "Group13",
         "Parent": "ElevationHover",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 554,
+        "PublishOrderIndex": 566,
         "Rules": [
           {
             "Category": "Design",
@@ -3984,7 +3984,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174030658",
+    "LastModifiedTimestamp": "638023846524384529",
     "Name": "ElevationHover",
     "Rules": [
       {
@@ -4059,7 +4059,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174030658",
+  "LastModifiedTimestamp": "638023846524384529",
   "Name": "3cc11aea05d4455cbca456a2fe1c18a4",
   "OverridableProperties": {},
   "Version": "637866918553408437"

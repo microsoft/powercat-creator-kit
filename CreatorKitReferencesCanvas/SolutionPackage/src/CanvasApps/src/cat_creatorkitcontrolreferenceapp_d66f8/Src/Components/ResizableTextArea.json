@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_6",
         "Parent": "ResizableTextArea",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 424,
+        "PublishOrderIndex": 436,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_6",
         "Parent": "ResizableTextArea",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 425,
+        "PublishOrderIndex": 437,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_6",
         "Parent": "ResizableTextArea",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 426,
+        "PublishOrderIndex": 438,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_6",
         "Parent": "ResizableTextArea",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 427,
+        "PublishOrderIndex": 439,
         "Rules": [
           {
             "Category": "Data",
@@ -1194,7 +1194,7 @@
                 "Name": "txtDescription",
                 "Parent": "conResizableTextAreaSample1",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 430,
+                "PublishOrderIndex": 442,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1538,7 +1538,7 @@
             "Name": "conResizableTextAreaSample1",
             "Parent": "stackResizableTextAreaSampleRoot",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 429,
+            "PublishOrderIndex": 441,
             "Rules": [
               {
                 "Category": "Design",
@@ -1793,7 +1793,7 @@
                 "Name": "lblLabel_6",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 432,
+                "PublishOrderIndex": 444,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2174,7 +2174,7 @@
                 "Name": "lblText_6",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 433,
+                "PublishOrderIndex": 445,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2546,7 +2546,7 @@
                 "Name": "lblSelected_7",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 434,
+                "PublishOrderIndex": 446,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2876,7 +2876,7 @@
                 "Name": "chkSpellCheck",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 435,
+                "PublishOrderIndex": 447,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2994,7 +2994,7 @@
                     "Name": "Name5",
                     "Parent": "ddResizeLimit",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 437,
+                    "PublishOrderIndex": 449,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3120,7 +3120,7 @@
                 "Name": "ddResizeLimit",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 436,
+                "PublishOrderIndex": 448,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3296,7 +3296,7 @@
                 "Name": "btnSetFocusOnTextArea",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 438,
+                "PublishOrderIndex": 450,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3496,7 +3496,7 @@
                 "Name": "btnResetSize",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 439,
+                "PublishOrderIndex": 451,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3733,7 +3733,7 @@
                 "Name": "htmlText_4",
                 "Parent": "conResizableTextAreaSample2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 440,
+                "PublishOrderIndex": 452,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3993,7 +3993,7 @@
             "Name": "conResizableTextAreaSample2",
             "Parent": "stackResizableTextAreaSampleRoot",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 431,
+            "PublishOrderIndex": 443,
             "Rules": [
               {
                 "Category": "Design",
@@ -4185,7 +4185,7 @@
         "Name": "stackResizableTextAreaSampleRoot",
         "Parent": "ResizableTextArea",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 428,
+        "PublishOrderIndex": 440,
         "Rules": [
           {
             "Category": "Design",
@@ -4348,7 +4348,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174006990",
+    "LastModifiedTimestamp": "638023846524360508",
     "Name": "ResizableTextArea",
     "Rules": [
       {
@@ -4423,7 +4423,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174006990",
+  "LastModifiedTimestamp": "638023846524360508",
   "Name": "2b937306f8014e808c2ad19bdbc02fc1",
   "OverridableProperties": {},
   "Version": "637861018292485789"

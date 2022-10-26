@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 568,
+        "PublishOrderIndex": 580,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 569,
+        "PublishOrderIndex": 581,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 571,
+        "PublishOrderIndex": 583,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "pivotline_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 572,
+        "PublishOrderIndex": 584,
         "Rules": [
           {
             "Category": "Design",
@@ -1091,7 +1091,7 @@
         "Name": "htmlText_10",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 573,
+        "PublishOrderIndex": 585,
         "Rules": [
           {
             "Category": "Data",
@@ -1350,7 +1350,7 @@
         "Name": "ElevationPopupOverlay",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 574,
+        "PublishOrderIndex": 586,
         "Rules": [
           {
             "Category": "Data",
@@ -1533,7 +1533,7 @@
         "Name": "lblPopupTitle",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 575,
+        "PublishOrderIndex": 587,
         "Rules": [
           {
             "Category": "Data",
@@ -1704,7 +1704,7 @@
         "Name": "CommandBarRightActions",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 576,
+        "PublishOrderIndex": 588,
         "Rules": [
           {
             "Category": "Data",
@@ -1899,7 +1899,7 @@
         "Name": "lblSelected_23",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 577,
+        "PublishOrderIndex": 589,
         "Rules": [
           {
             "Category": "Data",
@@ -2229,7 +2229,7 @@
         "Name": "chkDarkPadding",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 578,
+        "PublishOrderIndex": 590,
         "Rules": [
           {
             "Category": "Data",
@@ -2347,7 +2347,7 @@
         "Name": "Group14",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 570,
+        "PublishOrderIndex": 582,
         "Rules": [
           {
             "Category": "Design",
@@ -2420,7 +2420,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174033042",
+    "LastModifiedTimestamp": "638023846524386680",
     "Name": "ElevationPopup",
     "Rules": [
       {
@@ -2495,7 +2495,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174033042",
+  "LastModifiedTimestamp": "638023846524386680",
   "Name": "863a635c1c7949a994d648a0f36daba2",
   "OverridableProperties": {},
   "Version": "637866937298547337"

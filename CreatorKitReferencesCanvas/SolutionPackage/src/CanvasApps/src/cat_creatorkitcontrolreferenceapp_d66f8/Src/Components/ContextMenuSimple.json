@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_12",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 498,
+        "PublishOrderIndex": 510,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_12",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 499,
+        "PublishOrderIndex": 511,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_12",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 501,
+        "PublishOrderIndex": 513,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "pivotline_12",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 502,
+        "PublishOrderIndex": 514,
         "Rules": [
           {
             "Category": "Design",
@@ -1029,7 +1029,7 @@
         "Name": "txtAccessibilityUpper",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 503,
+        "PublishOrderIndex": 515,
         "Rules": [
           {
             "Category": "Data",
@@ -1181,7 +1181,7 @@
         "Name": "chkShowChevron",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 504,
+        "PublishOrderIndex": 516,
         "Rules": [
           {
             "Category": "Data",
@@ -1347,7 +1347,7 @@
         "Name": "ContextMenuStandard",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 505,
+        "PublishOrderIndex": 517,
         "Rules": [
           {
             "Category": "Data",
@@ -1554,7 +1554,7 @@
         "Name": "lblAlignMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 506,
+        "PublishOrderIndex": 518,
         "Rules": [
           {
             "Category": "Data",
@@ -1844,7 +1844,7 @@
             "Name": "Name5_2",
             "Parent": "ddAlignmentMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 508,
+            "PublishOrderIndex": 520,
             "Rules": [
               {
                 "Category": "Data",
@@ -1978,7 +1978,7 @@
         "Name": "ddAlignmentMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 507,
+        "PublishOrderIndex": 519,
         "Rules": [
           {
             "Category": "Data",
@@ -2172,7 +2172,7 @@
         "Name": "lblSelectedStandardMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 509,
+        "PublishOrderIndex": 521,
         "Rules": [
           {
             "Category": "Data",
@@ -2545,7 +2545,7 @@
         "Name": "lblSelectedKeyStandardMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 510,
+        "PublishOrderIndex": 522,
         "Rules": [
           {
             "Category": "Data",
@@ -2918,7 +2918,7 @@
         "Name": "lblFillMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 511,
+        "PublishOrderIndex": 523,
         "Rules": [
           {
             "Category": "Data",
@@ -3208,7 +3208,7 @@
             "Name": "DisplayName1",
             "Parent": "ddFillColor",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 513,
+            "PublishOrderIndex": 525,
             "Rules": [
               {
                 "Category": "Data",
@@ -3342,7 +3342,7 @@
         "Name": "ddFillColor",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 512,
+        "PublishOrderIndex": 524,
         "Rules": [
           {
             "Category": "Data",
@@ -3556,7 +3556,7 @@
         "Name": "ContextMenuStyled",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 514,
+        "PublishOrderIndex": 526,
         "Rules": [
           {
             "Category": "Data",
@@ -3792,7 +3792,7 @@
         "Name": "lblSelectedStyledMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 515,
+        "PublishOrderIndex": 527,
         "Rules": [
           {
             "Category": "Data",
@@ -4165,7 +4165,7 @@
         "Name": "lblSelectedKeyStyledMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 516,
+        "PublishOrderIndex": 528,
         "Rules": [
           {
             "Category": "Data",
@@ -4519,7 +4519,7 @@
         "Name": "btnSetFocusMenu",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 517,
+        "PublishOrderIndex": 529,
         "Rules": [
           {
             "Category": "Data",
@@ -4694,7 +4694,7 @@
         "Name": "txtAccessibilityLower",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 518,
+        "PublishOrderIndex": 530,
         "Rules": [
           {
             "Category": "Data",
@@ -4814,7 +4814,7 @@
         "Name": "Group10",
         "Parent": "ContextMenuSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 500,
+        "PublishOrderIndex": 512,
         "Rules": [
           {
             "Category": "Design",
@@ -4895,7 +4895,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174023486",
+    "LastModifiedTimestamp": "638023846524377945",
     "Name": "ContextMenuSimple",
     "Rules": [
       {
@@ -4976,7 +4976,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174023486",
+  "LastModifiedTimestamp": "638023846524377945",
   "Name": "7791efe90e4e41ca900e78c2ada0788a",
   "OverridableProperties": {},
   "Version": "637866837857408991"

@@ -111,8 +111,10 @@ App As appinfo:
             {ItemKey:"detailslist_sortingpaging",ItemDisplayName:"Paging",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Sorting},
         
             {ItemKey:"galleries_pickers",ItemDisplayName:"Pickers"},
+            {ItemKey:"people_picker",ItemDisplayName:"PeoplePicker",ItemParentKey:"galleries_pickers",TargetScreen:scrPeoplePicker},
             {ItemKey:"basic_tags",ItemDisplayName:"Tags Picker",ItemParentKey:"galleries_pickers",TargetScreen:scrTagPicker},
             {ItemKey:"taglist",ItemDisplayName:"Tag List",ItemParentKey:"galleries_pickers",TargetScreen:scrTagList},
+            
         
             {ItemKey:"progress",ItemDisplayName:"Progress"},
             {ItemKey:"spinner",ItemDisplayName:"Spinner",ItemParentKey:"progress",TargetScreen:scrSpinner},

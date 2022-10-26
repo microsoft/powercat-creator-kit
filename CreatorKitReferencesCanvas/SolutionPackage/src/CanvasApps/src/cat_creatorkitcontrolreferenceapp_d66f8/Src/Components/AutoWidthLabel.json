@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_9",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 458,
+        "PublishOrderIndex": 470,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_9",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 459,
+        "PublishOrderIndex": 471,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_9",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 461,
+        "PublishOrderIndex": 473,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "pivotline_9",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 462,
+        "PublishOrderIndex": 474,
         "Rules": [
           {
             "Category": "Design",
@@ -1078,7 +1078,7 @@
         "Name": "AutoWidthLabel_Words",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 463,
+        "PublishOrderIndex": 475,
         "Rules": [
           {
             "Category": "Data",
@@ -1263,7 +1263,7 @@
         "Name": "icoResizeWidthIndicator",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 464,
+        "PublishOrderIndex": 476,
         "Rules": [
           {
             "Category": "Data",
@@ -1445,7 +1445,7 @@
         "Name": "lblAutoWidthValue",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 465,
+        "PublishOrderIndex": 477,
         "Rules": [
           {
             "Category": "Data",
@@ -1811,7 +1811,7 @@
         "Name": "lblWords",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 466,
+        "PublishOrderIndex": 478,
         "Rules": [
           {
             "Category": "Data",
@@ -2215,7 +2215,7 @@
         "Name": "sldWords",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 467,
+        "PublishOrderIndex": 479,
         "Rules": [
           {
             "Category": "Data",
@@ -2438,7 +2438,7 @@
         "Name": "Group7",
         "Parent": "AutoWidthLabel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 460,
+        "PublishOrderIndex": 472,
         "Rules": [
           {
             "Category": "Design",
@@ -2511,7 +2511,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174014439",
+    "LastModifiedTimestamp": "638023846524366640",
     "Name": "AutoWidthLabel",
     "Rules": [
       {
@@ -2586,7 +2586,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174014439",
+  "LastModifiedTimestamp": "638023846524366640",
   "Name": "fe287f1328a841e1b5c16c70f97a97c2",
   "OverridableProperties": {},
   "Version": "637865219336296864"

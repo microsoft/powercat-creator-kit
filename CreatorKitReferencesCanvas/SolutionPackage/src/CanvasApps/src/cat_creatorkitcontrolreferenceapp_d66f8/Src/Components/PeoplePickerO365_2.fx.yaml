@@ -1,0 +1,9 @@
+PeoplePickerO365_2 As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_36.Selected.ItemKey="code",htmlCode_36.Y+htmlCode_36.Height,400)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

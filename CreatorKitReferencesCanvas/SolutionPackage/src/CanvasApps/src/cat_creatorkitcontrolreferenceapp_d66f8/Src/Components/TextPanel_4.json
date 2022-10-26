@@ -5,19 +5,19 @@
     "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "SampleAppCodeHeader_1",
-    "TemplateGuid": "ba05f7e1cb14466997057a4ae2284b8f"
+    "Name": "TextPanel_4",
+    "TemplateGuid": "4865d076dd1e4fe491a99c5427eaf049"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
   "CustomProperties": [
     {
       "Category": 0,
-      "DisplayName": "Title",
+      "DisplayName": "Text",
       "Hidden": false,
-      "Name": "Title",
+      "Name": "Text",
       "PropertyDataTypeKey": "String",
-      "Tooltip": "Title",
+      "Tooltip": "Text",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
@@ -28,24 +28,6 @@
       "PropertyDataTypeKey": "Number",
       "Tooltip": "Component Height",
       "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
-    },
-    {
-      "Category": 0,
-      "DisplayName": "Sample Height",
-      "Hidden": false,
-      "Name": "SampleHeight",
-      "PropertyDataTypeKey": "Number",
-      "Tooltip": "Sample Height",
-      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
-    },
-    {
-      "Category": 0,
-      "DisplayName": "Sample Code Html",
-      "Hidden": false,
-      "Name": "SampleCodeHtml",
-      "PropertyDataTypeKey": "String",
-      "Tooltip": "Sample Code Html",
-      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -56,9 +38,9 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174390822",
-  "Name": "ba05f7e1cb14466997057a4ae2284b8f",
+  "LastModifiedTimestamp": "638023846524645513",
+  "Name": "4865d076dd1e4fe491a99c5427eaf049",
   "OverridableProperties": {},
-  "TemplateOriginalName": "3aed1cb24ba74a3b9750ccc972ca4c80",
-  "Version": "637860977511895218"
+  "TemplateOriginalName": "774387d1468a44e1ba1fdb7ed20893d6",
+  "Version": "637855821332038088"
 }

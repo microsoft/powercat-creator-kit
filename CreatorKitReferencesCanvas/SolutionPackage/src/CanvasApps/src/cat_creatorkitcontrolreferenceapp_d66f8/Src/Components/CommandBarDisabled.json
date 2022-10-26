@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 381,
+        "PublishOrderIndex": 393,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 382,
+        "PublishOrderIndex": 394,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 384,
+        "PublishOrderIndex": 396,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 385,
+        "PublishOrderIndex": 397,
         "Rules": [
           {
             "Category": "Data",
@@ -1028,7 +1028,7 @@
         "Name": "commandBar_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 386,
+        "PublishOrderIndex": 398,
         "Rules": [
           {
             "Category": "Data",
@@ -1210,7 +1210,7 @@
         "Name": "lblSelected_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 387,
+        "PublishOrderIndex": 399,
         "Rules": [
           {
             "Category": "Data",
@@ -1583,7 +1583,7 @@
         "Name": "lblSelectedKey_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 388,
+        "PublishOrderIndex": 400,
         "Rules": [
           {
             "Category": "Data",
@@ -1898,7 +1898,7 @@
         "Name": "chkEnable_1",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 389,
+        "PublishOrderIndex": 401,
         "Rules": [
           {
             "Category": "Data",
@@ -2008,7 +2008,7 @@
         "Name": "grpFluentSample_2",
         "Parent": "CommandBarDisabled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 383,
+        "PublishOrderIndex": 395,
         "Rules": [
           {
             "Category": "Design",
@@ -2081,7 +2081,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174026131",
+    "LastModifiedTimestamp": "638023846524380055",
     "Name": "CommandBarDisabled",
     "Rules": [
       {
@@ -2156,7 +2156,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174026131",
+  "LastModifiedTimestamp": "638023846524380055",
   "Name": "8c69252a92094108a7404bad01de007e",
   "OverridableProperties": {},
   "Version": "637855792793183961"

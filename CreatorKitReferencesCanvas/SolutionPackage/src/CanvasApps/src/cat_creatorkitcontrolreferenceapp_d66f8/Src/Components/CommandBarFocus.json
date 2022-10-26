@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_7",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 390,
+        "PublishOrderIndex": 402,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_7",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 391,
+        "PublishOrderIndex": 403,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_7",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 393,
+        "PublishOrderIndex": 405,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_7",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 394,
+        "PublishOrderIndex": 406,
         "Rules": [
           {
             "Category": "Data",
@@ -1006,7 +1006,7 @@
         "Name": "txtFirstTab",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 395,
+        "PublishOrderIndex": 407,
         "Rules": [
           {
             "Category": "Data",
@@ -1122,7 +1122,7 @@
         "Name": "txtSecondTab",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 396,
+        "PublishOrderIndex": 408,
         "Rules": [
           {
             "Category": "Data",
@@ -1268,7 +1268,7 @@
         "Name": "commandBar_4",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 397,
+        "PublishOrderIndex": 409,
         "Rules": [
           {
             "Category": "Data",
@@ -1444,7 +1444,7 @@
         "Name": "btnSetfocus",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 398,
+        "PublishOrderIndex": 410,
         "Rules": [
           {
             "Category": "Data",
@@ -1681,7 +1681,7 @@
         "Name": "htmlText_3",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 399,
+        "PublishOrderIndex": 411,
         "Rules": [
           {
             "Category": "Data",
@@ -1868,7 +1868,7 @@
         "Name": "Group4",
         "Parent": "CommandBarFocus",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 392,
+        "PublishOrderIndex": 404,
         "Rules": [
           {
             "Category": "Design",
@@ -1941,7 +1941,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174002796",
+    "LastModifiedTimestamp": "638023846524357750",
     "Name": "CommandBarFocus",
     "Rules": [
       {
@@ -2016,7 +2016,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174002796",
+  "LastModifiedTimestamp": "638023846524357750",
   "Name": "18c4efb4e2cf4f768edae1d1eb47530e",
   "OverridableProperties": {},
   "Version": "637860995788304640"

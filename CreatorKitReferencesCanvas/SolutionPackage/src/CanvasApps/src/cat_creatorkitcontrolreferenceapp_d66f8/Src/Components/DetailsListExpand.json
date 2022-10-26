@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_24",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 712,
+        "PublishOrderIndex": 724,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_24",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 713,
+        "PublishOrderIndex": 725,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_16",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 715,
+        "PublishOrderIndex": 727,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_24",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 716,
+        "PublishOrderIndex": 728,
         "Rules": [
           {
             "Category": "Data",
@@ -1019,7 +1019,7 @@
         "Name": "ElevationExpand",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 717,
+        "PublishOrderIndex": 729,
         "Rules": [
           {
             "Category": "Design",
@@ -1113,7 +1113,7 @@
             "Name": "city1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 719,
+            "PublishOrderIndex": 731,
             "Rules": [
               {
                 "Category": "Data",
@@ -1220,7 +1220,7 @@
             "Name": "country1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 720,
+            "PublishOrderIndex": 732,
             "Rules": [
               {
                 "Category": "Data",
@@ -1327,7 +1327,7 @@
             "Name": "description1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 721,
+            "PublishOrderIndex": 733,
             "Rules": [
               {
                 "Category": "Data",
@@ -1434,7 +1434,7 @@
             "Name": "expand1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 722,
+            "PublishOrderIndex": 734,
             "Rules": [
               {
                 "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "externalimage1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 723,
+            "PublishOrderIndex": 735,
             "Rules": [
               {
                 "Category": "Data",
@@ -1648,7 +1648,7 @@
             "Name": "iconimage1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 724,
+            "PublishOrderIndex": 736,
             "Rules": [
               {
                 "Category": "Data",
@@ -1755,7 +1755,7 @@
             "Name": "id1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 725,
+            "PublishOrderIndex": 737,
             "Rules": [
               {
                 "Category": "Data",
@@ -1862,7 +1862,7 @@
             "Name": "name1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 726,
+            "PublishOrderIndex": 738,
             "Rules": [
               {
                 "Category": "Data",
@@ -1969,7 +1969,7 @@
             "Name": "TagBorderColor1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 727,
+            "PublishOrderIndex": 739,
             "Rules": [
               {
                 "Category": "Data",
@@ -2076,7 +2076,7 @@
             "Name": "TagColor1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 728,
+            "PublishOrderIndex": 740,
             "Rules": [
               {
                 "Category": "Data",
@@ -2183,7 +2183,7 @@
             "Name": "tags1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 729,
+            "PublishOrderIndex": 741,
             "Rules": [
               {
                 "Category": "Data",
@@ -2290,7 +2290,7 @@
             "Name": "svg1_1",
             "Parent": "FluentDetailsListDetailsListExpand",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 730,
+            "PublishOrderIndex": 742,
             "Rules": [
               {
                 "Category": "Data",
@@ -2476,7 +2476,7 @@
         "Name": "FluentDetailsListDetailsListExpand",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 718,
+        "PublishOrderIndex": 730,
         "Rules": [
           {
             "Category": "Data",
@@ -2608,7 +2608,7 @@
         "Name": "Group21",
         "Parent": "DetailsListExpand",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 714,
+        "PublishOrderIndex": 726,
         "Rules": [
           {
             "Category": "Design",
@@ -2689,7 +2689,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174057469",
+    "LastModifiedTimestamp": "638023846524413236",
     "Name": "DetailsListExpand",
     "Rules": [
       {
@@ -2770,7 +2770,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174057469",
+  "LastModifiedTimestamp": "638023846524413236",
   "Name": "5f04cbdcf3264a22b32a773f968310a3",
   "OverridableProperties": {},
   "Version": "637867683210729102"

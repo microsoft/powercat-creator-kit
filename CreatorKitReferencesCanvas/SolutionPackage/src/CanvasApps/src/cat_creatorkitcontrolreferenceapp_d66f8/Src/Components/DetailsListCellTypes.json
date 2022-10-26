@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_23",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 693,
+        "PublishOrderIndex": 705,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_23",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 694,
+        "PublishOrderIndex": 706,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_15",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 696,
+        "PublishOrderIndex": 708,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_23",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 697,
+        "PublishOrderIndex": 709,
         "Rules": [
           {
             "Category": "Data",
@@ -1019,7 +1019,7 @@
         "Name": "ElevationCellTypes",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 698,
+        "PublishOrderIndex": 710,
         "Rules": [
           {
             "Category": "Design",
@@ -1113,7 +1113,7 @@
             "Name": "city1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 700,
+            "PublishOrderIndex": 712,
             "Rules": [
               {
                 "Category": "Data",
@@ -1220,7 +1220,7 @@
             "Name": "country1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 701,
+            "PublishOrderIndex": 713,
             "Rules": [
               {
                 "Category": "Data",
@@ -1327,7 +1327,7 @@
             "Name": "description1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 702,
+            "PublishOrderIndex": 714,
             "Rules": [
               {
                 "Category": "Data",
@@ -1434,7 +1434,7 @@
             "Name": "expand1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 703,
+            "PublishOrderIndex": 715,
             "Rules": [
               {
                 "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "externalimage1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 704,
+            "PublishOrderIndex": 716,
             "Rules": [
               {
                 "Category": "Data",
@@ -1648,7 +1648,7 @@
             "Name": "iconimage1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 705,
+            "PublishOrderIndex": 717,
             "Rules": [
               {
                 "Category": "Data",
@@ -1755,7 +1755,7 @@
             "Name": "id1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 706,
+            "PublishOrderIndex": 718,
             "Rules": [
               {
                 "Category": "Data",
@@ -1862,7 +1862,7 @@
             "Name": "name1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 707,
+            "PublishOrderIndex": 719,
             "Rules": [
               {
                 "Category": "Data",
@@ -1969,7 +1969,7 @@
             "Name": "TagBorderColor1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 708,
+            "PublishOrderIndex": 720,
             "Rules": [
               {
                 "Category": "Data",
@@ -2076,7 +2076,7 @@
             "Name": "TagColor1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 709,
+            "PublishOrderIndex": 721,
             "Rules": [
               {
                 "Category": "Data",
@@ -2183,7 +2183,7 @@
             "Name": "tags1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 710,
+            "PublishOrderIndex": 722,
             "Rules": [
               {
                 "Category": "Data",
@@ -2290,7 +2290,7 @@
             "Name": "svg1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 711,
+            "PublishOrderIndex": 723,
             "Rules": [
               {
                 "Category": "Data",
@@ -2476,7 +2476,7 @@
         "Name": "FluentDetailsListCellTypes",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 699,
+        "PublishOrderIndex": 711,
         "Rules": [
           {
             "Category": "Data",
@@ -2608,7 +2608,7 @@
         "Name": "Group20",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 695,
+        "PublishOrderIndex": 707,
         "Rules": [
           {
             "Category": "Design",
@@ -2689,7 +2689,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174054936",
+    "LastModifiedTimestamp": "638023846524410100",
     "Name": "DetailsListCellTypes",
     "Rules": [
       {
@@ -2770,7 +2770,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174054936",
+  "LastModifiedTimestamp": "638023846524410100",
   "Name": "e4998c26ebb24e46a35c047d80404d36",
   "OverridableProperties": {},
   "Version": "637867635483834796"

@@ -207,6 +207,100 @@
     "TemplateDisplayName": "Fluent Nav (1.0.9)",
     "Version": "1.0.9"
   },
+  "Fluent PeoplePicker (%VERSION%) Preview": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.PeoplePicker",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.PeoplePicker",
+    "OverridableProperties": {
+      "AutoHeight": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "Number",
+          "Name": "Root",
+          "Type": []
+        },
+        "Version": "1.326"
+      },
+      "SearchText": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "String",
+          "Name": "Root",
+          "Type": []
+        },
+        "Version": "1.326"
+      },
+      "SelectedPeople": {
+        "Type": {
+          "EnumString": "",
+          "Kind": "Table",
+          "Name": "Root",
+          "Type": [
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "PersonaImageAlt",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "Image",
+              "Name": "PersonaImgUrl",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "Number",
+              "Name": "PersonaKey",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "PersonaName",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "Number",
+              "Name": "PersonaPresence",
+              "Type": []
+            },
+            {
+              "EnumString": "",
+              "Kind": "String",
+              "Name": "PersonaRole",
+              "Type": []
+            }
+          ]
+        },
+        "Version": "1.326"
+      }
+    },
+    "PCFDynamicSchemaForIRRetrieval": {
+      "AutoHeight": {
+        "DynamicSchema": "{\"type\":\"number\"}",
+        "PCFSkipValidation": false
+      },
+      "SearchText": {
+        "DynamicSchema": "{\"type\":\"string\"}",
+        "PCFSkipValidation": false
+      },
+      "SelectedPeople": {
+        "DynamicSchema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"PersonaKey\":{\"type\":\"number\"},\"PersonaName\":{\"type\":\"string\"},\"PersonaImgUrl\":{\"type\":\"string\",\"format\":\"uri\",\"x-ms-media-kind\":\"image\"},\"PersonaImageAlt\":{\"type\":\"string\"},\"PersonaRole\":{\"type\":\"string\"},\"PersonaPresence\":{\"type\":\"number\"}}}}",
+        "PCFSkipValidation": false
+      }
+    },
+    "TemplateDisplayName": "Fluent PeoplePicker (%VERSION%) Preview",
+    "Version": "0.0.1"
+  },
   "Fluent Picker (1.0.9)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,

@@ -1,0 +1,113 @@
+scrPeoplePicker As screen:
+    OnVisible: |-
+        =ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"a",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle));
+        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"e",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
+        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"i",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
+        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"o",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
+        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"u",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
+
+    stackRoot_22 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_23.Width
+        Y: =Header_24.Height - 20
+        ZIndex: =2
+
+        lblTitle_24 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="Fluent PeoplePicker"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_26 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="The people picker (PeoplePicker) is used to select one or more entities, such as people or groups, from a list. It makes composing an email to someone, or adding them to a group, easy if you don’t know their full name or email address."
+            ZIndex: =2
+
+        TextPanel_6 As TextPanel:
+            LayoutMinHeight: =640
+            Text: |-
+                ="
+                <h2 style=""font-weight:600"">Best practices</h2>
+                <h3 style=""font-weight:600"">Layout</h3><ul><li>Use the people picker to add someone to the To line of an email, or to add someone to a list.</li><li>Use the MemberList PeoplePicker to display selections below the input field.</li></ul>"
+            ZIndex: =4
+
+        Container8_1 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: |-
+                =Label1_2.Height+
+                PeoplePickerO365_1.ComponentHeight +PreSelectPeoplePicker_1.ComponentHeight +
+                Self.PaddingTop + Self.PaddingBottom
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            ZIndex: =5
+
+            "Elevation2_25 As 'Fluent Elevation (1.0.9)'":
+                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            Container9_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =8*varTheme.U
+                PaddingLeft: =8*varTheme.U
+                PaddingRight: =8*varTheme.U
+                PaddingTop: =8*varTheme.U
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Label1_11 As label:
+                    Color: =varTheme.palette.neutralPrimary
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    Height: =12*varTheme.U
+                    Size: =varTheme.fontSizes.l
+                    Text: ="Usage"
+                    Width: =228
+                    ZIndex: =1
+
+                PeoplePickerO365_1 As PeoplePickerO365:
+                    FillPortions: =1
+                    Height: =Self.ComponentHeight
+                    LayoutMinHeight: =340
+                    ZIndex: =2
+
+                PreSelectPeoplePicker_1 As PreSelectPeoplePicker:
+                    ZIndex: =3
+
+    LeftNav_23 As LeftNav:
+        Height: =Parent.Height - 20
+        Width: =200
+        Y: =Header_24.Height
+        ZIndex: =7
+
+    Header_24 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        ZIndex: =8
+

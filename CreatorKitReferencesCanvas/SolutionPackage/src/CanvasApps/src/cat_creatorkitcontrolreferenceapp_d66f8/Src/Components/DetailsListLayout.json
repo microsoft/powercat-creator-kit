@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_25",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 731,
+        "PublishOrderIndex": 743,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_25",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 732,
+        "PublishOrderIndex": 744,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_17",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 734,
+        "PublishOrderIndex": 746,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_25",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 735,
+        "PublishOrderIndex": 747,
         "Rules": [
           {
             "Category": "Data",
@@ -1019,7 +1019,7 @@
         "Name": "ElevationLayout",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 736,
+        "PublishOrderIndex": 748,
         "Rules": [
           {
             "Category": "Design",
@@ -1112,7 +1112,7 @@
             "Name": "heading2_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 738,
+            "PublishOrderIndex": 750,
             "Rules": [
               {
                 "Category": "Data",
@@ -1212,7 +1212,7 @@
             "Name": "Icon1_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 739,
+            "PublishOrderIndex": 751,
             "Rules": [
               {
                 "Category": "Data",
@@ -1312,7 +1312,7 @@
             "Name": "name3_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 740,
+            "PublishOrderIndex": 752,
             "Rules": [
               {
                 "Category": "Data",
@@ -1412,7 +1412,7 @@
             "Name": "tag2_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 741,
+            "PublishOrderIndex": 753,
             "Rules": [
               {
                 "Category": "Data",
@@ -1512,7 +1512,7 @@
             "Name": "iconimage2_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 742,
+            "PublishOrderIndex": 754,
             "Rules": [
               {
                 "Category": "Data",
@@ -1612,7 +1612,7 @@
             "Name": "review2_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 743,
+            "PublishOrderIndex": 755,
             "Rules": [
               {
                 "Category": "Data",
@@ -1712,7 +1712,7 @@
             "Name": "score1_3",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 744,
+            "PublishOrderIndex": 756,
             "Rules": [
               {
                 "Category": "Data",
@@ -1813,7 +1813,7 @@
             "Name": "id2",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 745,
+            "PublishOrderIndex": 757,
             "Rules": [
               {
                 "Category": "Data",
@@ -1920,7 +1920,7 @@
             "Name": "selectable1",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 746,
+            "PublishOrderIndex": 758,
             "Rules": [
               {
                 "Category": "Data",
@@ -2027,7 +2027,7 @@
             "Name": "TagBorderColor2",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 747,
+            "PublishOrderIndex": 759,
             "Rules": [
               {
                 "Category": "Data",
@@ -2134,7 +2134,7 @@
             "Name": "TagColor2",
             "Parent": "FluentDetailsListLayout",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 748,
+            "PublishOrderIndex": 760,
             "Rules": [
               {
                 "Category": "Data",
@@ -2344,7 +2344,7 @@
         "Name": "FluentDetailsListLayout",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 737,
+        "PublishOrderIndex": 749,
         "Rules": [
           {
             "Category": "Data",
@@ -2494,7 +2494,7 @@
         "Name": "Group22",
         "Parent": "DetailsListLayout",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 733,
+        "PublishOrderIndex": 745,
         "Rules": [
           {
             "Category": "Design",
@@ -2575,7 +2575,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174059797",
+    "LastModifiedTimestamp": "638023846524415896",
     "Name": "DetailsListLayout",
     "Rules": [
       {
@@ -2656,7 +2656,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174059797",
+  "LastModifiedTimestamp": "638023846524415896",
   "Name": "1c4b726e080642889cf44624997893e2",
   "OverridableProperties": {},
   "Version": "637867683336012137"

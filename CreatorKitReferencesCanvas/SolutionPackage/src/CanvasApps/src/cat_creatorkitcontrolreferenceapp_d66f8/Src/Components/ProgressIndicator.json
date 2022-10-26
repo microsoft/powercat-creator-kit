@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_30",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 805,
+        "PublishOrderIndex": 817,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_29",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 806,
+        "PublishOrderIndex": 818,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_20",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 807,
+        "PublishOrderIndex": 819,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_29",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 808,
+        "PublishOrderIndex": 820,
         "Rules": [
           {
             "Category": "Data",
@@ -1031,7 +1031,7 @@
         "Name": "ProgressIndicator1",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 809,
+        "PublishOrderIndex": 821,
         "Rules": [
           {
             "Category": "Data",
@@ -1186,7 +1186,7 @@
         "Name": "lblPercentComp",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 810,
+        "PublishOrderIndex": 822,
         "Rules": [
           {
             "Category": "Data",
@@ -1325,7 +1325,7 @@
         "Name": "sliderPercentComplete",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 811,
+        "PublishOrderIndex": 823,
         "Rules": [
           {
             "Category": "Data",
@@ -1452,7 +1452,7 @@
         "Name": "lblTypeofIndicator",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 812,
+        "PublishOrderIndex": 824,
         "Rules": [
           {
             "Category": "Data",
@@ -1552,7 +1552,7 @@
             "Name": "Name5_9",
             "Parent": "ddTypeofIndicator",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 814,
+            "PublishOrderIndex": 826,
             "Rules": [
               {
                 "Category": "Data",
@@ -1686,7 +1686,7 @@
         "Name": "ddTypeofIndicator",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 813,
+        "PublishOrderIndex": 825,
         "Rules": [
           {
             "Category": "Data",
@@ -1813,7 +1813,7 @@
         "Name": "lblDescription",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 815,
+        "PublishOrderIndex": 827,
         "Rules": [
           {
             "Category": "Data",
@@ -1953,7 +1953,7 @@
         "Name": "LblinputTextBox",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 816,
+        "PublishOrderIndex": 828,
         "Rules": [
           {
             "Category": "Data",
@@ -2080,7 +2080,7 @@
         "Name": "lblLabel",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 817,
+        "PublishOrderIndex": 829,
         "Rules": [
           {
             "Category": "Data",
@@ -2213,7 +2213,7 @@
         "Name": "ResizableTextarea1_1",
         "Parent": "ProgressIndicator",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 818,
+        "PublishOrderIndex": 830,
         "Rules": [
           {
             "Category": "Data",
@@ -2324,7 +2324,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174371206",
+    "LastModifiedTimestamp": "638023846524624335",
     "Name": "ProgressIndicator",
     "Rules": [
       {
@@ -2399,7 +2399,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174371206",
+  "LastModifiedTimestamp": "638023846524624335",
   "Name": "e93dd53bd090431983352fbd612af275",
   "OverridableProperties": {},
   "Version": "638001523565413150"

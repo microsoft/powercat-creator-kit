@@ -1,0 +1,298 @@
+PeoplePickerO365 As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_33.Selected.ItemKey="code",htmlCode_32.Y+htmlCode_32.Height,280)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "ElevationPeoplePicker As 'Fluent Elevation (1.0.9)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =PeoplePicker1.AutoHeight + 50
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =322
+        X: =15
+        Y: =60
+        ZIndex: =1
+
+    lblExampleTitle_32 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="With Office365Users Connector"
+        Width: =630
+        Y: =2
+        ZIndex: =2
+
+    "pivotAppCode_33 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_32.Y+htmlCode_32.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =3
+
+    pivotline_22 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =4
+
+    htmlCode_32 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagListStyled As 'Fluent Tag List'.pcfdataset""</span>:
+                BorderRadius: =If(chkRounded_1.Checked,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">8</span>)
+                ItemBackgroundColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
+                ItemBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
+                ItemDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
+                ItemIconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
+                ItemIconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""IconName""</span>
+                ItemKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
+                Items: =colSimpleTagList
+                ItemTextColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
+                MaxHeight: =ElevationTagListBasic.Height<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">-80</span>
+                TextAlignment: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.TagList.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Left
+                Visible: =pivotAppCode_19.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+            
+                DisplayName2 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
+                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                BackgroundColor1 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
+                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                BorderColor1 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BorderColor""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BorderColor""</span>
+                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                HoverBorderColor1 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
+                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+                Key1 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
+                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+                TextColor1 As pcfDataField.textualColumn:
+                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
+                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
+                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
+                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
+            
+            btnAddTag As Button:
+                OnSelect: |-
+                    =Collect(colSimpleTagList,{DisplayName:Mid(varLipsum,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">5</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">15</span>)),IconName:If(chkShowIcons.Checked,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Emoji2""</span>)});
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add Tag""</span>
+            
+            btnRemoveTag As Button:
+                OnSelect: =Remove(colSimpleTagList,Last(colSimpleTagList));
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Remove Tag""</span>
+            
+            lblTagListCount As label:
+                Text: |-
+                    =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tags: ""</span> &amp; Text(CountRows(colSimpleTagList))
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkRounded_1 As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Rounded Tags""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowIcons As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add Icons""</span>
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_33.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =5
+
+    "chkShowSectxt As 'Check box'":
+        AccessibleLabel: ="Rounded tags"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Show Secondary Text"
+        OnChange: =
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =164
+        X: =453
+        Y: =207
+        ZIndex: =10
+
+    "PeoplePicker1 As 'Fluent PeoplePicker (%VERSION%) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Error: =chkError.Checked
+        Height: =79
+        InputEvent: =setPPKFocus
+        OnSearch: |-
+            =ClearCollect(
+                UserCollection,
+                AddColumns(
+                    Office365Users.SearchUser(
+                        {
+                            searchTerm: Self.SearchText,
+                            top: 500
+                        }
+                    ),
+                    "ImageURL",
+                    Substitute(
+                        JSON(
+                            Office365Users.UserPhotoV2(Id),
+                            JSONFormat.IncludeBinaryData
+                        ),
+                        """",
+                        ""
+                    )
+                )
+            )
+        PeoplePickerType: =ddPickerType.Selected.Key
+        ShowSecondaryText: =chkShowSectxt.Checked
+        SuggestionImgUrl: ="ImageURL"
+        SuggestionKey: ="Mail"
+        SuggestionName: ="DisplayName"
+        SuggestionRole: ="JobTitle"
+        Suggestions_Items: =UserCollection
+        Theme: =varTheme.themeJSON
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =299
+        X: =19
+        Y: =77
+        ZIndex: =12
+
+    "ddPickerType As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table( {
+                    Name: "Normal",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.NormalPeoplepicker
+                })
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table(
+                {
+                    Name: "Normal",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.NormalPeoplepicker
+                },
+                {
+                    Name: "Compact",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.CompactPeoplepicker
+                },
+                {
+                    Name: "List",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.ListPeoplepicker
+                }
+            )
+        Text: =""
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =175
+        X: =450
+        Y: =169
+        ZIndex: =13
+
+        Name5_10 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblPickerType As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Picker type :"
+        Width: =84
+        X: =371
+        Y: =163
+        ZIndex: =14
+
+    "chkError As 'Check box'":
+        AccessibleLabel: ="Add icons"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Error"
+        OnChange: =
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =164
+        X: =453
+        Y: =239
+        ZIndex: =15
+
+    "Facepile1_1 As 'Fluent Facepile (1.0.9) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =31
+        ImageShouldFadeIn: =true
+        ItemPersonaImageInfo: ="PersonaImgUrl"
+        ItemPersonaKey: ="PersonaKey"
+        ItemPersonaName: ="PersonaName"
+        Items: =PeoplePicker1.SelectedPeople
+        MaxDisplayablePersonas: =5
+        OnChange: =
+        OverflowButtonType: ='''PowerCAT.Facepile.OverflowButtonType'''.descriptive
+        PersonaSize: ='''PowerCAT.Facepile.PersonaSize'''.Size32
+        ShowAddButton: =false
+        Theme: =varTheme.themeJSON
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =248
+        X: =384
+        Y: =105
+        ZIndex: =16
+
+    lblSelectedUser As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Selected Users :"
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =107
+        X: =399
+        Y: =67
+        ZIndex: =17
+
+    btnRemoveTag_1 As Button:
+        AccessibleLabel: ="Remove tag"
+        BorderRadius: =1
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(setPPKFocus,"SetFocus"&Rand())
+        Text: ="Set Focus"
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =120
+        X: =453
+        Y: =276
+        ZIndex: =18
+

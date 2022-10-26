@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22091.212" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+<ImportExportXml version="9.2.22093.220" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitCore</UniqueName>
     <LocalizedNames>
@@ -93,6 +94,8 @@
       <RootComponent type="66" schemaName="cat_PowerCAT.Icon" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.KeyboardShortcuts" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Nav" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.PeoplePicker" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.Persona" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Picker" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Pivot" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ProgressIndicator" behavior="0" />

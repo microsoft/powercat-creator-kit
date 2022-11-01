@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ImportExportXml version="9.2.22093.220" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22094.198" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitCore</UniqueName>
     <LocalizedNames>
@@ -100,6 +99,7 @@
       <RootComponent type="66" schemaName="cat_PowerCAT.Pivot" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ProgressIndicator" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ResizableTextarea" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.SearchBox" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Shimmer" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Spinner" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.TagList" behavior="0" />

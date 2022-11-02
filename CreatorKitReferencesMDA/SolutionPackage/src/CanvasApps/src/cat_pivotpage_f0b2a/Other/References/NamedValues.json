@@ -194,6 +194,31 @@
       "Kind": "Page",
       "Name": "ContextMenu Page",
       "Value": "custompage:cat_contextmenupage_7df18"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Persona Page",
+      "Value": "custompage:cr7a3_personapage_404d9"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile",
+      "Value": "custompage:cat_facepile_10ba0"
+    },
+    {
+      "Kind": "Page",
+      "Name": "SearchBox Page",
+      "Value": "custompage:cat_searchboxpage_2dd0f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Facepile Page",
+      "Value": "custompage:cat_facepilepage_13c32"
+    },
+    {
+      "Kind": "Page",
+      "Name": "People Picker",
+      "Value": "custompage:cat_peoplepicker_80157"
     }
   ]
 }

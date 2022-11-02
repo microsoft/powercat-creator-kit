@@ -207,6 +207,31 @@
             }
         );
         ClearCollect(colSelectedTags, Filter(colTags, Value(Key) < 4));
+        
+        ClearCollect(
+            PreSelectedUserCollection,
+            AddColumns(
+               // Get first 5 users who have email ID - optional
+                Filter(
+                    Office365Users.SearchUser({top: 5}),
+                    Mail <> Blank()
+                ),
+                "PersonaKey",
+                Mail,
+                "PersonaName",
+                DisplayName,
+                "PersonaImgUrl",
+                //Get base64 image data
+                Substitute(
+                    JSON(
+                        Office365Users.UserPhotoV2(Id),
+                        JSONFormat.IncludeBinaryData
+                    ),
+                    """",
+                    ""
+                )
+            )
+        );
 
     SearchBox_1 As SearchBox:
         X: =1580
@@ -243,7 +268,7 @@
         Y: =204
         ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (1.0.8)'":
+    "btnAddTaskHeader As 'Fluent Icon (1.0.14)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
@@ -259,7 +284,7 @@
         Y: =551
         ZIndex: =5
 
-    "Elevation1 As 'Fluent Elevation (1.0.8)'":
+    "Elevation1 As 'Fluent Elevation (1.0.14)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -268,7 +293,7 @@
         Y: =353
         ZIndex: =6
 
-    "Elevation1_1 As 'Fluent Elevation (1.0.8)'":
+    "Elevation1_1 As 'Fluent Elevation (1.0.14)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -279,7 +304,7 @@
         Y: =469
         ZIndex: =7
 
-    "Elevation1_2 As 'Fluent Elevation (1.0.8)'":
+    "Elevation1_2 As 'Fluent Elevation (1.0.14)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -288,7 +313,7 @@
         Y: =240
         ZIndex: =8
 
-    "Elevation1_3 As 'Fluent Elevation (1.0.8)'":
+    "Elevation1_3 As 'Fluent Elevation (1.0.14)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
@@ -300,7 +325,7 @@
         Y: =135
         ZIndex: =9
 
-    "picTags As 'Fluent Picker (1.0.8)'.pcfdataset":
+    "picTags As 'Fluent Picker (1.0.14)'.pcfdataset":
         BorderRadius: =0
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -490,7 +515,7 @@
         Y: =78
         ZIndex: =17
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.8)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.14)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -11834,7 +11859,7 @@
         Y: =78
         ZIndex: =23
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.8)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.14)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -11883,7 +11908,7 @@
         Y: =105
         ZIndex: =24
 
-    "ContextMenu1 As 'Fluent Context Menu (1.0.8)'.pcfdataset":
+    "ContextMenu1 As 'Fluent Context Menu (1.0.14)'.pcfdataset":
         Chevron: =true
         DisplayMode: =DisplayMode.Edit
         Height: =53
@@ -11949,7 +11974,7 @@
         Y: =412
         ZIndex: =28
 
-    "Nav1 As 'Fluent Nav (1.0.8)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (1.0.14)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =690
         Items: |-
@@ -12046,7 +12071,7 @@
         Y: =135
         ZIndex: =29
 
-    "CommandBar1 As 'Fluent Command Bar (1.0.8)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (1.0.14)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -12062,7 +12087,7 @@
         Y: =420
         ZIndex: =30
 
-    "Pivot1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+    "Pivot1 As 'Fluent Pivot (1.0.14)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Items: |-
@@ -12129,7 +12154,7 @@
         Y: =985
         ZIndex: =34
 
-    "Elevation1_4 As 'Fluent Elevation (1.0.8)'":
+    "Elevation1_4 As 'Fluent Elevation (1.0.14)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -12140,7 +12165,7 @@
         Y: =760
         ZIndex: =35
 
-    "Calendar1 As 'Fluent Calendar (1.0.8) Preview'":
+    "Calendar1 As 'Fluent Calendar (1.0.14) Preview'":
         DayPickerVisible: =true
         DisplayMode: =DisplayMode.Edit
         Height: =239
@@ -12156,7 +12181,7 @@
         Y: =760
         ZIndex: =36
 
-    "Shimmer1 As 'Fluent Shimmer (1.0.8) Preview'.pcfdataset":
+    "Shimmer1 As 'Fluent Shimmer (1.0.14) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =205
         Items: |-
@@ -12177,7 +12202,7 @@
         Y: =503
         ZIndex: =38
 
-    "Spinner1 As 'Fluent Spinner (1.0.8) Preview'":
+    "Spinner1 As 'Fluent Spinner (1.0.14) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =60
         Label: ="Loading..."
@@ -12405,7 +12430,7 @@
                 Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-    "Shimmer2 As 'Fluent Shimmer (1.0.8) Preview'.pcfdataset":
+    "Shimmer2 As 'Fluent Shimmer (1.0.14) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =140
         Width: =295
@@ -12413,7 +12438,7 @@
         Y: =244
         ZIndex: =42
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.8) Preview'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.14) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =74
         Label: ="Title here"
@@ -12466,13 +12491,14 @@
         Width: =1920
         ZIndex: =47
 
-    "Facepile1 As 'Fluent Facepile (%VERSION%)'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.0.14) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
-        Height: =38
+        Height: =68
         MaxDisplayablePersonas: =1
+        PersonaSize: ='''PowerCAT.Facepile.PersonaSize'''.Size56
         ShowAddButton: =true
         Theme: =AppThemeJson
-        Width: =326
+        Width: =328
         X: =300
         Y: =374
         ZIndex: =48
@@ -12487,4 +12513,95 @@
         X: =299
         Y: =319
         ZIndex: =49
+
+    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.14) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =95
+        Items: =PreSelectedUserCollection
+        OnSearch: |-
+            =ClearCollect(
+                UserCollection,
+                AddColumns(
+                    Office365Users.SearchUser(
+                        {
+                            searchTerm: Self.SearchText,
+                            top: 500
+                        }
+                    ),
+                    "ImageURL",
+                    Substitute(
+                        JSON(
+                            Office365Users.UserPhotoV2(Id),
+                            JSONFormat.IncludeBinaryData
+                        ),
+                        """",
+                        ""
+                    ),
+            		"Presence",
+            		"away"
+                )
+            )
+        SuggestionImgUrl: ="ImageURL"
+        SuggestionKey: ="Mail"
+        SuggestionName: ="DisplayName"
+        SuggestionRole: ="JobTitle"
+        Suggestions_Items: =UserCollection
+        Theme: =AppThemeJson
+        Width: =520
+        X: =42
+        Y: =525
+        ZIndex: =50
+
+    Label1_9 As Label:
+        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =32
+        Text: ="People Picker"
+        Width: =320
+        X: =42
+        Y: =479
+        ZIndex: =51
+
+    "SearchBox1 As 'Fluent SearchBox (1.0.14) Preview'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =75
+        Theme: =AppThemeJson
+        Width: =482
+        X: =672
+        Y: =920
+        ZIndex: =52
+
+    Label1_10 As Label:
+        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        Text: ="Search Box"
+        Width: =182
+        X: =672
+        Y: =890
+        ZIndex: =53
+
+    "Persona1 As 'Fluent Persona (1.0.14) Preview'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =94
+        ImageUrl: =User().Image
+        SecondaryText: =
+        Text: =User().FullName
+        Width: =208
+        X: =1184
+        Y: =670
+        ZIndex: =54
+
+    Label1_24 As Label:
+        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        Text: ="Persona"
+        Width: =182
+        X: =1185
+        Y: =627
+        ZIndex: =55
 

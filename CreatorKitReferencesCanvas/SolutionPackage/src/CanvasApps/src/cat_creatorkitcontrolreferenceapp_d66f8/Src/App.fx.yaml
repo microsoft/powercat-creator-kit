@@ -95,6 +95,7 @@ App As appinfo:
             {ItemKey:"autowidth",ItemDisplayName:"Auto Width Label",ItemParentKey:"inputs",TargetScreen:scrAutoWidthLabel},
             {ItemKey:"icon",ItemDisplayName:"Icon",ItemParentKey:"inputs",TargetScreen:scrIcon},
             {ItemKey:"resizabletextarea",ItemDisplayName:"Resizable Text Area",ItemParentKey:"inputs",TargetScreen:scrResizableTextArea},
+            {ItemKey:"searchbox",ItemDisplayName:"SearchBox",ItemParentKey:"inputs",TargetScreen:scrSearchBox},
         
             {ItemKey:"commands_menus_navs",ItemDisplayName:"Commands, Menus & Navs"},
             {ItemKey:"breadcrumb",ItemDisplayName:"Breadcrumb",ItemParentKey:"commands_menus_navs",TargetScreen:scrBreadcrumb},
@@ -105,14 +106,17 @@ App As appinfo:
             {ItemKey:"pivot",ItemDisplayName:"Pivot",ItemParentKey:"commands_menus_navs",TargetScreen:scrPivot},
             {ItemKey:"itemsnlist",ItemDisplayName:"Items & Lists"},
             {ItemKey:"facepile",ItemDisplayName:"Facepile",ItemParentKey:"itemsnlist",TargetScreen:scrFacepile},
+            {ItemKey:"persona",ItemDisplayName:"Persona",ItemParentKey:"itemsnlist",TargetScreen:scrPersona},
             {ItemKey:"detailslist",ItemDisplayName:"DetailsList",ItemParentKey:"itemsnlist"},
             {ItemKey:"detailslist_basic",ItemDisplayName:"Basic",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Basic},
             {ItemKey:"detailslist_celltypes",ItemDisplayName:"Cell Types",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_CellTypes},
             {ItemKey:"detailslist_sortingpaging",ItemDisplayName:"Paging",ItemParentKey:"detailslist",TargetScreen:scrDetailsList_Sorting},
         
             {ItemKey:"galleries_pickers",ItemDisplayName:"Pickers"},
+            {ItemKey:"people_picker",ItemDisplayName:"People Picker",ItemParentKey:"galleries_pickers",TargetScreen:scrPeoplePicker},
             {ItemKey:"basic_tags",ItemDisplayName:"Tags Picker",ItemParentKey:"galleries_pickers",TargetScreen:scrTagPicker},
             {ItemKey:"taglist",ItemDisplayName:"Tag List",ItemParentKey:"galleries_pickers",TargetScreen:scrTagList},
+            
         
             {ItemKey:"progress",ItemDisplayName:"Progress"},
             {ItemKey:"spinner",ItemDisplayName:"Spinner",ItemParentKey:"progress",TargetScreen:scrSpinner},

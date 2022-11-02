@@ -82,7 +82,7 @@
         "Name": "pivotAppCode",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 363,
+        "PublishOrderIndex": 464,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 364,
+        "PublishOrderIndex": 465,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 366,
+        "PublishOrderIndex": 467,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 367,
+        "PublishOrderIndex": 468,
         "Rules": [
           {
             "Category": "Data",
@@ -1036,7 +1036,7 @@
         "Name": "commandBar",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 368,
+        "PublishOrderIndex": 469,
         "Rules": [
           {
             "Category": "Data",
@@ -1224,7 +1224,7 @@
         "Name": "lblSelected",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 369,
+        "PublishOrderIndex": 470,
         "Rules": [
           {
             "Category": "Data",
@@ -1597,7 +1597,7 @@
         "Name": "lblSelectedKey",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 370,
+        "PublishOrderIndex": 471,
         "Rules": [
           {
             "Category": "Data",
@@ -1963,7 +1963,7 @@
         "Name": "lblWidth",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 371,
+        "PublishOrderIndex": 472,
         "Rules": [
           {
             "Category": "Data",
@@ -2367,7 +2367,7 @@
         "Name": "sldWidth_1",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 372,
+        "PublishOrderIndex": 473,
         "Rules": [
           {
             "Category": "Data",
@@ -2590,7 +2590,7 @@
         "Name": "grpSample",
         "Parent": "CommandBarOverflowItems",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 365,
+        "PublishOrderIndex": 466,
         "Rules": [
           {
             "Category": "Design",
@@ -2664,7 +2664,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638001549174037957",
+    "LastModifiedTimestamp": "638029207414125109",
     "Name": "CommandBarOverflowItems",
     "Rules": [
       {
@@ -2745,7 +2745,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174037957",
+  "LastModifiedTimestamp": "638029207414125109",
   "Name": "ee65712cedf944b38accbde33a5ae71c",
   "OverridableProperties": {},
   "Version": "637855760234820422"

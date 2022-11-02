@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_8",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 441,
+        "PublishOrderIndex": 542,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_8",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 442,
+        "PublishOrderIndex": 543,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_8",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 444,
+        "PublishOrderIndex": 545,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_8",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 445,
+        "PublishOrderIndex": 546,
         "Rules": [
           {
             "Category": "Data",
@@ -1035,7 +1035,7 @@
         "Name": "line_10",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 446,
+        "PublishOrderIndex": 547,
         "Rules": [
           {
             "Category": "Design",
@@ -1282,7 +1282,7 @@
         "Name": "htmlText_6",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 447,
+        "PublishOrderIndex": 548,
         "Rules": [
           {
             "Category": "Data",
@@ -1511,7 +1511,7 @@
         "Name": "ResizableTextarea_Default1",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 448,
+        "PublishOrderIndex": 549,
         "Rules": [
           {
             "Category": "Data",
@@ -1711,7 +1711,7 @@
         "Name": "lblSelected_8",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 449,
+        "PublishOrderIndex": 550,
         "Rules": [
           {
             "Category": "Data",
@@ -2084,7 +2084,7 @@
         "Name": "lblText1",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 450,
+        "PublishOrderIndex": 551,
         "Rules": [
           {
             "Category": "Data",
@@ -2438,7 +2438,7 @@
         "Name": "btnResetUsingEvent",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 451,
+        "PublishOrderIndex": 552,
         "Rules": [
           {
             "Category": "Data",
@@ -2619,7 +2619,7 @@
         "Name": "line_9",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 452,
+        "PublishOrderIndex": 553,
         "Rules": [
           {
             "Category": "Design",
@@ -2866,7 +2866,7 @@
         "Name": "htmlText_7",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 453,
+        "PublishOrderIndex": 554,
         "Rules": [
           {
             "Category": "Data",
@@ -3103,7 +3103,7 @@
         "Name": "ResizableTextarea_Default2",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 454,
+        "PublishOrderIndex": 555,
         "Rules": [
           {
             "Category": "Data",
@@ -3309,7 +3309,7 @@
         "Name": "lblSelected_9",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 455,
+        "PublishOrderIndex": 556,
         "Rules": [
           {
             "Category": "Data",
@@ -3682,7 +3682,7 @@
         "Name": "lblText2",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 456,
+        "PublishOrderIndex": 557,
         "Rules": [
           {
             "Category": "Data",
@@ -4036,7 +4036,7 @@
         "Name": "btnResetUsingVariable",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 457,
+        "PublishOrderIndex": 558,
         "Rules": [
           {
             "Category": "Data",
@@ -4178,7 +4178,7 @@
         "Name": "Group1",
         "Parent": "ResizableTextArea_Controlled",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 443,
+        "PublishOrderIndex": 544,
         "Rules": [
           {
             "Category": "Design",
@@ -4266,7 +4266,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174012135",
+    "LastModifiedTimestamp": "638029207414103293",
     "Name": "ResizableTextArea_Controlled",
     "Rules": [
       {
@@ -4347,7 +4347,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174012135",
+  "LastModifiedTimestamp": "638029207414103293",
   "Name": "27e6d81eaef84951bd65ebd85e1136a2",
   "OverridableProperties": {},
   "Version": "637865104422457989"

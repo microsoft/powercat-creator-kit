@@ -6,7 +6,7 @@
     "AllowCustomization": true,
     "Description": "",
     "Name": "TextPanel_3",
-    "TemplateGuid": "36a6240e89ba4bcdb3b0d18ac3e6fc5e"
+    "TemplateGuid": "cdaa3e034b01484da9a6915f5df7dbd0"
   },
   "ComponentType": "CanvasComponent",
   "CustomGroupControlTemplateName": "",
@@ -38,8 +38,8 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001552296611216",
-  "Name": "36a6240e89ba4bcdb3b0d18ac3e6fc5e",
+  "LastModifiedTimestamp": "638029207414564920",
+  "Name": "cdaa3e034b01484da9a6915f5df7dbd0",
   "OverridableProperties": {},
   "TemplateOriginalName": "774387d1468a44e1ba1fdb7ed20893d6",
   "Version": "637855821332038088"

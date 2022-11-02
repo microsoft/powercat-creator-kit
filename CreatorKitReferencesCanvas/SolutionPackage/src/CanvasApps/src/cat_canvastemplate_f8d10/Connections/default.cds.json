@@ -77,6 +77,14 @@
         "PCFExternalServiceUsageAllowed": false
       },
       "ComponentName": "CustomControl",
+      "Identifier": "cat_PowerCAT.Facepile",
+      "IdentifierType": 0
+    },
+    {
+      "Capabilities": {
+        "PCFExternalServiceUsageAllowed": false
+      },
+      "ComponentName": "CustomControl",
       "Identifier": "cat_PowerCAT.CommandBar",
       "IdentifierType": 0
     },
@@ -86,6 +94,14 @@
       },
       "ComponentName": "CustomControl",
       "Identifier": "cat_PowerCAT.Elevation",
+      "IdentifierType": 0
+    },
+    {
+      "Capabilities": {
+        "PCFExternalServiceUsageAllowed": false
+      },
+      "ComponentName": "CustomControl",
+      "Identifier": "cat_PowerCAT.PeoplePicker",
       "IdentifierType": 0
     },
     {
@@ -125,6 +141,14 @@
         "PCFExternalServiceUsageAllowed": false
       },
       "ComponentName": "CustomControl",
+      "Identifier": "cat_PowerCAT.Persona",
+      "IdentifierType": 0
+    },
+    {
+      "Capabilities": {
+        "PCFExternalServiceUsageAllowed": false
+      },
+      "ComponentName": "CustomControl",
       "Identifier": "cat_PowerCAT.ProgressIndicator",
       "IdentifierType": 0
     },
@@ -149,7 +173,7 @@
         "PCFExternalServiceUsageAllowed": false
       },
       "ComponentName": "CustomControl",
-      "Identifier": "cat_PowerCAT.Facepile",
+      "Identifier": "cat_PowerCAT.SearchBox",
       "IdentifierType": 0
     }
   ],

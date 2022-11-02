@@ -1,11 +1,11 @@
 {
   "AccessibilityLabel": "Accessibility label",
   "AddbuttonAriaLabel": "Add button Aria Label",
-  "Facepile": "Fluent Facepile (%VERSION%)",
+  "Facepile": "Fluent Facepile (1.0.14) Preview",
   "Facepile_Desc": "Facepile component",
   "ImageShouldFadeIn": "Image Should FadeIn",
   "InputEvent": "Input event",
-  "IsImage": "Is a Image",
+  "IsImage": "Is Image",
   "ItemPersonaClickable": "Persona Clickable",
   "ItemPersonaImage": "Persona Image",
   "ItemPersonaImageInfo": "PersonaI mageInfo",
@@ -15,7 +15,7 @@
   "MaxDisplayablePersonas": "Max Displayable Personas",
   "OverflowButtonAriaLabel": "Overflow Button Aria Label",
   "OverflowButtonType": "OverflowButton Type",
-  "PersonaSize": "Event Name",
+  "PersonaSize": "Persona Size",
   "ShowAddButton": "Show Add Button",
   "Theme": "Theme"
 }

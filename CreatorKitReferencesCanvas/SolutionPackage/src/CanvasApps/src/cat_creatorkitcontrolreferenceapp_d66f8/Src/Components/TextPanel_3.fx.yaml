@@ -1,5 +1,5 @@
 TextPanel_3 As CanvasComponent:
-    ComponentHeight: =
+    ComponentHeight: =htmlText_12.Height
     Fill: =RGBA(0, 0, 0, 0)
     Height: =Self.ComponentHeight
     Text: ="Text"

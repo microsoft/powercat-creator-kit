@@ -1,0 +1,11 @@
+var pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad;(()=>{"use strict";var t={};t.d=(r,e)=>{for(var a in e)t.o(e,a)&&!t.o(r,a)&&Object.defineProperty(r,a,{enumerable:!0,get:e[a]})},t.o=(r,e)=>Object.prototype.hasOwnProperty.call(r,e),t.r=r=>{typeof Symbol!="undefined"&&Symbol.toStringTag&&Object.defineProperty(r,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(r,"__esModule",{value:!0})};var u={};/*!****************************************!*\
+  !*** ./SearchBox/index.ts + 3 modules ***!
+  \****************************************/t.r(u),t.d(u,{SearchBox:()=>_});const n=React,m=FluentUIReactv8290,p=n.memo(r=>{const{onChanged:e,themeJSON:a,ariaLabel:o,placeholderText:l,underLined:c,disabled:s,disableAnimation:i}=r,d={iconName:r.iconName},h=n.useMemo(()=>{try{return a?(0,m.createTheme)(JSON.parse(a)):void 0}catch(b){console.error("Cannot parse theme",b)}},[a]),f=(b,g)=>{e(g)};return n.createElement(m.ThemeProvider,{theme:h},n.createElement(m.SearchBox,{placeholder:l,onChange:f,ariaLabel:o,underlined:c,iconProps:d,disabled:s,disableAnimation:i}))});p.displayName="SearchBoxComponent";class _{constructor(){this.onChange=e=>{this.searchTextValue=e!=null?e:null,this.notifyOutputChanged()}}init(e,a){this.notifyOutputChanged=a}updateView(e){var a,o,l,c,s,i,d;const h={onChanged:this.onChange,themeJSON:(a=e.parameters.Theme.raw)!=null?a:"",ariaLabel:(l=(o=e.parameters)==null?void 0:o.AccessibilityLabel.raw)!=null?l:"",underLined:(c=e.parameters.Underlined.raw)!=null?c:!1,iconName:(s=e.parameters.IconName.raw)!=null?s:"",placeholderText:(i=e.parameters.PlaceHolderText.raw)!=null?i:"",disabled:e.mode.isControlDisabled,disableAnimation:(d=e.parameters.DisableAnimation.raw)!=null?d:!1};return n.createElement(p,h)}getOutputs(){return{SearchText:this.searchTextValue}}destroy(){}}pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad=u})();
+
+if (window.ComponentFramework && window.ComponentFramework.registerControl) {
+	ComponentFramework.registerControl('PowerCAT.SearchBox', pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad.SearchBox);
+} else {
+	var PowerCAT = PowerCAT || {};
+	PowerCAT.SearchBox = pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad.SearchBox;
+	pcf_tools_652ac3f36e1e4bca82eb3c1dc44e6fad = undefined;
+}

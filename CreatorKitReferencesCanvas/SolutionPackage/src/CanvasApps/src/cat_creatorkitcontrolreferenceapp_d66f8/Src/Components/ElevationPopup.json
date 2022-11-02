@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 568,
+        "PublishOrderIndex": 669,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 569,
+        "PublishOrderIndex": 670,
         "Rules": [
           {
             "Category": "Data",
@@ -643,11 +643,11 @@
         "Name": "htmlCode_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 571,
+        "PublishOrderIndex": 672,
         "Rules": [
           {
             "Category": "Data",
-            "InvariantScript": "\"<pre class=\"\"hljs\"\" style=\"\"display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);\"\"><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">\"\"ElevationPopupOverlay As 'Fluent Elevation (0.0.13)'\"\"</span>:\r\n    DarkOverlay: =chkDarkPadding.Checked\r\n    Depth: =<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">'PowerCAT.Elevation.Depth'</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span>.Depth64\r\n    DisplayMode: =DisplayMode.Edit\r\n    Height: =Parent.Height-Self.Y\r\n    HoverDepth: =<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">'PowerCAT.Elevation.HoverDepth'</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span>.Depth64\r\n    PaddingBottom: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\r\n    PaddingLeft: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\r\n    PaddingRight: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\r\n    PaddingTop: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\r\n\r\n<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">\"\"chkDarkPadding As 'Check box'\"\"</span>:\r\n    Checked: =<span class=\"\"hljs-literal\"\" style=\"\"color: rgb(120, 169, 96);\"\">false</span>\r\n    DisplayMode: =DisplayMode.Edit\r\n    Label: =<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">\"\"Show dark padding\"\"</span>\r\n</pre>\"",
+            "InvariantScript": "\"<pre class=\"\"hljs\"\" style=\"\"display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);\"\"><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">\"\"ElevationPopupOverlay As 'Fluent Elevation (0.0.13)'\"\"</span>:\n    DarkOverlay: =chkDarkPadding.Checked\n    Depth: =<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">'PowerCAT.Elevation.Depth'</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span>.Depth64\n    DisplayMode: =DisplayMode.Edit\n    Height: =Parent.Height-Self.Y\n    HoverDepth: =<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">'PowerCAT.Elevation.HoverDepth'</span><span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">''</span>.Depth64\n    PaddingBottom: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\n    PaddingLeft: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\n    PaddingRight: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\n    PaddingTop: =<span class=\"\"hljs-number\"\" style=\"\"color: rgb(136, 0, 0);\"\">64</span>\n\n<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">\"\"chkDarkPadding As 'Check box'\"\"</span>:\n    Checked: =<span class=\"\"hljs-literal\"\" style=\"\"color: rgb(120, 169, 96);\"\">false</span>\n    DisplayMode: =DisplayMode.Edit\n    Label: =<span class=\"\"hljs-string\"\" style=\"\"color: rgb(136, 0, 0);\"\">\"\"Show dark padding\"\"</span>\n</pre>\"",
             "Property": "HtmlText",
             "RuleProviderType": "Unknown"
           },
@@ -850,7 +850,7 @@
         "Name": "pivotline_16",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 572,
+        "PublishOrderIndex": 673,
         "Rules": [
           {
             "Category": "Design",
@@ -1091,7 +1091,7 @@
         "Name": "htmlText_10",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 573,
+        "PublishOrderIndex": 674,
         "Rules": [
           {
             "Category": "Data",
@@ -1350,7 +1350,7 @@
         "Name": "ElevationPopupOverlay",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 574,
+        "PublishOrderIndex": 675,
         "Rules": [
           {
             "Category": "Data",
@@ -1533,7 +1533,7 @@
         "Name": "lblPopupTitle",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 575,
+        "PublishOrderIndex": 676,
         "Rules": [
           {
             "Category": "Data",
@@ -1704,7 +1704,7 @@
         "Name": "CommandBarRightActions",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 576,
+        "PublishOrderIndex": 677,
         "Rules": [
           {
             "Category": "Data",
@@ -1899,7 +1899,7 @@
         "Name": "lblSelected_23",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 577,
+        "PublishOrderIndex": 678,
         "Rules": [
           {
             "Category": "Data",
@@ -2229,7 +2229,7 @@
         "Name": "chkDarkPadding",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 578,
+        "PublishOrderIndex": 679,
         "Rules": [
           {
             "Category": "Data",
@@ -2347,7 +2347,7 @@
         "Name": "Group14",
         "Parent": "ElevationPopup",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 570,
+        "PublishOrderIndex": 671,
         "Rules": [
           {
             "Category": "Design",
@@ -2420,7 +2420,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174033042",
+    "LastModifiedTimestamp": "638029207414121092",
     "Name": "ElevationPopup",
     "Rules": [
       {
@@ -2495,7 +2495,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174033042",
+  "LastModifiedTimestamp": "638029207414121092",
   "Name": "863a635c1c7949a994d648a0f36daba2",
   "OverridableProperties": {},
   "Version": "637866937298547337"

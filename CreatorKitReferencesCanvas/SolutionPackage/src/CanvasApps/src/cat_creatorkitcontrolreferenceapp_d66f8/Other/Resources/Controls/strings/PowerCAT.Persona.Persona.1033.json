@@ -1,0 +1,16 @@
+{
+  "AccessibilityLabel": "Accessibility label",
+  "HidePersonaDetails": "Hide Persona Details",
+  "ImageAlt": "Image Alt",
+  "ImageInitials": "Image Initials",
+  "ImageUrl": "Image Url",
+  "OptionalText": "Optional Text",
+  "Persona": "Fluent Persona(%VERSION%) Preview",
+  "Persona_Desc": "Persona component",
+  "PersonaSize": "Persona Size",
+  "Presence": "Presence",
+  "SecondaryText": "Secondary Text",
+  "TertiaryText": "Tertiary Text",
+  "Text": "Text",
+  "Theme": "Theme"
+}

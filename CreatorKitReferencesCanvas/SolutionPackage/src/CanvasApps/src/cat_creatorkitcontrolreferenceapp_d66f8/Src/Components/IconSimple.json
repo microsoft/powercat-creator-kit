@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_11",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 468,
+        "PublishOrderIndex": 569,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_11",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 469,
+        "PublishOrderIndex": 570,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_11",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 471,
+        "PublishOrderIndex": 572,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "pivotline_11",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 472,
+        "PublishOrderIndex": 573,
         "Rules": [
           {
             "Category": "Design",
@@ -1091,7 +1091,7 @@
         "Name": "htmlText_5",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 473,
+        "PublishOrderIndex": 574,
         "Rules": [
           {
             "Category": "Data",
@@ -1320,7 +1320,7 @@
         "Name": "lblIconName",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 474,
+        "PublishOrderIndex": 575,
         "Rules": [
           {
             "Category": "Data",
@@ -1649,7 +1649,7 @@
         "Name": "txtSearchIcons",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 475,
+        "PublishOrderIndex": 576,
         "Rules": [
           {
             "Category": "Data",
@@ -1857,7 +1857,7 @@
         "Name": "iconStandard",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 476,
+        "PublishOrderIndex": 577,
         "Rules": [
           {
             "Category": "Data",
@@ -2097,7 +2097,7 @@
         "Name": "iconCustomColor",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 477,
+        "PublishOrderIndex": 578,
         "Rules": [
           {
             "Category": "Data",
@@ -2348,7 +2348,7 @@
         "Name": "icoSearch",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 478,
+        "PublishOrderIndex": 579,
         "Rules": [
           {
             "Category": "Data",
@@ -2508,7 +2508,7 @@
             "Name": "IconData1",
             "Parent": "gridIcons",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 480,
+            "PublishOrderIndex": 581,
             "Rules": [
               {
                 "Category": "Data",
@@ -2615,7 +2615,7 @@
             "Name": "IconName1",
             "Parent": "gridIcons",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 481,
+            "PublishOrderIndex": 582,
             "Rules": [
               {
                 "Category": "Data",
@@ -2786,7 +2786,7 @@
         "Name": "gridIcons",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 479,
+        "PublishOrderIndex": 580,
         "Rules": [
           {
             "Category": "Data",
@@ -2917,7 +2917,7 @@
         "Name": "Group5",
         "Parent": "IconSimple",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 470,
+        "PublishOrderIndex": 571,
         "Rules": [
           {
             "Category": "Design",
@@ -2990,7 +2990,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174017016",
+    "LastModifiedTimestamp": "638029207414107271",
     "Name": "IconSimple",
     "Rules": [
       {
@@ -3065,7 +3065,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174017016",
+  "LastModifiedTimestamp": "638029207414107271",
   "Name": "1220845d63964f1eb6f8bb9ddcd83c79",
   "OverridableProperties": {},
   "Version": "637865279901760190"

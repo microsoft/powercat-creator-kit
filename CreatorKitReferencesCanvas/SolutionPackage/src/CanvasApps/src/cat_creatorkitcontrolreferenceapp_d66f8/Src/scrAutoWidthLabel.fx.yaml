@@ -112,10 +112,6 @@ scrAutoWidthLabel As screen:
 
     PCFDialog As Dialog:
         Buttons: =
-        ContentHeight: =PCFDialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
-        ContentWidth: =PCFDialog.DialogWidth
-        ContentX: = PCFDialog.Width/2-PCFDialog.DialogWidth/2
-        ContentY: = PCFDialog.Height/2-PCFDialog.DialogHeight/2+DialogHeaderContainer.Height
         DialogHeight: =700
         DialogWidth: =1100
         Fill: =PCFDialog.OverlayColor

@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_28",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 819,
+        "PublishOrderIndex": 920,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_28",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 820,
+        "PublishOrderIndex": 921,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_28",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 822,
+        "PublishOrderIndex": 923,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "line_19",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 823,
+        "PublishOrderIndex": 924,
         "Rules": [
           {
             "Category": "Design",
@@ -1037,7 +1037,7 @@
         "Name": "lblFirstName",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 824,
+        "PublishOrderIndex": 925,
         "Rules": [
           {
             "Category": "Data",
@@ -1433,7 +1433,7 @@
         "Name": "txtFirstName",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 825,
+        "PublishOrderIndex": 926,
         "Rules": [
           {
             "Category": "Data",
@@ -1706,7 +1706,7 @@
         "Name": "KeyboardShortcutsSample",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 826,
+        "PublishOrderIndex": 927,
         "Rules": [
           {
             "Category": "Data",
@@ -1859,7 +1859,7 @@
         "Name": "lblLastName",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 827,
+        "PublishOrderIndex": 928,
         "Rules": [
           {
             "Category": "Data",
@@ -2255,7 +2255,7 @@
         "Name": "txtLastName",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 828,
+        "PublishOrderIndex": 929,
         "Rules": [
           {
             "Category": "Data",
@@ -2558,7 +2558,7 @@
         "Name": "lblEmail",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 829,
+        "PublishOrderIndex": 930,
         "Rules": [
           {
             "Category": "Data",
@@ -2954,7 +2954,7 @@
         "Name": "txtEmail",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 830,
+        "PublishOrderIndex": 931,
         "Rules": [
           {
             "Category": "Data",
@@ -3279,7 +3279,7 @@
         "Name": "lblLastKeyboardshortcut",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 831,
+        "PublishOrderIndex": 932,
         "Rules": [
           {
             "Category": "Data",
@@ -3571,7 +3571,7 @@
         "Name": "Group23",
         "Parent": "KeyboardShortcuts",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 821,
+        "PublishOrderIndex": 922,
         "Rules": [
           {
             "Category": "Design",
@@ -3644,7 +3644,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174066670",
+    "LastModifiedTimestamp": "638029207414391979",
     "Name": "KeyboardShortcuts",
     "Rules": [
       {
@@ -3719,7 +3719,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174066670",
+  "LastModifiedTimestamp": "638029207414391979",
   "Name": "ed05fa755ece4952aba4b9e9e169851e",
   "OverridableProperties": {},
   "Version": "637873171369192343"

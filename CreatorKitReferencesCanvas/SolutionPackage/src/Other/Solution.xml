@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22085.188" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22094.198" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesCanvas</UniqueName>
     <LocalizedNames>
@@ -139,6 +139,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
+        <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>
@@ -163,6 +167,22 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Nav" displayName="cat_PowerCAT.Nav" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.PeoplePicker" displayName="cat_PowerCAT.PeoplePicker" solution="Active" />
+        <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.PeoplePicker" displayName="cat_PowerCAT.PeoplePicker" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Persona" displayName="cat_PowerCAT.Persona" solution="Active" />
+        <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Persona" displayName="cat_PowerCAT.Persona" solution="Active" />
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>
@@ -192,6 +212,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.ResizableTextarea" displayName="cat_PowerCAT.ResizableTextarea" solution="Active" />
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SearchBox" displayName="cat_PowerCAT.SearchBox" solution="Active" />
+        <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Shimmer" displayName="cat_PowerCAT.Shimmer" solution="Active" />

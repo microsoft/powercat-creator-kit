@@ -104,7 +104,7 @@
         "Name": "Elevation2_4",
         "Parent": "BestPractices",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 344,
+        "PublishOrderIndex": 445,
         "Rules": [
           {
             "Category": "Data",
@@ -341,7 +341,7 @@
             "Name": "lblBestPracticeCommandBar_2",
             "Parent": "conBestPracticesCommandBar_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 346,
+            "PublishOrderIndex": 447,
             "Rules": [
               {
                 "Category": "Data",
@@ -745,7 +745,7 @@
                 "Name": "lblDoCommandBar_2",
                 "Parent": "conDosDontsCommandBarHeader_2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 348,
+                "PublishOrderIndex": 449,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1146,7 +1146,7 @@
                 "Name": "lblDontCommandBar_2",
                 "Parent": "conDosDontsCommandBarHeader_2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 349,
+                "PublishOrderIndex": 450,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -1496,7 +1496,7 @@
             "Name": "conDosDontsCommandBarHeader_2",
             "Parent": "conBestPracticesCommandBar_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 347,
+            "PublishOrderIndex": 448,
             "Rules": [
               {
                 "Category": "Design",
@@ -1656,7 +1656,7 @@
                     "Name": "galleryTemplate2",
                     "Parent": "galDos",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 352,
+                    "PublishOrderIndex": 453,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1771,7 +1771,7 @@
                     "Name": "Icon2_1",
                     "Parent": "galDos",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 353,
+                    "PublishOrderIndex": 454,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1960,7 +1960,7 @@
                     "Name": "lblDoText_1",
                     "Parent": "galDos",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 354,
+                    "PublishOrderIndex": 455,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2336,7 +2336,7 @@
                 "Name": "galDos",
                 "Parent": "conDosDontsCommandBar_2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 351,
+                "PublishOrderIndex": 452,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2535,7 +2535,7 @@
                     "Name": "galleryTemplate2_1",
                     "Parent": "galDonts",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 356,
+                    "PublishOrderIndex": 457,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2650,7 +2650,7 @@
                     "Name": "Icon2_2",
                     "Parent": "galDonts",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 357,
+                    "PublishOrderIndex": 458,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -2839,7 +2839,7 @@
                     "Name": "lblDoText_2",
                     "Parent": "galDonts",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 358,
+                    "PublishOrderIndex": 459,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3215,7 +3215,7 @@
                 "Name": "galDonts",
                 "Parent": "conDosDontsCommandBar_2",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 355,
+                "PublishOrderIndex": 456,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3467,7 +3467,7 @@
             "Name": "conDosDontsCommandBar_2",
             "Parent": "conBestPracticesCommandBar_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 350,
+            "PublishOrderIndex": 451,
             "Rules": [
               {
                 "Category": "Design",
@@ -3688,7 +3688,7 @@
         "Name": "conBestPracticesCommandBar_2",
         "Parent": "BestPractices",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 345,
+        "PublishOrderIndex": 446,
         "Rules": [
           {
             "Category": "Design",
@@ -3857,7 +3857,7 @@
       "Dos",
       "Donts"
     ],
-    "LastModifiedTimestamp": "638001549174047614",
+    "LastModifiedTimestamp": "638029207414378267",
     "Name": "BestPractices",
     "Rules": [
       {
@@ -3947,7 +3947,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174047614",
+  "LastModifiedTimestamp": "638029207414378267",
   "Name": "f47fcbd5380f4e4bb93226d0ae4b8319",
   "OverridableProperties": {},
   "Version": "637855819039471076"

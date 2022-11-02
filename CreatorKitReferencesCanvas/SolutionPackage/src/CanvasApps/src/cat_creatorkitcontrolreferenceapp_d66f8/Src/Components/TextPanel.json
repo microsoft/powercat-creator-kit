@@ -104,7 +104,7 @@
         "Name": "Elevation2_1",
         "Parent": "TextPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 336,
+        "PublishOrderIndex": 437,
         "Rules": [
           {
             "Category": "Data",
@@ -321,7 +321,7 @@
         "Name": "htmlText",
         "Parent": "TextPanel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 337,
+        "PublishOrderIndex": 438,
         "Rules": [
           {
             "Category": "Data",
@@ -497,7 +497,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174042230",
+    "LastModifiedTimestamp": "638029207414128947",
     "Name": "TextPanel",
     "Rules": [
       {
@@ -587,7 +587,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174042230",
+  "LastModifiedTimestamp": "638029207414128947",
   "Name": "774387d1468a44e1ba1fdb7ed20893d6",
   "OverridableProperties": {},
   "Version": "637855821332038088"

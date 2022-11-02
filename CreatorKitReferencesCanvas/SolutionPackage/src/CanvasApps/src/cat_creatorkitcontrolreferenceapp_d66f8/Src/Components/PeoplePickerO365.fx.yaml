@@ -1,0 +1,284 @@
+PeoplePickerO365 As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_33.Selected.ItemKey="code",htmlCode_32.Y+htmlCode_32.Height,If(PeoplePicker1.AutoHeight < 280, 300,PeoplePicker1.AutoHeight+100))
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "ElevationPeoplePicker As 'Fluent Elevation (1.0.9)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =PeoplePicker1.AutoHeight + 50
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =322
+        X: =15
+        Y: =60
+        ZIndex: =1
+
+    lblExampleTitle_32 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="With Office365Users Connector"
+        Width: =630
+        Y: =2
+        ZIndex: =2
+
+    "pivotAppCode_33 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_32.Y+htmlCode_32.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =3
+
+    pivotline_22 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =4
+
+    htmlCode_32 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""PeoplePicker1 As 'Fluent PeoplePicker'""</span>:
+                Items: 
+                Suggestions_Items: UserCollection
+            	InputEvent:setPPKFocus
+            	SuggestionKey:""Mail""
+            	SuggestionName:""DisplayName""
+            	SuggestionRole:""JobTitle""
+            	ShowSecondaryText: chkShowSectxt.Checked
+            	Error:chkError.Checked
+            	DisplayMode:If(chkDisabled.Checked,DisplayMode.Disabled,DisplayMode.Edit)
+                Visible: =pivotAppCode_19.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+            	
+            lblPickerType As label:
+                Text: |-
+                    =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Selected Users ""</span>
+            
+            btnSetFocus As Button:
+                OnSelect: |-
+                    =Set(setPPKFocus,""SetFocus""&Rand())
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Set Focus""</span>
+            
+            Facepile1_1 As Facepile:
+            	Items:PeoplePicker1.SelectedPeople
+            	ItemPersonaKey:""PersonaKey""
+            	ItemPersonaName:""PersonaName""
+            	ItemPersonaImageInfo:""PersonaImgUrl""
+            
+            lblPickerType As label:
+                Text: |-
+                    =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Picker type : ""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkRounded_1 As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show Secondary Text""</span>
+            
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowIcons As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Error""</span>
+            	
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowIcons As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Disable""</span>
+            
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_33.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =5
+
+    "chkShowSectxt As 'Check box'":
+        AccessibleLabel: ="Rounded tags"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Show Secondary Text"
+        OnChange: =
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =164
+        X: =453
+        Y: =207
+        ZIndex: =10
+
+    "PeoplePicker1 As 'Fluent PeoplePicker (%VERSION%) Preview'.pcfdataset":
+        DisplayMode: =If(chkDisabled.Checked,DisplayMode.Disabled,DisplayMode.Edit)
+        Error: =chkError.Checked
+        Height: =79
+        InputEvent: =setPPKFocus
+        OnSearch: |-
+            =ClearCollect(
+                UserCollection,
+                AddColumns(
+                    Office365Users.SearchUser(
+                        {
+                            searchTerm: Self.SearchText,
+                            top: 500
+                        }
+                    ),
+                    "ImageURL",
+                    Substitute(
+                        JSON(
+                            Office365Users.UserPhotoV2(Id),
+                            JSONFormat.IncludeBinaryData
+                        ),
+                        """",
+                        ""
+                    )
+                )
+            )
+        PeoplePickerType: =ddPickerType.Selected.Key
+        ShowSecondaryText: =chkShowSectxt.Checked
+        SuggestionImgUrl: ="ImageURL"
+        SuggestionKey: ="Mail"
+        SuggestionName: ="DisplayName"
+        SuggestionRole: ="JobTitle"
+        Suggestions_Items: =UserCollection
+        Theme: =varTheme.themeJSON
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =299
+        X: =24
+        Y: =77
+        ZIndex: =12
+
+    "ddPickerType As 'Combo box'.pcfdataset":
+        AccessibleLabel: ="Constrain"
+        DefaultSelectedItems: |-
+            =Table( {
+                    Name: "Normal",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.NormalPeoplepicker
+                })
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Items: |-
+            =Table(
+                {
+                    Name: "Normal",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.NormalPeoplepicker
+                },
+                {
+                    Name: "Compact",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.CompactPeoplepicker
+                },
+                {
+                    Name: "List",
+                    Key: '''PowerCAT.PeoplePicker.PeoplePickerType'''.ListPeoplepicker
+                }
+            )
+        Text: =""
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =175
+        X: =450
+        Y: =169
+        ZIndex: =13
+
+        Name5_10 As pcfDataField.textualColumn:
+            FieldDisplayName: ="Name"
+            FieldName: ="Name"
+            FieldVariantName: ="textualColumn"
+            Order: =1
+            ZIndex: =11
+
+    lblPickerType As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: |-
+            ="Picker type :"
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =84
+        X: =371
+        Y: =163
+        ZIndex: =14
+
+    "chkError As 'Check box'":
+        AccessibleLabel: ="Add icons"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Error"
+        OnChange: =
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =164
+        X: =453
+        Y: =239
+        ZIndex: =15
+
+    "Facepile1_1 As 'Fluent Facepile (1.0.9) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =31
+        ImageShouldFadeIn: =true
+        ItemPersonaImageInfo: ="PersonaImgUrl"
+        ItemPersonaKey: ="PersonaKey"
+        ItemPersonaName: ="PersonaName"
+        Items: =PeoplePicker1.SelectedPeople
+        MaxDisplayablePersonas: =5
+        OnChange: =
+        OverflowButtonType: ='''PowerCAT.Facepile.OverflowButtonType'''.descriptive
+        PersonaSize: ='''PowerCAT.Facepile.PersonaSize'''.Size32
+        ShowAddButton: =false
+        Theme: =varTheme.themeJSON
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =248
+        X: =369
+        Y: =105
+        ZIndex: =16
+
+    lblSelectedUser As Label:
+        DisplayMode: =DisplayMode.Edit
+        Height: =24
+        Text: ="Selected Users"
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =107
+        X: =369
+        Y: =67
+        ZIndex: =17
+
+    btnSetFocus As Button:
+        AccessibleLabel: ="Remove tag"
+        BorderRadius: =1
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        OnSelect: =Set(setPPKFocus,"SetFocus"&Rand())
+        Text: ="Set Focus"
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =120
+        X: =453
+        Y: =301
+        ZIndex: =18
+
+    "chkDisabled As 'Check box'":
+        AccessibleLabel: ="Add icons"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Disable"
+        OnChange: =
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =164
+        X: =453
+        Y: =269
+        ZIndex: =19
+

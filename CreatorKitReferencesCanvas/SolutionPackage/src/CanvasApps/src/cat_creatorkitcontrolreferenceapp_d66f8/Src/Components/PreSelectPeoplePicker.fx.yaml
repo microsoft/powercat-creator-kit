@@ -1,0 +1,124 @@
+PreSelectPeoplePicker As CanvasComponent:
+    ComponentHeight: =If(pivotAppCode_36.Selected.ItemKey="code",htmlCode_36.Y+htmlCode_36.Height,400)
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =640
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    "ElevationPeoplePicker_1 As 'Fluent Elevation (1.0.9)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =PeoplePicker1_1.AutoHeight + 50
+        Visible: =pivotAppCode_36.Selected.ItemKey="app"
+        Width: =572
+        X: =15
+        Y: =60
+        ZIndex: =1
+
+    lblExampleTitle_36 As label:
+        Color: =varTheme.palette.neutralPrimaryAlt
+        Font: =Font.'Segoe UI'
+        FontWeight: =FontWeight.Semibold
+        Height: =35
+        Size: =varTheme.fontSizes.m
+        Text: ="People Picker with Preselected Users"
+        Width: =630
+        Y: =2
+        ZIndex: =2
+
+    "pivotAppCode_36 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =49
+        Items: |-
+            =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+        OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_36.Y+htmlCode_36.Height))
+        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        SelectedKey: ="app"
+        Theme: =varTheme.themeJSON
+        Width: =174
+        X: =Parent.Width-Self.Width
+        Y: =0
+        ZIndex: =3
+
+    pivotline_23 As rectangle:
+        Fill: =varTheme.palette.neutralTertiary
+        Height: =1
+        Width: =Parent.Width
+        Y: =48
+        ZIndex: =4
+
+    htmlCode_36 As htmlViewer:
+        AutoHeight: =true
+        BorderColor: =varTheme.palette.neutralPrimary
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        Color: =varTheme.palette.neutralPrimary
+        DisplayMode: =DisplayMode.View
+        Font: =Font.'Courier New'
+        Height: =115
+        HtmlText: |-
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""PeoplePicker1_1 As 'Fluent PeoplePicker'""</span>:
+                Items: PreSelectedUserCollection
+                Suggestions_Items: Office365Users.SearchUser({searchTerm:Self.SearchText,top:500})
+            	InputEvent:setPPKFocus
+            	SuggestionKey:""Mail""
+            	SuggestionName:""DisplayName""
+            	SuggestionRole:""JobTitle""
+            	ShowSecondaryText: chkShowSectxt.Checked
+            	Error:chkError.Checked
+            	DisplayMode:If(chkDisabled.Checked,DisplayMode.Disabled,DisplayMode.Edit)
+                Visible: =pivotAppCode_19.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
+                ScreenOnVisible: <pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""ClearCollect(
+                PreSelectedUserCollection,
+                AddColumns(
+                   // Get first 5 users who have email ID - optional
+                    Filter(
+                        Office365Users.SearchUser({top: 5}),
+                        Mail <> Blank()
+                    ),
+                    ""PersonaKey"",
+                    Mail,
+                    ""PersonaName"",
+                    DisplayName,
+                    ""PersonaImgUrl"",
+                    //Get base64 image data
+                    Substitute(
+                        JSON(
+                            Office365Users.UserPhotoV2(Id),
+                            JSONFormat.IncludeBinaryData
+                        ),
+                        """",
+                        ""
+                    )
+                )
+            );""</span> 
+            </pre>"
+        Size: =10
+        Visible: =pivotAppCode_36.Selected.ItemKey="code"
+        Width: =Parent.Width
+        Y: =45
+        ZIndex: =5
+
+    "PeoplePicker1_1 As 'Fluent PeoplePicker (%VERSION%) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Error: =false
+        Height: =65
+        InputEvent: =setPPKFocus
+        Items: =PreSelectedUserCollection
+        OnSearch: =
+        PeoplePickerType: =NormalPeoplepicker
+        ShowSecondaryText: =false
+        SuggestionImgUrl: =
+        SuggestionKey: ="Mail"
+        SuggestionName: ="DisplayName"
+        SuggestionRole: ="JobTitle"
+        Suggestions_Items: |-
+            =Office365Users.SearchUser({searchTerm:Self.SearchText,top:500})
+        Theme: =varTheme.themeJSON
+        Visible: =pivotAppCode_36.Selected.ItemKey="app"
+        Width: =556
+        X: =24
+        Y: =77
+        ZIndex: =7
+

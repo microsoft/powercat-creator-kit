@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{ce9abe2c-4559-ed11-9562-0022482a43fc}</WebResourceId>
+  <Name>cat_search_icon</Name>
+  <DisplayName>Search</DisplayName>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.20220831.5</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/cat_search_iconCE9ABE2C-4559-ED11-9562-0022482A43FC</FileName>
+</WebResource>

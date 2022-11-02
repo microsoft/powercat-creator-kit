@@ -207,8 +207,18 @@
     },
     {
       "Kind": "Page",
-      "Name": "Azure DevOps Projects",
-      "Value": "custompage:cat_azuredevopsprojects_80ae5"
+      "Name": "Persona Page",
+      "Value": "custompage:cr7a3_personapage_404d9"
+    },
+    {
+      "Kind": "Page",
+      "Name": "SearchBox Page",
+      "Value": "custompage:cat_searchboxpage_2dd0f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "People Picker",
+      "Value": "custompage:cat_peoplepicker_80157"
     }
   ]
 }

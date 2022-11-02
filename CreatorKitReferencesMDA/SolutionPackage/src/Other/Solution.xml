@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22085.188" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22094.198" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesMDA</UniqueName>
     <LocalizedNames>
@@ -96,9 +96,12 @@
       <RootComponent type="61" schemaName="cat_nav_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_panel_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_patternicon" behavior="0" />
+      <RootComponent type="61" schemaName="cat_peoplePicker_icon" behavior="0" />
+      <RootComponent type="61" schemaName="cat_persona_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_pivot_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_progressindicator_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_resizabletextarea_icon" behavior="0" />
+      <RootComponent type="61" schemaName="cat_search_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_shimmer_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_spinner_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_taglist_icon" behavior="0" />
@@ -122,14 +125,17 @@
       <RootComponent type="300" schemaName="cat_iconpage_e2422" behavior="0" />
       <RootComponent type="300" schemaName="cat_keyboardshortcuts_5ca22" behavior="0" />
       <RootComponent type="300" schemaName="cat_navpage_18ad8" behavior="0" />
+      <RootComponent type="300" schemaName="cat_peoplepicker_80157" behavior="0" />
       <RootComponent type="300" schemaName="cat_pivotpage_f0b2a" behavior="0" />
       <RootComponent type="300" schemaName="cat_progressindicatorpage_9ea28" behavior="0" />
       <RootComponent type="300" schemaName="cat_resizabletextarea_eb7d1" behavior="0" />
+      <RootComponent type="300" schemaName="cat_searchboxpage_2dd0f" behavior="0" />
       <RootComponent type="300" schemaName="cat_shimmerpage_9b5cd" behavior="0" />
       <RootComponent type="300" schemaName="cat_spinnerpage_39ec0" behavior="0" />
       <RootComponent type="300" schemaName="cat_taglist_6a134" behavior="0" />
       <RootComponent type="300" schemaName="cat_tagpicker_ca530" behavior="0" />
       <RootComponent type="300" schemaName="cr7a3_compdescription_1c3b2" behavior="0" />
+      <RootComponent type="300" schemaName="cr7a3_personapage_404d9" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -178,6 +184,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
+        <Dependent type="300" schemaName="cat_searchboxpage_2dd0f" displayName="SearchBox Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
         <Dependent type="300" schemaName="cat_shimmerpage_9b5cd" displayName="Shimmer Page" />
       </MissingDependency>
       <MissingDependency>
@@ -185,7 +195,11 @@
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.1960)" />
+        <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
+        <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.1998)" />
         <Dependent type="62" schemaName="cat_CreatorKitReferenceApp" />
       </MissingDependency>
       <MissingDependency>
@@ -246,6 +260,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cat_peoplepicker_80157" displayName="People Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
         <Dependent type="300" schemaName="cat_pivotpage_f0b2a" displayName="Pivot Page" />
       </MissingDependency>
       <MissingDependency>
@@ -255,6 +273,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
         <Dependent type="300" schemaName="cat_resizabletextarea_eb7d1" displayName="Resizable Text Area" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cat_searchboxpage_2dd0f" displayName="SearchBox Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
@@ -271,6 +293,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
         <Dependent type="300" schemaName="cat_tagpicker_ca530" displayName="Tag Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Breadcrumb" displayName="cat_PowerCAT.Breadcrumb" solution="Active" />
@@ -358,6 +384,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
+        <Dependent type="300" schemaName="cat_peoplepicker_80157" displayName="People Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_pivotpage_f0b2a" displayName="Pivot Page" />
       </MissingDependency>
       <MissingDependency>
@@ -367,6 +397,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_resizabletextarea_eb7d1" displayName="Resizable Text Area" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
+        <Dependent type="300" schemaName="cat_searchboxpage_2dd0f" displayName="SearchBox Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
@@ -385,8 +419,16 @@
         <Dependent type="300" schemaName="cat_tagpicker_ca530" displayName="Tag Picker" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
+        <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
         <Dependent type="300" schemaName="cat_facepilepage_13c32" displayName="Facepile Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
+        <Dependent type="300" schemaName="cat_peoplepicker_80157" displayName="People Picker" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
@@ -395,6 +437,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
         <Dependent type="300" schemaName="cat_iconpage_e2422" displayName="Icon Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
+        <Dependent type="300" schemaName="cat_searchboxpage_2dd0f" displayName="SearchBox Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
@@ -427,6 +473,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Nav" displayName="cat_PowerCAT.Nav" solution="Active" />
         <Dependent type="300" schemaName="cat_navpage_18ad8" displayName="Nav Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Persona" displayName="cat_PowerCAT.Persona" solution="Active" />
+        <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Picker" displayName="cat_PowerCAT.Picker" solution="Active" />
@@ -490,6 +540,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
+        <Dependent type="300" schemaName="cat_peoplepicker_80157" displayName="People Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
         <Dependent type="300" schemaName="cat_pivotpage_f0b2a" displayName="Pivot Page" />
       </MissingDependency>
       <MissingDependency>
@@ -499,6 +553,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
         <Dependent type="300" schemaName="cat_resizabletextarea_eb7d1" displayName="Resizable Text Area" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
+        <Dependent type="300" schemaName="cat_searchboxpage_2dd0f" displayName="SearchBox Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
@@ -517,6 +575,10 @@
         <Dependent type="300" schemaName="cat_tagpicker_ca530" displayName="Tag Picker" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
+        <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.ProgressIndicator" displayName="cat_PowerCAT.ProgressIndicator" solution="Active" />
         <Dependent type="300" schemaName="cat_progressindicatorpage_9ea28" displayName="ProgressIndicator Page" />
       </MissingDependency>
@@ -531,6 +593,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.ResizableTextarea" displayName="cat_PowerCAT.ResizableTextarea" solution="Active" />
         <Dependent type="300" schemaName="cat_resizabletextarea_eb7d1" displayName="Resizable Text Area" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SearchBox" displayName="cat_PowerCAT.SearchBox" solution="Active" />
+        <Dependent type="300" schemaName="cat_searchboxpage_2dd0f" displayName="SearchBox Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Shimmer" displayName="cat_PowerCAT.Shimmer" solution="Active" />

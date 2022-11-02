@@ -204,10 +204,6 @@ scrDialog As screen:
     Dialog_1 As Dialog:
         Buttons: |-
             =Table({Label: "Send", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary},{Label: "Don't send", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } )
-        ContentHeight: =Dialog_1.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
-        ContentWidth: =Dialog_1.DialogWidth
-        ContentX: = Dialog_1.Width/2-Dialog_1.DialogWidth/2
-        ContentY: = Dialog_1.Height/2-Dialog_1.DialogHeight/2+DialogHeaderContainer.Height
         DialogHeight: =220
         DialogWidth: =500
         Fill: =Dialog_1.OverlayColor

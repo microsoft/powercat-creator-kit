@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_10",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 482,
+        "PublishOrderIndex": 583,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_10",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 483,
+        "PublishOrderIndex": 584,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_10",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 485,
+        "PublishOrderIndex": 586,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "pivotline_10",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 486,
+        "PublishOrderIndex": 587,
         "Rules": [
           {
             "Category": "Design",
@@ -1091,7 +1091,7 @@
         "Name": "htmlText_8",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 487,
+        "PublishOrderIndex": 588,
         "Rules": [
           {
             "Category": "Data",
@@ -1319,7 +1319,7 @@
         "Name": "chkFill",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 488,
+        "PublishOrderIndex": 589,
         "Rules": [
           {
             "Category": "Data",
@@ -1542,7 +1542,7 @@
         "Name": "iconActionButtonStandard",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 489,
+        "PublishOrderIndex": 590,
         "Rules": [
           {
             "Category": "Data",
@@ -1778,7 +1778,7 @@
         "Name": "btnSetFocusActionButton",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 490,
+        "PublishOrderIndex": 591,
         "Rules": [
           {
             "Category": "Data",
@@ -1954,7 +1954,7 @@
         "Name": "chkShowBorder",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 491,
+        "PublishOrderIndex": 592,
         "Rules": [
           {
             "Category": "Data",
@@ -2176,7 +2176,7 @@
         "Name": "iconActionButtonCustom",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 492,
+        "PublishOrderIndex": 593,
         "Rules": [
           {
             "Category": "Data",
@@ -2418,7 +2418,7 @@
         "Name": "lblAlign",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 493,
+        "PublishOrderIndex": 594,
         "Rules": [
           {
             "Category": "Data",
@@ -2708,7 +2708,7 @@
             "Name": "Name5_1",
             "Parent": "ddAlignment",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 495,
+            "PublishOrderIndex": 596,
             "Rules": [
               {
                 "Category": "Data",
@@ -2842,7 +2842,7 @@
         "Name": "ddAlignment",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 494,
+        "PublishOrderIndex": 595,
         "Rules": [
           {
             "Category": "Data",
@@ -3040,7 +3040,7 @@
         "Name": "iconButtonStandard",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 496,
+        "PublishOrderIndex": 597,
         "Rules": [
           {
             "Category": "Data",
@@ -3284,7 +3284,7 @@
         "Name": "iconButtonCustom",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 497,
+        "PublishOrderIndex": 598,
         "Rules": [
           {
             "Category": "Data",
@@ -3448,7 +3448,7 @@
         "Name": "Group8",
         "Parent": "IconActionButton",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 484,
+        "PublishOrderIndex": 585,
         "Rules": [
           {
             "Category": "Design",
@@ -3521,7 +3521,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174019395",
+    "LastModifiedTimestamp": "638029207414109277",
     "Name": "IconActionButton",
     "Rules": [
       {
@@ -3596,7 +3596,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174019395",
+  "LastModifiedTimestamp": "638029207414109277",
   "Name": "c89e9d6455154e7987aad70e90f9ece5",
   "OverridableProperties": {},
   "Version": "637865281075960646"

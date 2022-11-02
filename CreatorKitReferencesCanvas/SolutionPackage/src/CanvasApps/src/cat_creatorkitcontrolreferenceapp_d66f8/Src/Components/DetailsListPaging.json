@@ -90,7 +90,7 @@
         "Name": "pivotAppCode_26",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 764,
+        "PublishOrderIndex": 865,
         "Rules": [
           {
             "Category": "Data",
@@ -282,7 +282,7 @@
         "Name": "lblExampleTitle_26",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 765,
+        "PublishOrderIndex": 866,
         "Rules": [
           {
             "Category": "Data",
@@ -603,7 +603,7 @@
         "Name": "line_18",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 767,
+        "PublishOrderIndex": 868,
         "Rules": [
           {
             "Category": "Design",
@@ -834,7 +834,7 @@
         "Name": "htmlCode_26",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 768,
+        "PublishOrderIndex": 869,
         "Rules": [
           {
             "Category": "Data",
@@ -1105,7 +1105,7 @@
         "Name": "htmlText_11",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 769,
+        "PublishOrderIndex": 870,
         "Rules": [
           {
             "Category": "Data",
@@ -1325,7 +1325,7 @@
             "Name": "ElevationAccounts",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 771,
+            "PublishOrderIndex": 872,
             "Rules": [
               {
                 "Category": "Design",
@@ -1464,7 +1464,7 @@
             "Name": "cmdAccounts",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 772,
+            "PublishOrderIndex": 873,
             "Rules": [
               {
                 "Category": "Data",
@@ -1607,7 +1607,7 @@
             "Name": "Icon4",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 773,
+            "PublishOrderIndex": 874,
             "Rules": [
               {
                 "Category": "Data",
@@ -1890,7 +1890,7 @@
             "Name": "txtSeachAccount",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 774,
+            "PublishOrderIndex": 875,
             "Rules": [
               {
                 "Category": "Data",
@@ -2192,7 +2192,7 @@
                 "Name": "Account Name1",
                 "Parent": "FluentDetailsListAccounts",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 776,
+                "PublishOrderIndex": 877,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2299,7 +2299,7 @@
                 "Name": "Main Phone1",
                 "Parent": "FluentDetailsListAccounts",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 777,
+                "PublishOrderIndex": 878,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2406,7 +2406,7 @@
                 "Name": "Address 1: City1",
                 "Parent": "FluentDetailsListAccounts",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 778,
+                "PublishOrderIndex": 879,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2513,7 +2513,7 @@
                 "Name": "Primary Contact1",
                 "Parent": "FluentDetailsListAccounts",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 779,
+                "PublishOrderIndex": 880,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2620,7 +2620,7 @@
                 "Name": "Industry1",
                 "Parent": "FluentDetailsListAccounts",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 780,
+                "PublishOrderIndex": 881,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2853,7 +2853,7 @@
             "Name": "FluentDetailsListAccounts",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 775,
+            "PublishOrderIndex": 876,
             "Rules": [
               {
                 "Category": "Data",
@@ -3123,7 +3123,7 @@
             "Name": "lblNoRecords",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 781,
+            "PublishOrderIndex": 882,
             "Rules": [
               {
                 "Category": "Data",
@@ -3510,7 +3510,7 @@
             "Name": "lblRecordCount",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 782,
+            "PublishOrderIndex": 883,
             "Rules": [
               {
                 "Category": "Data",
@@ -3841,7 +3841,7 @@
                 "Name": "icoFirst",
                 "Parent": "conPagingControls",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 784,
+                "PublishOrderIndex": 885,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -3985,7 +3985,7 @@
                 "Name": "icoBack",
                 "Parent": "conPagingControls",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 785,
+                "PublishOrderIndex": 886,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4166,7 +4166,7 @@
                 "Name": "lblPageCount",
                 "Parent": "conPagingControls",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 786,
+                "PublishOrderIndex": 887,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4488,7 +4488,7 @@
                 "Name": "icoNext",
                 "Parent": "conPagingControls",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 787,
+                "PublishOrderIndex": 888,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -4618,7 +4618,7 @@
             "Name": "conPagingControls",
             "Parent": "conGrid",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 783,
+            "PublishOrderIndex": 884,
             "Rules": [
               {
                 "Category": "Design",
@@ -4807,7 +4807,7 @@
         "Name": "conGrid",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 770,
+        "PublishOrderIndex": 871,
         "Rules": [
           {
             "Category": "Design",
@@ -4961,7 +4961,7 @@
         "Name": "Group24",
         "Parent": "DetailsListPaging",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 766,
+        "PublishOrderIndex": 867,
         "Rules": [
           {
             "Category": "Design",
@@ -5042,7 +5042,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638001549174061577",
+    "LastModifiedTimestamp": "638029207414388942",
     "Name": "DetailsListPaging",
     "Rules": [
       {
@@ -5123,7 +5123,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638001549174061577",
+  "LastModifiedTimestamp": "638029207414388942",
   "Name": "dc150030235f43e1b1fff3c76f133c77",
   "OverridableProperties": {},
   "Version": "637867715575283899"

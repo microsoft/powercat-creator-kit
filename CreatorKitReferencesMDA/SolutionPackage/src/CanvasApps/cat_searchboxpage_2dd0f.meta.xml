@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>cat_searchboxpage_2dd0f</Name>
+  <AppVersion>2022-11-02T13:15:24Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.22103.22.0</CreatedByClientVersion>
+  <MinClientVersion>3.22103.22.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1919","primaryDeviceHeight":"858","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22103.22","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20221102T093059Z-3.22103.22.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>SearchBox Page</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{},"components":[{"componentName":"CustomControl","identifier":"cat_PowerCAT.AutoWidthLabel","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Elevation","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Elevation","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Elevation","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Pivot","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.FluentDetailsList","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.SearchBox","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}}]}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[{"appComponentName":"e3aff6ca45694181b12142d9bb47a897","appName":"fe2fa18c-00cc-4456-b6d3-8f018f856837","appComponentLibraryName":"1d359ef2-019d-4dc2-b3cd-9267774d0f16","appComponentLibraryVersion":"2022-08-29T19:56:28Z","appComponentLibraryLogicalName":"cr7a3_compdescription_1c3b2","environmentName":"439a778f-f966-4fad-b85c-706b1c34dcfa"},{"appComponentName":"40879e85aa83466aa6d96c2b739344c1","appName":"fe2fa18c-00cc-4456-b6d3-8f018f856837","appComponentLibraryName":"1d359ef2-019d-4dc2-b3cd-9267774d0f16","appComponentLibraryVersion":"2022-08-29T19:56:28Z","appComponentLibraryLogicalName":"cr7a3_compdescription_1c3b2","environmentName":"439a778f-f966-4fad-b85c-706b1c34dcfa"},{"appComponentName":"6da4b2f929d240969e49e05e10e720ce","appName":"fe2fa18c-00cc-4456-b6d3-8f018f856837","appComponentLibraryName":"81e5e6a9-c44c-4745-94af-8b1fdb4ee232","appComponentLibraryVersion":"2022-10-11T06:57:29Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"439a778f-f966-4fad-b85c-706b1c34dcfa"}]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"","logicalname":"cat_PowerCAT.AutoWidthLabel","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Elevation","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Elevation","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Elevation","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Pivot","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.FluentDetailsList","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.SearchBox","componenttype":66,"componenttypeplatformname":"CustomControl"},{"logicalname":"cr7a3_compdescription_1c3b2","componenttype":300,"componenttypeplatformname":"CanvasApp"},{"logicalname":"cat_powercatcomponentlibrary_0be3a","componenttype":300,"componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/cat_searchboxpage_2dd0f_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/cat_searchboxpage_2dd0f_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

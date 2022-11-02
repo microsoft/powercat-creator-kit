@@ -146,6 +146,13 @@
       <iscustomizable>1</iscustomizable>
       <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_resizabletextarea_eb7d1</name>
     </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_searchboxpage_2dd0f">
+      <canvasappid>
+        <name>cat_searchboxpage_2dd0f</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_searchboxpage_2dd0f</name>
+    </appelement>
     <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_shimmerpage_9b5cd">
       <canvasappid>
         <name>cat_shimmerpage_9b5cd</name>
@@ -173,6 +180,20 @@
       </canvasappid>
       <iscustomizable>1</iscustomizable>
       <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_tagpicker_ca530</name>
+    </appelement>
+    <appelement uniquename="cr7a3_cat_CreatorKitReferenceApp_canvasappid_cat_peoplepicker_80157">
+      <canvasappid>
+        <name>cat_peoplepicker_80157</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cr7a3_cat_CreatorKitReferenceApp_canvasappid_cat_peoplepicker_80157</name>
+    </appelement>
+    <appelement uniquename="cr7a3_cat_CreatorKitReferenceApp_canvasappid_cr7a3_personapage_404d9">
+      <canvasappid>
+        <name>cr7a3_personapage_404d9</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cr7a3_cat_CreatorKitReferenceApp_canvasappid_cr7a3_personapage_404d9</name>
     </appelement>
   </appelements>
 </AppModule>

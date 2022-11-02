@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{8b20a217-4559-ed11-9562-00224827b7c7}</WebResourceId>
+  <Name>cat_peoplePicker_icon</Name>
+  <DisplayName>People Picker</DisplayName>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>1.0.20220831.5</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/cat_peoplePicker_icon8B20A217-4559-ED11-9562-00224827B7C7</FileName>
+</WebResource>

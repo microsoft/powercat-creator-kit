@@ -613,7 +613,7 @@
       "WebDefaultValue": ""
     }
   ],
-  "Name": "Auto Width Label (1.0.8)",
+  "Name": "Auto Width Label (1.0.9)",
   "Properties": [
     {
       "Category": "data",
@@ -1442,20 +1442,20 @@
       "IsControlSpecific": false,
       "LoadingOrder": 9,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.0.8\",\"IsFirstParty\":false}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"1.0.9\",\"IsFirstParty\":false}}",
       "Type": 3
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/64e4d3af-df7b-46ba-b722-976663ad339b-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0dzavrlme.301020S0Resources0Controls0PowerCAT.AutoWidthLabel.bundle.js?sv=2017-04-17&sr=b&sig=MQbCUtU0H8drih3GPPrg%2FydSteh32ocZR0sUHMr2Z88%3D&spr=https&se=2022-09-02T01%3A58%3A51Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/b1a9cabf-e975-47c1-a2df-8cab94be6dca-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0xfhvhbmi.znq020S0Resources0Controls0PowerCAT.AutoWidthLabel.bundle.js?sv=2017-04-17&sr=b&sig=npoltJ6KK5h0Bv6GXygzfI4YU4SYSL6PVjP%2FrQE6t3I%3D&spr=https&se=2022-11-02T01%3A21%3A59Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.AutoWidthLabel/PowerCAT.AutoWidthLabel.bundle.js",
       "Type": 0
     },
     {
       "IsControlSpecific": true,
       "LoadingOrder": 10,
-      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/64e4d3af-df7b-46ba-b722-976663ad339b-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0dzavrlme.301020S0Resources0Controls0css%252fPowerCAT.AutoWidthLabel.AutoWidthLabel.css?sv=2017-04-17&sr=b&sig=SgiXob0LRHjNmdkkymvJrTDVWN77nOsIQG1671oOpxM%3D&spr=https&se=2022-09-02T01%3A58%3A51Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/b1a9cabf-e975-47c1-a2df-8cab94be6dca-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0xfhvhbmi.znq020S0Resources0Controls0css%252fPowerCAT.AutoWidthLabel.AutoWidthLabel.css?sv=2017-04-17&sr=b&sig=3X%2BhwnM7PBkpT5CNgu%2FPAkVhyKoBRj94%2F2skYDWNkq8%3D&spr=https&se=2022-11-02T01%3A21%3A59Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.AutoWidthLabel/css/PowerCAT.AutoWidthLabel.AutoWidthLabel.css",
       "Type": 1
     },
@@ -1476,7 +1476,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 14,
-      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/64e4d3af-df7b-46ba-b722-976663ad339b-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0dzavrlme.301020S0Resources0Controls0strings%252fPowerCAT.AutoWidthLabel.AutoWidthLabel.1033.json?sv=2017-04-17&sr=b&sig=qreRsWQi6%2FRVkg6sGI9lONqUX66%2Fh%2F51iPL2g3qzi4I%3D&spr=https&se=2022-09-02T01%3A58%3A51Z&sp=r",
+      "ModifiedPath": "https://docserverpwaprodeus.blob.core.windows.net/b1a9cabf-e975-47c1-a2df-8cab94be6dca-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0xfhvhbmi.znq020S0Resources0Controls0strings%252fPowerCAT.AutoWidthLabel.AutoWidthLabel.1033.json?sv=2017-04-17&sr=b&sig=Mj%2FtbwlawIi817VlSoHUDlgd7Oxi0tuF1awyaw4iSs0%3D&spr=https&se=2022-11-02T01%3A21%3A59Z&sp=r",
       "Path": "/PCFControls/cat_PowerCAT.AutoWidthLabel/strings/PowerCAT.AutoWidthLabel.AutoWidthLabel.1033.json",
       "Type": 5
     },
@@ -1484,7 +1484,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 14,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"AutoWidthLabel\":\"Auto Width Label (1.0.8)\",\"AutoWidthLabel_Desc\":\"A label that will automatically expand width wise and return the new width\",\"Text\":\"Text\",\"Text_Desc\":\"Label text\",\"FontName\":\"Font\",\"FontSize\":\"Font size\",\"FontColor\":\"Font color\",\"FontWeight\":\"Font weight\",\"DisabledFontColor\":\"Disabled font color\",\"DisabledFontWeight\":\"Disabled font weight\",\"FocusFontColor\":\"Focus font color\",\"FocusFontWeight\":\"Focus font weight\",\"HoverFontColor\":\"Hover font color\",\"HoverFontWeight\":\"Hover font weight\",\"FillColor\":\"Fill color\",\"DisabledFillColor\":\"Disabled fill color\",\"FocusFillColor\":\"Focus fill color\",\"HoverFillColor\":\"Hover fill color\",\"BorderColor\":\"Border color\",\"BorderThickness\":\"Border thickness\",\"BorderRadius\":\"Border radius\",\"DisabledBorderColor\":\"Disabled border color\",\"FocusBorderColor\":\"Focus border color\",\"FocusBorderThickness\":\"Focus border thickness\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderThickness\":\"Hover border thickness\",\"PaddingLeft\":\"Padding left\",\"PaddingRight\":\"Padding right\",\"PaddingTop\":\"Padding top\",\"PaddingBottom\":\"Padding bottom\",\"AutoWidth\":\"Auto width\",\"FontSizeUnits\":\"Font size units\"}}}",
+      "Path": "{\"Id\":\"LocalizedStrings\",\"Data\":{\"LocStrings\":{\"AutoWidthLabel\":\"Auto Width Label (1.0.9)\",\"AutoWidthLabel_Desc\":\"A label that will automatically expand width wise and return the new width\",\"Text\":\"Text\",\"Text_Desc\":\"Label text\",\"FontName\":\"Font\",\"FontSize\":\"Font size\",\"FontColor\":\"Font color\",\"FontWeight\":\"Font weight\",\"DisabledFontColor\":\"Disabled font color\",\"DisabledFontWeight\":\"Disabled font weight\",\"FocusFontColor\":\"Focus font color\",\"FocusFontWeight\":\"Focus font weight\",\"HoverFontColor\":\"Hover font color\",\"HoverFontWeight\":\"Hover font weight\",\"FillColor\":\"Fill color\",\"DisabledFillColor\":\"Disabled fill color\",\"FocusFillColor\":\"Focus fill color\",\"HoverFillColor\":\"Hover fill color\",\"BorderColor\":\"Border color\",\"BorderThickness\":\"Border thickness\",\"BorderRadius\":\"Border radius\",\"DisabledBorderColor\":\"Disabled border color\",\"FocusBorderColor\":\"Focus border color\",\"FocusBorderThickness\":\"Focus border thickness\",\"HoverBorderColor\":\"Hover border color\",\"HoverBorderThickness\":\"Hover border thickness\",\"PaddingLeft\":\"Padding left\",\"PaddingRight\":\"Padding right\",\"PaddingTop\":\"Padding top\",\"PaddingBottom\":\"Padding bottom\",\"AutoWidth\":\"Auto width\",\"FontSizeUnits\":\"Font size units\"}}}",
       "Type": 3
     },
     {
@@ -1495,5 +1495,5 @@
       "Type": 0
     }
   ],
-  "Version": "1.0.8"
+  "Version": "1.0.9"
 }

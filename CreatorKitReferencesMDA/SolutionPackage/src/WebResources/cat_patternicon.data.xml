@@ -3,6 +3,7 @@
   <WebResourceId>{e57f82ac-c32b-ec11-b6e5-00224821c32f}</WebResourceId>
   <Name>cat_patternicon</Name>
   <DisplayName>Pattern Icon</DisplayName>
+  <LanguageCode>0</LanguageCode>
   <WebResourceType>11</WebResourceType>
   <IntroducedVersion>1.0.0.51</IntroducedVersion>
   <IsEnabledForMobileClient>0</IsEnabledForMobileClient>

@@ -99,6 +99,7 @@
       <RootComponent type="66" schemaName="cat_PowerCAT.Pivot" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ProgressIndicator" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ResizableTextarea" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.SearchBox" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Shimmer" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Spinner" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.TagList" behavior="0" />

@@ -301,6 +301,21 @@
     "TemplateDisplayName": "Fluent PeoplePicker (%VERSION%) Preview",
     "Version": "0.0.1"
   },
+  "Fluent Persona(%VERSION%) Preview": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Persona",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.Persona",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Fluent Persona(%VERSION%) Preview",
+    "Version": "0.0.1"
+  },
   "Fluent Picker (1.0.9)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
@@ -345,6 +360,21 @@
     "OverridableProperties": {},
     "TemplateDisplayName": "Fluent Progress Indicator (1.0.9) Preview",
     "Version": "1.0.9"
+  },
+  "Fluent SearchBox (%VERSION%) Preview": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.SearchBox",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.SearchBox",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Fluent SearchBox (%VERSION%) Preview",
+    "Version": "0.0.1"
   },
   "Fluent Spinner (1.0.9) Preview": {
     "CustomGroupControlTemplateName": "",

@@ -1,10 +1,29 @@
 scrPeoplePicker As screen:
     OnVisible: |-
-        =ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"a",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle));
-        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"e",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
-        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"i",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
-        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"o",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
-        If(CountRows(DefaultUserCollection) <= 0,ClearCollect(DefaultUserCollection, AddColumns(Office365Users.SearchUser({searchTerm:"u",top:5}),"PersonaKey",Mail,"PersonaName",DisplayName,"PersonaRole",JobTitle)));
+        =ClearCollect(
+            PreSelectedUserCollection,
+            AddColumns(
+               // Get first 5 users who have email ID - optional
+                Filter(
+                    Office365Users.SearchUser({top: 5}),
+                    Mail <> Blank()
+                ),
+                "PersonaKey",
+                Mail,
+                "PersonaName",
+                DisplayName,
+                "PersonaImgUrl",
+                //Get base64 image data
+                Substitute(
+                    JSON(
+                        Office365Users.UserPhotoV2(Id),
+                        JSONFormat.IncludeBinaryData
+                    ),
+                    """",
+                    ""
+                )
+            )
+        );
 
     stackRoot_22 As groupContainer.verticalAutoLayoutContainer:
         Fill: =varTheme.palette.neutralLighterAlt
@@ -92,7 +111,6 @@ scrPeoplePicker As screen:
                     ZIndex: =1
 
                 PeoplePickerO365_1 As PeoplePickerO365:
-                    FillPortions: =1
                     Height: =Self.ComponentHeight
                     LayoutMinHeight: =340
                     ZIndex: =2

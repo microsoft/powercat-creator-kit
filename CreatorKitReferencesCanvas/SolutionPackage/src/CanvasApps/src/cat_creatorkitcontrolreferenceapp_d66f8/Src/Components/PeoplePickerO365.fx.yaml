@@ -1,5 +1,5 @@
 PeoplePickerO365 As CanvasComponent:
-    ComponentHeight: =If(pivotAppCode_33.Selected.ItemKey="code",htmlCode_32.Y+htmlCode_32.Height,280)
+    ComponentHeight: =If(pivotAppCode_33.Selected.ItemKey="code",htmlCode_32.Y+htmlCode_32.Height,If(PeoplePicker1.AutoHeight < 280, 300,PeoplePicker1.AutoHeight+100))
     Fill: =RGBA(0, 0, 0, 0)
     Height: =640
     Width: =640
@@ -58,75 +58,48 @@ PeoplePickerO365 As CanvasComponent:
         Font: =Font.'Courier New'
         Height: =115
         HtmlText: |-
-            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TagListStyled As 'Fluent Tag List'.pcfdataset""</span>:
-                BorderRadius: =If(chkRounded_1.Checked,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">8</span>)
-                ItemBackgroundColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
-                ItemBorderColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
-                ItemDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
-                ItemIconColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
-                ItemIconName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""IconName""</span>
-                ItemKey: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
-                Items: =colSimpleTagList
-                ItemTextColor: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
-                MaxHeight: =ElevationTagListBasic.Height<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">-80</span>
-                TextAlignment: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">'PowerCAT.TagList.TextAlignment'</span><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">''</span>.Left
+            ="<pre class=""hljs"" style=""display: block; overflow-x: auto; padding: 0.5em; background: rgb(240, 240, 240); color: rgb(68, 68, 68);""><span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""PeoplePicker1 As 'Fluent PeoplePicker'""</span>:
+                Items: 
+                Suggestions_Items: UserCollection
+            	InputEvent:setPPKFocus
+            	SuggestionKey:""Mail""
+            	SuggestionName:""DisplayName""
+            	SuggestionRole:""JobTitle""
+            	ShowSecondaryText: chkShowSectxt.Checked
+            	Error:chkError.Checked
+            	DisplayMode:If(chkDisabled.Checked,DisplayMode.Disabled,DisplayMode.Edit)
                 Visible: =pivotAppCode_19.Selected.ItemKey=<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""app""</span>
-            
-                DisplayName2 As pcfDataField.textualColumn:
-                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
-                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""DisplayName""</span>
-                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
-                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
-            
-                BackgroundColor1 As pcfDataField.textualColumn:
-                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
-                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BackgroundColor""</span>
-                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
-                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
-            
-                BorderColor1 As pcfDataField.textualColumn:
-                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BorderColor""</span>
-                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""BorderColor""</span>
-                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
-                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
-            
-                HoverBorderColor1 As pcfDataField.textualColumn:
-                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
-                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""HoverBorderColor""</span>
-                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
-                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
-            
-                Key1 As pcfDataField.textualColumn:
-                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
-                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Key""</span>
-                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
-                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
-                TextColor1 As pcfDataField.textualColumn:
-                    FieldDisplayName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
-                    FieldName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""TextColor""</span>
-                    FieldType: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""s""</span>
-                    FieldVariantName: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""textualColumn""</span>
-            
-            btnAddTag As Button:
-                OnSelect: |-
-                    =Collect(colSimpleTagList,{DisplayName:Mid(varLipsum,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">1</span>,RandBetween(<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">5</span>,<span class=""hljs-number"" style=""color: rgb(136, 0, 0);"">15</span>)),IconName:If(chkShowIcons.Checked,<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Emoji2""</span>)});
-                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add Tag""</span>
-            
-            btnRemoveTag As Button:
-                OnSelect: =Remove(colSimpleTagList,Last(colSimpleTagList));
-                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Remove Tag""</span>
-            
-            lblTagListCount As label:
+            	
+            lblPickerType As label:
                 Text: |-
-                    =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Tags: ""</span> &amp; Text(CountRows(colSimpleTagList))
+                    =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Selected Users ""</span>
+            
+            btnSetFocus As Button:
+                OnSelect: |-
+                    =Set(setPPKFocus,""SetFocus""&Rand())
+                Text: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Set Focus""</span>
+            
+            Facepile1_1 As Facepile:
+            	Items:PeoplePicker1.SelectedPeople
+            	ItemPersonaKey:""PersonaKey""
+            	ItemPersonaName:""PersonaName""
+            	ItemPersonaImageInfo:""PersonaImgUrl""
+            
+            lblPickerType As label:
+                Text: |-
+                    =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Picker type : ""</span>
             
             <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkRounded_1 As 'Check box'""</span>:
                 Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
-                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Rounded Tags""</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Show Secondary Text""</span>
             
             <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowIcons As 'Check box'""</span>:
                 Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
-                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Add Icons""</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Error""</span>
+            	
+            <span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""chkShowIcons As 'Check box'""</span>:
+                Checked: =<span class=""hljs-literal"" style=""color: rgb(120, 169, 96);"">false</span>
+                Label: =<span class=""hljs-string"" style=""color: rgb(136, 0, 0);"">""Disable""</span>
             
             </pre>"
         Size: =10
@@ -149,7 +122,7 @@ PeoplePickerO365 As CanvasComponent:
         ZIndex: =10
 
     "PeoplePicker1 As 'Fluent PeoplePicker (%VERSION%) Preview'.pcfdataset":
-        DisplayMode: =DisplayMode.Edit
+        DisplayMode: =If(chkDisabled.Checked,DisplayMode.Disabled,DisplayMode.Edit)
         Error: =chkError.Checked
         Height: =79
         InputEvent: =setPPKFocus
@@ -184,7 +157,7 @@ PeoplePickerO365 As CanvasComponent:
         Theme: =varTheme.themeJSON
         Visible: =pivotAppCode_33.Selected.ItemKey="app"
         Width: =299
-        X: =19
+        X: =24
         Y: =77
         ZIndex: =12
 
@@ -231,6 +204,7 @@ PeoplePickerO365 As CanvasComponent:
         Height: =24
         Text: |-
             ="Picker type :"
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
         Width: =84
         X: =371
         Y: =163
@@ -265,22 +239,21 @@ PeoplePickerO365 As CanvasComponent:
         Theme: =varTheme.themeJSON
         Visible: =pivotAppCode_33.Selected.ItemKey="app"
         Width: =248
-        X: =384
+        X: =369
         Y: =105
         ZIndex: =16
 
     lblSelectedUser As Label:
         DisplayMode: =DisplayMode.Edit
         Height: =24
-        Text: |-
-            ="Selected Users :"
+        Text: ="Selected Users"
         Visible: =pivotAppCode_33.Selected.ItemKey="app"
         Width: =107
-        X: =399
+        X: =369
         Y: =67
         ZIndex: =17
 
-    btnRemoveTag_1 As Button:
+    btnSetFocus As Button:
         AccessibleLabel: ="Remove tag"
         BorderRadius: =1
         BorderStyle: =BorderStyle.Solid
@@ -293,6 +266,19 @@ PeoplePickerO365 As CanvasComponent:
         Visible: =pivotAppCode_33.Selected.ItemKey="app"
         Width: =120
         X: =453
-        Y: =276
+        Y: =301
         ZIndex: =18
+
+    "chkDisabled As 'Check box'":
+        AccessibleLabel: ="Add icons"
+        Checked: =false
+        DisplayMode: =DisplayMode.Edit
+        Height: =32
+        Label: ="Disable"
+        OnChange: =
+        Visible: =pivotAppCode_33.Selected.ItemKey="app"
+        Width: =164
+        X: =453
+        Y: =269
+        ZIndex: =19
 

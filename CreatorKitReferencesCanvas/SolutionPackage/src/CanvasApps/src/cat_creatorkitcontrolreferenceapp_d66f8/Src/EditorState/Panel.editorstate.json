@@ -2655,14 +2655,7 @@
           "NameMapSourceSchema": "?"
         },
         "Theme",
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "RGBA(0, 0, 0, 1)",
-          "InvariantPropertyName": "OverlayColor",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "OverlayColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,

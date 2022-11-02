@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 385,
+        "PublishOrderIndex": 474,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 386,
+        "PublishOrderIndex": 475,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 388,
+        "PublishOrderIndex": 477,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "line_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 389,
+        "PublishOrderIndex": 478,
         "Rules": [
           {
             "Category": "Design",
@@ -1028,7 +1028,7 @@
         "Name": "commandBar_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 390,
+        "PublishOrderIndex": 479,
         "Rules": [
           {
             "Category": "Data",
@@ -1210,7 +1210,7 @@
         "Name": "lblSelected_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 391,
+        "PublishOrderIndex": 480,
         "Rules": [
           {
             "Category": "Data",
@@ -1583,7 +1583,7 @@
         "Name": "lblSelectedKey_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 392,
+        "PublishOrderIndex": 481,
         "Rules": [
           {
             "Category": "Data",
@@ -1870,7 +1870,7 @@
         "Name": "Group1_1",
         "Parent": "CommandBarColors",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 387,
+        "PublishOrderIndex": 476,
         "Rules": [
           {
             "Category": "Design",
@@ -1944,7 +1944,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638023846524362623",
+    "LastModifiedTimestamp": "638029207414101252",
     "Name": "CommandBarColors",
     "Rules": [
       {
@@ -2025,7 +2025,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638023846524362623",
+  "LastModifiedTimestamp": "638029207414101252",
   "Name": "ebc8d503c325417cb953a0f1dc5cc208",
   "OverridableProperties": {},
   "TemplateOriginalName": "ee65712cedf944b38accbde33a5ae71c",

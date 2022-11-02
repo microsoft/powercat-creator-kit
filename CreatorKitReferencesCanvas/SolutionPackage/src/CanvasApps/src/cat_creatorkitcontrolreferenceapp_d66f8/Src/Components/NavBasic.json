@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_13",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 531,
+        "PublishOrderIndex": 620,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_13",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 532,
+        "PublishOrderIndex": 621,
         "Rules": [
           {
             "Category": "Data",
@@ -643,7 +643,7 @@
         "Name": "htmlCode_13",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 533,
+        "PublishOrderIndex": 622,
         "Rules": [
           {
             "Category": "Data",
@@ -850,7 +850,7 @@
         "Name": "pivotline_13",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 534,
+        "PublishOrderIndex": 623,
         "Rules": [
           {
             "Category": "Design",
@@ -1023,7 +1023,7 @@
         "Name": "navControl",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 536,
+        "PublishOrderIndex": 625,
         "Rules": [
           {
             "Category": "Data",
@@ -1166,7 +1166,7 @@
         "Name": "chkEnableNav",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 537,
+        "PublishOrderIndex": 626,
         "Rules": [
           {
             "Category": "Data",
@@ -1303,7 +1303,7 @@
         "Name": "chkVisibleNav",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 538,
+        "PublishOrderIndex": 627,
         "Rules": [
           {
             "Category": "Data",
@@ -1440,7 +1440,7 @@
         "Name": "chkCustomIconColor",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 539,
+        "PublishOrderIndex": 628,
         "Rules": [
           {
             "Category": "Data",
@@ -1609,7 +1609,7 @@
         "Name": "btnSelectActivity",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 540,
+        "PublishOrderIndex": 629,
         "Rules": [
           {
             "Category": "Data",
@@ -1802,7 +1802,7 @@
         "Name": "btnSelectNews",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 541,
+        "PublishOrderIndex": 630,
         "Rules": [
           {
             "Category": "Data",
@@ -2021,7 +2021,7 @@
         "Name": "lblPivotSelected",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 542,
+        "PublishOrderIndex": 631,
         "Rules": [
           {
             "Category": "Data",
@@ -2387,7 +2387,7 @@
         "Name": "lblPivotSelectedKeyValue",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 543,
+        "PublishOrderIndex": 632,
         "Rules": [
           {
             "Category": "Data",
@@ -2760,7 +2760,7 @@
         "Name": "lblContextVariable",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 544,
+        "PublishOrderIndex": 633,
         "Rules": [
           {
             "Category": "Data",
@@ -3126,7 +3126,7 @@
         "Name": "lblContextVariableValue",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 545,
+        "PublishOrderIndex": 634,
         "Rules": [
           {
             "Category": "Data",
@@ -3420,7 +3420,7 @@
         "Name": "Group9",
         "Parent": "NavBasic",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 535,
+        "PublishOrderIndex": 624,
         "Rules": [
           {
             "Category": "Design",
@@ -3493,7 +3493,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638023846524375830",
+    "LastModifiedTimestamp": "638029207414111166",
     "Name": "NavBasic",
     "Rules": [
       {
@@ -3568,7 +3568,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638023846524375830",
+  "LastModifiedTimestamp": "638029207414111166",
   "Name": "644b3926bfa448d186c5b5b94ae58985",
   "OverridableProperties": {},
   "Version": "637866887005856825"

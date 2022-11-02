@@ -82,7 +82,7 @@
         "Name": "pivotAppCode_3",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 412,
+        "PublishOrderIndex": 501,
         "Rules": [
           {
             "Category": "Data",
@@ -268,7 +268,7 @@
         "Name": "lblExampleTitle_3",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 413,
+        "PublishOrderIndex": 502,
         "Rules": [
           {
             "Category": "Data",
@@ -589,7 +589,7 @@
         "Name": "line_3",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 415,
+        "PublishOrderIndex": 504,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_3",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 416,
+        "PublishOrderIndex": 505,
         "Rules": [
           {
             "Category": "Data",
@@ -1023,7 +1023,7 @@
         "Name": "Pivot2",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 417,
+        "PublishOrderIndex": 506,
         "Rules": [
           {
             "Category": "Data",
@@ -1217,7 +1217,7 @@
         "Name": "lblSelected_3",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 418,
+        "PublishOrderIndex": 507,
         "Rules": [
           {
             "Category": "Data",
@@ -1590,7 +1590,7 @@
         "Name": "lblSelectedKey_3",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 419,
+        "PublishOrderIndex": 508,
         "Rules": [
           {
             "Category": "Data",
@@ -1956,7 +1956,7 @@
         "Name": "lblSelected_4",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 420,
+        "PublishOrderIndex": 509,
         "Rules": [
           {
             "Category": "Data",
@@ -2329,7 +2329,7 @@
         "Name": "lblSelectedKey_4",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 421,
+        "PublishOrderIndex": 510,
         "Rules": [
           {
             "Category": "Data",
@@ -2659,7 +2659,7 @@
         "Name": "chkShowFirstPivot",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 422,
+        "PublishOrderIndex": 511,
         "Rules": [
           {
             "Category": "Data",
@@ -2878,7 +2878,7 @@
         "Name": "htmlText_1",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 423,
+        "PublishOrderIndex": 512,
         "Rules": [
           {
             "Category": "Data",
@@ -3067,7 +3067,7 @@
         "Name": "Group2",
         "Parent": "PivotShowHidePivotItem",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 414,
+        "PublishOrderIndex": 503,
         "Rules": [
           {
             "Category": "Design",
@@ -3140,7 +3140,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638023846524432087",
+    "LastModifiedTimestamp": "638029207414396575",
     "Name": "PivotShowHidePivotItem",
     "Rules": [
       {
@@ -3215,7 +3215,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638023846524432087",
+  "LastModifiedTimestamp": "638029207414396575",
   "Name": "4549290329f4447b9b4bbad01de2905f",
   "OverridableProperties": {},
   "Version": "637859971966587072"

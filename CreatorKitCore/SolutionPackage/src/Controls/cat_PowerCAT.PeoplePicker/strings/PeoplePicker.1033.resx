@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="PeoplePicker" xml:space="preserve">
-        <value>Fluent PeoplePicker (%VERSION%) Preview</value>
+        <value>Fluent PeoplePicker (1.0.14) Preview</value>
     </data>
     <data name="PeoplePicker_Desc" xml:space="preserve">
         <value>Allows picking string tags from one dataset and adding to another</value>
@@ -130,10 +130,10 @@
     <data name="SearchTermToShortMessage_Desc" xml:space="preserve">
         <value>The message to display if the search term is less than the 'Minimum Search Term Length' parameter - e.g. 'Keep typing'</value>
     </data>
-    <data name="NoResultFoundMesage" xml:space="preserve">
+    <data name="NoResultFoundMessage" xml:space="preserve">
         <value>No result found message</value>
     </data>
-    <data name="NoResultFoundMesage_Desc" xml:space="preserve">
+    <data name="NoResultFoundMessage_Desc" xml:space="preserve">
         <value>The message to display when no suggestions match the search term</value>
     </data>
     <data name="MinimumSearchTermLength" xml:space="preserve">
@@ -217,5 +217,17 @@
     </data>
     <data name="PeoplePickerType" xml:space="preserve">
         <value>Type of PeoplePicker</value>
+    </data>
+    <data name="ShowSecondaryText_Desc" xml:space="preserve">
+        <value>To Show Secondary Text(E.g. JobTitle) along with Name</value>
+    </data>
+    <data name="ShowSecondaryText" xml:space="preserve">
+        <value>Show Secondary Text</value>
+    </data>
+    <data name="SuggestionsHeaderText" xml:space="preserve">
+        <value>Suggestions Header Text</value>
+    </data>
+    <data name="SuggestionsHeaderText_Desc" xml:space="preserve">
+        <value>Text to appear above suggestions</value>
     </data>
 </root>

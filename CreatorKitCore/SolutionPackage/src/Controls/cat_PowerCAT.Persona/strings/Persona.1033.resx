@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="Persona" xml:space="preserve">
-        <value>Fluent Persona(%VERSION%) Preview</value>
+        <value>Fluent Persona (1.0.14) Preview</value>
     </data>
     <data name="AccessibilityLabel" xml:space="preserve">
         <value>Accessibility label</value>
@@ -159,5 +159,8 @@
     </data>
     <data name="HidePersonaDetails" xml:space="preserve">
         <value>Hide Persona Details</value>
+    </data>
+    <data name="PersonaInitialsColor" xml:space="preserve">
+        <value>Persona Initials Color</value>
     </data>
 </root>

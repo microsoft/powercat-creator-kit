@@ -28,8 +28,8 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
-    project: 'Creator-kit'
-    pipeline: '56' #Production buildId
+    project: 'creator-starter-kit'
+    pipeline: '681' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitCore*.zip'
   displayName: 'Download Creator Kit Core solution'
@@ -38,8 +38,8 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
-    project: 'Creator-kit'
-    pipeline: '59' #Production buildId
+    project: 'creator-starter-kit'
+    pipeline: '1558' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitReferencesCanvas*.zip'
   displayName: 'Download Creator Kit Canvas solution'
@@ -48,8 +48,8 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
-    project: 'Creator-kit'
-    pipeline: '62' #Production buildId
+    project: 'creator-starter-kit'
+    pipeline: '1560' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitReferencesMDA*.zip'
   displayName: 'Download Creator Kit Model solution'

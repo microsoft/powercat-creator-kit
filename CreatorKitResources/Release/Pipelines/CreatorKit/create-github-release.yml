@@ -28,7 +28,7 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
-    project: 'creator-starter-kit'
+    project: 'Creator-kit'
     pipeline: '56' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitCore*.zip'
@@ -38,7 +38,7 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
-    project: 'creator-starter-kit'
+    project: 'Creator-kit'
     pipeline: '59' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitReferencesCanvas*.zip'
@@ -48,7 +48,7 @@ steps:
 - task: DownloadPipelineArtifact@2
   inputs:
     source: 'specific'
-    project: 'creator-starter-kit'
+    project: 'Creator-kit'
     pipeline: '62' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitReferencesMDA*.zip'

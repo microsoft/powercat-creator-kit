@@ -1,0 +1,482 @@
+scrSpinButton As screen:
+    OnVisible: |-
+        =Set(
+            currentComp,
+            LookUp(
+                Components,
+                Name = "SearchBox"
+            )
+        );
+        ClearCollect(
+            currentCompCol,
+            Filter(
+                ComponentInfos,
+                Components = currentComp.Components
+            )
+        );
+        ClearCollect(
+            currentCompSamplesCol,
+            Filter(
+                ComponentSamples,
+                Components = currentComp.Components
+            )
+        );
+        ClearCollect(
+            colColors,
+            {
+                color: "Red",
+                value: "#f00"
+            },
+            {
+                color: "Green",
+                value: "#0f0"
+            },
+            {
+                color: "Blue",
+                value: "#00f"
+            },
+            {
+                color: "Cyan",
+                value: "#0ff"
+            },
+            {
+                color: "Magenta",
+                value: "#f0f"
+            },
+            {
+                color: "Yellow",
+                value: "#ff0"
+            },
+            {
+                color: "Black",
+                value: "#000"
+            }
+        )
+
+    stackRoot_25 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_26.Width
+        Y: =Header_27.Height - 20
+        ZIndex: =2
+
+        lblTitle_27 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="SpinButton"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_29 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="A spin button (SpinButton) allows someone to incrementally adjust a value in small steps. It’s mainly used for numeric values."
+            ZIndex: =2
+
+        ComponentDescriptionContainer_3 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ComponentDescription_3.DesiredHeight
+            LayoutMinHeight: =500
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =3
+
+            "Elevation_6 As 'Fluent Elevation (1.0.19)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =ComponentDescription_3.DesiredHeight
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ComponentDescription_3 As ControlInfo:
+                Description: |-
+                    ="<div class='section_2cda87d9' style='transition-delay: 0.05s;'><div class='subSection_2cda87d9'><div class='sectionHeader_2cda87d9'><h2 class='subHeading_2cda87d9' id='best-practices' tabindex='-1'>Best practices</h2></div><div class='content_2cda87d9'><div class='ms-Markdown'><div><h3 class='root-230' id='layout'>Layout</h3><ul><li>Place labels to the left of the spin button control. For example, 'Length of ruler (cm)'.</li><li>Spin button width should adjust to fit the number values.</li></ul><h3 class='root-230' id='content'>Content</h3><ul><li>Use a spin button when you need to incrementally change a value.</li><li>Use a spin button when values are tied to a unit of measure.</li><li>Don't use a spin button for binary settings.</li><li>Don't use a spin button for a range of three values or less.</li><li>Include a label indicating what value the spin button changes.</li></ul></div></div></div></div></div>"
+                Height: =ComponentDescription_3.DesiredHeight
+                Width: =Parent.Width
+                ZIndex: =2
+
+        ExampleContainer_3 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_3.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =4
+
+            "Elevation_7 As 'Fluent Elevation (1.0.19)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_3.Height + If(pivotAppCode_39.Selected.ItemKey="app", ExampleContainer1_2.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_2.Height + ExampleHeader_3.PaddingTop + ExampleHeader_3.PaddingBottom+ If(pivotAppCode_39.Selected.ItemKey="code",htmlCodeSnippet_2.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_2 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_5 As label:
+                            AutoHeight: =true
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_5.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =300
+                            Size: =18
+                            Text: ="Basic SpinButton Usage"
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_39 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_2.Y+htmlCodeSnippet_2.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =varTheme.themeJSON
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_2 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_2 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =2
+                        HtmlText: |-
+                            ="<pre class=""hljs_03eaa332108148c4a85fa1be93afd25d"" style=""display: block ; overflow-x: auto ; padding: 0.5em ; background: rgb(240 , 240 , 240) ; color: rgb(68 , 68 , 68)"">
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""SpinButton1"" As 'SpinButton'</span>:
+                                Theme: AppThemeJson
+                                IconName: ddIconName.Selected.Value
+                                SpinButtonLabel: txtSpinBtnLabel.Value
+                            	Error:chkError.Checked
+                            	
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">Error</span>:
+                                Checked: false
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">txtPlateholderTextValue</span>:
+                                Value: <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""Basic SpinButton""</span>
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">ddIconName</span>:
+                                Items: [""IncreaseIndentLegacy"",""Search"",""SearchAndApps"",""SearchNearby"",""ProfileSearch"",""FolderSearch"",""DocumentSearch"",""FabricFolderSearch"",""BranchSearch"",""SearchData"",""SearchCalendar"",""ImageSearch"",""NewsSearch"",""VideoSearch"",""SearchBookmark"",""Filter"",""Filters"",""BarChartVerticalFilter"",""SeeDo"",""Help"",""LookupEntities"",""ExploreData"",""Glasses"",""ScopeTemplate"",""Heart"",""PowerApps"",""PowerApps2Logo"",""Flow"",""MicrosoftFlowLogo"",""FlowChart"",""Flower"",""TextOverflow""]
+                                DefaultSelectedItems: [<span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""IncreaseIndentLegacy""</span>]
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">lblSpinBtnValue</span>:
+                                Value: SpinButton1.Value
+                            
+                            </pre>"
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_39.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ExampleContainer1_2 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =SpinButton1.Height + Max(LeftContainer_3.Height,  RightContainer_3.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    ZIndex: =4
+
+                    WrapContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =5
+
+                        LeftContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: = ContainerText_2.Height +  ContainerPresence_2.Height
+                            LayoutMinWidth: =350
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "SpinButton1 As 'Fluent SpinButton (1.0.19) Preview'":
+                                DisplayMode: =DisplayMode.Edit
+                                Error: =chkError_1.Checked
+                                Height: =200
+                                IconName: =ddIconName_1.Selected.Value
+                                InputEvent: =setSpinBtnFocus
+                                Label: =txtSpinBtnLabel.Value
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Theme: =varTheme.themeJSON
+                                Width: =Parent.Width*0.8
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        RightContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =220
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =2
+
+                            "chkError_1 As 'Check box'":
+                                AccessibleLabel: ="Allow spell check"
+                                Checked: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Label: ="Error"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                OnChange: =
+                                Visible: =true
+                                Width: =160
+                                X: =42
+                                Y: =223
+                                ZIndex: =1
+
+                            ContainerText_2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =2
+
+                                lblSpinBtnLabel As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="SpinButton Label"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                "txtSpinBtnLabel As 'Text box'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =220
+                                    Value: ="Basic SpinButton"
+                                    Width: =260
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                            ContainerPresence_2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =3
+
+                                lblIcon_1 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="Icon Name"
+                                    Width: =180
+                                    X: =42
+                                    Y: =185
+                                    ZIndex: =1
+
+                                "ddIconName_1 As 'Combo box'.pcfdataset":
+                                    AccessibleLabel: ="Constrain"
+                                    DefaultSelectedItems: =["IncreaseIndentLegacy"]
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    Items: =["IncreaseIndentLegacy","Search","SearchAndApps","SearchNearby","ProfileSearch","FolderSearch","DocumentSearch","FabricFolderSearch","BranchSearch","SearchData","SearchCalendar","ImageSearch","NewsSearch","VideoSearch","SearchBookmark","Filter","Filters","BarChartVerticalFilter","SeeDo","Help","LookupEntities","ExploreData","Glasses","ScopeTemplate","Heart","PowerApps","PowerApps2Logo","Flow","MicrosoftFlowLogo","FlowChart","Flower","TextOverflow"]
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =220
+                                    Text: =""
+                                    Width: =120
+                                    X: =147
+                                    Y: =185
+                                    ZIndex: =2
+
+                                    Value1_1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Value"
+                                        FieldName: ="Value"
+                                        FieldType: ="s"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =2
+                                        ZIndex: =13
+
+                            ContainerSetFocus As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =4
+
+                                lblSetFocus As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="Set Focus"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                btnSetFocus_1 As Button:
+                                    AccessibleLabel: ="Remove tag"
+                                    BorderRadius: =1
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: =Set(setSpinBtnFocus,"SetFocus"&Rand())
+                                    Text: ="Set Focus"
+                                    Visible: =true
+                                    Width: =120
+                                    X: =453
+                                    Y: =301
+                                    ZIndex: =3
+
+                            ContainerSpinBtnOutput As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =5
+
+                                lblSpinBtnOutput As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="SpinButton (output)"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                lblSpinBtnValue As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: =SpinButton1.Value
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =2
+
+            lbladditionalInfo_2 As Label:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: =Index(currentCompSamplesCol,1).Description
+                Width: =Parent.Width * 0.5
+                X: =42
+                Y: =390
+                ZIndex: =5
+
+    LeftNav_26 As LeftNav:
+        Height: =Parent.Height - 20
+        Width: =200
+        Y: =Header_27.Height
+        ZIndex: =7
+
+    Header_27 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        ZIndex: =8
+

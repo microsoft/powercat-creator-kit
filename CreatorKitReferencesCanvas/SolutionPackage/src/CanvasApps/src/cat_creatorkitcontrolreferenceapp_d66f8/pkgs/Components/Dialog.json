@@ -73,7 +73,7 @@
         "Name": "htmlShadow",
         "Parent": "Dialog",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 402,
+        "PublishOrderIndex": 496,
         "Rules": [
           {
             "Category": "Data",
@@ -284,7 +284,7 @@
             "Name": "Container19",
             "Parent": "DialogRootContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 404,
+            "PublishOrderIndex": 498,
             "Rules": [
               {
                 "Category": "Design",
@@ -506,7 +506,7 @@
                 "Name": "Container19_2",
                 "Parent": "MiddleContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 406,
+                "PublishOrderIndex": 500,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -851,7 +851,7 @@
                         "Name": "Label3",
                         "Parent": "DialogHeaderContainer",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 409,
+                        "PublishOrderIndex": 503,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -1298,7 +1298,7 @@
                         "Name": "Icon2_3",
                         "Parent": "DialogHeaderContainer",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 410,
+                        "PublishOrderIndex": 504,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -1624,7 +1624,7 @@
                     "Name": "DialogHeaderContainer",
                     "Parent": "CenterDialogContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 408,
+                    "PublishOrderIndex": 502,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -1929,7 +1929,7 @@
                         "Name": "Label3_1",
                         "Parent": "DialogContentContainer",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 412,
+                        "PublishOrderIndex": 506,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -2308,7 +2308,7 @@
                     "Name": "DialogContentContainer",
                     "Parent": "CenterDialogContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 411,
+                    "PublishOrderIndex": 505,
                     "Rules": [
                       {
                         "Category": "Design",
@@ -2476,7 +2476,7 @@
                         "Name": "galleryTemplate2_3",
                         "Parent": "ButtonsGallery_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 414,
+                        "PublishOrderIndex": 508,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -2592,7 +2592,7 @@
                         "Name": "Button1_1",
                         "Parent": "ButtonsGallery_2",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 415,
+                        "PublishOrderIndex": 509,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -2916,7 +2916,7 @@
                     "Name": "ButtonsGallery_2",
                     "Parent": "CenterDialogContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 413,
+                    "PublishOrderIndex": 507,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3259,7 +3259,7 @@
                 "Name": "CenterDialogContainer",
                 "Parent": "MiddleContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 407,
+                "PublishOrderIndex": 501,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3502,7 +3502,7 @@
                 "Name": "Container19_3",
                 "Parent": "MiddleContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 416,
+                "PublishOrderIndex": 510,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3747,7 +3747,7 @@
             "Name": "MiddleContainer",
             "Parent": "DialogRootContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 405,
+            "PublishOrderIndex": 499,
             "Rules": [
               {
                 "Category": "Design",
@@ -3959,7 +3959,7 @@
             "Name": "Container19_1",
             "Parent": "DialogRootContainer",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 417,
+            "PublishOrderIndex": 511,
             "Rules": [
               {
                 "Category": "Design",
@@ -4157,7 +4157,7 @@
         "Name": "DialogRootContainer",
         "Parent": "Dialog",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 403,
+        "PublishOrderIndex": 497,
         "Rules": [
           {
             "Category": "Design",
@@ -4433,7 +4433,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638029207414537603",
+    "LastModifiedTimestamp": "638058267616993675",
     "Name": "Dialog",
     "Rules": [
       {
@@ -4730,7 +4730,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638029207414537603",
+  "LastModifiedTimestamp": "638058267616993675",
   "Name": "3fe2606753b0430ca994d8fcdb21d50a",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

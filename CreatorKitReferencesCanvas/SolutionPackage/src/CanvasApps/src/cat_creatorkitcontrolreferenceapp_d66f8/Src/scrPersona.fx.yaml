@@ -56,7 +56,7 @@ scrPersona As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_2 As 'Fluent Elevation (1.0.9)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription_1.DesiredHeight
                 PaddingBottom: =8
@@ -82,7 +82,7 @@ scrPersona As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_4 As 'Fluent Elevation (1.0.9)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -139,7 +139,7 @@ scrPersona As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_37 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+                        "pivotAppCode_37 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -197,7 +197,7 @@ scrPersona As screen:
                     PaddingRight: =20
                     ZIndex: =4
 
-                    "Persona1 As 'Fluent Persona(%VERSION%) Preview'":
+                    "Persona1 As 'Fluent Persona (1.0.19) Preview'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =110
                         HidePersonaDetails: =chkHidePersonaDetails.Checked

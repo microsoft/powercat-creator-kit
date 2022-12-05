@@ -52,7 +52,7 @@ scrFacepile As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_24 As 'Fluent Elevation (1.0.9)'":
+            "Elevation2_24 As 'Fluent Elevation (1.0.19)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height

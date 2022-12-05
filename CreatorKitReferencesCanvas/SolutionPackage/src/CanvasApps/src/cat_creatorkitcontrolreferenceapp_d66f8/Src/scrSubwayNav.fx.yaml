@@ -1,0 +1,796 @@
+scrSubwayNav As screen:
+
+    stackRoot_26 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_27.Width
+        Y: =Header_28.Height - 20
+        ZIndex: =1
+
+        lblTitle_28 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="SubwayNav"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_30 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="The Subway Nav control allows you to visualize the steps required for a given wizard."
+            ZIndex: =2
+
+        BestPractices_11 As BestPractices:
+            Donts: |
+                =Table(
+                    {text:"Don’t use more than one level of sub steps because it isn’t supported and adds complexity for the user"},
+                    {text:"Don’t individually disable completed steps because it creates ambiguity for the user."}
+                )
+            Dos: |
+                =Table(
+                    {text:"Use Subway Nav control with Panel, Full Page or Tenant Setup Wizards."},
+                    {text:"Use a short, concise label to keep the tests scannable and prevent text clipping."}
+                )
+            Height: =250
+            LayoutMinHeight: =640
+            ZIndex: =3
+
+        ExampleContainer_4 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_4.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =5
+
+            "Elevation_8 As 'Fluent Elevation (1.0.19)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_4.Height + If(pivotAppCode_40.Selected.ItemKey="app", ExampleContainer1_3.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_4 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_3.Height + ExampleHeader_4.PaddingTop + ExampleHeader_4.PaddingBottom+ If(pivotAppCode_40.Selected.ItemKey="code",htmlCodeSnippet_3.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_3 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_6 As label:
+                            AutoHeight: =true
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_6.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =300
+                            Size: =18
+                            Text: ="Basic SubwayNav Usage"
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_40 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_3.Y+htmlCodeSnippet_3.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =varTheme.themeJSON
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_3 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_3 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =200
+                        HtmlText: |-
+                            ="<pre class=""hljs_03eaa332108148c4a85fa1be93afd25d"" style=""display: block ; overflow-x: auto ; padding: 0.5em ; background: rgb(240 , 240 , 240) ; color: rgb(68 , 68 , 68)"">
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""SubwayNav1"" As 'SubwayNav'</span>:
+                                Theme: AppThemeJson
+                                WizardCompleteorError: ddState.Selected.Value
+                                Disable:chkDisable.Checked
+                            	Item: Table({ItemKey:""1"",ItemLabel:""Step 1"",ItemState:""Current""},
+                            {ItemKey:""2"",ItemLabel:""Step 2"",ItemState:""Completed""},
+                            {ItemKey:""3"",ItemLabel:""Step 3"",ItemState:""Unsaved""},
+                            {ItemKey:""4"",ItemLabel:""Step 4"",ItemState:""ViewedNotCompleted""},
+                            {ItemKey:""5"",ItemLabel:""Step 5"",ItemState:""Error""},
+                            {ItemKey:""6"",ItemLabel:""Step 6"",ItemState:""WizardComplete""})
+                            	
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">Disable</span>:
+                                Checked: false
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">txtPlateholderTextValue</span>:
+                                Value: <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""Basic SubwayNav""</span>
+                            <span class=""hljs-string_2a923772fc2a45979aba5432e5c5b747"" style=""color: rgb(136 , 0 , 0)"">ddIconName</span>
+                            :
+                                Items: Table(
+                                {
+                                    Name: ""None"",
+                                    Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.None
+                                },
+                                {
+                                    Name: ""WizardComplete"",
+                                    Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.WizardComplete
+                                },
+                                {
+                                    Name: ""Error"",
+                                    Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.Error
+                                }
+                            )
+                                DefaultSelectedItems: Table({Name:""None""})
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">lblSelectedStep</span>:
+                                Value: SubwayNav1.Selected.ItemLabel
+                            
+                            </pre>"
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_40.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ExampleContainer1_3 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Max(LeftContainer_4.Height,  RightContainer_4.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    ZIndex: =4
+
+                    WrapContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =400
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =5
+
+                        LeftContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =400
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =500
+                            LayoutMinWidth: =350
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "SubwayNav1 As 'SubwayNav (1.0.19) Preview'.pcfdataset":
+                                DisplayMode: =If(chkDisable.Checked,Disabled,Edit)
+                                Height: =200
+                                ItemDisabled: =
+                                Items: |-
+                                    =Table({ItemKey:"1",ItemLabel:"Step 1",ItemState:"Current"},
+                                    {ItemKey:"2",ItemLabel:"Step 2",ItemState:"Completed"},
+                                    {ItemKey:"3",ItemLabel:"Step 3",ItemState:"Unsaved"},
+                                    {ItemKey:"4",ItemLabel:"Step 4",ItemState:"ViewedNotCompleted"},
+                                    {ItemKey:"5",ItemLabel:"Step 5",ItemState:"Error"},
+                                    {ItemKey:"6",ItemLabel:"Step 6",ItemState:"WizardComplete"})
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Theme: =varTheme.themeJSON
+                                Width: =400
+                                WizardCompleteorError: =ddState.Selected.Key
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        RightContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =220
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =2
+
+                            "chkDisable As 'Check box'":
+                                AccessibleLabel: ="Allow spell check"
+                                Checked: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Label: ="Disable"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                OnChange: =
+                                Visible: =true
+                                Width: =160
+                                X: =42
+                                Y: =223
+                                ZIndex: =1
+
+                            ContainerState As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =2
+
+                                lblState As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="SubwayNav State"
+                                    Width: =180
+                                    X: =42
+                                    Y: =185
+                                    ZIndex: =1
+
+                                "ddState As 'Combo box'.pcfdataset":
+                                    AccessibleLabel: ="Constrain"
+                                    DefaultSelectedItems: |-
+                                        =Table({Name:"None"})
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    Items: |-
+                                        =Table(
+                                            {
+                                                Name: "None",
+                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.None
+                                            },
+                                            {
+                                                Name: "WizardComplete",
+                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.WizardComplete
+                                            },
+                                            {
+                                                Name: "Error",
+                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.Error
+                                            }
+                                        )
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =220
+                                    Text: =""
+                                    Width: =120
+                                    X: =147
+                                    Y: =185
+                                    ZIndex: =2
+
+                                    Name1_1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Name"
+                                        FieldName: ="Name"
+                                        FieldType: ="s"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =1
+                                        ZIndex: =8
+
+                            ContainerSpinBtnOutput_1 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =3
+
+                                lblSelectedStep As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="Selected Step"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                lblSpinBtnValue_1 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: =SubwayNav1.Selected.ItemLabel
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =2
+
+            lbladditionalInfo_3 As Label:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: =Index(currentCompSamplesCol,1).Description
+                Width: =Parent.Width * 0.5
+                X: =42
+                Y: =390
+                ZIndex: =5
+
+        ExampleContainer_5 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_5.Height
+            LayoutMinHeight: =400
+            LayoutMinWidth: =250
+            Width: =App.Width
+            ZIndex: =6
+
+            "Elevation_9 As 'Fluent Elevation (1.0.19)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_5.Height + If(pivotAppCode_41.Selected.ItemKey="app", ExampleContainer1_4.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_5 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_4.Height + ExampleHeader_5.PaddingTop + ExampleHeader_5.PaddingBottom+ If(pivotAppCode_41.Selected.ItemKey="code",htmlCodeSnippet_4.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_4 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_7 As label:
+                            AutoHeight: =true
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_7.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =300
+                            Size: =18
+                            Text: ="Basic SubwayNav with SubSteps"
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_41 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_4.Y+htmlCodeSnippet_4.Height))
+                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
+                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =varTheme.themeJSON
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_4 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_4 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =200
+                        HtmlText: |-
+                            ="<pre class=""hljs_03eaa332108148c4a85fa1be93afd25d"" style=""display: block ; overflow-x: auto ; padding: 0.5em ; background: rgb(240 , 240 , 240) ; color: rgb(68 , 68 , 68)"">
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""SubwayNav1"" As 'SubwayNav'</span>:
+                                Theme: AppThemeJson
+                                WizardCompleteorError: ddState.Selected.Value
+                                Disable:chkDisable.Checked
+                            	  Item: Table({ItemKey:""1"",ItemLabel:""Step 1"",ItemState:""Current""},
+                            {ItemKey:""2"",ItemLabel:""Step 2 have sub-steps"",ItemState:""WizardComplete""},
+                            {ItemKey:""3"",ItemLabel:""Sub Step 2.1"",ParentItemKey:""2"",ItemState:""Error""},
+                            {ItemKey:""4"",ItemLabel:""Sub Step 2.2"",ParentItemKey:""2"",ItemState:""WizardComplete""},
+                            {ItemKey:""5"",ItemLabel:""Sub Step 3.1"",ParentItemKey:""8"",ItemState:""ViewedNotCompleted""},
+                            {ItemKey:""6"",ItemLabel:""Sub Step 3.2"",ParentItemKey:""8"",ItemState:""Unsaved""},
+                            {ItemKey:""7"",ItemLabel:""Sub Step 3.2"",ParentItemKey:""8"",ItemState:""Unsaved""},
+                            {ItemKey:""8"",ItemLabel:""Step 3 too have sub-steps"",ItemState:""Unsaved""},
+                            {ItemKey:""9"",ItemLabel:""Step 4"",ItemState:""Error""},
+                            {ItemKey:""10"",ItemLabel:""Step 5"",ItemState:""WizardComplete""})
+                            	
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">Disable</span>:
+                                Checked: false
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">txtPlateholderTextValue</span>:
+                                Value: <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""Basic SubwayNav""</span>
+                            <span class=""hljs-string_2a923772fc2a45979aba5432e5c5b747"" style=""color: rgb(136 , 0 , 0)"">ddIconName</span>
+                            :
+                                Items: Table(
+                                {
+                                    Name: ""None"",
+                                    Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.None
+                                },
+                                {
+                                    Name: ""WizardComplete"",
+                                    Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.WizardComplete
+                                },
+                                {
+                                    Name: ""Error"",
+                                    Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.Error
+                                }
+                            )
+                                DefaultSelectedItems: Table({Name:""None""})
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">lblSelectedStep</span>:
+                                Value: SubwayNav1.Selected.ItemLabel
+                            
+                            </pre>"
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_41.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ExampleContainer1_4 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Max(LeftContainer_5.Height,  RightContainer_5.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    ZIndex: =4
+
+                    WrapContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =320
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =5
+
+                        LeftContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =450
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =500
+                            LayoutMinWidth: =350
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "SubwayNav1_1 As 'SubwayNav (1.0.19) Preview'.pcfdataset":
+                                DisplayMode: =If(chkDisable_1.Checked,Disabled,Edit)
+                                Height: =200
+                                ItemDisabled: =
+                                Items: |-
+                                    =Table({ItemKey:"1",ItemLabel:"Step 1",ItemState:"Current"},
+                                    {ItemKey:"2",ItemLabel:"Step 2 have sub-steps",ItemState:"WizardComplete"},
+                                    {ItemKey:"3",ItemLabel:"Sub Step 2.1",ParentItemKey:"2",ItemState:"Error"},
+                                    {ItemKey:"4",ItemLabel:"Sub Step 2.2",ParentItemKey:"2",ItemState:"WizardComplete"},
+                                    {ItemKey:"5",ItemLabel:"Sub Step 3.1",ParentItemKey:"8",ItemState:"ViewedNotCompleted"},
+                                    {ItemKey:"6",ItemLabel:"Sub Step 3.2",ParentItemKey:"8",ItemState:"Unsaved"},
+                                    {ItemKey:"7",ItemLabel:"Sub Step 3.2",ParentItemKey:"8",ItemState:"Unsaved"},
+                                    {ItemKey:"8",ItemLabel:"Step 3 too have sub-steps",ItemState:"Unsaved"},
+                                    {ItemKey:"9",ItemLabel:"Step 4",ItemState:"Error"},
+                                    {ItemKey:"10",ItemLabel:"Step 5",ItemState:"WizardComplete"})
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Theme: =varTheme.themeJSON
+                                Width: =400
+                                WizardCompleteorError: =ddState_1.Selected.Key
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        RightContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =220
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =2
+
+                            "chkDisable_1 As 'Check box'":
+                                AccessibleLabel: ="Allow spell check"
+                                Checked: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                Label: ="Disable"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                OnChange: =
+                                Visible: =true
+                                Width: =160
+                                X: =42
+                                Y: =223
+                                ZIndex: =1
+
+                            ContainerState_1 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =2
+
+                                lblState_1 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="SubwayNav State"
+                                    Width: =180
+                                    X: =42
+                                    Y: =185
+                                    ZIndex: =1
+
+                                "ddState_1 As 'Combo box'.pcfdataset":
+                                    AccessibleLabel: ="Constrain"
+                                    DefaultSelectedItems: |-
+                                        =Table({Name:"None"})
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    Items: |-
+                                        =Table(
+                                            {
+                                                Name: "None",
+                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.None
+                                            },
+                                            {
+                                                Name: "WizardComplete",
+                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.WizardComplete
+                                            },
+                                            {
+                                                Name: "Error",
+                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.Error
+                                            }
+                                        )
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =220
+                                    Text: =""
+                                    Width: =120
+                                    X: =147
+                                    Y: =185
+                                    ZIndex: =2
+
+                                    Name1_2 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Name"
+                                        FieldName: ="Name"
+                                        FieldType: ="s"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =1
+                                        ZIndex: =8
+
+                            ContainerSpinBtnOutput_2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =3
+
+                                lblSelectedStep_1 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="Selected Step"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                lblSpinBtnValue_2 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FillPortions: =1
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: =SubwayNav1_1.Selected.ItemLabel
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =2
+
+            lbladditionalInfo_4 As Label:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Text: =Index(currentCompSamplesCol,1).Description
+                Width: =Parent.Width * 0.5
+                X: =42
+                Y: =390
+                ZIndex: =5
+
+    LeftNav_27 As LeftNav:
+        ChildTabPriority: =true
+        EnableChildFocus: =true
+        Height: =App.Height - 20
+        Width: =200
+        Y: =Header_28.Height
+        ZIndex: =2
+
+    Header_28 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        Visible: =true
+        ZIndex: =3
+
+    PCFDialog_1 As Dialog:
+        Buttons: =
+        DialogHeight: =700
+        DialogWidth: =1100
+        Fill: =PCFDialog_1.OverlayColor
+        Height: =App.Height
+        OnCloseSelect: =Set(ShowHideDialog, false)
+        SubTitle: =""
+        Title: ="Code components required to run this app your environment !"
+        Visible: =ShowHideDialog
+        Width: =App.Width
+        ZIndex: =4
+
+    PCFExperience_1 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =PCFDialog_1.ContentHeight
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =10
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =20
+        PaddingRight: =20
+        Visible: =PCFDialog_1.Visible
+        Width: =PCFDialog_1.ContentWidth
+        X: =PCFDialog_1.ContentX
+        Y: =PCFDialog_1.ContentY
+        ZIndex: =5
+
+        imgPCFReq_1 As image:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(230, 230, 230, 1)
+            FillPortions: =1
+            FocusedBorderThickness: =4
+            Height: =
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(230, 230, 230, 1)
+            Image: =PCFEnable
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Visible: =PCFExperience_1.Visible
+            Width: =
+            ZIndex: =1
+
+        lblPCFExperience_1 As label:
+            Align: =Align.Center
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            Color: =RGBA(255, 0, 0, 1)
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            FocusedBorderThickness: =4
+            FontWeight: =FontWeight.Semibold
+            LayoutMinWidth: =500
+            PaddingLeft: =20
+            PaddingRight: =20
+            Text: |-
+                ="IMPORTANT: Please delete the creator kit solution, enable code components in your environment settings and then in re-import the solution ! See documentation for more details:"
+            ZIndex: =2
+
+        Label2_1 As label:
+            AlignInContainer: =AlignInContainer.Stretch
+            Color: =RGBA(0, 121, 187, 1)
+            LayoutMinWidth: =700
+            OnSelect: |-
+                =Launch("https://docs.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature", {}, LaunchTarget.New)
+            Size: =12
+            Text: |-
+                ="https://docs.microsoft.com/en-us/power-apps/developer/component-framework/component-framework-for-canvas-apps#enable-the-power-apps-component-framework-feature"
+            Underline: =true
+            ZIndex: =4
+

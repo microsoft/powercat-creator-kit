@@ -268,7 +268,7 @@
         Y: =204
         ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (1.0.14)'":
+    "btnAddTaskHeader As 'Fluent Icon (1.0.18)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
@@ -284,7 +284,7 @@
         Y: =551
         ZIndex: =5
 
-    "Elevation1 As 'Fluent Elevation (1.0.14)'":
+    "Elevation1 As 'Fluent Elevation (1.0.18)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -293,7 +293,7 @@
         Y: =353
         ZIndex: =6
 
-    "Elevation1_1 As 'Fluent Elevation (1.0.14)'":
+    "Elevation1_1 As 'Fluent Elevation (1.0.18)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -304,7 +304,7 @@
         Y: =469
         ZIndex: =7
 
-    "Elevation1_2 As 'Fluent Elevation (1.0.14)'":
+    "Elevation1_2 As 'Fluent Elevation (1.0.18)'":
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
         DisplayMode: =DisplayMode.Edit
         Height: =89
@@ -313,7 +313,7 @@
         Y: =240
         ZIndex: =8
 
-    "Elevation1_3 As 'Fluent Elevation (1.0.14)'":
+    "Elevation1_3 As 'Fluent Elevation (1.0.18)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
         DisplayMode: =DisplayMode.Edit
@@ -325,7 +325,7 @@
         Y: =135
         ZIndex: =9
 
-    "picTags As 'Fluent Picker (1.0.14)'.pcfdataset":
+    "picTags As 'Fluent Picker (1.0.18)'.pcfdataset":
         BorderRadius: =0
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -515,7 +515,7 @@
         Y: =78
         ZIndex: =17
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.14)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.18)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -11859,7 +11859,7 @@
         Y: =78
         ZIndex: =23
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.14)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.18)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -11908,7 +11908,7 @@
         Y: =105
         ZIndex: =24
 
-    "ContextMenu1 As 'Fluent Context Menu (1.0.14)'.pcfdataset":
+    "ContextMenu1 As 'Fluent Context Menu (1.0.18)'.pcfdataset":
         Chevron: =true
         DisplayMode: =DisplayMode.Edit
         Height: =53
@@ -11938,7 +11938,7 @@
         Theme: =AppThemeJson
         Width: =114
         X: =1186
-        Y: =540
+        Y: =371
         ZIndex: =25
 
     "Checkbox1 As 'Check box'":
@@ -11974,7 +11974,7 @@
         Y: =412
         ZIndex: =28
 
-    "Nav1 As 'Fluent Nav (1.0.14)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (1.0.18)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =690
         Items: |-
@@ -12071,7 +12071,7 @@
         Y: =135
         ZIndex: =29
 
-    "CommandBar1 As 'Fluent Command Bar (1.0.14)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (1.0.18)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -12087,7 +12087,7 @@
         Y: =420
         ZIndex: =30
 
-    "Pivot1 As 'Fluent Pivot (1.0.14)'.pcfdataset":
+    "Pivot1 As 'Fluent Pivot (1.0.18)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Items: |-
@@ -12123,7 +12123,7 @@
         Text: ="Context Menu"
         Width: =182
         X: =1188
-        Y: =504
+        Y: =335
         ZIndex: =32
 
     btnOpenDialog As Button:
@@ -12154,7 +12154,7 @@
         Y: =985
         ZIndex: =34
 
-    "Elevation1_4 As 'Fluent Elevation (1.0.14)'":
+    "Elevation1_4 As 'Fluent Elevation (1.0.18)'":
         DarkOverlay: =false
         Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -12165,7 +12165,7 @@
         Y: =760
         ZIndex: =35
 
-    "Calendar1 As 'Fluent Calendar (1.0.14) Preview'":
+    "Calendar1 As 'Fluent Calendar (1.0.18) Preview'":
         DayPickerVisible: =true
         DisplayMode: =DisplayMode.Edit
         Height: =239
@@ -12181,7 +12181,7 @@
         Y: =760
         ZIndex: =36
 
-    "Shimmer1 As 'Fluent Shimmer (1.0.14) Preview'.pcfdataset":
+    "Shimmer1 As 'Fluent Shimmer (1.0.18) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =205
         Items: |-
@@ -12202,7 +12202,7 @@
         Y: =503
         ZIndex: =38
 
-    "Spinner1 As 'Fluent Spinner (1.0.14) Preview'":
+    "Spinner1 As 'Fluent Spinner (1.0.18) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =60
         Label: ="Loading..."
@@ -12430,7 +12430,7 @@
                 Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-    "Shimmer2 As 'Fluent Shimmer (1.0.14) Preview'.pcfdataset":
+    "Shimmer2 As 'Fluent Shimmer (1.0.18) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =140
         Width: =295
@@ -12438,7 +12438,7 @@
         Y: =244
         ZIndex: =42
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.14) Preview'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.18) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =74
         Label: ="Title here"
@@ -12491,7 +12491,7 @@
         Width: =1920
         ZIndex: =47
 
-    "Facepile1 As 'Fluent Facepile (1.0.14) Preview'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.0.18) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =68
         MaxDisplayablePersonas: =1
@@ -12514,7 +12514,7 @@
         Y: =319
         ZIndex: =49
 
-    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.14) Preview'.pcfdataset":
+    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.18) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =95
         Items: =PreSelectedUserCollection
@@ -12563,7 +12563,7 @@
         Y: =479
         ZIndex: =51
 
-    "SearchBox1 As 'Fluent SearchBox (1.0.14) Preview'":
+    "SearchBox1 As 'Fluent SearchBox (1.0.18) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =75
         Theme: =AppThemeJson
@@ -12583,7 +12583,7 @@
         Y: =890
         ZIndex: =53
 
-    "Persona1 As 'Fluent Persona (1.0.14) Preview'":
+    "Persona1 As 'Fluent Persona (1.0.18) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =94
         ImageUrl: =User().Image
@@ -12591,7 +12591,7 @@
         Text: =User().FullName
         Width: =208
         X: =1184
-        Y: =670
+        Y: =501
         ZIndex: =54
 
     Label1_24 As Label:
@@ -12602,6 +12602,47 @@
         Text: ="Persona"
         Width: =182
         X: =1185
-        Y: =627
+        Y: =458
         ZIndex: =55
+
+    "SubwayNav1 As 'SubwayNav (1.0.18) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        Height: =357
+        Items: |-
+            =Table({ItemKey:"1",ItemLabel:"Step 1",ItemState:"Current"},
+            {ItemKey:"2",ItemLabel:"Step 2",ItemState:"Completed"},
+            {ItemKey:"3",ItemLabel:"Step 3",ItemState:"Unsaved"},
+            {ItemKey:"4",ItemLabel:"Step 4",ItemState:"ViewedNotCompleted"},
+            {ItemKey:"5",ItemLabel:"Step 5",ItemState:"Error"},
+            {ItemKey:"6",ItemLabel:"Step 6",ItemState:"WizardComplete"})
+        OnChange: =
+        OnSelect: =Notify(Self.Selected.ItemLabel)
+        Theme: =AppThemeJson
+        Width: =179
+        X: =1188
+        Y: =642
+        ZIndex: =56
+
+    Label1_25 As Label:
+        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        Text: ="SubwayNav"
+        Width: =182
+        X: =1180
+        Y: =595
+        ZIndex: =57
+
+    "SpinButton1 As 'Fluent SpinButton (1.0.18) Preview'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =63
+        IconName: ="IncreaseIndentLegacy"
+        Label: ="Basic SpinButton"
+        Suffix: ="cm"
+        Theme: =AppThemeJson
+        Width: =477
+        X: =677
+        Y: =999
+        ZIndex: =58
 

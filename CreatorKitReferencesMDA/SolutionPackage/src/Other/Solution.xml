@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22094.198" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22104.224" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesMDA</UniqueName>
     <LocalizedNames>
@@ -80,13 +80,43 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="300" schemaName="cat_autowidthlabel_53db5" behavior="0" />
+      <RootComponent type="300" schemaName="cat_breadcrumbpage_8963e" behavior="0" />
+      <RootComponent type="300" schemaName="cat_calendarpage_cb349" behavior="0" />
+      <RootComponent type="300" schemaName="cat_contextmenupage_7df18" behavior="0" />
+      <RootComponent type="300" schemaName="cat_creatorkitreferencepage_60a17" behavior="0" />
+      <RootComponent type="300" schemaName="cat_custompagetemplate_231d0" behavior="0" />
+      <RootComponent type="300" schemaName="cat_detailslistbasicpage_07690" behavior="0" />
+      <RootComponent type="300" schemaName="cat_detailslistbasicpage_46cc7" behavior="0" />
+      <RootComponent type="300" schemaName="cat_dialogpanel_15d96" behavior="0" />
+      <RootComponent type="300" schemaName="cat_elevationpage_28669" behavior="0" />
+      <RootComponent type="300" schemaName="cat_expandmenu_e71c4" behavior="0" />
+      <RootComponent type="300" schemaName="cat_facepile_10ba0" behavior="0" />
+      <RootComponent type="300" schemaName="cat_facepilepage_13c32" behavior="0" />
+      <RootComponent type="300" schemaName="cat_homepage_8d348" behavior="0" />
+      <RootComponent type="300" schemaName="cat_iconpage_e2422" behavior="0" />
+      <RootComponent type="300" schemaName="cat_keyboardshortcuts_5ca22" behavior="0" />
+      <RootComponent type="300" schemaName="cat_navpage_18ad8" behavior="0" />
+      <RootComponent type="300" schemaName="cat_peoplepicker_80157" behavior="0" />
+      <RootComponent type="300" schemaName="cat_pivotpage_f0b2a" behavior="0" />
+      <RootComponent type="300" schemaName="cat_progressindicatorpage_9ea28" behavior="0" />
+      <RootComponent type="300" schemaName="cat_resizabletextarea_eb7d1" behavior="0" />
+      <RootComponent type="300" schemaName="cat_searchboxpage_2dd0f" behavior="0" />
+      <RootComponent type="300" schemaName="cat_shimmerpage_9b5cd" behavior="0" />
+      <RootComponent type="300" schemaName="cat_spinbuttonpage_4c2cb" behavior="0" />
+      <RootComponent type="300" schemaName="cat_spinnerpage_39ec0" behavior="0" />
+      <RootComponent type="300" schemaName="cat_subwaynavpage_b2b78" behavior="0" />
+      <RootComponent type="300" schemaName="cat_taglist_6a134" behavior="0" />
+      <RootComponent type="300" schemaName="cat_tagpicker_ca530" behavior="0" />
+      <RootComponent type="300" schemaName="cr7a3_compdescription_1c3b2" behavior="0" />
+      <RootComponent type="300" schemaName="cr7a3_personapage_404d9" behavior="0" />
       <RootComponent type="61" schemaName="cat_autowidthlabel_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_breadcrumbicon" behavior="0" />
       <RootComponent type="61" schemaName="cat_calendar_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_commandbar_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_contextmenu_icon" behavior="0" />
-      <RootComponent type="61" schemaName="cat_creatorkit_logo" behavior="0" />
       <RootComponent type="61" schemaName="cat_creator_icon" behavior="0" />
+      <RootComponent type="61" schemaName="cat_creatorkit_logo" behavior="0" />
       <RootComponent type="61" schemaName="cat_dialog_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_elevation_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_expandmenu_icon" behavior="0" />
@@ -103,39 +133,13 @@
       <RootComponent type="61" schemaName="cat_resizabletextarea_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_search_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_shimmer_icon" behavior="0" />
+      <RootComponent type="61" schemaName="cat_spin_button_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_spinner_icon" behavior="0" />
+      <RootComponent type="61" schemaName="cat_subwaunav_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_taglist_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_tagpicker_icon" behavior="0" />
       <RootComponent type="62" schemaName="cat_CreatorKitReferenceApp" behavior="0" />
       <RootComponent type="80" schemaName="cat_CreatorKitReferenceApp" behavior="0" />
-      <RootComponent type="300" schemaName="cat_autowidthlabel_53db5" behavior="0" />
-      <RootComponent type="300" schemaName="cat_breadcrumbpage_8963e" behavior="0" />
-      <RootComponent type="300" schemaName="cat_calendarpage_cb349" behavior="0" />
-      <RootComponent type="300" schemaName="cat_contextmenupage_7df18" behavior="0" />
-      <RootComponent type="300" schemaName="cat_creatorkitreferencepage_60a17" behavior="0" />
-      <RootComponent type="300" schemaName="cat_custompagetemplate_231d0" behavior="0" />
-      <RootComponent type="300" schemaName="cat_detailslistbasicpage_07690" behavior="0" />
-      <RootComponent type="300" schemaName="cat_detailslistbasicpage_46cc7" behavior="0" />
-      <RootComponent type="300" schemaName="cat_dialogpanel_15d96" behavior="0" />
-      <RootComponent type="300" schemaName="cat_elevationpage_28669" behavior="0" />
-      <RootComponent type="300" schemaName="cat_expandmenu_e71c4" behavior="0" />
-      <RootComponent type="300" schemaName="cat_facepilepage_13c32" behavior="0" />
-      <RootComponent type="300" schemaName="cat_facepile_10ba0" behavior="0" />
-      <RootComponent type="300" schemaName="cat_homepage_8d348" behavior="0" />
-      <RootComponent type="300" schemaName="cat_iconpage_e2422" behavior="0" />
-      <RootComponent type="300" schemaName="cat_keyboardshortcuts_5ca22" behavior="0" />
-      <RootComponent type="300" schemaName="cat_navpage_18ad8" behavior="0" />
-      <RootComponent type="300" schemaName="cat_peoplepicker_80157" behavior="0" />
-      <RootComponent type="300" schemaName="cat_pivotpage_f0b2a" behavior="0" />
-      <RootComponent type="300" schemaName="cat_progressindicatorpage_9ea28" behavior="0" />
-      <RootComponent type="300" schemaName="cat_resizabletextarea_eb7d1" behavior="0" />
-      <RootComponent type="300" schemaName="cat_searchboxpage_2dd0f" behavior="0" />
-      <RootComponent type="300" schemaName="cat_shimmerpage_9b5cd" behavior="0" />
-      <RootComponent type="300" schemaName="cat_spinnerpage_39ec0" behavior="0" />
-      <RootComponent type="300" schemaName="cat_taglist_6a134" behavior="0" />
-      <RootComponent type="300" schemaName="cat_tagpicker_ca530" behavior="0" />
-      <RootComponent type="300" schemaName="cr7a3_compdescription_1c3b2" behavior="0" />
-      <RootComponent type="300" schemaName="cr7a3_personapage_404d9" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -192,14 +196,22 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
+        <Dependent type="300" schemaName="cat_spinbuttonpage_4c2cb" displayName="SpinButton Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
+        <Dependent type="300" schemaName="cat_subwaynavpage_b2b78" displayName="SubwayNav Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
         <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.1998)" />
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.2017)" />
         <Dependent type="62" schemaName="cat_CreatorKitReferenceApp" />
       </MissingDependency>
       <MissingDependency>
@@ -284,7 +296,15 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cat_spinbuttonpage_4c2cb" displayName="SpinButton Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cat_subwaynavpage_b2b78" displayName="SubwayNav Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
@@ -408,7 +428,15 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
+        <Dependent type="300" schemaName="cat_spinbuttonpage_4c2cb" displayName="SpinButton Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
+        <Dependent type="300" schemaName="cat_subwaynavpage_b2b78" displayName="SubwayNav Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
@@ -421,6 +449,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
+        <Dependent type="300" schemaName="cat_facepile_10ba0" displayName="Facepile" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
@@ -473,6 +505,10 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Nav" displayName="cat_PowerCAT.Nav" solution="Active" />
         <Dependent type="300" schemaName="cat_navpage_18ad8" displayName="Nav Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.PeoplePicker" displayName="cat_PowerCAT.PeoplePicker" solution="Active" />
+        <Dependent type="300" schemaName="cat_peoplepicker_80157" displayName="People Picker" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Persona" displayName="cat_PowerCAT.Persona" solution="Active" />
@@ -564,7 +600,15 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
+        <Dependent type="300" schemaName="cat_spinbuttonpage_4c2cb" displayName="SpinButton Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
+        <Dependent type="300" schemaName="cat_subwaynavpage_b2b78" displayName="SubwayNav Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
@@ -603,8 +647,16 @@
         <Dependent type="300" schemaName="cat_shimmerpage_9b5cd" displayName="Shimmer Page" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SpinButton" displayName="cat_PowerCAT.SpinButton" solution="Active" />
+        <Dependent type="300" schemaName="cat_spinbuttonpage_4c2cb" displayName="SpinButton Page" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Spinner" displayName="cat_PowerCAT.Spinner" solution="Active" />
         <Dependent type="300" schemaName="cat_spinnerpage_39ec0" displayName="Spinner Page" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SubwayNav" displayName="cat_PowerCAT.SubwayNav" solution="Active" />
+        <Dependent type="300" schemaName="cat_subwaynavpage_b2b78" displayName="SubwayNav Page" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.TagList" displayName="cat_PowerCAT.TagList" solution="Active" />

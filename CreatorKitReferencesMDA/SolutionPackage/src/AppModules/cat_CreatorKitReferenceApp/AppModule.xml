@@ -160,12 +160,26 @@
       <iscustomizable>1</iscustomizable>
       <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_shimmerpage_9b5cd</name>
     </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_spinbuttonpage_4c2cb">
+      <canvasappid>
+        <name>cat_spinbuttonpage_4c2cb</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_spinbuttonpage_4c2cb</name>
+    </appelement>
     <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_spinnerpage_39ec0">
       <canvasappid>
         <name>cat_spinnerpage_39ec0</name>
       </canvasappid>
       <iscustomizable>1</iscustomizable>
       <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_spinnerpage_39ec0</name>
+    </appelement>
+    <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_subwaynavpage_b2b78">
+      <canvasappid>
+        <name>cat_subwaynavpage_b2b78</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_CreatorKitReferenceApp_canvasappid_cat_subwaynavpage_b2b78</name>
     </appelement>
     <appelement uniquename="cat_cat_CreatorKitReferenceApp_canvasappid_cat_taglist_6a134">
       <canvasappid>

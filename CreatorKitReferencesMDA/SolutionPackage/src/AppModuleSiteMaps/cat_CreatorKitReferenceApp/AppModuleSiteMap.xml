@@ -44,11 +44,21 @@
             <Title LCID="1033" Title="SearchBox" />
           </Titles>
         </SubArea>
+        <SubArea Id="subarea_f58d5259" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_spin_button_icon" Icon="/WebResources/cat_spin_button_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_spinbuttonpage_4c2cb">
+          <Titles>
+            <Title LCID="1033" Title="SpinButton" />
+          </Titles>
+        </SubArea>
       </Group>
       <Group Id="group_5ddbc918" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
         <Titles>
           <Title LCID="1033" Title="Commands, Menus &amp; Navs" />
         </Titles>
+        <SubArea Id="subarea_9c90ed70" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_subwaunav_icon" Icon="/WebResources/cat_subwaunav_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_subwaynavpage_b2b78">
+          <Titles>
+            <Title LCID="1033" Title="SubwayNav" />
+          </Titles>
+        </SubArea>
         <SubArea Id="subarea_bc4ba80c" ResourceId="SitemapDesigner.NewSubArea" VectorIcon="/WebResources/cat_commandbar_icon" Icon="/WebResources/cat_commandbar_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_creatorkitreferencepage_60a17">
           <Titles>
             <Title LCID="1033" Title="Command Bar" />

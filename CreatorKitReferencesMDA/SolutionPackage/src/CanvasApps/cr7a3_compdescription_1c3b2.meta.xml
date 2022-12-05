@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cr7a3_compdescription_1c3b2</Name>
-  <AppVersion>2022-08-29T19:56:28Z</AppVersion>
+  <AppVersion>2022-11-15T13:21:49Z</AppVersion>
   <Status>Ready</Status>
   <CreatedByClientVersion>3.22082.8.0</CreatedByClientVersion>
   <MinClientVersion>3.22082.8.0</MinClientVersion>
@@ -10,18 +10,15 @@
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(153, 207, 236, 1)</BackgroundColor>
   <DisplayName>ReferenceApp Library</DisplayName>
-  <Description xsi:nil="true"></Description>
-  <CommitMessage xsi:nil="true"></CommitMessage>
-  <Publisher xsi:nil="true"></Publisher>
+  <Description></Description>
+  <CommitMessage></CommitMessage>
+  <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
   <DatabaseReferences>{}</DatabaseReferences>
-  <AppComponents>[{"appComponentName":"40879e85aa83466aa6d96c2b739344c1","displayName":"Recomendation","appName":"1d359ef2-019d-4dc2-b3cd-9267774d0f16","appVersion":"2022-08-29T19:56:28Z","appComponentLibraryLogicalName":"cr7a3_compdescription_1c3b2","appDisplayName":"ReferenceApp Library","environmentName":"439a778f-f966-4fad-b85c-706b1c34dcfa","owner":{"id":"51798635-7784-4c0f-aa39-c032f3304088","displayName":"Diego Siciliani","email":"DiegoS@PPlatform.OnMicrosoft.com","type":"User","tenantId":"8a235459-3d2c-415d-8c1e-e2fe133509ad","userPrincipalName":"DiegoS@PPlatform.OnMicrosoft.com"},"allowCustomization":true,"createdOn":"2022-08-03T12:48:53.928Z","lastModifiedOn":"2022-08-29T19:55:37.18Z","connectionReferences":{},"databaseReferences":{}},{"appComponentName":"e3aff6ca45694181b12142d9bb47a897","displayName":"ControlInfo","appName":"1d359ef2-019d-4dc2-b3cd-9267774d0f16","appVersion":"2022-08-29T19:56:28Z","appComponentLibraryLogicalName":"cr7a3_compdescription_1c3b2","appDisplayName":"ReferenceApp Library","environmentName":"439a778f-f966-4fad-b85c-706b1c34dcfa","owner":{"id":"51798635-7784-4c0f-aa39-c032f3304088","displayName":"Diego Siciliani","email":"DiegoS@PPlatform.OnMicrosoft.com","type":"User","tenantId":"8a235459-3d2c-415d-8c1e-e2fe133509ad","userPrincipalName":"DiegoS@PPlatform.OnMicrosoft.com"},"allowCustomization":true,"createdOn":"2022-08-03T12:48:53.928Z","lastModifiedOn":"2022-08-29T19:55:37.18Z","connectionReferences":{},"databaseReferences":{}}]</AppComponents>
-  <AppComponentDependencies>[]</AppComponentDependencies>
   <CanConsumeAppPass>1</CanConsumeAppPass>
   <CanvasAppType>1</CanvasAppType>
   <BypassConsent>0</BypassConsent>
-  <AdminControlBypassConsent>0</AdminControlBypassConsent>
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
   <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>

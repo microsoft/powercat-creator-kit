@@ -117,25 +117,47 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="ThemeDesigner" xml:space="preserve">
-        <value>Fluent Theme Designer (1.0.19)</value>
+    <data name="SpinButton" xml:space="preserve">
+        <value>Fluent SpinButton (1.0.19) Preview</value>
     </data>
-    <data name="ThemeJSON" xml:space="preserve">
+    <data name="AccessibilityLabel" xml:space="preserve">
+        <value>Accessibility label</value>
+        <comment/>
+    </data>
+    <data name="Theme" xml:space="preserve">
         <value>Theme</value>
     </data>
-    <data name="PrimaryColor" xml:space="preserve">
-        <value>Primary Color</value>
+    <data name="SpinButton_IconName" xml:space="preserve">
+        <value>Icon Name</value>
     </data>
-    <data name="TextColor" xml:space="preserve">
-        <value>Text Color</value>
+    <data name="InputEvent" xml:space="preserve">
+        <value>Input Event</value>
     </data>
-    <data name="BackgroundColor" xml:space="preserve">
-        <value>Background Color</value>
+    <data name="SpinButton_Label" xml:space="preserve">
+        <value>Label</value>
     </data>
-    <data name="ThemeGenerator" xml:space="preserve">
-        <value>Fluent Theme Designer</value>
+    <data name="SpinButton_Suffix" xml:space="preserve">
+        <value>Suffix</value>
     </data>
-    <data name="ThemeDesigner_Desc" xml:space="preserve">
-        <value>A theme designer component to generate Theme JSON</value>
+    <data name="SpinButton_DefaultValue" xml:space="preserve">
+        <value>DefaultValue</value>
+    </data>
+    <data name="SpinButton_Min" xml:space="preserve">
+        <value>Min</value>
+    </data>
+    <data name="SpinButton_Max" xml:space="preserve">
+        <value>Max</value>
+    </data>
+    <data name="SpinButton_Step" xml:space="preserve">
+        <value>Step</value>
+    </data>
+    <data name="SpinButton_Value" xml:space="preserve">
+        <value>Value</value>
+    </data>
+    <data name="SpinButton_DelayOutput" xml:space="preserve">
+        <value>Delay Output</value>
+    </data>
+    <data name="Error" xml:space="preserve">
+        <value>Error</value>
     </data>
 </root>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>cat_spinbuttonpage_4c2cb</Name>
+  <AppVersion>2022-12-02T14:26:41Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.22111.28.0</CreatedByClientVersion>
+  <MinClientVersion>3.22111.28.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1616","primaryDeviceHeight":"888","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.22111.28","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"false","isUnifiedRootApp":"false","sienaVersion":"20221115T132211Z-3.22103.22.0"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>RGBA(0,176,240,1)</BackgroundColor>
+  <DisplayName>SpinButton Page</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences>[]</AuthorizationReferences>
+  <ConnectionReferences>{}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{},"components":[{"componentName":"CustomControl","identifier":"cat_PowerCAT.AutoWidthLabel","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Elevation","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Elevation","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Elevation","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.Pivot","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}},{"componentName":"CustomControl","identifier":"cat_PowerCAT.SpinButton","identifierType":"LogicalName","capabilities":{"pcfExternalServiceUsageAllowed":false}}]}}</DatabaseReferences>
+  <AppComponents>[]</AppComponents>
+  <AppComponentDependencies>[{"appComponentName":"e3aff6ca45694181b12142d9bb47a897","appName":"1b06aeee-76ca-4ed6-b588-8e200b37b927","appComponentLibraryName":"76f29093-d2c5-4753-8c99-08e1e54d165c","appComponentLibraryVersion":"2022-11-15T13:21:49Z","appComponentLibraryLogicalName":"cr7a3_compdescription_1c3b2","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318"},{"appComponentName":"40879e85aa83466aa6d96c2b739344c1","appName":"1b06aeee-76ca-4ed6-b588-8e200b37b927","appComponentLibraryName":"76f29093-d2c5-4753-8c99-08e1e54d165c","appComponentLibraryVersion":"2022-11-15T13:21:49Z","appComponentLibraryLogicalName":"cr7a3_compdescription_1c3b2","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318"},{"appComponentName":"6da4b2f929d240969e49e05e10e720ce","appName":"1b06aeee-76ca-4ed6-b588-8e200b37b927","appComponentLibraryName":"c99e04c6-a751-4b2c-ac59-b4d3ad943f0c","appComponentLibraryVersion":"2022-11-15T13:15:41Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318"}]</AppComponentDependencies>
+  <CanConsumeAppPass>1</CanConsumeAppPass>
+  <CanvasAppType>2</CanvasAppType>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"dependencyid":"","logicalname":"cat_PowerCAT.AutoWidthLabel","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Elevation","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Elevation","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Elevation","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.Pivot","componenttype":66,"componenttypeplatformname":"CustomControl"},{"dependencyid":"","logicalname":"cat_PowerCAT.SpinButton","componenttype":66,"componenttypeplatformname":"CustomControl"},{"logicalname":"cr7a3_compdescription_1c3b2","componenttype":300,"componenttypeplatformname":"CanvasApp"},{"logicalname":"cat_powercatcomponentlibrary_0be3a","componenttype":300,"componenttypeplatformname":"CanvasApp"}]}</CdsDependencies>
+  <IsCustomizable>1</IsCustomizable>
+  <BackgroundImageUri>/CanvasApps/cat_spinbuttonpage_4c2cb_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/cat_spinbuttonpage_4c2cb_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

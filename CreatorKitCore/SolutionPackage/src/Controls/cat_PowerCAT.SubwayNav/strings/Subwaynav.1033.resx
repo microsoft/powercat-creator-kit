@@ -117,25 +117,37 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-    <data name="ThemeDesigner" xml:space="preserve">
-        <value>Fluent Theme Designer (1.0.19)</value>
+    <data name="SubwayNav" xml:space="preserve">
+        <value>SubwayNav (1.0.19) Preview</value>
     </data>
-    <data name="ThemeJSON" xml:space="preserve">
+    <data name="AccessibilityLabel" xml:space="preserve">
+        <value>Accessibility label</value>
+        <comment/>
+    </data>
+    <data name="Theme" xml:space="preserve">
         <value>Theme</value>
     </data>
-    <data name="PrimaryColor" xml:space="preserve">
-        <value>Primary Color</value>
+    <data name="InputEvent" xml:space="preserve">
+        <value>Input event</value>
     </data>
-    <data name="TextColor" xml:space="preserve">
-        <value>Text Color</value>
+    <data name="TextAlignment" xml:space="preserve">
+        <value>Text alignment</value>
+        <comment/>
     </data>
-    <data name="BackgroundColor" xml:space="preserve">
-        <value>Background Color</value>
+    <data name="SelectedKey" xml:space="preserve">
+        <value>Selected key</value>
+        <comment/>
     </data>
-    <data name="ThemeGenerator" xml:space="preserve">
-        <value>Fluent Theme Designer</value>
+    <data name="MaxDisplayedItems" xml:space="preserve">
+        <value>Max displayed items</value>
     </data>
-    <data name="ThemeDesigner_Desc" xml:space="preserve">
-        <value>A theme designer component to generate Theme JSON</value>
+    <data name="OverflowIndex" xml:space="preserve">
+        <value>Overflow index</value>
+    </data>
+    <data name="SubwayNav_Desc" xml:space="preserve">
+        <value>Subwaynav component</value>
+    </data>
+    <data name="WizardCompleteorError" xml:space="preserve">
+        <value>SubwayNav state</value>
     </data>
 </root>

@@ -20,7 +20,7 @@ ProgressIndicator As CanvasComponent:
         Y: =223
         ZIndex: =1
 
-    "ResizableTextarea1_1 As 'Resizable Text Area (1.0.9)'":
+    "ResizableTextarea1_1 As 'Resizable Text Area (1.0.19)'":
         Default: =""
         DisplayMode: =DisplayMode.Edit
         Height: =61
@@ -80,7 +80,7 @@ ProgressIndicator As CanvasComponent:
         Y: =126
         ZIndex: =6
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.9) Preview'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.19) Preview'":
         Description: =ResizableTextarea1_1.Text
         DisplayMode: =DisplayMode.Edit
         Height: =32
@@ -138,7 +138,7 @@ ProgressIndicator As CanvasComponent:
         Y: =2
         ZIndex: =10
 
-    "pivotAppCode_30 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+    "pivotAppCode_30 As 'Fluent Pivot (1.0.19)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-

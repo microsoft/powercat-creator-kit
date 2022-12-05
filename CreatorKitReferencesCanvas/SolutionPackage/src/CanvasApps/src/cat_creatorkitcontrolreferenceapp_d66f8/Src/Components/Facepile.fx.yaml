@@ -18,7 +18,7 @@ Facepile As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_29 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+    "pivotAppCode_29 As 'Fluent Pivot (1.0.19)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -94,7 +94,7 @@ Facepile As CanvasComponent:
         Y: =48
         ZIndex: =6
 
-    "Facepile1 As 'Fluent Facepile (1.0.9) Preview'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.0.19) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =58
         ImageShouldFadeIn: =chkImageShouldFadeIn.Checked

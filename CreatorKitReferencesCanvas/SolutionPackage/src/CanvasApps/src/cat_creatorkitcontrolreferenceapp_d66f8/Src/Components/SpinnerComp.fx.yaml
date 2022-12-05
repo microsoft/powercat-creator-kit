@@ -7,7 +7,7 @@ SpinnerComp As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "SpinnerElevation As 'Fluent Elevation (1.0.9)'":
+    "SpinnerElevation As 'Fluent Elevation (1.0.19)'":
         DisplayMode: =DisplayMode.Edit
         Height: =181
         Width: =359
@@ -186,7 +186,7 @@ SpinnerComp As CanvasComponent:
         Y: =398
         ZIndex: =9
 
-    "Spinner1_1 As 'Fluent Spinner (1.0.9) Preview'":
+    "Spinner1_1 As 'Fluent Spinner (1.0.19) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =158
         Label: =SpinnerLabelInputbox.Value
@@ -210,7 +210,7 @@ SpinnerComp As CanvasComponent:
         Y: =2
         ZIndex: =11
 
-    "pivotAppCode_35 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+    "pivotAppCode_35 As 'Fluent Pivot (1.0.19)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-

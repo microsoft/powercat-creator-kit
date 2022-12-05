@@ -10,7 +10,7 @@
   "HoverFillColor": "Hover fill color",
   "HoverFontColor": "Hover font color",
   "HoverIconColor": "Hover icon color",
-  "Icon": "Fluent Icon (1.0.14)",
+  "Icon": "Fluent Icon (1.0.18)",
   "Icon_Desc": "Icon component",
   "IconColor": "Icon color",
   "IconName": "Icon name",
@@ -23,5 +23,6 @@
   "OutputEvent": "Output event",
   "Text": "Text",
   "TextAlignment": "Text alignment",
-  "Theme": "Theme"
+  "Theme": "Theme",
+  "TooltipContext": "Text"
 }

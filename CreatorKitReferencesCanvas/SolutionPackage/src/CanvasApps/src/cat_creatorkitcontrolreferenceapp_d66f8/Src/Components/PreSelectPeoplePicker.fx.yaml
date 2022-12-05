@@ -7,7 +7,7 @@ PreSelectPeoplePicker As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "ElevationPeoplePicker_1 As 'Fluent Elevation (1.0.9)'":
+    "ElevationPeoplePicker_1 As 'Fluent Elevation (1.0.19)'":
         DisplayMode: =DisplayMode.Edit
         Height: =PeoplePicker1_1.AutoHeight + 50
         Visible: =pivotAppCode_36.Selected.ItemKey="app"
@@ -27,7 +27,7 @@ PreSelectPeoplePicker As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_36 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+    "pivotAppCode_36 As 'Fluent Pivot (1.0.19)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -100,7 +100,7 @@ PreSelectPeoplePicker As CanvasComponent:
         Y: =45
         ZIndex: =5
 
-    "PeoplePicker1_1 As 'Fluent PeoplePicker (%VERSION%) Preview'.pcfdataset":
+    "PeoplePicker1_1 As 'Fluent PeoplePicker (1.0.19) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Error: =false
         Height: =65

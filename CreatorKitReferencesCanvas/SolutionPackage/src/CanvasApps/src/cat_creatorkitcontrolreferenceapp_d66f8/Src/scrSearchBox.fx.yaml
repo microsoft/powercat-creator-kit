@@ -92,7 +92,7 @@ scrSearchBox As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_3 As 'Fluent Elevation (1.0.9)'":
+            "Elevation_3 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription_2.DesiredHeight
                 PaddingBottom: =8
@@ -118,7 +118,7 @@ scrSearchBox As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_5 As 'Fluent Elevation (1.0.9)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -175,7 +175,7 @@ scrSearchBox As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_38 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+                        "pivotAppCode_38 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -250,14 +250,13 @@ scrSearchBox As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SearchBox1 As 'Fluent SearchBox (%VERSION%) Preview'":
-                                AlignInContainer: =AlignInContainer.Stretch
+                            "SearchBox1 As 'Fluent SearchBox (1.0.19) Preview'":
                                 DisableAnimation: =chkDisableAnimation.Checked
                                 DisplayMode: =If( chkDisabledState.Checked, DisplayMode.Disabled, DisplayMode.Edit)
                                 Height: =50
                                 IconName: =ddIconName.Selected.Value
                                 LayoutMinHeight: =200
-                                LayoutMinWidth: =100
+                                LayoutMinWidth: =200
                                 PlaceHolderText: =txtPlateholderTextValue.Value
                                 Theme: =varTheme.themeJSON
                                 Underlined: =chkUnderlined.Checked
@@ -266,8 +265,7 @@ scrSearchBox As screen:
                                 Y: =0
                                 ZIndex: =1
 
-                            "detailsListColors As 'Fluent Details List (1.0.9)'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Stretch
+                            "detailsListColors As 'Fluent Details List (1.0.19)'.pcfdataset":
                                 columns_Items: |-
                                     =Table(
                                         {
@@ -288,7 +286,6 @@ scrSearchBox As screen:
                                     )
                                 Compact: =true
                                 DisplayMode: =DisplayMode.Edit
-                                FillPortions: =1
                                 Height: =200
                                 Items: =Search(colColors, SearchBox1.SearchText, "color", "value")
                                 LayoutMinHeight: =200
@@ -316,8 +313,11 @@ scrSearchBox As screen:
                                     ZIndex: =15
 
                         RightContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
                             Height: =220
                             LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =2
 

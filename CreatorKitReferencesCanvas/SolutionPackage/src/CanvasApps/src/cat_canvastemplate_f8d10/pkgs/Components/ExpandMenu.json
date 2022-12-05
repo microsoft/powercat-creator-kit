@@ -153,7 +153,7 @@
         "Name": "imgExpandButton",
         "Parent": "ExpandMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 79,
+        "PublishOrderIndex": 82,
         "Rules": [
           {
             "Category": "Data",
@@ -407,7 +407,7 @@
             "Name": "galleryTemplate7",
             "Parent": "glExpandMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 81,
+            "PublishOrderIndex": 84,
             "Rules": [
               {
                 "Category": "Design",
@@ -588,7 +588,7 @@
             "Name": "lbLabel",
             "Parent": "glExpandMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 82,
+            "PublishOrderIndex": 85,
             "Rules": [
               {
                 "Category": "Data",
@@ -938,7 +938,7 @@
             "Name": "rectHighlight",
             "Parent": "glExpandMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 83,
+            "PublishOrderIndex": 86,
             "Rules": [
               {
                 "Category": "Data",
@@ -1191,7 +1191,7 @@
             "Name": "imgIcon",
             "Parent": "glExpandMenu",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 84,
+            "PublishOrderIndex": 87,
             "Rules": [
               {
                 "Category": "Data",
@@ -1510,7 +1510,7 @@
         "Name": "glExpandMenu",
         "Parent": "ExpandMenu",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 80,
+        "PublishOrderIndex": 83,
         "Rules": [
           {
             "Category": "Data",
@@ -1759,7 +1759,7 @@
       "GetMenuIconPath",
       "DefaultExpandValue"
     ],
-    "LastModifiedTimestamp": "638029884597462759",
+    "LastModifiedTimestamp": "638055815367749895",
     "Name": "ExpandMenu",
     "Rules": [
       {
@@ -1990,7 +1990,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638029884597462759",
+  "LastModifiedTimestamp": "638055815367749895",
   "Name": "bd39799415284ddcb45ab979ce59d4af",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

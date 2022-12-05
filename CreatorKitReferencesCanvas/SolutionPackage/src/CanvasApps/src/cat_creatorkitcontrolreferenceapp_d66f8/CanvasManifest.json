@@ -19,15 +19,16 @@
       "blockmovingcontrol": true,
       "cdsdataformatting": false,
       "classiccontrols": false,
+      "consistentreturnschemafortabularfunctions": false,
       "copyandmerge": false,
       "datatablev2control": true,
       "delaycontrolrendering": false,
       "delayloadscreens": true,
       "disablecdsfileandlargeimage": false,
+      "disablecommandbar": false,
       "dynamicschema": false,
       "enableappembeddingux": false,
       "enablebarcodereaderfeature": false,
-      "enablecommandbar": false,
       "enablecomponentnamemaps": false,
       "enablecomponentscopeoldbehavior": false,
       "enableeditcacherefreshfrequency": false,
@@ -119,6 +120,7 @@
     "scrFacepile",
     "scrPersona",
     "scrSearchBox",
+    "scrSpinButton",
     "scrDetailsList_CellTypes",
     "scrDetailsList_Sorting",
     "scrAllControlsHolder",
@@ -133,6 +135,7 @@
     "scrDialog",
     "scrPanel",
     "scrBreadcrumb",
-    "scrTemplate"
+    "scrTemplate",
+    "scrSubwayNav"
   ]
 }

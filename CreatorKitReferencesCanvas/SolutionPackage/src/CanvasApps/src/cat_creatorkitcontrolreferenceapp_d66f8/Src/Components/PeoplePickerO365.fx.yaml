@@ -7,7 +7,7 @@ PeoplePickerO365 As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "ElevationPeoplePicker As 'Fluent Elevation (1.0.9)'":
+    "ElevationPeoplePicker As 'Fluent Elevation (1.0.19)'":
         DisplayMode: =DisplayMode.Edit
         Height: =PeoplePicker1.AutoHeight + 50
         Visible: =pivotAppCode_33.Selected.ItemKey="app"
@@ -27,7 +27,7 @@ PeoplePickerO365 As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_33 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+    "pivotAppCode_33 As 'Fluent Pivot (1.0.19)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -121,7 +121,7 @@ PeoplePickerO365 As CanvasComponent:
         Y: =207
         ZIndex: =10
 
-    "PeoplePicker1 As 'Fluent PeoplePicker (%VERSION%) Preview'.pcfdataset":
+    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.19) Preview'.pcfdataset":
         DisplayMode: =If(chkDisabled.Checked,DisplayMode.Disabled,DisplayMode.Edit)
         Error: =chkError.Checked
         Height: =79
@@ -223,7 +223,7 @@ PeoplePickerO365 As CanvasComponent:
         Y: =239
         ZIndex: =15
 
-    "Facepile1_1 As 'Fluent Facepile (1.0.9) Preview'.pcfdataset":
+    "Facepile1_1 As 'Fluent Facepile (1.0.19) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =31
         ImageShouldFadeIn: =true

@@ -180,7 +180,7 @@
             "Name": "htmlText_12",
             "Parent": "MainContainer_4",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 972,
+            "PublishOrderIndex": 1066,
             "Rules": [
               {
                 "Category": "Data",
@@ -432,7 +432,7 @@
         "Name": "MainContainer_4",
         "Parent": "ControlInfo",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 971,
+        "PublishOrderIndex": 1065,
         "Rules": [
           {
             "Category": "Design",
@@ -622,7 +622,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638029207414566655",
+    "LastModifiedTimestamp": "638058267617034974",
     "Name": "ControlInfo",
     "Rules": [
       {
@@ -712,7 +712,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638029207414566655",
+  "LastModifiedTimestamp": "638058267617034974",
   "Name": "1fe3c0f4f7614c8c95f1e6fd99981275",
   "OverridableProperties": {},
   "TemplateOriginalName": "42cb70e0d91745edb293f349994d1e71",

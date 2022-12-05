@@ -56,7 +56,7 @@ scrDialog As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_20 As 'Fluent Elevation (1.0.9)'":
+            "Elevation2_20 As 'Fluent Elevation (1.0.19)'":
                 Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -116,7 +116,7 @@ scrDialog As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_31 As 'Fluent Pivot (1.0.9)'.pcfdataset":
+                    "pivotAppCode_31 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-

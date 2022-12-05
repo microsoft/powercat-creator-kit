@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.22094.198" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.22104.224" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesCanvas</UniqueName>
     <LocalizedNames>
@@ -218,15 +218,35 @@
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SearchBox" displayName="cat_PowerCAT.SearchBox" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Shimmer" displayName="cat_PowerCAT.Shimmer" solution="Active" />
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SpinButton" displayName="cat_PowerCAT.SpinButton" solution="Active" />
+        <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SpinButton" displayName="cat_PowerCAT.SpinButton" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Spinner" displayName="cat_PowerCAT.Spinner" solution="Active" />
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Spinner" displayName="cat_PowerCAT.Spinner" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SubwayNav" displayName="cat_PowerCAT.SubwayNav" solution="Active" />
+        <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SubwayNav" displayName="cat_PowerCAT.SubwayNav" solution="Active" />
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>

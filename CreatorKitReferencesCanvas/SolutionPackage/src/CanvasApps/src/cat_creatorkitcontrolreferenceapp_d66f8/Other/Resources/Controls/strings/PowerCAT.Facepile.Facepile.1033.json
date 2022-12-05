@@ -1,7 +1,7 @@
 {
   "AccessibilityLabel": "Accessibility label",
   "AddbuttonAriaLabel": "Add button Aria Label",
-  "Facepile": "Fluent Facepile (1.0.9) Preview",
+  "Facepile": "Fluent Facepile (1.0.19) Preview",
   "Facepile_Desc": "Facepile component",
   "ImageShouldFadeIn": "Image Should FadeIn",
   "InputEvent": "Input event",
@@ -15,7 +15,7 @@
   "MaxDisplayablePersonas": "Max Displayable Personas",
   "OverflowButtonAriaLabel": "Overflow Button Aria Label",
   "OverflowButtonType": "OverflowButton Type",
-  "PersonaSize": "Event Name",
+  "PersonaSize": "Persona Size",
   "ShowAddButton": "Show Add Button",
   "Theme": "Theme"
 }

@@ -96,6 +96,7 @@ App As appinfo:
             {ItemKey:"icon",ItemDisplayName:"Icon",ItemParentKey:"inputs",TargetScreen:scrIcon},
             {ItemKey:"resizabletextarea",ItemDisplayName:"Resizable Text Area",ItemParentKey:"inputs",TargetScreen:scrResizableTextArea},
             {ItemKey:"searchbox",ItemDisplayName:"SearchBox",ItemParentKey:"inputs",TargetScreen:scrSearchBox},
+            {ItemKey:"spinbutton",ItemDisplayName:"SpinButton",ItemParentKey:"inputs",TargetScreen:scrSpinButton},
         
             {ItemKey:"commands_menus_navs",ItemDisplayName:"Commands, Menus & Navs"},
             {ItemKey:"breadcrumb",ItemDisplayName:"Breadcrumb",ItemParentKey:"commands_menus_navs",TargetScreen:scrBreadcrumb},
@@ -104,6 +105,7 @@ App As appinfo:
             {ItemKey:"contextmenu",ItemDisplayName:"ContextMenu",ItemParentKey:"commands_menus_navs",TargetScreen:scrContextMenu},
             {ItemKey:"nav",ItemDisplayName:"Nav",ItemParentKey:"commands_menus_navs",TargetScreen:scrNav},
             {ItemKey:"pivot",ItemDisplayName:"Pivot",ItemParentKey:"commands_menus_navs",TargetScreen:scrPivot},
+            {ItemKey:"subwaynav",ItemDisplayName:"SubwayNav",ItemParentKey:"commands_menus_navs",TargetScreen:scrSubwayNav},
             {ItemKey:"itemsnlist",ItemDisplayName:"Items & Lists"},
             {ItemKey:"facepile",ItemDisplayName:"Facepile",ItemParentKey:"itemsnlist",TargetScreen:scrFacepile},
             {ItemKey:"persona",ItemDisplayName:"Persona",ItemParentKey:"itemsnlist",TargetScreen:scrPersona},

@@ -3,7 +3,7 @@ name: Creator Kit Feature request
 about: Suggest a new component or enhancements to existing components in the Creator
   Kit
 title: "[Feature]: "
-labels: feature, needs triage
+labels: ''
 assignees: denisem-msft
 
 ---

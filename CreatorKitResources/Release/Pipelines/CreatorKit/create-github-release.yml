@@ -24,6 +24,10 @@ variables:
 - group: alm-accelerator-variable-group
 
 steps:
+# Checkout our GitHub Branch
+- checkout: self
+  displayName: 'Checkout Source Branch'
+
 # Download the artifacts from the latest deployment of CreatorKitCore to production.
 - task: DownloadPipelineArtifact@2
   inputs:
@@ -60,7 +64,7 @@ steps:
     New-Item -Path $(Pipeline.Workspace)\assetstaging -ItemType Directory
 
     Copy-Item '$(Pipeline.Workspace)\drop\*managed.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
-    Copy-Item '$(Build.SourcesDirectory)\CreatorKitResources\Release\Collateral\CreatorKit\*.*' -Destination '$(Pipeline.Workspace)\assetstaging'
+    Copy-Item '$(Build.SourcesDirectory)\powercat-creator-kit\CreatorKitResources\Release\Collateral\CreatorKit\*.*' -Destination '$(Pipeline.Workspace)\assetstaging'
 
     $compress = @{
       Path = '$(Pipeline.Workspace)\assetstaging\*.*'
@@ -94,7 +98,7 @@ steps:
     releaseMonth: ${{parameters.ReleaseMonthNumber}}
     releaseYear: ${{parameters.ReleaseYearNumber}}
     connectionName: 'powercat-alm'
-    releaseNotesPath: 'CreatorKitResources/Release/Notes/'
+    releaseNotesPath: 'powercat-creator-kit/CreatorKitResources/Release/Notes/'
     issueClosingComment: 'This has been fixed in the latest release.'
     closeIssues: ${{parameters.CloseMilestoneIssues}}
     isPreRelease: false

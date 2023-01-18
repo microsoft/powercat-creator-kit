@@ -1,24 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Name>cat_powercatcomponentlibrary_0be3a</Name>
-  <AppVersion>2022-11-15T13:15:41Z</AppVersion>
+  <AppVersion>2023-01-16T14:52:49Z</AppVersion>
   <Status>Ready</Status>
-  <CreatedByClientVersion>3.22103.22.0</CreatedByClientVersion>
-  <MinClientVersion>3.22103.22.0</MinClientVersion>
-  <Tags>{"primaryDeviceWidth":"1600","primaryDeviceHeight":"1136","sienaVersion":"20221011T065729Z-3.22091.27.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.22103.22","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}</Tags>
+  <CreatedByClientVersion>3.22122.15.0</CreatedByClientVersion>
+  <MinClientVersion>3.22122.15.0</MinClientVersion>
+  <Tags>{"primaryDeviceWidth":"1600","primaryDeviceHeight":"1136","sienaVersion":"20230116T082811Z-3.22122.15.0","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"true","primaryFormFactor":"Phone","publisherVersion":"3.22122.15","minimumRequiredApiVersion":"2.2.0","hasComponent":"true","hasUnlockedComponent":"true","isUnifiedRootApp":"false"}</Tags>
   <IsCdsUpgraded>0</IsCdsUpgraded>
   <GalleryItemId xsi:nil="true"></GalleryItemId>
   <BackgroundColor>rgba(50, 50, 50, 1)</BackgroundColor>
   <DisplayName>Power CAT Component Library</DisplayName>
-  <Description></Description>
-  <CommitMessage></CommitMessage>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
   <Publisher></Publisher>
   <AuthorizationReferences>[]</AuthorizationReferences>
   <ConnectionReferences>{}</ConnectionReferences>
   <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{}}}</DatabaseReferences>
+  <AppComponents>[{"appComponentName":"952d39d80fc84420b772a5058b19d909","displayName":"ExpandMenu","appName":"c99e04c6-a751-4b2c-ac59-b4d3ad943f0c","appVersion":"2023-01-16T14:52:49Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","appDisplayName":"Power CAT Component Library","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318","owner":{"id":"3b8bd16c-e11b-408a-aae3-91409c286939","displayName":"Michael Peltier","type":"User","tenantId":"67c96cd6-4a95-46ee-ac9b-8ee13ae256c4","userPrincipalName":"Michaelp@powercattools.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2022-11-15T13:15:41.414Z","lastModifiedOn":"2023-01-16T08:28:18.012Z","connectionReferences":{},"databaseReferences":{"default.cds":{"databaseDetails":{"referenceType":"NotSpecified","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{}}}},{"appComponentName":"44e7951b1fad4ad98126f8c108dd1e9f","displayName":"Header","appName":"c99e04c6-a751-4b2c-ac59-b4d3ad943f0c","appVersion":"2023-01-16T14:52:49Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","appDisplayName":"Power CAT Component Library","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318","owner":{"id":"3b8bd16c-e11b-408a-aae3-91409c286939","displayName":"Michael Peltier","type":"User","tenantId":"67c96cd6-4a95-46ee-ac9b-8ee13ae256c4","userPrincipalName":"Michaelp@powercattools.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2022-11-15T13:15:41.414Z","lastModifiedOn":"2023-01-16T08:28:18.012Z","connectionReferences":{},"databaseReferences":{"default.cds":{"databaseDetails":{"referenceType":"NotSpecified","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{}}}},{"appComponentName":"2e88179d732a402184a767c94eab038b","displayName":"Dialog","appName":"c99e04c6-a751-4b2c-ac59-b4d3ad943f0c","appVersion":"2023-01-16T14:52:49Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","appDisplayName":"Power CAT Component Library","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318","owner":{"id":"3b8bd16c-e11b-408a-aae3-91409c286939","displayName":"Michael Peltier","type":"User","tenantId":"67c96cd6-4a95-46ee-ac9b-8ee13ae256c4","userPrincipalName":"Michaelp@powercattools.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2022-11-15T13:15:41.414Z","lastModifiedOn":"2023-01-16T08:28:18.012Z","connectionReferences":{},"databaseReferences":{"default.cds":{"databaseDetails":{"referenceType":"NotSpecified","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{}}}},{"appComponentName":"6da4b2f929d240969e49e05e10e720ce","displayName":"Panel","appName":"c99e04c6-a751-4b2c-ac59-b4d3ad943f0c","appVersion":"2023-01-16T14:52:49Z","appComponentLibraryLogicalName":"cat_powercatcomponentlibrary_0be3a","appDisplayName":"Power CAT Component Library","environmentName":"ba328f6a-7a02-e71d-8104-477f92daf318","owner":{"id":"3b8bd16c-e11b-408a-aae3-91409c286939","displayName":"Michael Peltier","type":"User","tenantId":"67c96cd6-4a95-46ee-ac9b-8ee13ae256c4","userPrincipalName":"Michaelp@powercattools.onmicrosoft.com"},"allowCustomization":true,"createdOn":"2022-11-15T13:15:41.414Z","lastModifiedOn":"2023-01-16T08:28:18.012Z","connectionReferences":{},"databaseReferences":{"default.cds":{"databaseDetails":{"referenceType":"NotSpecified","environmentName":"default.cds","overrideValues":{"status":"NotSpecified"}},"dataSources":{}}}}]</AppComponents>
+  <AppComponentDependencies>[]</AppComponentDependencies>
   <CanConsumeAppPass>1</CanConsumeAppPass>
   <CanvasAppType>1</CanvasAppType>
   <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
   <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>

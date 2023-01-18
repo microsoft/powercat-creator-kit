@@ -152,7 +152,6 @@ Dialog As CanvasComponent:
                         ZIndex: =2
 
                 DialogContentContainer As groupContainer.manualLayoutContainer:
-                    PaddingBottom: =5
                     Width: =Dialog.DialogWidth
                     ZIndex: =2
 

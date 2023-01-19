@@ -7,10 +7,16 @@ parameters:
 - name: CloseMilestoneIssues
   type: boolean
   default: false
+- name: DraftRelease
+  type: boolean
+  default: true
+- name: HotfixReleaseNumber
+  type: number
+  default: 0
 - name: PrepareAppSourcePackage
   type: boolean
-  default: false  
-
+  default: false
+  
 trigger: none
 pr: none
 resources:
@@ -104,4 +110,8 @@ steps:
     releaseNotesPath: 'powercat-creator-kit/CreatorKitResources/Release/Notes/'
     issueClosingComment: 'This has been fixed in the latest release.'
     closeIssues: ${{parameters.CloseMilestoneIssues}}
+    isDraft: ${{parameters.DraftRelease}}
     isPreRelease: false
+    hotfixReleaseNumber: ${{parameters.HotfixReleaseNumber}}
+    queryHeadingDelimited: ""
+    prepareAppSourcePackage: ${{parameters.PrepareAppSourcePackage}}

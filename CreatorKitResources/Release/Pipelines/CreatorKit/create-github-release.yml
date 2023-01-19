@@ -7,6 +7,9 @@ parameters:
 - name: CloseMilestoneIssues
   type: boolean
   default: false
+- name: PrepareAppSourcePackage
+  type: boolean
+  default: false  
 
 trigger: none
 pr: none

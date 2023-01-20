@@ -102,6 +102,7 @@ Panel As CanvasComponent:
             LayoutMode: =LayoutMode.Auto
             PaddingBottom: =10
             PaddingLeft: =20
+            PaddingRight: =20
             PaddingTop: =10
             Width: =Panel.DialogWidth
             X: =40

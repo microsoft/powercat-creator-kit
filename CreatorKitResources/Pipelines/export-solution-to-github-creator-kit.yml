@@ -102,10 +102,10 @@ stages:
         gitAccessUrl: $(GitAccessUrl)
         project: ${{parameters.Project}}
         repo: ${{parameters.Repo}}
+        email: ${{parameters.Email}}
         branch: ${{parameters.Branch}}
         branchToCreate: ${{parameters.BranchToCreate}}
         commitMessage: ${{parameters.CommitMessage}}
-        email: ${{parameters.Email}}
         serviceConnectionName: ${{parameters.ServiceConnectionName}}
         serviceConnectionUrl: ${{parameters.ServiceConnectionUrl}}
         solutionName: ${{parameters.SolutionName}}

@@ -1,0 +1,217 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "customapis",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "customapi",
+    "MaxGetRowsCount": 500,
+    "Name": "Custom APIs",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "allowedcustomprocessingsteptype": "Allowed Custom Processing Step Type",
+      "bindingtype": "Binding Type",
+      "boundentitylogicalname": "Bound Entity Logical Name",
+      "CatalogAssignments": "Catalog Assignments",
+      "componentidunique": "Row id unique",
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "customapi_AsyncOperations": "System Jobs",
+      "customapi_BulkDeleteFailures": "Bulk Delete Failures",
+      "customapi_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "customapi_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "customapi_ProcessSession": "Process Sessions",
+      "customapi_SyncErrors": "Sync Errors",
+      "customapiid": "Custom API",
+      "CustomAPIRequestParameters": "Custom API Request Parameters",
+      "CustomAPIResponseProperties": "Custom API Response Properties",
+      "description": "Description",
+      "displayname": "Display Name",
+      "executeprivilegename": "Execute Privilege Name",
+      "importsequencenumber": "Import Sequence Number",
+      "isfunction": "Is Function",
+      "ismanaged": "Is Managed",
+      "isprivate": "Is Private",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "overriddencreatedon": "Record Created On",
+      "overwritetime": "Record Overwrite Time",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "PluginTypeId": "Plugin Type",
+      "SdkMessageId": "Sdk Message",
+      "solutionid": "Solution",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "uniquename": "Unique Name",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number",
+      "workflowsdkstepenabled": "Enabled for Workflow"
+    },
+    "PreferredName": "Custom APIs",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Custom APIs (Views)",
+    "Name": "_customapi_views",
+    "RelatedEntityName": "Custom APIs",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2d2e7352-3424-4aae-8c22-caf791572b30": "Inactive Custom APIs",
+      "5f8de557-15e5-4d06-a166-a0e5dc458e3d": "Active Custom APIs",
+      "7afd9cff-91b5-4134-9cac-3a900dc58020": "Custom API Advanced Find View",
+      "a5b5fe13-8376-40e2-8738-60b6b6ecc0f8": "Custom API Associated View",
+      "e2c4c4ff-8ce9-486c-9073-809cbaac18b3": "Custom API Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Allowed Custom Processing Step Type (Custom APIs)",
+    "Name": "customapi_allowedcustomprocessingsteptype",
+    "OptionSetInfoNameMapping": {
+      "0": "None",
+      "1": "Async Only",
+      "2": "Sync and Async"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "allowedcustomprocessingsteptype",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "allowedcustomprocessingsteptype",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Binding Type (Custom APIs)",
+    "Name": "customapi_bindingtype",
+    "OptionSetInfoNameMapping": {
+      "0": "Global",
+      "1": "Entity",
+      "2": "Entity Collection"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "bindingtype",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "bindingtype",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Function (Custom APIs)",
+    "Name": "customapi_isfunction",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isfunction",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isfunction",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Private (Custom APIs)",
+    "Name": "customapi_isprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isprivate",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isprivate",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Custom APIs)",
+    "Name": "customapi_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Custom APIs)",
+    "Name": "customapi_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Enabled for Workflow (Custom APIs)",
+    "Name": "customapi_workflowsdkstepenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "workflowsdkstepenabled",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "workflowsdkstepenabled",
+    "RelatedEntityName": "Custom APIs",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,199 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sdkmessages",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sdkmessage",
+    "Name": "Sdk Messages",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "autotransact": "Auto Transact",
+      "availability": "Availability",
+      "categoryname": "Category Name",
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "CustomAPIId": "Custom APIs",
+      "customizationlevel": "CustomizationLevel",
+      "executeprivilegename": "Execute Privilege Name",
+      "expand": "Expand",
+      "introducedversion": "Introduced Version",
+      "isactive": "Is Active",
+      "ismanaged": "State",
+      "isprivate": "Is Private",
+      "isreadonly": "Intent",
+      "isvalidforexecuteasync": "Is Valid for Execute Async",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "organizationid": "OrganizationId",
+      "overwritetime": "Record Overwrite Time",
+      "sdkmessage_serviceplanmapping": "Service Plan Mappings",
+      "sdkmessageid": "SdkMessageId",
+      "sdkmessageid_sdkmessagefilter": "Sdk Message Filters",
+      "sdkmessageid_sdkmessageprocessingstep": "Sdk Message Processing Steps",
+      "sdkmessageidunique": "SdkMessageIdUnique",
+      "solutionid": "Solution",
+      "template": "Template",
+      "throttlesettings": "Throttle Settings",
+      "versionnumber": "VersionNumber",
+      "workflowsdkstepenabled": "WorkflowSdkStepEnabled"
+    },
+    "PreferredName": "Sdk Messages",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Sdk Messages (Views)",
+    "Name": "_sdkmessage_views",
+    "RelatedEntityName": "Sdk Messages",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "707f31eb-5cb7-4702-8288-41898d5f0dbf": "Default View",
+      "a6c94ac0-2771-4f2d-8f78-426bb1f0acf2": "Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Auto Transact (Sdk Messages)",
+    "Name": "sdkmessage_autotransact",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "autotransact",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "autotransact",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Expand (Sdk Messages)",
+    "Name": "sdkmessage_expand",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "expand",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "expand",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Active (Sdk Messages)",
+    "Name": "sdkmessage_isactive",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isactive",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isactive",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Private (Sdk Messages)",
+    "Name": "sdkmessage_isprivate",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isprivate",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isprivate",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Valid for Execute Async (Sdk Messages)",
+    "Name": "sdkmessage_isvalidforexecuteasync",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isvalidforexecuteasync",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isvalidforexecuteasync",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Template (Sdk Messages)",
+    "Name": "sdkmessage_template",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "template",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "template",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "WorkflowSdkStepEnabled (Sdk Messages)",
+    "Name": "sdkmessage_workflowsdkstepenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "workflowsdkstepenabled",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "workflowsdkstepenabled",
+    "RelatedEntityName": "Sdk Messages",
+    "Type": "OptionSetInfo"
+  }
+]

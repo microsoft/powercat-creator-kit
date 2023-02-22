@@ -1,0 +1,5 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(colPatterns, {id:0,pattern:"Rich Card",default:true },{id:1,pattern:"Dynamic ContextMenu root" },{id:2,pattern:"MessageBar"});
+

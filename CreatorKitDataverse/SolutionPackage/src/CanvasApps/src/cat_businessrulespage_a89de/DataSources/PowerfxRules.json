@@ -1,0 +1,157 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "powerfxrules",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "powerfxrule",
+    "MaxGetRowsCount": 500,
+    "Name": "PowerfxRules",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "category": "Category",
+      "componentidunique": "Row id unique",
+      "componentstate": "Component State",
+      "context": "Context",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "expression": "Expression",
+      "importsequencenumber": "Import Sequence Number",
+      "ismanaged": "Is Managed",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "overriddencreatedon": "Record Created On",
+      "overwritetime": "Record Overwrite Time",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "powerfxrule_AsyncOperations": "System Jobs",
+      "powerfxrule_BulkDeleteFailures": "Bulk Delete Failures",
+      "powerfxrule_DuplicateBaseRecord": "Duplicate Records (powerfxrule_DuplicateBaseRecord)",
+      "powerfxrule_DuplicateMatchingRecord": "Duplicate Records (powerfxrule_DuplicateMatchingRecord)",
+      "powerfxrule_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "powerfxrule_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "powerfxrule_ProcessSession": "Process Sessions",
+      "powerfxrule_sdkmessageprocessingstep": "Sdk Message Processing Steps",
+      "powerfxrule_SyncErrors": "Sync Errors",
+      "powerfxruleid": "PowerfxRule",
+      "solutionid": "Solution",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "uniquename": "Unique Name",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PowerfxRules",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PowerfxRules (Views)",
+    "Name": "_powerfxrule_views",
+    "RelatedEntityName": "PowerfxRules",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {}
+  },
+  {
+    "DisplayName": "Is Component Managed",
+    "Name": "ismanaged",
+    "OptionSetInfoNameMapping": {
+      "0": "Unmanaged",
+      "1": "Managed"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "PowerfxRules"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "Plug-in Types"
+      },
+      "OptionSetReferenceItem3": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "Sdk Message Filters"
+      },
+      "OptionSetReferenceItem4": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "ismanaged",
+    "RelatedEntityName": "PowerfxRules",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Category (PowerfxRules)",
+    "Name": "powerfxrule_category",
+    "OptionSetInfoNameMapping": {
+      "0": "Workflow",
+      "1": "Business Rule"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "category",
+        "OptionSetReferenceEntityName": "PowerfxRules"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "category",
+    "RelatedEntityName": "PowerfxRules",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (PowerfxRules)",
+    "Name": "powerfxrule_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PowerfxRules"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PowerfxRules",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PowerfxRules)",
+    "Name": "powerfxrule_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PowerfxRules"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PowerfxRules",
+    "Type": "OptionSetInfo"
+  }
+]

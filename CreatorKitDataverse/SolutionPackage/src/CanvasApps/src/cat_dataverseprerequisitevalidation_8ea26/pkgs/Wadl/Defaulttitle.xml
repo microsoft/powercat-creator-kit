@@ -1,0 +1,168 @@
+<application xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:service="https://unitedstates-002.azure-apim.net/apim/cat-5foffice-20365-20users-20-2d-20license-5f096cc84bff3b82df" xmlns:siena="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11" siena:serviceId="Defaulttitle" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="Default title"></doc>
+  <grammars>
+    <jsonTypes targetNamespace="https://unitedstates-002.azure-apim.net/apim/cat-5foffice-20365-20users-20-2d-20license-5f096cc84bff3b82df" xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+      <string name="ListMyLicenseDetails_responses_200_def__ux40_odata_context_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_id_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_skuId_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_skuPartNumber_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_servicePlanId_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_servicePlanName_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_provisioningStatus_def" />
+      <string name="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_appliesTo_def" />
+      <object name="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def">
+        <property name="servicePlanId" type="string" />
+        <property name="servicePlanName" type="string" />
+        <property name="provisioningStatus" type="string" />
+        <property name="appliesTo" type="string" />
+      </object>
+      <array typeRef="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def" name="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def" />
+      <object name="ListMyLicenseDetails_responses_200_def_value_def_items_def">
+        <property name="id" type="string" />
+        <property name="skuId" type="string" />
+        <property name="skuPartNumber" type="string" />
+        <property name="servicePlans" typeRef="ListMyLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def" />
+      </object>
+      <array typeRef="ListMyLicenseDetails_responses_200_def_value_def_items_def" name="ListMyLicenseDetails_responses_200_def_value_def" />
+      <object name="ListMyLicenseDetails_responses_200_def">
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="ListMyLicenseDetails_responses_200_def_value_def" />
+      </object>
+      <string name="ListLicenseDetails_responses_200_def__ux40_odata_context_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_id_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_skuId_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_skuPartNumber_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_servicePlanId_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_servicePlanName_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_provisioningStatus_def" />
+      <string name="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def_appliesTo_def" />
+      <object name="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def">
+        <property name="servicePlanId" type="string" />
+        <property name="servicePlanName" type="string" />
+        <property name="provisioningStatus" type="string" />
+        <property name="appliesTo" type="string" />
+      </object>
+      <array typeRef="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def_items_def" name="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def" />
+      <object name="ListLicenseDetails_responses_200_def_value_def_items_def">
+        <property name="id" type="string" />
+        <property name="skuId" type="string" />
+        <property name="skuPartNumber" type="string" />
+        <property name="servicePlans" typeRef="ListLicenseDetails_responses_200_def_value_def_items_def_servicePlans_def" />
+      </object>
+      <array typeRef="ListLicenseDetails_responses_200_def_value_def_items_def" name="ListLicenseDetails_responses_200_def_value_def" />
+      <object name="ListLicenseDetails_responses_200_def">
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="ListLicenseDetails_responses_200_def_value_def" />
+      </object>
+      <string name="AssignLicense_param_body_def_addLicenses_def_items_def_disabledPlans_def_items_def" />
+      <array type="string" name="AssignLicense_param_body_def_addLicenses_def_items_def_disabledPlans_def" />
+      <string name="AssignLicense_param_body_def_addLicenses_def_items_def_skuId_def" />
+      <object name="AssignLicense_param_body_def_addLicenses_def_items_def">
+        <property name="disabledPlans" typeRef="AssignLicense_param_body_def_addLicenses_def_items_def_disabledPlans_def" />
+        <property name="skuId" type="string" />
+      </object>
+      <array typeRef="AssignLicense_param_body_def_addLicenses_def_items_def" name="AssignLicense_param_body_def_addLicenses_def" />
+      <string name="AssignLicense_param_body_def_removeLicenses_def_items_def" />
+      <array type="string" name="AssignLicense_param_body_def_removeLicenses_def" />
+      <object name="AssignLicense_param_body_def">
+        <property name="addLicenses" typeRef="AssignLicense_param_body_def_addLicenses_def" />
+        <property name="removeLicenses" typeRef="AssignLicense_param_body_def_removeLicenses_def" />
+      </object>
+      <string name="ListSubscribedSKUs_responses_200_def__ux40_odata_context_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_capabilityStatus_def" />
+      <integer name="ListSubscribedSKUs_responses_200_def_value_def_items_def_consumedUnits_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_id_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_skuId_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_skuPartNumber_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_appliesTo_def" />
+      <integer name="ListSubscribedSKUs_responses_200_def_value_def_items_def_prepaidUnits_def_enabled_def" />
+      <integer name="ListSubscribedSKUs_responses_200_def_value_def_items_def_prepaidUnits_def_suspended_def" />
+      <integer name="ListSubscribedSKUs_responses_200_def_value_def_items_def_prepaidUnits_def_warning_def" />
+      <object name="ListSubscribedSKUs_responses_200_def_value_def_items_def_prepaidUnits_def">
+        <property name="enabled" type="integer" />
+        <property name="suspended" type="integer" />
+        <property name="warning" type="integer" />
+      </object>
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def_items_def_servicePlanId_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def_items_def_servicePlanName_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def_items_def_provisioningStatus_def" />
+      <string name="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def_items_def_appliesTo_def" />
+      <object name="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def_items_def">
+        <property name="servicePlanId" type="string" />
+        <property name="servicePlanName" type="string" />
+        <property name="provisioningStatus" type="string" />
+        <property name="appliesTo" type="string" />
+      </object>
+      <array typeRef="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def_items_def" name="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def" />
+      <object name="ListSubscribedSKUs_responses_200_def_value_def_items_def">
+        <property name="capabilityStatus" type="string" />
+        <property name="consumedUnits" type="integer" />
+        <property name="id" type="string" />
+        <property name="skuId" type="string" />
+        <property name="skuPartNumber" type="string" />
+        <property name="appliesTo" type="string" />
+        <property name="prepaidUnits" typeRef="ListSubscribedSKUs_responses_200_def_value_def_items_def_prepaidUnits_def" />
+        <property name="servicePlans" typeRef="ListSubscribedSKUs_responses_200_def_value_def_items_def_servicePlans_def" />
+      </object>
+      <array typeRef="ListSubscribedSKUs_responses_200_def_value_def_items_def" name="ListSubscribedSKUs_responses_200_def_value_def" />
+      <object name="ListSubscribedSKUs_responses_200_def">
+        <property name="@odata.context" type="string" />
+        <property name="value" typeRef="ListSubscribedSKUs_responses_200_def_value_def" />
+      </object>
+    </jsonTypes>
+  </grammars>
+  <resources siena:authenticationProviderHref="#PowerAppAuth" base="https://unitedstates-002.azure-apim.net/apim/cat-5foffice-20365-20users-20-2d-20license-5f096cc84bff3b82df">
+    <resource path="/{connectionId}/v1.0/me/licenseDetails">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListMyLicenseDetails" actionName="ListMyLicenseDetails" siena:isDeprecated="false">
+        <doc title="List My License Details&#xA;Returns a list of license details assigned to the calling user" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListMyLicenseDetails_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/users/{id}/licenseDetails">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="id" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListLicenseDetails" actionName="ListLicenseDetails" siena:isDeprecated="false">
+        <doc title="List License Details&#xA;Lists the license details of a provided user ID" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListLicenseDetails_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/users/{id}/assignLicense">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <param style="template" name="id" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="POST" id="AssignLicense" actionName="AssignLicense" siena:isDeprecated="false">
+        <doc title="Assign License&#xA;Add or remove specified licenses to a given user" />
+        <request>
+          <representation mediaType="application/json">
+            <param style="plain" name="addLicenses" path="/addLicenses" type="service:AssignLicense_param_body_def_addLicenses_def" />
+            <param style="plain" name="removeLicenses" path="/removeLicenses" type="service:AssignLicense_param_body_def_removeLicenses_def" />
+          </representation>
+        </request>
+      </method>
+    </resource>
+    <resource path="/{connectionId}/v1.0/subscribedSkus">
+      <param style="template" name="connectionId" type="xs:string" required="true" />
+      <method siena:requiresAuthentication="true" name="GET" id="ListSubscribedSKUs" actionName="ListSubscribedSKUs" siena:isDeprecated="false">
+        <doc title="List Subscribed SKUs&#xA;List license SKUs available to the organization" />
+        <request />
+        <response>
+          <representation mediaType="application/json" element="service:ListSubscribedSKUs_responses_200_def" />
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <authenticationProviders xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <connectionProvider id="PowerAppAuth" siena:connectionProviderId="shared_cat-5foffice-20365-20users-20-2d-20license-5f096cc84bff3b82df" />
+  </authenticationProviders>
+  <template xmlns="http://schemas.microsoft.com/MicrosoftProjectSiena/WADL/2014/11">
+    <variable name="connectionId">
+      <modifyParams style="template" name="connectionId" attribute="fixed" />
+    </variable>
+  </template>
+</application>

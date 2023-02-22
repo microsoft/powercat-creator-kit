@@ -1,0 +1,87 @@
+{
+  "ComponentIndexes": {},
+  "ControlUniqueGuids": {},
+  "ControlUniqueIds": {
+    "App": 1,
+    "Button1": 11,
+    "Gallery1": 12,
+    "galleryTemplate1": 13,
+    "Image1": 16,
+    "Rectangle1": 14,
+    "Screen1": 3,
+    "Subtitle1": 17,
+    "Title1": 15
+  },
+  "FunctionParamsInvariantScripts": {},
+  "FunctionParamsInvariantScriptsOnInstances": {},
+  "HeaderLastSavedDateTimeUTC": "01/11/2023 15:09:38",
+  "IsLegacyComponentAllowGlobalScopeCase": false,
+  "LocalConnectionIDReferences": {},
+  "LocalDatabaseReferencesAsEmpty": false,
+  "LocalResourceFileNames": {},
+  "LocalResourceRootPaths": {},
+  "OrderComponentMetadata": {},
+  "OrderComponentTemplate": {},
+  "OrderDataSource": {
+    "CustomGallerySample": 7,
+    "PowerfxRules": 6,
+    "PowerfxRules\\componentstate": 2,
+    "PowerfxRules\\default.cds_powerfxrule_views": 5,
+    "PowerfxRules\\ismanaged": 0,
+    "PowerfxRules\\powerfxrule_category": 1,
+    "PowerfxRules\\powerfxrule_statecode": 3,
+    "PowerfxRules\\powerfxrule_statuscode": 4
+  },
+  "OrderGroupControls": {},
+  "OrderPcfTemplate": {
+    "Microsoft_CoreControls_Button": 1,
+    "Microsoft_CoreControls_Label": 0
+  },
+  "OrderTemplate": {},
+  "OrderXMLTemplate": {
+    "gallery": 0,
+    "image": 2,
+    "rectangle": 1
+  },
+  "OverridablePropertiesEntry": {
+    "App": {},
+    "Button1": {},
+    "Gallery1": {},
+    "galleryTemplate1": {},
+    "Image1": {},
+    "Rectangle1": {},
+    "Screen1": {},
+    "Subtitle1": {},
+    "Title1": {}
+  },
+  "PCFDynamicSchemaForIRRetrievalEntry": {},
+  "PublishOrderIndices": {
+    "App": 0,
+    "Button1": 6,
+    "Gallery1": 0,
+    "galleryTemplate1": 1,
+    "Image1": 4,
+    "Rectangle1": 2,
+    "Screen1": 0,
+    "Subtitle1": 5,
+    "Title1": 3
+  },
+  "ResourcesJsonIndices": {
+    "Image-SampleImage": 0
+  },
+  "RuleScreenIdWithoutScreen": {},
+  "TemplateVersions": {},
+  "VolatileProperties": {
+    "AnalysisLoadTime": 0.029472999999999999,
+    "ControlCount": {
+      "gallery": 2,
+      "galleryTemplate": 2,
+      "image": 2,
+      "Microsoft_CoreControls_Button": 2,
+      "Microsoft_CoreControls_Label": 4,
+      "rectangle": 2
+    },
+    "ErrorCount": 0
+  },
+  "WasLocalDatabaseReferencesEmpty": false
+}

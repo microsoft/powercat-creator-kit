@@ -1,0 +1,552 @@
+"'Home Screen' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    RootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =1
+
+        Rectangle1 As rectangle:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(225, 223, 221, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            HoverFill: =RGBA(225, 223, 221, 1)
+            PressedFill: =RGBA(225, 223, 221, 1)
+            Width: =1366
+            Y: =72
+            ZIndex: =2
+
+        Header As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =160
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =32
+            ZIndex: =3
+
+            Label1 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =16
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =0  
+                Text: ="Overview"
+                Width: =320
+                X: =35
+                Y: =15
+                ZIndex: =1
+
+            lblTitle_5 As Label:
+                AlignInContainer: =AlignInContainer.Start
+                AutoHeight: =false
+                Color: =    
+                DisplayMode: =DisplayMode.View
+                FillPortions: =1
+                FontSize: =11
+                FontWeight: =FontWeight.Normal
+                Height: =32
+                LayoutMinHeight: =80
+                LayoutMinWidth: =320
+                Text: ="Below are the features highlighted in the companion tool, segmented into categories of how each helps accelerate you to value."
+                VerticalAlignment: =VerticalAlign.Top
+                Width: =750
+                Wrap: =true
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+        PowerActionsContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Start
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            Width: |
+                =Min(1300, Parent.Width)   
+            ZIndex: =5
+
+            "Pivot1 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =46
+                Items: |-
+                    =Table(
+                      {
+                          ItemKey: "tabOverview",
+                          ItemDisplayName: "Overview"
+                      },
+                      {
+                          ItemKey: "tabOptimize",
+                          ItemDisplayName: "Optimize"
+                      },
+                      {
+                          ItemKey: "tabModel",
+                          ItemDisplayName: "Model"
+                      },
+                      {
+                          ItemKey: "tabManage",
+                          ItemDisplayName: "Manage"
+                      },
+                      {
+                          ItemKey: "tabIntegrate",
+                          ItemDisplayName: "Integrate"
+                      },
+                      {
+                          ItemKey: "tabActivate",
+                          ItemDisplayName: "Activate"
+                      }
+                    )
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Normal
+                RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                Theme: =AppThemeJson
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                ItemDisplayName1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="ItemDisplayName"
+                    FieldName: ="ItemDisplayName"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =7
+
+                ItemKey1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="ItemKey"
+                    FieldName: ="ItemKey"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =2
+                    ZIndex: =8
+
+            Label1_3 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =12
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =8
+                Text: ="Features"
+                Width: =320
+                X: =35
+                Y: =15
+                ZIndex: =2
+
+            Gallery2 As gallery.galleryVertical:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                FillPortions: =0
+                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                FocusedBorderThickness: =2
+                Height: =210
+                Items: |-
+                    =Table(
+                    {
+                     Title:"Power Fx Custom Actions",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                     Learn:"http://gothere.com",
+                     Page:'Power Actions Page'
+                    },
+                    {
+                     Title:"Business Rules",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar.",
+                     Learn:"http://gothere.com",
+                     Page:'Business Rules Page'
+                    }
+                    )
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: =
+                TemplatePadding: =0
+                TemplateSize: =200
+                Width: =0
+                WrapCount: =If(Self.Width <= 1200 && Self.Width > 800, 2, Self.Width < 800, 1, 3)
+                Y: =86
+                ZIndex: =3
+
+                "Elevation1_2 As 'Fluent Elevation (1.0.19)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =200
+                    HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth8
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Width: =400
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                InnerContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =10
+                    Width: =400
+                    ZIndex: =2
+
+                    Label2 As Label:
+                        Color: =ColorValue(AppTheme.palette.themePrimary)
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =9
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Optimize"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =32
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lblTitle_1 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =12
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =ThisItem.Title
+                            TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    lblTitle_4 As Label:
+                        AutoHeight: =false
+                        Color: =    
+                        DisplayMode: =DisplayMode.View
+                        FontSize: =10
+                        FontWeight: =FontWeight.Normal
+                        Height: =80
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: =ThisItem.Body
+                        VerticalAlignment: =VerticalAlign.Top
+                        Width: =320
+                        Wrap: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    Rectangle1_1 As rectangle:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(225, 223, 221, 1)
+                        FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                        Height: =1
+                        HoverFill: =RGBA(225, 223, 221, 1)
+                        PressedFill: =RGBA(225, 223, 221, 1)
+                        Width: =1366
+                        Y: =72
+                        ZIndex: =4
+
+                    Container3_1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =35
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        ZIndex: =5
+
+                        Label1_1 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =ColorValue(AppTheme.palette.themePrimary)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            Size: =10
+                            Text: ="Learn more"
+                            Visible: =false
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                        "Icon2_1 As 'Fluent Icon (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            FontSize: =14
+                            Height: =33
+                            IconName: ="Info"
+                            IconSize: =17
+                            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: =Navigate(ThisItem.Page)
+                            Text: ="Learn more"
+                            Theme: =AppThemeJson
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        "Icon2_2 As 'Fluent Icon (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            FontSize: =14
+                            Height: =33
+                            IconName: ="OpenInNewTab"
+                            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: =Navigate(ThisItem.Page)
+                            Text: ="Try it out"
+                            Theme: =AppThemeJson
+                            Width: =140
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+
+            Label1_4 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =12
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =8
+                Text: ="Newly Added"
+                Width: =320
+                X: =35
+                Y: =15
+                ZIndex: =4
+
+            Gallery2_1 As gallery.galleryVertical:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                FillPortions: =0
+                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                FocusedBorderThickness: =2
+                Height: =255
+                Items: |-
+                    =Table(
+                    {
+                     Category:"Activate",
+                     Title:"Input Validation",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                     Learn:"http://gothere.com",
+                     Page:'Power Actions Page'
+                    },
+                    {
+                      Category:"Activate",
+                     Title:"Document Library",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar.",
+                     Learn:"http://gothere.com",
+                     Page:'Power Actions Page'
+                    },
+                    {
+                      Category:"Activate",
+                     Title:"Table Relationship Diagram",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar.",
+                     Learn:"http://gothere.com",
+                     Page:'Power Actions Page'
+                    }
+                    )
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: =Navigate('Action Screen')
+                TemplatePadding: =0
+                TemplateSize: =200
+                Width: =0
+                WrapCount: =If(Self.Width <= 1200 && Self.Width > 800, 2, Self.Width < 800, 1, 3)
+                Y: =71
+                ZIndex: =5
+
+                "Elevation1_3 As 'Fluent Elevation (1.0.19)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =200
+                    HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth8
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Width: =400
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                InnerContainer1_2 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =10
+                    Width: =400
+                    ZIndex: =2
+
+                    Label2_1 As Label:
+                        Color: =ColorValue(AppTheme.palette.themePrimary)
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =9
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: =ThisItem.Category
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =32
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        lblTitle_2 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =12
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =ThisItem.Title
+                            TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    lblTitle_7 As Label:
+                        AutoHeight: =false
+                        Color: =    
+                        DisplayMode: =DisplayMode.View
+                        FontSize: =10
+                        FontWeight: =FontWeight.Normal
+                        Height: =80
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: =ThisItem.Body
+                        VerticalAlignment: =VerticalAlign.Top
+                        Width: =320
+                        Wrap: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    Rectangle1_3 As rectangle:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(225, 223, 221, 1)
+                        FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                        Height: =1
+                        HoverFill: =RGBA(225, 223, 221, 1)
+                        PressedFill: =RGBA(225, 223, 221, 1)
+                        Width: =1366
+                        Y: =72
+                        ZIndex: =4
+
+                    Container3_2 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =35
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        ZIndex: =5
+
+                        Label1_5 As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =ColorValue(AppTheme.palette.themePrimary)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            Size: =10
+                            Text: ="Learn more"
+                            Visible: =false
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                        "Icon2_3 As 'Fluent Icon (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            FontSize: =14
+                            Height: =33
+                            IconName: ="Info"
+                            IconSize: =17
+                            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: =Navigate(ThisItem.Page)
+                            Text: ="Learn more"
+                            Theme: =AppThemeJson
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        "Icon2_4 As 'Fluent Icon (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            FontSize: =14
+                            Height: =33
+                            IconName: ="OpenInNewTab"
+                            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: =Navigate('Action Screen')
+                            Text: ="Try it out"
+                            Theme: =AppThemeJson
+                            Width: =140
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+

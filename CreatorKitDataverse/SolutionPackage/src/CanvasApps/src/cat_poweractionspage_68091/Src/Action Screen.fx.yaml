@@ -1,0 +1,1459 @@
+"'Action Screen' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =Set(CurrentIndex , 0);
+        ClearCollect(SelectedActionInputs, Filter('Custom API Request Parameters', 'Custom API'.'Custom API' = SelectedAction.'Custom API'));
+
+    NewActionRootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =App.Width
+        ZIndex: =1
+
+        ContentHeader As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =72  
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Container5 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =70
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =20
+                PaddingRight: =20
+                ZIndex: =1
+
+                Container8 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.19)'.pcfdataset":
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =55
+                        Items: |-
+                            =Table({ ItemKey:"itemDVActions", ItemDisplayName:"Dataverse Actions"}, { ItemKey:"itemNewAction", ItemDisplayName:If(IsBlank(SelectedAction.'Display Name'), "New Action", SelectedAction.'Display Name')} ) 
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        OnChange: =
+                        OnSelect: =If(Breadcrumb1.Selected.ItemKey =  "itemDVActions", Navigate('Home Screen'))
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Label1_2 As Label:
+                        AutoHeight: =true
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =16
+                        FontWeight: =FontWeight.Semibold
+                        Height: =If(!IsBlank(SelectedAction.'Display Name'),37,0)
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        PaddingStart: =0  
+                        Text: =SelectedAction.'Display Name'
+                        Visible: =false
+                        Width: =320
+                        X: =35
+                        Y: =15
+                        ZIndex: =2
+
+                    lblTitle_6 As Label:
+                        AlignInContainer: =AlignInContainer.Start
+                        AutoHeight: =false
+                        Color: =    
+                        DisplayMode: =DisplayMode.View
+                        FontSize: =10
+                        FontWeight: =FontWeight.Lighter
+                        Height: =If(!IsBlank(SelectedAction.'Display Name'),60,0)
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =320
+                        Text: =SelectedAction.Description
+                        VerticalAlignment: =VerticalAlign.Top
+                        Visible: =false
+                        Width: =840
+                        Wrap: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                Container3 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =50
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =30
+                    Width: =320
+                    ZIndex: =3
+
+                    "ddpSolutions_1 As 'Combo box'.pcfdataset":
+                        DefaultSelectedItems: =LookUp(Solutions,'Display Name' = "Creator Kit (Dataverse)")   
+                        DisplayMode: =DisplayMode.Edit
+                        FillColor: =
+                        Height: =32
+                        Items: =Filter(Solutions, 'Solutions (Views)'.'Lookup View')
+                        LayoutMinHeight: =26
+                        LayoutMinWidth: =320
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        Name2_1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Name"
+                            FieldName: ="uniquename"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =11
+
+                        "'Display Name1_1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Display Name"
+                            FieldName: ="friendlyname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =12
+
+        recHeaderDevider As rectangle:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(225, 223, 221, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            HoverFill: =RGBA(225, 223, 221, 1)
+            PressedFill: =RGBA(225, 223, 221, 1)
+            Width: =1366
+            Y: =72
+            ZIndex: =2
+
+        WizardContainer As groupContainer.horizontalAutoLayoutContainer:
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =48
+            PaddingTop: =24
+            ZIndex: =4
+
+            "SubwayNav1 As 'SubwayNav (1.0.19) Preview'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =200
+                Items: =WizardCollection
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                OnChange: |-
+                    =Set(CurrentIndex, LookUp(WizardCollection, ItemState="Current").Index);
+                    
+                    Patch(WizardCollection, LookUp(WizardCollection, Index = CurrentIndex), { ItemState:"None" });
+                    
+                    Patch(WizardCollection, SubwayNav1.Selected, { ItemState:"Current" });
+                Theme: =AppThemeJson
+                Width: =200
+                WizardCompleteorError: ='PowerCAT.SubwayNav.WizardCompleteorError'.None
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            recHeaderDevider_1 As rectangle:
+                AlignInContainer: =AlignInContainer.Stretch
+                BorderColor: =RGBA(166, 166, 166, 1)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledFill: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(225, 223, 221, 1)
+                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                Height: =1
+                HoverFill: =RGBA(225, 223, 221, 1)
+                PressedFill: =RGBA(225, 223, 221, 1)
+                Width: =1
+                Y: =72
+                ZIndex: =2
+
+            PropertiesContainer As groupContainer.horizontalAutoLayoutContainer:
+                Height: =Label5_5.Height + txtDisplayName.Height 
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingLeft: =48
+                PaddingRight: =48
+                Visible: |
+                    =!IsBlank(LookUp(WizardCollection, ItemKey = "basics" && ItemState = "Current"))
+                ZIndex: =3
+
+                ScopeContainer As groupContainer.verticalAutoLayoutContainer:
+                    Height: =
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =18
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingTop: =10
+                    ZIndex: =3
+
+                    FieldLabelContainer1_0 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =70
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Label7 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =11
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Basic details"
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        Label8 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Provide general information about the action"
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    FieldContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =66
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        FieldLabelContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =32
+                            LayoutAlignItems: =LayoutAlignItems.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "Label5_5 As 'Auto Width Label (1.0.19)'":
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: ="600"
+                                Height: =25
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Text: ="Display name"
+                                Width: =Self.AutoWidth + 5
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            FieldRequired1_1 As Label:
+                                Color: |-
+                                    =ColorValue("#A80000")
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Text: ="*"
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                        "txtDisplayName As 'Text box'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Value: =SelectedAction.'Display Name'
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                    FieldContainer1_4 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =120
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =5
+
+                        FieldLabelContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =32
+                            LayoutAlignItems: =LayoutAlignItems.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "Label5_6 As 'Auto Width Label (1.0.19)'":
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: ="600"
+                                Height: =25
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Text: ="Description"
+                                Width: =Self.AutoWidth + 5
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        "txtDescription As 'Text box'":
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Mode: ='Microsoft.CoreControls.TextBox.Mode'.Multiline
+                            Value: =SelectedAction.Description
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                    FieldContainer1_2 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =105
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =150
+                        ZIndex: =6
+
+                        lblScope As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Scope"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        "radioGrpScope As 'Radio group'.pcfdataset":
+                            DefaultSelectedItems: |-
+                                ={key:"Global",value:"Global"}
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =80
+                            Items: |-
+                                =Table({key:"Table",value:"Table"},{key:"Global",value:"Global"})
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =320
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            value1 As pcfDataField.textualColumn:
+                                FieldDisplayName: ="value"
+                                FieldName: ="value"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =14
+
+                    FieldContainer1_3 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =70
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Visible: =radioGrpScope.Selected.value = "Table"
+                        ZIndex: =7
+
+                        Label5_7 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Table"
+                            Visible: =radioGrpScope.Selected.value = "Table"
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        "ddpEntities As 'Combo box'.pcfdataset":
+                            DefaultSelectedItems: =LookUp(Entities,Name = "Account")   
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: =Filter(Entities, 'Entities (Views)'.'Entity Lookup View')
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Visible: =radioGrpScope.Selected.value = "Table"
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                            "'Logical Name1' As pcfDataField.textualColumn":
+                                FieldDisplayName: ="Logical Name"
+                                FieldName: ="logicalname"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =3
+                                ZIndex: =9
+
+                            Name1 As pcfDataField.textualColumn:
+                                FieldDisplayName: ="Name"
+                                FieldName: ="name"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =2
+                                ZIndex: =10
+
+            DefinitionContainer As groupContainer.verticalAutoLayoutContainer:
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =48
+                PaddingRight: =48
+                Visible: =!IsBlank(LookUp(WizardCollection, ItemKey = "definition" && ItemState = "Current"))
+                ZIndex: =4
+
+                PrametersContainer As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =Label3.Height + Container9.Height + Container9.PaddingTop + 5
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    Label3 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =11
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Parameters" 
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container4_3 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        ZIndex: =2
+
+                        "AutoWidthLabel1_2 As 'Auto Width Label (1.0.19)'":
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
+                            FontSizeUnits: ="0"
+                            Height: =20
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            Text: ="Identify parameters that can be passed between the Action and the context calling it."
+                            Width: =Self.AutoWidth + 5
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        Label3_6 As Label:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =ColorValue(AppTheme.palette.themePrimary)
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Learn more"
+                            VerticalAlignment: =VerticalAlign.Middle
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    Container9 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =Container10.Height + Container9.PaddingTop + 15
+                        LayoutMinHeight: =120
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =16
+                        ZIndex: =3
+
+                        Container10 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: = Container2.Height +  galInputs_1.Height + Icon1_2.Height
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            Container2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =30
+                                LayoutMinHeight: =30
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                Visible: =CountRows(SelectedActionInputs) > 0
+                                ZIndex: =2
+
+                                Label2 As Label:
+                                    Color: =RGBA(116, 116, 116, 1)
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =8
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="Required"
+                                    Width: =59
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "FieldLabel1_1 As 'Auto Width Label (1.0.19)'":
+                                    AlignInContainer: =AlignInContainer.End
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontWeight: ="600"
+                                    Height: =25
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    Text: ="Label"
+                                    Width: =Self.AutoWidth + 5
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =4
+
+                                FieldRequired1_3 As Label:
+                                    Color: |-
+                                        =ColorValue("#A80000")
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="*"
+                                    Width: =TextBox2_2.Width - FieldLabel1_1.Width +18
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =5
+
+                                "FieldLabel1_2 As 'Auto Width Label (1.0.19)'":
+                                    AlignInContainer: =AlignInContainer.End
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontWeight: ="600"
+                                    Height: =25
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    Text: ="Data type"
+                                    Width: =Self.AutoWidth + 5
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =6
+
+                                FieldRequired1_4 As Label:
+                                    Color: |-
+                                        =ColorValue("#A80000")
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="*"
+                                    Width: =62
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =7
+
+                                "FieldLabel1_6 As 'Auto Width Label (1.0.19)'":
+                                    AlignInContainer: =AlignInContainer.End
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontWeight: ="600"
+                                    Height: =25
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    Text: ="Table"
+                                    Width: =Self.AutoWidth + 5
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =9
+
+                            galInputs_1 As gallery.galleryVertical:
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                DelayItemLoading: =true
+                                FillPortions: =0
+                                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                                FocusedBorderThickness: =2
+                                Height: =Self.TemplateHeight * CountRows(SelectedActionInputs) + 10
+                                Items: =SelectedActionInputs
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =2
+                                TemplateSize: =40
+                                ZIndex: =3
+
+                                "TextBox2_2 As 'Text box'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =9.5
+                                    Height: =33
+                                    OnChange: |-
+                                        =//Patch(SelectedActionInputs, ThisItem, { Name:TextBox2_2.Value , Type: ComboBox1.Selected.Value})
+                                    OnSelect: =
+                                    Value: =ThisItem.Name
+                                    Width: =145
+                                    X: =59
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "Checkbox1 As 'Check box'":
+                                    Checked: =true
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    Label: =""
+                                    OnSelect: =Select(Parent)
+                                    Width: =38
+                                    X: =5
+                                    Y: =1
+                                    ZIndex: =2
+
+                                "ComboBox1 As 'Combo box'.pcfdataset":
+                                    DefaultSelectedItems: =LookUp(Choices([@'Custom API Request Parameters'].Type), Value = ThisItem.Type)
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    Items: |-
+                                        =//["String", "Integer", "Boolean", "Entity", "Guid"] 
+                                        //Choices('Custom API Field Type')
+                                        Choices([@'Custom API Request Parameters'].Type)
+                                    OnSelect: =Select(Parent)
+                                    Width: =116
+                                    X: =223
+                                    Y: =1
+                                    ZIndex: =3
+
+                                    Value1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Value"
+                                        FieldName: ="Value"
+                                        FieldType: ="l"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =1
+                                        ZIndex: =17
+
+                                "Icon1 As 'Fluent Icon (1.0.19)'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    IconName: ="Delete"
+                                    OnChange: =Remove(SelectedActionInputs, ThisItem)
+                                    Theme: =AppThemeJson
+                                    Width: =34
+                                    X: =495
+                                    Y: =0
+                                    ZIndex: =4
+
+                                "ComboBox1_2 As 'Combo box'.pcfdataset":
+                                    DefaultSelectedItems: =ddpEntities.Selected
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    Items: =Filter(Entities, 'Entities (Views)'.'Entity Lookup View')
+                                    OnSelect: =Select(Parent)
+                                    Width: =134
+                                    X: =352
+                                    Y: =0
+                                    ZIndex: =7
+
+                                    Name2 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Name"
+                                        FieldName: ="name"
+                                        FieldType: ="s"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =1
+                                        ZIndex: =16
+
+                            "Icon1_2 As 'Fluent Icon (1.0.19)'":
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =35
+                                IconName: ="Add"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: =Collect(SelectedActionInputs, Defaults('Custom API Request Parameters'))
+                                Text: ="New parameter"
+                                Theme: =AppThemeJson
+                                Width: =200
+                                X: =0
+                                Y: =448
+                                ZIndex: =4
+
+                FormulaContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =180
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    Label5_9 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =45
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Formula"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container4_2 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        ZIndex: =2
+
+                        "AutoWidthLabel1_1 As 'Auto Width Label (1.0.19)'":
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
+                            FontSizeUnits: ="0"
+                            Height: =20
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            Text: ="Define the behavior of the Action when invoked."
+                            Width: =Self.AutoWidth + 5
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        Label3_5 As Label:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =ColorValue(AppTheme.palette.themePrimary)
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =10
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Learn more"
+                            VerticalAlignment: =VerticalAlign.Middle
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    PowerFxPCFEditor1 As PowerFxPCFEditor:
+                        AlignInContainer: =AlignInContainer.Start
+                        defaultValue: =SelectedAction.Formula
+                        DisplayMode: =DisplayMode.Edit
+                        editorMaxLine: =6
+                        editorMinLine: =6
+                        entityName: =ddpEntities.Selected.'Logical Name'
+                        formula: =SelectedAction.Formula
+                        Height: =400
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        Width: =800
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+            ReviewContainer As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =!IsBlank(LookUp(WizardCollection, ItemKey = "review" && ItemState = "Current"))
+                ZIndex: =5
+
+                ScopeContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                    Height: =
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =48
+                    PaddingRight: =48
+                    ZIndex: =1
+
+                    FieldLabelContainer1_2 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =60
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Label7_2 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =12
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Review"
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    FieldContainer1_5 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =66
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =4
+
+                        FieldLabelContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =32
+                            LayoutAlignItems: =LayoutAlignItems.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "Label5_8 As 'Auto Width Label (1.0.19)'":
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: ="600"
+                                Height: =25
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Text: ="Display name"
+                                Width: =Self.AutoWidth + 5
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        Label8_2 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =txtDisplayName.Value
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    FieldContainer1_6 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =66
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Visible: =!IsBlank(txtDescription.Value)
+                        ZIndex: =5
+
+                        "Label5_10 As 'Auto Width Label (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: ="600"
+                            Height: =25
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            Text: ="Description"
+                            Width: =Self.AutoWidth + 5
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        Label8_3 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =txtDisplayName.Value
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    FieldContainer1_7 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =66
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =150
+                        ZIndex: =6
+
+                        lblScope_1 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Scope"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        Label8_4 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =radioGrpScope.Selected.value
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    FieldContainer1_9 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =66
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =150
+                        ZIndex: =8
+
+                        lblScope_2 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Table"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        Label8_5 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =ddpEntities.Selected.Name
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    FieldContainer1_10 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =66
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =150
+                        ZIndex: =9
+
+                        lblScope_3 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="Formula"
+                            Width: =100
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        PowerFxPCFEditor1_1 As PowerFxPCFEditor:
+                            AlignInContainer: =AlignInContainer.Start
+                            defaultValue: =SelectedAction.Formula
+                            DisplayMode: =DisplayMode.Edit
+                            editorMaxLine: =6
+                            editorMinLine: =6
+                            entityName: =ddpEntities.Selected.'Logical Name'
+                            formula: =PowerFxPCFEditor1.formula
+                            Height: =400
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            Width: =800
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+            TestContainer As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingLeft: =48
+                PaddingRight: =48
+                Visible: =!IsBlank(LookUp(WizardCollection, ItemKey = "test" && ItemState = "Current"))
+                ZIndex: =6
+
+                FieldLabelContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =70
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    Label7_1 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Basic details"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Label8_1 As Label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Test the manual action by providing request values, then Run the action. View the response sent from the server and validate behavior in the client if applicable."
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                RequestResponseContainer As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Button1.Height + Container9_1.Height + Container9_1.PaddingTop + 34
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingTop: =32
+                    ZIndex: =3
+
+                    Container9_1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =Container10_1.Height + Container9_1.PaddingTop + 15
+                        LayoutGap: =25
+                        LayoutMinHeight: =120
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Container10_1 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            Height: = Container2_1.Height +  galInputs_2.Height + Label3_2.Height
+                            LayoutAlignItems: =LayoutAlignItems.Stretch
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            Label3_2 As Label:
+                                DisplayMode: =DisplayMode.Edit
+                                FontSize: =12
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Text: ="Request" 
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            Container2_1 As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                FillPortions: =0
+                                Height: =30
+                                LayoutMinHeight: =30
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =2
+
+                                "FieldLabel1_4 As 'Auto Width Label (1.0.19)'":
+                                    AlignInContainer: =AlignInContainer.End
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontWeight: ="400"
+                                    Height: =25
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    Text: ="Parameter"
+                                    Width: =Self.AutoWidth + 220
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =4
+
+                                "FieldLabel1_5 As 'Auto Width Label (1.0.19)'":
+                                    AlignInContainer: =AlignInContainer.End
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontWeight: ="400"
+                                    Height: =25
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    Text: ="Value"
+                                    Width: =Self.AutoWidth + 5
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =6
+
+                                FieldRequired1_6 As Label:
+                                    Color: |-
+                                        =ColorValue("#A80000")
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="*"
+                                    Width: =62
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =7
+
+                            galInputs_2 As gallery.galleryVertical:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                BorderColor: =RGBA(166, 166, 166, 1)
+                                DelayItemLoading: =true
+                                FillPortions: =0
+                                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                                FocusedBorderThickness: =2
+                                Height: =Self.TemplateHeight * CountRows(SelectedActionInputs) + 10
+                                Items: =SelectedActionInputs
+                                Layout: =Layout.Vertical
+                                LayoutMinHeight: =287
+                                LayoutMinWidth: =320
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =2
+                                TemplateSize: =40
+                                ZIndex: =3
+
+                                Label5 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =11
+                                    FontWeight: =FontWeight.Normal
+                                    Height: =33
+                                    OnSelect: =Select(Parent)
+                                    Text: ="Parameter Name here"
+                                    Width: =233
+                                    X: =39
+                                    Y: =0
+                                    ZIndex: =4
+
+                                "Icon1_1 As 'Fluent Icon (1.0.19)'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    IconName: ="Parameter"
+                                    OnChange: =Remove(SelectedActionInputs, ThisItem)
+                                    Theme: =AppThemeJson
+                                    Width: =34
+                                    X: =0
+                                    Y: =1
+                                    ZIndex: =5
+
+                                "TextBox1 As 'Text box'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    OnSelect: =Select(Parent)
+                                    Value: =""
+                                    Width: =222
+                                    X: =272
+                                    Y: =0
+                                    ZIndex: =6
+
+                        Container13 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =2
+
+                            Label3_3 As Label:
+                                DisplayMode: =DisplayMode.Edit
+                                FontSize: =12
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Text: ="Response" 
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                    Button1 As Button:
+                        Alignment: =Align.Center
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Run"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                Container14 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingTop: =10
+                    ZIndex: =4
+
+                    Label6 As Label:
+                        Alignment: =Align.Justify
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =12
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Invoke the action with Power Fx"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container4_1 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        "AutoWidthLabel1 As 'Auto Width Label (1.0.19)'":
+                            AlignInContainer: =AlignInContainer.Center
+                            DisplayMode: =DisplayMode.Edit
+                            FontSizeUnits: ="0"
+                            Height: =25
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            Text: ="Add the expression to a canvas app, custom page, or a"
+                            Width: =Self.AutoWidth + 5
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        Label3_4 As Label:
+                            AlignInContainer: =AlignInContainer.Center
+                            Color: =ColorValue(AppTheme.palette.themePrimary)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: ="customized model driven app ribbon action"
+                            VerticalAlignment: =VerticalAlign.Top
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    HtmlText1 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        FillPortions: =1
+                        HtmlText: |-
+                            ="<ol>
+                            <li>Copy the formula below.</li>
+                            <li>Paste it into an action property (e.g., in a button) in your app.</li>
+                            <li>Replace the input parameters with referenced values in the app.</li>
+                            </ol>"
+                        ZIndex: =3
+
+        recFooterDevider As rectangle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(225, 223, 221, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            HoverFill: =RGBA(225, 223, 221, 1)
+            PressedFill: =RGBA(225, 223, 221, 1)
+            Width: =1366
+            Y: =72
+            ZIndex: =9
+
+        FooterContainer As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =72
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =20
+            ZIndex: =10
+
+            btnBack As Button:
+                ButtonType: ='Microsoft.CoreControls.Button.ButtonType'.Standard
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =ColorValue(AppTheme.palette.neutralLight)
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Back()
+                Text: ="Back"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            btnSave As Button:
+                ButtonType: ='Microsoft.CoreControls.Button.ButtonType'.Primary
+                DisplayMode: =If(IsBlank(txtDisplayName.Value),DisplayMode.Disabled, DisplayMode.Edit)
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =Set(CurrentIndex,LookUp(WizardCollection,ItemState="Current").Index);If(CurrentIndex<Last(WizardCollection).Index,Patch(WizardCollection,LookUp(WizardCollection,Index=CurrentIndex),{ItemState:"None"});Patch(WizardCollection,LookUp(WizardCollection,Index=CurrentIndex+1),{ItemState:"Current"}));
+                    /*
+                    UpdateContext(
+                        {
+                            varPowerFxRulesRecord: Patch(
+                                PowerfxRules,
+                                Defaults(PowerfxRules),
+                                {
+                                    Name: Trim(TextBox1_1.Value),
+                                    'Unique Name': "msft_" & TextBox1_1.Value & Rand(),
+                                    Category: 'Category (PowerfxRules)'.Workflow,
+                                    Expression:PowerFxPCFEditor1.formula,
+                                    //Expression:"If(true, 10, 2)",
+                                    EntityLogicalName:ddpEntities.Selected.'Logical Name',
+                                    MessageName:"create"            
+                                }
+                            )
+                        }
+                    );
+                    
+                    
+                     UpdateContext(
+                        {
+                            varResult: Patch(
+                                'Custom APIs',
+                                Defaults('Custom APIs'),
+                                {
+                                    Name: "powerfxrule_customapi12",
+                                    'Unique Name': "msft_" & "powerfxrule_customapi12",
+                                    Description: "My Custom API Description",
+                                    'Allowed Custom Processing Step Type':'Allowed Custom Processing Step Type (Custom APIs)'.'Async Only',
+                                    'Binding Type': 'Binding Type (Custom APIs)'.Global,
+                                    'Is Function':false,
+                                    'Display Name':"CAT Power FX Custom API",
+                                    'PowerFx Rule':varPowerFxRulesRecord
+                                        
+                                }
+                            )
+                        }
+                    ); */
+                Text: ="Next"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            btnSave_1 As Button:
+                ButtonType: ='Microsoft.CoreControls.Button.ButtonType'.Primary
+                DisplayMode: =If(IsBlank(txtDisplayName.Value), DisplayMode.Disabled, DisplayMode.Edit)
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =
+                    UpdateContext(
+                        {
+                            varPowerFxRulesRecord: Patch(
+                                PowerfxRules,
+                                Defaults(PowerfxRules),
+                                {
+                                    Name: Trim(txtDisplayName.Value),
+                                    'Unique Name': "msft_" & txtDisplayName.Value & Rand(),
+                                    Category: 'Category (PowerfxRules)'.Workflow,
+                                    Expression:PowerFxPCFEditor1.formula,
+                                    EntityLogicalName:ddpEntities.Selected.'Logical Name',
+                                    MessageName:"create"            
+                                }
+                            )
+                        }
+                    );
+                    
+                    /*
+                     UpdateContext(
+                        {
+                            varResult: Patch(
+                                'Custom APIs',
+                                Defaults('Custom APIs'),
+                                {
+                                    Name: "powerfxrule_customapi12",
+                                    'Unique Name': "msft_" & "powerfxrule_customapi12",
+                                    Description: "My Custom API Description",
+                                    'Allowed Custom Processing Step Type':'Allowed Custom Processing Step Type (Custom APIs)'.'Async Only',
+                                    'Binding Type': 'Binding Type (Custom APIs)'.Global,
+                                    'Is Function':false,
+                                    'Display Name':"CAT Power FX Custom API",
+                                    'PowerFx Rule':varPowerFxRulesRecord
+                                        
+                                }
+                            )
+                        }
+                    ); */
+                Text: ="Save"
+                Visible: =!IsBlank(LookUp(WizardCollection, ItemKey = "review" && ItemState = "Current"))
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =3
+

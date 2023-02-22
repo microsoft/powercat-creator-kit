@@ -1,0 +1,343 @@
+{
+  "basePath": "/",
+  "consumes": [],
+  "definitions": {},
+  "host": "graph.microsoft.com",
+  "info": {
+    "description": "",
+    "title": "Default title",
+    "version": "1.0"
+  },
+  "parameters": {},
+  "paths": {
+    "/codeless/v1.0/me/licenseDetails": {},
+    "/users/{id}/licenseDetails": {},
+    "/v1.0/me/licenseDetails": {
+      "get": {
+        "description": "Returns a list of license details assigned to the calling user",
+        "operationId": "ListMyLicenseDetails",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "properties": {
+                "@odata.context": {
+                  "description": "@odata.context",
+                  "type": "string"
+                },
+                "value": {
+                  "description": "value",
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "description": "ID of the license detail",
+                        "title": "ID",
+                        "type": "string"
+                      },
+                      "servicePlans": {
+                        "description": "servicePlans",
+                        "items": {
+                          "properties": {
+                            "appliesTo": {
+                              "description": "appliesTo",
+                              "type": "string"
+                            },
+                            "provisioningStatus": {
+                              "description": "provisioningStatus",
+                              "type": "string"
+                            },
+                            "servicePlanId": {
+                              "description": "servicePlanId",
+                              "type": "string"
+                            },
+                            "servicePlanName": {
+                              "description": "servicePlanName",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "skuId": {
+                        "description": "skuId",
+                        "type": "string"
+                      },
+                      "skuPartNumber": {
+                        "description": "skuPartNumber",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "summary": "List My License Details"
+      }
+    },
+    "/v1.0/subscribedSkus": {
+      "get": {
+        "description": "List license SKUs available to the organization",
+        "operationId": "ListSubscribedSKUs",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "properties": {
+                "@odata.context": {
+                  "description": "@odata.context",
+                  "type": "string"
+                },
+                "value": {
+                  "description": "value",
+                  "items": {
+                    "properties": {
+                      "appliesTo": {
+                        "description": "appliesTo",
+                        "type": "string"
+                      },
+                      "capabilityStatus": {
+                        "description": "capabilityStatus",
+                        "type": "string"
+                      },
+                      "consumedUnits": {
+                        "description": "consumedUnits",
+                        "format": "int32",
+                        "type": "integer"
+                      },
+                      "id": {
+                        "description": "id",
+                        "type": "string"
+                      },
+                      "prepaidUnits": {
+                        "description": "prepaidUnits",
+                        "properties": {
+                          "enabled": {
+                            "description": "enabled",
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "suspended": {
+                            "description": "suspended",
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "warning": {
+                            "description": "warning",
+                            "format": "int32",
+                            "type": "integer"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "servicePlans": {
+                        "description": "servicePlans",
+                        "items": {
+                          "properties": {
+                            "appliesTo": {
+                              "description": "appliesTo",
+                              "type": "string"
+                            },
+                            "provisioningStatus": {
+                              "description": "provisioningStatus",
+                              "type": "string"
+                            },
+                            "servicePlanId": {
+                              "description": "servicePlanId",
+                              "type": "string"
+                            },
+                            "servicePlanName": {
+                              "description": "servicePlanName",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "skuId": {
+                        "description": "skuId",
+                        "type": "string"
+                      },
+                      "skuPartNumber": {
+                        "description": "skuPartNumber",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "summary": "List Subscribed SKUs"
+      }
+    },
+    "/v1.0/users/{id}/assignLicense": {
+      "post": {
+        "description": "Add or remove specified licenses to a given user",
+        "operationId": "AssignLicense",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "properties": {
+                "addLicenses": {
+                  "description": "addLicenses",
+                  "items": {
+                    "properties": {
+                      "disabledPlans": {
+                        "description": "disabledPlans",
+                        "items": {
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "skuId": {
+                        "description": "skuId",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                },
+                "removeLicenses": {
+                  "description": "removeLicenses",
+                  "items": {
+                    "type": "string"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        ],
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "summary": "Assign License"
+      }
+    },
+    "/v1.0/users/{id}/licenseDetails": {
+      "get": {
+        "description": "Lists the license details of a provided user ID",
+        "operationId": "ListLicenseDetails",
+        "parameters": [
+          {
+            "description": "Object ID of the user",
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "type": "string",
+            "x-ms-summary": "ID"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "default",
+            "schema": {
+              "properties": {
+                "@odata.context": {
+                  "description": "@odata.context",
+                  "type": "string"
+                },
+                "value": {
+                  "description": "value",
+                  "items": {
+                    "properties": {
+                      "id": {
+                        "description": "id",
+                        "type": "string"
+                      },
+                      "servicePlans": {
+                        "description": "servicePlans",
+                        "items": {
+                          "properties": {
+                            "appliesTo": {
+                              "description": "appliesTo",
+                              "type": "string"
+                            },
+                            "provisioningStatus": {
+                              "description": "provisioningStatus",
+                              "type": "string"
+                            },
+                            "servicePlanId": {
+                              "description": "servicePlanId",
+                              "type": "string"
+                            },
+                            "servicePlanName": {
+                              "description": "servicePlanName",
+                              "type": "string"
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      },
+                      "skuId": {
+                        "description": "skuId",
+                        "type": "string"
+                      },
+                      "skuPartNumber": {
+                        "description": "skuPartNumber",
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "type": "array"
+                }
+              },
+              "type": "object"
+            }
+          }
+        },
+        "summary": "List License Details"
+      }
+    }
+  },
+  "produces": [],
+  "responses": {},
+  "schemes": [
+    "https"
+  ],
+  "security": [
+    {
+      "oauth2-auth": []
+    }
+  ],
+  "securityDefinitions": {
+    "oauth2-auth": {
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "flow": "accessCode",
+      "scopes": {},
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "type": "oauth2"
+    }
+  },
+  "swagger": "2.0",
+  "tags": []
+}

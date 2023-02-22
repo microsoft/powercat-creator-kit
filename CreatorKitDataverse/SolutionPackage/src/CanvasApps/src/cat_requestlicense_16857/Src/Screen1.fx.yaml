@@ -1,0 +1,284 @@
+Screen1 As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1_1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =Label9_1.Height + Label10_1.Height + 16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =16
+            PaddingTop: =16
+            ZIndex: =1
+
+            HeaderLeftContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                Height: =Label9_1.Height + Label10_1.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =75
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                Label9_1 As Label:
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =14
+                    FontWeight: =FontWeight.Semibold
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Request license"
+                    TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading2
+                    Width: =320
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                Label10_1 As Label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    Color: =RGBA(116, 116, 116, 1)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =12
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Select a license to request and provide the justification."
+                    Width: =320
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+            Icon1_1 As icon.Cancel:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(116, 116, 116, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(220, 220, 220, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Height: =32
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Cancel
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                TabIndex: =3
+                Width: =32
+                ZIndex: =2
+
+        MainSectionContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =16
+            ZIndex: =3
+
+            c_field_2 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =c_field_label_1.Height + RadioGroup1.Height + 0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                c_field_label_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =30
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    "AutoWidthLabel1_1 As 'Auto Width Label (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =12
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        PaddingTop: =4
+                        Text: ="License"
+                        Width: =Self.AutoWidth
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    Label12_2 As Label:
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Bold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="*"
+                        VerticalAlignment: =VerticalAlign.Top
+                        Width: =10
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                "RadioGroup1 As 'Radio group'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =120
+                    ItemFontSize: =11
+                    Items: |-
+                        =Table({Name:"Microsoft 365 with Dataverse"},{Name:"Power Apps Per User"},{Name:"Dynamics 365"})
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =320
+                    Width: =320
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                    Name1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="Name"
+                        FieldName: ="Name"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =6
+
+            c_field_1 As groupContainer.verticalAutoLayoutContainer:
+                Height: =c_fieldLabel.Height + rta_justificationValue.Height + 8
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =1
+                PaddingRight: =1
+                ZIndex: =5
+
+                c_fieldLabel As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =30
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =2
+
+                    "c_fieldLabelValue As 'Auto Width Label (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =12
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        PaddingTop: =4
+                        Text: ="Justification"
+                        Width: =Self.AutoWidth
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    l_fieldLabelRequired As Label:
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Bold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="*"
+                        VerticalAlignment: =VerticalAlign.Top
+                        Width: =10
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                "rta_justificationValue As 'Resizable Text Area (1.0.19)'":
+                    AccessibilityLabel: ="Justification input field"
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Vertical
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =11
+                    Height: =200
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    MaxHeight: =c_field_1.Height - 64
+                    MaxLength: =
+                    MinHeight: =150
+                    TabIndex: =2
+                    Width: =200
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+        Separator_4 As rectangle:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            Width: =1
+            X: =1363
+            Y: =-3
+            ZIndex: =4
+
+        FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =8
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            ZIndex: =5
+
+            Button3 As Button:
+                BorderRadius: =2
+                BorderStyle: =BorderStyle.Solid
+                BorderThickness: =1
+                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =12
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="Cancel"
+                Width: =82
+                X: =0
+                Y: =19
+                ZIndex: =1
+
+            Button4 As Button:
+                BorderRadius: =2
+                DisplayMode: =If( !IsBlank(RadioGroup1.Selected) && !IsBlank(rta_justificationValue.Text), DisplayMode.Edit, DisplayMode.Disabled )
+                FontSize: =12
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="Submit"
+                Width: =86
+                X: =139
+                Y: =19
+                ZIndex: =2
+

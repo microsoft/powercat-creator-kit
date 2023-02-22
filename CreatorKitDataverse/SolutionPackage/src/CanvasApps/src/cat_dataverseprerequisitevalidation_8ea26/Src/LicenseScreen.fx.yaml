@@ -1,0 +1,360 @@
+"LicenseScreen As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    BackgroundImage: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            ZIndex: =1
+
+            Label1 As Label:
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =16
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Dataverse Prerequisite Validation"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        Separator_1 As rectangle:
+            AlignInContainer: =AlignInContainer.Stretch
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: =RGBA(230, 230, 230, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            Width: =1
+            X: =1363
+            Y: =-3
+            ZIndex: =2
+
+        MainSectionContainer2 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            Container2_1 As groupContainer.horizontalAutoLayoutContainer:
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                SidebarContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =32
+                    PaddingTop: =32
+                    ZIndex: =1
+
+                    "SubwayNav1_1 As 'SubwayNav (1.0.19) Preview'.pcfdataset":
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        Height: =200
+                        Items: |-
+                            =Table({ItemKey:"1",ItemLabel:"License check",ItemState:"Current"},
+                            {ItemKey:"2",ItemLabel:"Environment",ItemState:"NotStarted"},
+                            {ItemKey:"3",ItemLabel:"Review and finish",ItemState:"NotStarted"})
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        Width: =200
+                        X: =40
+                        Y: =40
+                        ZIndex: =1
+
+                Separator As rectangle:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    BorderStyle: =BorderStyle.None
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                    Height: =1
+                    Width: =1
+                    X: =1363
+                    Y: =-3
+                    ZIndex: =2
+
+                RightSideContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =7
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    MainSectionContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =5
+
+                        c_main As groupContainer.horizontalAutoLayoutContainer:
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            c_licenseCheck As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0.8
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutGap: =8
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =32
+                                PaddingTop: =32
+                                Visible: =true //SubwayNav1_1.Selected.ItemKey = "1"
+                                Width: =900
+                                ZIndex: =1
+
+                                Label2 As Label:
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =14
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="License"
+                                    TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+                                    Width: =320
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                Label3 As Label:
+                                    AlignInContainer: =AlignInContainer.Start
+                                    AutoHeight: =true
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =12
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Text: ="Validate whether your account has sufficient license to access Dataverse."
+                                    Width: =600
+                                    Wrap: =true
+                                    X: =-6
+                                    Y: =0
+                                    ZIndex: =2
+
+                                Container4 As groupContainer.verticalAutoLayoutContainer:
+                                    AlignInContainer: =AlignInContainer.SetByContainer
+                                    FillPortions: =0
+                                    Height: =gal_licenseDetails.Height + 32
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingLeft: =16
+                                    PaddingTop: =16
+                                    Width: =700
+                                    ZIndex: =3
+
+                                    gal_licenseDetails As gallery.BrowseLayout_Vertical_OneTextOneImageVariant_pcfCore:
+                                        BorderColor: =RGBA(166, 166, 166, 1)
+                                        DelayItemLoading: =true
+                                        FillPortions: =0
+                                        FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                                        FocusedBorderThickness: =2
+                                        Height: =CountRows(Self.AllItems) * 36
+                                        Items: =Defaulttitle.ListMyLicenseDetails().value
+                                        Layout: =Layout.Vertical
+                                        LayoutMinHeight: =287
+                                        LayoutMinWidth: =320
+                                        LoadingSpinner: =LoadingSpinner.Data
+                                        TemplatePadding: =0
+                                        TemplateSize: =36
+                                        Width: =Parent.Width * 0.7
+                                        ZIndex: =1
+
+                                        Container3 As groupContainer.horizontalAutoLayoutContainer:
+                                            Height: =36
+                                            LayoutAlignItems: =LayoutAlignItems.Center
+                                            LayoutMode: =LayoutMode.Auto
+                                            Width: =Parent.TemplateWidth
+                                            ZIndex: =1
+
+                                            Label4 As Label:
+                                                Alignment: =Align.Justify
+                                                Color: =
+                                                DisplayMode: =DisplayMode.Edit
+                                                FillPortions: =1
+                                                FontSize: =10
+                                                FontWeight: =FontWeight.Normal
+                                                Height: =32
+                                                LayoutMinHeight: =32
+                                                LayoutMinWidth: =320
+                                                Text: =ThisItem.skuPartNumber
+                                                Width: =320
+                                                X: =0
+                                                Y: =0
+                                                ZIndex: =1
+
+                                            Image1 As image:
+                                                AlignInContainer: =AlignInContainer.Stretch
+                                                BorderColor: =RGBA(0, 0, 0, 0)
+                                                BorderStyle: =BorderStyle.None
+                                                BorderThickness: =2
+                                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                                DisabledFill: =RGBA(0, 0, 0, 0)
+                                                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                                HoverFill: =RGBA(0, 0, 0, 0)
+                                                Image: =failed
+                                                LayoutMinHeight: =30
+                                                PaddingBottom: =10
+                                                PaddingTop: =10
+                                                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                                PressedFill: =RGBA(0, 0, 0, 0)
+                                                Width: =30
+                                                ZIndex: =3
+
+                                            Label5 As Label:
+                                                DisplayMode: =DisplayMode.Edit
+                                                FontSize: =10
+                                                FontWeight: ="normal"
+                                                Height: =32
+                                                LayoutMinHeight: =32
+                                                LayoutMinWidth: =320
+                                                Text: ="Not assigned"
+                                                Width: =100
+                                                X: =0
+                                                Y: =0
+                                                ZIndex: =4
+
+                                Container12 As groupContainer.verticalAutoLayoutContainer:
+                                    FillPortions: =0
+                                    Height: =120
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMinHeight: =100
+                                    LayoutMinWidth: =250
+                                    LayoutMode: =LayoutMode.Auto
+                                    ZIndex: =4
+
+                                    Label7 As Label:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        AutoHeight: =true
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontSize: =12
+                                        FontWeight: =FontWeight.Bold
+                                        Height: =32
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =320
+                                        Text: ="You can only use Dataverse features in Developer and Teams type Environments."
+                                        Width: =320
+                                        Wrap: =true
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                                    Label8 As Label:
+                                        AlignInContainer: =AlignInContainer.Start
+                                        AutoHeight: =false
+                                        DisplayMode: =DisplayMode.Edit
+                                        FontSize: =12
+                                        Height: =60
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =320
+                                        Text: ="Continue using Dataverse in Developer Environments (like this one), or request a license if you need to use Dataverse in Sandbox, Production or Trial type Environments. "
+                                        VerticalAlignment: =VerticalAlign.Top
+                                        Width: =700
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =2
+
+                                Button2_1 As Button:
+                                    BorderRadius: =2
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =12
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: =
+                                    Text: ="Request license"
+                                    Width: =160
+                                    X: =8
+                                    Y: =545
+                                    ZIndex: =5
+
+                        Separator_2 As rectangle:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(230, 230, 230, 1)
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            Height: =1
+                            Width: =1
+                            X: =1363
+                            Y: =-3
+                            ZIndex: =2
+
+                        FooterContainer1 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =75
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =3
+
+                            Container1 As groupContainer.horizontalAutoLayoutContainer:
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =8
+                                LayoutMinHeight: =50
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =32
+                                ZIndex: =1
+
+                                Button1 As Button:
+                                    BorderRadius: =2
+                                    BorderStyle: =BorderStyle.Solid
+                                    BorderThickness: =1
+                                    ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontSize: =12
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: ="Back"
+                                    Width: =82
+                                    X: =29
+                                    Y: =19
+                                    ZIndex: =1
+
+                                Button2 As Button:
+                                    BorderRadius: =2
+                                    DisplayMode: =DisplayMode.Disabled
+                                    FontSize: =12
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    Text: ="Next"
+                                    Width: =82
+                                    X: =133
+                                    Y: =19
+                                    ZIndex: =2
+

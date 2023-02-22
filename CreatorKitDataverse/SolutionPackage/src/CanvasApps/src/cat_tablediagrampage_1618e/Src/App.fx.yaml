@@ -1,0 +1,19 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Set(QueryCase,"getSolutions");
+        
+        Set(SelectedEnvironment,"https://creator-kit-dev.crm.dynamics.com/");
+        
+        Set(currentSolution, {DisplayName:"",SolutionId:"",Description:""});
+        Set(LatestEvent,"none");
+        ClearCollect(Solutions,Table({DisplayName:""}));
+        
+        Set(WebRequestURL,SelectedEnvironment &
+            "api/data/v9.0/solutions?$orderby=friendlyname%20asc&$select=friendlyname,solutiontype,solutionid&$filter=isvisible%20eq%20true");
+        
+        //StateMachine thread for getting data using the PowerCAT WebRequest
+        Set(CurrentStep,0);
+        Set(PA_ThreadStart2,false);
+        Reset(PowerAppsThread2);
+

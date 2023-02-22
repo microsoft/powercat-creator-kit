@@ -1,0 +1,1288 @@
+"'CustomAPI Screen' As screen":
+    Fill: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =ClearCollect(colCustomAPIs,Filter('Custom APIs',Status=('Status (Custom APIs)').Active));
+        
+        
+
+    Container1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =6
+
+        ActionHeader_3 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(243, 242, 241, 1)
+            FillPortions: =0
+            Height: =44
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            ZIndex: =1
+
+            "CommandBar2_3 As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =33
+                Items: |-
+                    =Table(
+                          {ItemKey:"back",ItemDisplayName:"Back",ItemIconName:"Back"},
+                                {ItemKey:"download",ItemDisplayName:"Download Plugin Source Code",ItemIconName:"Download"}
+                     /* {
+                            ItemKey: "createnew",
+                            ItemDisplayName: "Create New",
+                            ItemIconName: "Add"
+                        },
+                        {
+                            ItemKey: "addExisting",
+                            ItemDisplayName: "Add Existing",
+                            ItemIconName: "DependencyAdd"
+                        },
+                        {
+                            ItemKey: "edit",
+                            ItemDisplayName: "Edit",
+                            ItemIconName: "Edit"
+                        },
+                        {
+                            ItemKey: "delete",
+                            ItemDisplayName: "Delete",
+                            ItemIconName: "Delete"
+                        },
+                        {
+                            ItemKey: "refresh",
+                            ItemDisplayName: "Refresh",
+                            ItemIconName: "refresh"
+                        } */
+                    )
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                OnSelect: |-
+                    =Switch( Self.Selected.ItemKey,
+                    "createnew",Navigate(Defaults('Custom APIs')),
+                       "back", Back(),
+                       "addExisting",Navigate(Defaults('Custom APIs')),
+                        /* Action for 'edit' (e.g., Patch function) */
+                        "edit", false,
+                        
+                        /* Action for 'delete' (e.g., Remove function ) */
+                        "delete", false,
+                        
+                        /* Action for 'refresh' (e.g., Refresh function) */
+                        "refresh",  Concurrent(
+                            Refresh('Custom APIs'),
+                         Refresh('Custom API Request Parameters'),
+                         Refresh('Custom API Response Properties')
+                              ),
+                        
+                        /* Default action */
+                            false
+                      )
+                Theme: =AppThemeJson
+                Width: =934
+                X: =21
+                Y: =15
+                ZIndex: =1
+
+            "SearchBox1_1 As 'Fluent SearchBox (1.0.19) Preview'":
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =33
+                LayoutMinHeight: =34
+                LayoutMinWidth: =200
+                PlaceHolderText: ="Search"
+                Theme: =SearchBoxThemeJson
+                Underlined: =true
+                Width: =300
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        Header_1 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =155
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =32
+            ZIndex: =2
+
+            Label1_3 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =16
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =0  
+                Text: ="Custom API"
+                Width: =320
+                X: =35
+                Y: =15
+                ZIndex: =2
+
+            lblTitle_6 As Label:
+                AlignInContainer: =AlignInContainer.Start
+                AutoHeight: =false
+                Color: =    
+                DisplayMode: =DisplayMode.View
+                FillPortions: =1
+                FontSize: =11
+                FontWeight: =FontWeight.Normal
+                Height: =32
+                LayoutMinHeight: =80
+                LayoutMinWidth: =320
+                Text: ="Optimize your data architecture by reducing client-side load. Power Fx-based functions act on data based on triggers defined at the table level.  Create a new action from blank, or use one of the below templates to get started."
+                VerticalAlignment: =VerticalAlign.Top
+                Width: =840
+                Wrap: =true
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        ScreenContainer1_1 As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =2
+            Width: =Parent.Width
+            ZIndex: =3
+
+            LeftSideContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =5
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                "cmbCA As 'Combo box'.pcfdataset":
+                    Color: =RGBA(0, 0, 0, 1)
+                    DefaultSelectedItems: =LookUp(colCustomAPIs,uniquename = "cat_PowerFxCustomApi")   
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Items: =ShowColumns(colCustomAPIs,"uniquename","customapiid")
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =
+                    OnSelect: =
+                    Width: =320
+                    X: =97
+                    Y: =18
+                    ZIndex: =3
+
+                    uniquename1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="uniquename"
+                        FieldName: ="uniquename"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =3
+
+                PropFormView As form:
+                    BorderColor: =RGBA(166, 166, 166, 1)
+                    DataSource: ='Custom APIs'
+                    DefaultMode: =FormMode.View
+                    Height: =593
+                    Item: =LookUp(colCustomAPIs,'Unique Name'=cmbCA.Selected.uniquename)
+                    LayoutMinHeight: =250
+                    LayoutMinWidth: =400
+                    NumberOfColumns: =2
+                    Width: =655
+                    X: =25
+                    Y: =28
+                    ZIndex: =5
+
+                    "'Unique Name_DataCard2' As typedDataCard.pcfCoreTextualViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="uniquename"
+                        Default: =ThisItem.'Unique Name'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"uniquename")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =45
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey12 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue12 As 'Text box'":
+                            DisplayMode: =DisplayMode.View
+                            FontSize: =10.5
+                            Height: =32
+                            Mode: ="SingleLine"
+                            Tooltip: =Parent.DisplayName
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =0
+                            Y: =DataCardKey12.Y + DataCardKey12.Height + 4
+                            ZIndex: =2
+
+                    Name_DataCard2 As typedDataCard.pcfCoreTextualViewCard:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="name"
+                        Default: =ThisItem.Name
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"name")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =45
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =1
+                        Y: =0
+                        ZIndex: =1
+
+                        DataCardKey13 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue13 As 'Text box'":
+                            DisplayMode: =DisplayMode.View
+                            FontSize: =10.5
+                            Height: =32
+                            Mode: ="SingleLine"
+                            Tooltip: =Parent.DisplayName
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey13.Y + DataCardKey13.Height + 4
+                            ZIndex: =2
+
+                    "'Display Name_DataCard2' As typedDataCard.pcfCoreTextualViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="displayname"
+                        Default: =ThisItem.'Display Name'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"displayname")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =45
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =1
+                        ZIndex: =1
+
+                        DataCardKey14 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue14 As 'Text box'":
+                            DisplayMode: =DisplayMode.View
+                            FontSize: =10.5
+                            Height: =32
+                            Mode: ="SingleLine"
+                            Tooltip: =Parent.DisplayName
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =0
+                            Y: =DataCardKey14.Y + DataCardKey14.Height + 4
+                            ZIndex: =2
+
+                    Description_DataCard2 As typedDataCard.pcfCoreTextualViewCard:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="description"
+                        Default: =ThisItem.Description
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"description")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =45
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =1
+                        Y: =1
+                        ZIndex: =1
+
+                        DataCardKey15 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue15 As 'Text box'":
+                            DisplayMode: =DisplayMode.View
+                            FontSize: =10.5
+                            Height: =32
+                            Mode: ="SingleLine"
+                            Tooltip: =Parent.DisplayName
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey15.Y + DataCardKey15.Height + 4
+                            ZIndex: =2
+
+                    "'Bound Entity Logical Name_DataCard2' As typedDataCard.pcfCoreTextualViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="boundentitylogicalname"
+                        Default: =ThisItem.'Bound Entity Logical Name'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"boundentitylogicalname")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =45
+                        Required: =false
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =2
+                        ZIndex: =1
+
+                        DataCardKey18 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue18 As 'Text box'":
+                            DisplayMode: =DisplayMode.View
+                            FontSize: =10.5
+                            Height: =32
+                            Mode: ="SingleLine"
+                            Tooltip: =Parent.DisplayName
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =0
+                            Y: =DataCardKey18.Y + DataCardKey18.Height + 4
+                            ZIndex: =2
+
+                    "'Binding Type_DataCard2' As typedDataCard.pcfCoreComboBoxOptionSetSingleViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="bindingtype"
+                        Default: =ThisItem.'Binding Type'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"bindingtype")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =1
+                        Y: =2
+                        ZIndex: =1
+
+                        DataCardKey17 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue17 As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =[Parent.Default]
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =Choices('Binding Type (Custom APIs)')
+                            PaddingLeft: =12
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey17.Y + DataCardKey17.Height + 4
+                            ZIndex: =2
+
+                    "'Allowed Custom Processing Step Type_DataCard2' As typedDataCard.pcfCoreComboBoxOptionSetSingleViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="allowedcustomprocessingsteptype"
+                        Default: =ThisItem.'Allowed Custom Processing Step Type'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"allowedcustomprocessingsteptype")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =3
+                        ZIndex: =1
+
+                        DataCardKey16 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue16 As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =[Parent.Default]
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =Choices('Allowed Custom Processing Step Type (Custom APIs)')
+                            PaddingLeft: =0
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            Y: =DataCardKey16.Y + DataCardKey16.Height + 4
+                            ZIndex: =2
+
+                    "'Plugin Type_DataCard1' As typedDataCard.pcfCoreComboBoxEditCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="PluginTypeId"
+                        Default: =ThisItem.'Plugin Type'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"PluginTypeId")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =false
+                        Update: =DataCardValue11.Selected
+                        Width: =327
+                        WidthFit: =true
+                        X: =1
+                        Y: =3
+                        ZIndex: =1
+
+                        DataCardKey11 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue11 As combobox:
+                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =Parent.Default
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["name"]
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            Items: =Choices([@'Custom APIs'].PluginTypeId)
+                            PaddingLeft: =12
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["name"]
+                            SearchItems: =Search(Choices([@'Custom APIs'].PluginTypeId),DataCardValue11.SearchText,"name")
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey11.Y + DataCardKey11.Height + 4
+                            ZIndex: =2
+
+                        ErrorMessage10 As Label:
+                            AutoHeight: =true
+                            Color: =Color.Red
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            Height: =30
+                            Text: =Parent.Error
+                            Tooltip: =Parent.Error
+                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =DataCardValue11.Y + DataCardValue11.Height
+                            ZIndex: =3
+
+                        StarVisible10 As Label:
+                            Alignment: =Align.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =20
+                            Text: ="*"
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            X: =0
+                            Y: =DataCardKey11.Y
+                            ZIndex: =4
+
+                    "'Execute Privilege Name_DataCard1' As typedDataCard.pcfCoreTextualEditCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="executeprivilegename"
+                        Default: =ThisItem.'Execute Privilege Name'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"executeprivilegename")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =45
+                        MaxLength: =DataSourceInfo([@'Custom APIs'], DataSourceInfo.MaxLength, "executeprivilegename")
+                        Required: =false
+                        Update: =DataCardValue1.Value
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =4
+                        ZIndex: =1
+
+                        DataCardKey1 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =10
+                            ZIndex: =1
+
+                        "DataCardValue1 As 'Text box'":
+                            AccessibleLabel: =Parent.DisplayName
+                            DisplayMode: =Parent.DisplayMode
+                            FontSize: =10.5
+                            Height: =32
+                            Mode: ="SingleLine"
+                            Required: =Parent.Required
+                            Tooltip: =Parent.DisplayName
+                            Value: =Parent.Default
+                            Width: =Parent.Width - 48
+                            X: =0
+                            Y: =DataCardKey1.Y + DataCardKey1.Height + 4
+                            ZIndex: =2
+
+                        ErrorMessage1 As Label:
+                            AutoHeight: =true
+                            Color: =Color.Red
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            Height: =30
+                            Text: =Parent.Error
+                            Tooltip: =Parent.Error
+                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =DataCardValue1.Y + DataCardValue1.Height
+                            ZIndex: =3
+
+                        StarVisible1 As Label:
+                            Alignment: =Align.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =30
+                            Text: ="*"
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            X: =0
+                            Y: =DataCardKey1.Y
+                            ZIndex: =4
+
+                    "'Enabled for Workflow_DataCard1' As typedDataCard.pcfCoreComboBoxOptionSetSingleEditCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="workflowsdkstepenabled"
+                        Default: =ThisItem.'Enabled for Workflow'
+                        DisplayMode: =Parent.DisplayMode
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"workflowsdkstepenabled")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =false
+                        Update: =DataCardValue4.Selected.Value
+                        Width: =327
+                        WidthFit: =true
+                        X: =1
+                        Y: =4
+                        ZIndex: =1
+
+                        DataCardKey4 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue4 As combobox:
+                            AccessibleLabel: =If(Parent.Required, Substitute("{0}. Required.", "{0}", Parent.DisplayName), Parent.DisplayName)
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =[Parent.Default]
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            DisplayMode: =Parent.DisplayMode
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =Choices('Enabled for Workflow (Custom APIs)')
+                            PaddingLeft: =12
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey4.Y + DataCardKey4.Height + 4
+                            ZIndex: =2
+
+                        ErrorMessage2 As Label:
+                            AutoHeight: =true
+                            Color: =Color.Red
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            Height: =30
+                            Text: =Parent.Error
+                            Tooltip: =Parent.Error
+                            Visible: =And(!IsBlank(Parent.Error), Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =DataCardValue4.Y + DataCardValue4.Height
+                            ZIndex: =3
+
+                        StarVisible2 As Label:
+                            Alignment: =Align.Center
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =20
+                            Text: ="*"
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                            Width: =30
+                            X: =0
+                            Y: =DataCardKey4.Y
+                            ZIndex: =4
+
+                    "'Is Function_DataCard2' As typedDataCard.pcfCoreComboBoxOptionSetSingleViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="isfunction"
+                        Default: =ThisItem.'Is Function'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"isfunction")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =5
+                        ZIndex: =1
+
+                        DataCardKey19 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue19 As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =[Parent.Default]
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =Choices('Is Function (Custom APIs)')
+                            PaddingLeft: =12
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            Y: =DataCardKey19.Y + DataCardKey19.Height + 4
+                            ZIndex: =2
+
+                    "'Is Private_DataCard2' As typedDataCard.pcfCoreComboBoxOptionSetSingleViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="isprivate"
+                        Default: =ThisItem.'Is Private'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"isprivate")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =false
+                        Width: =327
+                        WidthFit: =true
+                        X: =1
+                        Y: =5
+                        ZIndex: =1
+
+                        DataCardKey20 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =24
+                            Y: =10
+                            ZIndex: =1
+
+                        DataCardValue20 As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =[Parent.Default]
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =Choices('Is Private (Custom APIs)')
+                            PaddingLeft: =12
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            X: =24
+                            Y: =DataCardKey20.Y + DataCardKey20.Height + 4
+                            ZIndex: =2
+
+                    "'Is Managed_DataCard1' As typedDataCard.pcfCoreComboBoxOptionSetSingleViewCard":
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.Solid
+                        DataField: ="ismanaged"
+                        Default: =ThisItem.'Is Managed'
+                        DisplayMode: =DisplayMode.View
+                        DisplayName: =DataSourceInfo([@'Custom APIs'],DataSourceInfo.DisplayName,"ismanaged")
+                        Fill: =RGBA(0, 0, 0, 0)
+                        Height: =35
+                        Required: =true
+                        Width: =327
+                        WidthFit: =true
+                        X: =0
+                        Y: =6
+                        ZIndex: =1
+
+                        DataCardKey2 As Label:
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =9
+                            FontWeight: =FontWeight.Semibold
+                            Height: =22
+                            Text: =Parent.DisplayName
+                            Tooltip: =Parent.DisplayName
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =Parent.Width - 48
+                            Wrap: =true
+                            X: =0
+                            Y: =4
+                            ZIndex: =1
+
+                        DataCardValue2 As combobox:
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            ChevronBackground: =RGBA(255, 255, 255, 1)
+                            ChevronDisabledBackground: =RGBA(244, 244, 244, 1)
+                            ChevronDisabledFill: =RGBA(166, 166, 166, 1)
+                            ChevronFill: =RGBA(33, 33, 33, 1)
+                            ChevronHoverBackground: =RGBA(212, 212, 212, 1)
+                            ChevronHoverFill: =RGBA(33, 33, 33, 1)
+                            Color: =RGBA(51, 51, 51, 1)
+                            DefaultSelectedItems: =[Parent.Default]
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            DisplayFields: =["Value"]
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            FocusedBorderThickness: =2
+                            Font: =Font.'Segoe UI'
+                            Height: =32
+                            HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverColor: =RGBA(51, 51, 51, 1)
+                            HoverFill: =RGBA(212, 212, 212, 1)
+                            IsSearchable: =false
+                            Items: =Choices('Is Component Managed')
+                            PaddingLeft: =12
+                            PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(212, 212, 212, 1)
+                            SearchFields: =["Value"]
+                            SearchItems: =[]
+                            SelectionColor: =RGBA(51, 51, 51, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            SelectMultiple: =false
+                            Size: =10.5
+                            Tooltip: =Parent.DisplayName
+                            Width: =Parent.Width - 48
+                            Y: =DataCardKey2.Y + DataCardKey2.Height + 4
+                            ZIndex: =2
+
+            RightSideContainer1_1 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                RequestContainer As groupContainer.manualLayoutContainer:
+                    Height: =329
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =631
+                    X: =717
+                    Y: =97
+                    ZIndex: =1
+
+                    lblRequestParam As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Bold
+                        Height: =32
+                        Text: ="Request Parameters"
+                        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading3
+                        Width: =149
+                        X: =23
+                        Y: =13
+                        ZIndex: =2
+
+                    "RequestDL As 'Fluent Details List (1.0.19)'.pcfdataset":
+                        ColDisplayName: =
+                        columns_Items: |-
+                            =Table(
+                                {
+                                    ColName: "uniquename",
+                                    ColDisplayName: "Name",
+                                    ColWidth: 100,
+                                    ColSortable: true,
+                                    ColIsBold: true,
+                                    ColResizable: true
+                                },{
+                                    ColName: "type",
+                                     ColWidth: 50,
+                                      ColSortable: true,
+                                    ColDisplayName: "Type"       
+                                },
+                                {
+                                    ColName: "isoptional",
+                                    ColWidth: 80,
+                                      ColSortable: true,
+                                    ColDisplayName: "Is Optional"       
+                                },
+                                {
+                                    ColName: "edit",
+                                    ColDisplayName: "Edit",
+                                    ColCellType:"clickableimage",
+                                    ColWidth: 60
+                            }
+                                )
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =225
+                        Items: |+
+                            =Filter('Custom API Request Parameters','Custom API'.'Unique Name' =cmbCA.Selected.uniquename)
+                            
+                        OnSelect: |-
+                            =Navigate( 
+                              RequestDL.Selected, 
+                              { Page: 'Custom API Request Parameters (Forms)'.Information})
+                        Width: =565
+                        X: =35
+                        Y: =75
+                        ZIndex: =3
+
+                        "'Unique Name2' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Unique Name"
+                            FieldName: ="uniquename"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =5
+
+                        Type1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Type"
+                            FieldName: ="type"
+                            FieldType: ="l"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =6
+
+                        "'Is Optional1' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Is Optional"
+                            FieldName: ="isoptional"
+                            FieldType: ="l"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =7
+
+                    "CommandBar2_1 As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =35
+                        Items: |-
+                            =Table(
+                              {
+                                    ItemKey: "createnew",
+                                    ItemDisplayName: "New",
+                                    ItemIconName: "Add"
+                                },
+                                
+                                {
+                                    ItemKey: "edit",
+                                    ItemDisplayName: "Edit",
+                                    ItemIconName: "Edit"
+                                },
+                                {
+                                    ItemKey: "delete",
+                                    ItemDisplayName: "Delete",
+                                    ItemIconName: "Delete"
+                                }
+                            )
+                        OnSelect: |-
+                            =Switch( Self.Selected.ItemKey,
+                            "createnew",Navigate(Defaults('Custom API Request Parameters')),
+                               
+                                "edit", false,
+                                
+                                /* Action for 'delete' (e.g., Remove function ) */
+                                "delete", false,
+                                
+                                
+                                
+                                /* Default action */
+                                    false
+                              )
+                        Theme: =AppThemeJson
+                        Width: =577
+                        X: =23
+                        Y: =40
+                        ZIndex: =4
+
+                ResponseContainer As groupContainer.manualLayoutContainer:
+                    Height: =329
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =631
+                    X: =717
+                    Y: =426
+                    ZIndex: =2
+
+                    lblRequestParam_1 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Bold
+                        Height: =32
+                        Text: ="Response Properties"
+                        TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading3
+                        Width: =320
+                        X: =24
+                        Y: =8
+                        ZIndex: =2
+
+                    "ResponseDL As 'Fluent Details List (1.0.19)'.pcfdataset":
+                        columns_Items: |-
+                            =Table(
+                                {
+                                    ColName: "uniquename",
+                                    ColDisplayName: "Name",
+                                    ColWidth: 200,
+                                    ColSortable: true,
+                                    ColIsBold: true,
+                                    ColResizable: true
+                                },{
+                                    ColName: "type",
+                                     ColWidth: 100,
+                                      ColSortable: true,
+                                    ColDisplayName: "Type"       
+                                }
+                                )
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =229
+                        Items: =Filter('Custom API Response Properties','Custom API'.'Unique Name'=cmbCA.Selected.uniquename)
+                        OnSelect: |-
+                            =Navigate( 
+                              ResponseDL.Selected, 
+                              { Page: 'Custom API Response Properties (Forms)'.Information})
+                        Width: =585
+                        X: =24
+                        Y: =75
+                        ZIndex: =3
+
+                        "'Unique Name3' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Unique Name"
+                            FieldName: ="uniquename"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =8
+
+                        Type2 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Type"
+                            FieldName: ="type"
+                            FieldType: ="l"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =9
+
+                    "CommandBar2_2 As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =35
+                        Items: |-
+                            =Table(
+                              {
+                                    ItemKey: "createnew",
+                                    ItemDisplayName: "New",
+                                    ItemIconName: "Add"
+                                },
+                                
+                                {
+                                    ItemKey: "edit",
+                                    ItemDisplayName: "Edit",
+                                    ItemIconName: "Edit"
+                                },
+                                {
+                                    ItemKey: "delete",
+                                    ItemDisplayName: "Delete",
+                                    ItemIconName: "Delete"
+                                }
+                            )
+                        OnSelect: |-
+                            =Switch( Self.Selected.ItemKey,
+                            "createnew",false,   
+                                "edit", false,
+                                
+                                /* Action for 'delete' (e.g., Remove function ) */
+                                "delete", false,
+                                
+                                /* Default action */
+                                    false
+                              )
+                        Theme: =AppThemeJson
+                        Width: =578
+                        X: =24
+                        Y: =40
+                        ZIndex: =4
+

@@ -1,0 +1,786 @@
+"Main As screen.'tabletAutoLayout_HeaderMainFooter_ver1.0'":
+    Fill: |-
+        =ColorValue("#faf9f8")
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =123
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =96
+            PaddingRight: =96
+            PaddingTop: =24
+            Width: =1366
+            Y: =-3
+            ZIndex: =1
+
+            Label6 As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =18
+                FontWeight: =FontWeight.Bold
+                Height: =44
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Creator Kit for Dataverse"
+                TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+                Width: =422
+                X: =-54
+                Y: =-6
+                ZIndex: =1
+
+            "Pivot1 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =40
+                Items: |-
+                    =Table({ItemDisplayName:"Checker",ItemKey:0},{ItemDisplayName:"Requests",ItemKey:1})
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                SelectedKey: ="1"
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+        MainSectionContainer1 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =6
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingBottom: =24
+            PaddingLeft: =96
+            PaddingRight: =96
+            ZIndex: =2
+
+            Container2 As groupContainer.horizontalAutoLayoutContainer:
+                Fill: =RGBA(255, 240, 194, 1)
+                FillPortions: =0
+                Height: =38
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =6
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =12
+                PaddingRight: =12
+                Width: =1270
+                Y: =6
+                ZIndex: =1
+
+                "Icon1 As 'Fluent Icon (1.0.19)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    IconName: ="Info"
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Center
+                    Width: =50
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                Label10 As Label:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.View
+                    FontSize: =11
+                    FontWeight: =FontWeight.Semibold
+                    Height: =30
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Limited Access to Dataverse."
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =190
+                    Wrap: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                Label11 As Label:
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.View
+                    FillPortions: =1
+                    FontSize: =11
+                    Height: =30
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Get a trial or premium license to use Dataverse in other types of Environments."
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =Parent.Width - Self.X
+                    Wrap: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                Button3_1 As Button:
+                    BorderRadius: =2
+                    BorderStyle: =BorderStyle.Solid
+                    BorderThickness: =1
+                    ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                    DisplayMode: =DisplayMode.Edit
+                    FontWeight: =FontWeight.Semibold
+                    Height: =26
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: ="Request premium"
+                    Width: =162
+                    X: =1093
+                    Y: =6
+                    ZIndex: =5
+
+            Container6 As groupContainer.manualLayoutContainer:
+                FillPortions: =0
+                Height: =145
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =3
+
+                Image2 As image:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    Height: =145
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Image: =banner
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =1246
+                    ZIndex: =1
+
+                c_bannerText As groupContainer.verticalAutoLayoutContainer:
+                    Height: =Parent.Height - Self.Y
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingTop: =24
+                    Width: =Parent.Width - Self.X
+                    X: =600
+                    ZIndex: =2
+
+                    Label16 As label:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =2
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        Height: =28
+                        Text: ="Dataverse Experiences App"
+                        Width: =646
+                        Wrap: =false
+                        Y: =30
+                        ZIndex: =1
+
+                    Label17 As label:
+                        AlignInContainer: =AlignInContainer.Start
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =2
+                        Font: =Font.'Segoe UI'
+                        Height: =46
+                        Size: =9
+                        Text: ="Try the newest features coming to the Dataverse maker portal experience before they are available. Interact with complex server-side computing capabilities through approachable low-code interface Power Platform Creator Kit."
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Parent.Width/1.3
+                        Y: =55
+                        ZIndex: =2
+
+                    Button3_10 As Button:
+                        BorderRadius: =2
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =9
+                        FontWeight: =FontWeight.Semibold
+                        Height: =26
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Run the Dataverse Experiences App"
+                        Width: =228
+                        X: =-60
+                        Y: =6
+                        ZIndex: =3
+
+            Container5 As groupContainer.verticalAutoLayoutContainer:
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =4
+
+                c_card_1 As groupContainer.manualLayoutContainer:
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =1
+
+                    "elv_cardBack_1 As 'Fluent Elevation (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =6
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    c_cardContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =elv_cardBack_1.PaddingTop
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        c_cardHeader_1 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =40
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =12
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                            Label12_1 As Label:
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontSize: =11
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Text: ="License"
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "ContextMenu1_1 As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+                                BorderColor: ="white"
+                                Chevron: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =50
+                                Items: |-
+                                    =Table(
+                                          {
+                                              ItemKey: "more",
+                                              ItemIconName: "more",
+                                              ItemOverflow:true
+                                          },
+                                           {
+                                              ItemKey: "Delete",
+                                              ItemIconName: "Delete",
+                                              ItemDisplayName: "Delete",
+                                              ItemOverflow:true
+                                          }
+                                      )
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Width: =74
+                                X: =1187
+                                Y: =0
+                                ZIndex: =2
+
+                        Separator_4 As rectangle:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(230, 230, 230, 1)
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            Height: =1
+                            Width: =1
+                            X: =1363
+                            Y: =-3
+                            ZIndex: =2
+
+                        c_cardContent_1 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =24
+                            PaddingTop: =24
+                            ZIndex: =3
+
+                            c_status As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =20
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =6
+                                LayoutMinHeight: =20
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =1
+
+                                Image4 As image:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    Height: =16
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Image: =verified
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =16
+                                    ZIndex: =1
+
+                                Label18 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(51, 51, 51, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    FocusedBorderThickness: =2
+                                    Font: =Font.'Segoe UI'
+                                    Height: =20
+                                    Size: =9
+                                    Text: ="Premium license assigned"
+                                    ZIndex: =2
+
+                        Container14_1 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =57
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutGap: =6
+                            LayoutJustifyContent: =LayoutJustifyContent.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingRight: =24
+                            Width: =411
+                            Y: =481
+                            ZIndex: =4
+
+                            Button3_5 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Request premium"
+                                Width: =132
+                                X: =1117
+                                Y: =0
+                                ZIndex: =2
+
+                c_card_2 As groupContainer.manualLayoutContainer:
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =2
+
+                    "elv_cardBack_2 As 'Fluent Elevation (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =6
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    c_cardContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =elv_cardBack_2.PaddingTop
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        c_cardHeader_2 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =40
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =12
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                            Label12_2 As Label:
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontSize: =11
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "ContextMenu1_2 As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+                                BorderColor: ="white"
+                                Chevron: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =38
+                                Items: |-
+                                    =Table(
+                                          {
+                                              ItemKey: "more",
+                                              ItemIconName: "more",
+                                              ItemOverflow:true
+                                          },
+                                           {
+                                              ItemKey: "Delete",
+                                              ItemIconName: "Delete",
+                                              ItemDisplayName: "Delete",
+                                              ItemOverflow:true
+                                          }
+                                      )
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Width: =74
+                                X: =1187
+                                Y: =6
+                                ZIndex: =2
+
+                        Separator_5 As rectangle:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(230, 230, 230, 1)
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            Height: =1
+                            Width: =1
+                            X: =1363
+                            Y: =-3
+                            ZIndex: =2
+
+                        c_cardContent_2 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =24
+                            PaddingTop: =24
+                            ZIndex: =3
+
+                            c_status_1 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =20
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =6
+                                LayoutMinHeight: =20
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =1
+
+                                Image4_1 As image:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    Height: =16
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Image: =verified
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =16
+                                    ZIndex: =1
+
+                                Label18_1 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(51, 51, 51, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    FocusedBorderThickness: =2
+                                    Font: =Font.'Segoe UI'
+                                    Height: =20
+                                    Size: =9
+                                    Text: ="Full access"
+                                    ZIndex: =2
+
+                        Container14_2 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =57
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutGap: =6
+                            LayoutJustifyContent: =LayoutJustifyContent.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingRight: =24
+                            Visible: =false
+                            Width: =411
+                            Y: =481
+                            ZIndex: =4
+
+                            Button3_6 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Action"
+                                Width: =126
+                                X: =961
+                                Y: =0
+                                ZIndex: =1
+
+                            Button3_7 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Action"
+                                Width: =132
+                                X: =1117
+                                Y: =0
+                                ZIndex: =2
+
+                c_card_3 As groupContainer.manualLayoutContainer:
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =3
+
+                    "elv_cardBack_3 As 'Fluent Elevation (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =6
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    c_cardContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =elv_cardBack_3.PaddingTop
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        c_cardHeader_3 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =40
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =12
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                            Label12_3 As Label:
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontSize: =11
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "ContextMenu1_3 As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+                                BorderColor: ="white"
+                                Chevron: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =38
+                                Items: |-
+                                    =Table(
+                                          {
+                                              ItemKey: "more",
+                                              ItemIconName: "more",
+                                              ItemOverflow:true
+                                          },
+                                           {
+                                              ItemKey: "Delete",
+                                              ItemIconName: "Delete",
+                                              ItemDisplayName: "Delete",
+                                              ItemOverflow:true
+                                          }
+                                      )
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Width: =74
+                                X: =1187
+                                Y: =6
+                                ZIndex: =2
+
+                        Separator_6 As rectangle:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(230, 230, 230, 1)
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            Height: =1
+                            Width: =1
+                            X: =1363
+                            Y: =-3
+                            ZIndex: =2
+
+                        c_cardContent_3 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =24
+                            PaddingTop: =24
+                            ZIndex: =3
+
+                            c_status_2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =20
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =6
+                                LayoutMinHeight: =20
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =1
+
+                                Image4_2 As image:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledFill: =RGBA(0, 0, 0, 0)
+                                    Height: =16
+                                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                                    HoverFill: =RGBA(0, 0, 0, 0)
+                                    Image: =info
+                                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                                    PressedFill: =RGBA(0, 0, 0, 0)
+                                    Width: =16
+                                    ZIndex: =1
+
+                                Label18_2 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(51, 51, 51, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    FocusedBorderThickness: =2
+                                    Font: =Font.'Segoe UI'
+                                    Height: =20
+                                    Size: =9
+                                    Text: ="Manually check policy"
+                                    ZIndex: =2
+
+                        Container14_3 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =57
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutGap: =6
+                            LayoutJustifyContent: =LayoutJustifyContent.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingRight: =24
+                            Width: =411
+                            Y: =481
+                            ZIndex: =4
+
+                            Button3_8 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="View policies"
+                                Width: =126
+                                X: =961
+                                Y: =0
+                                ZIndex: =1
+
+                            Button3_9 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Request policy change"
+                                Width: =168
+                                X: =214
+                                Y: =0
+                                ZIndex: =2
+
+        FooterContainer2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =30
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Visible: =false
+            ZIndex: =3
+

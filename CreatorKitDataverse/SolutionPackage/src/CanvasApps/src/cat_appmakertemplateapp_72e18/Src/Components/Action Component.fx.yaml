@@ -1,0 +1,374 @@
+"'Action Component' As CanvasComponent":
+    Expanded: =true
+    ExpandedHeigth: =190
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ExpandedHeigth
+    OnReset: =Set(ExpandCollapse, true)
+    Theme: |-
+        ={
+        	palette: {
+        		themePrimary: "#0078d4",
+        		themeLighterAlt: "#eff6fc",
+        		themeLighter: "#deecf9",
+        		themeLight: "#c7e0f4",
+        		themeTertiary: "#71afe5",
+        		themeSecondary: "#2b88d8",
+        		themeDarkAlt: "#106ebe",
+        		themeDark: "#005a9e",
+        		themeDarker: "#004578",
+        		neutralLighterAlt: "#faf9f8",
+        		neutralLighter: "#f3f2f1",
+        		neutralLight: "#edebe9",
+        		neutralQuaternaryAlt: "#e1dfdd",
+        		neutralQuaternary: "#d0d0d0",
+        		neutralTertiaryAlt: "#c8c6c4",
+        		neutralTertiary: "#a19f9d",
+        		neutralSecondary: "#605e5c",
+        		neutralPrimaryAlt: "#3b3a39",
+        		neutralPrimary: "#323130",
+        		neutralDark: "#201f1e",
+        		black: "#000000",
+        		white: "#ffffff"
+        	}
+        }
+    Width: =375
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Rectangle1 As rectangle:
+        BorderColor: =RGBA(204, 204, 204, 1)
+        BorderThickness: =1
+        Fill: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height
+        Visible: =InitTimer.Value = 0
+        Width: =Parent.Width
+        ZIndex: =1
+
+    DetailsContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =10
+        PaddingLeft: =20
+        PaddingRight: =20
+        PaddingTop: =10
+        Visible: =!hideDetails && InitTimer.Value = 0
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Container2_1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =45
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            imgBack As image:
+                AlignInContainer: =AlignInContainer.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderColor: =imgBack.BorderColor
+                FocusedBorderThickness: =4
+                Height: =32
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: |-
+                    ="data:image/svg+xml," & 
+                     EncodeUrl(
+                        "<svg width='48' height='48' viewBox='0 0 48 48' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M44 24C44 24.6904 43.4404 25.25 42.75 25.25H10.3041L23.1264 37.8586C23.6187 38.3426 23.6253 39.134 23.1413 39.6263C22.6572 40.1185 21.8658 40.1252 21.3736 39.6411L6.38563 24.903C6.37656 24.8943 6.36759 24.8854 6.35872 24.8764C6.14696 24.6611 6.02911 24.3884 6.00476 24.1094C5.99775 24.029 5.99848 23.9481 6.00696 23.8679C6.03557 23.5967 6.15267 23.333 6.35872 23.1234C6.37242 23.1095 6.38611 23.096 6.39982 23.0829L21.3736 8.35872C21.8658 7.87468 22.6572 7.88134 23.1413 8.37358C23.6253 8.86582 23.6187 9.65724 23.1264 10.1413L10.304 22.75H42.75C43.4404 22.75 44 23.3096 44 24Z'
+                    
+                    fill='" & 'Action Component'.Theme.palette.themePrimary & "'/>
+                    </svg>"
+                    )
+                OnSelect: =Set(hideDetails, true)
+                PaddingBottom: =6
+                PaddingLeft: =6
+                PaddingRight: =6
+                PaddingTop: =6
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =33
+                X: =5
+                Y: =5
+                ZIndex: =1
+
+            Label3 As label:
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                Text: =Gallery2.Selected.Title
+                ZIndex: =2
+
+            Container5 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.Center
+                FillPortions: =0
+                Height: =20
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Width: =20
+                ZIndex: =3
+
+                Circle1 As circle:
+                    Fill: |-
+                        =ColorValue("#00AD56")
+                    Height: =20
+                    Width: =20
+                    ZIndex: =1
+
+                Icon6 As icon.Check:
+                    Color: =RGBA(255, 255, 255, 1)
+                    Height: =12
+                    Icon: =Icon.Check
+                    Width: =12
+                    X: =4
+                    Y: =4
+                    ZIndex: =2
+
+        HtmlText1 As htmlViewer:
+            AlignInContainer: =AlignInContainer.Stretch
+            Font: =Font.'Segoe UI'
+            Height: =50
+            HtmlText: |-
+                ="1. Add a button to the app <br/>
+                2.  Paste this formula in the OnSelect property"
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10
+            ZIndex: =2
+
+        Label2_1 As label:
+            AutoHeight: =true
+            Font: =Font.'Segoe UI'
+            Height: =100
+            Size: =10
+            Text: ="1. Add a button to the app"
+            Visible: =false
+            ZIndex: =3
+
+        Label2_2 As label:
+            AutoHeight: =true
+            Font: =Font.'Segoe UI'
+            Height: =100
+            Size: =10
+            Text: ="2. Paste this formula in the OnSelect property"
+            Visible: =false
+            ZIndex: =4
+
+        Container4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(237, 237, 237, 1)
+            FillPortions: =0
+            Height: =50
+            LayoutMinHeight: =50
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =5
+            PaddingRight: =5
+            ZIndex: =5
+
+            Label2_3 As label:
+                AlignInContainer: =AlignInContainer.Center
+                AutoHeight: =true
+                Color: =RGBA(39, 67, 125, 1)
+                FillPortions: =1
+                Font: =Font.'Courier New'
+                FontWeight: =FontWeight.Semibold
+                Height: =100
+                PaddingLeft: =1
+                PaddingRight: =1
+                Size: =9
+                Text: ="Environment.IntelligentSendEmail(Accounts)"
+                ZIndex: =1
+
+            Icon4 As icon.Copy:
+                AlignInContainer: =AlignInContainer.Center
+                Color: =RGBA(128, 128, 128, 1)
+                Height: =45
+                Icon: =Icon.Copy
+                Width: =15
+                ZIndex: =2
+
+    GalleryContainer As groupContainer.verticalAutoLayoutContainer:
+        BorderColor: =RGBA(230, 230, 230, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =10
+        PaddingLeft: =15
+        PaddingRight: =15
+        PaddingTop: =10
+        Visible: =hideDetails && InitTimer.Value = 0
+        Width: =Parent.Width
+        ZIndex: =3
+
+        Container2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =50
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Container3 As groupContainer.manualLayoutContainer:
+                LayoutMinHeight: =40
+                LayoutMinWidth: =250
+                ZIndex: =1
+
+                Icon2 As icon.ChevronDown:
+                    Height: =10
+                    Icon: =Icon.ChevronDown //If(ExpandCollapse, Icon.ChevronDown, Icon.ChevronUp)
+                    OnSelect: =Set(ExpandCollapse, !ExpandCollapse)
+                    Width: =13
+                    X: =321
+                    Y: =5
+                    ZIndex: =3
+
+                "SearchBox1_1 As 'Fluent SearchBox (1.0.19) Preview'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =50
+                    Width: =303
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+        Label2 As label:
+            Color: =RGBA(128, 128, 128, 1)
+            Font: =Font.'Segoe UI'
+            Height: =20
+            Size: =9
+            Text: ="Suggested Templates"
+            ZIndex: =2
+
+        Gallery2 As gallery.galleryVertical:
+            Height: =108
+            Items: |-
+                =Table(
+                {
+                 Title:"Intelligent Send Email",
+                 Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                 Inputs: Table({ key:"email", value:"Email", isEnabled:true}, { key:"triageAlias", value:"TriageAlias" , isEnabled:true}),
+                 Outputs:Table({ key:"", value:""}),
+                 Formula:"If( Keyword in Email.Subject, Set( ‘Triage Alias’, Email ));"
+                },
+                {
+                 Title:"Contact Deduplicate",
+                 Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar.",
+                 Inputs: Table({ key:"email", value:"Email", isEnabled:true}),
+                 Outputs:Table({ key:"", value:""}),
+                 Formula:"If( Keyword in Email.Subject, Set( ‘Triage Alias’, Email ));"
+                },
+                {
+                 Title:"Complex Action",
+                 Body:"Consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                 Inputs: Table({ key:"email", value:"Email", isEnabled:true}, { key:"triageAlias", value:"TriageAlias" , isEnabled:true}, { key:"body", value:"Body" , isEnabled:true}),
+                 Outputs:Table({ key:"", value:""}),
+                 Formula:"If( Keyword in Email.Subject, Set( ‘Triage Alias’, Email ));"
+                },
+                {
+                 Title:"Recurring Task",
+                 Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                 Inputs: Table({ key:"email", value:"Email", isEnabled:true}, { key:"triageAlias", value:"TriageAlias" , isEnabled:true}, { key:"body", value:"Body" , isEnabled:true}),
+                 Outputs:Table({ key:"", value:""}),
+                 Formula:"If( Keyword in Email.Subject, Set( ‘Triage Alias’, Email ));"
+                })
+            Layout: =Layout.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =320
+            TemplatePadding: =1
+            TemplateSize: =49
+            Width: =333
+            X: =30
+            Y: =65
+            ZIndex: =3
+
+            Image2 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Height: =36
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: |-
+                    ="data:image/svg+xml," & 
+                     EncodeUrl(
+                        "<svg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'>
+                    <path d='M8.4062 2.85167C8.60507 2.33834 9.09898 2 9.6495 2H18.1647C19.0915 2 19.7356 2.92219 19.4166 3.79234L17.3237 9.5H22.1611C23.3393 9.5 23.9385 10.9163 23.118 11.7618L9.78417 25.5031C8.64398 26.6782 6.67825 25.62 7.03116 24.0212L8.69131 16.5H5.91677C4.56971 16.5 3.64292 15.147 4.12953 13.8909L8.4062 2.85167ZM9.76367 3.5L5.52824 14.4328C5.42245 14.7059 5.62393 15 5.91677 15H9.62491C9.85221 15 10.0672 15.1031 10.2096 15.2803C10.352 15.4575 10.4063 15.6897 10.3573 15.9117L8.4959 24.3446C8.48544 24.3919 8.49418 24.4137 8.49978 24.425C8.50838 24.4422 8.52724 24.4646 8.55871 24.4816C8.59019 24.4985 8.61929 24.5019 8.63841 24.4996C8.65086 24.4981 8.67389 24.4934 8.70767 24.4585L21.7671 11H16.2499C16.0049 11 15.7753 10.8803 15.635 10.6795C15.4948 10.4786 15.4614 10.2218 15.5458 9.99181L17.9261 3.5H9.76367Z' fill='" & 'Action Component'.Theme.palette.themePrimary & "'/></svg>"
+                    
+                    
+                    )
+                PaddingBottom: =5
+                PaddingLeft: =5
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =30
+                Y: =3
+                ZIndex: =1
+
+            Label1 As label:
+                Height: =33
+                OnSelect: =Select(Parent)
+                PaddingLeft: =0
+                Size: =10
+                Text: =ThisItem.Title
+                Width: =234
+                X: =30
+                Y: =3
+                ZIndex: =2
+
+            Label1_1 As label:
+                Color: =ColorValue('Action Component'.Theme.palette.neutralDark)
+                FontWeight: =FontWeight.Lighter
+                Height: =23
+                OnSelect: =Select(Parent)
+                PaddingLeft: =0
+                Size: =9
+                Text: ="Quick description of the template"
+                Width: =265
+                X: =30
+                Y: =26
+                ZIndex: =3
+
+            Icon1 As icon.Add:
+                Color: =ColorValue('Action Component'.Theme.palette.black)
+                Height: =26
+                Icon: =Icon.Add
+                OnSelect: =Set(hideDetails,false)
+                Width: =17
+                X: =295
+                Y: =13
+                ZIndex: =4
+
+    InitTimer As timer:
+        AutoStart: =true
+        BorderColor: =ColorFade(InitTimer.Fill, -15%)
+        DisabledBorderColor: =ColorFade(InitTimer.BorderColor, 70%)
+        DisabledColor: =ColorFade(InitTimer.Fill, 90%)
+        DisabledFill: =ColorFade(InitTimer.Fill, 70%)
+        Duration: =1000
+        FocusedBorderColor: =InitTimer.BorderColor
+        Height: =0
+        HoverBorderColor: =ColorFade(InitTimer.BorderColor, 20%)
+        OnTimerStart: =
+        PressedBorderColor: =InitTimer.Fill
+        PressedColor: =InitTimer.Fill
+        PressedFill: =InitTimer.Color
+        Repeat: =true
+        Start: =true
+        Text: |-
+            =Text(Time(0, 0, InitTimer.Value/1000), "hh:mm:ss")
+        Visible: =false
+        Width: =48
+        ZIndex: =4
+

@@ -1,0 +1,94 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "entities",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "entity",
+    "MaxGetRowsCount": 500,
+    "Name": "Entities",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "addresstablename": "Address Table Name",
+      "basetablename": "Base Table Name",
+      "CatalogAssignments": "Catalog Assignments",
+      "collectionname": "Collection Name",
+      "componentstate": "Component State",
+      "entity_appaction_ContextEntity": "App Actions",
+      "entity_appactionrule_ContextEntity": "App Action Rules",
+      "entity_entityanalyticsconfig": "Entity Analytics Config",
+      "entity_serviceplanmapping": "Service Plan Mappings",
+      "entity_solutioncomponentbatchconfiguration_PrimaryEntity": "Solution Component Batch Configurations (entity_solutioncomponentbatchconfiguration_PrimaryEntity)",
+      "entity_solutioncomponentbatchconfiguration_RelatedEntity": "Solution Component Batch Configurations (entity_solutioncomponentbatchconfiguration_RelatedEntity)",
+      "entity_solutioncomponentconfiguration": "Solution Component Configurations",
+      "entityid": "Entity",
+      "entitysetname": "Entity Set Name",
+      "extensiontablename": "Extension Table Name",
+      "externalcollectionname": "External Collection Name",
+      "externalname": "External Name",
+      "logicalcollectionname": "Logical Collection Name",
+      "logicalname": "Logical Name",
+      "msdyn_entity_msdyn_entitylinkchatconfiguration_entitytype": "Entity link chat configurations",
+      "msdyn_insightsstorevirtualentity_extensionofrecordid": "Insights Store Virtual Entities",
+      "name": "Name",
+      "objecttypecode": "Object Type Code",
+      "originallocalizedcollectionname": "Original Localized Collection Name",
+      "originallocalizedname": "Original Localized Name",
+      "overwritetime": "Record Overwrite Time",
+      "parentcontrollingattributename": "Parent Controlling Attribute Name",
+      "physicalname": "Physical Name",
+      "privilegesremovalsetting_extensionofrecordid": "Privileges Removal Settings",
+      "reportviewname": "Report View Name",
+      "sharedlinksetting_extensionofrecordid": "Shared Link Settings",
+      "solutionid": "Solution",
+      "versionnumber": "Version Number",
+      "virtualentitymetadata_extensionofrecordid": "Virtual Entity  Metadatas"
+    },
+    "PreferredName": "Entities",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Entities (Views)",
+    "Name": "_entity_views",
+    "RelatedEntityName": "Entities",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "fab84ab3-bf84-4c8d-9038-1696155dc48f": "Entity Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Component State",
+    "Name": "componentstate",
+    "OptionSetInfoNameMapping": {
+      "0": "Published",
+      "1": "Unpublished",
+      "2": "Deleted",
+      "3": "Deleted Unpublished"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "componentstate",
+        "OptionSetReferenceEntityName": "Entities"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "componentstate",
+        "OptionSetReferenceEntityName": "PowerfxRules"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "componentstate",
+        "OptionSetReferenceEntityName": "Custom APIs"
+      },
+      "OptionSetReferenceItem3": {
+        "OptionSetReferenceColumnName": "componentstate",
+        "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "componentstate",
+    "RelatedEntityName": "Entities",
+    "Type": "OptionSetInfo"
+  }
+]

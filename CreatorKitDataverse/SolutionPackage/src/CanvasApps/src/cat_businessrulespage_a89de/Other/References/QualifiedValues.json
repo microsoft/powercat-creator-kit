@@ -1,0 +1,39 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_entity_forms",
+      "Namespace": "Entities (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_powerfxrule_forms",
+      "Namespace": "PowerfxRules (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_sdkmessageprocessingstep_forms",
+      "Namespace": "Sdk Message Processing Steps (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_plugintype_forms",
+      "Namespace": "Plug-in Types (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_sdkmessagefilter_forms",
+      "Namespace": "Sdk Message Filters (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_sdkmessage_forms",
+      "Namespace": "Sdk Messages (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_sdkmessageprocessingstepsecureconfig_forms",
+      "Namespace": "Sdk Message Processing Step Secure Configurations (Forms)",
+      "Values": {}
+    }
+  ]
+}

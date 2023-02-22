@@ -1,0 +1,106 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "customapiresponseproperties",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "customapiresponseproperty",
+    "MaxGetRowsCount": 500,
+    "Name": "Custom API Response Properties",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "componentidunique": "Row id unique",
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "CustomAPIId": "Custom API",
+      "customapiresponseproperty_AsyncOperations": "System Jobs",
+      "customapiresponseproperty_BulkDeleteFailures": "Bulk Delete Failures",
+      "customapiresponseproperty_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "customapiresponseproperty_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "customapiresponseproperty_ProcessSession": "Process Sessions",
+      "customapiresponseproperty_SyncErrors": "Sync Errors",
+      "customapiresponsepropertyid": "Custom API Response Property",
+      "description": "Description",
+      "displayname": "Display Name",
+      "importsequencenumber": "Import Sequence Number",
+      "ismanaged": "Is Managed",
+      "logicalentityname": "Bound Entity Logical Name",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "overriddencreatedon": "Record Created On",
+      "overwritetime": "Record Overwrite Time",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "solutionid": "Solution",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "type": "Type",
+      "uniquename": "Unique Name",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Custom API Response Properties",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Custom API Response Properties (Views)",
+    "Name": "_customapiresponseproperty_views",
+    "RelatedEntityName": "Custom API Response Properties",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1711f698-e20c-477e-9fa7-e15c4741286a": "Custom API Response Property Associated View",
+      "3ac5cd42-e59f-483b-a5b0-4cb1225e075c": "Active Custom API Response Properties",
+      "3c17a255-667d-46dd-964e-b2d935f8c58a": "Custom API Response Property Lookup View",
+      "94e68657-3272-4ff4-86ca-2b30b14ad24b": "Inactive Custom API Response Properties",
+      "c3b32ca7-11a8-4827-803e-8f1d36164d9b": "Custom API Response Property Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (Custom API Response Properties)",
+    "Name": "customapiresponseproperty_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Custom API Response Properties"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Custom API Response Properties",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Custom API Response Properties)",
+    "Name": "customapiresponseproperty_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Custom API Response Properties"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Custom API Response Properties",
+    "Type": "OptionSetInfo"
+  }
+]

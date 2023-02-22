@@ -1,0 +1,244 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sdkmessageprocessingsteps",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sdkmessageprocessingstep",
+    "MaxGetRowsCount": 500,
+    "Name": "Sdk Message Processing Steps",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_eventhandler_value": "Event Handler",
+      "asyncautodelete": "Asynchronous Automatic Delete",
+      "canusereadonlyconnection": "Intent",
+      "category": "Category",
+      "componentstate": "Component State",
+      "configuration": "Configuration",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "customizationlevel": "CustomizationLevel",
+      "description": "Description",
+      "eventexpander": "EventExpander",
+      "filteringattributes": "Filtering Attributes",
+      "impersonatinguserid": "Impersonating User",
+      "introducedversion": "Introduced Version",
+      "ismanaged": "State",
+      "mode": "Execution Mode",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "organizationid": "OrganizationId",
+      "overwritetime": "Record Overwrite Time",
+      "powerfxrule": "powerfxruleid",
+      "rank": "Execution Order",
+      "runtimeintegrationproperties": "Runtime Integration Properties",
+      "sdkmessagefilterid": "SdkMessage Filter",
+      "sdkmessageid": "SDK Message",
+      "SdkMessageProcessingStep_AsyncOperations": "System Jobs",
+      "sdkmessageprocessingstepid": "SdkMessageProcessingStepId",
+      "sdkmessageprocessingstepid_sdkmessageprocessingstepimage": "Sdk Message Processing Step Images",
+      "sdkmessageprocessingstepidunique": "SdkMessageProcessingStepIdUnique",
+      "sdkmessageprocessingstepsecureconfigid": "SDK Message Processing Step Secure Configuration",
+      "solutionid": "Solution",
+      "stage": "Execution Stage",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "supporteddeployment": "Deployment",
+      "versionnumber": "VersionNumber"
+    },
+    "PreferredName": "Sdk Message Processing Steps",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Sdk Message Processing Steps (Views)",
+    "Name": "_sdkmessageprocessingstep_views",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6f7f6b93-6021-4a87-99dd-22278009edea": "All View",
+      "6f7f6b94-6021-4a87-99dd-22278009edea": "Advance find View",
+      "f0992196-4f75-4907-91a0-7eb90cb9961f": "Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Is Operation Intent Read Only",
+    "Name": "isoperationintentreadonly",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "canusereadonlyconnection",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "isreadonly",
+        "OptionSetReferenceEntityName": "Sdk Messages"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "canusereadonlyconnection",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Asynchronous Automatic Delete (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_asyncautodelete",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "asyncautodelete",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "asyncautodelete",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Invocation Source (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_invocationsource",
+    "OptionSetInfoNameMapping": {
+      "0": "Parent",
+      "1": "Child",
+      "-1": "Internal"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "invocationsource",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "invocationsource",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Execution Mode (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_mode",
+    "OptionSetInfoNameMapping": {
+      "0": "Synchronous",
+      "1": "Asynchronous"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "mode",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "mode",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Execution Stage (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_stage",
+    "OptionSetInfoNameMapping": {
+      "10": "Pre-validation",
+      "15": "Internal Pre-operation Before External Plugins (For internal use only)",
+      "20": "Pre-operation",
+      "25": "Internal Pre-operation After External Plugins (For internal use only)",
+      "30": "Main Operation (For internal use only)",
+      "35": "Internal Post-operation Before External Plugins (For internal use only)",
+      "40": "Post-operation",
+      "45": "Internal Post-operation After External Plugins (For internal use only)",
+      "5": "Initial Pre-operation (For internal use only)",
+      "50": "Post-operation (Deprecated)",
+      "55": "Final Post-operation (For internal use only)",
+      "80": "Pre-Commit stage fired before transaction commit (For internal use only)",
+      "90": "Post-Commit stage fired after transaction commit (For internal use only)"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "stage",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "stage",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Enabled",
+      "1": "Disabled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Enabled",
+      "2": "Disabled"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Deployment (Sdk Message Processing Steps)",
+    "Name": "sdkmessageprocessingstep_supporteddeployment",
+    "OptionSetInfoNameMapping": {
+      "0": "Server Only",
+      "1": "Microsoft Dynamics 365 Client for Outlook Only",
+      "2": "Both"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "supporteddeployment",
+        "OptionSetReferenceEntityName": "Sdk Message Processing Steps"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "supporteddeployment",
+    "RelatedEntityName": "Sdk Message Processing Steps",
+    "Type": "OptionSetInfo"
+  }
+]

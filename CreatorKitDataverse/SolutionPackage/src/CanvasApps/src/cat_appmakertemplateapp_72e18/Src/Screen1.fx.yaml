@@ -1,0 +1,9 @@
+Screen1 As screen:
+
+    "'Action Component_1' As 'Action Component'":
+        X: =51
+        Y: =33
+
+    "'Action Trigger_1' As 'Action Trigger'":
+        ZIndex: =2
+

@@ -1,0 +1,23 @@
+{
+    "ActivateFlowConfiguration":  [
+
+                                  ],
+    "ConnectorShareWithGroupTeamConfiguration":  [
+
+                                                 ],
+    "SolutionComponentOwnershipConfiguration":  [
+
+                                                ],
+    "FlowShareWithGroupTeamConfiguration":  [
+
+                                            ],
+    "AadGroupCanvasConfiguration":  [
+
+                                    ],
+    "AadGroupTeamConfiguration":  [
+
+                                  ],
+    "WebhookUrls":  [
+
+                    ]
+}

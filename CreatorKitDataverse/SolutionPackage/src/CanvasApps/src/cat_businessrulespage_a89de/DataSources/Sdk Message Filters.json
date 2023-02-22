@@ -1,0 +1,145 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "sdkmessagefilters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "sdkmessagefilter",
+    "MaxGetRowsCount": 500,
+    "Name": "Sdk Message Filters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "availability": "Availability",
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "customizationlevel": "CustomizationLevel",
+      "introducedversion": "Introduced Version",
+      "iscustomprocessingstepallowed": "Custom Processing Step Allowed",
+      "ismanaged": "State",
+      "isvisible": "IsVisible",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "organizationid": "OrganizationId",
+      "overwritetime": "Record Overwrite Time",
+      "restrictionlevel": "RestrictionLevel",
+      "sdkmessagefilterid": "SdkMessageFilterId",
+      "sdkmessagefilterid_sdkmessageprocessingstep": "Sdk Message Processing Steps",
+      "sdkmessagefilteridunique": "SdkMessageFilterIdUnique",
+      "sdkmessageid": "SDK Message ID",
+      "solutionid": "Solution",
+      "versionnumber": "VersionNumber",
+      "workflowsdkstepenabled": "WorkflowSdkStepEnabled"
+    },
+    "PreferredName": "Sdk Message Filters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Sdk Message Filters (Views)",
+    "Name": "_sdkmessagefilter_views",
+    "RelatedEntityName": "Sdk Message Filters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "8648e13d-fd6a-40d2-a83a-7d2abd0383ed": "Default View",
+      "f529d564-4824-4f13-8ac2-daaa29fd53e4": "Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Custom Processing Step Allowed (Sdk Message Filters)",
+    "Name": "sdkmessagefilter_iscustomprocessingstepallowed",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "iscustomprocessingstepallowed",
+        "OptionSetReferenceEntityName": "Sdk Message Filters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "iscustomprocessingstepallowed",
+    "RelatedEntityName": "Sdk Message Filters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "IsVisible (Sdk Message Filters)",
+    "Name": "sdkmessagefilter_isvisible",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isvisible",
+        "OptionSetReferenceEntityName": "Sdk Message Filters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isvisible",
+    "RelatedEntityName": "Sdk Message Filters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Primary Object Type Code (Sdk Message Filters)",
+    "Name": "sdkmessagefilter_primaryobjecttypecode",
+    "OptionSetInfoNameMapping": {},
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "primaryobjecttypecode",
+        "OptionSetReferenceEntityName": "Sdk Message Filters"
+      }
+    },
+    "OptionSetTypeKey": "EntityNameType",
+    "RelatedColumnInvariantName": "primaryobjecttypecode",
+    "RelatedEntityName": "Sdk Message Filters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Secondary Object Type Code (Sdk Message Filters)",
+    "Name": "sdkmessagefilter_secondaryobjecttypecode",
+    "OptionSetInfoNameMapping": {},
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "secondaryobjecttypecode",
+        "OptionSetReferenceEntityName": "Sdk Message Filters"
+      }
+    },
+    "OptionSetTypeKey": "EntityNameType",
+    "RelatedColumnInvariantName": "secondaryobjecttypecode",
+    "RelatedEntityName": "Sdk Message Filters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "WorkflowSdkStepEnabled (Sdk Message Filters)",
+    "Name": "sdkmessagefilter_workflowsdkstepenabled",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "workflowsdkstepenabled",
+        "OptionSetReferenceEntityName": "Sdk Message Filters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "workflowsdkstepenabled",
+    "RelatedEntityName": "Sdk Message Filters",
+    "Type": "OptionSetInfo"
+  }
+]

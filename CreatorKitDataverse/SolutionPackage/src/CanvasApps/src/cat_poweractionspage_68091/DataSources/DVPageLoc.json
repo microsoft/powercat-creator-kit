@@ -1,0 +1,11 @@
+[
+  {
+    "DataSetName": "default.cds",
+    "IsSampleData": false,
+    "IsWritable": false,
+    "LogicalName": "cat_DVPageLoc",
+    "Name": "DVPageLoc",
+    "Schema": "![dvAccelerator:s]",
+    "Type": "WebResourceInfo"
+  }
+]

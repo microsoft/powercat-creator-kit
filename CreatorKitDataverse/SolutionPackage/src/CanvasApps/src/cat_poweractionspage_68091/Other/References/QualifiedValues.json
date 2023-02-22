@@ -1,0 +1,35 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_entity_forms",
+      "Namespace": "Entities (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_solution_forms",
+      "Namespace": "Solutions (Forms)",
+      "Values": {
+        "Information": "75e0f489-3e68-11dd-81ce-00188b01dce6"
+      }
+    },
+    {
+      "Kind": "default.cds_powerfxrule_forms",
+      "Namespace": "PowerfxRules (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_customapi_forms",
+      "Namespace": "Custom APIs (Forms)",
+      "Values": {
+        "Information": "f64c027c-81b5-4f8e-a16e-1963c4f80c22"
+      }
+    },
+    {
+      "Kind": "default.cds_customapirequestparameter_forms",
+      "Namespace": "Custom API Request Parameters (Forms)",
+      "Values": {
+        "Information": "bb1855f2-e049-482b-865a-e890f957efe9"
+      }
+    }
+  ]
+}

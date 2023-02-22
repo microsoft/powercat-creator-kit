@@ -1,0 +1,75 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "plugintypes",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "plugintype",
+    "MaxGetRowsCount": 500,
+    "Name": "Plug-in Types",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "CustomAPIId": "Custom APIs",
+      "customizationlevel": "CustomizationLevel",
+      "customworkflowactivityinfo": "Custom Workflow Activity Info",
+      "description": "Description",
+      "friendlyname": "Display Name",
+      "ismanaged": "IsManaged",
+      "isworkflowactivity": "Is Workflow Activity",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "organizationid": "OrganizationId",
+      "overwritetime": "Record Overwrite Time",
+      "pluginassemblyid": "Plugin Assembly",
+      "plugintype_plugintypestatistic": "Plug-in Type Statistics",
+      "plugintype_sdkmessageprocessingstep": "Sdk Message Processing Steps (plugintype_sdkmessageprocessingstep)",
+      "plugintypeid": "Plug-in Type",
+      "plugintypeid_sdkmessageprocessingstep": "Sdk Message Processing Steps (plugintypeid_sdkmessageprocessingstep)",
+      "plugintypeidunique": "PluginTypeIdUnique",
+      "solutionid": "Solution",
+      "typename": "Type Name",
+      "versionnumber": "VersionNumber",
+      "workflowactivitygroupname": "Workflow Activity Group Name"
+    },
+    "PreferredName": "Plug-in Types",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Plug-in Types (Views)",
+    "Name": "_plugintype_views",
+    "RelatedEntityName": "Plug-in Types",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "4c292042-94d5-47c1-be02-5f725e9faf30": "Plugin Types Lookup view",
+      "4f18c901-1bf9-4025-a4e3-cd5d1df5338f": "Advance find Plugin Types",
+      "a6a75483-2ac9-4ed2-99aa-fe0901d2d559": "Default View"
+    }
+  },
+  {
+    "DisplayName": "Is Workflow Activity (Plug-in Types)",
+    "Name": "plugintype_isworkflowactivity",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isworkflowactivity",
+        "OptionSetReferenceEntityName": "Plug-in Types"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isworkflowactivity",
+    "RelatedEntityName": "Plug-in Types",
+    "Type": "OptionSetInfo"
+  }
+]

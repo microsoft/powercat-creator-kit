@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Connector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <connectorid>d74a61b7-301b-42b4-a4bf-c2525fe570ff</connectorid>
+  <description></description>
+  <displayname>Office 365 Users - License</displayname>
+  <iconbrandcolor>#007ee5</iconbrandcolor>
+  <name>cat_5Foffice-20365-20users-20-2D-20license</name>
+  <connectortype>1</connectortype>
+  <openapidefinition>/Connector/cat_5Foffice-20365-20users-20-2D-20license_openapidefinition.json</openapidefinition>
+  <connectionparameters>/Connector/cat_5Foffice-20365-20users-20-2D-20license_connectionparameters.json</connectionparameters>
+  <policytemplateinstances>/Connector/cat_5Foffice-20365-20users-20-2D-20license_policytemplateinstances.json</policytemplateinstances>
+  <iconblob>/Connector/cat_5Foffice-20365-20users-20-2D-20license_iconblob.Png</iconblob>
+</Connector>

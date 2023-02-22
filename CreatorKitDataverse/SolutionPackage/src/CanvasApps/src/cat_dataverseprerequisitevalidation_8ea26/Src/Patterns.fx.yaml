@@ -1,0 +1,616 @@
+"Patterns As screen.'tabletAutoLayout_Sidebar_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =UpdateContext({ varRootName:"Filter", varRootIcon: "Filter" })
+
+    ScreenContainer3 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        SidebarContainer1 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =3
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            "FluentDetailsList1 As 'Fluent Details List (1.0.19)'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Stretch
+                columns_Items: |-
+                    =Table({ColName:"pattern",ColDisplayName:"Pattern",ColWidth:200})
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =200
+                Items: =colPatterns
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                id1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="id"
+                    FieldName: ="id"
+                    FieldType: ="n"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =6
+
+                pattern1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="pattern"
+                    FieldName: ="pattern"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =2
+                    ZIndex: =7
+
+                default1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="default"
+                    FieldName: ="default"
+                    FieldType: ="b"
+                    FieldVariantName: ="textualColumn"
+                    Order: =3
+                    ZIndex: =8
+
+        RightSideContainer1 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =7
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            HeaderContainer3 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =75
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =48
+                ZIndex: =4
+
+                Label13 As Label:
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =14
+                    FontWeight: =FontWeight.Semibold
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: =Coalesce(FluentDetailsList1.Selected.pattern, "Select a pattern on the left")
+                    Width: =320
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+            c_0 As groupContainer.verticalAutoLayoutContainer:
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =48
+                PaddingLeft: =48
+                PaddingRight: =96
+                PaddingTop: =24
+                Visible: =FluentDetailsList1.Selected.id = 0
+                ZIndex: =5
+
+                c_card As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    ZIndex: =1
+
+                    "elv_cardBack As 'Fluent Elevation (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =6
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    c_cardContainer As groupContainer.verticalAutoLayoutContainer:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =Self.PaddingTop
+                        PaddingLeft: =Self.PaddingTop
+                        PaddingRight: =Self.PaddingTop
+                        PaddingTop: =elv_cardBack.PaddingTop
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        c_cardHeader As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =50
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =12
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                            Label12 As Label:
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontSize: =11
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "ContextMenu1 As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+                                BorderColor: ="white"
+                                Chevron: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =38
+                                Items: |-
+                                    =Table(
+                                          {
+                                              ItemKey: "more",
+                                              ItemIconName: "more",
+                                              ItemOverflow:true
+                                          },
+                                           {
+                                              ItemKey: "Delete",
+                                              ItemIconName: "Delete",
+                                              ItemDisplayName: "Delete",
+                                              ItemOverflow:true
+                                          }
+                                      )
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                Width: =74
+                                X: =1187
+                                Y: =6
+                                ZIndex: =2
+
+                        Separator_3 As rectangle:
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BorderColor: =RGBA(166, 166, 166, 1)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(230, 230, 230, 1)
+                            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                            Height: =1
+                            Width: =1
+                            X: =1363
+                            Y: =-3
+                            ZIndex: =2
+
+                        c_cardContent As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =3
+
+                        Container14 As groupContainer.horizontalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =75
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutGap: =6
+                            LayoutJustifyContent: =LayoutJustifyContent.End
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingRight: =24
+                            ZIndex: =4
+
+                            Button3_2 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Action"
+                                Width: =126
+                                X: =961
+                                Y: =0
+                                ZIndex: =1
+
+                            Button3_3 As Button:
+                                BorderRadius: =2
+                                BorderStyle: =BorderStyle.Solid
+                                BorderThickness: =1
+                                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                DisplayMode: =DisplayMode.Edit
+                                FontWeight: =FontWeight.Semibold
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Action"
+                                Width: =132
+                                X: =1117
+                                Y: =0
+                                ZIndex: =2
+
+            c_1 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =8
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingBottom: =48
+                PaddingLeft: =48
+                PaddingRight: =96
+                PaddingTop: =24
+                Visible: =FluentDetailsList1.Selected.id = 1
+                ZIndex: =8
+
+                "ContextMenu2 As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =38
+                    Items: |-
+                        =Table(
+                              {
+                                  ItemKey: "root",
+                                  ItemIconName: "Filter",
+                                  ItemDisplayName: Coalesce(varRootName,"Filter")
+                              },
+                               {
+                                  ItemKey: "Filter",
+                                  ItemIconName: "",
+                                  ItemDisplayName: "All",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName="Filter",
+                                  ItemWidth:140
+                              },
+                               {
+                                  ItemKey: "Appointments",
+                                  ItemIconName: "",
+                                  ItemDisplayName: "Appointments",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName="Appointments",
+                                  ItemWidth:200
+                              },
+                               {
+                                  ItemKey: "Meetings",
+                                  ItemIconName: "",
+                                  ItemDisplayName: "Meetings",
+                                  ItemOverflow:true,
+                                  ItemChecked: varParent="Meetings"
+                              },
+                               {
+                                  ItemKey: "All meetings",
+                                  ItemIconName: "",
+                                  ItemDisplayName: "All meetings",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName="All meetings",
+                                  ItemParentKey:"Meetings",
+                                  ItemWidth:160
+                              },
+                               {
+                                  ItemKey: "I'm the organizer",
+                                  ItemIconName: "",
+                                  ItemDisplayName: "I'm the organizer",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName="I'm the organizer",
+                                  ItemParentKey:"Meetings",
+                                  ItemWidth:190
+                              },
+                               {
+                                  ItemKey: "I'm an attendee",
+                                  ItemIconName: "",
+                                  ItemDisplayName: "I'm an attendee",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName="I'm an attendee",
+                                  ItemParentKey:"Meetings",
+                                  ItemWidth:190
+                              }
+                        )
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnSelect: |
+                        =UpdateContext(
+                            {
+                                varRootName: Self.Selected.ItemKey,
+                                varRootIcon: Self.Selected.ItemIconName,
+                                varParent: Self.Selected.ItemParentKey,
+                                varWidth: Self.Selected.ItemWidth
+                            }
+                        )
+                    Width: =Coalesce(varWidth,200)
+                    X: =0
+                    Y: =118
+                    ZIndex: =1
+
+                Label9_4 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Size: =10.5
+                    Text: ="Screen.OnVisible = "
+                    ZIndex: =2
+
+                Label14 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(116, 116, 116, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Size: =10.5
+                    Text: |-
+                        ="UpdateContext({ varRootName:""Filter"", varRootIcon: ""Filter"" })"
+                    ZIndex: =3
+
+                Label9 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Size: =10.5
+                    Text: ="ContextMenu.Items = "
+                    ZIndex: =4
+
+                Label9_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Height: =22
+                    OnSelect: |-
+                        =UpdateContext({ showContextMenuItems : true })
+                    Size: =10.5
+                    Text: ="Show"
+                    Visible: =!Label9_1.Visible
+                    Y: =89
+                    ZIndex: =5
+
+                Label9_3 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Height: =22
+                    OnSelect: |-
+                        =UpdateContext({ showContextMenuItems : false })
+                    Size: =10.5
+                    Text: ="Hide"
+                    Visible: =Label9_1.Visible
+                    Y: =89
+                    ZIndex: =6
+
+                Label9_1 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    BorderColor: =RGBA(116, 116, 116, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Courier New'
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Size: =8
+                    Text: |-
+                        ="Table(
+                              {
+                                  ItemKey: ""root"",
+                                  ItemIconName: ""Filter"",
+                                  ItemDisplayName: Coalesce(varRootName,""Filter"")
+                              },
+                               {
+                                  ItemKey: ""Filter"",
+                                  ItemIconName: """",
+                                  ItemDisplayName: ""All"",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName=""Filter"",
+                                  ItemWidth:140
+                              },
+                               {
+                                  ItemKey: ""Appointments"",
+                                  ItemIconName: """",
+                                  ItemDisplayName: ""Appointments"",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName=""Appointments"",
+                                  ItemWidth:200
+                              },
+                               {
+                                  ItemKey: ""Meetings"",
+                                  ItemIconName: """",
+                                  ItemDisplayName: ""Meetings"",
+                                  ItemOverflow:true,
+                                  ItemChecked: varParent=""Meetings""
+                              },
+                               {
+                                  ItemKey: ""All meetings"",
+                                  ItemIconName: """",
+                                  ItemDisplayName: ""All meetings"",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName=""All meetings"",
+                                  ItemParentKey:""Meetings"",
+                                  ItemWidth:160
+                              },
+                               {
+                                  ItemKey: ""I'm the organizer"",
+                                  ItemIconName: """",
+                                  ItemDisplayName: ""I'm the organizer"",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName=""I'm the organizer"",
+                                  ItemParentKey:""Meetings"",
+                                  ItemWidth:190
+                              },
+                               {
+                                  ItemKey: ""I'm an attendee"",
+                                  ItemIconName: """",
+                                  ItemDisplayName: ""I'm an attendee"",
+                                  ItemOverflow:true,
+                                  ItemChecked: varRootName=""I'm an attendee"",
+                                  ItemParentKey:""Meetings"",
+                                  ItemWidth:190
+                              }
+                        )"
+                    Visible: =showContextMenuItems
+                    ZIndex: =7
+
+                Label9_5 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    Size: =10.5
+                    Text: ="ContextMenu.Width = "
+                    ZIndex: =8
+
+                Label14_1 As label:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    BorderColor: =RGBA(116, 116, 116, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(51, 51, 51, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(230, 230, 230, 1)
+                    FocusedBorderThickness: =2
+                    Font: =Font.'Segoe UI'
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    Size: =10.5
+                    Text: ="Coalesce(varWidth, 200)"
+                    ZIndex: =9
+
+            c_2 As groupContainer.verticalAutoLayoutContainer:
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =48
+                PaddingLeft: =48
+                PaddingRight: =96
+                PaddingTop: =24
+                Visible: =FluentDetailsList1.Selected.id = 2
+                ZIndex: =9
+
+                Container2_2 As groupContainer.horizontalAutoLayoutContainer:
+                    Fill: =RGBA(255, 240, 194, 1)
+                    FillPortions: =0
+                    Height: =38
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =6
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =12
+                    PaddingRight: =12
+                    Width: =1270
+                    Y: =6
+                    ZIndex: =1
+
+                    "Icon1_1 As 'Fluent Icon (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =Parent.Height
+                        IconName: ="Info"
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Center
+                        Width: =50
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Label10_1 As Label:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.View
+                        FontSize: =11
+                        FontWeight: =FontWeight.Semibold
+                        Height: =30
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Limited Access to Dataverse."
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =190
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    Label11_1 As Label:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.View
+                        FillPortions: =1
+                        FontSize: =11
+                        Height: =30
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Get a trial or premium license to use Dataverse in other types of Environments."
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =Parent.Width - Self.X
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    Button3_4 As Button:
+                        BorderRadius: =2
+                        BorderStyle: =BorderStyle.Solid
+                        BorderThickness: =1
+                        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =26
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Request premium"
+                        Width: =162
+                        X: =1093
+                        Y: =6
+                        ZIndex: =5
+

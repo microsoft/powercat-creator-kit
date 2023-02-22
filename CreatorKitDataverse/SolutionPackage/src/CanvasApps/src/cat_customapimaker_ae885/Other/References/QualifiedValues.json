@@ -1,0 +1,30 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_customapi_forms",
+      "Namespace": "Custom APIs (Forms)",
+      "Values": {
+        "Information": "f64c027c-81b5-4f8e-a16e-1963c4f80c22"
+      }
+    },
+    {
+      "Kind": "default.cds_plugintype_forms",
+      "Namespace": "Plug-in Types (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_customapirequestparameter_forms",
+      "Namespace": "Custom API Request Parameters (Forms)",
+      "Values": {
+        "Information": "bb1855f2-e049-482b-865a-e890f957efe9"
+      }
+    },
+    {
+      "Kind": "default.cds_customapiresponseproperty_forms",
+      "Namespace": "Custom API Response Properties (Forms)",
+      "Values": {
+        "Information": "7dbec4e4-8152-4cda-8d34-194539b7ea87"
+      }
+    }
+  ]
+}

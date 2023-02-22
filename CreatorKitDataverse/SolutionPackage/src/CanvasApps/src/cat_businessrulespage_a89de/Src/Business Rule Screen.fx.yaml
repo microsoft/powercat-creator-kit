@@ -1,0 +1,472 @@
+"'Business Rule Screen' As screen":
+    Fill: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =UpdateContext({varPowerFxformula: "If( Keyword in Email.Subject, SendEmail( 'Triage Alias', Email ));"})
+
+    RootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =3
+
+        ActionHeaderContainer As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(243, 242, 241, 1)
+            FillPortions: =0
+            Height: =44
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =10
+            PaddingRight: =10
+            ZIndex: =1
+
+            "CommandBar1_1 As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =200
+                Items: |-
+                    =Table(
+                        {ItemKey:"newAction",ItemDisplayName:"Back",ItemIconName:"Back"})
+                LayoutMinHeight: =44
+                LayoutMinWidth: =200
+                OnChange: =
+                OnSelect: =Back()
+                Theme: =AppThemeJson
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        MainContainer As groupContainer.verticalAutoLayoutContainer:
+            Height: =
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: =32
+            PaddingRight: =32
+            Width: =450
+            ZIndex: =4
+
+            Header_1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =155
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingTop: =32
+                ZIndex: =1
+
+                Label1_2 As Label:
+                    AutoHeight: =true
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =16
+                    FontWeight: =FontWeight.Semibold
+                    Height: =43
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    PaddingStart: =0  
+                    Text: =galBusinessRules.Selected.Title
+                    Width: =320
+                    X: =35
+                    Y: =15
+                    ZIndex: =2
+
+                lblTitle_6 As Label:
+                    AlignInContainer: =AlignInContainer.Start
+                    AutoHeight: =false
+                    Color: =    
+                    DisplayMode: =DisplayMode.View
+                    FillPortions: =1
+                    FontSize: =11
+                    FontWeight: =FontWeight.Normal
+                    Height: =32
+                    LayoutMinHeight: =80
+                    LayoutMinWidth: =320
+                    Text: ="Optimize your data architecture by reducing client-side load. Power Fx-based functions act on data based on triggers defined at the table level.  Create a new action from blank, or use one of the below templates to get started."
+                    VerticalAlignment: =VerticalAlign.Top
+                    Width: =840
+                    Wrap: =true
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+            lblDisplayName As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Display name"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            "txtInputDisplayName As 'Text box'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Value: ="Intelligent"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+            lblScope As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Scope"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =4
+
+            "radioGrpScope As 'Radio group'.pcfdataset":
+                DefaultSelectedItems: |-
+                    ={key:"Form",value:"Form"}
+                DisplayMode: =DisplayMode.Edit
+                Height: =120
+                Items: |-
+                    =Table({key:"Table",value:"Table"},{key:"Global",value:"Global"})
+                LayoutMinHeight: =100
+                LayoutMinWidth: =320
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =5
+
+                value1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="value"
+                    FieldName: ="value"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =14
+
+            lblTable As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Table"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+            "ddpEntities As 'Combo box'.pcfdataset":
+                DefaultSelectedItems: =LookUp(Entities,Name = "Account")   
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =Filter(Entities, 'Entities (Views)'.'Entity Lookup View')
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =7
+
+                "'Logical Name1' As pcfDataField.textualColumn":
+                    FieldDisplayName: ="Logical Name"
+                    FieldName: ="logicalname"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =2
+                    ZIndex: =15
+
+                Name1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="Name"
+                    FieldName: ="name"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =16
+
+            lblRule As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Rule"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =8
+
+            PowerFxPCFEditor1 As PowerFxPCFEditor:
+                defaultValue: =galBusinessRules.Selected.Formula
+                DisplayMode: =DisplayMode.Edit
+                editorMaxLine: =6
+                editorMinLine: =6
+                entityName: =ddpEntities.Selected.'Logical Name'
+                formula: =galBusinessRules.Selected.Formula
+                Height: =200
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Width: =750
+                X: =0
+                Y: =0
+                ZIndex: =9
+
+            lblRuleCondition As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Run this rule when a row is"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =10
+
+            "chkBxCreated As 'Check box'":
+                CheckboxSize: =15
+                Checked: =true
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Label: ="Created"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =160
+                OnChange: =false
+                OnSelect: =false
+                Width: =160
+                X: =0
+                Y: =0
+                ZIndex: =11
+
+            "chkBxUpdated As 'Check box'":
+                CheckboxSize: =15
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Label: ="Updated"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =160
+                Width: =160
+                X: =0
+                Y: =0
+                ZIndex: =12
+
+            "chkBxDeleted As 'Check box'":
+                CheckboxSize: =15
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Label: ="Deleted"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =160
+                Width: =160
+                X: =0
+                Y: =0
+                ZIndex: =13
+
+            lblExecutionStage As Label:
+                DisplayMode: =DisplayMode.Edit
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Execution Stage"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =14
+
+            "radioExecutionScope As 'Radio group'.pcfdataset":
+                DefaultSelectedItems: |-
+                    ={key:'Execution Stage (Sdk Message Processing Steps)'.'Pre-validation',value:"Pre-validation"}
+                DisplayMode: =DisplayMode.Edit
+                Height: =120
+                Items: |-
+                    =Table({key:'Execution Stage (Sdk Message Processing Steps)'.'Pre-validation',value:"Pre-validation"},{key:'Execution Stage (Sdk Message Processing Steps)'.'Pre-operation',value:"Pre-operation"},{key:'Execution Stage (Sdk Message Processing Steps)'.'Post-operation',value:"Post-operation"})
+                LayoutMinHeight: =100
+                LayoutMinWidth: =320
+                OnChange: |-
+                    =//UpdateContext({SDKMessageFilterID: LookUp('Sdk Message Filters','Primary Object Type Code (Sdk Message Filters)'="")})
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =16
+
+                value1_1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="value"
+                    FieldName: ="value"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =14
+
+        icoDivider2 As rectangle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(225, 223, 221, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            HoverFill: =RGBA(225, 223, 221, 1)
+            PressedFill: =RGBA(225, 223, 221, 1)
+            Width: =Parent.Width
+            Y: =72
+            ZIndex: =5
+
+        FooterContainer As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =72
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =20
+            ZIndex: =6
+
+            btnBack As Button:
+                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =ColorValue(AppTheme.palette.neutralLight)
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Back()
+                Text: ="Back"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            btnSave As Button:
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |
+                    =Concurrent(
+                        ClearCollect(
+                            RuleTypeIDs,
+                            If(
+                                chkBxCreated.Checked,
+                                {
+                                    Type: "Create",
+                                    value: CreateSDKMessageID
+                                }
+                            ),
+                            If(
+                                chkBxUpdated.Checked,
+                                {
+                                    Type: "Update",
+                                    value: UpdateSDKMessageID
+                                }
+                            ),
+                            If(
+                                chkBxDeleted.Checked,
+                                {
+                                    Type: "Delete",
+                                    value: DeleteSDKMessageID
+                                }
+                            )
+                        ),
+                        UpdateContext({varShowSpinner: true})
+                    );
+                    Set(
+                        varPowerFxRulesRecord,
+                        Patch(
+                            PowerfxRules,
+                            Defaults(PowerfxRules),
+                            {
+                                Name: Trim(txtInputDisplayName.Value),
+                                'Unique Name': "cat_" & txtInputDisplayName.Value & Rand(),
+                                Category: 'Category (PowerfxRules)'.'Business Rule'
+                            }
+                        )
+                    );
+                    If(
+                        !IsEmpty(Errors(PowerfxRules)),
+                        Notify(
+                            Concatenate(
+                                "Issue in PowerFxRules entity",
+                                Concat(
+                                    Errors(PowerfxRules),
+                                    Column & ": " & Message
+                                )
+                            ),
+                            NotificationType.Error
+                        ),
+                        ForAll(
+                            RuleTypeIDs,
+                            Patch(
+                                'Sdk Message Processing Steps',
+                                {
+                                    Name: txtInputDisplayName.Value,
+                                    'Execution Mode': 'Execution Mode (Sdk Message Processing Steps)'.Asynchronous,
+                                    rank: 1,
+                                    'Execution Stage': radioExecutionScope.Selected.key,
+                                    powerfxruleid: varPowerFxRulesRecord
+                                }
+                            );
+                        /*Patch(
+                            'Sdk Message Processing Steps',
+                            {
+                                Name: txtInputDisplayName.Value,
+                                powerfxruleid: varBusinessRulesRecord,
+                                stage: radioExecutionScope.Selected.key,
+                                rank: execution,
+                                mode: 'Execution Mode (Sdk Message Processing Steps)'.Synchronous,
+                                canusereadonlyconnection: false,
+                                asyncautodelete: false,
+                                'Event Handler': {'Event Handler':First('Plug-in Types').PluginTypeIdUnique},
+                                supporteddeployment: 'Deployment (Sdk Message Processing Steps)'.'Server Only'
+                            }
+                        );*/
+                    If(
+                                !IsEmpty(Errors('Sdk Message Processing Steps')),
+                                Notify(
+                                    Concatenate(
+                                        "Issue in Sdk Message Processing Steps",
+                                        Concat(
+                                            Errors('Sdk Message Processing Steps'),
+                                            Column & ": " & Message
+                                        )
+                                    ),
+                                    NotificationType.Error
+                                ),
+                                Notify(
+                                    "Business Rules Saved Successfully",
+                                    NotificationType.Success
+                                )
+                            );
+                        )
+                    );
+                    UpdateContext({varShowSpinner: false});
+                Text: ="Save"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+    "Spinner1 As 'Fluent Spinner (1.0.19) Preview'":
+        BackgroundColor: |-
+            ="#fffffaaa"
+        DisplayMode: =DisplayMode.Edit
+        Height: =Parent.Height
+        Label: ="Saving..."
+        SpinnerSize: ='''PowerCAT.Spinner.SpinnerSize'''.Large
+        Theme: =AppThemeJson
+        Visible: =varShowSpinner
+        Width: =Parent.Width
+        X: =0
+        Y: =0
+        ZIndex: =4
+

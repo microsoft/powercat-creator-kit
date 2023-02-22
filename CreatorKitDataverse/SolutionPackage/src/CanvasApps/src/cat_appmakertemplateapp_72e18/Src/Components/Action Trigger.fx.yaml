@@ -1,0 +1,13 @@
+"'Action Trigger' As CanvasComponent":
+    ActionName: ="SendInteligentEmail"
+    Fill: =RGBA(255, 255, 255, 1)
+    Height: =20
+    Input: |-
+        =Table({key: "email", value: "Email"})
+    Output: ="Text"
+    Trigger: =true
+    Width: =20
+    X: =0
+    Y: =0
+    ZIndex: =1
+

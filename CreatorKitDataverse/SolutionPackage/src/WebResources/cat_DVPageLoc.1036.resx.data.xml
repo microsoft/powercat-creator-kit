@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{671b5781-edb2-ed11-83fe-000d3a9bc420}</WebResourceId>
+  <Name>cat_DVPageLoc.1036.resx</Name>
+  <DisplayName>DVPageLoc</DisplayName>
+  <LanguageCode>1036</LanguageCode>
+  <WebResourceType>12</WebResourceType>
+  <IntroducedVersion>1.0.0.4</IntroducedVersion>
+  <IsEnabledForMobileClient>0</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/cat_DVPageLoc1036resx671B5781-EDB2-ED11-83FE-000D3A9BC420</FileName>
+</WebResource>

@@ -1,0 +1,317 @@
+"'Home Screen' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    RootContainer_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =1
+
+        ActionHeader_2 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =RGBA(243, 242, 241, 1)
+            FillPortions: =0
+            Height: =44
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            ZIndex: =2
+
+            "CommandBar1_2 As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                Height: =44
+                Items: |-
+                    =Table(
+                        {ItemKey:"newAction",ItemDisplayName:"New Custom API",ItemIconName:"Add"},
+                        {ItemKey:"learnMore",ItemDisplayName:"Learn more",ItemIconName:"Info"})
+                LayoutMinHeight: =44
+                LayoutMinWidth: =200
+                OnChange: =
+                Theme: =AppThemeJson
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            "SearchBox1 As 'Fluent SearchBox (1.0.19) Preview'":
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =33
+                LayoutMinHeight: =34
+                LayoutMinWidth: =200
+                PlaceHolderText: ="Search"
+                Theme: =SearchBoxThemeJson
+                Underlined: =true
+                Width: =300
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        icoRect As rectangle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(225, 223, 221, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            HoverFill: =RGBA(225, 223, 221, 1)
+            PressedFill: =RGBA(225, 223, 221, 1)
+            Width: =App.Width
+            Y: =72
+            ZIndex: =3
+
+        Header As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =160
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =32
+            ZIndex: =4
+
+            lblBusinessRulePageTitle As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =16
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =0  
+                Text: ="Custom API"
+                Width: =320
+                X: =35
+                Y: =15
+                ZIndex: =1
+
+            lblBusinessRuleDescription As Label:
+                AutoHeight: =false
+                Color: =    
+                DisplayMode: =DisplayMode.View
+                FillPortions: =1
+                FontSize: =11
+                FontWeight: =FontWeight.Normal
+                Height: =32
+                LayoutMinHeight: =80
+                LayoutMinWidth: =320
+                Text: ="Use Custom APIs to create your own APIs in Dataverse. You can consolidate one or more operations into a Custom API that you and other developers can call in their code and from Power Automate."
+                VerticalAlignment: =VerticalAlign.Top
+                Width: =840
+                Wrap: =true
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+        PowerActionsContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            Width: |
+                =Min(1300, Parent.Width)   
+            ZIndex: =5
+
+            galBusinessRules As gallery.galleryVertical:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                FocusedBorderThickness: =2
+                Height: =255
+                Items: |-
+                    =Table(
+                    {
+                     Title:"Get User Timezone",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                     Learn:"http://gothere.com",
+                     Page:'Intelligent Send Email Page'
+                    },
+                    {
+                     Title:"Get Localized Choice Label",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar.",
+                     Learn:"http://gothere.com",
+                     Page:'Intelligent Send Email Page'
+                    },
+                    {
+                     Title:"Get Table Info",
+                     Body:"Consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                     Learn:"http://gothere.com",
+                     Page:'Intelligent Send Email Page'
+                    },
+                    {
+                     Title:"Get Table Relationship",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                     Learn:"http://gothere.com",
+                     Page:'Intelligent Send Email Page'
+                    },
+                    {
+                     Title:"Get Environment Variable ",
+                     Body:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit nulla at quam accumsan pulvinar. Nullam accumsan libero et lectus facilisis.",
+                     Learn:"http://gothere.com",
+                     Page:'Intelligent Send Email Page'
+                    }
+                    )
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                OnSelect: =Navigate('Action Screen')
+                TemplatePadding: =0
+                TemplateSize: =176
+                Width: =0
+                WrapCount: =If(Self.Width <= 1200 && Self.Width > 800, 2, Self.Width < 800, 1, 3)
+                Y: =86
+                ZIndex: =3
+
+                "Elevation As 'Fluent Elevation (1.0.19)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =176
+                    HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth8
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    Width: =400
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                InnerContainer As groupContainer.verticalAutoLayoutContainer:
+                    Height: =176
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =10
+                    Width: =400
+                    ZIndex: =2
+
+                    ContainerCardHeader As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =32
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblTitle_1 As Label:
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =12
+                            FontWeight: =FontWeight.Semibold
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Text: =ThisItem.Title
+                            TextRole: ='''Microsoft.CoreControls.Label.TextRole'''.Heading1
+                            VerticalAlignment: =VerticalAlign.Bottom
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    lblCardInfo As Label:
+                        AutoHeight: =false
+                        Color: =    
+                        DisplayMode: =DisplayMode.View
+                        FontSize: =10
+                        FontWeight: =FontWeight.Normal
+                        Height: =85
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: =ThisItem.Body
+                        VerticalAlignment: =VerticalAlign.Top
+                        Width: =320
+                        Wrap: =true
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    icorectDivider As rectangle:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledFill: =RGBA(166, 166, 166, 1)
+                        Fill: =RGBA(225, 223, 221, 1)
+                        FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                        Height: =1
+                        HoverFill: =RGBA(225, 223, 221, 1)
+                        PressedFill: =RGBA(225, 223, 221, 1)
+                        Width: =1366
+                        Y: =72
+                        ZIndex: =3
+
+                    ContainerCardActions As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =35
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingTop: =5
+                        ZIndex: =4
+
+                        lblLearnMore As label:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: =ColorValue(AppTheme.palette.themePrimary)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            Size: =10
+                            Text: ="Learn more"
+                            Visible: =false
+                            X: =40
+                            Y: =40
+                            ZIndex: =1
+
+                        "icoInfoLearnMore As 'Fluent Icon (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            FontSize: =14
+                            Height: =33
+                            IconName: ="Info"
+                            IconSize: =17
+                            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: =Navigate(ThisItem.Page)
+                            Text: ="Learn more"
+                            Theme: =AppThemeJson
+                            Width: =120
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                        "icoOpenEditor As 'Fluent Icon (1.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            FontSize: =14
+                            Height: =33
+                            IconName: ="OpenInNewTab"
+                            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =UpdateContext({varShowSpinner:true});Navigate('CustomAPI Screen',ScreenTransition.Fade)
+                            Text: ="Open In Editor"
+                            Theme: =AppThemeJson
+                            Width: =140
+                            X: =0
+                            Y: =0
+                            ZIndex: =6
+

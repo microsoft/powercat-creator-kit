@@ -1,0 +1,588 @@
+"'Home Screen' As screen":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |+
+        =/*UpdateContext({currentSolution:LookUp(Solutions, DisplayName = "TestSolutionWithTables"),showSolutionPicker:false});
+        Set(CurrentStep,0);
+        Set(WebRequestResponse,"");
+        Set(PA_ThreadStart2,false);
+        Reset(PowerAppsThread2);
+        Set(PA_ThreadStart2,true);
+        Set(LoadingSolutionDiagram,true); */
+        
+        
+
+    RootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =1
+
+        Header_1 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =130
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =40
+            PaddingRight: =40
+            PaddingTop: =32
+            ZIndex: =1
+
+            Label1_1 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =16
+                FontWeight: =FontWeight.Semibold
+                Height: =43
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =0  
+                Text: ="Table Diagram "
+                Width: =320
+                X: =35
+                Y: =15
+                ZIndex: =1
+
+            lblTitle_5 As Label:
+                AlignInContainer: =AlignInContainer.Start
+                AutoHeight: =false
+                Color: =    
+                DisplayMode: =DisplayMode.View
+                FontSize: =11
+                FontWeight: =FontWeight.Normal
+                Height: =80
+                LayoutMinHeight: =80
+                LayoutMinWidth: =320
+                Text: ="Dataverse diagramming tool to easily visualize your tables and their relationships"
+                VerticalAlignment: =VerticalAlign.Top
+                Width: =840
+                Wrap: =true
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+        SolutionPickerRootContainer As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =80
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            ZIndex: =2
+
+            SolutionContainer As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                Container2 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =40
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =1
+
+                    lbl_Solution As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(51, 51, 51, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =2
+                        Font: =Font.'Segoe UI'
+                        PaddingLeft: =0
+                        Text: ="Solution "
+                        Width: =80
+                        ZIndex: =1
+
+                    Label2 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(255, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =2
+                        Font: =Font.'Segoe UI'
+                        Text: ="*"
+                        VerticalAlign: =VerticalAlign.Top
+                        ZIndex: =2
+
+                "cmbSolutions As 'Combo box'.pcfdataset":
+                    AllowSearching: =false
+                    Color: =RGBA(0, 0, 0, 1)
+                    DefaultSelectedItems: =LookUp(Solutions,DisplayName = "TestSolutionWithTables")   
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Items: =SortByColumns(Solutions ,"DisplayName",Ascending)
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: |-
+                        =If(!IsBlankOrError(cmbSolutions.Selected.SolutionId),
+                           // Notify($"Loading {cmbSolutions.Selected.DisplayName}",NotificationType.Information,10000);
+                            UpdateContext({currentSolution:cmbSolutions.Selected});
+                            Set(CurrentStep,0);
+                            Set(WebRequestResponse,"");
+                            Set(PA_ThreadStart2,false);
+                            Reset(PowerAppsThread2);
+                            Set(PA_ThreadStart2,true);
+                            Set(LoadingSolutionDiagram,true);
+                        )
+                    OnSelect: =
+                    Width: =320
+                    X: =97
+                    Y: =18
+                    ZIndex: =4
+
+                    DisplayName1 As pcfDataField.textualColumn:
+                        FieldDisplayName: ="DisplayName"
+                        FieldName: ="DisplayName"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =7
+
+        FlowNodesContainer As groupContainer.horizontalAutoLayoutContainer:
+            LayoutGap: =20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =20
+            ZIndex: =3
+
+            Container11 As groupContainer.horizontalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutMinHeight: =Parent.Height
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                Container13 As groupContainer.verticalAutoLayoutContainer:
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: =!IsBlank(currentSolution)
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                    Container5 As groupContainer.manualLayoutContainer:
+                        FillPortions: =0
+                        Height: =Parent.Height-100
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        Visible: =!IsBlank(currentSolution)
+                        ZIndex: =4
+
+                        Spinner_2 As Spinner:
+                            Height: =Parent.Height
+                            Text: =""
+                            Visible: =LoadingSolutionDiagram
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                        "FlowNodes1 As 'FlowNodes (0.0.19)'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.Height
+                            LatestEvent: =LatestEvent
+                            NodeFlowHeight: =Parent.Height
+                            NodeFlowwWidth: =Parent.Width
+                            Objects: =JsonObjects
+                            Objectslinks: =JsonLinks
+                            OnChange: |-
+                                =UpdateContext({ShowTableInfo:true});
+                                Set(EventJson,JSON(FlowNodes1.LatestEvent));
+                            Refresh: =DiagramRefresh
+                            Tooltip: ="Table diagram"
+                            Visible: =!LoadingSolutionDiagram
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+            cntTableInfo As groupContainer.manualLayoutContainer:
+                FillPortions: =0
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                Visible: =ShowTableInfo
+                Width: =340
+                ZIndex: =3
+
+                "Elevation1_2 As 'Fluent Elevation (1.0.19)'":
+                    Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth16
+                    Width: =Parent.Width-15
+                    X: =15
+                    Y: =0
+                    ZIndex: =1
+
+                Panel_3 As Panel:
+                    Buttons: |-
+                        =Table({Label: "OK", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
+                    DialogWidth: =330
+                    Fill: =Panel_3.OverlayColor
+                    Height: =Parent.Height
+                    OnButtonSelect: |-
+                        =UpdateContext({ShowTableInfo:false});
+                    OnCloseSelect: |-
+                        =UpdateContext({ShowTableInfo:false});
+                    Subtitle: =""
+                    Title: ="Table information"
+                    Width: =325
+                    X: =15
+                    ZIndex: =2
+
+                "TextBox1 As 'Text box'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =8
+                    Height: =Parent.Height-130
+                    Mode: ='''Microsoft.CoreControls.TextBox.Mode'''.Multiline
+                    Value: =EventJson
+                    Width: =320
+                    X: =15
+                    Y: =78
+                    ZIndex: =4
+
+    PowerAppsThread2 As timer:
+        AutoPause: =false
+        BorderColor: =RGBA(0, 120, 212, 1)
+        BorderStyle: =BorderStyle.None
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Duration: =500
+        Fill: =RGBA(0, 120, 212, 1)
+        FocusedBorderThickness: =2
+        Font: =Font.'Segoe UI'
+        Height: =1
+        HoverBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 120, 212, 1), -10%)
+        OnTimerStart: |
+            =/* Process
+            
+            1-Get Solution Components Summary
+            
+            https://ruialmdev.crm4.dynamics.com/api/data/v9.0/msdyn_solutioncomponentsummaries?$orderby=msdyn_createdon%20asc&api-version=9.1&$select=msdyn_name,msdyn_solutionid,msdyn_componentlogicalname,msdyn_ismanaged,msdyn_displayname&$filter=msdyn_solutionid%20eq%2033f7ca39-98eb-ec11-bb3d-000d3ab70157%20and%20msdyn_componentlogicalname%20eq%20%27entity%27
+            
+            2- Get All Table Definitions
+            https://ruialmdev.crm4.dynamics.com/api/data/v9.0/EntityDefinitions?$select=LogicalName,IsCustomEntity&$expand=Attributes($select=LogicalName,SchemaName,AttributeType)&$filter=LogicalName%20eq%20%27activitypointer%27%20or%20LogicalName%20eq%20%27appointment%27
+            
+            3- ForEach Table get the RelationShips
+            
+            https://ruialmdev.crm4.dynamics.com/api/data/v9.0/EntityDefinitions(LogicalName='appointment')/ManyToOneRelationships?$select=ReferencedEntity,ReferencingAttribute,MetadataId
+            
+            */
+            
+            Switch(CurrentStep,
+                0,
+                ClearCollect(Results,Table());
+                Set(WebRequestResponse,"");
+                Set(responses,"<br /><br />" &"Getting msdyn_solutioncomponentsummaries");
+                //Notify($"Getting data for {cmbSolutions.Selected.DisplayName}",NotificationType.Information,5000);
+                Set(CurrentStep,1);
+                Set(WebRequestURL,
+                SelectedEnvironment &
+                "api/data/v9.0/msdyn_solutioncomponentsummaries?$orderby=msdyn_createdon%20asc&api-version=9.1&$select=msdyn_name,msdyn_solutionid,msdyn_componentlogicalname,msdyn_ismanaged,msdyn_displayname&$filter=msdyn_componentlogicalname%20eq%20'entity'%20and%20msdyn_solutionid%20eq%20" &  currentSolution.SolutionId
+                );
+                ,    
+                1,
+                If(!IsBlank(WebRequestResponse),
+                Set(responses,responses&"<br /><br />" &WebRequestURL);     
+                Set(responses,responses&"<br /><br />" &WebRequestResponse);    
+                Set(responses,responses&"<br /><br />" &"Getting EntityDefinitions");
+                //Save the information from previous step
+                
+                   
+                //Get all tables. Will be part of filter, but filter can only have 25 conditions 
+                ClearCollect(_allTables, 
+                    ForAll(Table(ParseJSON(WebRequestResponse).value),
+                    Collect(Results, 
+                        { 
+                            displayName:Text(ThisRecord.Value.msdyn_displayname),
+                            name:Text(ThisRecord.Value.msdyn_name),
+                            scheme:{
+                                LogicalName:"",
+                                IsCustomEntity:false,
+                                MetadataId:GUID(),
+                                Attributes:Table(
+                                    {
+                                        SchemaName:"",
+                                        AttributeType:"",
+                                        LogicalName:"",
+                                        MetadataId:GUID()
+                                    }
+                                )
+                            },
+                            manytoone:Table({ReferencedEntity:"",ReferencingAttribute:"",MetadataId:GUID()})
+                        });
+                    Text(ThisRecord.Value.msdyn_name)));
+                //Calculate the number of iterations, totalRows/25
+                Set(_NumIterations,RoundUp(CountRows(_allTables)/25,0));
+                Set(_CurrentIterations,1);
+                Set(responses,responses&$"<br /><br /> Total Tables {CountRows(_allTables)}. Need to run {_NumIterations}" );  
+                Set(WebRequestResponse,"");    
+                Set(CurrentStep,1.1);
+                ClearCollect(TablesManyToOneRelationships,Table());
+                
+                Set(TablesDefFilter,Concat(LastN(FirstN(_allTables,25*_CurrentIterations),25),"LogicalName%20eq%20%27"&ThisRecord.Value&"%27","%20or%20"));
+                
+                Set(WebRequestURL,SelectedEnvironment &
+                "api/data/v9.0/EntityDefinitions?$select=LogicalName,IsCustomEntity&$expand=Attributes($select=LogicalName,SchemaName,AttributeType)&$filter="&TablesDefFilter);  
+            
+            
+            
+            
+                )
+                ,
+                1.1,
+                If(!IsBlank(WebRequestResponse),
+                        
+                        Set(responses,responses&"<br /><br /> Currrent Iteration: " &_CurrentIterations);                    
+                        Set(responses,responses&"<br /><br />" &WebRequestURL);
+                        Set(responses,responses&"<br /><br />" &WebRequestResponse);
+            
+                        Collect(TablesManyToOneRelationships, ForAll(Table(ParseJSON(WebRequestResponse).value),
+                        Text(ThisRecord.Value.LogicalName)));
+                        
+                        ForAll(Table(ParseJSON(WebRequestResponse).value),            
+                            With(
+                                {
+                                    LogicName: Text(ThisRecord.Value.LogicalName),
+                                    IsCustomEntity: Boolean(ThisRecord.Value.IsCustomEntity),
+                                    MetadataId:GUID(ThisRecord.Value.MetadataId),
+                                    AllAttributes: Table(ThisRecord.Value.Attributes),
+                                    FullRecord:ThisRecord.Value                        
+                                },
+                                UpdateIf(Results,name = LogicName,
+                                {
+                                    scheme:
+                                    {
+                                        LogicalName:LogicName,
+                                        IsCustomEntity:IsCustomEntity,
+                                        MetadataId:MetadataId,
+                                        Attributes:ForAll(AllAttributes,                            
+                                        {
+                                            SchemaName:Text(ThisRecord.Value.SchemaName),
+                                            AttributeType:Text(ThisRecord.Value.AttributeType),
+                                            LogicalName:Text(ThisRecord.Value.LogicalName),
+                                            MetadataId:GUID(ThisRecord.Value.MetadataId)
+                                        })       
+                                    }                        
+                                })
+                            )
+                        );
+                        Set(_CurrentIterations,_CurrentIterations+1);
+                        If(_CurrentIterations > _NumIterations,
+                            Set(CurrentStep,2);
+                            Set(WebRequestResponse,"Ignore");
+                        ,
+                        Set(WebRequestResponse,"");
+                        Set(TablesDefFilter,Concat(LastN(FirstN(_allTables,25*_CurrentIterations),25),"LogicalName%20eq%20%27"&ThisRecord.Value&"%27","%20or%20"));    
+                        Set(WebRequestURL,SelectedEnvironment &
+                "api/data/v9.0/EntityDefinitions?$select=LogicalName,IsCustomEntity&$expand=Attributes($select=LogicalName,SchemaName,AttributeType)&$filter="&TablesDefFilter);             
+                        
+                        
+                        )   
+                       
+                )
+                
+                ,
+                2,
+                If(!IsBlank(WebRequestResponse), 
+                //Previouws step has run all iterations    
+                Set(responses,responses&"<br /><br />" &"Getting  ManyToOneRelationships for all tables ("&CountRows(TablesManyToOneRelationships)&")");    
+                Set(CurrentStep,3.1);
+                Set(CurrentTableIndex,1);
+                Set(responses,responses&"<br /><br />" &"Getting ManyToOneRelationships for table "& Text(Index(TablesManyToOneRelationships,CurrentTableIndex).Value));
+                Set(WebRequestResponse,"");    
+                Set(WebRequestURL,SelectedEnvironment &
+                $"api/data/v9.0/EntityDefinitions(LogicalName='{Text(Index(TablesManyToOneRelationships,CurrentTableIndex).Value)}')/ManyToOneRelationships?$select=ReferencedEntity,ReferencingAttribute,MetadataId&$filter=IsCustomRelationship%20eq%20true" 
+                );
+                
+                ),
+                3.1,
+            
+                If(!IsBlank(WebRequestResponse),
+                    Set(responses,responses&"<br /><br /> Current Iteration " & CurrentTableIndex & " of " & CountRows(TablesManyToOneRelationships));   
+                    Set(responses,responses&"<br /><br />" &WebRequestURL);   
+                    Set(responses,responses&"<br /><br />" &WebRequestResponse);
+                    
+                    
+                    With(
+                        {
+                            LogicName:Text(Index(TablesManyToOneRelationships,CurrentTableIndex).Value),
+                            Values: ForAll(Table(ParseJSON(WebRequestResponse).value),
+                                {
+                                    ReferencedEntity:Text(ThisRecord.Value.ReferencedEntity),
+                                    ReferencingAttribute:Text(ThisRecord.Value.ReferencingAttribute),
+                                    MetadataId:GUID(ThisRecord.Value.MetadataId)
+                                })      
+                        },
+                        UpdateIf(Results,name = LogicName,
+                        {                 
+                            manytoone:Values                                        
+                        })
+                    );
+                    
+                    Set(CurrentTableIndex,CurrentTableIndex+1);
+            
+                    If(CurrentTableIndex > CountRows(TablesManyToOneRelationships),
+                        //Get out of State Machine
+                        Set(CurrentStep,-1);
+                        ,
+                        Set(WebRequestResponse,""); 
+                        Set(WebRequestURL,SelectedEnvironment & $"api/data/v9.0/EntityDefinitions(LogicalName='{Text(Index(TablesManyToOneRelationships,CurrentTableIndex).Value)}')/ManyToOneRelationships?$select=ReferencedEntity,ReferencingAttribute,MetadataId&$filter=IsCustomRelationship%20eq%20true" 
+                        );        
+                    );
+                ) 
+                ,
+                -1   
+                ,
+                //-1 Out
+                Set(PA_ThreadStart2,false);
+                ClearCollect(Components, Table());
+                ClearCollect(Links, Table());
+                ClearCollect(_temp,Table({label:"",id:""}));
+                ForAll(Results As solutionObject,
+            
+                With(
+                        {
+                            label: solutionObject.scheme.LogicalName,
+                            displayName: solutionObject.displayName,
+                            color: "#E3E3E3",
+                            contentId: solutionObject.scheme.MetadataId,
+                            manyToOne:solutionObject.manytoone
+                            
+                        },
+                        
+                            Collect(Components,
+                            {                    
+                                type: "obj",
+                                id: label,
+                                position: {x: 0,y: 0},
+                                data:{
+                                    label: displayName,
+                                    color: color,
+                                    contentId: contentId,
+                                    columns: ForAll(
+                                            Filter(solutionObject.scheme.Attributes, AttributeType <> "Lookup") As column,
+                                            {
+                                                label:column.SchemaName,
+                                                type: column.AttributeType,
+                                                logicalName: column.LogicalName,
+                                                id: column.MetadataId
+                                            }
+                                    ),
+                                    lookups: 
+                                    ForAll(manyToOne As m2one,
+                                        If( !IsEmpty(Filter(Results,scheme.LogicalName = m2one.ReferencedEntity)),
+                                            Collect(Links,
+                                            {
+                                                animated: false,
+                                                id: GUID(),
+                                                source: label,
+                                                target: m2one.ReferencedEntity,
+                                                type: "smoothstep",
+                                                sourceHandle: "handle"&m2one.ReferencingAttribute,
+                                                style: {
+                                                    strokeWidth: "2",
+                                                    stroke: color
+                                                }
+                                            });                                
+            
+                                        ); 
+            
+                                        {
+                                                label:If(!IsEmpty(Filter(Results,scheme.LogicalName = m2one.ReferencedEntity)),
+                                                m2one.ReferencingAttribute,""),
+            
+                                                id:If(!IsEmpty(Filter(Results,scheme.LogicalName = m2one.ReferencedEntity)),
+                                                m2one.ReferencingAttribute,"")
+                                        }
+                                        
+                                    )                        
+                                }                
+                            };
+                            
+                            )
+            
+                        ) As MainAttributes
+            
+                //end of ForAll
+                );
+            
+                ForAll(Components,RemoveIf(ThisRecord.data.lookups,label=""));
+            
+                Set(JsonObjects,JSON(Components,JSONFormat.IndentFour));
+                Set(JsonLinks,JSON(Links,JSONFormat.IndentFour));
+                UpdateContext({DiagramRefresh:10000*Rand()});
+                Set(LoadingSolutionDiagram,false);
+                
+            );
+        PressedBorderColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+        Repeat: =true
+        Size: =10.5
+        Start: =PA_ThreadStart2
+        Width: =1
+        Y: =14
+        ZIndex: =2
+
+    "PowerCATWebRequest As 'WebRequest(0.0.14)'":
+        APIResponse: =WebRequestResponse
+        APIURL: =WebRequestURL
+        DisplayMode: =DisplayMode.Edit
+        Height: =1
+        OnChange: |-
+            =Switch( QueryCase,
+                "getSolutions",
+                Set(QueryCase,"StateMachine");
+                
+                UpdateContext(
+                    {
+                        Solutions:ForAll(Table(ParseJSON(PowerCATWebRequest.APIResponse).value), 
+                            {
+                                DisplayName: Text(ThisRecord.Value.friendlyname),
+                                Description: Text(ThisRecord.Value.description),
+                                SolutionId:Text(ThisRecord.Value.solutionid)
+                            })                      
+                    }
+                );    
+                UpdateContext({currentSolution:LookUp(Solutions,DisplayName = "TestSolutionWithTables") });
+                
+                If(!IsBlankOrError(currentSolution),    
+                    Set(CurrentStep,0);
+                    Set(WebRequestResponse,"");
+                    Set(PA_ThreadStart2,false);
+                    Reset(PowerAppsThread2);
+                    Set(PA_ThreadStart2,true);
+                    Set(LoadingSolutionDiagram,true);
+                );
+                ,
+                Set(WebRequestResponse,PowerCATWebRequest.APIResponse);
+            
+            )
+        TriggerRefresh: =
+        Width: =1
+        X: =0
+        Y: =60
+        ZIndex: =3
+

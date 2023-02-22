@@ -1,0 +1,158 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "customapirequestparameters",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "customapirequestparameter",
+    "MaxGetRowsCount": 500,
+    "Name": "Custom API Request Parameters",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "componentidunique": "Row id unique",
+      "componentstate": "Component State",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "CustomAPIId": "Custom API",
+      "customapirequestparameter_AsyncOperations": "System Jobs",
+      "customapirequestparameter_BulkDeleteFailures": "Bulk Delete Failures",
+      "customapirequestparameter_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "customapirequestparameter_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "customapirequestparameter_ProcessSession": "Process Sessions",
+      "customapirequestparameter_SyncErrors": "Sync Errors",
+      "customapirequestparameterid": "Custom API Request Parameter",
+      "description": "Description",
+      "displayname": "Display Name",
+      "importsequencenumber": "Import Sequence Number",
+      "ismanaged": "Is Managed",
+      "isoptional": "Is Optional",
+      "logicalentityname": "Bound Entity Logical Name",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "name": "Name",
+      "overriddencreatedon": "Record Created On",
+      "overwritetime": "Record Overwrite Time",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "solutionid": "Solution",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "type": "Type",
+      "uniquename": "Unique Name",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Custom API Request Parameters",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Custom API Request Parameters (Views)",
+    "Name": "_customapirequestparameter_views",
+    "RelatedEntityName": "Custom API Request Parameters",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1c6952ba-fea6-4b04-9c66-daba8fdd2719": "Custom API Request Parameter Associated View",
+      "6349999a-9e5d-4226-8b46-69ed8cc9cdfc": "Inactive Custom API Request Parameters",
+      "6bca9d56-22b4-49be-be62-a6b7aff0523f": "Custom API Request Parameter Advanced Find View",
+      "c0ee9740-6593-4268-b7ee-fa47e3786a29": "Custom API Request Parameter Lookup View",
+      "c35b8a71-28dd-4182-ba60-9d7ba768bec5": "Active Custom API Request Parameters"
+    }
+  },
+  {
+    "DisplayName": "Custom API Field Type",
+    "Name": "customapifieldtype",
+    "OptionSetInfoNameMapping": {
+      "0": "Boolean",
+      "1": "DateTime",
+      "10": "String",
+      "11": "StringArray",
+      "12": "Guid",
+      "2": "Decimal",
+      "3": "Entity",
+      "4": "EntityCollection",
+      "5": "EntityReference",
+      "6": "Float",
+      "7": "Integer",
+      "8": "Money",
+      "9": "Picklist"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": true,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "type",
+        "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "type",
+    "RelatedEntityName": "Custom API Request Parameters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Is Optional (Custom API Request Parameters)",
+    "Name": "customapirequestparameter_isoptional",
+    "OptionSetInfoNameMapping": {
+      "0": "No",
+      "1": "Yes"
+    },
+    "OptionSetIsBooleanValued": true,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "isoptional",
+        "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      }
+    },
+    "OptionSetTypeKey": "BooleanType",
+    "RelatedColumnInvariantName": "isoptional",
+    "RelatedEntityName": "Custom API Request Parameters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (Custom API Request Parameters)",
+    "Name": "customapirequestparameter_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Custom API Request Parameters",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Custom API Request Parameters)",
+    "Name": "customapirequestparameter_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Custom API Request Parameters",
+    "Type": "OptionSetInfo"
+  }
+]

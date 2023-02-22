@@ -1,0 +1,321 @@
+ @charset "UTF-8";
+ @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
+ @import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
+ @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css); 
+
+/* body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  
+  #root{
+    width: 100vw;
+    height: 100vh
+  } */
+  
+  :root {
+    --color: #FFC176;
+    
+  }
+
+  
+
+   .layoutflow {
+    flex-grow: 1;
+    position: relative;
+    height: 70vh;
+    
+  }
+  
+  .layoutflow .controls {
+    position: absolute;    
+    z-index: 10;
+    font-size: 12px;
+  }
+  
+  .layoutflow .controls button:first-child {
+    margin-right: 10px;
+  }
+  /*
+  .react-flow__viewport .react-flow__container
+  {
+    width: 100vw;
+    height: 100vh;
+  }
+  .react-flow__renderer .react-flow__container
+  {
+    width: 100vw;
+    height: 100vh;
+  } */
+  /* .react-flow
+  {
+    width: 100vw;
+    height: 100vh;
+  } */
+  .react-flow
+  {
+    min-height: 400px;
+    min-width: 400px;
+    text-align: left;
+  } 
+  /* Buttons Css*/
+ .Title
+ {
+  text-align: left;
+  color: white;
+  font-size: small;
+ }
+
+
+
+.nodecontainer {  
+  margin: 0 auto;  
+  top: 50%;
+  left: 0;
+  text-align: left;
+  right: 0;  
+  width: 250px;
+}
+
+/* a.node {
+  color: white;
+  text-decoration: none;
+}
+
+h1.node, h2.node {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-weight: normal;
+}
+
+h2.node {
+  font-size: 14px;
+  margin-bottom: 30px;
+  color: #24E2B8;
+} */
+
+.three {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 10px 20px 20px 10px;
+  margin-bottom: 10px;
+  font-size: 15px;
+  position: relative;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: background-position .7s,box-shadow .4s;
+  transition: background-position .7s,box-shadow .4s;
+  background-size: 110%;
+  font-family: 'Oswald', sans-serif;
+  text-align: left;
+}
+.three:hover {
+  background-position: 0% 30%;
+}
+.three:hover:after{
+  right: -40px;
+  -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
+  transition: right .4s,-webkit-transform 30s .2s linear;
+  transition: right .4s,transform 30s .2s linear;
+  transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
+}
+.three:before, .three:after{
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+  content: attr(data-background-icon);  
+  /* margin-top: 10px */
+}
+.three:before{
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  /* font-size: -10px; */
+  /* left: 25px; */
+  
+}
+.three:after {
+  -webkit-transition: right .4s, -webkit-transform .2s;
+  transition: right .4s, -webkit-transform .2s;
+  transition: right .4s, transform .2s;
+  transition: right .4s, transform .2s, -webkit-transform .2s;
+  font-size: 100px;
+  opacity: .3;
+  right: -120px;
+  top: -17px;
+}
+
+.three {
+  /* box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #36C176; */
+  /* background-image: -webkit-gradient(linear, left top, left bottom, from(#36C176), to(rgba(228, 247, 236, 0.18))); */
+  /* background-image: linear-gradient(to bottom, #36C176, rgba(228, 247, 236, 0.18));   */
+}
+
+/*
+.three:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #36C176;
+} */
+
+.three:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.three:hover:before {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.three b {
+  color: #63FFAC;
+  font-weight: 700;
+}
+
+
+.react-flow__handle
+{
+  height:0px;
+}
+
+.nodeType{
+  padding-left: 20px;
+}
+.nodeInfo
+{
+  width : 230px;
+  overflow:hidden;
+  display:inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 'x-small';
+  text-align:center
+}
+
+
+hr.dashed {
+  border-top: 3px dashed #bbb;
+  margin-bottom: 5px
+}
+
+hr.dotted {
+  border-top: 1px dot #bbb;
+  margin-bottom: 5px
+}
+
+  .ReactCollapse--collapse {
+    transition: height 500ms;
+  }
+
+  ul.quick-list li {
+    padding-left: 10px;
+    list-style: none;
+    margin: 0;
+    padding-bottom: 6px;
+    padding-top: 4px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/** top tiles  */
+
+.green {
+  color: #1ABB9C;
+  padding: 0px 10px;
+}
+
+.red {
+  color: #E74C3C;
+  padding: 0px 10px;
+}
+
+.tile_count {
+  color: #73879C;
+  font-family: "Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif;
+  text-align: center;
+  /* margin-bottom: 20px;
+  margin-top: 20px;  */
+}
+
+.tile_count .tile_stats_count {
+  border-bottom: 1px solid #D9DEE4;
+  /* padding: 0 10px 0 20px; */
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  position: relative; }
+
+@media (min-width: 992px) {
+  footer {
+    margin-left: 230px; } }
+
+@media (min-width: 992px) {
+  .tile_count .tile_stats_count {
+    margin-bottom: 10px;
+    /* border-bottom: 0; */
+    padding-bottom: 10px; } }
+
+.tile_count .tile_stats_count:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 65px;
+  border-left: 2px solid #ADB2B5;
+  margin-top: 10px; }
+
+@media (min-width: 992px) {
+  .tile_count .tile_stats_count:first-child:before {
+    border-left: 0; } }
+
+.tile_count .tile_stats_count .count {
+  font-size: 30px;
+  line-height: 47px;
+  font-weight: 600; 
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .tile_count .tile_stats_count .count {
+    font-size: 12px; } }
+
+@media (min-width: 992px) and (max-width: 1100px) {
+  .tile_count .tile_stats_count .count {
+    font-size: 12px; } }
+
+.tile_count .tile_stats_count span {
+  font-size: 12px; }
+
+@media (min-width: 768px) {
+  .tile_count .tile_stats_count span {
+    font-size: 12px; } }
+
+        
+.tile_count .tile_stats_count .count_bottom i {
+  width: 12px; }
+
+.count_bottom {
+    font-size: 9px !important; 
+  }
+  
+/** /top tiles **/
+
+.badge {
+  position: relative;
+  top: -10px;
+  right: 2px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  background: rgb(181, 228, 239);
+  color: white;
+}

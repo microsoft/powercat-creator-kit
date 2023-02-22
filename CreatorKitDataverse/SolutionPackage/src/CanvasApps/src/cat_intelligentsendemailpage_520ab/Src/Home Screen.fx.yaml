@@ -1,0 +1,464 @@
+"'Home Screen' As screen":
+    Fill: =
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =
+
+    RootContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =App.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =App.Width
+        ZIndex: =3
+
+        HeaderContainer As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =72
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =1
+
+            Label1 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =20
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =20
+                Text: ="Power Actions"
+                Width: =210
+                X: =35
+                Y: =15
+                ZIndex: =1
+
+            Image1 As image:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                Height: =16
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Image: =ic_fluent_chevron_right_48_regular
+                LayoutMinHeight: =8
+                LayoutMinWidth: =5
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =16
+                ZIndex: =2
+
+            Label1_1 As Label:
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontSize: =20
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                PaddingStart: =20
+                Text: ="Intelligent Send Email"
+                Width: =200
+                X: =35
+                Y: =15
+                ZIndex: =3
+
+        Rectangle1 As rectangle:
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledFill: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(225, 223, 221, 1)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            HoverFill: =RGBA(225, 223, 221, 1)
+            PressedFill: =RGBA(225, 223, 221, 1)
+            Width: =1366
+            Y: =72
+            ZIndex: =2
+
+        SubHeaderContainer As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =55
+            LayoutGap: =20
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            PaddingBottom: =20
+            PaddingLeft: =20
+            PaddingRight: =20
+            PaddingTop: =10
+            ZIndex: =3
+
+            Container2 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                Height: =30
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                Label3 As Label:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Details about intelligent Send Email"
+                    Width: =250
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                Label4 As Label:
+                    Color: =ColorValue(AppTheme.palette.themePrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Learn more"
+                    Width: =320
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+        PowerActionsContainer As groupContainer.horizontalAutoLayoutContainer:
+            Height: =Label5.Height + TextBox1.Height + Label5_1.Height + galInputs.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: =20
+            PaddingRight: =20
+            ZIndex: =5
+
+            "Pivot1 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                AlignInContainer: =AlignInContainer.Stretch
+                DisplayMode: =DisplayMode.Edit
+                Height: =46
+                Items: |-
+                    =Table(
+                      {
+                          ItemKey: "tabProperties",
+                          ItemDisplayName: "Properties"
+                      },
+                      {
+                          ItemKey: "tabAdministration",
+                          ItemDisplayName: "Administration"
+                      }
+                    )
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Normal
+                RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                Theme: =AppThemeJson
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+                ItemDisplayName1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="ItemDisplayName"
+                    FieldName: ="ItemDisplayName"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =7
+
+                ItemKey1 As pcfDataField.textualColumn:
+                    FieldDisplayName: ="ItemKey"
+                    FieldName: ="ItemKey"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =2
+                    ZIndex: =8
+
+            IOContainer As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =If(App.Width < 768, Container6.Height + Container6_1.Height, Max(Container6.Height, Container6_1.Height))
+                LayoutMinHeight: =330
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                PaddingTop: =15
+                ZIndex: =2
+
+                Container6 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =Label5.Height + TextBox1.Height + Label5_1.Height + galInputs.Height + Icon1.Height + 20
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =450
+                    ZIndex: =3
+
+                    Label5 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Display name"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "TextBox1 As 'Text box'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Value: ="Intelligent Send Email (Bug)"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    Label5_1 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =60
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Inputs"
+                        VerticalAlignment: =VerticalAlign.Bottom
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    galInputs As gallery.galleryVertical:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        DelayItemLoading: =true
+                        FillPortions: =0
+                        FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                        FocusedBorderThickness: =2
+                        Height: =Self.TemplateHeight * CountRows(Inputs) + 5
+                        Items: =Inputs
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =2
+                        TemplateSize: =40
+                        ZIndex: =4
+
+                        "TextBox2 As 'Text box'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            Value: =ThisItem.value
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    "Icon1 As 'Fluent Icon (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =AppTheme.palette.themePrimary
+                        Height: =35
+                        IconName: ="Add"
+                        IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        OnChange: |-
+                            =Collect(Inputs, { key:GUID(), value:""})
+                        Text: ="New input"
+                        Theme: =AppThemeJson
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+                Container6_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Label5_2.Height + ComboBox1.Height + Label5_3.Height + galOutputs.Height + Icon1_1.Height + 20
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =4
+
+                    Label5_2 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Table"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "ComboBox1 As 'Combo box'.pcfdataset":
+                        DefaultSelectedItems: |-
+                            ={table:"Contact"}   
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Items: |-
+                            =Table({table:"Contact"})
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        table1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="table"
+                            FieldName: ="table"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =6
+
+                    Label5_3 As Label:
+                        DisplayMode: =DisplayMode.Edit
+                        FontWeight: =FontWeight.Semibold
+                        Height: =60
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="Outputs"
+                        VerticalAlignment: =VerticalAlign.Bottom
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    galOutputs As gallery.galleryVertical:
+                        BorderColor: =RGBA(166, 166, 166, 1)
+                        DelayItemLoading: =true
+                        FillPortions: =0
+                        FocusedBorderColor: =RGBA(0, 120, 212, 1)
+                        FocusedBorderThickness: =2
+                        Height: =(galOutputs.TemplateHeight  + galOutputs.TemplatePadding) * CountRows(Outputs) + 5
+                        Items: =Outputs
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        TemplatePadding: =2
+                        TemplateSize: =40
+                        ZIndex: =4
+
+                        "TextBox2_1 As 'Text box'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            OnSelect: =Select(Parent)
+                            Placeholder: ="Enter Value"
+                            Value: =ThisItem.value
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                    "Icon1_1 As 'Fluent Icon (1.0.19)'":
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =AppTheme.palette.themePrimary
+                        Height: =35
+                        IconName: ="Add"
+                        IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        OnChange: |-
+                            =Collect(Outputs, { key:GUID(), value:""})
+                        Text: ="New output"
+                        Theme: =AppThemeJson
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+            FormulaContainer As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =180
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =Parent.Width
+                ZIndex: =3
+
+                Label5_4 As Label:
+                    DisplayMode: =DisplayMode.Edit
+                    FontWeight: =FontWeight.Semibold
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    Text: ="Formula"
+                    Width: =320
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                Container3 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    LayoutGap: =5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =2
+                    PaddingLeft: =2
+                    PaddingRight: =2
+                    PaddingTop: =2
+                    Width: =
+                    ZIndex: =3
+
+                    "monacoForPFX1 As 'Monaco For PFX'":
+                        AlignInContainer: =AlignInContainer.Stretch
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =200
+                        stringPFX: ="If( ""Bug"" in Email.EmailTitle, SendEmail( TriageAlias, Email ));"
+                        Width: =850
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+        HeaderContainer_1 As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =72
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutGap: =10
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =20
+            ZIndex: =6
+
+            Button1 As Button:
+                AlignInContainer: =AlignInContainer.Center
+                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =ColorValue(AppTheme.palette.neutralLight)
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="Back"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            Button2 As Button:
+                AlignInContainer: =AlignInContainer.Center
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Text: ="Save"
+                Width: =96
+                X: =0
+                Y: =0
+                ZIndex: =2
+

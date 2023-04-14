@@ -1,10 +1,11 @@
 Dialog As CanvasComponent:
+    BorderRadius: =0
     Buttons: |-
-        =Table({Label: "Cancel", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } ,{Label: "Ok", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
-    ContentHeight: =Dialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
+        =Table({Label: "Cancel", ButtonType:'Microsoft.CoreControls.Button.ButtonType'.Standard, HasBorder: false }, {Label: "Save", ButtonType:'Microsoft.CoreControls.Button.ButtonType'.Primary, HasBorder: false })
+    ContentHeight: =DialogContentContainer.Height
     ContentWidth: =Dialog.DialogWidth
     ContentX: = Dialog.Width/2-Dialog.DialogWidth/2
-    ContentY: = Dialog.Height/2-Dialog.DialogHeight/2+DialogHeaderContainer.Height
+    ContentY: = Dialog.Height/2-Dialog.DialogHeight/2+DialogHeaderContainer.Height + Label3_1.Height
     Description: ="At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis ?"
     DialogHeight: =400
     DialogWidth: =640
@@ -84,7 +85,7 @@ Dialog As CanvasComponent:
 
             CenterDialogContainer As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
-                Fill: =Transparent
+                Fill: =Color.Transparent
                 FillPortions: =0
                 Height: =Min(Dialog.DialogHeight, Parent.Height) 
                 LayoutDirection: =LayoutDirection.Vertical
@@ -112,8 +113,8 @@ Dialog As CanvasComponent:
                         DisabledFill: =RGBA(0,0,0,0)
                         Fill: =RGBA(0,0,0,0)
                         FillPortions: =1
-                        Font: ='Segoe UI'
-                        FontWeight: =Semibold
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
                         Height: =60
                         LineHeight: =20
                         PaddingBottom: =0
@@ -128,7 +129,7 @@ Dialog As CanvasComponent:
                     Icon2 As icon.Cancel:
                         AccessibleLabel: ="close button"
                         BorderColor: =ColorFade(Icon2.Fill, -20%)
-                        Color: =Black
+                        Color: =Color.Black
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
                         DisabledColor: =RGBA(244, 244, 244, 1)
                         DisabledFill: =ColorFade(Icon2.Fill, -80%)
@@ -151,28 +152,33 @@ Dialog As CanvasComponent:
                         Width: =32
                         ZIndex: =2
 
-                DialogContentContainer As groupContainer.manualLayoutContainer:
-                    Width: =Dialog.DialogWidth
+                Label3_1 As label:
+                    AutoHeight: =true
+                    BorderColor: =
+                    Color: =ColorValue(Dialog.Theme.palette.neutralPrimary)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(0,0,0,0)
+                    Fill: =RGBA(0,0,0,0)
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    LayoutMinHeight: =70
+                    LayoutMinWidth: =560
+                    PaddingBottom: =10
+                    PaddingLeft: =24
+                    PaddingRight: =24
+                    PaddingTop: =0
+                    Size: =10.5
+                    Text: =Dialog.SubTitle
+                    VerticalAlign: =VerticalAlign.Top
+                    Visible: =Len(Label3_1.Text)
+                    Width: =Parent.Width
                     ZIndex: =2
 
-                    Label3_1 As label:
-                        AutoHeight: =true
-                        BorderColor: =
-                        Color: =ColorValue(Dialog.Theme.palette.neutralPrimary)
-                        DisabledColor: =RGBA(166, 166, 166, 1)
-                        DisabledFill: =RGBA(0,0,0,0)
-                        Fill: =RGBA(0,0,0,0)
-                        Font: =Font.'Segoe UI'
-                        Height: =Parent.Height
-                        PaddingBottom: =10
-                        PaddingLeft: =24
-                        PaddingRight: =24
-                        PaddingTop: =0
-                        Size: ='Segoe UI'
-                        Text: =Dialog.SubTitle
-                        VerticalAlign: =VerticalAlign.Top
-                        Width: =Parent.Width
-                        ZIndex: =1
+                DialogContentContainer As groupContainer.manualLayoutContainer:
+                    PaddingLeft: =24
+                    PaddingRight: =24
+                    Width: =Dialog.DialogWidth
+                    ZIndex: =3
 
                 ButtonsGallery_2 As gallery.galleryHorizontal:
                     AccessibleLabel: ="dialog buttons"
@@ -192,29 +198,33 @@ Dialog As CanvasComponent:
                     ShowScrollbar: =false
                     TabIndex: =2
                     TemplatePadding: =0
-                    TemplateSize: =100
+                    TemplateSize: =102
                     Width: =CountRows(ButtonsGallery_2.AllItems) * 100 + 10
                     X: =20
-                    ZIndex: =5
+                    ZIndex: =4
 
                     Button1_1 As Button:
                         Alignment: ="center"
-                        BorderColor: =
-                        BorderRadius: =0
-                        BorderStyle: =""
-                        BorderThickness: =0
+                        BorderColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.neutralSecondary))
+                        BorderRadius: =Dialog.BorderRadius
+                        BorderStyle: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, BorderStyle.None,BorderStyle.Solid)
+                        BorderThickness: =If(ThisItem.HasBorder, 1, 0)
                         ButtonType: =ThisItem.ButtonType
+                        DisabledBorderColor: =If(ThisItem.ButtonType = 'Microsoft.CoreControls.Button.ButtonType'.Standard, ColorValue(Dialog.Theme.palette.neutralLighter))
+                        DisabledFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.neutralLight), ColorValue(Dialog.Theme.palette.neutralLight))
                         DisplayMode: =DisplayMode.Edit
-                        FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.themePrimary))
+                        FillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.white))
                         Height: =32
                         HideFromAssistiveTechnologies: =false
+                        HoverFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDarkAlt), ColorValue(Dialog.Theme.palette.neutralQuaternary))
                         Italic: =false
                         OnSelect: =Dialog.OnButtonSelect()
                         PaddingBottom: =0
                         PaddingTop: =0
+                        PressedFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDark), ColorValue(Dialog.Theme.palette.neutralTertiary))
                         Strikethrough: =false
                         Text: =ThisItem.Label
-                        TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.white))
+                        TextColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.white), ColorValue(Dialog.Theme.palette.black))
                         Underline: =false
                         VerticalAlignment: ="middle"
                         Width: =96

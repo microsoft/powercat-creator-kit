@@ -2324,7 +2324,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267617017810",
+    "LastModifiedTimestamp": "638107246780466595",
     "Name": "ProgressIndicator",
     "Rules": [
       {
@@ -2399,7 +2399,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267617017810",
+  "LastModifiedTimestamp": "638107246780466595",
   "Name": "e93dd53bd090431983352fbd612af275",
   "OverridableProperties": {},
   "Version": "638001523565413150"

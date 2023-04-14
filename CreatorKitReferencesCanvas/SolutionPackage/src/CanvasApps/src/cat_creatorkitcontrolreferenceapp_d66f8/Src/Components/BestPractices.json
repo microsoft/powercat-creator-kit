@@ -3857,7 +3857,7 @@
       "Dos",
       "Donts"
     ],
-    "LastModifiedTimestamp": "638058267616776424",
+    "LastModifiedTimestamp": "638107246780244707",
     "Name": "BestPractices",
     "Rules": [
       {
@@ -3947,7 +3947,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616776424",
+  "LastModifiedTimestamp": "638107246780244707",
   "Name": "f47fcbd5380f4e4bb93226d0ae4b8319",
   "OverridableProperties": {},
   "Version": "637855819039471076"

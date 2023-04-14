@@ -2664,7 +2664,7 @@
       },
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638058267616766820",
+    "LastModifiedTimestamp": "638107246780237026",
     "Name": "CommandBarOverflowItems",
     "Rules": [
       {
@@ -2745,7 +2745,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616766820",
+  "LastModifiedTimestamp": "638107246780237026",
   "Name": "ee65712cedf944b38accbde33a5ae71c",
   "OverridableProperties": {},
   "Version": "637855760234820422"

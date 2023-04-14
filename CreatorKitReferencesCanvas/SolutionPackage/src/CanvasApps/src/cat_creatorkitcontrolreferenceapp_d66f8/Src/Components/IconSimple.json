@@ -2990,7 +2990,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267616744948",
+    "LastModifiedTimestamp": "638107246780218787",
     "Name": "IconSimple",
     "Rules": [
       {
@@ -3065,7 +3065,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616744948",
+  "LastModifiedTimestamp": "638107246780218787",
   "Name": "1220845d63964f1eb6f8bb9ddcd83c79",
   "OverridableProperties": {},
   "Version": "637865279901760190"

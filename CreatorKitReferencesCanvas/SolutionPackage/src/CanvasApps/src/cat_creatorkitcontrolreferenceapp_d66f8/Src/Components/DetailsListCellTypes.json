@@ -589,7 +589,7 @@
         "Name": "line_15",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 891,
+        "PublishOrderIndex": 890,
         "Rules": [
           {
             "Category": "Design",
@@ -820,7 +820,7 @@
         "Name": "htmlCode_23",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 892,
+        "PublishOrderIndex": 891,
         "Rules": [
           {
             "Category": "Data",
@@ -1019,7 +1019,7 @@
         "Name": "ElevationCellTypes",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 893,
+        "PublishOrderIndex": 892,
         "Rules": [
           {
             "Category": "Design",
@@ -1113,7 +1113,7 @@
             "Name": "city1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 895,
+            "PublishOrderIndex": 894,
             "Rules": [
               {
                 "Category": "Data",
@@ -1220,7 +1220,7 @@
             "Name": "country1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 896,
+            "PublishOrderIndex": 895,
             "Rules": [
               {
                 "Category": "Data",
@@ -1327,7 +1327,7 @@
             "Name": "description1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 897,
+            "PublishOrderIndex": 896,
             "Rules": [
               {
                 "Category": "Data",
@@ -1434,7 +1434,7 @@
             "Name": "expand1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 898,
+            "PublishOrderIndex": 897,
             "Rules": [
               {
                 "Category": "Data",
@@ -1541,7 +1541,7 @@
             "Name": "externalimage1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 899,
+            "PublishOrderIndex": 898,
             "Rules": [
               {
                 "Category": "Data",
@@ -1648,7 +1648,7 @@
             "Name": "iconimage1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 900,
+            "PublishOrderIndex": 899,
             "Rules": [
               {
                 "Category": "Data",
@@ -1755,7 +1755,7 @@
             "Name": "id1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 901,
+            "PublishOrderIndex": 900,
             "Rules": [
               {
                 "Category": "Data",
@@ -1862,7 +1862,7 @@
             "Name": "name1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 902,
+            "PublishOrderIndex": 901,
             "Rules": [
               {
                 "Category": "Data",
@@ -1969,7 +1969,7 @@
             "Name": "TagBorderColor1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 903,
+            "PublishOrderIndex": 902,
             "Rules": [
               {
                 "Category": "Data",
@@ -2076,7 +2076,7 @@
             "Name": "TagColor1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 904,
+            "PublishOrderIndex": 903,
             "Rules": [
               {
                 "Category": "Data",
@@ -2183,7 +2183,7 @@
             "Name": "tags1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 905,
+            "PublishOrderIndex": 904,
             "Rules": [
               {
                 "Category": "Data",
@@ -2290,7 +2290,7 @@
             "Name": "svg1",
             "Parent": "FluentDetailsListCellTypes",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 906,
+            "PublishOrderIndex": 905,
             "Rules": [
               {
                 "Category": "Data",
@@ -2476,7 +2476,7 @@
         "Name": "FluentDetailsListCellTypes",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 894,
+        "PublishOrderIndex": 893,
         "Rules": [
           {
             "Category": "Data",
@@ -2486,7 +2486,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "Table(\r\n    {\r\n        ColName: \"name\",\r\n        ColDisplayName: \"Account Name\",\r\n        ColWidth: 100,\r\n        ColIsBold:true,\r\n        ColCellType: \"link\",\r\n        ColVerticalAlign: \"Center\"\r\n    },\r\n    {\r\n        ColName: \"city\",\r\n        ColDisplayName: \"City:\",\r\n        ColShowAsSubTextOf:\"name\",\r\n        ColLabelAbove:false,\r\n        ColIsBold:false,\r\n        ColSubTextRow: 1,\r\n        ColVerticalAlign: \"Center\"\r\n    },\r\n    {\r\n        ColName: \"externalimage\",\r\n        ColDisplayName: \"External\",\r\n        ColCellType:\"image\",\r\n        ColWidth: 60,\r\n        ColImageWidth: 60,\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n    },\r\n    {\r\n        ColName: \"iconimage\",\r\n        ColDisplayName: \"Icon\",\r\n        ColCellType:\"clickableimage\",\r\n        ColWidth: 40,\r\n        ColTagColorColumn:\"TagColor\",\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n\r\n    },\r\n     {\r\n        ColName: \"svg\",\r\n        ColDisplayName: \"Svg\",\r\n        ColCellType:\"clickableimage\",\r\n        ColWidth: 60,\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n    },\r\n    {\r\n        ColName: \"country\",\r\n        ColDisplayName: \"Tag\",\r\n        ColCellType:\"tag\",\r\n        ColWidth: 70,\r\n        ColTagColorColumn: \"TagColor\",\r\n        ColTagBorderColorColumn: \"TagBorderColor\",\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n    },\r\n    \r\n    {\r\n        ColName: \"country\",\r\n        ColDisplayName: \"Indicator\",\r\n        ColCellType:\"indicatortag\",\r\n        ColWidth: 150,\r\n        ColTagColorColumn: \"TagColor\",\r\n        ColTagBorderColorColumn: \"TagBorderColor\",\r\n        ColIsBold:true,\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColInlineLabel:\"Status:\",\r\n        ColResizable:true\r\n    },\r\n     {\r\n        ColName: \"tags\",\r\n        ColDisplayName: \"Tag List\",\r\n        ColWidth: 250,\r\n        ColFirstMultiValueBold :true,\r\n        ColMultiValueDelimeter:\", \"\r\n    }\r\n)",
+            "InvariantScript": "Table(\r\n    {\r\n        ColName: \"name\",\r\n        ColDisplayName: \"Account name\",\r\n        ColWidth: 100,\r\n        ColIsBold:true,\r\n        ColCellType: \"link\",\r\n        ColVerticalAlign: \"Center\"\r\n    },\r\n    {\r\n        ColName: \"city\",\r\n        ColDisplayName: \"City:\",\r\n        ColShowAsSubTextOf:\"name\",\r\n        ColLabelAbove:false,\r\n        ColIsBold:false,\r\n        ColSubTextRow: 1,\r\n        ColVerticalAlign: \"Center\"\r\n    },\r\n    {\r\n        ColName: \"externalimage\",\r\n        ColDisplayName: \"External\",\r\n        ColCellType:\"image\",\r\n        ColWidth: 60,\r\n        ColImageWidth: 60,\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n    },\r\n    {\r\n        ColName: \"iconimage\",\r\n        ColDisplayName: \"Icon\",\r\n        ColCellType:\"clickableimage\",\r\n        ColWidth: 40,\r\n        ColTagColorColumn:\"TagColor\",\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n\r\n    },\r\n     {\r\n        ColName: \"svg\",\r\n        ColDisplayName: \"Svg\",\r\n        ColCellType:\"clickableimage\",\r\n        ColWidth: 60,\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n    },\r\n    {\r\n        ColName: \"country\",\r\n        ColDisplayName: \"Tag\",\r\n        ColCellType:\"tag\",\r\n        ColWidth: 70,\r\n        ColTagColorColumn: \"TagColor\",\r\n        ColTagBorderColorColumn: \"TagBorderColor\",\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColResizable:true\r\n    },\r\n    \r\n    {\r\n        ColName: \"country\",\r\n        ColDisplayName: \"Indicator\",\r\n        ColCellType:\"indicatortag\",\r\n        ColWidth: 150,\r\n        ColTagColorColumn: \"TagColor\",\r\n        ColTagBorderColorColumn: \"TagBorderColor\",\r\n        ColIsBold:true,\r\n        ColVerticalAlign: \"Center\",\r\n        ColHorizontalAlign:\"Center\",\r\n        ColInlineLabel:\"Status:\",\r\n        ColResizable:true\r\n    },\r\n     {\r\n        ColName: \"tags\",\r\n        ColDisplayName: \"Tag list\",\r\n        ColWidth: 250,\r\n        ColFirstMultiValueBold :true,\r\n        ColMultiValueDelimeter:\", \"\r\n    }\r\n)",
             "Property": "columns_Items",
             "RuleProviderType": "Unknown"
           },
@@ -2608,7 +2608,7 @@
         "Name": "Group20",
         "Parent": "DetailsListCellTypes",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 890,
+        "PublishOrderIndex": 906,
         "Rules": [
           {
             "Category": "Design",
@@ -2689,7 +2689,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267616785928",
+    "LastModifiedTimestamp": "638107271449782600",
     "Name": "DetailsListCellTypes",
     "Rules": [
       {
@@ -2770,7 +2770,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616785928",
+  "LastModifiedTimestamp": "638107271449782600",
   "Name": "e4998c26ebb24e46a35c047d80404d36",
   "OverridableProperties": {},
   "Version": "637867635483834796"

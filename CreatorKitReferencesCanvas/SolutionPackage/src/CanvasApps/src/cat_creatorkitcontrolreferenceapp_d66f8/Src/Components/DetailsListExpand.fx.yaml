@@ -198,7 +198,7 @@ DetailsListExpand As CanvasComponent:
                 =Table(
                     {
                         ColName: "name",
-                        ColDisplayName: "Account Name",
+                        ColDisplayName: "Account name",
                         ColWidth: Self.Width-32-32-48,
                         ColIsBold:true,
                         ColResizable:true

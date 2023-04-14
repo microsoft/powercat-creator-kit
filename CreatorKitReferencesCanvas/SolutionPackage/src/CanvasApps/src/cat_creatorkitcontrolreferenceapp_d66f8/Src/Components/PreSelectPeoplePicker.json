@@ -1356,7 +1356,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267617030268",
+    "LastModifiedTimestamp": "638107246780479419",
     "Name": "PreSelectPeoplePicker",
     "Rules": [
       {
@@ -1431,7 +1431,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267617030268",
+  "LastModifiedTimestamp": "638107246780479419",
   "Name": "eb51dbcb6c434b8ca53a6d7b73bd85ad",
   "OverridableProperties": {},
   "Version": "638023862817062332"

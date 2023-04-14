@@ -310,7 +310,7 @@ DetailsListLayout As CanvasComponent:
                         },
                         {
                             ColName: "heading",
-                            ColDisplayName: "Project Name",
+                            ColDisplayName: "Project name",
                             ColWidth: availableWidth-iconWidth-padding-reviewWidth-padding-scrollWidth,
                             ColIsBold:false,
                             ColRowHeader:true,

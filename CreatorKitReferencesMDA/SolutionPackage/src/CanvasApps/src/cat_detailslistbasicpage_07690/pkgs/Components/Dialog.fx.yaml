@@ -1,6 +1,7 @@
 Dialog As CanvasComponent:
+    BorderRadius: =0
     Buttons: |-
-        =Table({Label: "Cancel", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } ,{Label: "Ok", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
+        =Table({Label: "Cancel", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard, HasBorder: false }, {Label: "Save", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary, HasBorder: false })
     ContentHeight: =Dialog.DialogHeight - DialogHeaderContainer.Height - ButtonsGallery_2.Height
     ContentWidth: =Dialog.DialogWidth
     ContentX: = Dialog.Width/2-Dialog.DialogWidth/2
@@ -152,7 +153,6 @@ Dialog As CanvasComponent:
                         ZIndex: =2
 
                 DialogContentContainer As groupContainer.manualLayoutContainer:
-                    PaddingBottom: =5
                     Width: =Dialog.DialogWidth
                     ZIndex: =2
 
@@ -193,29 +193,33 @@ Dialog As CanvasComponent:
                     ShowScrollbar: =false
                     TabIndex: =2
                     TemplatePadding: =0
-                    TemplateSize: =100
+                    TemplateSize: =102
                     Width: =CountRows(ButtonsGallery_2.AllItems) * 100 + 10
                     X: =20
                     ZIndex: =5
 
                     Button1_1 As Button:
                         Alignment: ="center"
-                        BorderColor: =
-                        BorderRadius: =0
-                        BorderStyle: =""
-                        BorderThickness: =0
+                        BorderColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.neutralSecondary))
+                        BorderRadius: =Dialog.BorderRadius
+                        BorderStyle: =If(ThisItem.ButtonType = Primary, BorderStyle.None,BorderStyle.Solid)
+                        BorderThickness: =If(ThisItem.HasBorder, 1, 0)
                         ButtonType: =ThisItem.ButtonType
+                        DisabledBorderColor: =If(ThisItem.ButtonType = Secondary, ColorValue(Dialog.Theme.palette.neutralLighter))
+                        DisabledFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.neutralLight), ColorValue(Dialog.Theme.palette.neutralLight))
                         DisplayMode: =DisplayMode.Edit
-                        FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.themePrimary))
+                        FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.white))
                         Height: =32
                         HideFromAssistiveTechnologies: =false
+                        HoverFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.themeDarkAlt), ColorValue(Dialog.Theme.palette.neutralQuaternary))
                         Italic: =false
                         OnSelect: =Dialog.OnButtonSelect()
                         PaddingBottom: =0
                         PaddingTop: =0
+                        PressedFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.themeDark), ColorValue(Dialog.Theme.palette.neutralTertiary))
                         Strikethrough: =false
                         Text: =ThisItem.Label
-                        TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.white))
+                        TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Dialog.Theme.palette.white), ColorValue(Dialog.Theme.palette.black))
                         Underline: =false
                         VerticalAlignment: ="middle"
                         Width: =96

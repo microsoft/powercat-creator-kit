@@ -243,6 +243,7 @@ Panel As CanvasComponent:
                     FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themePrimary))
                     Height: =32
                     HideFromAssistiveTechnologies: =false
+                    HoverFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themeDark))
                     Italic: =false
                     OnSelect: =Panel.OnButtonSelect()
                     PaddingBottom: =0

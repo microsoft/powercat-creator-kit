@@ -22,7 +22,7 @@
   <EmbeddedApp xsi:nil="true"></EmbeddedApp>
   <IntroducedVersion>1.0</IntroducedVersion>
   <CdsDependencies>{"cdsdependencies":[]}</CdsDependencies>
-  <IsCustomizable>1</IsCustomizable>
+  <IsCustomizable>0</IsCustomizable>
   <BackgroundImageUri>/CanvasApps/cr7a3_compdescription_1c3b2_BackgroundImageUri</BackgroundImageUri>
   <DocumentUri>/CanvasApps/cr7a3_compdescription_1c3b2_DocumentUri.msapp</DocumentUri>
 </CanvasApp>

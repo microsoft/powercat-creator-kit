@@ -2509,7 +2509,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267617028056",
+    "LastModifiedTimestamp": "638107246780477107",
     "Name": "SpinnerComp",
     "Rules": [
       {
@@ -2584,7 +2584,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267617028056",
+  "LastModifiedTimestamp": "638107246780477107",
   "Name": "7c27f72aaf134bb78c3281bacb061c37",
   "OverridableProperties": {},
   "Version": "638001500580984028"

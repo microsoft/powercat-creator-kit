@@ -6,7 +6,7 @@ DetailsListBasic As CanvasComponent:
         =ClearCollect(colRowImages,
         {name:"pdf",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pdf.svg"},
         {name:"png",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/photo.svg"},
-        {name:"pdf",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pptx.svg"},
+        {name:"pptx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/pptx.svg"},
         {name:"docx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/docx.svg"},
         {name:"xlsx",url:"https://static2.sharepointonline.com/files/fabric/assets/item-types/16/xlsx.svg"});
         
@@ -307,7 +307,7 @@ DetailsListBasic As CanvasComponent:
                         ColMultiLine:multiLineDescription
                     },
                     {
-                        ColName:"DateModified",ColDisplayName:"Date Modified",ColSortable:true,
+                        ColName:"DateModified",ColDisplayName:"Date modified",ColSortable:true,
                         ColWidth:If(collapsedModifiedOn,200,100),ColResizable:true,ColShowAsSubTextOf:If(collapsedModifiedOn,"Name"),
                         ColInlineLabel:If(collapsedModifiedOn,"Modified:")
                     }

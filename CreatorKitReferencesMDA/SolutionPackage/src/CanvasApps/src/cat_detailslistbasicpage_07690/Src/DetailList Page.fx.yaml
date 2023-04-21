@@ -31,7 +31,7 @@
             Width: =App.Width
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (1.0.8)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =""
                 FontSize: =20
@@ -69,7 +69,7 @@
             Width: =App.Width
             ZIndex: =2
 
-            "Elevation_1 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -96,7 +96,7 @@
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_2 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance.Height
                 PaddingBottom: =8
@@ -124,7 +124,7 @@
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_4 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -182,7 +182,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_1 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                        "pivotAppCode_1 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -391,7 +391,7 @@
                         Y: =110
                         ZIndex: =11
 
-                    "FluentDetailsListBasic As 'Fluent Details List (1.0.8)'.pcfdataset":
+                    "FluentDetailsListBasic As 'Fluent Details List (1.0.19)'.pcfdataset":
                         AlternateRowColor: =If(chkAltRowColor.Checked,AppTheme.paletteCSS.neutralLighterAlt)
                         columns_Items: |-
                             =With({
@@ -416,7 +416,7 @@
                                     ColMultiLine:multiLineDescription
                                 },
                                 {
-                                    ColName:"DateModified",ColDisplayName:"Date Modified",ColSortable:true,
+                                    ColName:"DateModified",ColDisplayName:"Date modified",ColSortable:true,
                                     ColWidth:If(collapsedModifiedOn,200,100),ColResizable:true,ColShowAsSubTextOf:If(collapsedModifiedOn,"Name"),
                                     ColInlineLabel:If(collapsedModifiedOn,"Modified:")
                                 }
@@ -562,7 +562,7 @@
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_5 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -621,7 +621,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_2 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                        "pivotAppCode_2 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -723,7 +723,7 @@
                         Y: =255
                         ZIndex: =3
 
-                    "FluentDetailsListRightalignCol As 'Fluent Details List (1.0.8)'.pcfdataset":
+                    "FluentDetailsListRightalignCol As 'Fluent Details List (1.0.19)'.pcfdataset":
                         columns_Items: |-
                             =With({
                                 // If there is a selection column, we remove the width and the padding
@@ -888,7 +888,7 @@
             Width: =App.Width
             ZIndex: =7
 
-            "Elevation_6 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_6 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -946,7 +946,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_3 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                        "pivotAppCode_3 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -1000,7 +1000,7 @@
                     PaddingTop: =2
                     ZIndex: =3
 
-                    "FluentDetailsListElevation As 'Fluent Elevation (1.0.8)'":
+                    "FluentDetailsListElevation As 'Fluent Elevation (1.0.19)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =FluentDetailsListCellTypes.Height
                         Width: =FluentDetailsListCellTypes.Width
@@ -1008,7 +1008,7 @@
                         Y: =FluentDetailsListCellTypes.Y
                         ZIndex: =1
 
-                    "FluentDetailsListCellTypes As 'Fluent Details List (1.0.8)'.pcfdataset":
+                    "FluentDetailsListCellTypes As 'Fluent Details List (1.0.19)'.pcfdataset":
                         AlternateRowColor: =
                         columns_Items: |-
                             =Table(
@@ -1086,7 +1086,7 @@
                                 },
                                  {
                                     ColName: "tags",
-                                    ColDisplayName: "Tag List",
+                                    ColDisplayName: "Tag list",
                                     ColWidth: 250,
                                     ColFirstMultiValueBold :true,
                                     ColMultiValueDelimeter:", "
@@ -1216,7 +1216,7 @@
             Width: =App.Width
             ZIndex: =8
 
-            "Elevation_7 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_7 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -1275,7 +1275,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_4 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                        "pivotAppCode_4 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -1329,7 +1329,7 @@
                     PaddingTop: =2
                     ZIndex: =3
 
-                    "FluentDetailsListExapndElevation As 'Fluent Elevation (1.0.8)'":
+                    "FluentDetailsListExapndElevation As 'Fluent Elevation (1.0.19)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =FluentDetailsListDetailsListExpand.Height
                         Width: =FluentDetailsListDetailsListExpand.Width
@@ -1337,12 +1337,12 @@
                         Y: =FluentDetailsListDetailsListExpand.Y
                         ZIndex: =1
 
-                    "FluentDetailsListDetailsListExpand As 'Fluent Details List (1.0.8)'.pcfdataset":
+                    "FluentDetailsListDetailsListExpand As 'Fluent Details List (1.0.19)'.pcfdataset":
                         columns_Items: |-
                             =Table(
                                 {
                                     ColName: "name",
-                                    ColDisplayName: "Account Name",
+                                    ColDisplayName: "Account name",
                                     ColWidth: Self.Width-32-32-48,
                                     ColIsBold:true,
                                     ColResizable:true
@@ -1501,7 +1501,7 @@
             Width: =App.Width
             ZIndex: =9
 
-            "Elevation_8 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_8 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -1560,7 +1560,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_5 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                        "pivotAppCode_5 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -1614,7 +1614,7 @@
                     PaddingTop: =2
                     ZIndex: =2
 
-                    "FluentDetailsListLayoutElevation As 'Fluent Elevation (1.0.8)'":
+                    "FluentDetailsListLayoutElevation As 'Fluent Elevation (1.0.19)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =FluentDetailsListLayout.Height
                         Width: =FluentDetailsListLayout.Width
@@ -1622,7 +1622,7 @@
                         Y: =FluentDetailsListLayout.Y
                         ZIndex: =1
 
-                    "FluentDetailsListLayout As 'Fluent Details List (1.0.8)'.pcfdataset":
+                    "FluentDetailsListLayout As 'Fluent Details List (1.0.19)'.pcfdataset":
                         columns_Items: |-
                             =With({
                                 // If there is a selection column, we remove the width and the padding
@@ -1644,7 +1644,7 @@
                                     },
                                     {
                                         ColName: "heading",
-                                        ColDisplayName: "Project Name",
+                                        ColDisplayName: "Project name",
                                         ColWidth: availableWidth-iconWidth-padding-reviewWidth-padding-scrollWidth,
                                         ColIsBold:false,
                                         ColRowHeader:true,
@@ -1805,7 +1805,7 @@
             Width: =App.Width
             ZIndex: =10
 
-            "Elevation_3 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_3 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentGuidance_1.Height
                 PaddingBottom: =8
@@ -1834,7 +1834,7 @@
             Width: =App.Width
             ZIndex: =11
 
-            "Elevation_9 As 'Fluent Elevation (1.0.8)'":
+            "Elevation_9 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -1892,7 +1892,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_6 As 'Fluent Pivot (1.0.8)'.pcfdataset":
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -1947,7 +1947,7 @@
                     PaddingTop: =2
                     ZIndex: =3
 
-                    "FluentDetailsListElevation_1 As 'Fluent Elevation (1.0.8)'":
+                    "FluentDetailsListElevation_1 As 'Fluent Elevation (1.0.19)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =FluentDetailsListAccounts.Height
                         Width: =FluentDetailsListAccounts.Width
@@ -1955,7 +1955,7 @@
                         Y: =FluentDetailsListAccounts.Y
                         ZIndex: =1
 
-                    "FluentDetailsListAccounts As 'Fluent Details List (1.0.8)'.pcfdataset":
+                    "FluentDetailsListAccounts As 'Fluent Details List (1.0.19)'.pcfdataset":
                         AlternateRowColor: =
                         columns_Items: |
                             =Table(
@@ -1963,7 +1963,7 @@
                                 {ColName:"address1_city",ColDisplayName:"City:",ColShowAsSubTextOf:"name"},
                                 {ColName:"address1_country",ColDisplayName:"Country:",ColShowAsSubTextOf:"name"},
                                 {ColName:"telephone1",ColDisplayName:"Telephone",ColWidth:100,ColSortable:true,ColResizable:true},
-                                {ColName:"primarycontactid",ColDisplayName:"Primary Contact",ColWidth:200,ColSortable:true,ColSortBy:"_primarycontactid_value",ColResizable:true,ColCellType:"link"}
+                                {ColName:"primarycontactid",ColDisplayName:"Primary contact",ColWidth:200,ColSortable:true,ColSortBy:"_primarycontactid_value",ColResizable:true,ColCellType:"link"}
                             )
                         Compact: =false
                         CurrentSortColumn: =""
@@ -2031,7 +2031,7 @@
                             Width: =181
                             ZIndex: =1
 
-                            "icoFirst As 'Fluent Icon (1.0.8)'":
+                            "icoFirst As 'Fluent Icon (1.0.19)'":
                                 DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                                 FontSize: =0
                                 Height: =32
@@ -2044,7 +2044,7 @@
                                 Y: =32
                                 ZIndex: =1
 
-                            "icoBack As 'Fluent Icon (1.0.8)'":
+                            "icoBack As 'Fluent Icon (1.0.19)'":
                                 DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                                 FontSize: =0
                                 Height: =32
@@ -2070,7 +2070,7 @@
                                 X: =64
                                 ZIndex: =4
 
-                            "icoNext As 'Fluent Icon (1.0.8)'":
+                            "icoNext As 'Fluent Icon (1.0.19)'":
                                 DisplayMode: =If(FluentDetailsListAccounts.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
                                 FontSize: =0
                                 Height: =32
@@ -2137,7 +2137,7 @@
                         X: =8
                         ZIndex: =6
 
-                    "icoSearch As 'Fluent Icon (1.0.8)'":
+                    "icoSearch As 'Fluent Icon (1.0.19)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
                         IconName: ="Search"
@@ -2147,7 +2147,7 @@
                         Y: =32
                         ZIndex: =7
 
-                    "cmdAccounts As 'Fluent Command Bar (1.0.8)'.pcfdataset":
+                    "cmdAccounts As 'Fluent Command Bar (1.0.19)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
                         Items: |-

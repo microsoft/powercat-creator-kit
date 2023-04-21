@@ -29,7 +29,7 @@
             Width: =App.Width
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (0.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
                 FontSize: =20
@@ -66,9 +66,9 @@
             LayoutMinHeight: =500
             LayoutMinWidth: =250
             Width: =App.Width
-            ZIndex: =3
+            ZIndex: =2
 
-            "Elevation_1 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_1 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription.DesiredHeight
                 PaddingBottom: =8
@@ -88,15 +88,15 @@
 
         ComponentGuidanceContainer As groupContainer.manualLayoutContainer:
             FillPortions: =0
-            Height: =250
+            Height: =ComponentGuidance.Height
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             Width: =App.Width
-            ZIndex: =4
+            ZIndex: =3
 
-            "Elevation_2 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_2 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.View
-                Height: =250
+                Height: =ComponentGuidance.Height
                 PaddingBottom: =8
                 PaddingLeft: =8
                 PaddingRight: =8
@@ -120,11 +120,11 @@
             LayoutMinHeight: =400
             LayoutMinWidth: =250
             Width: =App.Width
-            ZIndex: =5
+            ZIndex: =4
 
-            "Elevation_4 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_4 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height + Self.PaddingBottom
+                Height: =Parent.Height //+ Self.PaddingBottom
                 PaddingBottom: =8
                 PaddingLeft: =8
                 PaddingRight: =8
@@ -172,15 +172,15 @@
                             FillPortions: =1
                             Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Semibold
-                            Height: =lblControlDescription_3.AutoHeight
                             LayoutMinHeight: =70
                             LayoutMinWidth: =560
                             Size: =18
                             Text: =Index(currentCompSamplesCol,1).Usage
-                            Width: =560
+                            Width: =620
+                            X: =-15
                             ZIndex: =1
 
-                        "pivotAppCode_6 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_6 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -192,7 +192,7 @@
                             RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
                             SelectedKey: ="app"
                             Theme: =AppThemeJson
-                            Width: =220
+                            Width: =200 
                             X: =Parent.Width-Self.Width
                             Y: =0
                             ZIndex: =2
@@ -267,7 +267,7 @@
                             Y: =62
                             ZIndex: =1
 
-                        "PickerTagsSimple As 'Fluent Picker (0.0.22)'.pcfdataset":
+                        "PickerTagsSimple As 'Fluent Picker (1.0.19)'.pcfdataset":
                             AllowFreeText: =chkAllowFreeText.Checked
                             DisplayMode: =DisplayMode.Edit
                             Error: =CountRows(colSimpleTags)>=5
@@ -399,7 +399,7 @@
                             Y: =62
                             ZIndex: =1
 
-                        "CommandBarTags As 'Fluent Command Bar (0.0.22)'.pcfdataset":
+                        "CommandBarTags As 'Fluent Command Bar (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             Items: |-
@@ -421,7 +421,7 @@
                             Y: =0
                             ZIndex: =2
 
-                        "FluentDetailsListTagsSelected As 'Fluent Details List (0.0.22)'.pcfdataset":
+                        "FluentDetailsListTagsSelected As 'Fluent Details List (1.0.19)'.pcfdataset":
                             columns_Items: |-
                                 =Table({ColName:"name",ColDisplayName:"Tag",ColWidth:(Self.Width/2),ColRowHeader:true},{ColName:"icon",ColDisplayName:"Icon",ColWidth:(Self.Width/2)-100})
                             DisplayMode: =DisplayMode.Edit
@@ -458,11 +458,11 @@
             LayoutMinHeight: =400
             LayoutMinWidth: =250
             Width: =App.Width
-            ZIndex: =6
+            ZIndex: =5
 
-            "Elevation_5 As 'Fluent Elevation (0.0.22)'":
+            "Elevation_5 As 'Fluent Elevation (1.0.19)'":
                 DisplayMode: =DisplayMode.Edit
-                Height: =Parent.Height + Self.PaddingBottom
+                Height: =Parent.Height //+ Self.PaddingBottom
                 PaddingBottom: =8
                 PaddingLeft: =8
                 PaddingRight: =8
@@ -518,7 +518,7 @@
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_7 As 'Fluent Pivot (0.0.22)'.pcfdataset":
+                        "pivotAppCode_7 As 'Fluent Pivot (1.0.19)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -565,7 +565,7 @@
 
                 ComponentExample1_1 As groupContainer.verticalAutoLayoutContainer:
                     FillPortions: =0
-                    Height: =Example2ContentContainer.Height
+                    Height: =Example2ContentContainer.Height + 20
                     LayoutAlignItems: =LayoutAlignItems.Stretch
                     LayoutDirection: =LayoutDirection.Vertical
                     LayoutMinHeight: =100
@@ -579,7 +579,7 @@
 
                     Example2ContentContainer As groupContainer.manualLayoutContainer:
                         FillPortions: =0
-                        Height: =100
+                        Height: =Picker1.AutoHeight + 75
                         LayoutMinHeight: =200
                         LayoutMinWidth: =250
                         Width: =Parent.Width
@@ -626,7 +626,7 @@
                             Y: =5
                             ZIndex: =3
 
-                        "Picker1 As 'Fluent Picker (0.0.22)'.pcfdataset":
+                        "Picker1 As 'Fluent Picker (1.0.19)'.pcfdataset":
                             BorderRadius: =If(chkRounded.Checked,8)
                             DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
                             Height: =38
@@ -688,7 +688,7 @@
                             Y: =49
                             ZIndex: =4
 
-                        "Icon2 As 'Fluent Icon (0.0.22)'":
+                        "Icon2 As 'Fluent Icon (1.0.19)'":
                             DisplayMode: =DisplayMode.Edit
                             Height: =32
                             IconName: ="tag"
@@ -699,4 +699,17 @@
                             X: =13
                             Y: =49
                             ZIndex: =5
+
+        Rectangle1 As rectangle:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =88
+            HoverFill: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            Width: =1312
+            Y: =686
+            ZIndex: =6
 

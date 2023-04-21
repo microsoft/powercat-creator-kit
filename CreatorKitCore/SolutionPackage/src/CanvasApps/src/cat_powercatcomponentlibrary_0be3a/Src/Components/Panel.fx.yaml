@@ -1,6 +1,6 @@
 Panel As CanvasComponent:
     Buttons: |-
-        =Table({Label: "Cancel", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Standard } ,{Label: "Ok", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
+        =Table({Label: "Cancel", ButtonType:'Microsoft.CoreControls.Button.ButtonType'.Standard , Visible:true, Enabled:true } ,{Label: "Ok", ButtonType:'Microsoft.CoreControls.Button.ButtonType'.Primary, Visible:true, Enabled:true })
     ContentHeight: =PanelContentContainer.Height
     ContentWidth: =PanelContentContainer.Width
     ContentX: =PanelContentContainer.X + CenterPanelContainer.X
@@ -14,6 +14,7 @@ Panel As CanvasComponent:
     OnReset: =Set(NotVisibleReload,true)
     OverlayColor: =RGBA(255, 255, 255, 0.4)
     PanelPosition: ="Right"
+    RoundedButtons: =true
     SelectedButton: =ButtonsGallery_1.Selected
     Subtitle: ="Content goes here."
     Theme: |-
@@ -94,16 +95,14 @@ Panel As CanvasComponent:
             ZIndex: =1
 
         CenterPanelContainer As groupContainer.verticalAutoLayoutContainer:
-            Fill: =Transparent
+            Fill: =Color.Transparent
             FillPortions: =0
             Height: =Panel.Height
             LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =8
             LayoutMinWidth: =520
             LayoutMode: =LayoutMode.Auto
-            PaddingBottom: =10
-            PaddingLeft: =20
-            PaddingRight: =20
-            PaddingTop: =10
+            PaddingTop: =16
             Width: =Panel.DialogWidth
             X: =40
             Y: =40
@@ -114,6 +113,7 @@ Panel As CanvasComponent:
                 FillPortions: =0
                 Height: =60
                 LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =24
                 PaddingRight: =10
                 Width: |-
                     =If(
@@ -130,8 +130,8 @@ Panel As CanvasComponent:
                     DisabledFill: =RGBA(0,0,0,0)
                     Fill: =RGBA(0,0,0,0)
                     FillPortions: =1
-                    Font: ='Segoe UI'
-                    FontWeight: =Semibold
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
                     Height: =60
                     LayoutMinWidth: =100
                     LineHeight: =20
@@ -177,12 +177,12 @@ Panel As CanvasComponent:
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(0,0,0,0)
                 Fill: =RGBA(0,0,0,0)
-                Font: ='Segoe UI'
+                Font: =Font.'Segoe UI'
                 Height: =If( !IsBlank(Self.Text), Parent.Height, 0)
                 LayoutMinHeight: =70
                 LayoutMinWidth: =560
                 PaddingBottom: =10
-                PaddingLeft: =0
+                PaddingLeft: =24
                 PaddingRight: =24
                 PaddingTop: =
                 Size: =12
@@ -199,6 +199,7 @@ Panel As CanvasComponent:
                 ZIndex: =3
 
             Separation_3 As rectangle:
+                AlignInContainer: =AlignInContainer.Stretch
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Fill: |-
                     =ColorValue("#edebe9")
@@ -209,54 +210,67 @@ Panel As CanvasComponent:
                     =Parent.Height-15
                 ZIndex: =4
 
-            ButtonsGallery_1 As gallery.galleryHorizontal:
-                AccessibleLabel: ="dialog buttons"
-                AlignInContainer: =AlignInContainer.SetByContainer
-                BorderColor: =RGBA(0, 18, 107, 1)
-                DisabledBorderColor: =ButtonsGallery_1.BorderColor
-                DisabledFill: =ButtonsGallery_1.Fill
+            Container1 As groupContainer.horizontalAutoLayoutContainer:
                 FillPortions: =0
-                Height: =40
-                HoverBorderColor: =ButtonsGallery_1.BorderColor
-                HoverFill: =ButtonsGallery_1.Fill
-                Items: =Panel.Buttons
-                LoadingSpinnerColor: =ButtonsGallery_1.BorderColor
-                OnSelect: =Set(isButtonSelected, true);Set(selectedButton, ThisItem);Set(isDialogOpen,false)
-                PressedBorderColor: =ButtonsGallery_1.BorderColor
-                PressedFill: =ButtonsGallery_1.Fill
-                ShowScrollbar: =false
-                TabIndex: =2
-                TemplatePadding: =0
-                TemplateSize: =100
-                Width: =CountRows(ButtonsGallery_1.AllItems) * 150
-                X: =20
-                ZIndex: =5
+                Height: =50
+                LayoutMinHeight: =112
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =24
+                PaddingRight: =16
+                ZIndex: =6
 
-                Button1 As Button:
-                    Alignment: ="center"
-                    BorderColor: =
-                    BorderRadius: =0
-                    BorderStyle: =""
-                    BorderThickness: =0
-                    ButtonType: =ThisItem.ButtonType
-                    DisplayMode: =DisplayMode.Edit
-                    FillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themePrimary))
-                    Height: =32
-                    HideFromAssistiveTechnologies: =false
-                    HoverFillColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.themeDark))
-                    Italic: =false
-                    OnSelect: =Panel.OnButtonSelect()
-                    PaddingBottom: =0
-                    PaddingTop: =0
-                    Strikethrough: =false
-                    Text: =ThisItem.Label
-                    TextColor: =If(ThisItem.ButtonType = Primary, ColorValue(Panel.Theme.palette.white))
-                    Underline: =false
-                    VerticalAlignment: ="middle"
-                    Width: =96
-                    X: =0
-                    Y: =8
-                    ZIndex: =2
+                ButtonsGallery_1 As gallery.galleryHorizontal:
+                    AccessibleLabel: ="dialog buttons"
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    BorderStyle: =BorderStyle.None
+                    DisabledBorderColor: =ButtonsGallery_1.BorderColor
+                    DisabledFill: =ButtonsGallery_1.Fill
+                    FillPortions: =0
+                    Height: =40
+                    HoverBorderColor: =ButtonsGallery_1.BorderColor
+                    HoverFill: =ButtonsGallery_1.Fill
+                    Items: =Filter(Panel.Buttons, Visible)
+                    LoadingSpinnerColor: =ButtonsGallery_1.BorderColor
+                    OnSelect: =Set(isButtonSelected, true);Set(selectedButton, ThisItem);Set(isDialogOpen,false)
+                    PressedBorderColor: =ButtonsGallery_1.BorderColor
+                    PressedFill: =ButtonsGallery_1.Fill
+                    ShowScrollbar: =false
+                    TabIndex: =2
+                    TemplatePadding: =0
+                    TemplateSize: =100 
+                    Visible: =CountRows(ButtonsGallery_1.AllItems)
+                    Width: =CountRows(Filter(ButtonsGallery_1.AllItems, ThisRecord.Visible)) * 100
+                    X: =20
+                    ZIndex: =1
+
+                    Button1 As Button:
+                        Alignment: ="center"
+                        BorderColor: =
+                        BorderRadius: =If(Panel.RoundedButtons, 2, 0)
+                        BorderStyle: =""
+                        BorderThickness: =0
+                        ButtonType: =ThisItem.ButtonType
+                        DisplayMode: =If(ThisItem.Enabled, DisplayMode.Edit, DisplayMode.Disabled)
+                        FillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Panel.Theme.palette.themePrimary), ColorValue(Panel.Theme.palette.white))
+                        Height: =32
+                        HideFromAssistiveTechnologies: =false
+                        HoverFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Panel.Theme.palette.themeDark))
+                        Italic: =false
+                        OnSelect: =Panel.OnButtonSelect()
+                        PaddingBottom: =0
+                        PaddingTop: =0
+                        Strikethrough: =false
+                        Text: =ThisItem.Label
+                        TextColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Panel.Theme.palette.white), ColorValue(Panel.Theme.palette.black))
+                        Underline: =false
+                        VerticalAlignment: ="middle"
+                        Visible: =ThisItem.Visible
+                        Width: =96
+                        X: =0
+                        Y: =8
+                        ZIndex: =2
 
         ContainerRightSpace As groupContainer.manualLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer

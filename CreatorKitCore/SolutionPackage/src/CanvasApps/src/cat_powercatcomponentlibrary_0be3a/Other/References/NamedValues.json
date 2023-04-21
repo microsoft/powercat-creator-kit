@@ -172,7 +172,7 @@
     },
     {
       "Kind": "Page",
-      "Name": "Custom API Maker",
+      "Name": "API Maker",
       "Value": "custompage:cat_customapimaker_ae885"
     },
     {
@@ -212,13 +212,83 @@
     },
     {
       "Kind": "Page",
-      "Name": "API Tester",
-      "Value": "custompage:cat_apitester_60e04"
+      "Name": "Maker Validation Page",
+      "Value": "custompage:cra0f_makervalidationpage_8fc0e"
     },
     {
       "Kind": "Page",
-      "Name": "Maker Validation Page",
-      "Value": "custompage:cra0f_makervalidationpage_8fc0e"
+      "Name": "Search Patterns",
+      "Value": "custompage:cat_searchpatterns_c287f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Overview",
+      "Value": "custompage:cat_overview_1d834"
+    },
+    {
+      "Kind": "Page",
+      "Name": "PowerFxEditor",
+      "Value": "custompage:cat_powerfxeditor_97f0c"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Home1",
+      "Value": "custompage:cat_home_7b17f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Checkbox page",
+      "Value": "custompage:cat_checkboxpage_29c9f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Redirect Traffic App",
+      "Value": "custompage:cat_redirecttrafficapp_9da9c"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Redirect Traffic Stats",
+      "Value": "custompage:powercat_redirecttrafficstats_f4563"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Page1",
+      "Value": "custompage:cra0f_page1_36e98"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Power Actions Page (Virtual Actions Demo)",
+      "Value": "custompage:cat_poweractionspagevirtualactionsdemo_ee1e2"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Filter Patterns",
+      "Value": "custompage:cra0f_filterpatterns_c7916"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Virtual Action Wizard Page",
+      "Value": "custompage:cat_virtualactionwizard_216c4"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Progress",
+      "Value": "custompage:cra0f_progress_bbf3d"
+    },
+    {
+      "Kind": "Page",
+      "Name": "APICaller-Page",
+      "Value": "custompage:cat_apicallerpage_34b46"
+    },
+    {
+      "Kind": "Page",
+      "Name": "PFx",
+      "Value": "custompage:cat_pfx_9a8a7"
+    },
+    {
+      "Kind": "Page",
+      "Name": "breadcrumb-1",
+      "Value": "custompage:cat_breadcrumb1_8954a"
     }
   ]
 }

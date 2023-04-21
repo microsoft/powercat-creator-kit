@@ -4266,7 +4266,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267616740309",
+    "LastModifiedTimestamp": "638107246780214260",
     "Name": "ResizableTextArea_Controlled",
     "Rules": [
       {
@@ -4347,7 +4347,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616740309",
+  "LastModifiedTimestamp": "638107246780214260",
   "Name": "27e6d81eaef84951bd65ebd85e1136a2",
   "OverridableProperties": {},
   "Version": "637865104422457989"

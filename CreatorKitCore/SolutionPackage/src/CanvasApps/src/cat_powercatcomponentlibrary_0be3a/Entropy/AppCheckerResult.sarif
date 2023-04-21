@@ -494,19 +494,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.ButtonsGallery_1.TabIndex"
+                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.Container1.ButtonsGallery_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.ButtonsGallery_1.TabIndex",
+                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.Container1.ButtonsGallery_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Panel",
-                "type": "Panel.PanelRootContainer_1.CenterPanelContainer.ButtonsGallery_1"
+                "type": "Panel.PanelRootContainer_1.CenterPanelContainer.Container1.ButtonsGallery_1"
               }
             }
           ],
@@ -524,19 +524,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.ButtonsGallery_1.Button1.AccessibleLabel"
+                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.Container1.ButtonsGallery_1.Button1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.ButtonsGallery_1.Button1.AccessibleLabel",
+                  "fullyQualifiedName": "Panel.PanelRootContainer_1.CenterPanelContainer.Container1.ButtonsGallery_1.Button1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Panel",
-                "type": "Panel.PanelRootContainer_1.CenterPanelContainer.ButtonsGallery_1.Button1"
+                "type": "Panel.PanelRootContainer_1.CenterPanelContainer.Container1.ButtonsGallery_1.Button1"
               }
             }
           ],
@@ -851,7 +851,7 @@
               }
             }
           ],
-          "version": "1.326"
+          "version": "1.330"
         }
       }
     }

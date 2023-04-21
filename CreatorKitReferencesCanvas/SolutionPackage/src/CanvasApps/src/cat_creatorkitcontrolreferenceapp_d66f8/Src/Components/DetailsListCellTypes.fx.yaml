@@ -276,7 +276,7 @@ DetailsListCellTypes As CanvasComponent:
                 =Table(
                     {
                         ColName: "name",
-                        ColDisplayName: "Account Name",
+                        ColDisplayName: "Account name",
                         ColWidth: 100,
                         ColIsBold:true,
                         ColCellType: "link",
@@ -348,7 +348,7 @@ DetailsListCellTypes As CanvasComponent:
                     },
                      {
                         ColName: "tags",
-                        ColDisplayName: "Tag List",
+                        ColDisplayName: "Tag list",
                         ColWidth: 250,
                         ColFirstMultiValueBold :true,
                         ColMultiValueDelimeter:", "

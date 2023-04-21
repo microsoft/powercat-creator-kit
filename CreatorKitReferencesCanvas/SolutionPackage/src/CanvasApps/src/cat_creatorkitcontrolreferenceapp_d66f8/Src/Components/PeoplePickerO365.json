@@ -2770,7 +2770,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267617025109",
+    "LastModifiedTimestamp": "638107246780474680",
     "Name": "PeoplePickerO365",
     "Rules": [
       {
@@ -2845,7 +2845,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267617025109",
+  "LastModifiedTimestamp": "638107246780474680",
   "Name": "9fcb02d07a624ab2bf9801699a4089fa",
   "OverridableProperties": {},
   "Version": "638023826772642398"

@@ -1,0 +1,17 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_activitypointer_forms",
+      "Namespace": "Activities (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_annotation_forms",
+      "Namespace": "Notes (Forms)",
+      "Values": {
+        "Information": "69e5bd50-3d3e-47ca-aabc-d47bcbe59775",
+        "Note Quick Create Form": "56edcfe7-b4f3-4378-bab5-fc8f40db3af3"
+      }
+    }
+  ]
+}

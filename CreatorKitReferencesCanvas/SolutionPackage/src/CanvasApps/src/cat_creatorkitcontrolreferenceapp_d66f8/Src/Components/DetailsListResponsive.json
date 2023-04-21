@@ -3625,7 +3625,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267616807838",
+    "LastModifiedTimestamp": "638107246780274812",
     "Name": "DetailsListResponsive",
     "Rules": [
       {
@@ -3700,7 +3700,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616807838",
+  "LastModifiedTimestamp": "638107246780274812",
   "Name": "db5b86da8e6c41908e4159e74e42540c",
   "OverridableProperties": {},
   "Version": "637860029700014670"

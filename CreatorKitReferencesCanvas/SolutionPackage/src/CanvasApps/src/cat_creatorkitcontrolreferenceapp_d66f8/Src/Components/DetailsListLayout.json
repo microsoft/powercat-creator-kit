@@ -2390,7 +2390,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "With({\r\n    // If there is a selection column, we remove the width and the padding\r\n    availableWidth:Self.Width,\r\n    padding:32,\r\n    iconWidth:24,\r\n    reviewWidth:100,\r\n    scrollWidth:20\r\n    },\r\n    Table(\r\n        // Main Columns\r\n        {\r\n            ColName: \"iconimage\",\r\n            ColCellType:\"image\",\r\n            ColImageColor:\"blue\",\r\n            ColVerticalAlign: \"center\",\r\n            ColHorizontalAlign: \"center\",\r\n            ColWidth:iconWidth\r\n        },\r\n        {\r\n            ColName: \"heading\",\r\n            ColDisplayName: \"Project Name\",\r\n            ColWidth: availableWidth-iconWidth-padding-reviewWidth-padding-scrollWidth,\r\n            ColIsBold:false,\r\n            ColRowHeader:true,\r\n            ColHideWhenBlank:true,\r\n            ColPaddingTop:0,\r\n            ColVerticalAlign: \"center\",\r\n            ColMultiLine:true\r\n        },\r\n        {\r\n            ColName: \"review\",\r\n            ColCellType:\"link\",\r\n            ColHideWhenBlank:true,\r\n            ColWidth:100,\r\n            ColHorizontalAlign:\"right\"\r\n        },\r\n        // Sub text columns\r\n        {\r\n            ColName: \"name\",\r\n            ColShowAsSubTextOf:\"heading\",\r\n            ColSubTextRow:0,\r\n            ColPaddingLeft:30,\r\n            ColHideWhenBlank:true,\r\n            ColVerticalAlign: \"center\"\r\n        },\r\n        {\r\n            ColName: \"tag\",\r\n            ColShowAsSubTextOf:\"heading\",\r\n            ColCellType:\"tag\",\r\n            ColTagColorColumn: \"TagColor\",\r\n            ColTagBorderColorColumn: \"TagBorderColor\",\r\n            ColSubTextRow:0,\r\n            ColHideWhenBlank:true,\r\n            ColHorizontalAlign:\"center\",\r\n            ColPaddingLeft:16,\r\n            ColPaddingTop:8,\r\n            ColVerticalAlign: \"center\"\r\n        },\r\n        {\r\n            ColName: \"score\",\r\n            ColShowAsSubTextOf:\"review\",\r\n            ColCellType:\"tag\",\r\n            ColHideWhenBlank:true,\r\n            ColHorizontalAlign:\"right\"\r\n        \r\n        }\r\n    )\r\n)",
+            "InvariantScript": "With({\r\n    // If there is a selection column, we remove the width and the padding\r\n    availableWidth:Self.Width,\r\n    padding:32,\r\n    iconWidth:24,\r\n    reviewWidth:100,\r\n    scrollWidth:20\r\n    },\r\n    Table(\r\n        // Main Columns\r\n        {\r\n            ColName: \"iconimage\",\r\n            ColCellType:\"image\",\r\n            ColImageColor:\"blue\",\r\n            ColVerticalAlign: \"center\",\r\n            ColHorizontalAlign: \"center\",\r\n            ColWidth:iconWidth\r\n        },\r\n        {\r\n            ColName: \"heading\",\r\n            ColDisplayName: \"Project name\",\r\n            ColWidth: availableWidth-iconWidth-padding-reviewWidth-padding-scrollWidth,\r\n            ColIsBold:false,\r\n            ColRowHeader:true,\r\n            ColHideWhenBlank:true,\r\n            ColPaddingTop:0,\r\n            ColVerticalAlign: \"center\",\r\n            ColMultiLine:true\r\n        },\r\n        {\r\n            ColName: \"review\",\r\n            ColCellType:\"link\",\r\n            ColHideWhenBlank:true,\r\n            ColWidth:100,\r\n            ColHorizontalAlign:\"right\"\r\n        },\r\n        // Sub text columns\r\n        {\r\n            ColName: \"name\",\r\n            ColShowAsSubTextOf:\"heading\",\r\n            ColSubTextRow:0,\r\n            ColPaddingLeft:30,\r\n            ColHideWhenBlank:true,\r\n            ColVerticalAlign: \"center\"\r\n        },\r\n        {\r\n            ColName: \"tag\",\r\n            ColShowAsSubTextOf:\"heading\",\r\n            ColCellType:\"tag\",\r\n            ColTagColorColumn: \"TagColor\",\r\n            ColTagBorderColorColumn: \"TagBorderColor\",\r\n            ColSubTextRow:0,\r\n            ColHideWhenBlank:true,\r\n            ColHorizontalAlign:\"center\",\r\n            ColPaddingLeft:16,\r\n            ColPaddingTop:8,\r\n            ColVerticalAlign: \"center\"\r\n        },\r\n        {\r\n            ColName: \"score\",\r\n            ColShowAsSubTextOf:\"review\",\r\n            ColCellType:\"tag\",\r\n            ColHideWhenBlank:true,\r\n            ColHorizontalAlign:\"right\"\r\n        \r\n        }\r\n    )\r\n)",
             "Property": "columns_Items",
             "RuleProviderType": "Unknown"
           },
@@ -2575,7 +2575,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638058267616790522",
+    "LastModifiedTimestamp": "638107270901984430",
     "Name": "DetailsListLayout",
     "Rules": [
       {
@@ -2656,7 +2656,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638058267616790522",
+  "LastModifiedTimestamp": "638107270901984430",
   "Name": "1c4b726e080642889cf44624997893e2",
   "OverridableProperties": {},
   "Version": "637867683336012137"

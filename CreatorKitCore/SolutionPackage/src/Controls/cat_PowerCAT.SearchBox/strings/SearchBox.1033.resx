@@ -118,7 +118,7 @@
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
     <data name="SearchBox" xml:space="preserve">
-        <value>Fluent SearchBox (1.0.21) Preview</value>
+        <value>Fluent SearchBox (1.0.22) Preview</value>
     </data>
     <data name="AccessibilityLabel" xml:space="preserve">
         <value>Accessibility label</value>
@@ -153,5 +153,14 @@
     </data>
     <data name="SearchBox_SearchText_Desc" xml:space="preserve">
         <value>Represents the default as well as the current value of search box</value>
+    </data>
+    <data name="SearchBox_DefaultValue" xml:space="preserve">
+        <value>Default value</value>
+    </data>
+    <data name="SearchBox_DefaultValue_Desc" xml:space="preserve">
+        <value>Default value to set for the search box. This can be used only once</value>
+    </data>
+    <data name="BorderColor" xml:space="preserve">
+        <value>Border color</value>
     </data>
 </root>

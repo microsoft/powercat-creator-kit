@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.23031.178" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.23032.190" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesMDA</UniqueName>
     <LocalizedNames>
@@ -211,7 +211,7 @@
         <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.2350)" />
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.2380)" />
         <Dependent type="62" schemaName="cat_CreatorKitReferenceApp" />
       </MissingDependency>
       <MissingDependency>

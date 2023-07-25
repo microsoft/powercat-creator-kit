@@ -13,6 +13,21 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
+  "Fluent Elevation (1.0.8)": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Elevation",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.Elevation",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Fluent Elevation (1.0.8)",
+    "Version": "1.0.8"
+  },
   "gallery": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,

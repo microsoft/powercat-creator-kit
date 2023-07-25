@@ -13,6 +13,21 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
+  "Fluent Facepile (%VERSION%)": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Facepile",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.Facepile",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Fluent Facepile (%VERSION%)",
+    "Version": "0.0.1"
+  },
   "groupContainer": {
     "FirstParty": true,
     "Id": "http://microsoft.com/appmagic/groupContainer",

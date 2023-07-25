@@ -11285,10 +11285,10 @@ ExpandMenu As CanvasComponent:
     IsNavigationEnabled: =true
     Items: |-
         =Table(
-        {Icon: "PowerApps", Label: "Power Apps", Screen:App.ActiveScreen}, 
-        {Icon: "PowerBILogo", Label: "Power BI", Screen:App.ActiveScreen}, 
-        {Icon: "PowerAutomateLogo", Label: "Power Automate", Screen:App.ActiveScreen}, 
-        {Icon: "Dataverse", Label: "Dataverse", Screen:App.ActiveScreen}
+        {Icon: "PowerApps", Label: "Power Apps", Screen:App.ActiveScreen, Tooltip:"Power Apps Tooltip"}, 
+        {Icon: "PowerBILogo", Label: "Power BI", Screen:App.ActiveScreen, Tooltip:"Power BI Tooltip"}, 
+        {Icon: "PowerAutomateLogo", Label: "Power Automate", Screen:App.ActiveScreen, Tooltip:"Power Automate Tooltip"}, 
+        {Icon: "Dataverse", Label: "Dataverse", Screen:App.ActiveScreen, Tooltip:"Dataverse Tooltip"}
         )
     OnButtonSelect: =true
     OnExpandSelect: =true
@@ -11329,7 +11329,7 @@ ExpandMenu As CanvasComponent:
     glExpandMenu As gallery.galleryVertical:
         AccessibleLabel: ="Menu"
         BorderColor: =
-        Fill: =ColorValue(ExpandMenu.Theme.palette.white)
+        Fill: =Coalesce(ExpandMenu.Fill,ColorValue(ExpandMenu.Theme.palette.white))
         FocusedBorderThickness: =0
         Height: =ExpandMenu.Height
         Items: =ExpandMenu.Items
@@ -11339,7 +11339,7 @@ ExpandMenu As CanvasComponent:
         TemplateFill: =/* If(ThisItem.Screen = App.ActiveScreen , ColorValue(ExpandMenu.Theme.palette.neutralLight), Transparent) */
         TemplatePadding: =0
         TemplateSize: =40
-        Width: =221
+        Width: =Parent.Width
         Y: =45
         ZIndex: =2
 
@@ -11349,7 +11349,7 @@ ExpandMenu As CanvasComponent:
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(0,0,0,0)
             Fill: =RGBA(0,0,0,0)
-            Font: ='Segoe UI'
+            Font: =Font.'Segoe UI'
             HoverFill: =ColorValue(ExpandMenu.Theme.palette.neutralLight)
             OnSelect: =Select(Parent)
             PaddingBottom: =0
@@ -11358,6 +11358,7 @@ ExpandMenu As CanvasComponent:
             PaddingTop: =0
             Size: =11
             Text: =ThisItem.Label
+            Tooltip: =ThisItem.Tooltip
             Width: =Parent.Width
             ZIndex: =1
 
@@ -11397,11 +11398,35 @@ ExpandMenu As CanvasComponent:
             HoverFill: =ColorFade(rectHighlight.Fill, 20%)
             OnSelect: =Select(Parent)
             PressedFill: =ColorFade(rectHighlight.Fill, -20%)
-            Visible: =ThisItem.Screen = App.ActiveScreen
+            Visible: =false //ThisItem.Screen = App.ActiveScreen
             Width: =3
             X: =5
             Y: =10
             ZIndex: =3
+
+        Image1 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =ColorValue(ExpandMenu.Theme.palette.themePrimary)
+            FocusedBorderThickness: =4
+            Height: =Parent.TemplateHeight - Self.Y*2
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =
+            OnSelect: =Select(Parent)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Visible: =ThisItem.Screen = App.ActiveScreen
+            Width: =2
+            X: =5
+            Y: =8
+            ZIndex: =4
 
     imgExpandButton As image:
         AccessibleLabel: ="Expand Collapase button"
@@ -11415,14 +11440,11 @@ ExpandMenu As CanvasComponent:
         HoverFill: =ColorValue(ExpandMenu.Theme.palette.neutralLight)
         Image: |-
             ="data:image/svg+xml," & 
-             EncodeUrl(
-                "<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
+             EncodeUrl("<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='-10 0 2068 2048'>
               <g transform='matrix(1 0 0 -1 0 2048),rotate(0,1034,1024)'>
                <path fill='" & ExpandMenu.Theme.palette.neutralPrimary & "'
             d='M2048 1408h-2048v128h2048v-128v0zM2048 384h-2048v128h2048v-128v0zM2048 897h-2048v127h2048v-127v0z' />
-              </g>
-            
-            </svg>"
+              </g></svg>"
             )
         OnSelect: =Set(IsOpen,!IsOpen);ExpandMenu.OnExpandSelect()
         PaddingBottom: =14

@@ -6,10 +6,10 @@
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
         LayoutOverflowY: =LayoutOverflow.Scroll
-        Width: =Parent.Width
+        Width: =App.Width
         ZIndex: =4
 
-        "ThemeDesigner As 'Fluent Theme Designer (0.0.20)'":
+        "ThemeDesigner As 'Fluent Theme Designer (1.0.22)'":
             DisplayMode: =DisplayMode.Edit
             Height: =Parent.Height
             LayoutMinHeight: =200
@@ -37,10 +37,10 @@
 
     Panel_1 As Panel:
         Buttons: |-
-            =Table({Label: "Close", ButtonType:'''Microsoft.CoreControls.Button.ButtonType'''.Primary})
+            =Table({Label: "Copy", ButtonType:'Button.ButtonType'.Primary},{Label: "Close", ButtonType:'Button.ButtonType'.Standard})
         Fill: =Panel_1.OverlayColor
         OnButtonSelect: |-
-            =UpdateContext({showHidePanel:false})
+            =Switch(Self.SelectedButton.Label, "Copy", Copy(varAppThemeJSON);Notify("Copied to clipboard");, UpdateContext({showHidePanel:false}))
         OnCloseSelect: |-
             =UpdateContext({showHidePanel:false})
         Subtitle: =

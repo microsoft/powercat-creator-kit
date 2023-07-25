@@ -1,7 +1,7 @@
 Dialog As CanvasComponent:
     BorderRadius: =0
     Buttons: |-
-        =Table({Label: "Cancel", ButtonType:'Microsoft.CoreControls.Button.ButtonType'.Standard, HasBorder: false }, {Label: "Save", ButtonType:'Microsoft.CoreControls.Button.ButtonType'.Primary, HasBorder: false })
+        =Table({Label: "Cancel", ButtonType:'Button.ButtonType'.Standard, HasBorder: false }, {Label: "Save", ButtonType:'Button.ButtonType'.Primary, HasBorder: false })
     ContentHeight: =DialogContentContainer.Height
     ContentWidth: =Dialog.DialogWidth
     ContentX: = Dialog.Width/2-Dialog.DialogWidth/2
@@ -205,26 +205,26 @@ Dialog As CanvasComponent:
 
                     Button1_1 As Button:
                         Alignment: ="center"
-                        BorderColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.neutralSecondary))
+                        BorderColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.neutralSecondary))
                         BorderRadius: =Dialog.BorderRadius
-                        BorderStyle: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, BorderStyle.None,BorderStyle.Solid)
+                        BorderStyle: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, BorderStyle.None,BorderStyle.Solid)
                         BorderThickness: =If(ThisItem.HasBorder, 1, 0)
                         ButtonType: =ThisItem.ButtonType
-                        DisabledBorderColor: =If(ThisItem.ButtonType = 'Microsoft.CoreControls.Button.ButtonType'.Standard, ColorValue(Dialog.Theme.palette.neutralLighter))
-                        DisabledFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.neutralLight), ColorValue(Dialog.Theme.palette.neutralLight))
+                        DisabledBorderColor: =If(ThisItem.ButtonType = 'Button.ButtonType'.Standard, ColorValue(Dialog.Theme.palette.neutralLighter))
+                        DisabledFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.neutralLight), ColorValue(Dialog.Theme.palette.neutralLight))
                         DisplayMode: =DisplayMode.Edit
-                        FillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.white))
+                        FillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.white))
                         Height: =32
                         HideFromAssistiveTechnologies: =false
-                        HoverFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDarkAlt), ColorValue(Dialog.Theme.palette.neutralQuaternary))
+                        HoverFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDarkAlt), ColorValue(Dialog.Theme.palette.neutralQuaternary))
                         Italic: =false
                         OnSelect: =Dialog.OnButtonSelect()
                         PaddingBottom: =0
                         PaddingTop: =0
-                        PressedFillColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDark), ColorValue(Dialog.Theme.palette.neutralTertiary))
+                        PressedFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDark), ColorValue(Dialog.Theme.palette.neutralTertiary))
                         Strikethrough: =false
                         Text: =ThisItem.Label
-                        TextColor: =If(ThisItem.ButtonType = 'PowerApps.CoreControls.Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.white), ColorValue(Dialog.Theme.palette.black))
+                        TextColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.white), ColorValue(Dialog.Theme.palette.black))
                         Underline: =false
                         VerticalAlignment: ="middle"
                         Width: =96

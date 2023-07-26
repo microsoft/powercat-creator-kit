@@ -337,7 +337,7 @@
                         CardHeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
                             FillPortions: =0
-                            Height: =40
+                            Height: =45
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =Parent.Width
@@ -357,7 +357,6 @@
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 LayoutMinWidth: =96
-                                Size: =12
                                 Text: ="Responsive design"
                                 Wrap: =false
                                 ZIndex: =1
@@ -480,7 +479,7 @@
                         CardHeaderContainer_3 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
                             FillPortions: =0
-                            Height: =40
+                            Height: =45
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =Parent.Width
@@ -500,7 +499,6 @@
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 LayoutMinWidth: =96
-                                Size: =12
                                 Text: ="Breakpoints and screen size"
                                 Wrap: =false
                                 ZIndex: =1
@@ -632,7 +630,7 @@
 
                             CardHeaderContainer_4 As groupContainer.horizontalAutoLayoutContainer:
                                 FillPortions: =0
-                                Height: =40
+                                Height: =45
                                 LayoutAlignItems: =LayoutAlignItems.Center
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
@@ -672,24 +670,9 @@
                                     Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
                                     LayoutMinWidth: =96
-                                    Size: =12
                                     Text: ="Critical thinking"
                                     Wrap: =false
                                     ZIndex: =2
-
-                                "CommandBar2_5 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =Parent.Height
-                                    Items: |-
-                                        =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
-                                    LayoutMinHeight: =200
-                                    LayoutMinWidth: =200
-                                    Theme: =AppThemeJson
-                                    Visible: =false
-                                    Width: =40
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =3
 
                             Rectangle1_6 As rectangle:
                                 BorderColor: =RGBA(0, 0, 0, 0)
@@ -759,7 +742,7 @@
 
                             CardHeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
                                 FillPortions: =0
-                                Height: =40
+                                Height: =45
                                 LayoutAlignItems: =LayoutAlignItems.Center
                                 LayoutMinHeight: =100
                                 LayoutMinWidth: =250
@@ -799,34 +782,9 @@
                                     Font: =Font.'Segoe UI'
                                     FontWeight: =FontWeight.Semibold
                                     LayoutMinWidth: =96
-                                    Size: =12
                                     Text: ="Tip"
                                     Wrap: =false
                                     ZIndex: =3
-
-                                "CommandBar2_4 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
-                                    DisplayMode: =DisplayMode.Edit
-                                    Height: =Parent.Height
-                                    Items: |-
-                                        =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
-                                    LayoutMinHeight: =200
-                                    LayoutMinWidth: =200
-                                    Theme: =AppThemeJson
-                                    Visible: =false
-                                    Width: =40
-                                    X: =0
-                                    Y: =0
-                                    ZIndex: =4
-
-                            Rectangle1_5 As rectangle:
-                                BorderColor: =RGBA(0, 0, 0, 0)
-                                BorderStyle: =BorderStyle.None
-                                Fill: =RGBA(240,240,240,1)
-                                FocusedBorderThickness: =4
-                                Height: =1
-                                Visible: =false
-                                Width: =Parent.Width
-                                ZIndex: =2
 
                             CardContent_2 As groupContainer.verticalAutoLayoutContainer:
                                 FillPortions: =0
@@ -912,7 +870,7 @@
                         CardHeaderContainer_5 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
                             FillPortions: =0
-                            Height: =40
+                            Height: =45
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =Parent.Width
@@ -932,7 +890,6 @@
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 LayoutMinWidth: =96
-                                Size: =12
                                 Text: ="Reposition"
                                 Wrap: =false
                                 ZIndex: =1
@@ -1068,7 +1025,7 @@
                         CardHeaderContainer_6 As groupContainer.horizontalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.Start
                             FillPortions: =0
-                            Height: =40
+                            Height: =45
                             LayoutAlignItems: =LayoutAlignItems.Center
                             LayoutMinHeight: =100
                             LayoutMinWidth: =Parent.Width
@@ -1088,7 +1045,6 @@
                                 Font: =Font.'Segoe UI'
                                 FontWeight: =FontWeight.Semibold
                                 LayoutMinWidth: =96
-                                Size: =12
                                 Text: ="Replace"
                                 Wrap: =false
                                 ZIndex: =1

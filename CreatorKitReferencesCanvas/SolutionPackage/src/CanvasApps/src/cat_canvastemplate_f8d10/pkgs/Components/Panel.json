@@ -81,7 +81,7 @@
         "Name": "htmlShadow_4",
         "Parent": "Panel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 219,
+        "PublishOrderIndex": 216,
         "Rules": [
           {
             "Category": "Data",
@@ -324,7 +324,7 @@
             "Name": "ContainerLeftSpace",
             "Parent": "PanelRootContainer_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 221,
+            "PublishOrderIndex": 218,
             "Rules": [
               {
                 "Category": "Design",
@@ -706,7 +706,7 @@
                     "Name": "Label3_2",
                     "Parent": "PanelHeaderContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 224,
+                    "PublishOrderIndex": 221,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1153,7 +1153,7 @@
                     "Name": "Icon2_2",
                     "Parent": "PanelHeaderContainer",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 225,
+                    "PublishOrderIndex": 222,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -1484,7 +1484,7 @@
                 "Name": "PanelHeaderContainer",
                 "Parent": "CenterPanelContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 223,
+                "PublishOrderIndex": 220,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -1873,7 +1873,7 @@
                 "Name": "Label_PanelContent",
                 "Parent": "CenterPanelContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 226,
+                "PublishOrderIndex": 223,
                 "Rules": [
                   {
                     "Category": "Data",
@@ -2256,7 +2256,7 @@
                 "Name": "PanelContentContainer",
                 "Parent": "CenterPanelContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 227,
+                "PublishOrderIndex": 224,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2544,7 +2544,7 @@
                 "Name": "Separation_3",
                 "Parent": "CenterPanelContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 228,
+                "PublishOrderIndex": 225,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -2685,7 +2685,7 @@
                         "Name": "galleryTemplate2_2",
                         "Parent": "ButtonsGallery_1",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 231,
+                        "PublishOrderIndex": 228,
                         "Rules": [
                           {
                             "Category": "Design",
@@ -2838,7 +2838,7 @@
                         "Name": "Button1_2",
                         "Parent": "ButtonsGallery_1",
                         "PersistMetaDataIDKey": false,
-                        "PublishOrderIndex": 232,
+                        "PublishOrderIndex": 229,
                         "Rules": [
                           {
                             "Category": "Data",
@@ -3189,7 +3189,7 @@
                     "Name": "ButtonsGallery_1",
                     "Parent": "Container1",
                     "PersistMetaDataIDKey": false,
-                    "PublishOrderIndex": 230,
+                    "PublishOrderIndex": 227,
                     "Rules": [
                       {
                         "Category": "Data",
@@ -3512,7 +3512,7 @@
                 "Name": "Container1",
                 "Parent": "CenterPanelContainer",
                 "PersistMetaDataIDKey": false,
-                "PublishOrderIndex": 229,
+                "PublishOrderIndex": 226,
                 "Rules": [
                   {
                     "Category": "Design",
@@ -3844,7 +3844,7 @@
             "Name": "CenterPanelContainer",
             "Parent": "PanelRootContainer_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 222,
+            "PublishOrderIndex": 219,
             "Rules": [
               {
                 "Category": "Design",
@@ -4150,7 +4150,7 @@
             "Name": "ContainerRightSpace",
             "Parent": "PanelRootContainer_1",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 233,
+            "PublishOrderIndex": 230,
             "Rules": [
               {
                 "Category": "Design",
@@ -4397,7 +4397,7 @@
         "Name": "PanelRootContainer_1",
         "Parent": "Panel",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 220,
+        "PublishOrderIndex": 217,
         "Rules": [
           {
             "Category": "Design",
@@ -4711,7 +4711,7 @@
       },
       "RoundedButtons"
     ],
-    "LastModifiedTimestamp": "638258529160321689",
+    "LastModifiedTimestamp": "638258942632509946",
     "Name": "Panel",
     "Rules": [
       {
@@ -5026,7 +5026,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638258529160321689",
+  "LastModifiedTimestamp": "638258942632509946",
   "Name": "dd4034267d524d12b7317b86298beea2",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

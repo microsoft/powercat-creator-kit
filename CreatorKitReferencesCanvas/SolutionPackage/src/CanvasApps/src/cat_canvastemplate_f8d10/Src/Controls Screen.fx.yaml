@@ -12390,8 +12390,8 @@
         SelectedKey: =""
         Theme: =AppThemeJson
         Width: =299
-        X: =1416
-        Y: =105
+        X: =1426
+        Y: =103
         ZIndex: =29
 
     "CommandBar1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":

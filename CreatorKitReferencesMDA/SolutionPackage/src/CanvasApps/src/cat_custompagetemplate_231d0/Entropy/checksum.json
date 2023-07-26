@@ -8,8 +8,8 @@
     "Components\\4.json": "C8_QQyjRmEwd6BpggdVgJfnkv0emscJP6J7htaTUG++vTY=",
     "ComponentsMetadata.json": "C8_9SQGDX0xUBwCMfrH+N/HCc1PdXJ21JaSXh20vaTJ+ac=",
     "Controls\\1.json": "C8_+Sw65Swf81otDHxioCaPjo0KY67YjZQ+9shTTfA2OWw=",
-    "Controls\\7.json": "C8_9dkPJeuMq8B+gNH9fKpdsIkksBsu7rli7woimnL+NIk=",
-    "Header.json": "C8_KrG42qmmISeFDYABtJJgwKBd7zfJgeAoFtR68KjvwCY=",
+    "Controls\\7.json": "C8_3qyG3Obua8xSQ7RTuyYFs5pEGiP+PcOmsPCFjwN0fB8=",
+    "Header.json": "C8_Bf6AHNkxBcUwaYV0mxGHNFvX665LEgfbILFdQm2fBaw=",
     "Properties.json": "C8_sD1qAxOXgjS5urC0D8Sm+WjoxFquYgMD5I+TTqjuzhg=",
     "References\\DataSources.json": "C8_wgnlP9xU0yXW4Pru9sXGeoLFk/z91ol0O15+xRLSQ5o=",
     "References\\NamedValues.json": "C8_4MSY9uPr/VtUAsaJ1bn40ETvOW1BonNhCUYRQ7NoFxc=",
@@ -36,14 +36,14 @@
     "Resources\\Controls\\strings\\PowerCAT.Shimmer.Shimmer.1033.resx": "C8_ZZ7AKoC2TVztyRWbg2lHlv73aw2vUVPr+RLGegPrH+k=",
     "Resources\\PublishInfo.json": "C8_ePwrkAHarfJZCttv62ByAinWy4hyLWtl+jfTw+okiRA="
   },
-  "ClientStampedChecksum": "C8_vu2Rwhay3h8rln4FG99o6c2JFK38qdyInyyit4Tdz5U=",
+  "ClientStampedChecksum": "C8_U8mQLy+Rx5AOZQoi9GjEvfqLkhX3KdefDk04Bn+HhJY=",
   "ServerPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_Msl8zBdFQb3OGjp1zllLNFcj3i5+6MKs1ls8i2ocleU=",
     "Components\\4.json": "C8_QQyjRmEwd6BpggdVgJfnkv0emscJP6J7htaTUG++vTY=",
     "ComponentsMetadata.json": "C8_9SQGDX0xUBwCMfrH+N/HCc1PdXJ21JaSXh20vaTJ+ac=",
     "Controls\\1.json": "C8_+Sw65Swf81otDHxioCaPjo0KY67YjZQ+9shTTfA2OWw=",
-    "Controls\\7.json": "C8_9dkPJeuMq8B+gNH9fKpdsIkksBsu7rli7woimnL+NIk=",
-    "Header.json": "C8_KrG42qmmISeFDYABtJJgwKBd7zfJgeAoFtR68KjvwCY=",
+    "Controls\\7.json": "C8_3qyG3Obua8xSQ7RTuyYFs5pEGiP+PcOmsPCFjwN0fB8=",
+    "Header.json": "C8_Bf6AHNkxBcUwaYV0mxGHNFvX665LEgfbILFdQm2fBaw=",
     "Properties.json": "C8_sD1qAxOXgjS5urC0D8Sm+WjoxFquYgMD5I+TTqjuzhg=",
     "References\\DataSources.json": "C8_wgnlP9xU0yXW4Pru9sXGeoLFk/z91ol0O15+xRLSQ5o=",
     "References\\NamedValues.json": "C8_4MSY9uPr/VtUAsaJ1bn40ETvOW1BonNhCUYRQ7NoFxc=",
@@ -70,5 +70,5 @@
     "Resources\\Controls\\strings\\PowerCAT.Shimmer.Shimmer.1033.resx": "C8_ZZ7AKoC2TVztyRWbg2lHlv73aw2vUVPr+RLGegPrH+k=",
     "Resources\\PublishInfo.json": "C8_ePwrkAHarfJZCttv62ByAinWy4hyLWtl+jfTw+okiRA="
   },
-  "ServerStampedChecksum": "C8_vu2Rwhay3h8rln4FG99o6c2JFK38qdyInyyit4Tdz5U="
+  "ServerStampedChecksum": "C8_U8mQLy+Rx5AOZQoi9GjEvfqLkhX3KdefDk04Bn+HhJY="
 }

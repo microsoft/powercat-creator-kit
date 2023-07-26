@@ -55,9 +55,9 @@
                             ItemDisplayName: "Refresh"
                         },
                         {
-                            ItemKey: "Help",
-                            ItemIconName: "Help",
-                            ItemDisplayName: "Help"
+                            ItemKey: "Info",
+                            ItemIconName: "Info",
+                            ItemDisplayName: "Learn more"
                         }
                     )
                 LayoutMinHeight: =200

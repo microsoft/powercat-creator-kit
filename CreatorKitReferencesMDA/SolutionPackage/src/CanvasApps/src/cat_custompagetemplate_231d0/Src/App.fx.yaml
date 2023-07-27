@@ -1,6 +1,17 @@
 App As appinfo:
     BackEnabled: =false
-    OnStart: |
+    Formulas: |
+        =// DetailsList paging
+        // Configure:
+        PageSize=10;
+        Table=Accounts;
+        SearchItems = Search(Table,SearchBox1.SearchText, "name");
+        
+        // Static:
+        Total=CountRows(SearchItems);
+        NumPages= RoundUp(CountRows(SearchItems) / PageSize, 0);
+        Pages= ForAll(Sequence(NumPages),{ItemKey:Text(ThisRecord.Value),ItemDisplayName:Text(ThisRecord.Value)});
+    OnStart: |+
         =Set(AppTheme, {
         	palette: {
         		themePrimary: "#0078d4",
@@ -30,4 +41,12 @@ App As appinfo:
         
         
         Set(AppThemeJson, JSON(AppTheme,JSONFormat.IndentFour));
+        
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
 

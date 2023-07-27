@@ -289,6 +289,26 @@
       "Kind": "Page",
       "Name": "breadcrumb-1",
       "Value": "custompage:cat_breadcrumb1_8954a"
+    },
+    {
+      "Kind": "Page",
+      "Name": "PowerfxEditorPage",
+      "Value": "custompage:cat_powerfxeditorpage_04550"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Dataverse Actions Page",
+      "Value": "custompage:cat_dataverseactiondetailspage_eec36"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Overview_202304240817",
+      "Value": "custompage:cat_overview_3dbf5"
+    },
+    {
+      "Kind": "Page",
+      "Name": "OCV",
+      "Value": "custompage:cat_ocv_f2b08"
     }
   ]
 }

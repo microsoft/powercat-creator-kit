@@ -13,6 +13,36 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
+  "Button": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/powercontrol/Microsoft_CoreControls_Button",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "Microsoft_CoreControls_Button",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Button",
+    "Version": "1.5.2"
+  },
+  "Fluent Theme Designer (1.0.22)": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.ThemeDesigner",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.ThemeDesigner",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Fluent Theme Designer (1.0.22)",
+    "Version": "1.0.22"
+  },
   "gallery": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -25,7 +55,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "gallery",
     "OverridableProperties": {},
-    "Version": "2.13.1"
+    "Version": "2.13.2"
   },
   "galleryTemplate": {
     "CustomGroupControlTemplateName": "",
@@ -53,7 +83,22 @@
     "LastModifiedTimestamp": "0",
     "Name": "groupContainer",
     "OverridableProperties": {},
-    "Version": "1.1.0"
+    "Version": "1.3.0"
+  },
+  "Host": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "HostType": "Default",
+    "Id": "http://microsoft.com/appmagic/hostcontrol",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "hostControl",
+    "OverridableProperties": {},
+    "Version": "1.5.4"
   },
   "htmlViewer": {
     "CustomGroupControlTemplateName": "",
@@ -95,7 +140,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "label",
     "OverridableProperties": {},
-    "Version": "2.5.0"
+    "Version": "2.5.1"
   },
   "rectangle": {
     "CustomGroupControlTemplateName": "",

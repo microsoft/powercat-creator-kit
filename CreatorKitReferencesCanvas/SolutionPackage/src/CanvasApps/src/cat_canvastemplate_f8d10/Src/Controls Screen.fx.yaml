@@ -233,29 +233,350 @@
             )
         );
 
-    SearchBox_1 As SearchBox:
-        X: =1580
-        Y: =29
+    Container3 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =453
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =32
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =386
+        X: =1498
+        Y: =591
         ZIndex: =1
 
+        Label1_11 As Label:
+            Color: =ColorValue(AppTheme.palette.neutralPrimary)
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =12
+            FontWeight: =FontWeight.Semibold
+            Height: =32
+            LayoutMinHeight: =32
+            LayoutMinWidth: =320
+            Text: ="Custom form"
+            TextRole: ='Label.TextRole'.Heading1
+            Width: =150
+            X: =98
+            Y: =73
+            ZIndex: =1
+
+        FieldContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =76
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =364
+            X: =1501
+            Y: =64
+            ZIndex: =2
+
+            FieldHeaderContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =32
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =4
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =262
+                X: =344
+                Y: =70
+                ZIndex: =1
+
+                "AutoWidthLabel1_2 As 'Auto Width Label (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =AppTheme.palette.black
+                    FontWeight: ="600"
+                    Height: =20
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =200
+                    Text: ="Date input"
+                    Width: =Self.AutoWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                "AutoWidthLabel1_3 As 'Auto Width Label (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: |-
+                        ="#ff0000"
+                    FontWeight: =FontWeight.Bold
+                    Height: =20
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =200
+                    Text: ="*"
+                    Width: =Self.AutoWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                "btnAddTaskHeader_4 As 'Fluent Icon (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =20
+                    HoverFillColor: =
+                    IconName: ="info"
+                    IconSize: =12
+                    IconType: ='PowerCAT.Icon.IconType'.IconButon
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: =Notify("Button Clicked")
+                    Text: ="Add Task"
+                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                    Theme: =AppThemeJson
+                    Tooltip: ="Update the tooltip to add helpful information for your users"
+                    Visible: =true
+                    Width: =20
+                    X: =1022
+                    Y: =555
+                    ZIndex: =3
+
+            "DatePicker1_1 As 'Date picker'":
+                DisplayMode: =DisplayMode.Edit
+                FillColor: =ColorValue(AppTheme.palette.white)
+                Height: =32
+                IconFill: =ColorValue(AppTheme.palette.themePrimary)
+                LayoutMinHeight: =32
+                LayoutMinWidth: =210
+                TextColor: =
+                Width: =320
+                X: =98
+                Y: =36
+                ZIndex: =2
+
+        FieldContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =75
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =364
+            X: =1501
+            Y: =162
+            ZIndex: =3
+
+            FieldHeaderContainer_5 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =32
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =4
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =262
+                X: =344
+                Y: =70
+                ZIndex: =1
+
+                "AutoWidthLabel1_4 As 'Auto Width Label (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =AppTheme.palette.black
+                    FontWeight: ="600"
+                    Height: =20
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =200
+                    Text: ="Text input"
+                    Width: =Self.AutoWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                "AutoWidthLabel1_5 As 'Auto Width Label (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: |-
+                        ="#ff0000"
+                    FontWeight: =FontWeight.Bold
+                    Height: =20
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =200
+                    Text: ="*"
+                    Width: =Self.AutoWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                "btnAddTaskHeader_5 As 'Fluent Icon (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =20
+                    HoverFillColor: =
+                    IconName: ="info"
+                    IconSize: =12
+                    IconType: ='PowerCAT.Icon.IconType'.IconButon
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: =Notify("Button Clicked")
+                    Text: ="Add Task"
+                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                    Theme: =AppThemeJson
+                    Tooltip: ="Update the tooltip to add helpful information for your users"
+                    Visible: =true
+                    Width: =20
+                    X: =1022
+                    Y: =555
+                    ZIndex: =3
+
+            "TextBox1_1 As 'Text box'":
+                ColorBackground: =ColorValue(AppTheme.palette.white)
+                ColorText: =ColorValue(AppTheme.palette.neutralPrimary)
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =320
+                X: =98
+                Y: =212
+                ZIndex: =2
+
+        FieldContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =70
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =364
+            X: =1501
+            Y: =257
+            ZIndex: =4
+
+            FieldHeaderContainer_7 As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =0
+                Height: =32
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =4
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =262
+                X: =344
+                Y: =70
+                ZIndex: =1
+
+                "AutoWidthLabel1_6 As 'Auto Width Label (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =AppTheme.palette.black
+                    FontWeight: ="600"
+                    Height: =20
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =200
+                    Text: ="Persona input"
+                    Width: =Self.AutoWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                "AutoWidthLabel1_7 As 'Auto Width Label (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: |-
+                        ="#ff0000"
+                    FontWeight: =FontWeight.Bold
+                    Height: =20
+                    LayoutMinHeight: =20
+                    LayoutMinWidth: =200
+                    Text: ="*"
+                    Width: =Self.AutoWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                "btnAddTaskHeader_6 As 'Fluent Icon (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =20
+                    HoverFillColor: =
+                    IconName: ="info"
+                    IconSize: =12
+                    IconType: ='PowerCAT.Icon.IconType'.IconButon
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: =Notify("Button Clicked")
+                    Text: ="Add Task"
+                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                    Theme: =AppThemeJson
+                    Tooltip: ="Update the tooltip to add helpful information for your users"
+                    Visible: =true
+                    Width: =20
+                    X: =1022
+                    Y: =555
+                    ZIndex: =3
+
+            "PeoplePicker1_1 As 'Fluent PeoplePicker (1.0.22) Preview'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =30
+                Items: =First(PreSelectedUserCollection)
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                MaxPeople: =1
+                OnSearch: |-
+                    =ClearCollect(
+                        UserCollection,
+                        AddColumns(
+                            Office365Users.SearchUser(
+                                {
+                                    searchTerm: Self.SearchText,
+                                    top: 500
+                                }
+                            ),
+                            "ImageURL",
+                            Substitute(
+                                JSON(
+                                    Office365Users.UserPhotoV2(Id),
+                                    JSONFormat.IncludeBinaryData
+                                ),
+                                """",
+                                ""
+                            ),
+                    		"Presence",
+                    		"away"
+                        )
+                    )
+                SuggestionImgUrl: ="ImageURL"
+                SuggestionKey: ="Mail"
+                SuggestionName: ="DisplayName"
+                SuggestionRole: ="JobTitle"
+                Suggestions_Items: =UserCollection
+                Theme: =AppThemeJson
+                Width: =320
+                X: =98
+                Y: =495
+                ZIndex: =2
+
     Button1 As Button:
-        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        BorderRadius: =2
+        ButtonType: ='Button.ButtonType'.Primary
         DisplayMode: =DisplayMode.Edit
         FillColor: =ColorValue(AppTheme.palette.themePrimary)
+        FontWeight: =FontWeight.Semibold
         Height: =32
+        Text: ="Primary"
         TextColor: =ColorValue(AppTheme.palette.white)
         Width: =96
-        X: =42
+        X: =98
         Y: =115
         ZIndex: =2
 
     "DatePicker1 As 'Date picker'":
         DisplayMode: =DisplayMode.Edit
+        FillColor: =ColorValue(AppTheme.palette.white)
         Height: =32
-        IconFill: =RGBA(246, 88, 16, 1)
-        Width: =210
-        X: =42
-        Y: =154
+        IconFill: =ColorValue(AppTheme.palette.themePrimary)
+        TextColor: =
+        Width: =320
+        X: =98
+        Y: =168
         ZIndex: =3
 
     "TextBox1 As 'Text box'":
@@ -263,69 +584,69 @@
         ColorText: =ColorValue(AppTheme.palette.neutralPrimary)
         DisplayMode: =DisplayMode.Edit
         Height: =32
-        Width: =210
-        X: =42
-        Y: =204
+        Width: =320
+        X: =98
+        Y: =212
         ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (1.0.18)'":
+    "btnAddTaskHeader As 'Fluent Icon (1.0.22)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
         IconName: ="Add"
-        IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+        IconType: ='PowerCAT.Icon.IconType'.ActionButton
         OnChange: =Notify("Button Clicked")
         Text: ="Add Task"
-        TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+        TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
         Theme: =AppThemeJson
         Visible: =true
         Width: =200 
-        X: =915
-        Y: =551
+        X: =894
+        Y: =511
         ZIndex: =5
 
-    "Elevation1 As 'Fluent Elevation (1.0.18)'":
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth16
+    "Elevation1 As 'Fluent Elevation (1.0.22)'":
+        Depth: ='PowerCAT.Elevation.Depth'.Depth16
         DisplayMode: =DisplayMode.Edit
-        Height: =89
+        Height: =143
         Width: =197
-        X: =668
-        Y: =353
+        X: =648
+        Y: =351
         ZIndex: =6
 
-    "Elevation1_1 As 'Fluent Elevation (1.0.18)'":
+    "Elevation1_1 As 'Fluent Elevation (1.0.22)'":
         DarkOverlay: =false
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
+        Depth: ='PowerCAT.Elevation.Depth'.Depth64
         DisplayMode: =DisplayMode.Edit
         Height: =341
-        HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth64
+        HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth64
         Width: =197
-        X: =668
-        Y: =469
+        X: =648
+        Y: =505
         ZIndex: =7
 
-    "Elevation1_2 As 'Fluent Elevation (1.0.18)'":
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth8
+    "Elevation1_2 As 'Fluent Elevation (1.0.22)'":
+        Depth: ='PowerCAT.Elevation.Depth'.Depth8
         DisplayMode: =DisplayMode.Edit
-        Height: =89
+        Height: =119
         Width: =197
-        X: =668
-        Y: =240
+        X: =648
+        Y: =223
         ZIndex: =8
 
-    "Elevation1_3 As 'Fluent Elevation (1.0.18)'":
+    "Elevation1_3 As 'Fluent Elevation (1.0.22)'":
         DarkOverlay: =false
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+        Depth: ='PowerCAT.Elevation.Depth'.Depth4
         DisplayMode: =DisplayMode.Edit
         FillColor: |-
             ="#ffffff"
-        Height: =89
-        Width: =197
-        X: =668
-        Y: =135
+        Height: =118
+        Width: =196
+        X: =648
+        Y: =95
         ZIndex: =9
 
-    "picTags As 'Fluent Picker (1.0.18)'.pcfdataset":
+    "picTags As 'Fluent Picker (1.0.22)'.pcfdataset":
         BorderRadius: =0
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -391,10 +712,11 @@
         TagsHoverBorderColor: ="HoverBorderColor"
         TagsKey: ="Key"
         TagsTextColor: ="TextColor"
+        Theme: =AppThemeJson
         Visible: =true
         Width: =400
-        X: =916
-        Y: =221
+        X: =896
+        Y: =207
         ZIndex: =10
 
         BackgroundColor1 As pcfDataField.textualColumn:
@@ -445,9 +767,9 @@
         FontWeight: =FontWeight.Semibold
         Height: =32
         Text: ="Elevation"
-        Width: =320
-        X: =668
-        Y: =90
+        Width: =202
+        X: =646
+        Y: =59
         ZIndex: =11
 
     Label1_2 As Label:
@@ -456,8 +778,8 @@
         Height: =32
         Text: ="Picker"
         Width: =320
-        X: =916
-        Y: =189
+        X: =896
+        Y: =175
         ZIndex: =12
 
     Label1_3 As Label:
@@ -467,7 +789,7 @@
         Height: =32
         Text: ="Primitive Controls"
         Width: =150
-        X: =42
+        X: =98
         Y: =73
         ZIndex: =13
 
@@ -478,8 +800,8 @@
         Height: =32
         Text: ="Pivot"
         Width: =320
-        X: =917
-        Y: =294
+        X: =897
+        Y: =280
         ZIndex: =14
 
     Label1_5 As Label:
@@ -489,8 +811,8 @@
         Height: =32
         Text: ="Command Bar"
         Width: =320
-        X: =916
-        Y: =391
+        X: =896
+        Y: =377
         ZIndex: =15
 
     Label1_6 As Label:
@@ -500,8 +822,8 @@
         Height: =29
         Text: ="Action Button"
         Width: =182
-        X: =919
-        Y: =515
+        X: =898
+        Y: =475
         ZIndex: =16
 
     Label1_7 As Label:
@@ -511,24 +833,24 @@
         Height: =32
         Text: ="Nav"
         Width: =320
-        X: =1468
-        Y: =78
+        X: =1416
+        Y: =64
         ZIndex: =17
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.18)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.22)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
         IconName: ="Heart"
-        IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+        IconType: ='PowerCAT.Icon.IconType'.IconButon
         OnChange: =Notify("Button Clicked")
         Text: ="Add Task"
-        TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+        TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
         Theme: =AppThemeJson
         Visible: =true
         Width: =36
-        X: =1022
-        Y: =555
+        X: =1002
+        Y: =541
         ZIndex: =18
 
     Label1_15 As Label:
@@ -539,7 +861,7 @@
         Height: =92
         Text: ="Controls"
         Width: =328
-        X: =38
+        X: =94
         Y: =0
         ZIndex: =19
 
@@ -11820,11 +12142,11 @@
                     }
                 )
             , Name=IconName).Path
-        Height: =403
+        Height: =244
         Theme: =AppTheme
         Width: =If(Self.IsExpanded,400,36)
-        X: =920
-        Y: =646
+        X: =900
+        Y: =632
         ZIndex: =20
 
     Label1_16 As Label:
@@ -11834,8 +12156,8 @@
         Height: =32
         Text: ="Expander"
         Width: =90
-        X: =920
-        Y: =613
+        X: =900
+        Y: =599
         ZIndex: =21
 
     Label1_17 As Label:
@@ -11843,9 +12165,9 @@
         FontWeight: =FontWeight.Semibold
         Height: =32
         Text: ="Spinner"
-        Width: =320
-        X: =306
-        Y: =93
+        Width: =169
+        X: =660
+        Y: =104
         ZIndex: =22
 
     Label1_18 As Label:
@@ -11855,11 +12177,11 @@
         Height: =32
         Text: ="Breadcrumb"
         Width: =134
-        X: =918
-        Y: =78
+        X: =898
+        Y: =64
         ZIndex: =23
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.18)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.22)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -11904,14 +12226,14 @@
         OverflowIndex: =2
         Theme: =AppThemeJson
         Width: =530
-        X: =912
-        Y: =105
+        X: =892
+        Y: =91
         ZIndex: =24
 
-    "ContextMenu1 As 'Fluent Context Menu (1.0.18)'.pcfdataset":
+    "ContextMenu1 As 'Fluent Context Menu (1.0.22)'.pcfdataset":
         Chevron: =true
         DisplayMode: =DisplayMode.Edit
-        Height: =53
+        Height: =41
         Items: |
             =Table(
             
@@ -11937,8 +12259,8 @@
             )
         Theme: =AppThemeJson
         Width: =114
-        X: =1186
-        Y: =371
+        X: =1181
+        Y: =422
         ZIndex: =25
 
     "Checkbox1 As 'Check box'":
@@ -11946,16 +12268,17 @@
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Width: =160
-        X: =42
-        Y: =263
+        X: =98
+        Y: =275
         ZIndex: =26
 
     "RadioGroup1 As 'Radio group'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =100
         Items: =["Option1", "Option2"]
-        Width: =320
-        X: =42
+        RadioFillColor: =
+        Width: =178
+        X: =98
         Y: =312
         ZIndex: =27
 
@@ -11969,14 +12292,14 @@
     Slider1 As Slider:
         DisplayMode: =DisplayMode.Edit
         Height: =64
-        Width: =257
-        X: =42
+        Width: =324
+        X: =98
         Y: =412
         ZIndex: =28
 
-    "Nav1 As 'Fluent Nav (1.0.18)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (1.0.22)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
-        Height: =690
+        Height: =448
         Items: |-
             =Table(
                 {
@@ -12066,12 +12389,12 @@
             )
         SelectedKey: =""
         Theme: =AppThemeJson
-        Width: =422
-        X: =1468
-        Y: =135
+        Width: =299
+        X: =1426
+        Y: =103
         ZIndex: =29
 
-    "CommandBar1 As 'Fluent Command Bar (1.0.18)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -12082,12 +12405,12 @@
                       {ItemKey: "help",ItemDisplayName: "Help",ItemIconName: "help"}
                 )
         Theme: =AppThemeJson
-        Width: =458
-        X: =912
-        Y: =420
+        Width: =422
+        X: =892
+        Y: =406
         ZIndex: =30
 
-    "Pivot1 As 'Fluent Pivot (1.0.18)'.pcfdataset":
+    "Pivot1 As 'Fluent Pivot (1.0.22)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Items: |-
@@ -12110,9 +12433,9 @@
                 }
             )
         Theme: =AppThemeJson
-        Width: =476
-        X: =916
-        Y: =325
+        Width: =238
+        X: =896
+        Y: =311
         ZIndex: =31
 
     Label1_19 As Label:
@@ -12122,14 +12445,16 @@
         Height: =29
         Text: ="Context Menu"
         Width: =182
-        X: =1188
-        Y: =335
+        X: =1181
+        Y: =392
         ZIndex: =32
 
     btnOpenDialog As Button:
-        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        BorderRadius: =2
+        ButtonType: ='Button.ButtonType'.Standard
         DisplayMode: =DisplayMode.Edit
         FillColor: =ColorValue(AppTheme.palette.themePrimary)
+        FontWeight: =FontWeight.Semibold
         Height: =36
         OnSelect: |-
             =UpdateContext({showDialog:true})
@@ -12137,13 +12462,15 @@
         TextColor: =ColorValue(AppTheme.palette.white)
         Width: =135
         X: =1729
-        Y: =985
+        Y: =977
         ZIndex: =33
 
     btnOpenPanel As Button:
-        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+        BorderRadius: =2
+        ButtonType: ='Button.ButtonType'.Standard
         DisplayMode: =DisplayMode.Edit
         FillColor: =ColorValue(AppTheme.palette.themePrimary)
+        FontWeight: =FontWeight.Semibold
         Height: =36
         OnSelect: |-
             =UpdateContext({showPanel:true})
@@ -12151,21 +12478,21 @@
         TextColor: =ColorValue(AppTheme.palette.white)
         Width: =135
         X: =1580
-        Y: =985
+        Y: =977
         ZIndex: =34
 
-    "Elevation1_4 As 'Fluent Elevation (1.0.18)'":
+    "Elevation1_4 As 'Fluent Elevation (1.0.22)'":
         DarkOverlay: =false
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
+        Depth: ='PowerCAT.Elevation.Depth'.Depth64
         DisplayMode: =DisplayMode.Edit
-        Height: =261
-        HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth64
-        Width: =499
+        Height: =265
+        HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth64
+        Width: =507
         X: =99
         Y: =760
         ZIndex: =35
 
-    "Calendar1 As 'Fluent Calendar (1.0.18) Preview'":
+    "Calendar1 As 'Fluent Calendar (1.0.22) Preview'":
         DayPickerVisible: =true
         DisplayMode: =DisplayMode.Edit
         Height: =239
@@ -12181,14 +12508,14 @@
         Y: =760
         ZIndex: =36
 
-    "Shimmer1 As 'Fluent Shimmer (1.0.18) Preview'.pcfdataset":
+    "Shimmer1 As 'Fluent Shimmer (1.0.22) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =205
         Items: |-
             =Table({ItemKey:"1",ItemWidth:"20",ItemHeight:20,ItemRowKey:"1",ItemType:"circle"},{ItemKey:"2",ItemWidth:"10",ItemHeight:10,ItemRowKey:"1",ItemType:"gap"},{ItemKey:"3",ItemWidth:"90",ItemHeight:10,ItemRowKey:"1",ItemType:"line"})
         Width: =169
-        X: =680
-        Y: =554
+        X: =660
+        Y: =574
         ZIndex: =37
 
     Label1_22 As Label:
@@ -12198,34 +12525,9 @@
         Height: =25
         Text: ="Shimmer"
         Width: =125
-        X: =684
-        Y: =503
+        X: =664
+        Y: =539
         ZIndex: =38
-
-    "Spinner1 As 'Fluent Spinner (1.0.18) Preview'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =60
-        Label: ="Loading..."
-        LabelPosition: ='''PowerCAT.Spinner.LabelPosition'''.Bottom
-        SpinnerAlignment: ='''PowerCAT.Spinner.SpinnerAlignment'''.Center
-        SpinnerSize: ='''PowerCAT.Spinner.SpinnerSize'''.Large
-        Theme: =AppThemeJson
-        Width: =95
-        X: =395
-        Y: =126
-        ZIndex: =39
-
-    Dialog_1 As Dialog:
-        Fill: =Dialog_1.OverlayColor
-        Height: =1080
-        OnButtonSelect: |-
-            =UpdateContext({showDialog:false})
-        OnCloseSelect: |-
-            =UpdateContext({showDialog:false})
-        Theme: =AppTheme
-        Visible: =showDialog
-        Width: =1920
-        ZIndex: =40
 
     PanelContentForm As form:
         AcceptsFocus: =false
@@ -12236,10 +12538,9 @@
         Height: =Panel_1.ContentHeight
         NumberOfColumns: =1
         Visible: =Panel_1.Visible
-        Width: =Panel_1.ContentWidth
-        X: =Panel_1.ContentX
-        Y: =90
-        ZIndex: =41
+        Width: =0
+        Y: =79
+        ZIndex: =39
 
         "'Created On_DataCard1_1' As typedDataCard.pcfCoreTextualViewCard":
             BorderColor: =RGBA(166, 166, 166, 1)
@@ -12251,7 +12552,7 @@
             Fill: =RGBA(0, 0, 0, 0)
             Height: =70
             Required: =false
-            Width: =360
+            Width: =0
             WidthFit: =true
             X: =0
             Y: =0
@@ -12296,7 +12597,7 @@
             MaxLength: =
             Required: =false
             Update: =DataCardValue3_1.Value
-            Width: =360
+            Width: =0
             WidthFit: =true
             X: =0
             Y: =1
@@ -12369,7 +12670,7 @@
             MaxLength: =
             Required: =false
             Update: =DataCardValue2_1.Value
-            Width: =360
+            Width: =0
             WidthFit: =true
             X: =0
             Y: =2
@@ -12430,34 +12731,16 @@
                 Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-    "Shimmer2 As 'Fluent Shimmer (1.0.18) Preview'.pcfdataset":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.22) Preview'":
         DisplayMode: =DisplayMode.Edit
-        Height: =140
-        Width: =295
-        X: =303
-        Y: =244
-        ZIndex: =42
-
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.18) Preview'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =74
+        Height: =56
         Label: ="Title here"
         PercentComplete: =50
         Theme: =AppThemeJson
-        Width: =280
-        X: =320
-        Y: =676
-        ZIndex: =43
-
-    Label1_20 As Label:
-        DisplayMode: =DisplayMode.Edit
-        FontWeight: =FontWeight.Semibold
-        Height: =32
-        Text: ="Shimmer"
-        Width: =320
-        X: =306
-        Y: =207
-        ZIndex: =44
+        Width: =292
+        X: =98
+        Y: =656
+        ZIndex: =40
 
     Label1_21 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -12465,9 +12748,9 @@
         Height: =32
         Text: ="Progress Indicator"
         Width: =320
-        X: =308
-        Y: =628
-        ZIndex: =45
+        X: =98
+        Y: =621
+        ZIndex: =41
 
     Label1_23 As Label:
         DisplayMode: =DisplayMode.Edit
@@ -12477,31 +12760,19 @@
         Width: =320
         X: =99
         Y: =714
-        ZIndex: =46
+        ZIndex: =42
 
-    Panel_1 As Panel:
-        Fill: =Panel_1.OverlayColor
-        OnButtonSelect: |-
-            =UpdateContext({showPanel:false})
-        OnCloseSelect: |-
-            =UpdateContext({showPanel:false})
-        Subtitle: =""
-        Theme: =AppTheme
-        Visible: =showPanel
-        Width: =1920
-        ZIndex: =47
-
-    "Facepile1 As 'Fluent Facepile (1.0.18) Preview'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.0.22) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =68
         MaxDisplayablePersonas: =1
-        PersonaSize: ='''PowerCAT.Facepile.PersonaSize'''.Size56
+        PersonaSize: ='PowerCAT.Facepile.PersonaSize'.Size32
         ShowAddButton: =true
         Theme: =AppThemeJson
-        Width: =328
-        X: =300
-        Y: =374
-        ZIndex: =48
+        Width: =170
+        X: =659
+        Y: =412
+        ZIndex: =43
 
     Label1_8 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -12509,14 +12780,14 @@
         FontWeight: =FontWeight.Semibold
         Height: =32
         Text: ="Facepile"
-        Width: =275
-        X: =299
-        Y: =319
-        ZIndex: =49
+        Width: =172
+        X: =657
+        Y: =360
+        ZIndex: =44
 
-    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.18) Preview'.pcfdataset":
+    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.22) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
-        Height: =95
+        Height: =118
         Items: =PreSelectedUserCollection
         OnSearch: |-
             =ClearCollect(
@@ -12547,10 +12818,10 @@
         SuggestionRole: ="JobTitle"
         Suggestions_Items: =UserCollection
         Theme: =AppThemeJson
-        Width: =520
-        X: =42
-        Y: =525
-        ZIndex: =50
+        Width: =508
+        X: =98
+        Y: =495
+        ZIndex: =45
 
     Label1_9 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -12559,18 +12830,18 @@
         Height: =32
         Text: ="People Picker"
         Width: =320
-        X: =42
-        Y: =479
-        ZIndex: =51
+        X: =98
+        Y: =461
+        ZIndex: =46
 
-    "SearchBox1 As 'Fluent SearchBox (1.0.18) Preview'":
+    "SearchBox1 As 'Fluent SearchBox (1.0.22) Preview'":
         DisplayMode: =DisplayMode.Edit
-        Height: =75
+        Height: =34
         Theme: =AppThemeJson
         Width: =482
-        X: =672
-        Y: =920
-        ZIndex: =52
+        X: =652
+        Y: =906
+        ZIndex: =47
 
     Label1_10 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -12579,20 +12850,22 @@
         Height: =29
         Text: ="Search Box"
         Width: =182
-        X: =672
-        Y: =890
-        ZIndex: =53
+        X: =652
+        Y: =876
+        ZIndex: =48
 
-    "Persona1 As 'Fluent Persona (1.0.18) Preview'":
+    "Persona1 As 'Fluent Persona (1.0.22) Preview'":
         DisplayMode: =DisplayMode.Edit
-        Height: =94
+        Height: =51
         ImageUrl: =User().Image
-        SecondaryText: =
+        PersonaSize: ='PowerCAT.Persona.PersonaSize'.Size40
+        SecondaryText: =Left(User().Email,15) & "..."
         Text: =User().FullName
-        Width: =208
-        X: =1184
-        Y: =501
-        ZIndex: =54
+        Theme: =""
+        Width: =165
+        X: =664
+        Y: =269
+        ZIndex: =49
 
     Label1_24 As Label:
         Color: =ColorValue(AppTheme.palette.neutralPrimary)
@@ -12601,11 +12874,76 @@
         Height: =29
         Text: ="Persona"
         Width: =182
-        X: =1185
-        Y: =458
+        X: =661
+        Y: =230
+        ZIndex: =50
+
+    Label1_25 As Label:
+        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+        DisplayMode: =DisplayMode.Edit
+        FontWeight: =FontWeight.Semibold
+        Height: =29
+        Text: ="SubwayNav"
+        Width: =182
+        X: =1190
+        Y: =587
+        ZIndex: =51
+
+    "SpinButton1 As 'Fluent SpinButton (1.0.22) Preview'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =36
+        IconName: ="IncreaseIndentLegacy"
+        Label: ="Basic SpinButton"
+        Suffix: ="cm"
+        Theme: =AppThemeJson
+        Width: =477
+        X: =657
+        Y: =985
+        ZIndex: =52
+
+    "btnAddTaskHeader_2 As 'Fluent Icon (1.0.22)'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =34
+        HoverFillColor: =
+        IconName: ="back"
+        IconSize: =28
+        IconType: ='PowerCAT.Icon.IconType'.IconButon
+        OnChange: =Back()
+        Text: ="Add Task"
+        TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+        Theme: =AppThemeJson
+        Visible: =true
+        Width: =36
+        X: =36
+        Y: =39
+        ZIndex: =53
+
+    "Spinner1 As 'Fluent Spinner (1.0.22) Preview'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =51
+        Label: ="Loading..."
+        LabelPosition: ='PowerCAT.Spinner.LabelPosition'.Bottom
+        SpinnerAlignment: ='PowerCAT.Spinner.SpinnerAlignment'.Center
+        SpinnerSize: ='PowerCAT.Spinner.SpinnerSize'.Medium
+        Theme: =AppThemeJson
+        Width: =95
+        X: =695
+        Y: =140
+        ZIndex: =54
+
+    "Elevation1_5 As 'Fluent Elevation (1.0.22)'":
+        DarkOverlay: =false
+        Depth: ='PowerCAT.Elevation.Depth'.Depth4
+        DisplayMode: =DisplayMode.Edit
+        FillColor: |-
+            ="#ffffff"
+        Height: =374
+        Width: =243
+        X: =1190
+        Y: =637
         ZIndex: =55
 
-    "SubwayNav1 As 'SubwayNav (1.0.18) Preview'.pcfdataset":
+    "SubwayNav1 As 'SubwayNav (1.0.22) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =357
         Items: |-
@@ -12619,30 +12957,118 @@
         OnSelect: =Notify(Self.Selected.ItemLabel)
         Theme: =AppThemeJson
         Width: =179
-        X: =1188
-        Y: =642
+        X: =1235
+        Y: =645
         ZIndex: =56
 
-    Label1_25 As Label:
-        Color: =ColorValue(AppTheme.palette.neutralPrimary)
+    Button1_3 As Button:
+        BorderRadius: =2
+        BorderStyle: =BorderStyle.Solid
+        BorderThickness: =1
+        ButtonType: ='Button.ButtonType'.Standard
         DisplayMode: =DisplayMode.Edit
+        FillColor: =ColorValue(AppTheme.palette.white)
         FontWeight: =FontWeight.Semibold
-        Height: =29
-        Text: ="SubwayNav"
-        Width: =182
-        X: =1180
-        Y: =595
+        Height: =32
+        Text: ="Secondary"
+        TextColor: =ColorValue(AppTheme.palette.black)
+        Width: =96
+        X: =212
+        Y: =115
         ZIndex: =57
 
-    "SpinButton1 As 'Fluent SpinButton (1.0.18) Preview'":
-        DisplayMode: =DisplayMode.Edit
-        Height: =63
-        IconName: ="IncreaseIndentLegacy"
-        Label: ="Basic SpinButton"
-        Suffix: ="cm"
-        Theme: =AppThemeJson
-        Width: =477
-        X: =677
-        Y: =999
+    FieldHeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =103
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =4
+        LayoutMode: =LayoutMode.Auto
+        Width: =363
+        X: =243
+        Y: =276
         ZIndex: =58
+
+        FieldHeaderContainer As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =32
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =262
+            X: =344
+            Y: =70
+            ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =AppTheme.palette.black
+                FontWeight: ="600"
+                Height: =20
+                LayoutMinHeight: =20
+                LayoutMinWidth: =200
+                Text: ="Field label"
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            "AutoWidthLabel1_1 As 'Auto Width Label (1.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                FontColor: |-
+                    ="#ff0000"
+                FontWeight: =FontWeight.Bold
+                Height: =20
+                LayoutMinHeight: =20
+                LayoutMinWidth: =200
+                Text: ="*"
+                Width: =Self.AutoWidth
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            "btnAddTaskHeader_3 As 'Fluent Icon (1.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =20
+                HoverFillColor: =
+                IconName: ="info"
+                IconSize: =12
+                IconType: ='PowerCAT.Icon.IconType'.IconButon
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                OnChange: =Notify("Button Clicked")
+                Text: ="Add Task"
+                TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                Theme: =AppThemeJson
+                Tooltip: ="Update the tooltip to add helpful information for your users"
+                Visible: =true
+                Width: =20
+                X: =1022
+                Y: =555
+                ZIndex: =3
+
+    Panel_1 As Panel:
+        Fill: =Panel_1.OverlayColor
+        OnButtonSelect: |-
+            =UpdateContext({showPanel:false})
+        OnCloseSelect: |-
+            =UpdateContext({showPanel:false})
+        Subtitle: =""
+        Theme: =AppTheme
+        Visible: =showPanel
+        Width: =1920
+        ZIndex: =59
+
+    Dialog_1 As Dialog:
+        Fill: =Dialog_1.OverlayColor
+        Height: =1080
+        OnButtonSelect: |-
+            =UpdateContext({showDialog:false})
+        OnCloseSelect: |-
+            =UpdateContext({showDialog:false})
+        Theme: =AppTheme
+        Visible: =showDialog
+        Width: =1920
+        ZIndex: =60
 

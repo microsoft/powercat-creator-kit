@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.23032.190" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.23063.172" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesMDA</UniqueName>
     <LocalizedNames>
@@ -19,7 +19,7 @@
       <EMailAddress xsi:nil="true"></EMailAddress>
       <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
       <CustomizationPrefix>cat</CustomizationPrefix>
-      <CustomizationOptionValuePrefix>69510</CustomizationOptionValuePrefix>
+      <CustomizationOptionValuePrefix>33535</CustomizationOptionValuePrefix>
       <Addresses>
         <Address>
           <AddressNumber>1</AddressNumber>
@@ -211,7 +211,7 @@
         <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.2380)" />
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.2548)" />
         <Dependent type="62" schemaName="cat_CreatorKitReferenceApp" />
       </MissingDependency>
       <MissingDependency>
@@ -224,6 +224,10 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.CommandBar" displayName="cat_PowerCAT.CommandBar" solution="Active" />
+        <Dependent type="300" schemaName="cat_custompagetemplate_231d0" displayName="Custom Page Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.CommandBar" displayName="cat_PowerCAT.CommandBar" solution="Active" />
         <Dependent type="300" schemaName="cat_detailslistbasicpage_07690" displayName="DetailsList Page" />
       </MissingDependency>
       <MissingDependency>
@@ -237,6 +241,14 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_tagpicker_ca530" displayName="Tag Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
+        <Dependent type="300" schemaName="cat_custompagetemplate_231d0" displayName="Custom Page Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Icon" displayName="cat_PowerCAT.Icon" solution="Active" />
+        <Dependent type="300" schemaName="cat_custompagetemplate_231d0" displayName="Custom Page Template" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Icon" displayName="cat_PowerCAT.Icon" solution="Active" />
@@ -257,6 +269,14 @@
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Pivot" displayName="cat_PowerCAT.Pivot" solution="Active" />
         <Dependent type="300" schemaName="cat_tagpicker_ca530" displayName="Tag Picker" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SearchBox" displayName="cat_PowerCAT.SearchBox" solution="Active" />
+        <Dependent type="300" schemaName="cat_custompagetemplate_231d0" displayName="Custom Page Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Shimmer" displayName="cat_PowerCAT.Shimmer" solution="Active" />
+        <Dependent type="300" schemaName="cat_custompagetemplate_231d0" displayName="Custom Page Template" />
       </MissingDependency>
     </MissingDependencies>
   </SolutionManifest>

@@ -2,7 +2,8 @@ Header As CanvasComponent:
     BackButtonVisible: =false
     Color: =
     ContentWidth: =App.Width
-    Fill: =Transparent
+    Fill: =Color.Transparent
+    HeaderFill: =
     Height: =68
     LeftButtonImage: |-
         ="data:image/svg+xml;utf8, " & EncodeUrl("<svg
@@ -95,7 +96,7 @@ Header As CanvasComponent:
         		white: "#ffffff"
         	}
         }
-    Width: =1600 
+    Width: =App.Width
     X: =0
     Y: =0
     ZIndex: =1
@@ -108,7 +109,7 @@ Header As CanvasComponent:
         ZIndex: =1
 
     HeaderContainer As groupContainer.horizontalAutoLayoutContainer:
-        Fill: =ColorValue(Header.Theme.palette.themePrimary)
+        Fill: =Coalesce(Header.HeaderFill, ColorValue(Header.Theme.palette.themePrimary))
         Height: =50
         LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
         LayoutMode: =LayoutMode.Auto
@@ -198,19 +199,18 @@ Header As CanvasComponent:
                 ZIndex: =3
 
         lblTitle As label:
-            Align: =Center
+            Align: =LayoutAlignItems.Center
             BorderColor: =
-            Color: =ColorValue(Header.Theme.palette.white)
+            Color: =Coalesce(Header.Color, ColorValue(Header.Theme.palette.white), Color.White)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(0,0,0,0)
-            Fill: =Transparent
+            Fill: =Color.Transparent
             FillPortions: =1
-            Font: ='Segoe UI'
-            FontWeight: =Normal
+            Font: =Font.'Segoe UI'
             Height: =50
             LayoutMinHeight: =70
             LayoutMinWidth: =300
-            Text: =Upper(Header.Text)
+            Text: =Header.Text
             Width: =Parent.Width
             ZIndex: =3
 

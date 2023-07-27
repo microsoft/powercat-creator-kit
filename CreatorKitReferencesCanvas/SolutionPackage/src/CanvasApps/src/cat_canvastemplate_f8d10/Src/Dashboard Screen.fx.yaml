@@ -1,0 +1,1197 @@
+"'Dashboard Screen' As screen.'tabletAutoLayout_Sidebar_ver1.0'":
+    Fill: =ColorValue(AppTheme.palette.white)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 0)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        BottomContainer1 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =RGBA(245, 245, 245, 0)
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            ZIndex: =3
+
+            SidebarContainer1 As groupContainer.verticalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                Fill: =ColorValue(AppTheme.palette.neutralLighter)
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =App.Width > Breakpoint.Small && expandCollapse
+                Width: =200
+                ZIndex: =4
+
+                "Icon2_8 As 'Fluent Icon (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =50
+                    IconName: ="GlobalNavButton"
+                    IconSize: =16
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =50
+                    OnChange: |-
+                        =UpdateContext({expandCollapse:!expandCollapse})
+                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                    Theme: =AppThemeJson
+                    Tooltip: ="Menu"
+                    Visible: =true
+                    Width: =Self.Height
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                "Nav2_1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    Height: =966
+                    Items: =NavItems
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: =Set(SelectedNavKey,Self.Selected.ItemKey);
+                    OnSelect: =Navigate(Self.Selected.Screen)
+                    SelectedKey: =SelectedNavKey
+                    Theme: =AppThemeJson
+                    Width: =Parent.Width
+                    X: =24
+                    Y: =0
+                    ZIndex: =2
+
+            MainSectionContainer1 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =5
+
+                HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 0)
+                    FillPortions: =0
+                    Height: =50
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =If(expandCollapse, 16) + 0
+                    PaddingRight: =8
+                    Width: =1720
+                    Y: =-6
+                    ZIndex: =1
+
+                    "Icon2_9 As 'Fluent Icon (1.0.22)'":
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =50
+                        IconName: ="GlobalNavButton"
+                        IconSize: =16
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =50
+                        OnChange: |-
+                            =UpdateContext({expandCollapse:!expandCollapse})
+                        TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                        Theme: =AppThemeJson
+                        Tooltip: ="Expand navigation"
+                        Visible: =!expandCollapse && App.Width > Breakpoint.Small
+                        Width: =Self.Height
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    DashboardHeaderContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        Height: =Parent.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =100
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =16
+                        Visible: =App.Width <= Breakpoint.Medium
+                        Width: =320
+                        X: =-3
+                        Y: =54
+                        ZIndex: =3
+
+                        UserImage As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            FocusedBorderThickness: =4
+                            Height: =32
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: =User().Image
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            RadiusBottomLeft: =50
+                            RadiusBottomRight: =50
+                            RadiusTopLeft: =50
+                            RadiusTopRight: =50
+                            Width: =32
+                            ZIndex: =1
+
+                        HeaderLabelSmall As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =ColorValue(AppTheme.palette.black)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FillPortions: =1
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            LayoutMinWidth: =80
+                            Size: =16
+                            Text: ="Header"
+                            ZIndex: =2
+
+                    "CommandBar1_1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        Height: =Parent.Height
+                        Items: |-
+                            =Table(
+                                {
+                                    ItemKey: "new",
+                                    ItemDisplayName: If(
+                                        (App.Width > Breakpoint.Small),
+                                        "New",
+                                        ""
+                                    ),
+                                    ItemIconName: "add",
+                                    ItemVisible: true,
+                                    ItemFarItem: (App.Width <= Breakpoint.Medium)
+                                },
+                                {
+                                    ItemKey: "export",
+                                    ItemDisplayName: If(
+                                        (App.Width > Breakpoint.Small),
+                                        "Export",
+                                        ""
+                                    ),
+                                    ItemIconName: "export",
+                                    ItemVisible: true,
+                                    ItemFarItem: (App.Width <= Breakpoint.Medium)
+                                },
+                                {
+                                    ItemKey: "help",
+                                    ItemDisplayName: If(
+                                        (App.Width > Breakpoint.Small),
+                                        "About",
+                                        ""
+                                    ),
+                                    ItemIconName: "info",
+                                    ItemVisible: true,
+                                    ItemFarItem: (App.Width <= Breakpoint.Medium)
+                                },
+                                {
+                                    ItemKey: "",
+                                    ItemDisplayName: "",
+                                    ItemIconName: "",
+                                    ItemVisible: false
+                                },
+                                {
+                                    ItemKey: "",
+                                    ItemDisplayName: "",
+                                    ItemIconName: "",
+                                    ItemVisible: false
+                                },
+                                {
+                                    ItemKey: "",
+                                    ItemDisplayName: "",
+                                    ItemIconName: "",
+                                    ItemVisible: false
+                                }
+                            )
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =120
+                        OnSelect: |-
+                            =Switch(Self.Selected.ItemKey,"nav",UpdateContext({expandCollapse:true}))
+                        Theme: =AppThemeJson
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                DashboardHeaderContainer As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =62
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =If((App.Width <= Breakpoint.Small), 16, 48)
+                    Visible: =App.Width >= Breakpoint.Medium
+                    Width: =1874
+                    X: =-3
+                    Y: =39
+                    ZIndex: =2
+
+                    HeaderLabel As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =ColorValue(AppTheme.palette.black)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Size: =28
+                        Text: ="Header"
+                        ZIndex: =1
+
+                PivotContainer As groupContainer.manualLayoutContainer:
+                    FillPortions: =0
+                    Height: =Sep_1.Y+2
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    Width: =1874
+                    Y: =98
+                    ZIndex: =3
+
+                    Sep_1 As rectangle:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Fill: =ColorValue(AppTheme.palette.neutralLight)
+                        FocusedBorderThickness: =4
+                        Height: =1
+                        Width: =Parent.Width
+                        Y: =(DashboardPivot_1.Y+DashboardPivot_1.Height)
+                        ZIndex: =1
+
+                    DashboardHeaderContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =DashboardPivot_1.Height+9
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =If(!(App.Width > Breakpoint.Small), 16, 48)
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                        "DashboardPivot_1 As 'Fluent Pivot (1.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =42
+                            Items: =PivotItems
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: =Set(SelectedPivotKey,Self.Selected.ItemKey)
+                            SelectedKey: =SelectedPivotKey
+                            Theme: =AppThemeJson
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =4
+                            ZIndex: =1
+
+                CardsContainer As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =50
+                    LayoutGap: =CardsContainerProps.Gap
+                    LayoutMinHeight: =Parent.Height - DashboardPivot_1.Height
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
+                    PaddingBottom: =CardsContainerProps.PaddingBottom
+                    PaddingLeft: =If(App.Width <= Breakpoint.Small, 16, CardsContainerProps.PaddingLeft)
+                    PaddingRight: =If(App.Width <= Breakpoint.Small, 16, CardsContainerProps.PaddingLeft)
+                    PaddingTop: =CardsContainerProps.PaddingTop
+                    Visible: =DashboardPivot_1.Selected.ItemKey="0"
+                    ZIndex: =4
+
+                    Card_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(255, 255, 255, 1)
+                        FillPortions: =2
+                        Height: =CardContent_1.Height+CardHeaderContainer_1.Height+20
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =If(App.Width <= Breakpoint.Medium, App.Width - 100, App.MinScreenWidth)
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =470
+                        X: =19
+                        ZIndex: =1
+
+                        CardHeaderContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =Parent.Width
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =16
+                            PaddingRight: =8
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Label2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                LayoutMinWidth: =96
+                                Text: ="Responsive design"
+                                Wrap: =false
+                                ZIndex: =1
+
+                            "CommandBar2_1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =200
+                                Items: |-
+                                    =Table({ItemKey:"0",ItemDisplayName:"Power Apps documentation", ItemIconName:"powerapps"},{ItemKey:"0",ItemDisplayName:"UWP docs (concepts)", ItemIconName:"windowslogo"})
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =200
+                                OnSelect: |-
+                                    =Switch(Self.Selected.ItemKey,"0", Launch("https://learn.microsoft.com/power-apps/maker/canvas-apps/build-responsive-apps"), "1", Launch("https://learn.microsoft.com/windows/apps/design/layout/responsive-design") )
+                                Theme: =AppThemeJson
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        Rectangle1_2 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(240,240,240,1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                        CardContent_1 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =Max(200,CardHtmlText1.Height)
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =3
+
+                            CardHtmlText1 As htmlViewer:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                Font: =Font.'Segoe UI'
+                                HtmlText: |-
+                                    ="<p style='text-align: justify;'>
+                                    Why would you ever want to customize your app's UI for a specific device family?
+                                    </p>
+                                    <ul>
+                                    
+                                    <li>
+                                    <strong>To make the most effective use of space and reduce the need to navigate</strong><br>
+                                    If you design an app to look good on a device that has a small screen, such as a tablet, the app will be usable on a PC with a much bigger display, but there will probably be some wasted space. You can customize the app to display more content when the screen is above a certain size. For example, a shopping app might display one merchandise category at a time on a tablet, but show multiple categories and products simultaneously on a PC or laptop.<br><br>By putting more content on the screen, you reduce the amount of navigation that the user needs to perform.
+                                    </li>
+                                    <br>
+                                    <li>
+                                    <strong>To take advantage of devices' capabilities</strong><br>
+                                    Certain devices are more likely to have certain device capabilities. For example, laptops are likely to have a location sensor and a camera, while a TV might not have either. Your app can detect which capabilities are available and enable features that use them.
+                                    </li>
+                                    <br>
+                                    <li>
+                                    <strong>To optimize for input</strong><br>
+                                    The universal control library works with all input types (touch, pen, keyboard, mouse), but you can still optimize for certain input types by re-arranging your UI elements. For example, if you place navigation elements at the bottom of the screen, they'll be easier for phone users to access—but most PC users expect to see navigation elements toward the top of the screen.
+                                    </li>
+                                    </ul>
+                                    <p style='text-align: justify;'>
+                                    When you optimize your app's UI for specific screen widths, we say that you're creating a responsive design. In the card header, go to '...' > Learn more to read about six responsive design techniques you can use to customize your app's UI.
+                                    </p>
+                                    </div>"
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =0
+                                Size: =12
+                                ZIndex: =1
+
+                            CardText_1 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                LayoutMinWidth: =100
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =16
+                                Size: =12
+                                Text: |-
+                                    ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam a turpis dapibus massa vestibulum viverra. Donec et ex sit amet lorem venenatis elementum. Nullam a nibh vitae purus commodo ultrices quis vitae ante. Maecenas venenatis sem et purus congue, sed porttitor metus tincidunt. Vivamus luctus lectus vel purus facilisis accumsan. Aenean varius non ligula ac malesuada. Morbi et felis porta, scelerisque elit id, molestie justo.
+                                    
+                                    Sed felis ante, lobortis in sagittis eu, hendrerit quis justo. Mauris pulvinar nibh mauris, eu porttitor lectus facilisis et. Fusce efficitur purus eget odio volutpat, ut aliquet arcu blandit. Morbi diam lectus, rutrum at urna in, laoreet hendrerit velit. Pellentesque sed faucibus lacus. Mauris scelerisque commodo nisi, nec ultricies quam dignissim vitae. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam accumsan eleifend augue et vehicula. Fusce scelerisque cursus diam a consectetur."
+                                ZIndex: =2
+
+                    Card_3 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Max(100,CardContent_3.Height+CardHeaderContainer_3.Height+20)
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =320
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =470
+                        X: =19
+                        ZIndex: =2
+
+                        CardHeaderContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =Parent.Width
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =16
+                            PaddingRight: =8
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            Label2_2 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                LayoutMinWidth: =96
+                                Text: ="Breakpoints and screen size"
+                                Wrap: =false
+                                ZIndex: =1
+
+                            "CommandBar2_2 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =200
+                                Items: |-
+                                    =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =200
+                                OnSelect: |-
+                                    =If(Self.Selected.ItemKey="0", Launch("https://learn.microsoft.com/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design") )
+                                Theme: =AppThemeJson
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        Rectangle1_3 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(240,240,240,1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                        CardContent_3 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =Max(100,CardHtmlText1_1.Height)
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =3
+
+                            CardHtmlText1_1 As htmlViewer:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                Font: =Font.'Segoe UI'
+                                HtmlText: |-
+                                    ="<p style='text-align: justify;'>
+                                    Power Apps can run on any device, which includes tablets, desktops, TVs, and more. With a huge number of device targets and screen sizes available in the market, rather than optimizing your UI for each device, we recommended designing for a few key width categories (also called ""ScreenSize""):
+                                    </p>
+                                    
+                                    <ul>
+                                    <li>
+                                    Small (smaller than 640px)
+                                    </li>
+                                    <li>
+                                    Medium (641px to 1007px)
+                                    </li>
+                                    <li>
+                                    Large (1008px and larger)
+                                    </li>
+                                    </ul>"
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =0
+                                Size: =12
+                                ZIndex: =1
+
+                            CardText_3 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                LayoutMinWidth: =100
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =16
+                                Size: =12
+                                Text: |-
+                                    ="Proin eu turpis sit amet massa hendrerit suscipit. Donec auctor dignissim ante vitae luctus. Sed vestibulum volutpat sem, sit amet tincidunt nibh sollicitudin nec. Ut vel nulla quis metus laoreet vulputate at in ipsum.
+                                    
+                                    Vivamus sem nisi, semper sit amet accumsan at, aliquet a arcu. Donec condimentum cursus gravida. Nullam vitae dui suscipit, mollis eros a, finibus turpis. Nullam iaculis velit sed mauris tempus hendrerit. Maecenas eleifend nibh vitae massa pulvinar, in tristique leo lacinia. Aliquam dignissim accumsan libero sed pulvinar. Proin blandit quam elit, non lacinia libero venenatis id. Maecenas id ornare ex, quis laoreet sem. In porta pretium sapien, et tempus sapien sollicitudin quis. Duis eget fermentum turpis. Cras at sodales massa. Praesent nec risus luctus tortor blandit condimentum. Aenean vulputate nisi ultricies, vehicula tellus a, molestie dui. Nulla et diam quis nibh pretium cursus vel vel nunc. Nulla ac sapien eget nibh congue sollicitudin.
+                                    
+                                    Donec faucibus nunc ac risus semper, in pretium turpis porta. Nam at lacus sollicitudin, pellentesque lorem ac, facilisis enim. Vivamus hendrerit ante in pulvinar euismod. Sed tempus porta dapibus. Integer et venenatis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec non consectetur enim. Donec hendrerit vel dolor ut gravida. Mauris volutpat massa bibendum nulla malesuada, a ornare erat consequat. Sed posuere nibh ac purus tempus placerat. Fusce mattis tincidunt dolor. Morbi dignissim odio non dolor lacinia, ut ultricies justo luctus."
+                                ZIndex: =2
+
+                    CardsMiddleContainer As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        Height: =Card_2.Height+Card_4.Height+20
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =16
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =320
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =2
+                        PaddingLeft: =4
+                        PaddingRight: =4
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        Card_4 As groupContainer.verticalAutoLayoutContainer:
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.Light
+                            Fill: =ColorValue(AppTheme.palette.themeLighterAlt)
+                            FillPortions: =0
+                            Height: =Max(100,CardContent_4.Height+CardHeaderContainer_4.Height+20)
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =Parent.Width-8
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            X: =19
+                            ZIndex: =1
+
+                            CardHeaderContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =45
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =16
+                                PaddingRight: =8
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                "Icon2_12 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =56
+                                    HoverFillColor: ="rgba(0,0,0,0)"
+                                    IconColor: =AppTheme.palette.neutralDark
+                                    IconName: ="Processing"
+                                    IconSize: =24
+                                    IconType: ='PowerCAT.Icon.IconType'.Icon
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =50
+                                    OnChange: =
+                                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                                    Theme: =AppThemeJson
+                                    Tooltip: ="Menu"
+                                    Visible: =true
+                                    Width: =32
+                                    X: =10
+                                    Y: =-8
+                                    ZIndex: =1
+
+                                Label2_3 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    LayoutMinWidth: =96
+                                    Text: ="Critical thinking"
+                                    Wrap: =false
+                                    ZIndex: =2
+
+                            Rectangle1_6 As rectangle:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                Fill: =RGBA(240,240,240,1)
+                                FocusedBorderThickness: =4
+                                Height: =1
+                                Visible: =false
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                            CardContent_4 As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =CardText_4.Height
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =3
+
+                                CardText_4 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(51, 51, 51, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    LayoutMinWidth: =100
+                                    PaddingBottom: =16
+                                    PaddingLeft: =24
+                                    PaddingRight: =24
+                                    PaddingTop: =16
+                                    Size: =12
+                                    Text: |-
+                                        ="Why should you build responsive apps?
+                                        
+                                        End users can access your app from different devices such as phones, tablets, laptops, and desktops with large monitors, different screen sizes, and with varied number of pixels.
+                                        
+                                        To ensure great user experience and usability of the app on each form factor and device, designing the app with responsive design principles is necessary. Even if the app is intended to be used only on the web browser or on mobile phones, user device screen sizes can be different, so designing the app with responsive principles is a good idea."
+                                    ZIndex: =2
+
+                        Card_2 As groupContainer.verticalAutoLayoutContainer:
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.Light
+                            Fill: =ColorValue(AppTheme.palette.themeLighterAlt)
+                            FillPortions: =0
+                            Height: =Max(100,CardContent_2.Height+CardHeaderContainer_2.Height+20)
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =Parent.Width-8
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Width: =Parent.Width
+                            X: =19
+                            ZIndex: =2
+
+                            CardHeaderContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =45
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingLeft: =16
+                                PaddingRight: =8
+                                Width: =Parent.Width
+                                ZIndex: =1
+
+                                "Icon2_11 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =50
+                                    HoverFillColor: ="rgba(0,0,0,0)"
+                                    IconColor: =AppTheme.palette.neutralDark
+                                    IconName: ="lightbulb"
+                                    IconSize: =16
+                                    IconType: ='PowerCAT.Icon.IconType'.Icon
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =50
+                                    OnChange: =
+                                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                                    Theme: =AppThemeJson
+                                    Tooltip: ="Menu"
+                                    Visible: =true
+                                    Width: =20
+                                    X: =31
+                                    Y: =0
+                                    ZIndex: =2
+
+                                Label2_1 As label:
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FillPortions: =1
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    LayoutMinWidth: =96
+                                    Text: ="Tip"
+                                    Wrap: =false
+                                    ZIndex: =3
+
+                            CardContent_2 As groupContainer.verticalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =Max(150,CardText_2.Height)
+                                LayoutDirection: =LayoutDirection.Vertical
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
+                                ZIndex: =3
+
+                                CardText_2 As label:
+                                    AlignInContainer: =AlignInContainer.Stretch
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(51, 51, 51, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(166, 166, 166, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    LayoutMinWidth: =100
+                                    PaddingBottom: =16
+                                    PaddingLeft: =24
+                                    PaddingRight: =24
+                                    PaddingTop: =16
+                                    Size: =12
+                                    Text: |-
+                                        ="When designing for specific screen sizes, design for the amount of screen space available to your app (the app's window, or 'App.Width' in Power Apps), not the screen size. 
+                                        
+                                        When the app is running full-screen, the app window is the same size as the screen, but when the app is not full-screen, the window is smaller than the screen."
+                                    ZIndex: =2
+
+                    buffer As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =4
+
+                CardsContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =50
+                    LayoutGap: =CardsContainerProps.Gap
+                    LayoutMinHeight: =Parent.Height - DashboardPivot_1.Height
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
+                    PaddingBottom: =CardsContainerProps.PaddingBottom
+                    PaddingLeft: =If(App.Width <= Breakpoint.Small, 16, CardsContainerProps.PaddingLeft)
+                    PaddingRight: =If(App.Width <= Breakpoint.Small, 16, CardsContainerProps.PaddingLeft)
+                    PaddingTop: =CardsContainerProps.PaddingTop
+                    Visible: =DashboardPivot_1.Selected.ItemKey="1"
+                    ZIndex: =5
+
+                    Card_5 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Max(100,CardContent_5.Height+CardHeaderContainer_5.Height+20)
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =320
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =470
+                        X: =19
+                        ZIndex: =1
+
+                        CardHeaderContainer_5 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =Parent.Width
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =16
+                            PaddingRight: =8
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            CardHeaderLabel_5 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                LayoutMinWidth: =96
+                                Text: ="Reposition"
+                                Wrap: =false
+                                ZIndex: =1
+
+                            "CommandBar2_3 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =200
+                                Items: |-
+                                    =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =200
+                                OnSelect: |-
+                                    =If(Self.Selected.ItemKey="0", Launch("https://learn.microsoft.com/windows/apps/design/layout/responsive-design#reposition"))
+                                Theme: =AppThemeJson
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        Rectangle1_4 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(240,240,240,1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                        CardContent_5 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =Max(100,CardHtmlText1_2.Height)
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =3
+
+                            CardHtmlText1_2 As htmlViewer:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                Font: =Font.'Segoe UI'
+                                HtmlText: |-
+                                    ="<p style='text-align: justify;'>
+                                    You can alter the location and position of UI elements to make the most of the window size. In this example, the smaller window stacks elements vertically. When the app translates to a larger window, elements can take advantage of the wider window width.
+                                    </p>
+                                    <img src='https://learn.microsoft.com/en-us/windows/apps/design/layout/images/rsp-design/rspd-reposition2.gif' alt='Italian Trulli' width="&Min(Self.Width-24,900)&">
+                                    
+                                    <p>
+                                    In this example design for a photo app, the photo app repositions its content on larger screens.
+                                    </p>"
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =0
+                                Size: =12
+                                ZIndex: =1
+
+                            CardText_5 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                LayoutMinWidth: =100
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =16
+                                Size: =12
+                                Text: |-
+                                    ="Proin eu turpis sit amet massa hendrerit suscipit. Donec auctor dignissim ante vitae luctus. Sed vestibulum volutpat sem, sit amet tincidunt nibh sollicitudin nec. Ut vel nulla quis metus laoreet vulputate at in ipsum.
+                                    
+                                    Vivamus sem nisi, semper sit amet accumsan at, aliquet a arcu. Donec condimentum cursus gravida. Nullam vitae dui suscipit, mollis eros a, finibus turpis. Nullam iaculis velit sed mauris tempus hendrerit. Maecenas eleifend nibh vitae massa pulvinar, in tristique leo lacinia. Aliquam dignissim accumsan libero sed pulvinar. Proin blandit quam elit, non lacinia libero venenatis id. Maecenas id ornare ex, quis laoreet sem. In porta pretium sapien, et tempus sapien sollicitudin quis. Duis eget fermentum turpis. Cras at sodales massa. Praesent nec risus luctus tortor blandit condimentum. Aenean vulputate nisi ultricies, vehicula tellus a, molestie dui. Nulla et diam quis nibh pretium cursus vel vel nunc. Nulla ac sapien eget nibh congue sollicitudin.
+                                    
+                                    Donec faucibus nunc ac risus semper, in pretium turpis porta. Nam at lacus sollicitudin, pellentesque lorem ac, facilisis enim. Vivamus hendrerit ante in pulvinar euismod. Sed tempus porta dapibus. Integer et venenatis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec non consectetur enim. Donec hendrerit vel dolor ut gravida. Mauris volutpat massa bibendum nulla malesuada, a ornare erat consequat. Sed posuere nibh ac purus tempus placerat. Fusce mattis tincidunt dolor. Morbi dignissim odio non dolor lacinia, ut ultricies justo luctus."
+                                ZIndex: =2
+
+                    buffer_1 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                CardsContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+                    Height: =50
+                    LayoutGap: =CardsContainerProps.Gap
+                    LayoutMinHeight: =Parent.Height - DashboardPivot_1.Height
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutOverflowY: =LayoutOverflow.Scroll
+                    LayoutWrap: =true
+                    PaddingBottom: =CardsContainerProps.PaddingBottom
+                    PaddingLeft: =If(App.Width <= Breakpoint.Small, 16, CardsContainerProps.PaddingLeft)
+                    PaddingRight: =If(App.Width <= Breakpoint.Small, 16, CardsContainerProps.PaddingLeft)
+                    PaddingTop: =CardsContainerProps.PaddingTop
+                    Visible: =DashboardPivot_1.Selected.ItemKey="2"
+                    ZIndex: =6
+
+                    Card_6 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderStyle: =BorderStyle.None
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(255, 255, 255, 1)
+                        Height: =Max(100,CardContent_6.Height+CardHeaderContainer_6.Height+20)
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =320
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =470
+                        X: =19
+                        ZIndex: =1
+
+                        CardHeaderContainer_6 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            FillPortions: =0
+                            Height: =45
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =Parent.Width
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =16
+                            PaddingRight: =8
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                            CardHeaderLabel_6 As label:
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FillPortions: =1
+                                Font: =Font.'Segoe UI'
+                                FontWeight: =FontWeight.Semibold
+                                LayoutMinWidth: =96
+                                Text: ="Replace"
+                                Wrap: =false
+                                ZIndex: =1
+
+                            "CommandBar2_6 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =200
+                                Items: |-
+                                    =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =200
+                                OnSelect: |-
+                                    =If(Self.Selected.ItemKey="0", Launch("https://learn.microsoft.com/windows/apps/design/layout/responsive-design#replace"))
+                                Theme: =AppThemeJson
+                                Width: =40
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        Rectangle1_7 As rectangle:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            Fill: =RGBA(240,240,240,1)
+                            FocusedBorderThickness: =4
+                            Height: =1
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                        CardContent_6 As groupContainer.verticalAutoLayoutContainer:
+                            FillPortions: =0
+                            Height: =Max(100,CardHtmlText1_3.Height)
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =3
+
+                            CardHtmlText1_3 As htmlViewer:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                Font: =Font.'Segoe UI'
+                                HtmlText: |-
+                                    ="<p style='text-align: justify;'>
+                                    This technique lets you switch the user interface for a specific breakpoints. In this example, the nav pane and its compact, transient UI works well for a smaller screen, but on a larger screen, tabs might be a better choice.
+                                    </p>
+                                    <img src='https://learn.microsoft.com/en-us/windows/apps/design/layout/images/rsp-design/rspd-replace.gif' alt='Italian Trulli' width="&Min(Self.Width-24,900)&">
+                                    "
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =0
+                                Size: =12
+                                ZIndex: =1
+
+                            CardText_6 As label:
+                                AlignInContainer: =AlignInContainer.Stretch
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 0, 0, 0)
+                                BorderStyle: =BorderStyle.None
+                                BorderThickness: =2
+                                Color: =RGBA(51, 51, 51, 1)
+                                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                FocusedBorderThickness: =4
+                                Font: =Font.'Segoe UI'
+                                LayoutMinWidth: =100
+                                PaddingBottom: =16
+                                PaddingLeft: =24
+                                PaddingRight: =24
+                                PaddingTop: =16
+                                Size: =12
+                                Text: |-
+                                    ="Proin eu turpis sit amet massa hendrerit suscipit. Donec auctor dignissim ante vitae luctus. Sed vestibulum volutpat sem, sit amet tincidunt nibh sollicitudin nec. Ut vel nulla quis metus laoreet vulputate at in ipsum.
+                                    
+                                    Vivamus sem nisi, semper sit amet accumsan at, aliquet a arcu. Donec condimentum cursus gravida. Nullam vitae dui suscipit, mollis eros a, finibus turpis. Nullam iaculis velit sed mauris tempus hendrerit. Maecenas eleifend nibh vitae massa pulvinar, in tristique leo lacinia. Aliquam dignissim accumsan libero sed pulvinar. Proin blandit quam elit, non lacinia libero venenatis id. Maecenas id ornare ex, quis laoreet sem. In porta pretium sapien, et tempus sapien sollicitudin quis. Duis eget fermentum turpis. Cras at sodales massa. Praesent nec risus luctus tortor blandit condimentum. Aenean vulputate nisi ultricies, vehicula tellus a, molestie dui. Nulla et diam quis nibh pretium cursus vel vel nunc. Nulla ac sapien eget nibh congue sollicitudin.
+                                    
+                                    Donec faucibus nunc ac risus semper, in pretium turpis porta. Nam at lacus sollicitudin, pellentesque lorem ac, facilisis enim. Vivamus hendrerit ante in pulvinar euismod. Sed tempus porta dapibus. Integer et venenatis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec non consectetur enim. Donec hendrerit vel dolor ut gravida. Mauris volutpat massa bibendum nulla malesuada, a ornare erat consequat. Sed posuere nibh ac purus tempus placerat. Fusce mattis tincidunt dolor. Morbi dignissim odio non dolor lacinia, ut ultricies justo luctus."
+                                ZIndex: =2
+
+                    buffer_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =Parent.Width
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+        MobileFooterContainer As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+            FillPortions: =0
+            Height: =70
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+            LayoutMinHeight: =100
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            Visible: =App.Width <= Breakpoint.Small
+            ZIndex: =4
+
+            Sep_2 As rectangle:
+                AlignInContainer: =AlignInContainer.Start
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                Fill: =ColorValue(AppTheme.palette.neutralLight)
+                FocusedBorderThickness: =4
+                Height: =1
+                LayoutMinWidth: =Parent.Width
+                Visible: =false
+                Width: =Parent.Width
+                ZIndex: =1
+
+            Gallery3 As gallery.galleryHorizontal:
+                BorderColor: =RGBA(166, 166, 166, 1)
+                DelayItemLoading: =true
+                FillPortions: =0
+                Height: =Parent.Height
+                Items: =NavItems
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                ShowScrollbar: =false
+                TemplatePadding: =0
+                TemplateSize: =App.Width / CountRows(Self.AllItems)
+                ZIndex: =2
+
+                "Icon3 As 'Fluent Icon (1.0.22)'":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.TemplateHeight
+                    IconName: =ThisItem.ItemIconName
+                    IconSize: =20
+                    OnChange: =Navigate(ThisItem.Screen);
+                    TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                    Theme: =AppThemeJson
+                    Tooltip: =""
+                    Width: =Parent.TemplateWidth
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+

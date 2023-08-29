@@ -309,6 +309,16 @@
       "Kind": "Page",
       "Name": "OCV",
       "Value": "custompage:cat_ocv_f2b08"
+    },
+    {
+      "Kind": "Page",
+      "Name": "PowerChatbot",
+      "Value": "custompage:cat_powerchatbot_4070f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "breadcrumb-custompage-test",
+      "Value": "custompage:cra0f_breadcrumbcustompagetest_22bd6"
     }
   ]
 }

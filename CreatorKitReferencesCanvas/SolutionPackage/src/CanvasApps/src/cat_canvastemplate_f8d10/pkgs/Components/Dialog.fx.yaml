@@ -50,7 +50,7 @@ Dialog As CanvasComponent:
     Width: =1600
     X: =0
     Y: =0
-    ZIndex: =2
+    ZIndex: =3
 
     htmlShadow As htmlViewer:
         Height: =Dialog.Height

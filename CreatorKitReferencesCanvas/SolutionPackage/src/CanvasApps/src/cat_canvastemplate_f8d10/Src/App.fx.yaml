@@ -32,6 +32,7 @@ App As appinfo:
         ClearCollect(UsersCollection, Office365Users.SearchUserV2().value);
     SizeBreakpoints: =[640, 1000, 1200]
     StartScreen: =
+    Theme: =PowerAppsTheme
 
     Host As hostControl.DefaultHostControlVariant:
         OnCancel: =false

@@ -46,13 +46,13 @@
                 LayoutMode: =LayoutMode.Auto
                 ZIndex: =1
 
-                "Icon2_7 As 'Fluent Icon (1.0.22)'":
+                "Icon2_7 As 'Fluent Icon (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.Height
                     IconName: ="GlobalNavButton"
                     IconSize: =16
                     LayoutMinHeight: =200
-                    LayoutMinWidth: =50
+                    LayoutMinWidth: =200
                     OnChange: |-
                         =UpdateContext({expandCollapse:!expandCollapse})
                     TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
@@ -64,9 +64,8 @@
                     Y: =0
                     ZIndex: =1
 
-            "Nav2 As 'Fluent Nav (1.0.22)'.pcfdataset":
+            "Nav2 As 'Fluent Nav (1.1.29)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
-                FillPortions: =1
                 Height: =966
                 Items: =NavItems
                 LayoutMinHeight: =200

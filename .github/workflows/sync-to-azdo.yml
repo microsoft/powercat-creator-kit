@@ -1,0 +1,224 @@
+name: Sync issue to Azure DevOps work item
+
+on:
+  issues:
+    types:
+      [opened, edited, deleted, closed, reopened, labeled, unlabeled, assigned, milestoned]
+  issue_comment:
+    types: [created, edited, deleted]
+concurrency:
+  group: issue-${{ github.event.issue.number }}
+  cancel-in-progress: false    
+
+jobs:
+  prepareIterationPathJob:
+    runs-on: ubuntu-latest
+    outputs:
+      ITERATION: ${{ steps.set-iteration.outputs.ITERATION }}
+    steps:
+      - name: Set Milestone
+        id: set-milestone
+        run: echo "MILESTONE=${{ github.event.issue.milestone.title }}" >> $GITHUB_ENV
+
+      - name: Print Milestone
+        run: echo "Milestone is ${{ env.MILESTONE }}"        
+        
+      - name: Extract Month and Previous Months
+        id: extract-month
+        run: |
+          if [ -n "$MILESTONE" ]; then
+            MILESTONE_PART=$(echo $MILESTONE | cut -d'-' -f2)
+            MONTH=$(echo $MILESTONE_PART | cut -d' ' -f1)
+            echo "MONTH=$MONTH" >> $GITHUB_ENV
+      
+            # Mapping of month names to numerical values
+            declare -A month_map
+            month_map=( ["January"]=1 ["February"]=2 ["March"]=3 ["April"]=4 ["May"]=5 ["June"]=6 ["July"]=7 ["August"]=8 ["September"]=9 ["October"]=10 ["November"]=11 ["December"]=12 )
+      
+            # Validate if $MONTH is a valid month name
+            if [ -n "${month_map[$MONTH]}" ]; then
+              # Get the numerical value of the current month
+              current_month_value=${month_map[$MONTH]}
+      
+              # Calculate the previous month's numerical value
+              if [ $current_month_value -eq 1 ]; then
+                previous_month_value=12
+              else
+                previous_month_value=$((current_month_value - 1))
+              fi
+      
+              # Find the month name corresponding to the previous month's numerical value
+              for month in "${!month_map[@]}"; do
+                if [ ${month_map[$month]} -eq $previous_month_value ]; then
+                  PREVIOUS_MONTH=$month
+                  echo "PREVIOUS_MONTH=$PREVIOUS_MONTH" >> $GITHUB_ENV
+                  break
+                fi
+              done
+            else
+              echo "Invalid month name. Skipping calculation of Previous Month."
+            fi
+          else
+            echo "MILESTONE is blank. Skipping extraction and calculation."
+          fi    
+
+      - name: Print Previous Month
+        run: echo "Previous Month ${{ env.PREVIOUS_MONTH }}"
+
+      - name: Set Previous Month
+        id: set-previous-month
+        run: |
+          MONTH=${PREVIOUS_MONTH}
+          echo "MONTH=${MONTH}" >> $GITHUB_ENV     
+
+      - name: Print Month
+        run: echo "Month ${{ env.MONTH }}"          
+
+      - name: Extract Year
+        id: extract-year
+        run: |
+            MILESTONE_PART=$(echo $MILESTONE | cut -d'-' -f2)
+            YEAR=$(echo $MILESTONE_PART | cut -d' ' -f2)
+            echo "YEAR=$YEAR" >> $GITHUB_ENV
+
+      - name: Validate Month and Year
+        id: validate-month-and-year
+        run: |
+          # List of valid month names
+          VALID_MONTHS="January February March April May June July August September October November December"
+      
+          # Check if the extracted month is in the list of valid months
+          if [[ $VALID_MONTHS =~ (^| )$MONTH($| ) ]]; then
+            echo "Valid month: $MONTH"
+            echo "MONTH_VALID=true" >> $GITHUB_ENV
+          else
+            echo "Invalid month: $MONTH"
+            echo "MONTH_VALID=false" >> $GITHUB_ENV
+          fi
+      
+          # Check if the year is a 4-digit number
+          if [[ $YEAR =~ ^[0-9]{4}$ ]]; then
+            echo "Valid year: $YEAR"
+            echo "YEAR_VALID=true" >> $GITHUB_ENV
+          else
+            echo "Invalid year: $YEAR"
+            echo "YEAR_VALID=false" >> $GITHUB_ENV
+          fi            
+      
+      - name: Determine Quarter
+        id: determine-quarter
+        if: ${{ env.MONTH_VALID == 'true' && env.YEAR_VALID == 'true' }}        
+        run: |
+          LOWERCASE_MONTH=$(echo "$MONTH" | tr '[:upper:]' '[:lower:]')
+          if [[ "$LOWERCASE_MONTH" == "october" || "$LOWERCASE_MONTH" == "november" || "$LOWERCASE_MONTH" == "december" ]]; then
+            QUARTER="Q2"
+          elif [[ "$LOWERCASE_MONTH" == "january" || "$LOWERCASE_MONTH" == "february" || "$LOWERCASE_MONTH" == "march" ]]; then
+            QUARTER="Q3"
+          elif [[ "$LOWERCASE_MONTH" == "april" || "$LOWERCASE_MONTH" == "may" || "$LOWERCASE_MONTH" == "june" ]]; then
+            QUARTER="Q4"              
+          else
+            QUARTER="Q1"
+          fi
+          echo "QUARTER=$QUARTER" >> $GITHUB_ENV          
+
+      - name: Print QUARTER
+        if: ${{ env.MONTH_VALID == 'true' && env.YEAR_VALID == 'true' }}        
+        run: echo "QUARTER is $QUARTER"
+
+      - name: Increment Year if Q1 or Q2
+        id: increment-year
+        if: ${{ env.QUARTER == 'Q1' || env.QUARTER == 'Q2' }}
+        run: |
+          YEAR=$(($YEAR + 1))
+          echo "YEAR=$YEAR" >> $GITHUB_ENV
+
+      - name: Print YEAR
+        if: ${{ env.MONTH_VALID == 'true' && env.YEAR_VALID == 'true' }}        
+        run: echo "YEAR is $YEAR"        
+
+      - name: Replace first two characters with 'FY'
+        if: ${{ env.MONTH_VALID == 'true' && env.YEAR_VALID == 'true' }}        
+        id: replace-fy
+        run: echo "YEAR=$(echo $YEAR | sed 's/^../FY/')" >> $GITHUB_ENV
+        
+      - name: Print FY Year
+        if: ${{ env.MONTH_VALID == 'true' && env.YEAR_VALID == 'true' }}        
+        run: echo "FY Year - ${{ env.YEAR }}"        
+        
+      - name: Set Iteration Path
+        id: set-iteration
+        run: |
+          if [ "${{ env.MONTH_VALID }}" == "true" ] && [ "${{ env.YEAR_VALID }}" == "true" ]; then
+            echo "Iteration Path - OneCatTools\\$YEAR\\$QUARTER\\$MONTH"
+            echo "ITERATION=OneCatTools\\$YEAR\\$QUARTER\\$MONTH" >> $GITHUB_OUTPUT
+          else
+            echo "Invalid month or year. Using default Iteration Path."
+            echo "Iteration Path - OneCatTools"
+            echo "ITERATION=OneCatTools" >> $GITHUB_OUTPUT
+          fi     
+
+  alertEnhancementCK:
+    if: |
+      contains(github.event.issue.labels.*.name, 'enhancement')
+    needs: prepareIterationPathJob
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Sync enhancements to Azure DevOps
+        uses: RajeevPentyala/github-actions-issue-to-work-item@master
+        env:
+          ado_token: "${{ secrets.ADO_PERSONAL_ACCESS_TOKEN }}"
+          github_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          ado_organization: "cattools"
+          ado_project: "OneCatTools"
+          ado_area_path: "OneCatTools\\CreatorKit\\Develop"
+          ado_iteration_path: "${{ needs.prepareIterationPathJob.outputs.ITERATION }}"  
+          ado_wit: "User Story"
+          ado_new_state: "New"
+          ado_active_state: "Active"
+          ado_close_state: "Resolved"
+          ado_bypassrules: true
+          log_level: 100
+          
+  alertIssueCK:
+    if: |
+      contains(github.event.issue.labels.*.name, 'bug')
+    needs: prepareIterationPathJob
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Sync bugs to Azure DevOps
+        uses: RajeevPentyala/github-actions-issue-to-work-item@master
+        env:
+          ado_token: "${{ secrets.ADO_PERSONAL_ACCESS_TOKEN }}"
+          github_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          ado_organization: "cattools"
+          ado_project: "OneCatTools"
+          ado_area_path: "OneCatTools\\CreatorKit\\Develop"
+          ado_iteration_path: "${{ needs.prepareIterationPathJob.outputs.ITERATION }}"  
+          ado_wit: "Bug"
+          ado_new_state: "New"
+          ado_active_state: "Active"
+          ado_close_state: "Resolved"
+          ado_bypassrules: true
+          log_level: 100
+
+  alertQuestionCK:
+    if: |
+      contains(github.event.issue.labels.*.name, 'question')
+    needs: prepareIterationPathJob
+    runs-on: ubuntu-latest    
+    steps:
+      - name: Sync questions to Azure DevOps
+        uses: RajeevPentyala/github-actions-issue-to-work-item@master
+        env:
+          ado_token: "${{ secrets.ADO_PERSONAL_ACCESS_TOKEN }}"
+          github_token: "${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}"
+          ado_organization: "cattools"
+          ado_project: "OneCatTools"
+          ado_area_path: "OneCatTools\\CreatorKit\\Develop"
+          ado_iteration_path: "${{ needs.prepareIterationPathJob.outputs.ITERATION }}"  
+          ado_wit: "Question"
+          ado_new_state: "New"
+          ado_active_state: "Active"
+          ado_close_state: "Closed"
+          ado_bypassrules: true
+          log_level: 100  

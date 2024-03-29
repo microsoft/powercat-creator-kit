@@ -1,0 +1,14 @@
+<aipluginoperation aiplugin.name="msdynaib_AIQnAGenerator" operationid="msdynaib_AIQnAGenerator">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_AIQnAGenerator,operationid=msdynaib_AIQnAGenerator</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptaiqnagenerator54b0c71e86834c2f9a60ea59b9d43dc4</uniquename>
+  </customapi>
+  <description>From the given  Text  generate questions and answers. example response: [ { Question:"What is Power Apps", Answer:"Power Apps is a low-code tool to build apps"}]
+
+</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>54b0c71e-8683-4c2f-9a60-ea59b9d43dc4</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIQnAGenerator</name>
+</aipluginoperation>

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Comment">
+  <description default="Text containing reviews.">
+    <label description="Text containing reviews." languagecode="1033" />
+  </description>
+  <displayname default="Text">
+    <label description="Text" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.Comment</name>
+  <type>10</type>
+</customapirequestparameter>

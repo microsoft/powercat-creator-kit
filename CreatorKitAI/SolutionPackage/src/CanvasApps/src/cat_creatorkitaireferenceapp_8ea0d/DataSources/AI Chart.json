@@ -1,0 +1,56 @@
+[
+  {
+    "DataBoundServiceDataSetName": "default.cds",
+    "DataBoundServiceFunctionNamesKey": [
+      "Predict-202402.2.6.1"
+    ],
+    "DataBoundServiceOperationGroupNameKey": "AIBuilder\\bd0d8682-6d05-4e2b-a9ef-c694a371f6fb",
+    "DataBoundServiceRawMetadata": {
+      "Input": {
+        "Attributes": {
+          "additionalContext": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "AdditionalContext",
+            "Type": "string/byte"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        },
+        "RequiredAttributes": [
+          "Text"
+        ]
+      },
+      "Output": {
+        "Attributes": {
+          "FinishReason": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Finish Reason",
+            "Type": "string"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        }
+      },
+      "Source": true,
+      "TemplateName": "GptPowerPrompt"
+    },
+    "DataBoundSourceDataSourceName": "43b0dc67-68af-47ae-9a9c-9e69d396ba3e",
+    "Name": "AI Chart",
+    "ServiceKind": "DataBound",
+    "Type": "ServiceInfo"
+  }
+]

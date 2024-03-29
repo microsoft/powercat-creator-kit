@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Number_20of_20words">
+  <description default="Target word count to which the input text should be expanded">
+    <label description="Target word count to which the input text should be expanded" languagecode="1033" />
+  </description>
+  <displayname default="Number of words">
+    <label description="Number of words" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.Number_20of_20words</name>
+  <type>10</type>
+</customapirequestparameter>

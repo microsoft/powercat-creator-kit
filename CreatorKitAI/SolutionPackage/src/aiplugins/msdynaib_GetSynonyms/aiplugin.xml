@@ -1,0 +1,15 @@
+<aiplugin name="msdynaib_GetSynonyms">
+  <humandescription>Given the following  Text generate synonyms. Respond back in an array, like ["synonym1","synonym2"] without any additional content. Make sure the synonym(s) are the closest match to the give text. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate content.
+</humandescription>
+  <humanname>AI Synonyms</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Given the following  Text generate synonyms. Respond back in an array, like ["synonym1","synonym2"] without any additional content. Make sure the synonym(s) are the closest match to the give text. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate content.
+</modeldescription>
+  <modelname>AI Synonyms</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

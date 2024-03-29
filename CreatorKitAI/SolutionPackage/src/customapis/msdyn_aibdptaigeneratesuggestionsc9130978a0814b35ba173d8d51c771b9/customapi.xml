@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptaigeneratesuggestionsc9130978a0814b35ba173d8d51c771b9">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Based on the conversation -  conversation , generate top 3 or 4 additional suggested prompts. &#xA;&#xA;A basic Example of conversation will be in the below format JSON format [{&quot;content&quot;:&quot;Hi&quot;,&quot;role&quot;:&quot;user&quot;},{&quot;content&quot;:&quot;Hello! How can I assist you today?&quot;,&quot;role&quot;:&quot;assistant&quot;},{&quot;content&quot;:&quot;What is Powerapps co">
+    <label description="Based on the conversation -  conversation , generate top 3 or 4 additional suggested prompts. &#xA;&#xA;A basic Example of conversation will be in the below format JSON format [{&quot;content&quot;:&quot;Hi&quot;,&quot;role&quot;:&quot;user&quot;},{&quot;content&quot;:&quot;Hello! How can I assist you today?&quot;,&quot;role&quot;:&quot;assistant&quot;},{&quot;content&quot;:&quot;What is Powerapps co" languagecode="1033" />
+  </description>
+  <displayname default="AI Generate Suggestions">
+    <label description="AI Generate Suggestions" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIGenerateSuggestions</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

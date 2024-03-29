@@ -1,0 +1,15 @@
+<aiplugin name="msdynaib_AIQnAGenerator">
+  <humandescription>From the given  Text  generate questions and answers. example response: [ { Question:"What is Power Apps", Answer:"Power Apps is a low-code tool to build apps"}]
+
+</humandescription>
+  <humanname>AI QnA Generator</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>From the given  Text  generate questions and answers. example response: [ { Question:"What is Power Apps", Answer:"Power Apps is a low-code tool to build apps"}]
+
+</modeldescription>
+  <modelname>AI QnA Generator</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

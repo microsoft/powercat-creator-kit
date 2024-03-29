@@ -1,0 +1,15 @@
+<aipluginoperation aiplugin.name="msdynaib_Customprompt228202435537PM" operationid="msdynaib_Customprompt228202435537PM">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_Customprompt228202435537PM,operationid=msdynaib_Customprompt228202435537PM</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptcustomprompt228202435537pmbd0d86826d054e2ba9efc694a371f6fb</uniquename>
+  </customapi>
+  <description>Extract relevant data from the following Text  Text  and organize into a JSON. 
+Refer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.
+Example : 
+[{ ItemLegend: "ColumnData1", ItemCount : "ColumnData2"}, { ItemLegend: "ColumnData</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>bd0d8682-6d05-4e2b-a9ef-c694a371f6fb</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIChart</name>
+</aipluginoperation>

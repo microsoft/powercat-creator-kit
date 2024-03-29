@@ -1,0 +1,12 @@
+<aipluginoperation aiplugin.name="msdynaib_AIPalette" operationid="msdynaib_AIPalette">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_AIPalette,operationid=msdynaib_AIPalette</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptaipalette9eed90139df84d1fa914faf83e2bd028</uniquename>
+  </customapi>
+  <description>Monochromatic color palettes are based on a single color paired with various shades and tints. Like analogous palettes, monochromatic palettes can be very pleasing to look at. Generate a json list of 10 colors that are monochromatic based the primary color inspired from this Text : Example response:</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>9eed9013-9df8-4d1f-a914-faf83e2bd028</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIPalette</name>
+</aipluginoperation>

@@ -1,0 +1,15 @@
+<aiplugin name="msdynaib_Customprompt124202362324AM">
+  <humandescription>Extract categories from the following  Text 
+Response in the following format:[ "category1", "category2"]
+</humandescription>
+  <humanname>AI Extract Categories</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Extract categories from the following  Text 
+Response in the following format:[ "category1", "category2"]
+</modeldescription>
+  <modelname>AI Extract Categories</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

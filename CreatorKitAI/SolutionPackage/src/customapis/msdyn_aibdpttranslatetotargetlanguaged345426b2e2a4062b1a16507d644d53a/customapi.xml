@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdpttranslatetotargetlanguaged345426b2e2a4062b1a16507d644d53a">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Translates the provided text into the specified language.">
+    <label description="Translates the provided text into the specified language." languagecode="1033" />
+  </description>
+  <displayname default="AI Translate">
+    <label description="AI Translate" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AITranslate</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

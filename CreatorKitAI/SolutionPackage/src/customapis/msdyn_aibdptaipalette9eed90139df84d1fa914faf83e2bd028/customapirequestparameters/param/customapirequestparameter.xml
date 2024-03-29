@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="param">
+  <description default="Color that defines the Monochromatic color palettes to be generated">
+    <label description="Color that defines the Monochromatic color palettes to be generated" languagecode="1033" />
+  </description>
+  <displayname default="Text">
+    <label description="Text" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.param</name>
+  <type>10</type>
+</customapirequestparameter>

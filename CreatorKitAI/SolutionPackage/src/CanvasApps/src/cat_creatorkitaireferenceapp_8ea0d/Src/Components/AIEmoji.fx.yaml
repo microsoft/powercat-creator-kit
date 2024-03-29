@@ -1,0 +1,10 @@
+AIEmoji As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    FontSize: =30
+    Height: =640
+    Text: ="I just received these today and unboxed them to charge them before use, but upon first inspection it was revealed that the product description, based up which I bought them, is not truthful.\n\nIn the product description here it says “headphones Jack” and then lists “ ‎3.5 mm Jack” as an inclusion — this is untrue. In fact, the headphones are Bluetooth ONLY, and the only port on them is for a usb-c charging cable.\n\nMaybe this isn’t a big deal to a lot of buyers, but for me it was one of the biggest reasons I ordered the headphones. This is because there are often times that a Bluetooth connection simply isn’t available — on most airplanes, using older music devices like iPods or traditional stereo systems, etc. Because of this I wanted a new, quality set of headphones that could be wired or wireless, and JBL misled me into buying these.\n\nThey obviously will be returned even though I’d like a nice, quality Bluetooth over ear pair, but I thought other possible buyers should be aware. Or beware, I guess…"
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

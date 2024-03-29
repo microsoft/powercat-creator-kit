@@ -1,0 +1,2797 @@
+"'Home Screen' As screen":
+    BackgroundImage: =fluentBackground
+    Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Fill
+    OnVisible: |
+        =Concurrent(
+            Select(btnRewrite),
+            Select(btnRedact),
+            Select(btnRedact),
+            Select(btnRating),
+            Select(btnCategories),
+            Select(btnExpand),
+            Select(btnEmoji),
+            Select(btnExtract),
+            Select(btnTranslate),
+            Select(btnGenHeadlines),
+            Select(btnGenChart),
+            Select(btnGenQnA),
+            UpdateContext(
+                {
+                    vartranslatedText: 'AI Translate'.Predict(
+                        txtInputOriginalText_5.Value,
+                        DefaultSelectedLanguage
+                    ).Text,
+                    varColors: Table(ParseJSON('AI Palette'.Predict("Sunset").Text).colors),
+                    varCurrentChartIndex: 1,
+                    varCurrentEmojiIndex: 1,
+                    varCurrentRatingIndex: 1,
+                    varCurrentTagIndex: 1
+                }
+            )
+        );
+
+    "FluentAIOutputCard1_6 As 'AI Output Card'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =Parent.Height
+        LoadingText: =
+        ShowLoader: =showFlair
+        Width: =Parent.Width 
+        X: =0
+        Y: =0
+        ZIndex: =1
+
+    flairTimer As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =3000
+        OnTimerEnd: |-
+            =UpdateContext({showFlair:true});
+        OnTimerStart: |-
+            =UpdateContext({showFlair:false});
+        Repeat: =true
+        Visible: =false
+        X: =40
+        Y: =40
+        ZIndex: =2
+
+    MainScreenContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height - Self.Y - 2
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width - Self.X - 2
+        X: =2
+        Y: =2
+        ZIndex: =3
+
+        AIMessageContainer As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: |-
+                =ColorValue("#ffe89a")
+            DropShadow: =DropShadow.None
+            Fill: |-
+                =ColorValue("#fff4ce")
+            FillPortions: =0
+            Height: =40
+            LayoutGap: =5
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =5
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =5
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+            "icoInfo As 'Fluent Icon (1.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =26
+                IconColor: ="Gray"
+                IconName: ="InfoSolid"
+                IconSize: =24
+                IconType: ='PowerCAT.Icon.IconType'.Icon
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Width: =26
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            "AutoWidthLabel1 As 'Auto Width Label (1.0.22)'":
+                AlignInContainer: =AlignInContainer.End
+                DisplayMode: =DisplayMode.Edit
+                Height: =26
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Text: =AIDisclaimer
+                Width: =Max(Self.AutoWidth,370)
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            LinkCanvas1 As Link:
+                AlignInContainer: =AlignInContainer.Center
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontSize: =0
+                FontUnderline: =true
+                Height: =26
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="See terms"
+                URL: |-
+                    ="https://go.microsoft.com/fwlink/?linkid=2225468"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        BottomContainer2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.None
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            ZIndex: =2
+
+            SidebarContainer2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =240
+                ZIndex: =4
+
+                Container2 As groupContainer.horizontalAutoLayoutContainer:
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =60
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    ZIndex: =2
+
+                    imgCKLogo As image:
+                        Height: =30
+                        Image: =Creator_Kit_Logo_color_No_Text
+                        Width: =30
+                        ZIndex: =1
+
+                    txtAIPromptTilte_1 As Text:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =RGBA(33, 33, 33, 1)
+                        Height: =30
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =20
+                        Text: ="AI Library"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =90
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    txtAIPromptTilte_2 As Text:
+                        AlignInContainer: =AlignInContainer.Center
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =RGBA(72, 163, 62, 1)
+                        Height: =30
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =14
+                        Text: ="v0.1"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =50
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                "Nav1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    Height: =200
+                    Items: =NavCollection
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: |
+                        =Switch(
+                            Self.Selected.ItemKey,
+                            "AIDefine",
+                            UpdateContext(
+                                {
+                                    varMarketShareOnSelect: "OnSelect" & Rand(),
+                                    varBuyingCommissionOnSelect: Blank()
+                                }
+                            ),
+                            UpdateContext(
+                                {
+                                    varMarketShareOnSelect: Blank(),
+                                    varBuyingCommissionOnSelect: Blank()
+                                }
+                            )
+                        );
+                    SelectedKey: ="AIRewrite"
+                    Theme: =AppThemeJSON
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+            MainContainer2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                FillPortions: =7
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =20
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =20
+                ZIndex: =5
+
+                txtAIPromptTilte As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    Font: =Font.'Segoe UI'
+                    FontColor: =
+                    Height: =45
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =28
+                    Text: =Nav1.Selected.ItemDisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =96
+                    Wrap: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                txtAIPromptDescription As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    DisplayMode: =DisplayMode.Edit
+                    Font: =Font.'Segoe UI'
+                    FontColor: |-
+                        =ColorValue("#2E3438")
+                    Height: =96
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =16
+                    Text: =LookUp('Custom APIs', Name = Nav1.Selected.ItemKey).Description
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                    Weight: ='TextCanvas.Weight'.Regular
+                    Width: =96
+                    Wrap: =true
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                PromptSignatureContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =50
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =3
+
+                    HtmlText1 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        HtmlText: |-
+                            ="'" & LookUp(CustomAPICollection, Name = Nav1.Selected.ItemKey).'Display Name' & "'.<font color='#295ea3'>Predict</font>(" & Concat(LookUp(CustomAPICollection, Name = Nav1.Selected.ItemKey).'Custom API Request Parameters','Display Name', ",") & ")"
+                        LayoutMinHeight: =32
+                        PaddingLeft: =20
+                        PaddingRight: =20
+                        Size: =14
+                        ZIndex: =1
+
+                PromptPrametersContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =50
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    ZIndex: =4
+
+                    txtParameters As Text:
+                        AutoHeight: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =16
+                        Text: ="Parameters"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =96
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    Table1 As Table.pcfdataset:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BasePaletteColor: =
+                        DisableChildItemsEditing: ="no"
+                        DisplayMode: =DisplayMode.Edit
+                        EnableColumnMoving: ="no"
+                        Height: =If(Self.Y + 500 > Parent.Height, Parent.Height - Self.Y, 500)
+                        Items: =LookUp('Custom APIs', Name = Nav1.Selected.ItemKey).'Custom API Request Parameters'
+                        LayoutMinHeight: =If(Self.Y + 500 > Parent.Height, Parent.Height - Self.Y, 500)
+                        LayoutMinWidth: =If(Self.X + 800 > Parent.Width, Parent.Width - Self.X, 800)
+                        onCellValueChange: =false
+                        onFilter: =false
+                        onNavigate: =false
+                        onRowSelect: =false
+                        onSave: =false
+                        OnSelect: =false
+                        ReflowBehavior: ='PowerAppsOneGrid.ReflowBehavior'.Reflow
+                        ShowFooter: ="false"
+                        Width: =If(Self.X + 800 > Parent.Width, Parent.Width - Self.X, 800)
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                        Description1 As pcfDataField.textualColumn:
+                            FieldDisplayName: ="Description"
+                            FieldName: ="description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =10
+
+                        "'Display Name2' As pcfDataField.textualColumn":
+                            FieldDisplayName: ="Display Name"
+                            FieldName: ="displayname"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =11
+
+                txtExample As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =true
+                    DisplayMode: =DisplayMode.Edit
+                    Font: =Font.'Segoe UI'
+                    FontColor: =
+                    Height: =32
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =20
+                    Text: ="Example"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =96
+                    Wrap: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =5
+
+                AIRewriteContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIRewrite"
+                    ZIndex: =7
+
+                    AIRewriteMainContainer As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        AIRewriteLeftContainer As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            txtEnglishLanguage_1 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Original Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =120
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "txtInputOriginalText As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                Value: |-
+                                    ="Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.
+                                    Additionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.
+                                    It can also help improve sleep quality and reduce insomnia."
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            btnRewrite As Button:
+                                AlignInContainer: =AlignInContainer.End
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: |-
+                                    =UpdateContext({showLoader:true, result:Blank()});
+                                    UpdateContext({rewriteResult:'AI Rewrite'.Predict(txtInputOriginalText.Value, "").Text});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Rewrite"
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        AIRewriteRightContainer As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =4
+
+                            txtTargetLanguage_4 As Text:
+                                AutoHeight: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Rewritten Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =200
+                                X: =40
+                                Y: =0
+                                ZIndex: =1
+
+                            AIRewriteOutputCard As groupContainer.manualLayoutContainer:
+                                BorderStyle: =BorderStyle.None
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingBottom: =20
+                                PaddingLeft: =20
+                                PaddingRight: =20
+                                PaddingTop: =20
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                ZIndex: =3
+
+                                "FluentAIOutputCard1_1 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - 2 * Self.Y
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - 2 * Self.X
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =1
+
+                                OutputWrapperContainer As groupContainer.verticalAutoLayoutContainer:
+                                    BorderStyle: =BorderStyle.None
+                                    DropShadow: =DropShadow.None
+                                    Height: =Parent.Height
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingLeft: =20
+                                    PaddingRight: =20
+                                    PaddingTop: =20
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    ZIndex: =3
+
+                                    TextCanvas1 As Text:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        DisplayMode: =DisplayMode.Edit
+                                        FillPortions: =1
+                                        FontColor: =
+                                        Height: =261
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Text: =rewriteResult
+                                        VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                        Visible: =!showLoader
+                                        Width: =506
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                AIPaletteContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIPalette"
+                    ZIndex: =8
+
+                    Container3_1 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Container4_1 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingTop: =10
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            "icoForest As 'Fluent Icon (1.0.22)'":
+                                BorderRadius: =4
+                                DisplayMode: =DisplayMode.Edit
+                                FillColor: |-
+                                    ="#228B22"
+                                FontColor: ="White"
+                                FontSize: =14
+                                Height: =25
+                                IconName: ="ClassroomLogo"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({varColors:Table(ParseJSON('AI Palette'.Predict("Forest").Text).colors)});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Forest"
+                                Tooltip: =""
+                                Width: =80
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "icoSunset As 'Fluent Icon (1.0.22)'":
+                                BorderRadius: =4
+                                DisplayMode: =DisplayMode.Edit
+                                FillColor: |-
+                                    ="#FFA500"
+                                FontColor: ="Black"
+                                FontSize: =14
+                                Height: =25
+                                IconName: ="Sunny"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({varColors:Table(ParseJSON('AI Palette'.Predict("Sunset").Text).colors)});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Sunset"
+                                Tooltip: =""
+                                Width: =80
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                            "icoBeach As 'Fluent Icon (1.0.22)'":
+                                BorderRadius: =4
+                                DisplayMode: =DisplayMode.Edit
+                                FillColor: |-
+                                    ="#0077BE"
+                                FontColor: ="White"
+                                FontSize: =14
+                                Height: =25
+                                IconName: ="Vacation"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({varColors:Table(ParseJSON('AI Palette'.Predict("Beach").Text).colors)});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Beach"
+                                Tooltip: =""
+                                Width: =75
+                                X: =0
+                                Y: =0
+                                ZIndex: =4
+
+                        Container5_1 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =4
+
+                            Container15 As groupContainer.manualLayoutContainer:
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =2
+
+                                Gallery1_1 As gallery.galleryVertical:
+                                    DelayItemLoading: =true
+                                    Height: =Parent.Height - (Self.Y * 2)
+                                    Items: =varColors
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    ShowScrollbar: =false
+                                    TemplatePadding: =0
+                                    TemplateSize: =22
+                                    Visible: =!showLoader
+                                    Width: =Parent.Width - (Self.X * 2)
+                                    X: =15
+                                    Y: =15
+                                    ZIndex: =1
+
+                                    Rectangle2 As rectangle:
+                                        Fill: =ColorValue(ThisItem.Value)
+                                        Height: =22
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.Width
+                                        ZIndex: =1
+
+                                "FluentAIOutputCard1_11 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - 2 * Self.Y
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - 2 * Self.X
+                                    X: =1
+                                    Y: =1
+                                    ZIndex: =2
+
+                AIEpandContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIExpand"
+                    ZIndex: =9
+
+                    AIRewriteMainContainer_3 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        AIRewriteLeftContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            txtEnglishLanguage_2 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Key words"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =120
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "txtInputOriginalText_4 As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DelayOutput: =true
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                OnChange: =
+                                Value: ="Peace & War"
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            btnExpand As Button:
+                                AlignInContainer: =AlignInContainer.End
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({expandResult:'AI Expand'.Predict(txtInputOriginalText_4.Value, "").Text});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Expand"
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        AIRewriteRightContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =4
+
+                            txtTargetLanguage_5 As Text:
+                                AutoHeight: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Expanded Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =200
+                                X: =40
+                                Y: =0
+                                ZIndex: =1
+
+                            Container4 As groupContainer.manualLayoutContainer:
+                                AlignInContainer: =AlignInContainer.Center
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                ZIndex: =3
+
+                                "FluentAIOutputCard1_3 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - 2 * Self.Y
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - 2 * Self.X
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =1
+
+                                Container6 As groupContainer.verticalAutoLayoutContainer:
+                                    DropShadow: =DropShadow.None
+                                    Height: =Parent.Height
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingLeft: =20
+                                    PaddingRight: =20
+                                    PaddingTop: =20
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    TextCanvas1_2 As Text:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        DisplayMode: =DisplayMode.Edit
+                                        FillPortions: =1
+                                        FontColor: =
+                                        Height: =261
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Text: =expandResult
+                                        VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                        Visible: =!showLoader
+                                        Width: =506
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =2
+
+                AIDefineContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIDefine"
+                    ZIndex: =10
+
+                    TextCanvas1_4 As Text:
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =""
+                        FontColor: =
+                        FontItalic: =false
+                        FontStrikethrough: =false
+                        FontUnderline: =false
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =17
+                        Text: ="ROI Data"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container1 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Semilight
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =15
+                        ZIndex: =2
+
+                        Container16 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =32
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            ZIndex: =2
+
+                            TextCanvas2 As Text:
+                                AlignInContainer: =AlignInContainer.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Segoe UI'
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Market Share"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =140
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            Container5_2 As groupContainer.manualLayoutContainer:
+                                AlignInContainer: =AlignInContainer.Start
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =32
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                Width: =40
+                                ZIndex: =2
+
+                                "AITeachingPopover1 As 'AI Teaching popover'":
+                                    AIChatbotPopoverTitle: =""
+                                    ButtonText: =""
+                                    Definition: ='AI Define'.Predict("Market Share").Text
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    InputEvent: =If(Nav1.Selected.ItemKey = "AIDefine",varMarketShareOnSelect,Blank())
+                                    OnChange: =false
+                                    OnSubmit: =
+                                    ShowDisclaimer: =true
+                                    Width: =40
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                "Icon1_1 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    IconName: ="info"
+                                    IconSize: =20
+                                    IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                    OnChange: |-
+                                        =UpdateContext({varMarketShareOnSelect:"OnSelect"&Rand(),varBuyingCommissionOnSelect: Blank()})
+                                    Text: =""
+                                    Tooltip: =""
+                                    Width: =40
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                            "DataCardValue3 As 'Text input'":
+                                Align: ='TextInputCanvas.Align'.End
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =
+                                FontItalic: =false
+                                FontStrikethrough: =false
+                                FontUnderline: =false
+                                FontWeight: =""
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Value: =5
+                                Width: =320
+                                X: =523
+                                Y: =10
+                                ZIndex: =3
+
+                        Container16_1 As groupContainer.horizontalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =32
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =20
+                            PaddingRight: =20
+                            ZIndex: =3
+
+                            TextCanvas2_1 As Text:
+                                AlignInContainer: =AlignInContainer.Center
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Segoe UI'
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Text: ="Buying Commission"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =140
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            Container5_3 As groupContainer.manualLayoutContainer:
+                                AlignInContainer: =AlignInContainer.Start
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =32
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                Width: =40
+                                ZIndex: =2
+
+                                "AITeachingPopover1_1 As 'AI Teaching popover'":
+                                    AIChatbotPopoverTitle: =""
+                                    ButtonText: =""
+                                    Definition: ='AI Define'.Predict("Buying Commission").Text
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    InputEvent: =If(Nav1.Selected.ItemKey = "AIDefine",varBuyingCommissionOnSelect,Blank())
+                                    OnChange: =false
+                                    OnSubmit: =
+                                    ShowDisclaimer: =true
+                                    Width: =40
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                "Icon1_2 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    IconName: ="info"
+                                    IconSize: =20
+                                    IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                    OnChange: |-
+                                        =UpdateContext({varBuyingCommissionOnSelect:"OnSelect"&Rand(),varMarketShareOnSelect: Blank()})
+                                    Text: =""
+                                    Tooltip: =""
+                                    Width: =40
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                            "DataCardValue3_1 As 'Text input'":
+                                Align: ='TextInputCanvas.Align'.End
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =
+                                FontItalic: =false
+                                FontStrikethrough: =false
+                                FontUnderline: =false
+                                FontWeight: =""
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Value: =200
+                                Width: =320
+                                X: =523
+                                Y: =10
+                                ZIndex: =3
+
+                AIExtractCategoriesContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIExtractCategories"
+                    ZIndex: =11
+
+                    AIRewriteMainContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        AIRewriteLeftContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            "txtInputOriginalText_2 As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DelayOutput: =false
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                OnChange: =false
+                                Value: =Index(TagsExamples,If(IsBlankOrError(varCurrentTagIndex),1,varCurrentTagIndex)).Value
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            Container19 As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.Center
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =35
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =5
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =5
+
+                                "Icon1_8 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =If(varCurrentTagIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
+                                    Height: =30
+                                    IconName: ="Previous"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentTagIndex:varCurrentTagIndex-1});
+                                        UpdateContext({showLoader:true});
+                                        UpdateContext({categories: 'AI Extract Categories'.Predict(txtInputOriginalText_2.Value).Text,
+                                                  categoryColors:Table(ParseJSON('AI Palette'.Predict("light blue mountain").Text).colors)});
+                                        ClearCollect(colCategories,AddColumns(Table(ParseJSON(categories)), "ItemDisplayName", Value, "ItemBackgroundColor", Index(categoryColors, RandBetween(0, CountRows(categoryColors)-1)).Value, "ItemBorderColor", "#BBBBBB" ));
+                                        UpdateContext({showLoader:false});
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Previous example"
+                                    Visible: =true
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "Icon1_9 As 'Fluent Icon (1.0.22)'":
+                                    BorderColor: =
+                                    DisplayMode: =If(varCurrentTagIndex <> CountRows(TagsExamples),DisplayMode.Edit,DisplayMode.Disabled)
+                                    Height: =30
+                                    IconName: ="Next"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentTagIndex:varCurrentTagIndex+1});
+                                        UpdateContext({showLoader:true});
+                                        UpdateContext({categories: 'AI Extract Categories'.Predict(txtInputOriginalText_2.Value).Text,
+                                                  categoryColors:Table(ParseJSON('AI Palette'.Predict("light blue mountain").Text).colors)});
+                                        ClearCollect(colCategories,AddColumns(Table(ParseJSON(categories)), "ItemDisplayName", Value, "ItemBackgroundColor", Index(categoryColors, RandBetween(0, CountRows(categoryColors)-1)).Value, "ItemBorderColor", "#BBBBBB" ));
+                                        UpdateContext({showLoader:false});
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Next example"
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =2
+
+                                btnExtract As Button:
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: |-
+                                        =UpdateContext({showLoader:true});
+                                        UpdateContext({categories: 'AI Extract Categories'.Predict(txtInputOriginalText_2.Value).Text,
+                                                  categoryColors:Table(ParseJSON('AI Palette'.Predict("light blue mountain").Text).colors)});
+                                        ClearCollect(colCategories,AddColumns(Table(ParseJSON(categories)), "ItemDisplayName", Value, "ItemBackgroundColor", Index(categoryColors, RandBetween(0, CountRows(categoryColors)-1)).Value, "ItemBorderColor", "#BBBBBB" ));
+                                        UpdateContext({showLoader:false});
+                                    Text: ="Extract Categories"
+                                    Width: =160
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                        AIRewriteRightContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =4
+
+                            Container4_3 As groupContainer.manualLayoutContainer:
+                                AlignInContainer: =AlignInContainer.Center
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                ZIndex: =2
+
+                                "FluentAIOutputCard1_4 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - 2 * Self.Y
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - 2 * Self.X
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =1
+
+                                Container6_1 As groupContainer.verticalAutoLayoutContainer:
+                                    DropShadow: =DropShadow.None
+                                    Height: =Parent.Height
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    LayoutWrap: =true
+                                    PaddingBottom: =20
+                                    PaddingLeft: =20
+                                    PaddingRight: =20
+                                    PaddingTop: =20
+                                    Width: =Parent.Width
+                                    ZIndex: =2
+
+                                    "TagList2 As 'Fluent Tag List (1.0.22)'.pcfdataset":
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =200
+                                        Items: =FirstN(colCategories,10)
+                                        LayoutMinHeight: =200
+                                        LayoutMinWidth: =200
+                                        OnChange: =
+                                        Visible: =!showLoader
+                                        Width: =200
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                AIGenerateHeadlineContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIGenerateHeadline"
+                    ZIndex: =12
+
+                    AIGenerateHeadlineMainContainer As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =5
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        ZIndex: =1
+
+                        Container8 As groupContainer.manualLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =40
+                            LayoutMinHeight: =40
+                            LayoutMinWidth: =250
+                            ZIndex: =1
+
+                            "FluentAIOutputCard1_7 As 'AI Output Card'":
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height - 2 * Self.Y
+                                LoadingText: ="Generating headlines..."
+                                ShowLoader: =showLoader
+                                Width: =Parent.Width - 2 * Self.X
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            txtEnglishLanguage_3 As Text:
+                                AutoHeight: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =Font.'Segoe UI'
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =Parent.Height
+                                Size: =20
+                                Text: =varHeadlines
+                                Visible: =!showLoader
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - (Self.X * 2)
+                                X: =10
+                                Y: =0
+                                ZIndex: =2
+
+                        "txtInputOriginalText_6 As 'Text input'":
+                            AlignInContainer: =AlignInContainer.Stretch
+                            BasePaletteColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =1
+                            FontColor: =
+                            Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Mode: ='TextInputCanvas.Mode'.Multiline
+                            Value: |-
+                                ="Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.
+                                Additionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.
+                                It can also help improve sleep quality and reduce insomnia."
+                            Width: =320
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                        btnGenHeadlines As Button:
+                            AlignInContainer: =AlignInContainer.End
+                            BasePaletteColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            OnSelect: |-
+                                =UpdateContext({showLoader:true});
+                                UpdateContext({varHeadlines: 'AI Generate Headline'.Predict(txtInputOriginalText_6.Value).Text});
+                                UpdateContext({showLoader:false});
+                            Text: ="Generate Headlines"
+                            Width: =160
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                AITranslateContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AITranslate"
+                    ZIndex: =13
+
+                    AITranslateMainContainer_6 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        AITranslateLeftContainer_6 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =10
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            txtEnglishLanguage_6 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Original Language"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =240
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "txtInputOriginalText_5 As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom - InputOptionContainer.Height
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                Value: |-
+                                    ="Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.
+                                    Additionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.
+                                    It can also help improve sleep quality and reduce insomnia."
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            InputOptionContainer As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =40
+                                LayoutGap: =10
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =4
+
+                                drpDownLanguages As Dropdown.pcfdataset:
+                                    DefaultSelectedItems: =LookUp(Languages,Value=DefaultSelectedLanguage)
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    Items: =Languages
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    Width: =320
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                btnTranslate As Button:
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: |-
+                                        =UpdateContext({showLoader:true, vartranslatedText:""});
+                                        UpdateContext({vartranslatedText:'AI Translate'.Predict(txtInputOriginalText_5.Value, drpDownLanguages.Selected.Value).Text});
+                                        UpdateContext({showLoader:false});
+                                    Text: ="Translate"
+                                    Width: =96
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                        AITranslateRightContainer_6 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =4
+
+                            txtTargetLanguage_8 As Text:
+                                AutoHeight: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Translated Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =200
+                                X: =40
+                                Y: =0
+                                ZIndex: =1
+
+                            AITranslateOutputCard_2 As groupContainer.manualLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                BorderStyle: =BorderStyle.None
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingBottom: =20
+                                PaddingLeft: =20
+                                PaddingRight: =20
+                                PaddingTop: =20
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                ZIndex: =3
+
+                                "FluentAIOutputCard1_12 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - 2 * Self.Y
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - 2 * Self.X
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =1
+
+                                OutputWrapperContainer_1 As groupContainer.verticalAutoLayoutContainer:
+                                    BorderStyle: =BorderStyle.None
+                                    DropShadow: =DropShadow.None
+                                    Height: =Parent.Height
+                                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingLeft: =20
+                                    PaddingRight: =20
+                                    PaddingTop: =20
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    ZIndex: =3
+
+                                    TextCanvas1_3 As Text:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        DisplayMode: =DisplayMode.Edit
+                                        FillPortions: =1
+                                        FontColor: =
+                                        Height: =261
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Text: =If(!IsBlankOrError(vartranslatedText),vartranslatedText)
+                                        VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                        Visible: =!showLoader
+                                        Width: =506
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                AISynonymContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =5
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AISynonyms"
+                    ZIndex: =14
+
+                    "txtInputSynonyms As 'Text input'":
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =""
+                        FontColor: =
+                        Height: =40
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Mode: ='TextInputCanvas.Mode'.SingleLine
+                        Value: ="Optimism"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container9 As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        ZIndex: =3
+
+                        "TagList1_1 As 'Fluent Tag List (1.0.22)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.Height - (Self.Y * 2)
+                            Items: =FirstN(colSynonyms,20)
+                            OnChange: =Notify(Self.Selected.ItemDisplayName)
+                            SelectedKey: ="forest"
+                            Theme: =JSON(AppTheme)
+                            Visible: =!showLoader
+                            Width: =Parent.Width - (Self.X * 2)
+                            X: =20
+                            Y: =20
+                            ZIndex: =1
+
+                        "FluentAIOutputCard1_8 As 'AI Output Card'":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.Height - (Self.Y * 2)
+                            LoadingText: ="Getting Synonyms..."
+                            ShowLoader: =showLoader
+                            Width: =Parent.Width- (Self.X * 2)
+                            X: =2
+                            Y: =10
+                            ZIndex: =2
+
+                    btnCategories As Button:
+                        AlignInContainer: =AlignInContainer.Start
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: |-
+                            =UpdateContext({showLoader:true});
+                            UpdateContext({varSynonyms: 'AI Synonyms'.Predict(txtInputSynonyms.Value).Text});
+                            UpdateContext({categoryColors: Table(ParseJSON('AI Palette'.Predict("sunrise").Text).colors)});
+                            ClearCollect(colSynonyms,AddColumns(Table(ParseJSON(varSynonyms)), "ItemDisplayName", Value, "ItemBackgroundColor", Index(categoryColors, RandBetween(0, CountRows(categoryColors)-1)).Value, "ItemTextColor", "#222222", "ItemBorderColor", "#BBBBBB" ));
+                            UpdateContext({showLoader:false});
+                        Text: ="Extract Categories"
+                        Width: =160
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                AIGenerateQnAContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIQnAGenerator"
+                    ZIndex: =15
+
+                    AIRewriteMainContainer_2 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        AIRewriteLeftContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            "txtInputOriginalText_3 As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                Value: |-
+                                    ="Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.
+                                    Additionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.
+                                    It can also help improve sleep quality and reduce insomnia."
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            btnGenQnA As Button:
+                                AlignInContainer: =AlignInContainer.End
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: |-
+                                    =UpdateContext({showLoader:true});
+                                    ClearCollect(QnACollection,AddColumns(Table(ParseJSON('AI QnA Generator'.Predict(txtInputOriginalText_3.Value).Text)),"Questions",Value.Question,"Answers",Value.Answer, "expand", true));
+                                    Clear(QnAIndexCollection);
+                                    ForAll(QnACollection,Collect(QnAIndexCollection,{Questions:Questions,Answers:Answers,expand: expand,Index:Value(Last(QnAIndexCollection).Index)+1}));
+                                    UpdateContext({showLoader:false});
+                                Text: ="Generate QnA"
+                                Width: =160
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        AIRewriteRightContainer_2 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =3
+                            PaddingLeft: =3
+                            PaddingRight: =3
+                            PaddingTop: =3
+                            ZIndex: =4
+
+                            Container7 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingBottom: =1
+                                PaddingLeft: =1
+                                PaddingRight: =1
+                                PaddingTop: =1
+                                ZIndex: =3
+
+                                "FluentAIOutputCard1_5 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "galQnA As gallery.'BrowseLayout_Flexible_SocialFeed_ver5.0'":
+                                    BorderColor: =RGBA(40, 134, 222, 1)
+                                    DelayItemLoading: =true
+                                    Height: =Parent.Height
+                                    Items: =Table(ParseJSON('AI QnA Generator'.Predict(txtInputOriginalText_3.Value).Text))
+                                    Layout: =Layout.Vertical
+                                    LoadingSpinner: =LoadingSpinner.Data
+                                    TemplatePadding: =4
+                                    TemplateSize: =85
+                                    Visible: =false
+                                    Width: =Parent.Width - (Self.Y * 2)
+                                    X: =10
+                                    Y: =10
+                                    ZIndex: =2
+
+                                    Title4_1 As label:
+                                        AutoHeight: =true
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: = FontWeight.Semibold
+                                        Height: =25
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =12
+                                        Text: =Text(ThisItem.Value.Question)
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =454
+                                        ZIndex: =5
+
+                                    Subtitle4_1 As label:
+                                        AutoHeight: =true
+                                        Font: =Font.'Segoe UI'
+                                        FontWeight: = FontWeight.Normal
+                                        Height: =Self.Size * 1.8
+                                        OnSelect: =Select(Parent)
+                                        PaddingBottom: =0
+                                        PaddingLeft: =0
+                                        PaddingRight: =0
+                                        PaddingTop: =0
+                                        Size: =10
+                                        Text: =Text(ThisItem.Value.Answer)
+                                        VerticalAlign: =VerticalAlign.Top
+                                        Width: =454
+                                        Y: |
+                                            =Title4_1.Y + Title4_1.Height + 5
+                                        ZIndex: =6
+
+                                    Separator4_1 As rectangle:
+                                        Height: =8
+                                        OnSelect: =Select(Parent)
+                                        Width: =Parent.TemplateWidth
+                                        Y: =Subtitle4_1.Height + Subtitle4_1.Y + 5
+                                        ZIndex: =7
+
+                                "FluentDetailsList1 As 'Fluent Details List (1.0.22)'.pcfdataset":
+                                    columns_Items: |-
+                                        =Table(
+                                            {
+                                                ColName: "Questions",
+                                                ColDisplayName: "Questions",
+                                                ColWidth: Parent.Width-90,
+                                                ColSortable: true,
+                                                ColIsBold: true,
+                                                ColResizable: true
+                                            },
+                                            {
+                                                ColName: "Answers",
+                                                ColDisplayName: "Answers",
+                                                ColShowAsSubTextOf: "Questions",
+                                                ColMultiLine: true
+                                            },
+                                            {
+                                                ColName: "expand",
+                                                ColDisplayName: "",
+                                                ColWidth: 32,
+                                                ColResponsive: false,
+                                                ColRightAligned: true,
+                                                ColCellType: "expand"
+                                            }
+                                        )
+                                    Compact: =false
+                                    DisplayMode: =DisplayMode.Edit
+                                    HeaderVisible: =false
+                                    Height: =Parent.Height - (Self.Y * 2)
+                                    Items: =QnAIndexCollection
+                                    OnChange: |-
+                                        =If(Self.EventName="CellAction" && Self.EventColumn="expand",
+                                            With(LookUp(QnAIndexCollection,Index=Int(Self.EventRowKey+1)) As Row,
+                                                Patch(QnAIndexCollection,Row,{expand:!Row.expand})
+                                                );
+                                        );
+                                    OnSelect: =false
+                                    RaiseOnRowSelectionChangeEvent: =true
+                                    RecordKey: =""
+                                    SelectionType: ='PowerCAT.FluentDetailsList.SelectionType'.None
+                                    Theme: =AppThemeJSON
+                                    Visible: =!showLoader
+                                    Width: =Parent.Width - (Self.X * 2)
+                                    X: =5
+                                    Y: =5
+                                    ZIndex: =3
+
+                                    Questions1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Questions"
+                                        FieldName: ="Questions"
+                                        FieldType: ="O"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =2
+                                        ZIndex: =24
+
+                                    expand1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="expand"
+                                        FieldName: ="expand"
+                                        FieldType: ="b"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =3
+                                        ZIndex: =25
+
+                                    RecordKey1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="RecordKey"
+                                        FieldName: ="RecordKey"
+                                        FieldType: ="n"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =4
+                                        ZIndex: =26
+
+                                    Answers1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Answers"
+                                        FieldName: ="Answers"
+                                        FieldType: ="O"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =4
+                                        ZIndex: =27
+
+                                    Index1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Index"
+                                        FieldName: ="Index"
+                                        FieldType: ="n"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =5
+                                        ZIndex: =28
+
+                AIRedactContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIRedact"
+                    ZIndex: =16
+
+                    AIRewriteMainContainer_4 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        AIRewriteLeftContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            txtEnglishLanguage_4 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Original Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =120
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "txtInputOriginalText_1 As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                Value: ="John Doe's social security number is 12343043812 and his address is 1234 Maple Street, Anytown, USA."
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            btnRedact As Button:
+                                AlignInContainer: =AlignInContainer.End
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({result:'AI Redact'.Predict(txtInputOriginalText_1.Value, "**").Text});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Redact"
+                                Width: =96
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                        AIRewriteRightContainer_4 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =4
+
+                            txtTargetLanguage_6 As Text:
+                                AutoHeight: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Redacted Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =200
+                                X: =40
+                                Y: =0
+                                ZIndex: =1
+
+                            AIRewriteOutputCard_1 As groupContainer.manualLayoutContainer:
+                                BorderStyle: =BorderStyle.None
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingBottom: =20
+                                PaddingLeft: =20
+                                PaddingRight: =20
+                                PaddingTop: =20
+                                RadiusBottomLeft: =0
+                                RadiusBottomRight: =0
+                                RadiusTopLeft: =0
+                                RadiusTopRight: =0
+                                ZIndex: =3
+
+                                "FluentAIOutputCard1_2 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - 2 * Self.Y
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - 2 * Self.X
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =1
+
+                                Container4_2 As groupContainer.verticalAutoLayoutContainer:
+                                    BorderStyle: =BorderStyle.None
+                                    DropShadow: =DropShadow.None
+                                    Height: =Parent.Height
+                                    LayoutDirection: =LayoutDirection.Vertical
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingBottom: =20
+                                    PaddingLeft: =20
+                                    PaddingRight: =20
+                                    PaddingTop: =20
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Width: =Parent.Width
+                                    ZIndex: =3
+
+                                    TextCanvas1_1 As Text:
+                                        AlignInContainer: =AlignInContainer.Stretch
+                                        DisplayMode: =DisplayMode.Edit
+                                        FillPortions: =1
+                                        FontColor: =
+                                        Height: =261
+                                        LayoutMinHeight: =32
+                                        LayoutMinWidth: =96
+                                        Text: =result
+                                        VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                                        Visible: =!showLoader
+                                        Width: =506
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                AIChart As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIChart"
+                    ZIndex: =17
+
+                    AITableMainContainer_5 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        AITableLeftContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingRight: =10
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            Paragraph As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Text"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =120
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "txtInputParagraph As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                Value: =Index(ChartsExamples,If(IsBlankOrError(varCurrentChartIndex),1,varCurrentChartIndex)).Value
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =2
+
+                            Container17_1 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =35
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =5
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =4
+
+                                "Icon1_5 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =If(varCurrentChartIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
+                                    Height: =30
+                                    IconName: ="Previous"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentChartIndex:varCurrentChartIndex-1});
+                                        UpdateContext({showLoader:true});
+                                        UpdateContext({varDetails : ParseJSON('AI Chart'.Predict(txtInputParagraph.Value).Text)});
+                                        UpdateContext({showLoader:false});
+                                        ClearCollect(colDetails,AddColumns(Table(varDetails).Value,"ItemLegend",Value.ItemLegend,"ItemCount",Value.ItemCount));
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Previous example"
+                                    Visible: =true
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "Icon1_4 As 'Fluent Icon (1.0.22)'":
+                                    BorderColor: =
+                                    DisplayMode: =If(varCurrentChartIndex <> CountRows(ChartsExamples),DisplayMode.Edit,DisplayMode.Disabled)
+                                    Height: =30
+                                    IconName: ="Next"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentChartIndex:varCurrentChartIndex+1});
+                                        UpdateContext({showLoader:true});
+                                        UpdateContext({varDetails : ParseJSON('AI Chart'.Predict(txtInputParagraph.Value).Text)});
+                                        UpdateContext({showLoader:false});
+                                        ClearCollect(colDetails,AddColumns(Table(varDetails).Value,"ItemLegend",Value.ItemLegend,"ItemCount",Value.ItemCount));
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Next example"
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =2
+
+                                btnGenChart As Button:
+                                    AlignInContainer: =AlignInContainer.End
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: |-
+                                        =UpdateContext({showLoader:true});
+                                        UpdateContext({varDetails : ParseJSON('AI Chart'.Predict(txtInputParagraph.Value).Text)});
+                                        UpdateContext({showLoader:false});
+                                        ClearCollect(colDetails,AddColumns(Table(varDetails).Value,"ItemLegend",Value.ItemLegend,"ItemCount",Value.ItemCount));
+                                    Text: ="Generate Chart"
+                                    Width: =130
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                        AITableRightContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =4
+
+                            txtTargetLanguage_7 As Text:
+                                AutoHeight: =false
+                                DisplayMode: =DisplayMode.Edit
+                                Font: =""
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =false
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Data"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =200
+                                X: =40
+                                Y: =0
+                                ZIndex: =1
+
+                            Container3 As groupContainer.manualLayoutContainer:
+                                AlignInContainer: =AlignInContainer.SetByContainer
+                                DropShadow: =DropShadow.None
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingLeft: =4
+                                PaddingTop: =10
+                                ZIndex: =4
+
+                                "FluentAIOutputCard1_13 As 'AI Output Card'":
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height - (Self.Y * 2)
+                                    ShowLoader: =showLoader
+                                    Width: =Parent.Width - Self.X * 2
+                                    X: =2
+                                    Y: =2
+                                    ZIndex: =1
+
+                                "DonutChart1 As 'Donut Chart (0.0.18)'.pcfdataset":
+                                    CustomColors: =false
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =Parent.Height-40
+                                    InnerRadius: =25
+                                    Items: =FirstN(colDetails,8)
+                                    ShowLabelsInPercentage: =true
+                                    Title: =""
+                                    Visible: =!showLoader
+                                    Width: =Parent.Width - 20
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =2
+
+                                    Value1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="Value"
+                                        FieldName: ="Value"
+                                        FieldType: ="O"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =1
+                                        ZIndex: =20
+
+                                    ItemCount1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="ItemCount"
+                                        FieldName: ="ItemCount"
+                                        FieldType: ="O"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =2
+                                        ZIndex: =21
+
+                                    ItemLegend1 As pcfDataField.textualColumn:
+                                        FieldDisplayName: ="ItemLegend"
+                                        FieldName: ="ItemLegend"
+                                        FieldType: ="O"
+                                        FieldVariantName: ="textualColumn"
+                                        Order: =3
+                                        ZIndex: =22
+
+                AIEmojiContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Visible: =Nav1.Selected.ItemKey = "AIEmoji"
+                    ZIndex: =18
+
+                    Container1_4 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        FillPortions: =0
+                        Height: =Parent.Height - Parent.PaddingTop * 2
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutGap: =20
+                        LayoutMinHeight: =400
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowY: =LayoutOverflow.Scroll
+                        ZIndex: =2
+
+                        Container14 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "TextInputCanvas1_1 As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                FontSize: =14
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                OnChange: |
+                                    =Set(
+                                        varFlair,
+                                        "ShowFlair" & Rand()
+                                    );
+                                Placeholder: =""
+                                Value: =Index(EmojiExamples,If(IsBlankOrError(varCurrentEmojiIndex),1,varCurrentEmojiIndex)).Value
+                                Width: =700
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            Container17 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =35
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =5
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =4
+
+                                "Icon1_3 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =If(varCurrentEmojiIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
+                                    Height: =30
+                                    IconName: ="Previous"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentEmojiIndex:varCurrentEmojiIndex-1});
+                                        UpdateContext({showLoader:true});
+                                        UpdateContext({varEmojiHTML:"<div style='height:" & Parent.Height &"px;padding:0;margin:0;display: flex;justify-content: center'><p>" & 'AI Emoji'.Predict(TextInputCanvas1_1.Value).Text
+                                        &"</p></div>"});
+                                        UpdateContext({showLoader:false});
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Previous example"
+                                    Visible: =true
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "Icon1 As 'Fluent Icon (1.0.22)'":
+                                    BorderColor: =
+                                    DisplayMode: =If(varCurrentEmojiIndex <> CountRows(EmojiExamples),DisplayMode.Edit,DisplayMode.Disabled)
+                                    Height: =30
+                                    IconName: ="Next"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentEmojiIndex:varCurrentEmojiIndex+1});
+                                        UpdateContext({showLoader:true});
+                                        UpdateContext({varEmojiHTML:"<div style='height:" & Parent.Height &"px;padding:0;margin:0;display: flex;justify-content: center'><p>" & 'AI Emoji'.Predict(TextInputCanvas1_1.Value).Text
+                                        &"</p></div>"});
+                                        UpdateContext({showLoader:false});
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Next example"
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =2
+
+                                btnEmoji As Button:
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: |-
+                                        =UpdateContext({showLoader:true});
+                                        UpdateContext({varEmojiHTML:"<div style='height:" & Parent.Height &"px;padding:0;margin:0;display: flex;justify-content: center'><p>" & 'AI Emoji'.Predict(TextInputCanvas1_1.Value).Text
+                                        &"</p></div>"});
+                                        UpdateContext({showLoader:false});
+                                    Text: ="Generate Emoji"
+                                    Width: =125
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                        Container13 As groupContainer.manualLayoutContainer:
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            ZIndex: =3
+
+                            "FluentAIOutputCard1_10 As 'AI Output Card'":
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                ShowLoader: =showLoader
+                                Width: =Parent.Width
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            HtmlText1_1 As htmlViewer:
+                                Height: =Parent.Height
+                                HtmlText: =varEmojiHTML
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =40
+                                Visible: =!showLoader
+                                Width: =Parent.Width
+                                ZIndex: =2
+
+                AIRatingContainer As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Visible: =Nav1.Selected.ItemKey = "AIRating"
+                    ZIndex: =19
+
+                    Container1_5 As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =20
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutOverflowY: =LayoutOverflow.Scroll
+                        ZIndex: =2
+
+                        Container10 As groupContainer.verticalAutoLayoutContainer:
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "txtInputFeedback As 'Text input'":
+                                AlignInContainer: =AlignInContainer.Stretch
+                                BasePaletteColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                FontColor: =
+                                FontSize: =14
+                                Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =320
+                                Mode: ='TextInputCanvas.Mode'.Multiline
+                                OnChange: |
+                                    =Set(
+                                        varFlair,
+                                        "ShowFlair" & Rand()
+                                    );
+                                Placeholder: =""
+                                Value: =Index(RatingExamples,If(IsBlankOrError(varCurrentRatingIndex),1,varCurrentRatingIndex)).Value
+                                Width: =700
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            Container17_2 As groupContainer.horizontalAutoLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =35
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutGap: =5
+                                LayoutJustifyContent: =LayoutJustifyContent.End
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                ZIndex: =3
+
+                                "Icon1_6 As 'Fluent Icon (1.0.22)'":
+                                    DisplayMode: =If(varCurrentRatingIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
+                                    Height: =30
+                                    IconName: ="Previous"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentRatingIndex:varCurrentRatingIndex-1});
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Previous example"
+                                    Visible: =true
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =1
+
+                                "Icon1_7 As 'Fluent Icon (1.0.22)'":
+                                    BorderColor: =
+                                    DisplayMode: =If(varCurrentRatingIndex <> CountRows(RatingExamples),DisplayMode.Edit,DisplayMode.Disabled)
+                                    Height: =30
+                                    IconName: ="Next"
+                                    LayoutMinHeight: =200
+                                    LayoutMinWidth: =200
+                                    OnChange: |-
+                                        =UpdateContext({varCurrentRatingIndex:varCurrentRatingIndex+1});
+                                    Theme: =AppThemeJSON
+                                    Tooltip: ="Next example"
+                                    Width: =30
+                                    X: =40
+                                    Y: =0
+                                    ZIndex: =2
+
+                                btnRating As Button:
+                                    AlignInContainer: =AlignInContainer.End
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =96
+                                    OnSelect: |-
+                                        =UpdateContext({showLoader:true});
+                                        UpdateContext({varRating: 'AI Rating'.Predict(txtInputFeedback.Value).Text});
+                                        ClearCollect(colCategory,Table(ParseJSON(varRating)));
+                                        UpdateContext({showLoader:false});
+                                    Text: ="Generate Rating"
+                                    Width: =160
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =3
+
+                        Container12 As groupContainer.manualLayoutContainer:
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            PaddingTop: =5
+                            ZIndex: =4
+
+                            "FluentAIOutputCard1_9 As 'AI Output Card'":
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =Parent.Height
+                                ShowLoader: =showLoader
+                                Width: =Parent.Width
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "galRatings As gallery.'BrowseLayout_Vertical_OneTextVariant_ver5.0'":
+                                DelayItemLoading: =true
+                                Height: =Parent.Height
+                                Items: =colCategory
+                                Layout: =Layout.Vertical
+                                LoadingSpinner: =LoadingSpinner.Data
+                                TemplatePadding: =0
+                                TemplateSize: =38
+                                Visible: =!showLoader
+                                Width: =Parent.Width - 10
+                                WrapCount: =0
+                                ZIndex: =2
+
+                                Container11 As groupContainer.horizontalAutoLayoutContainer:
+                                    DropShadow: =DropShadow.None
+                                    Height: =32
+                                    LayoutMode: =LayoutMode.Auto
+                                    PaddingLeft: =5
+                                    PaddingRight: =10
+                                    Width: =Parent.Width - Self.X
+                                    X: =5
+                                    Y: =5
+                                    ZIndex: =5
+
+                                    "TagList3 As 'Fluent Tag List (1.0.22)'.pcfdataset":
+                                        DisplayMode: =DisplayMode.Edit
+                                        Height: =30
+                                        Items: |-
+                                            =Table({ItemDisplayName:ThisItem.Value.Category,ItemBackgroundColor:Switch(Text(ThisItem.Value.Rating),"1","Red","2","DarkOrange","3","Orange","4","LightGreen","5","LimeGreen")})
+                                        LayoutMinHeight: =200
+                                        LayoutMinWidth: =200
+                                        Width: =200
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
+
+                                    Rating1 As rating:
+                                        AlignInContainer: =AlignInContainer.Center
+                                        BorderStyle: =BorderStyle.None
+                                        Default: =ThisItem.Value.Rating
+                                        DisabledFill: =Self.Fill
+                                        DisplayMode: =DisplayMode.Edit
+                                        FillPortions: =1
+                                        FocusedBorderColor: =Self.BorderColor
+                                        Height: =25
+                                        HoverFill: =Self.Fill
+                                        LayoutMinHeight: =40
+                                        LayoutMinWidth: =200
+                                        PressedFill: =Self.Fill
+                                        RatingFill: |-
+                                            =ColorValue("#FFD700")//RGBA(0, 18, 107, 1)
+                                        Width: =150
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =3
+
+                AIAssistant As groupContainer.verticalAutoLayoutContainer:
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Visible: =Nav1.Selected.ItemKey = "AIAssistant"
+                    ZIndex: =20
+
+                    Container3_2 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        Container4_4 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingTop: =10
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            "icoForest_1 As 'Fluent Icon (1.0.22)'":
+                                BorderRadius: =4
+                                DisplayMode: =DisplayMode.Edit
+                                FillColor: |-
+                                    ="#228B22"
+                                FontColor: ="White"
+                                FontSize: =14
+                                Height: =25
+                                IconName: ="AIBuilder"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({varColors:Table(ParseJSON('AI Palette'.Predict("Forest").Text).colors)});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Forest"
+                                Tooltip: =""
+                                Width: =80
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            "icoSunset_1 As 'Fluent Icon (1.0.22)'":
+                                BorderRadius: =4
+                                DisplayMode: =DisplayMode.Edit
+                                FillColor: |-
+                                    ="#FFA500"
+                                FontColor: ="Black"
+                                FontSize: =14
+                                Height: =25
+                                IconName: ="Sunny"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({varColors:Table(ParseJSON('AI Palette'.Predict("Sunset").Text).colors)});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Sunset"
+                                Tooltip: =""
+                                Width: =80
+                                X: =0
+                                Y: =0
+                                ZIndex: =3
+
+                            "icoBeach_1 As 'Fluent Icon (1.0.22)'":
+                                BorderRadius: =4
+                                DisplayMode: =DisplayMode.Edit
+                                FillColor: |-
+                                    ="#0077BE"
+                                FontColor: ="White"
+                                FontSize: =14
+                                Height: =25
+                                IconName: ="Vacation"
+                                IconType: ='PowerCAT.Icon.IconType'.ActionButton
+                                LayoutMinHeight: =200
+                                LayoutMinWidth: =200
+                                OnChange: |-
+                                    =UpdateContext({showLoader:true});
+                                    UpdateContext({varColors:Table(ParseJSON('AI Palette'.Predict("Beach").Text).colors)});
+                                    UpdateContext({showLoader:false});
+                                Text: ="Beach"
+                                Tooltip: =""
+                                Width: =75
+                                X: =0
+                                Y: =0
+                                ZIndex: =4
+
+                        Container5_4 As groupContainer.verticalAutoLayoutContainer:
+                            DropShadow: =DropShadow.None
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingBottom: =2
+                            PaddingLeft: =2
+                            PaddingRight: =2
+                            PaddingTop: =2
+                            ZIndex: =4
+
+                            Container15_1 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.Semilight
+                                LayoutMinHeight: =100
+                                LayoutMinWidth: =250
+                                PaddingBottom: =5
+                                PaddingLeft: =5
+                                PaddingRight: =5
+                                PaddingTop: =5
+                                ZIndex: =2
+
+        Header1 As Header:
+            BasePaletteColor: =
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =0
+            IsLogoVisible: =false
+            IsProfilePictureVisible: =false
+            IsTitleVisible: =false
+            LayoutMinHeight: =75
+            LayoutMinWidth: =
+            OnSelectLogo: =false
+            Title: ="Creator Kit AI Reference App"
+            UserEmail: =User().Email
+            UserImage: =User().Image
+            UserName: =User().FullName
+            Visible: =false
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =3
+

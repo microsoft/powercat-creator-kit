@@ -1,0 +1,13 @@
+<aipluginoperation aiplugin.name="msdynaib_GenerateTitle" operationid="msdynaib_GenerateTitle">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_GenerateTitle,operationid=msdynaib_GenerateTitle</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptgeneratetitle68fdf9bdd5c34a448aa260183afafe0c</uniquename>
+  </customapi>
+  <description>Create a headline withOUT "" (quote unquote-quotes in the start and end of the headline) for the following text:  Text .
+</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>68fdf9bd-d5c3-4a44-8aa2-60183afafe0c</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIGenerateHeadline</name>
+</aipluginoperation>

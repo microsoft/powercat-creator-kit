@@ -1,0 +1,23 @@
+<aiplugin name="msdynaib_AIPersonalizedResponse">
+  <humandescription>Task: Generate Personalized Responses
+
+Context:
+You want to create a system that generates personalized email responses for customer inquiries. The goal is to provide a human-like, tailored response based on the input prompt.
+
+Instructions:
+1. Use the following examples to train the model on generat</humandescription>
+  <humanname>AI Personalized Response</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Task: Generate Personalized Responses
+
+Context:
+You want to create a system that generates personalized email responses for customer inquiries. The goal is to provide a human-like, tailored response based on the input prompt.
+
+Instructions:
+1. Use the following examples to train the model on generat</modeldescription>
+  <modelname>AI Personalized Response</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

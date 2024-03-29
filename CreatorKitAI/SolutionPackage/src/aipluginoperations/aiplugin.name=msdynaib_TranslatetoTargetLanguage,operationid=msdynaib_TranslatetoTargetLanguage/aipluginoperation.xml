@@ -1,0 +1,14 @@
+<aipluginoperation aiplugin.name="msdynaib_TranslatetoTargetLanguage" operationid="msdynaib_TranslatetoTargetLanguage">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_TranslatetoTargetLanguage,operationid=msdynaib_TranslatetoTargetLanguage</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdpttranslatetotargetlanguaged345426b2e2a4062b1a16507d644d53a</uniquename>
+  </customapi>
+  <description>Translate the following  Text  accurately into  Language , ensuring it is culturally appropriate and maintains the original tone. 
+ Return only the translated text, without any additional comments or explanations. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappr</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>d345426b-2e2a-4062-b1a1-6507d644d53a</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AITranslate</name>
+</aipluginoperation>

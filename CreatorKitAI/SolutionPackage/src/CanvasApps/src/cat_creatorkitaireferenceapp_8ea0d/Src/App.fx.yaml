@@ -1,0 +1,215 @@
+App As appinfo:
+    BackEnabled: =true
+    Formulas: |-
+        =AppTheme = {
+            palette: {
+                themePrimary: ColorValue("#0078d4"),
+                themeLighterAlt: ColorValue("#eff6fc"),
+                themeLighter: ColorValue("#deecf9"),
+                themeLight: ColorValue("#c7e0f4"),
+                themeTertiary: ColorValue("#71afe5"),
+                themeSecondary: ColorValue("#2b88d8"),
+                themeDarkAlt: ColorValue("#106ebe"),
+                themeDark: ColorValue("#005a9e"),
+                themeDarker: ColorValue("#004578"),
+                neutralLighterAlt: ColorValue("#faf9f8"),
+                neutralLighter: ColorValue("#f3f2f1"),
+                neutralLight: ColorValue("#edebe9"),
+                neutralQuaternaryAlt: ColorValue("#e1dfdd"),
+                neutralQuaternary: ColorValue("#d0d0d0"),
+                neutralTertiaryAlt: ColorValue("#c8c6c4"),
+                neutralTertiary: ColorValue("#a19f9d"),
+                neutralSecondary: ColorValue("#605e5c"),
+                neutralPrimaryAlt: ColorValue("#3b3a39"),
+                neutralPrimary: ColorValue("#323130"),
+                neutralDark: ColorValue("#201f1e"),
+                black: ColorValue("#000000"),
+                white: ColorValue("#ffffff")
+            }
+        };
+        AppThemeJSON = JSON(AppTheme);
+        NavCollection = Table(
+            {
+                ItemKey: "AIRewrite",
+                ItemDisplayName: "AI Rewrite"
+            },
+            {
+                ItemKey: "AIDefine",
+                ItemDisplayName: "AI Define"
+            },
+            {
+                ItemKey: "AIExpand",
+                ItemDisplayName: "AI Expand"
+            },
+            {
+                ItemKey: "AIExtractCategories",
+                ItemDisplayName: "AI Tags"
+            },
+            {
+                ItemKey: "AIGenerateHeadline",
+                ItemDisplayName: "AI Generate Headline"
+            },
+            {
+                ItemKey: "AIQnAGenerator",
+                ItemDisplayName: "AI Generate QnA"
+            },
+            {
+                ItemKey: "AITranslate",
+                ItemDisplayName: "AI Translate"
+            },
+            {
+                ItemKey: "AIRedact",
+                ItemDisplayName: "AI Redact"
+            },
+            {
+                ItemKey: "AISynonyms",
+                ItemDisplayName: "AI Synonyms"
+            },
+            {
+                ItemKey: "AIChart",
+                ItemDisplayName: "AI Chart"
+            },
+            {
+                ItemKey: "AIPalette",
+                ItemDisplayName: "AI Palette"
+            },
+            {
+                ItemKey: "AIEmoji",
+                ItemDisplayName: "AI Emoji"
+            },
+            {
+                ItemKey: "AIRating",
+                ItemDisplayName: "AI Rating"
+            }
+        );
+        CustomAPICollection = 'Custom APIs';
+        Languages = [
+            "English",
+            "Hindi",
+            "French",
+            "Spanish",
+            "Mandarin",
+            "Arabic",
+            "Bengali",
+            "Russian",
+            "Portuguese",
+            "Indonesian",
+            "Urdu",
+            "German",
+            "Japanese",
+            "Swahili",
+            "Marathi",
+            "Telugu",
+            "Turkish",
+            "Tamil",
+            "Vietnamese",
+            "Italian",
+            "Thai",
+            "Dutch",
+            "Korean",
+            "Greek",
+            "Polish",
+            "Romanian",
+            "Hungarian",
+            "Czech",
+            "Swedish",
+            "Danish",
+            "Finnish",
+            "Slovak",
+            "Norwegian",
+            "Ukrainian",
+            "Croatian",
+            "Serbian",
+            "Bulgarian",
+            "Lithuanian",
+            "Latvian",
+            "Estonian",
+            "Slovenian",
+            "Malay",
+            "Filipino",
+            "Hebrew",
+            "Armenian",
+            "Georgian",
+            "Kazakh",
+            "Uzbek",
+            "Turkmen",
+            "Kyrgyz",
+            "Tajik",
+            "Azerbaijani",
+            "Persian",
+            "Pashto",
+            "Sindhi",
+            "Amharic",
+            "Oromo",
+            "Somali",
+            "Hausa",
+            "Igbo",
+            "Yoruba",
+            "Zulu",
+            "Xhosa",
+            "Malagasy",
+            "Sinhalese",
+            "Khmer",
+            "Lao",
+            "Burmese",
+            "Mongolian",
+            "Nepali",
+            "Tibetan",
+            "Kurdish",
+            "Dari",
+            "Maltese",
+            "Welsh",
+            "Gaelic",
+            "Macedonian",
+            "Bosnian",
+            "Albanian",
+            "Basque",
+            "Icelandic",
+            "Māori",
+            "Samoan",
+            "Tongan",
+            "Fijian",
+            "Greenlandic",
+            "Inuktitut"
+        ];
+        DefaultSelectedLanguage = "French";
+        EmojiExamples = [
+            "The JBL Tune 510BT wireless on-ear headphones with Purebass Sound are a remarkable audio companion that delivers an exceptional sound experience. Whether you're editing videos, listening to music, or simply enjoying your favorite audio content, these headphones provide a level of sound quality that is truly impressive.
+            One of the standout features of the JBL Tune 510BT is its ability to produce deep, rich bass. The Purebass Sound technology enhances the low-frequency response, resulting in a powerful and immersive audio experience. Whether you're listening to bass-heavy tracks or watching action-packed movies, the headphones deliver a satisfying thump that adds depth and excitement to your audio.
+            The overall sound quality is excellent across the frequency spectrum. The headphones offer a balanced sound signature, ensuring that both highs and mids are clear and detailed. This allows you to hear intricate details in your music or videos that you may have missed with other headphones. The audio is well-rounded and engaging, making it a joy to listen to a wide range of genres and content.
+            Comfort is another area where the JBL Tune 510BT excels. The on-ear design is lightweight and ergonomically designed to provide a comfortable fit for extended listening sessions. The ear cushions are soft and plush, allowing the headphones to sit comfortably on your ears without causing discomfort or fatigue. The adjustable headband ensures a secure fit, and the overall build quality feels durable and sturdy.
+            Being wireless, the JBL Tune 510BT offers the convenience of freedom from tangled cables. The Bluetooth connectivity allows for seamless pairing with your devices, and the wireless range is impressive, providing a stable connection even when you move around the room. The on-ear controls are intuitive and easy to use, allowing you to adjust the volume, play/pause music, and answer calls with just a few simple button presses.
+            Battery life is a crucial factor for wireless headphones, and the JBL Tune 510BT delivers in this aspect as well. With up to 40 hours of playtime on a single charge, you can enjoy your music for extended periods without worrying about running out of battery. This long-lasting battery life is particularly convenient for travel, commutes, or long work sessions.
+            The JBL Tune 510BT also features a built-in microphone, enabling hands-free calling. The call quality is clear, and the microphone effectively picks up your voice while minimizing background noise. This feature is especially useful when you need to take calls on the go without having to reach for your phone.
+            In terms of design, the JBL Tune 510BT strikes a balance between style and functionality. The sleek and modern look is appealing, and the foldable design allows for easy storage and portability. The headphones come with a carrying pouch, making it convenient to take them with you wherever you go.
+            In conclusion, the JBL Tune 510BT wireless on-ear headphones with Purebass Sound offer an outstanding audio experience. The sound quality is impressive, with deep bass and clear highs that bring your music and videos to life. The comfortable design ensures a pleasant fit, even during extended use, and the wireless functionality provides freedom and convenience. With its long battery life, built-in microphone, and stylish design, the JBL Tune 510BT is a fantastic choice for anyone seeking high-quality wireless headphones.",
+            "The sentiment of an angel often embodies purity, protection, and guidance. It reflects a nurturing presence, offering comfort and solace in times of need. Angelic sentiment can evoke feelings of being watched over and cared for, reassuring one that they are not alone. It's a reminder of the unseen forces of kindness and compassion that exist, encouraging individuals to find strength and hope. In many cultures, angels are seen as messengers of peace and bearers of love, guiding souls towards light and healing.",
+            "The sentiment of surprise encompasses a wide range of emotions, from shock and disbelief to joy and excitement. It's the unexpectedness that jolts the heart, sparks the mind, and often, brings a smile or a gasp. Surprise can deepen the appreciation for life's unpredictability and reinvigorate our sense of wonder. Whether it's a surprise party, an unexpected visit from a loved one, or a sudden turn of events, the essence of surprise reminds us of the unpredictable nature of life, stirring a profound emotional response that lingers in our memories.",
+            "A puzzled sentiment embodies confusion, uncertainty, and intrigue. It's the feeling of being faced with a situation or piece of information that doesn't immediately make sense, prompting a mix of curiosity and frustration. This sentiment drives a desire to solve the mystery, to find clarity amidst the unknown. It's a state of mental pause, where one is caught between what is known and the unresolved, sparking a deep-seated need to understand and make sense of the surrounding enigma.",
+            "The sentiment of fear encompasses a range of emotions from mild apprehension to intense terror, often triggered by perceived threats or the unknown. It's a primal response, protective in nature, guiding individuals away from danger. However, fear can also be paralyzing, leading to anxiety and inhibiting personal growth. Understanding and confronting fears, whether through support, self-reflection, or professional guidance, can lead to resilience and empowerment, transforming fear from a crippling force into a catalyst for change and self-discovery."
+        ];
+        AIDisclaimer = "AI-generated content can have mistakes. Make sure its accurate and appropriate before using it.";
+        TagsExamples = ["Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.
+        Additionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.
+        It can also help improve sleep quality and reduce insomnia.","Artificial intelligence (AI) is at the forefront of technological innovation, transforming industries, and redefining what is possible. From machine learning algorithms that predict consumer behavior to autonomous vehicles and intelligent healthcare systems, AI is enabling new levels of efficiency, accuracy, and convenience. However, these advancements also raise important ethical and societal questions regarding privacy, employment, and the future of human-machine interaction. Ensuring the responsible development and deployment of AI technologies is crucial for maximizing their benefits while mitigating potential risks.","The formulation and implementation of global economic policies play a crucial role in shaping the world economy, influencing trade relationships, financial markets, and economic development. Policymakers face the challenge of balancing national interests with global cooperation, addressing issues such as trade imbalances, currency fluctuations, and economic inequality. The rise of digital currencies and the impact of climate change on the economy are also prompting a reevaluation of economic strategies. Engaging in multilateral dialogue and cooperation is essential for addressing these complex challenges and fostering sustainable economic growth.","Digital marketing is evolving at an unprecedented pace, influenced by changing consumer behaviors, technological advancements, and the increasing importance of data analytics. Personalization, AI-driven content creation, and immersive technologies like augmented reality (AR) are shaping the future of marketing. Brands that leverage these trends to create engaging, customized experiences for their audience are gaining a competitive edge. Furthermore, the emphasis on data privacy and ethical marketing is prompting companies to be more transparent and responsible in their digital marketing practices, fostering trust and loyalty among consumers.","The shift towards renewable energy technologies is accelerating, driven by the urgent need to address climate change and reduce dependence on fossil fuels. Innovations in solar energy, wind power, and battery storage are making renewable sources more efficient, affordable, and accessible. Governments and businesses around the world are investing in renewable infrastructure, policy incentives, and research to drive the transition to a sustainable energy future. The adoption of these technologies not only has the potential to significantly reduce carbon emissions but also to create new industries and job opportunities, marking a pivotal moment in global energy transformation."];
+        ChartsExamples = ["In the current mobile market, the Galaxy Z Flip has made waves with its innovative folding screen, selling over 500,000 units since its recent launch. Meanwhile, the iPhone 13 Pro continues to be a consumer favorite, boasting sales of over 2 million units globally thanks to its advanced camera features and efficient battery life. The OnePlus 9R is not far behind, appealing to tech-savvy users with high refresh rates and fast charging, reaching sales of around 700,000 units. The Xiaomi Mi 11, known for its exceptional display and competitive pricing, has also performed well, with sales exceeding 800,000 units. Lastly, the Google Pixel 5, with its clean software and excellent photography capabilities, has sold over 600,000 units, maintaining a strong position in the market.",
+        "Papua New Guinea stands out globally with the highest number of local languages, boasting 840. Following closely, Indonesia has 710 languages, making it incredibly diverse linguistically. Nigeria, with its rich cultural heritage, supports 524 languages. India's vast demographic variety is reflected in its 453 languages. Conversely, countries like the United States and Australia show considerable diversity too, with 335 and 319 languages respectively, highlighting the vast linguistic landscapes shaped by history, migration, and indigenous cultures.",
+        "The United States leads the global economy with a GDP of $26.95 trillion, followed by China with $17.70 trillion. Germany and Japan hold positions with GDPs of $4.43 trillion and $4.23 trillion, respectively. India's economy is growing, with a GDP of $3.73 trillion, while the United Kingdom and France follow with $3.33 trillion and $3.05 trillion, respectively. Italy, Brazil, and Canada also show significant economic figures, having GDPs of $2.19 trillion, $2.13 trillion, and $2.12 trillion respectively"];
+        RatingExamples = ["Customers like the ease of installation, performance, and value of the item stand. They mention that it's convenient for installation, serves the purpose, and is value for money. Customers are also happy with the quality. That said, some complain about the ease and smoothness of movement and adjustment.",
+        "The Grandview Hotel has some great features but also some drawbacks. The location was perfect, right in the heart of downtown, and the lobby was beautifully decorated. However, our room felt a bit outdated and could use some renovations. The staff were generally helpful, though we did encounter a few who seemed disinterested. The breakfast buffet was excellent with a wide variety of choices. Overall, our stay was decent, but there's definitely room for improvement
+        ","
+        I visited Joe's Auto Repair for a routine service. The staff were friendly and the waiting area was clean and comfortable. However, I was a bit disappointed with the turnaround time as it took longer than initially promised. The pricing was reasonable, and my car seems to be running smoothly since the visit, but the lack of communication during the service process was frustrating. Overall, it was a satisfactory experience, though there's definitely room for improvement in terms of service efficiency and customer communication.",
+        "I had a wonderful stay at the Seaside Resort. The staff were exceptionally friendly and went above and beyond to ensure we were comfortable. The rooms were spacious, impeccably clean, and offered breathtaking ocean views. The amenities, including the spa and pool, were top-notch. Highly recommend this hotel for a relaxing getaway!",
+        "Unfortunately, our dinner experience at Bella's Bistro was disappointing. The service was slow and inattentive, and our meals arrived cold after a long wait. Additionally, the dishes lacked flavor and were not up to the standard expected given the price. We left feeling unsatisfied and unlikely to return."];
+    StartScreen: |-
+        =IfError('AI Chart'.Predict(txtInputParagraph.Value).Text, If(!IsBlank(Find("QuotaExceeded",FirstError.Message))||!IsBlank(Find("EntitlementNotAvailable",FirstError.Message)),
+        'NoCredit Screen'),'Home Screen')
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

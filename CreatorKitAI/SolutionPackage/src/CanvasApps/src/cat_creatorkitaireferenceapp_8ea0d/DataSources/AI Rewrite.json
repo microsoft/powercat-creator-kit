@@ -1,0 +1,64 @@
+[
+  {
+    "DataBoundServiceDataSetName": "default.cds",
+    "DataBoundServiceFunctionNamesKey": [
+      "Predict-202401.3.17.1"
+    ],
+    "DataBoundServiceOperationGroupNameKey": "AIBuilder\\c1632d4d-7d46-4348-8bfa-d9adfbdd6c47",
+    "DataBoundServiceRawMetadata": {
+      "Input": {
+        "Attributes": {
+          "additionalContext": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "AdditionalContext",
+            "Type": "string/byte"
+          },
+          "Original_20Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Original Text",
+            "Type": "string"
+          },
+          "Rewrite_20Text_20Conditions": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Rewrite Text Conditions",
+            "Type": "string"
+          }
+        },
+        "RequiredAttributes": [
+          "Original_20Text",
+          "Rewrite_20Text_20Conditions"
+        ]
+      },
+      "Output": {
+        "Attributes": {
+          "FinishReason": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Finish Reason",
+            "Type": "string"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        }
+      },
+      "Source": true,
+      "TemplateName": "GptPowerPrompt"
+    },
+    "DataBoundSourceDataSourceName": "43b0dc67-68af-47ae-9a9c-9e69d396ba3e",
+    "Name": "AI Rewrite",
+    "ServiceKind": "DataBound",
+    "Type": "ServiceInfo"
+  }
+]

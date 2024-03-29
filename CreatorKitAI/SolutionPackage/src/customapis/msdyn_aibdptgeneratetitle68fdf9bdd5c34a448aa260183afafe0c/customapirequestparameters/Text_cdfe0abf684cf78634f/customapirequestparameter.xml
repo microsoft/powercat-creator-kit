@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Text_cdfe0abf684cf78634f">
+  <description default="Text from which headline to be generated.">
+    <label description="Text from which headline to be generated." languagecode="1033" />
+  </description>
+  <displayname default="Text">
+    <label description="Text" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.Text_cdfe0abf684cf78634f</name>
+  <type>10</type>
+</customapirequestparameter>

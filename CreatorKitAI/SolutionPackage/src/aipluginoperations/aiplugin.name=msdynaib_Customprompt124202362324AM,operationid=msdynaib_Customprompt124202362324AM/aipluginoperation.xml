@@ -1,0 +1,14 @@
+<aipluginoperation aiplugin.name="msdynaib_Customprompt124202362324AM" operationid="msdynaib_Customprompt124202362324AM">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_Customprompt124202362324AM,operationid=msdynaib_Customprompt124202362324AM</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptcustomprompt124202362324ambbd51cc43b914f54958cd773f856a323</uniquename>
+  </customapi>
+  <description>Extract categories from the following  Text 
+Response in the following format:[ "category1", "category2"]
+</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>bbd51cc4-3b91-4f54-958c-d773f856a323</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIExtractCategories</name>
+</aipluginoperation>

@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Special_20character">
+  <description default="Special character to used to mask sensitive information">
+    <label description="Special character to used to mask sensitive information" languagecode="1033" />
+  </description>
+  <displayname default="Special character">
+    <label description="Special character" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.Special_20character</name>
+  <type>10</type>
+</customapirequestparameter>

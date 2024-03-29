@@ -1,0 +1,49 @@
+"'NoCredit Screen' As screen":
+    BackgroundImage: =fluentBackground
+    ImagePosition: =ImagePosition.Fill
+
+    flairTimer_2 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =3000
+        OnTimerEnd: |-
+            =UpdateContext({showFlair:true});
+        OnTimerStart: |-
+            =UpdateContext({showFlair:false});
+        Repeat: =true
+        Visible: =false
+        X: =60
+        Y: =60
+        ZIndex: =2
+
+    Container20 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.None
+        Fill: =RGBA(255, 255, 255, 0.5)
+        Height: =App.Height - (Self.X * 2)
+        Width: =App.Width - (Self.Y * 2)
+        X: =Parent.Width * 0.1
+        Y: =Parent.Width * 0.1
+        ZIndex: =3
+
+        "FluentAIOutputCard1 As 'AI Output Card'":
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.Height
+            ShowLoader: =showFlair
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        TextCanvas3 As Text:
+            DisplayMode: =DisplayMode.Edit
+            Font: =Font.'Segoe UI'
+            FontColor: =
+            Height: =Parent.Height
+            Size: =20
+            Text: ="There are no AI Builder credits allocated to this environment, or you have exceeded the credit limits. In order to see the AI prompts in action, allocate AI credits to this environment"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =Parent.Width - Self.X * 2
+            X: =20
+            Y: =0
+            ZIndex: =2
+

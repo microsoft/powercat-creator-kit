@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptgetemojifromtext67f6033f559a425194ee0aca257f4cd5">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Generates an emoji corresponding to the specified sentiment.">
+    <label description="Generates an emoji corresponding to the specified sentiment." languagecode="1033" />
+  </description>
+  <displayname default="AI Emoji">
+    <label description="AI Emoji" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIEmoji</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

@@ -1,0 +1,13 @@
+<aiplugin name="msdynaib_GetEmojiFromText">
+  <humandescription>Analyze the sentiment in the text:  Text   and return the corresponding fluent UI emoji. show only emoji
+</humandescription>
+  <humanname>AI Emoji</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Analyze the sentiment in the text:  Text   and return the corresponding fluent UI emoji. show only emoji
+</modeldescription>
+  <modelname>AI Emoji</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

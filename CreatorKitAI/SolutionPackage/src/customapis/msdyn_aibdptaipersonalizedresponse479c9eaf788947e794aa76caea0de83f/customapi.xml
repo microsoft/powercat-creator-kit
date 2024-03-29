@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptaipersonalizedresponse479c9eaf788947e794aa76caea0de83f">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Task: Generate Personalized Responses&#xA;&#xA;Context:&#xA;You want to create a system that generates personalized email responses for customer inquiries. The goal is to provide a human-like, tailored response based on the input prompt.&#xA;&#xA;Instructions:&#xA;1. Use the following examples to train the model on generat">
+    <label description="Task: Generate Personalized Responses&#xA;&#xA;Context:&#xA;You want to create a system that generates personalized email responses for customer inquiries. The goal is to provide a human-like, tailored response based on the input prompt.&#xA;&#xA;Instructions:&#xA;1. Use the following examples to train the model on generat" languagecode="1033" />
+  </description>
+  <displayname default="AI Personalized Response">
+    <label description="AI Personalized Response" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIPersonalizedResponse</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

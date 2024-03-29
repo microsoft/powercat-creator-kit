@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Text">
+  <description default="Input text for which a list of synonyms is requested">
+    <label description="Input text for which a list of synonyms is requested" languagecode="1033" />
+  </description>
+  <displayname default="Text">
+    <label description="Text" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.Text</name>
+  <type>10</type>
+</customapirequestparameter>

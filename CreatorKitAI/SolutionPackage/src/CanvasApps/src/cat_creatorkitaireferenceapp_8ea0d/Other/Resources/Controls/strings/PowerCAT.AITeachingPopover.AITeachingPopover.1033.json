@@ -1,0 +1,13 @@
+{
+  "AITeachingPopover_AccessibleLabel_Disp_Key": "Accessible Label",
+  "AITeachingPopover_ButtonText_Desc_Key": "Text to appear on the button",
+  "AITeachingPopover_ButtonText_Disp_Key": "Button text",
+  "AITeachingPopover_Definition_Desc_Key": "Definition that is generator by custom AI Prompts",
+  "AITeachingPopover_Definition_Disp_Key": "Definition",
+  "AITeachingPopover_Disclaimer_Disp_Key": "Disclaimer",
+  "AITeachingPopover_Disp_Key": "AI Teaching popover",
+  "AITeachingPopover_InputEvent_Desc_Key": "Event which denotes the popover to show",
+  "AITeachingPopover_InputEvent_Disp_Key": "Input event",
+  "AITeachingPopover_ShowDisclaimer_Disp_Key": "Show Disclaimer",
+  "AITeachingPopover_Title_Disp_Key": "Title"
+}

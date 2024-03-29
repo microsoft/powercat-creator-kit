@@ -1,0 +1,13 @@
+<aiplugin name="msdynaib_GenerateTitle">
+  <humandescription>Create a headline withOUT "" (quote unquote-quotes in the start and end of the headline) for the following text:  Text .
+</humandescription>
+  <humanname>AI Generate Headline</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Create a headline withOUT "" (quote unquote-quotes in the start and end of the headline) for the following text:  Text .
+</modeldescription>
+  <modelname>AI Generate Headline</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

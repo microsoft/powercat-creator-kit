@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptainl2ratingsbaf4e04fb86e48d6b317c98f6b951e03">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Given a generic review comment or feedback, classify and show ratings based on sentiment and other criteria.&#xA;&#xA;Review Comment: &quot;[ Comment ]&quot;&#xA;&#xA;Instructions:&#xA;1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.&#xA;2. Return Output the sentiment classification">
+    <label description="Given a generic review comment or feedback, classify and show ratings based on sentiment and other criteria.&#xA;&#xA;Review Comment: &quot;[ Comment ]&quot;&#xA;&#xA;Instructions:&#xA;1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.&#xA;2. Return Output the sentiment classification" languagecode="1033" />
+  </description>
+  <displayname default="AI Rating">
+    <label description="AI Rating" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIRating</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

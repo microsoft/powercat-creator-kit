@@ -1,0 +1,13 @@
+<aipluginoperation aiplugin.name="msdynaib_AIDefine" operationid="msdynaib_AIDefine">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_AIDefine,operationid=msdynaib_AIDefine</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptaidefinef8eeeb6c0eac4a9db5027e4807163afa</uniquename>
+  </customapi>
+  <description>Define the  Text  clearly and concisely.
+</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>f8eeeb6c-0eac-4a9d-b502-7e4807163afa</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIDefine</name>
+</aipluginoperation>

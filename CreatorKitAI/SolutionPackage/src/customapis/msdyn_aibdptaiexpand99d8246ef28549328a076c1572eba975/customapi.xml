@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptaiexpand99d8246ef28549328a076c1572eba975">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Adjusts the input text to meet a specified word count.">
+    <label description="Adjusts the input text to meet a specified word count." languagecode="1033" />
+  </description>
+  <displayname default="AI Expand">
+    <label description="AI Expand" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIExpand</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

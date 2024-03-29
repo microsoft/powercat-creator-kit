@@ -1,0 +1,14 @@
+{
+  "FluentAIAssistant_AccessibleLabel_Disp_Key": "Accessible Label",
+  "FluentAIAssistant_Disclaimer_Disp_Key": "Disclaimer",
+  "FluentAIAssistant_Disp_Key": "FluentAI Assistance",
+  "FluentAIAssistant_Items_Disp_Key": "ChatMessages",
+  "FluentAIAssistant_LoadingText_Disp_Key": "Loading Text",
+  "FluentAIAssistant_Placeholder_Disp_Key": "Placeholder",
+  "FluentAIAssistant_ShowCount_Disp_Key": "Show Count",
+  "FluentAIAssistant_ShowDisclaimer_Disp_Key": "Show Disclaimer",
+  "FluentAIAssistant_ShowFeedback_Disp_Key": "Show Feedback",
+  "FluentAIAssistant_StopGenerateText_Disp_Key": "Stop Latency Text",
+  "FluentAIAssistant_Suggestions_Disp_Key": "Suggestions",
+  "FluentAIAssistant_Title_Disp_Key": "Title"
+}

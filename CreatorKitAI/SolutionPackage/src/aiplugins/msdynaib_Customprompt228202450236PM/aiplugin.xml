@@ -1,0 +1,21 @@
+<aiplugin name="msdynaib_Customprompt228202450236PM">
+  <humandescription>Task: Find and Replace
+
+Context:
+You are working with a  Text that may contain information such as phone numbers, email addresses, social security numbers, social media handles. Your goal is to find and replace such information with a special character for privacy protection. 
+
+Special Character: " </humandescription>
+  <humanname>AI Redact</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Task: Find and Replace
+
+Context:
+You are working with a  Text that may contain information such as phone numbers, email addresses, social security numbers, social media handles. Your goal is to find and replace such information with a special character for privacy protection. 
+
+Special Character: " </modeldescription>
+  <modelname>AI Redact</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptcustomprompt228202435537pmbd0d86826d054e2ba9efc694a371f6fb">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Extract relevant data from the following Text  Text  and organize into a JSON. &#xA;Refer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.&#xA;Example : &#xA;[{ ItemLegend: &quot;ColumnData1&quot;, ItemCount : &quot;ColumnData2&quot;}, { ItemLegend: &quot;ColumnData">
+    <label description="Extract relevant data from the following Text  Text  and organize into a JSON. &#xA;Refer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.&#xA;Example : &#xA;[{ ItemLegend: &quot;ColumnData1&quot;, ItemCount : &quot;ColumnData2&quot;}, { ItemLegend: &quot;ColumnData" languagecode="1033" />
+  </description>
+  <displayname default="AI Chart">
+    <label description="AI Chart" languagecode="1033" />
+  </displayname>
+  <iscustomizable>1</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIChart</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

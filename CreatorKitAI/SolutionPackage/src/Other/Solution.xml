@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.2.24023.204" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>CreatorKitAI</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Creator Kit AI" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>0.0.0.0</Version>
+    <Managed>2</Managed>
+    <Publisher>
+      <UniqueName>PowerCat</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="PowerCAT" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="PowerCAT" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>cat</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>33535</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" behavior="0" />
+      <RootComponent type="401" id="{479c9eaf-7889-47e7-94aa-76caea0de83f}" behavior="0" />
+      <RootComponent type="401" id="{48da36ec-fd14-49c9-9159-3611c3aecaf7}" behavior="0" />
+      <RootComponent type="401" id="{54b0c71e-8683-4c2f-9a60-ea59b9d43dc4}" behavior="0" />
+      <RootComponent type="401" id="{67f6033f-559a-4251-94ee-0aca257f4cd5}" behavior="0" />
+      <RootComponent type="401" id="{68fdf9bd-d5c3-4a44-8aa2-60183afafe0c}" behavior="0" />
+      <RootComponent type="401" id="{99d8246e-f285-4932-8a07-6c1572eba975}" behavior="0" />
+      <RootComponent type="401" id="{9eed9013-9df8-4d1f-a914-faf83e2bd028}" behavior="0" />
+      <RootComponent type="401" id="{baf4e04f-b86e-48d6-b317-c98f6b951e03}" behavior="0" />
+      <RootComponent type="401" id="{bbd51cc4-3b91-4f54-958c-d773f856a323}" behavior="0" />
+      <RootComponent type="401" id="{bd0d8682-6d05-4e2b-a9ef-c694a371f6fb}" behavior="0" />
+      <RootComponent type="401" id="{c1632d4d-7d46-4348-8bfa-d9adfbdd6c47}" behavior="0" />
+      <RootComponent type="401" id="{c9130978-a081-4b35-ba17-3d8d51c771b9}" behavior="0" />
+      <RootComponent type="401" id="{d345426b-2e2a-4062-b1a1-6507d644d53a}" behavior="0" />
+      <RootComponent type="401" id="{f8eeeb6c-0eac-4a9d-b502-7e4807163afa}" behavior="0" />
+      <RootComponent type="401" id="{fa03a8f2-db27-4165-8a36-6f471cb5b2b7}" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.AITeachingPopover" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.DonutChart" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.FluentAIAssistant" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.FluentAIOutputCard" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required type="1" schemaName="customapi" displayName="Custom API" solution="msft_CustomAPIFramework (1.0.0.20)" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="customapirequestparameter" displayName="Custom API Request Parameter" solution="msft_CustomAPIFramework (1.0.0.20)" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="1" schemaName="msdyn_aimodel" displayName="AI Model" solution="msdyn_AISolution (202402.4.20.1)">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.AutoWidthLabel" displayName="cat_PowerCAT.AutoWidthLabel" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Icon" displayName="cat_PowerCAT.Icon" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Nav" displayName="cat_PowerCAT.Nav" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.TagList" displayName="cat_PowerCAT.TagList" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitaireferenceapp_8ea0d" displayName="Creator Kit AI Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptaidefinef8eeeb6c0eac4a9db5027e4807163afa" id.uniquename="msdyn_aibdptaidefinef8eeeb6c0eac4a9db5027e4807163afa" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptaiexpand99d8246ef28549328a076c1572eba975" id.uniquename="msdyn_aibdptaiexpand99d8246ef28549328a076c1572eba975" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptaigeneratesuggestionsc9130978a0814b35ba173d8d51c771b9" id.uniquename="msdyn_aibdptaigeneratesuggestionsc9130978a0814b35ba173d8d51c771b9" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptainl2ratingsbaf4e04fb86e48d6b317c98f6b951e03" id.uniquename="msdyn_aibdptainl2ratingsbaf4e04fb86e48d6b317c98f6b951e03" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptaipalette9eed90139df84d1fa914faf83e2bd028" id.uniquename="msdyn_aibdptaipalette9eed90139df84d1fa914faf83e2bd028" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptaipersonalizedresponse479c9eaf788947e794aa76caea0de83f" id.uniquename="msdyn_aibdptaipersonalizedresponse479c9eaf788947e794aa76caea0de83f" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptaiqnagenerator54b0c71e86834c2f9a60ea59b9d43dc4" id.uniquename="msdyn_aibdptaiqnagenerator54b0c71e86834c2f9a60ea59b9d43dc4" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptcustomprompt124202362324ambbd51cc43b914f54958cd773f856a323" id.uniquename="msdyn_aibdptcustomprompt124202362324ambbd51cc43b914f54958cd773f856a323" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptcustomprompt228202435537pmbd0d86826d054e2ba9efc694a371f6fb" id.uniquename="msdyn_aibdptcustomprompt228202435537pmbd0d86826d054e2ba9efc694a371f6fb" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptcustomprompt228202450236pmfa03a8f2db2741658a366f471cb5b2b7" id.uniquename="msdyn_aibdptcustomprompt228202450236pmfa03a8f2db2741658a366f471cb5b2b7" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptgeneratetitle68fdf9bdd5c34a448aa260183afafe0c" id.uniquename="msdyn_aibdptgeneratetitle68fdf9bdd5c34a448aa260183afafe0c" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptgetemojifromtext67f6033f559a425194ee0aca257f4cd5" id.uniquename="msdyn_aibdptgetemojifromtext67f6033f559a425194ee0aca257f4cd5" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptgetsynonyms48da36ecfd1449c991593611c3aecaf7" id.uniquename="msdyn_aibdptgetsynonyms48da36ecfd1449c991593611c3aecaf7" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdptrewritec1632d4d7d4643488bfad9adfbdd6c47" id.uniquename="msdyn_aibdptrewritec1632d4d7d4643488bfad9adfbdd6c47" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="90" schemaName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict, Microsoft.Dynamics.AI.Plugins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" displayName="Microsoft.Dynamics.AI.Plugins.CustomApis.AIPluginPredict" solution="msdyn_AISolution (202402.4.20.1)" id="{727e8789-bd29-46fa-b00a-3a49605eeb06}">
+          <package>msdyn_AISolutionAnchor (202402.4.20.1)</package>
+        </Required>
+        <Dependent type="CustomAPI" displayName="msdyn_aibdpttranslatetotargetlanguaged345426b2e2a4062b1a16507d644d53a" id.uniquename="msdyn_aibdpttranslatetotargetlanguaged345426b2e2a4062b1a16507d644d53a" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

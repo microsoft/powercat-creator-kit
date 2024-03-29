@@ -1,0 +1,398 @@
+"'AIAssistant Screen' As screen":
+    BackgroundImage: =fluentBackground
+    Fill: =RGBA(0, 0, 0, 0)
+    ImagePosition: =ImagePosition.Fill
+    OnVisible: =
+
+    "FluentAIOutputCard1_14 As 'AI Output Card'":
+        DisplayMode: =DisplayMode.Edit
+        Height: =Parent.Height
+        LoadingText: =
+        ShowLoader: =showFlair
+        Width: =Parent.Width 
+        X: =0
+        Y: =0
+        ZIndex: =1
+
+    flairTimer_1 As timer:
+        AutoPause: =false
+        AutoStart: =true
+        Duration: =3000
+        OnTimerEnd: |-
+            =UpdateContext({showFlair:true});
+        OnTimerStart: |-
+            =UpdateContext({showFlair:false});
+        Repeat: =true
+        Visible: =false
+        X: =40
+        Y: =40
+        ZIndex: =2
+
+    MainScreenContainer_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height - Self.Y - 2
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width - Self.X - 2
+        X: =2
+        Y: =2
+        ZIndex: =3
+
+        AIMessageContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+            BorderColor: |-
+                =ColorValue("#ffe89a")
+            DropShadow: =DropShadow.None
+            Fill: |-
+                =ColorValue("#fff4ce")
+            FillPortions: =0
+            Height: =40
+            LayoutGap: =5
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingBottom: =5
+            PaddingLeft: =8
+            PaddingRight: =8
+            PaddingTop: =5
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            ZIndex: =1
+
+            "icoInfo_1 As 'Fluent Icon (1.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =26
+                IconColor: ="Gray"
+                IconName: ="InfoSolid"
+                IconSize: =24
+                IconType: ='PowerCAT.Icon.IconType'.Icon
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Width: =26
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            "AutoWidthLabel1_1 As 'Auto Width Label (1.0.22)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =26
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                Text: =AIDisclaimer
+                Width: =Max(Self.AutoWidth,370)
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            LinkCanvas1_1 As Link:
+                AlignInContainer: =AlignInContainer.Center
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontSize: =0
+                FontUnderline: =true
+                Height: =26
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="See terms"
+                URL: |-
+                    ="https://go.microsoft.com/fwlink/?linkid=2225468"
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        BottomContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.None
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutWrap: =true
+            ZIndex: =2
+
+            SidebarContainer2_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.None
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =0
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Width: =240
+                ZIndex: =1
+
+                Container2_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.None
+                    FillPortions: =0
+                    Height: =60
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =10
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =200
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    ZIndex: =2
+
+                    imgCKLogo_1 As image:
+                        Height: =30
+                        Image: =Creator_Kit_Logo_color_No_Text
+                        Width: =30
+                        ZIndex: =1
+
+                    txtAIPromptTilte_3 As Text:
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =RGBA(33, 33, 33, 1)
+                        Height: =30
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =20
+                        Text: ="AI Library"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =90
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    txtAIPromptTilte_4 As Text:
+                        AlignInContainer: =AlignInContainer.Center
+                        AutoHeight: =false
+                        DisplayMode: =DisplayMode.Edit
+                        Font: =Font.'Segoe UI'
+                        FontColor: =RGBA(72, 163, 62, 1)
+                        Height: =30
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =14
+                        Text: ="v0.1"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =50
+                        Wrap: =false
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                "Nav1_1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =200
+                    Items: |-
+                        =[{ItemKey:"AIAssistant",ItemDisplayName:"AI Assistant"}]
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: |-
+                        =Switch(Self.Selected.ItemKey,"AIDefine", UpdateContext({varMarketShareOnSelect:"OnSelect"&Rand(),varBuyingCommissionOnSelect:Blank()}),UpdateContext({varMarketShareOnSelect:Blank(),varBuyingCommissionOnSelect:Blank()}))
+                    SelectedKey: ="AIAssistant"
+                    Theme: =JSON(AppTheme)
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+            MainContainer2_1 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.None
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =10
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =10
+                PaddingLeft: =20
+                PaddingRight: =20
+                PaddingTop: =10
+                ZIndex: =2
+
+                txtAIPromptTilte_5 As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    AutoHeight: =false
+                    DisplayMode: =DisplayMode.Edit
+                    Font: =Font.'Segoe UI'
+                    FontColor: =
+                    Height: =45
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =28
+                    Text: =Nav1_1.Selected.ItemDisplayName
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =96
+                    Wrap: =false
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                AIAssistant_Container As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Semilight
+                    Fill: =RGBA(255, 255, 255, 0)
+                    Height: =Parent.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =5
+                    Visible: =Nav1_1.Selected.ItemKey = "AIAssistant"
+                    ZIndex: =5
+
+                    AIRewriteMainContainer_5 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.None
+                        LayoutAlignItems: =LayoutAlignItems.Stretch
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        AIRewriteLeftContainer_5 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            DropShadow: =DropShadow.None
+                            FillPortions: =0
+                            Height: =150
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =5
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            ZIndex: =1
+
+                            txtEnglishLanguage_5 As Text:
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =RGBA(40, 134, 222, 1)
+                                FontUnderline: =true
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =16
+                                Text: ="Prebuilt prompts"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =160
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                            Container5 As groupContainer.manualLayoutContainer:
+                                DropShadow: =DropShadow.None
+                                FillPortions: =0
+                                Height: =40
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                Width: =90
+                                ZIndex: =4
+
+                                btnAIPrompt As Button:
+                                    BasePaletteColor: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    FontColor: =
+                                    Height: =32
+                                    OnSelect: =Clear(colChatMessages)
+                                    Text: ="AI Reply"
+                                    Width: =140
+                                    X: =0
+                                    Y: =0
+                                    ZIndex: =1
+
+                                imgAIPrompt As image:
+                                    Height: =25
+                                    Image: |-
+                                        ="data:image/svg+xml;utf8, "&EncodeUrl("<svg fill='White' class='___12fm75w f1w7gpdv fez10in fg4l7m0' aria-hidden='true' width='1em' height='1em' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='M2 5.5c0-.28.22-.5.5-.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1-.5-.5Zm0 3c0-.28.22-.5.5-.5h11.08c-.6 0-1.15.36-1.38.92l-.03.08H2.5a.5.5 0 0 1-.5-.5Zm8.09 5.5c-.12.34-.11.7 0 1H2.5a.5.5 0 0 1 0-1h7.59Zm.83-2H2.5a.5.5 0 0 1 0-1h8.83l-.41 1Zm.58 3h1.75l-.59 2.36c-.12.48.46.83.83.49l4.87-4.55a.75.75 0 0 0-.51-1.3h-1.1l.78-2.34a.5.5 0 0 0-.47-.66h-3.47a.5.5 0 0 0-.47.3l-2.08 5c-.14.34.1.7.46.7Z' fill='White'></path></svg>")
+                                    Width: =25
+                                    X: =5
+                                    Y: =3
+                                    ZIndex: =2
+
+                    Container18 As groupContainer.horizontalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Semilight
+                        FillPortions: =0
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingBottom: =10
+                        PaddingLeft: =10
+                        PaddingRight: =10
+                        PaddingTop: =10
+                        Width: =FluentAIAssistant2.Width + Self.PaddingLeft +  Self.PaddingRight
+                        ZIndex: =3
+
+                        "FluentAIAssistant2 As 'FluentAI Assistance'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
+                            Items: =colChatMessages
+                            LayoutMinHeight: =675
+                            LayoutMinWidth: =320
+                            OnStop: =false
+                            OnSubmit: |
+                                =Collect(
+                                    colChatMessages,
+                                    {
+                                        role: "user",
+                                        content: Self.SubmittedText
+                                    }
+                                );
+                                Collect(
+                                    colChatMessages,
+                                    {
+                                        role: "assistant",
+                                        content: 'AI Reply'.Predict(Self.SubmittedText).Text
+                                    }
+                                );
+                            OnSuggestionSubmit: |
+                                =Collect(
+                                    colChatMessages,
+                                    {
+                                        role: "user",
+                                        content: Self.SubmittedText
+                                    }
+                                );
+                                Collect(
+                                    colChatMessages,
+                                    {
+                                        role: "assistant",
+                                        content: 'AI Reply'.Predict(Self.SubmittedText).Text
+                                    }
+                                );
+                            Suggestions_Items: =Table(ParseJSON('AI Generate Suggestions'.Predict(JSON(colChatMessages)).Text))
+                            Width: =320
+                            X: =176
+                            Y: =32
+                            ZIndex: =1
+
+        Header1_1 As Header:
+            BasePaletteColor: =
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =0
+            IsLogoVisible: =false
+            IsProfilePictureVisible: =false
+            IsTitleVisible: =false
+            LayoutMinHeight: =75
+            LayoutMinWidth: =
+            OnSelectLogo: =false
+            Title: ="Creator Kit AI Reference App"
+            UserEmail: =User().Email
+            UserImage: =User().Image
+            UserName: =User().FullName
+            Visible: =false
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =3
+

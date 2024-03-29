@@ -1,0 +1,12 @@
+<customapirequestparameter uniquename="Text_f9c863e2b2664663be7">
+  <description default="Input text specifying sentiments for emoji generation">
+    <label description="Input text specifying sentiments for emoji generation" languagecode="1033" />
+  </description>
+  <displayname default="Text">
+    <label description="Text" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isoptional>0</isoptional>
+  <name>msdyn_aibdpt.Text_f9c863e2b2664663be7</name>
+  <type>10</type>
+</customapirequestparameter>

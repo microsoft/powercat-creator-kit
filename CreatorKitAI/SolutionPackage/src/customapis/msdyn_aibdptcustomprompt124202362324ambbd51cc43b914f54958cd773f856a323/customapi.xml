@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptcustomprompt124202362324ambbd51cc43b914f54958cd773f856a323">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Extracts categories from provided text and returns them in an array">
+    <label description="Extracts categories from provided text and returns them in an array" languagecode="1033" />
+  </description>
+  <displayname default="AI Extract Categories">
+    <label description="AI Extract Categories" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIExtractCategories</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

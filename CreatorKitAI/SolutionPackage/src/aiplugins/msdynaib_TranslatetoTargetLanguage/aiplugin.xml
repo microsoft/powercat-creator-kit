@@ -1,0 +1,15 @@
+<aiplugin name="msdynaib_TranslatetoTargetLanguage">
+  <humandescription>Translate the following  Text  accurately into  Language , ensuring it is culturally appropriate and maintains the original tone. 
+ Return only the translated text, without any additional comments or explanations. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappr</humandescription>
+  <humanname>AI Translate</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Translate the following  Text  accurately into  Language , ensuring it is culturally appropriate and maintains the original tone. 
+ Return only the translated text, without any additional comments or explanations. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappr</modeldescription>
+  <modelname>AI Translate</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

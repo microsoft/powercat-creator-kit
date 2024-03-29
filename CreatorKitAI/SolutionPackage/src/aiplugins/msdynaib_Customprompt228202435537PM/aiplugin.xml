@@ -1,0 +1,17 @@
+<aiplugin name="msdynaib_Customprompt228202435537PM">
+  <humandescription>Extract relevant data from the following Text  Text  and organize into a JSON. 
+Refer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.
+Example : 
+[{ ItemLegend: "ColumnData1", ItemCount : "ColumnData2"}, { ItemLegend: "ColumnData</humandescription>
+  <humanname>AI Chart</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Extract relevant data from the following Text  Text  and organize into a JSON. 
+Refer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.
+Example : 
+[{ ItemLegend: "ColumnData1", ItemCount : "ColumnData2"}, { ItemLegend: "ColumnData</modeldescription>
+  <modelname>AI Chart</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

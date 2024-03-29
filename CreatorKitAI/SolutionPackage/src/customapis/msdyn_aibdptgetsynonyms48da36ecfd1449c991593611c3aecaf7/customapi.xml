@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptgetsynonyms48da36ecfd1449c991593611c3aecaf7">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Returns a specified number of synonyms for the input text.">
+    <label description="Returns a specified number of synonyms for the input text." languagecode="1033" />
+  </description>
+  <displayname default="AI Synonyms">
+    <label description="AI Synonyms" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AISynonyms</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

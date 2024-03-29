@@ -1,0 +1,19 @@
+<aiplugin name="msdynaib_Rewrite">
+  <humandescription>Rewrite the  Original Text  
+keeping the below points into consideration. Return only the rewritten text. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.
+
+ Rewrite Text Conditions</humandescription>
+  <humanname>AI Rewrite</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Rewrite the  Original Text  
+keeping the below points into consideration. Return only the rewritten text. 
+Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.
+
+ Rewrite Text Conditions</modeldescription>
+  <modelname>AI Rewrite</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

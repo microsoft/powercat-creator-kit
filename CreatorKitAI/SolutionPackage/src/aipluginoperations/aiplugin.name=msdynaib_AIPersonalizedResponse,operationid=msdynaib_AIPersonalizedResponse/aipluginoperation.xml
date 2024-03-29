@@ -1,0 +1,18 @@
+<aipluginoperation aiplugin.name="msdynaib_AIPersonalizedResponse" operationid="msdynaib_AIPersonalizedResponse">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_AIPersonalizedResponse,operationid=msdynaib_AIPersonalizedResponse</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptaipersonalizedresponse479c9eaf788947e794aa76caea0de83f</uniquename>
+  </customapi>
+  <description>Task: Generate Personalized Responses
+
+Context:
+You want to create a system that generates personalized email responses for customer inquiries. The goal is to provide a human-like, tailored response based on the input prompt.
+
+Instructions:
+1. Use the following examples to train the model on generat</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>479c9eaf-7889-47e7-94aa-76caea0de83f</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIPersonalizedResponse</name>
+</aipluginoperation>

@@ -1,0 +1,13 @@
+<aipluginoperation aiplugin.name="msdynaib_GetEmojiFromText" operationid="msdynaib_GetEmojiFromText">
+  <aipluginoperationexportkey>aiplugin.name=msdynaib_GetEmojiFromText,operationid=msdynaib_GetEmojiFromText</aipluginoperationexportkey>
+  <customapi>
+    <uniquename>msdyn_aibdptgetemojifromtext67f6033f559a425194ee0aca257f4cd5</uniquename>
+  </customapi>
+  <description>Analyze the sentiment in the text:  Text   and return the corresponding fluent UI emoji. show only emoji
+</description>
+  <iscustomizable>1</iscustomizable>
+  <msdyn_aimodel>
+    <msdyn_aimodelid>67f6033f-559a-4251-94ee-0aca257f4cd5</msdyn_aimodelid>
+  </msdyn_aimodel>
+  <name>msdynaib_AIEmoji</name>
+</aipluginoperation>

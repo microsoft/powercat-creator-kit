@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptcustomprompt228202450236pmfa03a8f2db2741658a366f471cb5b2b7">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Mask any sensitive information from the given input text">
+    <label description="Mask any sensitive information from the given input text" languagecode="1033" />
+  </description>
+  <displayname default="AI Redact">
+    <label description="AI Redact" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIRedact</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

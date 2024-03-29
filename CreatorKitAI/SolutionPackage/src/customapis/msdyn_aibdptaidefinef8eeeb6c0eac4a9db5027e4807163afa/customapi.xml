@@ -1,0 +1,18 @@
+<customapi uniquename="msdyn_aibdptaidefinef8eeeb6c0eac4a9db5027e4807163afa">
+  <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
+  <bindingtype>0</bindingtype>
+  <description default="Generates clear and concise definitions for the provided text.">
+    <label description="Generates clear and concise definitions for the provided text." languagecode="1033" />
+  </description>
+  <displayname default="AI Define">
+    <label description="AI Define" languagecode="1033" />
+  </displayname>
+  <iscustomizable>0</iscustomizable>
+  <isfunction>0</isfunction>
+  <isprivate>0</isprivate>
+  <name>AIDefine</name>
+  <plugintypeid>
+    <plugintypeexportkey>727e8789-bd29-46fa-b00a-3a49605eeb06</plugintypeexportkey>
+  </plugintypeid>
+  <workflowsdkstepenabled>0</workflowsdkstepenabled>
+</customapi>

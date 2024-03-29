@@ -1,0 +1,23 @@
+<aiplugin name="msdynaib_AINL2Ratings">
+  <humandescription>Given a generic review comment or feedback, classify and show ratings based on sentiment and other criteria.
+
+Review Comment: "[ Comment ]"
+
+Instructions:
+1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.
+2. Return Output the sentiment classification</humandescription>
+  <humanname>AI Rating</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Given a generic review comment or feedback, classify and show ratings based on sentiment and other criteria.
+
+Review Comment: "[ Comment ]"
+
+Instructions:
+1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.
+2. Return Output the sentiment classification</modeldescription>
+  <modelname>AI Rating</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

@@ -1,0 +1,15 @@
+<aiplugin name="msdynaib_AIGenerateSuggestions">
+  <humandescription>Based on the conversation -  conversation , generate top 3 or 4 additional suggested prompts. 
+
+A basic Example of conversation will be in the below format JSON format [{"content":"Hi","role":"user"},{"content":"Hello! How can I assist you today?","role":"assistant"},{"content":"What is Powerapps co</humandescription>
+  <humanname>AI Generate Suggestions</humanname>
+  <iscustomizable>1</iscustomizable>
+  <modeldescription>Based on the conversation -  conversation , generate top 3 or 4 additional suggested prompts. 
+
+A basic Example of conversation will be in the below format JSON format [{"content":"Hi","role":"user"},{"content":"Hello! How can I assist you today?","role":"assistant"},{"content":"What is Powerapps co</modeldescription>
+  <modelname>AI Generate Suggestions</modelname>
+  <plugintype>0</plugintype>
+  <schemaversion>0</schemaversion>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</aiplugin>

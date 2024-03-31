@@ -72,7 +72,7 @@ steps:
   inputs:
     source: 'specific'
     project: 'Creator-kit'
-    pipeline: '62' #Production buildId
+    pipeline: '2319' #Production buildId
     runVersion: 'latest'
     patterns: '**/CreatorKitAI*.zip'
   displayName: 'Download Creator Kit AI solution'  

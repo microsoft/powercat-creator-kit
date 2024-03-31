@@ -100,6 +100,7 @@ steps:
     Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitCore*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
     Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitReferencesCanvas*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
     Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitReferencesMDA*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
+    Copy-Item '$(Pipeline.Workspace)/drop/CreatorKitAI*.zip' -Destination '$(Pipeline.Workspace)\assetstaging'
     
     $compress = @{
       Path = '$(Pipeline.Workspace)\assetstaging\*.*'

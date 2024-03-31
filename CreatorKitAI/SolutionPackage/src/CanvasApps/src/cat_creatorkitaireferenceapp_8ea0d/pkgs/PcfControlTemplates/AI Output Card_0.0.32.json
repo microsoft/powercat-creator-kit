@@ -533,7 +533,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 11,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/37da4c9d-46f0-4a16-9a6c-7317ff6e8832-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0nkwwpcuc.jjv020S0Resources0Controls0PowerCAT.FluentAIOutputCard.bundle.js?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-26T11%3A55%3A11Z&ske=2024-03-27T12%3A10%3A11Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-27T12%3A10%3A11Z&sr=b&sp=r&sig=3FcBD06rx1k7O7GN0cCO3u%2BDO2YEsZMK4YnQbkFQAgU%3D",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/d208bc04-9b74-4163-9b80-9ec957fcdbe0-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0a1lfnujj.trq020S0Resources0Controls0PowerCAT.FluentAIOutputCard.bundle.js?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-31T06%3A22%3A01Z&ske=2024-04-01T06%3A37%3A01Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-04-01T06%3A37%3A01Z&sr=b&sp=r&sig=vvSoB8LUHHQuAE%2FK2ZpzlW42b8NHYzGL4knaLmTPBds%3D",
       "Path": "/PCFControls/cat_PowerCAT.FluentAIOutputCard/PowerCAT.FluentAIOutputCard.bundle.js",
       "Type": 0
     },
@@ -547,7 +547,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/37da4c9d-46f0-4a16-9a6c-7317ff6e8832-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0nkwwpcuc.jjv020S0Resources0Controls0strings%252fPowerCAT.FluentAIOutputCard.OutputCard.1033.json?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-26T11%3A55%3A11Z&ske=2024-03-27T12%3A10%3A11Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-27T12%3A10%3A11Z&sr=b&sp=r&sig=8%2BljwQfeqV1wsQc%2BhytPafclVocg9lBFKOwbqSECN3o%3D",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/d208bc04-9b74-4163-9b80-9ec957fcdbe0-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0a1lfnujj.trq020S0Resources0Controls0strings%252fPowerCAT.FluentAIOutputCard.OutputCard.1033.json?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-31T06%3A22%3A01Z&ske=2024-04-01T06%3A37%3A01Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-04-01T06%3A37%3A01Z&sr=b&sp=r&sig=NLFKnGokikY1z%2Fa9qbYr28eUzy7uDi5OAHqNtGIBMjY%3D",
       "Path": "/PCFControls/cat_PowerCAT.FluentAIOutputCard/strings/PowerCAT.FluentAIOutputCard.OutputCard.1033.json",
       "Type": 5
     },

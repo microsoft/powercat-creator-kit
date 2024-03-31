@@ -43,7 +43,7 @@
             Text: ="There are no AI Builder credits allocated to this environment, or you have exceeded the credit limits. In order to see the AI prompts in action, allocate AI credits to this environment"
             Weight: ='TextCanvas.Weight'.Semibold
             Width: =Parent.Width - Self.X * 2
-            X: =20
+            X: =40
             Y: =0
             ZIndex: =2
 

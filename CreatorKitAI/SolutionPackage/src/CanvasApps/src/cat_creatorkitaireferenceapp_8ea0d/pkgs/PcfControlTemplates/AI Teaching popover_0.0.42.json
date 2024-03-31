@@ -681,7 +681,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 11,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/37da4c9d-46f0-4a16-9a6c-7317ff6e8832-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0nkwwpcuc.jjv020S0Resources0Controls0PowerCAT.AITeachingPopover.bundle.js?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-26T11%3A55%3A14Z&ske=2024-03-27T12%3A10%3A14Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-27T12%3A10%3A14Z&sr=b&sp=r&sig=vQXUzpvyuywiBjSRiIwrSI3jAWtDFle0i%2FaG9lEvPgo%3D",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/d208bc04-9b74-4163-9b80-9ec957fcdbe0-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0a1lfnujj.trq020S0Resources0Controls0PowerCAT.AITeachingPopover.bundle.js?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-31T06%3A22%3A03Z&ske=2024-04-01T06%3A37%3A03Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-04-01T06%3A37%3A03Z&sr=b&sp=r&sig=QIVp65RAsFKIPpKUH2dybx04kbfnYyBMNiDR8a644TU%3D",
       "Path": "/PCFControls/cat_PowerCAT.AITeachingPopover/PowerCAT.AITeachingPopover.bundle.js",
       "Type": 0
     },
@@ -695,7 +695,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/37da4c9d-46f0-4a16-9a6c-7317ff6e8832-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0nkwwpcuc.jjv020S0Resources0Controls0strings%252fPowerCAT.AITeachingPopover.AITeachingPopover.1033.json?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-26T11%3A55%3A14Z&ske=2024-03-27T12%3A10%3A14Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-03-27T12%3A10%3A14Z&sr=b&sp=r&sig=Ry9kheBJ%2BBomT5zo8J%2FFcZ769gU%2B6vGt%2BNK09QFks0w%3D",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/d208bc04-9b74-4163-9b80-9ec957fcdbe0-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0a1lfnujj.trq020S0Resources0Controls0strings%252fPowerCAT.AITeachingPopover.AITeachingPopover.1033.json?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-03-31T06%3A22%3A03Z&ske=2024-04-01T06%3A37%3A03Z&sks=b&skv=2022-11-02&sv=2022-11-02&spr=https&se=2024-04-01T06%3A37%3A03Z&sr=b&sp=r&sig=nDStI%2BzEKD24%2FEkRQBfYmp%2FQGz%2Fp1OZDG8%2BEHlZRiYk%3D",
       "Path": "/PCFControls/cat_PowerCAT.AITeachingPopover/strings/PowerCAT.AITeachingPopover.AITeachingPopover.1033.json",
       "Type": 5
     },

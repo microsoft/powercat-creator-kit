@@ -88,7 +88,7 @@
             RadiusTopRight: =0
             ZIndex: =1
 
-            "icoInfo As 'Fluent Icon (1.0.22)'":
+            "icoInfo As 'Fluent Icon (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 IconColor: ="Gray"
@@ -102,8 +102,7 @@
                 Y: =0
                 ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (1.0.22)'":
-                AlignInContainer: =AlignInContainer.End
+            "AutoWidthLabel1 As 'Auto Width Label (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 LayoutMinHeight: =200
@@ -211,7 +210,7 @@
                         Y: =0
                         ZIndex: =3
 
-                "Nav1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+                "Nav1 As 'Fluent Nav (1.1.29)'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
                     FillPortions: =1
                     Height: =200
@@ -612,7 +611,7 @@
                             RadiusTopRight: =0
                             ZIndex: =1
 
-                            "icoForest As 'Fluent Icon (1.0.22)'":
+                            "icoForest As 'Fluent Icon (1.1.29)'":
                                 BorderRadius: =4
                                 DisplayMode: =DisplayMode.Edit
                                 FillColor: |-
@@ -635,7 +634,7 @@
                                 Y: =0
                                 ZIndex: =1
 
-                            "icoSunset As 'Fluent Icon (1.0.22)'":
+                            "icoSunset As 'Fluent Icon (1.1.29)'":
                                 BorderRadius: =4
                                 DisplayMode: =DisplayMode.Edit
                                 FillColor: |-
@@ -658,7 +657,7 @@
                                 Y: =0
                                 ZIndex: =3
 
-                            "icoBeach As 'Fluent Icon (1.0.22)'":
+                            "icoBeach As 'Fluent Icon (1.1.29)'":
                                 BorderRadius: =4
                                 DisplayMode: =DisplayMode.Edit
                                 FillColor: |-
@@ -979,7 +978,7 @@
                                     Y: =0
                                     ZIndex: =2
 
-                                "Icon1_1 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_1 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     IconName: ="info"
@@ -1064,7 +1063,7 @@
                                     Y: =0
                                     ZIndex: =2
 
-                                "Icon1_2 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_2 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     IconName: ="info"
@@ -1163,7 +1162,7 @@
                                 LayoutMode: =LayoutMode.Auto
                                 ZIndex: =5
 
-                                "Icon1_8 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_8 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =If(varCurrentTagIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
                                     Height: =30
                                     IconName: ="Previous"
@@ -1184,7 +1183,7 @@
                                     Y: =0
                                     ZIndex: =1
 
-                                "Icon1_9 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_9 As 'Fluent Icon (1.1.29)'":
                                     BorderColor: =
                                     DisplayMode: =If(varCurrentTagIndex <> CountRows(TagsExamples),DisplayMode.Edit,DisplayMode.Disabled)
                                     Height: =30
@@ -1262,7 +1261,7 @@
                                     Width: =Parent.Width
                                     ZIndex: =2
 
-                                    "TagList2 As 'Fluent Tag List (1.0.22)'.pcfdataset":
+                                    "TagList2 As 'Fluent Tag List (1.1.29)'.pcfdataset":
                                         DisplayMode: =DisplayMode.Edit
                                         Height: =200
                                         Items: =FirstN(colCategories,10)
@@ -1611,7 +1610,7 @@
                         PaddingTop: =5
                         ZIndex: =3
 
-                        "TagList1_1 As 'Fluent Tag List (1.0.22)'.pcfdataset":
+                        "TagList1_1 As 'Fluent Tag List (1.1.29)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =Parent.Height - (Self.Y * 2)
                             Items: =FirstN(colSynonyms,20)
@@ -1818,7 +1817,7 @@
                                         Y: =Subtitle4_1.Height + Subtitle4_1.Y + 5
                                         ZIndex: =7
 
-                                "FluentDetailsList1 As 'Fluent Details List (1.0.22)'.pcfdataset":
+                                "FluentDetailsList1 As 'Fluent Details List (1.1.29)'.pcfdataset":
                                     columns_Items: |-
                                         =Table(
                                             {
@@ -2160,7 +2159,7 @@
                                 LayoutMode: =LayoutMode.Auto
                                 ZIndex: =4
 
-                                "Icon1_5 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_5 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =If(varCurrentChartIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
                                     Height: =30
                                     IconName: ="Previous"
@@ -2180,7 +2179,7 @@
                                     Y: =0
                                     ZIndex: =1
 
-                                "Icon1_4 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_4 As 'Fluent Icon (1.1.29)'":
                                     BorderColor: =
                                     DisplayMode: =If(varCurrentChartIndex <> CountRows(ChartsExamples),DisplayMode.Edit,DisplayMode.Disabled)
                                     Height: =30
@@ -2373,7 +2372,7 @@
                                 LayoutMode: =LayoutMode.Auto
                                 ZIndex: =4
 
-                                "Icon1_3 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_3 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =If(varCurrentEmojiIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
                                     Height: =30
                                     IconName: ="Previous"
@@ -2393,7 +2392,7 @@
                                     Y: =0
                                     ZIndex: =1
 
-                                "Icon1 As 'Fluent Icon (1.0.22)'":
+                                "Icon1 As 'Fluent Icon (1.1.29)'":
                                     BorderColor: =
                                     DisplayMode: =If(varCurrentEmojiIndex <> CountRows(EmojiExamples),DisplayMode.Edit,DisplayMode.Disabled)
                                     Height: =30
@@ -2527,7 +2526,7 @@
                                 LayoutMode: =LayoutMode.Auto
                                 ZIndex: =3
 
-                                "Icon1_6 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_6 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =If(varCurrentRatingIndex = 1,DisplayMode.Disabled, DisplayMode.Edit)
                                     Height: =30
                                     IconName: ="Previous"
@@ -2543,7 +2542,7 @@
                                     Y: =0
                                     ZIndex: =1
 
-                                "Icon1_7 As 'Fluent Icon (1.0.22)'":
+                                "Icon1_7 As 'Fluent Icon (1.1.29)'":
                                     BorderColor: =
                                     DisplayMode: =If(varCurrentRatingIndex <> CountRows(RatingExamples),DisplayMode.Edit,DisplayMode.Disabled)
                                     Height: =30
@@ -2617,7 +2616,7 @@
                                     Y: =5
                                     ZIndex: =5
 
-                                    "TagList3 As 'Fluent Tag List (1.0.22)'.pcfdataset":
+                                    "TagList3 As 'Fluent Tag List (1.1.29)'.pcfdataset":
                                         DisplayMode: =DisplayMode.Edit
                                         Height: =30
                                         Items: |-
@@ -2683,7 +2682,7 @@
                             RadiusTopRight: =0
                             ZIndex: =1
 
-                            "icoForest_1 As 'Fluent Icon (1.0.22)'":
+                            "icoForest_1 As 'Fluent Icon (1.1.29)'":
                                 BorderRadius: =4
                                 DisplayMode: =DisplayMode.Edit
                                 FillColor: |-
@@ -2706,7 +2705,7 @@
                                 Y: =0
                                 ZIndex: =1
 
-                            "icoSunset_1 As 'Fluent Icon (1.0.22)'":
+                            "icoSunset_1 As 'Fluent Icon (1.1.29)'":
                                 BorderRadius: =4
                                 DisplayMode: =DisplayMode.Edit
                                 FillColor: |-
@@ -2729,7 +2728,7 @@
                                 Y: =0
                                 ZIndex: =3
 
-                            "icoBeach_1 As 'Fluent Icon (1.0.22)'":
+                            "icoBeach_1 As 'Fluent Icon (1.1.29)'":
                                 BorderRadius: =4
                                 DisplayMode: =DisplayMode.Edit
                                 FillColor: |-

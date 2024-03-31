@@ -1,8 +1,7 @@
-# Starter template for:
-# Deploying the solution to a validation environment
-# Deployment is triggered by build completion so no trigger or pr should be specified
+#You can use this sample template if you plan to store the pipeline templates in one repo and your pipeline YAML in another. This is useful for when you have multiple repos and don't want to maintain the templates in multiple places.'
 trigger: none
 pr: none
+
 resources:
   repositories:
   - repository: PipelineRepo  # repository name (DO NOT CHANGE THIS VALUE) 
@@ -10,9 +9,8 @@ resources:
     ref: main # If your pipeline templates are in a branch other than the default branch specify the branch here. Otherwise the default branch will be used by default.
     endpoint: powercat-alm # Specifies the GitHub service connection for this setup.
     name: Microsoft/coe-alm-accelerator-templates  #This is the name of the repo in the current project in Azure Devops that has the pipeline templates. If the repo is in a different project you can specify the project and repo using the format ProjectContainingTheBuildTemplates/RepositoryContainingTheBuildTemplates (https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema#type)
-  pipelines: # The pipelines specify which pipeline this pipeline will pull artifacts from. In this case we will deploy from the test build's artifacts
-    - pipeline: buildPipeline  # pipeline name (DO NOT CHANGE THIS VALUE) 
-      source: deploy-test-CreatorKitAI # This is the name of the build pipeline that contains the artifacts to be deployed by this pipeline. NOTE: There must be a successful build for this pipeline available in order to run this pipeline
+    
+name: 4$(Rev:.r)
 
 # NOTE: If you want to use different values for these variables, you can remove the variable group and attach them directly to this pipeline. The group specified below is a variable group defined in the Library for the Pipelines
 variables:

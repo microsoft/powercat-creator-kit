@@ -67,6 +67,16 @@ steps:
     patterns: '**/CreatorKitReferencesMDA*.zip'
   displayName: 'Download Creator Kit Model solution'
 
+# Download the artifacts from the latest deployment of CreatorKitAI to production.
+- task: DownloadPipelineArtifact@2
+  inputs:
+    source: 'specific'
+    project: 'Creator-kit'
+    pipeline: '62' #Production buildId
+    runVersion: 'latest'
+    patterns: '**/CreatorKitAI*.zip'
+  displayName: 'Download Creator Kit AI solution'  
+
 - powershell: |
     New-Item -Path $(Pipeline.Workspace)\releaseassets -ItemType Directory
 

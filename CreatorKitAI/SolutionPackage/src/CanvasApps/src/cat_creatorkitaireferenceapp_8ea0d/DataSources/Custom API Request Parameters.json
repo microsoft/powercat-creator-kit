@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "customapirequestparameter",
+    "MaxGetRowsCount": 500,
     "Name": "Custom API Request Parameters",
     "NativeCDSDataSourceInfoNameMapping": {
       "componentidunique": "Row id unique",

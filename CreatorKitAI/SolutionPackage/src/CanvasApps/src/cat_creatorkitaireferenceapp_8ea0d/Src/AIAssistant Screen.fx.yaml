@@ -61,7 +61,7 @@
             RadiusTopRight: =0
             ZIndex: =1
 
-            "icoInfo_1 As 'Fluent Icon (1.0.22)'":
+            "icoInfo_1 As 'Fluent Icon (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 IconColor: ="Gray"
@@ -75,7 +75,7 @@
                 Y: =0
                 ZIndex: =1
 
-            "AutoWidthLabel1_1 As 'Auto Width Label (1.0.22)'":
+            "AutoWidthLabel1_1 As 'Auto Width Label (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 LayoutMinHeight: =200
@@ -185,8 +185,9 @@
                         Y: =0
                         ZIndex: =3
 
-                "Nav1_1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+                "Nav1_1 As 'Fluent Nav (1.1.29)'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
                     Height: =200
                     Items: |-
                         =[{ItemKey:"AIAssistant",ItemDisplayName:"AI Assistant"}]

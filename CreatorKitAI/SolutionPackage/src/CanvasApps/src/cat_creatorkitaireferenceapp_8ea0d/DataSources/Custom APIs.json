@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "customapi",
+    "MaxGetRowsCount": 500,
     "Name": "Custom APIs",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",

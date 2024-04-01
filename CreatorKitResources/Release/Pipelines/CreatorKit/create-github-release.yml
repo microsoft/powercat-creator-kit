@@ -16,6 +16,9 @@ parameters:
 - name: PrepareAppSourcePackage
   type: boolean
   default: false
+- name: PreparePackageDeployerPackage
+  type: boolean
+  default: false
   
 trigger: none
 pr: none

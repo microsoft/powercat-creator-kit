@@ -131,3 +131,4 @@ steps:
     prepareAppSourcePackage: ${{parameters.PrepareAppSourcePackage}}
     preparePackageDeployerPackage: ${{parameters.PreparePackageDeployerPackage}}
     projectName: "powercat-creator-kit"
+    packageConfigurationFilePath: "powercat-creator-kit/PowerCAT.PackageDeployer.Package/PowerCAT.Package.Settings.json"

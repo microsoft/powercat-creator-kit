@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel.Composition;
 using Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase;
-using PowerCAT.PackageDeployer.Package.Resources;
 
 namespace PowerCAT.PackageDeployer.Package
 {
@@ -27,19 +26,14 @@ namespace PowerCAT.PackageDeployer.Package
         /// <summary>
         /// Long name of the Import Package.
         /// </summary>
-        public override string GetLongNameOfImport => "PowerCATPackage";
+        public override string GetLongNameOfImport => "powercat-creator-kit";
 
         /// <summary>
         /// Description of the package, used in the package selection UI
         /// </summary>
-        public override string GetImportPackageDescriptionText => "PowerCATPackage";
+        public override string GetImportPackageDescriptionText => "powercat-creator-kit";
 
         #endregion
-
-        #region Props
-        public string ProjectName { get; set; }
-        public string ProjectConfigsettings { get; set; }
-        #endregion Props
 
         /// <summary>
         /// Called to Initialize any functions in the Custom Extension.
@@ -47,25 +41,6 @@ namespace PowerCAT.PackageDeployer.Package
         /// <see cref="ImportExtension.InitializeCustomExtension"/>
         public override void InitializeCustomExtension()
         {
-            ProjectName = GetImportName(false);
-            Console.WriteLine($"Current Package Name : {ProjectName}");
-            Console.WriteLine($"Reading project settings from resx file");
-            ProjectConfigsettings = ConfigSettings.ResourceManager.GetString(ProjectName);
-
-            if (string.IsNullOrEmpty(ProjectConfigsettings))
-            {
-                Console.WriteLine($"Project Config settings not found for {ProjectName}");
-                return;
-            }
-            else
-            {
-                Console.WriteLine($"Project Config settings found for {ProjectName}");
-            }
-
-            Console.WriteLine("Installing packages, if specified any...");
-            InstallPreReqPackages();
-            Console.WriteLine("Updating pre deployment settings, if specified any...");
-            ProcessPreDeploymentSettings();
         }
 
         /// <summary>
@@ -89,8 +64,6 @@ namespace PowerCAT.PackageDeployer.Package
         /// <param name="publishWorkflowsAndActivatePlugins">If set to true, attempts to auto publish workflows and activities as part of solution deployment</param>
         public override void PreSolutionImport(string solutionName, bool solutionOverwriteUnmanagedCustomizations, bool solutionPublishWorkflowsAndActivatePlugins, out bool overwriteUnmanagedCustomizations, out bool publishWorkflowsAndActivatePlugins)
         {
-            Console.WriteLine($"PreSolutionImport : {solutionName}");
-            Console.WriteLine($"Project Name : {ProjectName}");
             base.PreSolutionImport(solutionName, solutionOverwriteUnmanagedCustomizations, solutionPublishWorkflowsAndActivatePlugins, out overwriteUnmanagedCustomizations, out publishWorkflowsAndActivatePlugins);
         }
 
@@ -116,113 +89,7 @@ namespace PowerCAT.PackageDeployer.Package
         /// <returns></returns>
         public override bool AfterPrimaryImport()
         {
-            Console.WriteLine("AfterPrimaryImport");
-            Console.WriteLine("Updating post deployment settings, if specified any...");
-            ProcessPostDeploymentSettings();
-            Console.WriteLine("Updating flow settings, if specified any...");
-            ProcessFlows();
             return true;
-        }
-
-        /// <summary>
-        /// Installs packages using the Power Platform CLI (pac) for the specified environment and package names.
-        /// </summary>
-        private void InstallPreReqPackages()
-        {
-            var packageNames = JsonUtility.ReadPackages(ProjectConfigsettings);
-
-            if (packageNames != null)
-            {
-                var environmentId = CrmSvc.EnvironmentId;
-
-                Console.WriteLine($"environmentId - {environmentId}");
-
-                if (!string.IsNullOrEmpty(environmentId))
-                {
-                    var installer = new PacPackagesInstaller(environmentId, PackageLog);
-
-                    foreach (var packageName in packageNames)
-                    {
-                        Console.WriteLine($"Installing package - {packageName}");
-                        installer.InstallPackage(packageName);
-                    }
-                }
-                else
-                {
-                    Console.WriteLine("EnvironmentId is null. Skipping package installation.");
-                    PackageLog.Log("EnvironmentId is null. Skipping package installation.");
-                }
-            }
-            else
-            {
-                Console.WriteLine("No packages to install");
-                PackageLog.Log("No packages to install");
-            }
-        }
-
-        /// <summary>
-        /// Processes PostDeploymentSettings from a JSON file for a given project and updates organization settings.
-        /// </summary>
-        private void ProcessPostDeploymentSettings()
-        {
-            var preDeploymentSettings = JsonUtility.ReadPostDeploymentSettings(ProjectConfigsettings);
-
-            if (preDeploymentSettings != null)
-            {
-                Console.WriteLine($"PostDeploymentSettings for {ProjectName}:");
-
-                var organizationSettingsUpdater = new OrganizationSettingsUpdater(CrmSvc);
-
-                foreach (var setting in preDeploymentSettings)
-                {
-                    Console.WriteLine($"Updating Key : {setting.Key} Value: {setting.Value}");
-                    organizationSettingsUpdater.UpdateOrganizationSettings(setting.Key, setting.Value);
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Project with name '{ProjectName}' or PostDeploymentSettings not found.");
-            }
-        }
-
-        /// <summary>
-        /// Processes PostDeploymentSettings from a JSON file for a given project and updates organization settings.
-        /// </summary>
-        private void ProcessFlows()
-        {
-            try
-            {
-                JsonUtility.UpdateFlowConfigurations(ProjectConfigsettings, CrmSvc);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error while processing flows: {ex.Message}");
-            }
-        }
-
-        /// <summary>
-        /// Processes PreDeploymentSettings from a JSON file for a given project and updates organization settings.
-        /// </summary>
-        private void ProcessPreDeploymentSettings()
-        {
-            var preDeploymentSettings = JsonUtility.ReadPreDeploymentSettings(ProjectConfigsettings);
-
-            if (preDeploymentSettings != null)
-            {
-                Console.WriteLine($"PreDeploymentSettings for {ProjectName}:");
-
-                var organizationSettingsUpdater = new OrganizationSettingsUpdater(CrmSvc);
-
-                foreach (var setting in preDeploymentSettings)
-                {
-                    Console.WriteLine($"Updating Key : {setting.Key} Value: {setting.Value}");
-                    organizationSettingsUpdater.UpdateOrganizationSettings(setting.Key, setting.Value);
-                }
-            }
-            else
-            {
-                Console.WriteLine($"Project with name '{ProjectName}' or PreDeploymentSettings not found.");
-            }
         }
     }
 }

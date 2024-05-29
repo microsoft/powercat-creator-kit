@@ -2,6 +2,7 @@
     BackgroundImage: =fluentBackground
     Fill: =RGBA(0, 0, 0, 0)
     ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
     OnVisible: =
 
     "FluentAIOutputCard1_14 As 'AI Output Card'":
@@ -17,11 +18,23 @@
     flairTimer_1 As timer:
         AutoPause: =false
         AutoStart: =true
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Duration: =3000
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
         OnTimerEnd: |-
             =UpdateContext({showFlair:true});
         OnTimerStart: |-
             =UpdateContext({showFlair:false});
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
         Repeat: =true
         Visible: =false
         X: =40
@@ -29,11 +42,16 @@
         ZIndex: =2
 
     MainScreenContainer_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
         Height: =Parent.Height - Self.Y - 2
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
         Width: =Parent.Width - Self.X - 2
         X: =2
         Y: =2
@@ -42,7 +60,6 @@
         AIMessageContainer_1 As groupContainer.horizontalAutoLayoutContainer:
             BorderColor: |-
                 =ColorValue("#ffe89a")
-            DropShadow: =DropShadow.None
             Fill: |-
                 =ColorValue("#fff4ce")
             FillPortions: =0
@@ -55,13 +72,9 @@
             PaddingLeft: =8
             PaddingRight: =8
             PaddingTop: =5
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
             ZIndex: =1
 
-            "icoInfo_1 As 'Fluent Icon (1.1.29)'":
+            "icoInfo_1 As 'Fluent Icon (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 IconColor: ="Gray"
@@ -75,7 +88,7 @@
                 Y: =0
                 ZIndex: =1
 
-            "AutoWidthLabel1_1 As 'Auto Width Label (1.1.29)'":
+            "AutoWidthLabel1_1 As 'Auto Width Label (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 LayoutMinHeight: =200
@@ -106,17 +119,20 @@
 
         BottomContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
-            DropShadow: =DropShadow.None
+            DropShadow: =DropShadow.Light
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             LayoutWrap: =true
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             ZIndex: =2
 
             SidebarContainer2_1 As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
-                DropShadow: =DropShadow.None
                 Fill: =RGBA(255, 255, 255, 1)
                 FillPortions: =0
                 LayoutDirection: =LayoutDirection.Vertical
@@ -124,16 +140,11 @@
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
                 Width: =240
                 ZIndex: =1
 
                 Container2_1 As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
-                    DropShadow: =DropShadow.None
                     FillPortions: =0
                     Height: =60
                     LayoutAlignItems: =LayoutAlignItems.Center
@@ -142,9 +153,16 @@
                     LayoutMinWidth: =200
                     LayoutMode: =LayoutMode.Auto
                     PaddingLeft: =20
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
                     ZIndex: =2
 
                     imgCKLogo_1 As image:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
                         Height: =30
                         Image: =Creator_Kit_Logo_color_No_Text
                         Width: =30
@@ -185,9 +203,8 @@
                         Y: =0
                         ZIndex: =3
 
-                "Nav1_1 As 'Fluent Nav (1.1.29)'.pcfdataset":
+                "Nav1_1 As 'Fluent Nav (1.1.34)'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
-                    FillPortions: =1
                     Height: =200
                     Items: |-
                         =[{ItemKey:"AIAssistant",ItemDisplayName:"AI Assistant"}]
@@ -203,7 +220,6 @@
                     ZIndex: =3
 
             MainContainer2_1 As groupContainer.verticalAutoLayoutContainer:
-                DropShadow: =DropShadow.None
                 LayoutDirection: =LayoutDirection.Vertical
                 LayoutGap: =10
                 LayoutMinHeight: =100
@@ -213,6 +229,10 @@
                 PaddingLeft: =20
                 PaddingRight: =20
                 PaddingTop: =10
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
                 ZIndex: =2
 
                 txtAIPromptTilte_5 As Text:
@@ -244,22 +264,28 @@
                     PaddingLeft: =20
                     PaddingRight: =20
                     PaddingTop: =5
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
                     Visible: =Nav1_1.Selected.ItemKey = "AIAssistant"
                     ZIndex: =5
 
                     AIRewriteMainContainer_5 As groupContainer.horizontalAutoLayoutContainer:
-                        DropShadow: =DropShadow.None
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutDirection: =LayoutDirection.Vertical
                         LayoutGap: =10
                         LayoutMinHeight: =100
                         LayoutMinWidth: =250
                         LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
                         ZIndex: =2
 
                         AIRewriteLeftContainer_5 As groupContainer.verticalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.SetByContainer
-                            DropShadow: =DropShadow.None
                             FillPortions: =0
                             Height: =150
                             LayoutDirection: =LayoutDirection.Vertical
@@ -267,10 +293,6 @@
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
-                            RadiusBottomLeft: =0
-                            RadiusBottomRight: =0
-                            RadiusTopLeft: =0
-                            RadiusTopRight: =0
                             ZIndex: =1
 
                             txtEnglishLanguage_5 As Text:
@@ -289,11 +311,14 @@
                                 ZIndex: =1
 
                             Container5 As groupContainer.manualLayoutContainer:
-                                DropShadow: =DropShadow.None
                                 FillPortions: =0
                                 Height: =40
                                 LayoutMinHeight: =40
                                 LayoutMinWidth: =250
+                                RadiusBottomLeft: =4
+                                RadiusBottomRight: =4
+                                RadiusTopLeft: =4
+                                RadiusTopRight: =4
                                 Width: =90
                                 ZIndex: =4
 
@@ -310,6 +335,9 @@
                                     ZIndex: =1
 
                                 imgAIPrompt As image:
+                                    BorderColor: =App.Theme.Colors.Darker40
+                                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                                    DisabledFill: =RGBA(244, 244, 244, 1)
                                     Height: =25
                                     Image: |-
                                         ="data:image/svg+xml;utf8, "&EncodeUrl("<svg fill='White' class='___12fm75w f1w7gpdv fez10in fg4l7m0' aria-hidden='true' width='1em' height='1em' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='M2 5.5c0-.28.22-.5.5-.5h15a.5.5 0 0 1 0 1h-15a.5.5 0 0 1-.5-.5Zm0 3c0-.28.22-.5.5-.5h11.08c-.6 0-1.15.36-1.38.92l-.03.08H2.5a.5.5 0 0 1-.5-.5Zm8.09 5.5c-.12.34-.11.7 0 1H2.5a.5.5 0 0 1 0-1h7.59Zm.83-2H2.5a.5.5 0 0 1 0-1h8.83l-.41 1Zm.58 3h1.75l-.59 2.36c-.12.48.46.83.83.49l4.87-4.55a.75.75 0 0 0-.51-1.3h-1.1l.78-2.34a.5.5 0 0 0-.47-.66h-3.47a.5.5 0 0 0-.47.3l-2.08 5c-.14.34.1.7.46.7Z' fill='White'></path></svg>")
@@ -330,6 +358,10 @@
                         PaddingLeft: =10
                         PaddingRight: =10
                         PaddingTop: =10
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
                         Width: =FluentAIAssistant2.Width + Self.PaddingLeft +  Self.PaddingRight
                         ZIndex: =3
 

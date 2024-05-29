@@ -1,6 +1,6 @@
 <customapirequestparameter uniquename="Rewrite_20Text_20Conditions">
-  <description default="Conditions based on which the text should be rewritten">
-    <label description="Conditions based on which the text should be rewritten" languagecode="1033" />
+  <description default="Rewrite Text Conditions">
+    <label description="Rewrite Text Conditions" languagecode="1033" />
   </description>
   <displayname default="Rewrite Text Conditions">
     <label description="Rewrite Text Conditions" languagecode="1033" />

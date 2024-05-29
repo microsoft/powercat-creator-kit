@@ -572,15 +572,15 @@
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{2c2cfdc8-c5cf-ee11-9079-000d3a3146f8}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{c73eada5-8301-ef11-a1fd-7c1e521a3571}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{2c2cfdc8-c5cf-ee11-9079-000d3a3146f8}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Rewrite the "},{"type":"inputVariable","id":"Original_20Text","text":"Original Text"},{"type":"literal","text":" \nkeeping the below points into consideration. Return only the rewritten text. \nFollow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.\n\n"},{"type":"inputVariable","id":"Rewrite_20Text_20Conditions","text":"Rewrite Text Conditions"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>5</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{c73eada5-8301-ef11-a1fd-7c1e521a3571}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Rewrite the "},{"type":"inputVariable","id":"Original_20Text"},{"type":"literal","text":" \nkeeping the below points into consideration. Return only the rewritten text. \nFollow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.\n\n"},{"type":"inputVariable","id":"Rewrite_20Text_20Conditions"}],"definitions":{"inputs":[{"id":"Original_20Text","text":"Original Text","quickTestValue":"Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.\nAdditionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.\nIt can also help improve sleep quality and reduce insomnia."},{"id":"Rewrite_20Text_20Conditions","text":"Rewrite Text Conditions"}],"data":[],"output":{"formats":["text"]}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>6</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>c1632d4d-7d46-4348-8bfa-d9adfbdd6c47_2024-02-20T07:58:17.813Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWRTQvCMAyG/8rIeQcV8bDb/AIvCnN4lapRA1tb2gwdY//ddk782MBr8+TJm7SCrcbjUplc8A6NJSUhGoawkrrgRCleSCYuIapgTlZnolyLHCEC8gCEEDMbOhSM1jPidCJ2DpHNlGS8c7cx7iAhbPTzBSI2BYaQltqjU2FxMt66AfICtcMMXchh+9Eg7XW/gCD99Z5FZt/itzLBmyHG1rgfDVyoZ75mn299Czf24AP8P6j26Qv+c1PVEJ2j9t+xXbGz0Zkk2WuCwvqv/O1aNtWgLffkrB+dbDSiEgIAAA==</msdyn_modelrundataspecification>
+          <msdyn_name>c1632d4d-7d46-4348-8bfa-d9adfbdd6c47_2024-04-23T15:10:43.113Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRMY/CMAyF/0rlOQOgE0M3OEBioVJBrMh3GM5SSKLEFVSI/05aig4RBpgyvPc+PztnWDr6nVl/QFmTD2wN5H0Fc+MqKa2VqRGWGvIzTDg4jfUCDwQ5gIKRiOefSig0cuF5zwb1ZtBb0UnSxN2QtbKCwkmchhryHepACla1a3zLSDV7uCgo6ehZqCPG59uaLTepkOI7c0vPHozvDMLtzY06BuVl+1FieQSLr/65Yww0/LrTL5FfVPLpOV+36E6XLLBjw+GvJAzN/z2nZq2adXISjxWv5g8gFQcCAAA=</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{c1632d4d-7d46-4348-8bfa-d9adfbdd6c47}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{36d51c73-5fca-ee11-9079-000d3a314693}</msdyn_trainedmodelaiconfigurationpareid>

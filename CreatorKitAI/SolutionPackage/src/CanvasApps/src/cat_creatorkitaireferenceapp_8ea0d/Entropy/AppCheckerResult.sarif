@@ -644,66 +644,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.txtInputParagraph.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.txtInputParagraph.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.txtInputParagraph"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.Container17_1.btnGenChart.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.Container17_1.btnGenChart.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.Container17_1.btnGenChart"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIEmojiContainer.Container1_4.Container14.TextInputCanvas1_1.AccessibleLabel"
                 }
               ],
@@ -747,6 +687,186 @@
                 "member": "AccessibleLabel",
                 "module": "Home Screen",
                 "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIEmojiContainer.Container1_4.Container14.Container17.btnEmoji"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.PromptPrametersContainer.Table1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.PromptPrametersContainer.Table1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.PromptPrametersContainer.Table1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.Container21.DropdownCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.Container21.DropdownCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.Container21.DropdownCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.btnRewrite.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.btnRewrite.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.btnRewrite"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.txtInputParagraph.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.txtInputParagraph.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.txtInputParagraph"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.Container17_1.btnGenChart.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.Container17_1.btnGenChart.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIChart.AITableMainContainer_5.AITableLeftContainer_5.Container17_1.btnGenChart"
               }
             }
           ],
@@ -897,96 +1017,6 @@
                 "member": "AccessibleLabel",
                 "module": "Home Screen",
                 "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRatingContainer.Container1_5.Container12.galRatings.Container11.Rating1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.PromptPrametersContainer.Table1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.PromptPrametersContainer.Table1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.PromptPrametersContainer.Table1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.btnRewrite.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.btnRewrite.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.btnRewrite"
               }
             }
           ],
@@ -1177,7 +1207,7 @@
               }
             }
           ],
-          "version": "1.338"
+          "version": "1.341"
         }
       }
     }

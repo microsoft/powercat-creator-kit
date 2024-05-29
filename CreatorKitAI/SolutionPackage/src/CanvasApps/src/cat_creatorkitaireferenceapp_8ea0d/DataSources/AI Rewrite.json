@@ -2,7 +2,7 @@
   {
     "DataBoundServiceDataSetName": "default.cds",
     "DataBoundServiceFunctionNamesKey": [
-      "Predict-202401.3.17.1"
+      "Predict-202403.2.5.1"
     ],
     "DataBoundServiceOperationGroupNameKey": "AIBuilder\\c1632d4d-7d46-4348-8bfa-d9adfbdd6c47",
     "DataBoundServiceRawMetadata": {

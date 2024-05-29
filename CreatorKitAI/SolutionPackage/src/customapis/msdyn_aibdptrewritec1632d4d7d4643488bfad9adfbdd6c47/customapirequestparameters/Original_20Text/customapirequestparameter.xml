@@ -1,6 +1,6 @@
 <customapirequestparameter uniquename="Original_20Text">
-  <description default="Text to be rewritten according to specified conditions.">
-    <label description="Text to be rewritten according to specified conditions." languagecode="1033" />
+  <description default="Original Text">
+    <label description="Original Text" languagecode="1033" />
   </description>
   <displayname default="Original Text">
     <label description="Original Text" languagecode="1033" />

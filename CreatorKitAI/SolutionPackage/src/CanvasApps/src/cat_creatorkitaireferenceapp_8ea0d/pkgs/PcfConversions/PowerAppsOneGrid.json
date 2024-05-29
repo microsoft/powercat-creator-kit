@@ -132,7 +132,17 @@
       ],
       "From": "1.0.166",
       "To": "1.0.167"
+    },
+    {
+      "Action": [
+        {
+          "Name": "DefaultSelectedItems",
+          "Type": "remove"
+        }
+      ],
+      "From": "1.0.183",
+      "To": "1.0.184"
     }
   ],
-  "Version": "1.0.175"
+  "Version": "1.0.190"
 }

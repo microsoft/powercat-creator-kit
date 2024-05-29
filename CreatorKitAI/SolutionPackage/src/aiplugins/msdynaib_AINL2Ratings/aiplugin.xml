@@ -16,6 +16,7 @@ Instructions:
 1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.
 2. Return Output the sentiment classification</modeldescription>
   <modelname>AI Rating</modelname>
+  <pluginsubtype>0</pluginsubtype>
   <plugintype>0</plugintype>
   <schemaversion>0</schemaversion>
   <statecode>0</statecode>

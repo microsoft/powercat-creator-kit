@@ -1,8 +1,8 @@
 <customapi uniquename="msdyn_aibdptrewritec1632d4d7d4643488bfad9adfbdd6c47">
   <allowedcustomprocessingsteptype>0</allowedcustomprocessingsteptype>
   <bindingtype>0</bindingtype>
-  <description default="Reformulate text to enhance clarity, conciseness and fix grammatical errors">
-    <label description="Reformulate text to enhance clarity, conciseness and fix grammatical errors" languagecode="1033" />
+  <description default="Rewrite the    keeping the below points into consideration. Return only the rewritten text. Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.">
+    <label description="Rewrite the    keeping the below points into consideration. Return only the rewritten text. Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate information." languagecode="1033" />
   </description>
   <displayname default="AI Rewrite">
     <label description="AI Rewrite" languagecode="1033" />

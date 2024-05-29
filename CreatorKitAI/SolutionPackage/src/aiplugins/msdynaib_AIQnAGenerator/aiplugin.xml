@@ -8,6 +8,7 @@
 
 </modeldescription>
   <modelname>AI QnA Generator</modelname>
+  <pluginsubtype>0</pluginsubtype>
   <plugintype>0</plugintype>
   <schemaversion>0</schemaversion>
   <statecode>0</statecode>

@@ -3,11 +3,11 @@
   <customapi>
     <uniquename>msdyn_aibdptrewritec1632d4d7d4643488bfad9adfbdd6c47</uniquename>
   </customapi>
-  <description>Rewrite the  Original Text  
+  <description>Rewrite the    
 keeping the below points into consideration. Return only the rewritten text. 
 Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.
 
- Rewrite Text Conditions</description>
+</description>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>c1632d4d-7d46-4348-8bfa-d9adfbdd6c47</msdyn_aimodelid>

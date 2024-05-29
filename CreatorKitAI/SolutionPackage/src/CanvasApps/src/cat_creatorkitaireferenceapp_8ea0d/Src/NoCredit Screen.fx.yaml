@@ -1,15 +1,29 @@
 "'NoCredit Screen' As screen":
     BackgroundImage: =fluentBackground
+    Fill: =Color.White
     ImagePosition: =ImagePosition.Fill
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
 
     flairTimer_2 As timer:
         AutoPause: =false
         AutoStart: =true
+        BorderColor: =App.Theme.Colors.Primary
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
         Duration: =3000
+        Fill: =App.Theme.Colors.Primary
+        Font: =App.Theme.Font
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
         OnTimerEnd: |-
             =UpdateContext({showFlair:true});
         OnTimerStart: |-
             =UpdateContext({showFlair:false});
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
         Repeat: =true
         Visible: =false
         X: =60
@@ -17,9 +31,12 @@
         ZIndex: =2
 
     Container20 As groupContainer.manualLayoutContainer:
-        DropShadow: =DropShadow.None
         Fill: =RGBA(255, 255, 255, 0.5)
         Height: =App.Height - (Self.X * 2)
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
         Width: =App.Width - (Self.Y * 2)
         X: =Parent.Width * 0.1
         Y: =Parent.Width * 0.1

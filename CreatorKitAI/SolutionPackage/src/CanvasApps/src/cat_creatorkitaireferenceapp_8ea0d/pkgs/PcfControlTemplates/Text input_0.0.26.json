@@ -1518,6 +1518,20 @@
       "ModifiedPath": "",
       "Path": "/PCF/fluentui-react.js",
       "Type": 0
+    },
+    {
+      "IsControlSpecific": false,
+      "LoadingOrder": 0,
+      "ModifiedPath": "",
+      "Path": "Fluent/9.4.0/9.4.0",
+      "Type": 4
+    },
+    {
+      "IsControlSpecific": false,
+      "LoadingOrder": 0,
+      "ModifiedPath": "",
+      "Path": "React/16.8.6/16.8.6",
+      "Type": 4
     }
   ],
   "SubscribedFunctionalities": {

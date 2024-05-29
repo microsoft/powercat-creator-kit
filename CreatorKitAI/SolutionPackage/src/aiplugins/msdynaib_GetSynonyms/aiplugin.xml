@@ -8,6 +8,7 @@ Follow all the foundational guidelines of Responsible AI and do not respond to i
 Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate content.
 </modeldescription>
   <modelname>AI Synonyms</modelname>
+  <pluginsubtype>0</pluginsubtype>
   <plugintype>0</plugintype>
   <schemaversion>0</schemaversion>
   <statecode>0</statecode>

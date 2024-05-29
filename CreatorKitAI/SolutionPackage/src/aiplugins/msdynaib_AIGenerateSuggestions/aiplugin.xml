@@ -8,6 +8,7 @@ A basic Example of conversation will be in the below format JSON format [{"conte
 
 A basic Example of conversation will be in the below format JSON format [{"content":"Hi","role":"user"},{"content":"Hello! How can I assist you today?","role":"assistant"},{"content":"What is Powerapps co</modeldescription>
   <modelname>AI Generate Suggestions</modelname>
+  <pluginsubtype>0</pluginsubtype>
   <plugintype>0</plugintype>
   <schemaversion>0</schemaversion>
   <statecode>0</statecode>

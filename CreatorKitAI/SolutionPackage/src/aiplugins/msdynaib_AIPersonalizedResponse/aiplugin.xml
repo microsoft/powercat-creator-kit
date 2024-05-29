@@ -16,6 +16,7 @@ You want to create a system that generates personalized email responses for cust
 Instructions:
 1. Use the following examples to train the model on generat</modeldescription>
   <modelname>AI Personalized Response</modelname>
+  <pluginsubtype>0</pluginsubtype>
   <plugintype>0</plugintype>
   <schemaversion>0</schemaversion>
   <statecode>0</statecode>

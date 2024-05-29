@@ -8,6 +8,7 @@ Follow all the foundational guidelines of Responsible AI and do not respond to i
  Return only the translated text, without any additional comments or explanations. 
 Follow all the foundational guidelines of Responsible AI and do not respond to inappr</modeldescription>
   <modelname>AI Translate</modelname>
+  <pluginsubtype>0</pluginsubtype>
   <plugintype>0</plugintype>
   <schemaversion>0</schemaversion>
   <statecode>0</statecode>

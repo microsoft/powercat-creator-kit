@@ -54,7 +54,7 @@ scrSubwayNav As screen:
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_8 As 'Fluent Elevation (1.0.19)'":
+            "Elevation_8 As 'Fluent Elevation (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -111,7 +111,7 @@ scrSubwayNav As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_40 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                        "pivotAppCode_40 As 'Fluent Pivot (1.1.34)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -119,8 +119,8 @@ scrSubwayNav As screen:
                             LayoutMinHeight: =200
                             LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_3.Y+htmlCodeSnippet_3.Height))
-                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
-                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            RenderSize: ='PowerCAT.Pivot.RenderSize'.Large
+                            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
                             SelectedKey: ="app"
                             Theme: =varTheme.themeJSON
                             Width: =220
@@ -131,7 +131,7 @@ scrSubwayNav As screen:
                     recSeperator_3 As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(230, 230, 230, 1)
-                        Fill: =LightGray
+                        Fill: =Color.LightGray
                         Height: =1
                         Width: =Parent.Width
                         ZIndex: =2
@@ -141,7 +141,7 @@ scrSubwayNav As screen:
                         AutoHeight: =true
                         BorderColor: =
                         BorderThickness: =1
-                        Color: =Black
+                        Color: =Color.Black
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =200
@@ -226,8 +226,8 @@ scrSubwayNav As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SubwayNav1 As 'SubwayNav (1.0.19) Preview'.pcfdataset":
-                                DisplayMode: =If(chkDisable.Checked,Disabled,Edit)
+                            "SubwayNav1 As 'SubwayNav (1.1.34) Preview'.pcfdataset":
+                                DisplayMode: =If(chkDisable.Checked,DisplayMode.Disabled,Edit)
                                 Height: =200
                                 ItemDisabled: =
                                 Items: |-
@@ -258,12 +258,22 @@ scrSubwayNav As screen:
                             "chkDisable As 'Check box'":
                                 AccessibleLabel: ="Allow spell check"
                                 Checked: =false
+                                CheckedCheckboxBackgroundFill: =
+                                CheckedCheckboxBorderColor: =
+                                CheckmarkFill: =
+                                Color: =
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
+                                HoverCheckboxBackgroundFill: =
+                                HoverCheckboxBorderColor: =
                                 Label: ="Disable"
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =160
                                 OnChange: =
+                                OnCheck: =false
+                                OnUncheck: =false
+                                UncheckedCheckboxBackgroundFill: =
+                                UncheckedCheckboxBorderColor: =
                                 Visible: =true
                                 Width: =160
                                 X: =42
@@ -281,10 +291,12 @@ scrSubwayNav As screen:
                                 ZIndex: =2
 
                                 lblState As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="SubwayNav State"
                                     Width: =180
                                     X: =42
@@ -302,15 +314,15 @@ scrSubwayNav As screen:
                                         =Table(
                                             {
                                                 Name: "None",
-                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.None
+                                                Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.None
                                             },
                                             {
                                                 Name: "WizardComplete",
-                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.WizardComplete
+                                                Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.WizardComplete
                                             },
                                             {
                                                 Name: "Error",
-                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.Error
+                                                Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.Error
                                             }
                                         )
                                     LayoutMinHeight: =32
@@ -340,10 +352,12 @@ scrSubwayNav As screen:
                                 ZIndex: =3
 
                                 lblSelectedStep As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Selected Step"
                                     Width: =180
                                     X: =42
@@ -351,11 +365,13 @@ scrSubwayNav As screen:
                                     ZIndex: =1
 
                                 lblSpinBtnValue_1 As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: =SubwayNav1.Selected.ItemLabel
                                     Width: =180
                                     X: =42
@@ -363,8 +379,10 @@ scrSubwayNav As screen:
                                     ZIndex: =2
 
             lbladditionalInfo_3 As Label:
+                Color: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
+                OnChange: =false
                 Text: =Index(currentCompSamplesCol,1).Description
                 Width: =Parent.Width * 0.5
                 X: =42
@@ -379,7 +397,7 @@ scrSubwayNav As screen:
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_9 As 'Fluent Elevation (1.0.19)'":
+            "Elevation_9 As 'Fluent Elevation (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -436,7 +454,7 @@ scrSubwayNav As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_41 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                        "pivotAppCode_41 As 'Fluent Pivot (1.1.34)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -444,8 +462,8 @@ scrSubwayNav As screen:
                             LayoutMinHeight: =200
                             LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_4.Y+htmlCodeSnippet_4.Height))
-                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
-                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            RenderSize: ='PowerCAT.Pivot.RenderSize'.Large
+                            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
                             SelectedKey: ="app"
                             Theme: =varTheme.themeJSON
                             Width: =220
@@ -456,7 +474,7 @@ scrSubwayNav As screen:
                     recSeperator_4 As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(230, 230, 230, 1)
-                        Fill: =LightGray
+                        Fill: =Color.LightGray
                         Height: =1
                         Width: =Parent.Width
                         ZIndex: =2
@@ -466,7 +484,7 @@ scrSubwayNav As screen:
                         AutoHeight: =true
                         BorderColor: =
                         BorderThickness: =1
-                        Color: =Black
+                        Color: =Color.Black
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =200
@@ -555,8 +573,8 @@ scrSubwayNav As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SubwayNav1_1 As 'SubwayNav (1.0.19) Preview'.pcfdataset":
-                                DisplayMode: =If(chkDisable_1.Checked,Disabled,Edit)
+                            "SubwayNav1_1 As 'SubwayNav (1.1.34) Preview'.pcfdataset":
+                                DisplayMode: =If(chkDisable_1.Checked,DisplayMode.Disabled,Edit)
                                 Height: =200
                                 ItemDisabled: =
                                 Items: |-
@@ -591,12 +609,22 @@ scrSubwayNav As screen:
                             "chkDisable_1 As 'Check box'":
                                 AccessibleLabel: ="Allow spell check"
                                 Checked: =false
+                                CheckedCheckboxBackgroundFill: =
+                                CheckedCheckboxBorderColor: =
+                                CheckmarkFill: =
+                                Color: =
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
+                                HoverCheckboxBackgroundFill: =
+                                HoverCheckboxBorderColor: =
                                 Label: ="Disable"
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =160
                                 OnChange: =
+                                OnCheck: =false
+                                OnUncheck: =false
+                                UncheckedCheckboxBackgroundFill: =
+                                UncheckedCheckboxBorderColor: =
                                 Visible: =true
                                 Width: =160
                                 X: =42
@@ -614,10 +642,12 @@ scrSubwayNav As screen:
                                 ZIndex: =2
 
                                 lblState_1 As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="SubwayNav State"
                                     Width: =180
                                     X: =42
@@ -635,15 +665,15 @@ scrSubwayNav As screen:
                                         =Table(
                                             {
                                                 Name: "None",
-                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.None
+                                                Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.None
                                             },
                                             {
                                                 Name: "WizardComplete",
-                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.WizardComplete
+                                                Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.WizardComplete
                                             },
                                             {
                                                 Name: "Error",
-                                                Key: '''PowerCAT.SubwayNav.WizardCompleteorError'''.Error
+                                                Key: 'PowerCAT.SubwayNav.WizardCompleteorError'.Error
                                             }
                                         )
                                     LayoutMinHeight: =32
@@ -673,10 +703,12 @@ scrSubwayNav As screen:
                                 ZIndex: =3
 
                                 lblSelectedStep_1 As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Selected Step"
                                     Width: =180
                                     X: =42
@@ -684,11 +716,13 @@ scrSubwayNav As screen:
                                     ZIndex: =1
 
                                 lblSpinBtnValue_2 As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: =SubwayNav1_1.Selected.ItemLabel
                                     Width: =180
                                     X: =42
@@ -696,8 +730,10 @@ scrSubwayNav As screen:
                                     ZIndex: =2
 
             lbladditionalInfo_4 As Label:
+                Color: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
+                OnChange: =false
                 Text: =Index(currentCompSamplesCol,1).Description
                 Width: =Parent.Width * 0.5
                 X: =42

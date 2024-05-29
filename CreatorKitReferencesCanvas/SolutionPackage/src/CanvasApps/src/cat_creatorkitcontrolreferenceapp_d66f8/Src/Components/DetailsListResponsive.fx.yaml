@@ -18,13 +18,13 @@ DetailsListResponsive As CanvasComponent:
         Y: =22
         ZIndex: =1
 
-    "pivotAppCode_22 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_22 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_22.Y+htmlCode_22.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -122,7 +122,7 @@ DetailsListResponsive As CanvasComponent:
         Y: =40
         ZIndex: =10
 
-        "ElevationResponsive As 'Fluent Elevation (1.0.19)'":
+        "ElevationResponsive As 'Fluent Elevation (1.1.34)'":
             DisplayMode: =DisplayMode.Edit
             Height: =FluentDetailsListResponsive.Height
             Visible: =pivotAppCode_22.Selected.ItemKey="app"
@@ -131,7 +131,7 @@ DetailsListResponsive As CanvasComponent:
             Y: =FluentDetailsListResponsive.Y
             ZIndex: =5
 
-        "FluentDetailsListResponsive As 'Fluent Details List (1.0.19)'.pcfdataset":
+        "FluentDetailsListResponsive As 'Fluent Details List (1.1.34)'.pcfdataset":
             columns_Items: |-
                 =With({
                     // If there is a selection column, we remove the width and the padding
@@ -180,7 +180,7 @@ DetailsListResponsive As CanvasComponent:
             DisplayMode: =DisplayMode.Edit
             Height: =200
             Items: =FirstN(colRows,If(!chkLongList.Checked,CountRows(colRows),3))
-            SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.None
+            SelectionType: ='PowerCAT.FluentDetailsList.SelectionType'.None
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_22.Selected.ItemKey="app"
             Width: =sldWidth.Value
@@ -300,10 +300,20 @@ DetailsListResponsive As CanvasComponent:
         "chkLongList As 'Check box'":
             AccessibleLabel: ="Filder to first 3 rows"
             Checked: =true
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Filter to first 3 rows"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_22.Selected.ItemKey="app"
             Width: =160
             X: =22

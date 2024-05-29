@@ -20,11 +20,11 @@ BestPractices As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "Elevation2_4 As 'Fluent Elevation (1.0.19)'":
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+    "Elevation2_4 As 'Fluent Elevation (1.1.34)'":
+        Depth: ='PowerCAT.Elevation.Depth'.Depth4
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height
-        HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+        HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth4
         PaddingBottom: =8
         PaddingLeft: =8
         PaddingRight: =8
@@ -96,6 +96,7 @@ BestPractices As CanvasComponent:
             ZIndex: =3
 
             galDos As gallery.variableTemplateHeightGallery:
+                '#CopilotOverlayLabel': ="Filtered"
                 AccessibleLabel: ="Do"
                 ItemAccessibleLabel: ="Do"
                 Items: =BestPractices.Dos
@@ -117,20 +118,21 @@ BestPractices As CanvasComponent:
                     X: =32
                     ZIndex: =1
 
-                "Icon2_1 As 'Fluent Icon (1.0.19)'":
+                "Icon2_1 As 'Fluent Icon (1.1.34)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     IconColor: |-
                         ="#107c10"
                     IconName: ="CheckMark"
                     IconSize: =20
-                    IconType: ='''PowerCAT.Icon.IconType'''.Icon
+                    IconType: ='PowerCAT.Icon.IconType'.Icon
                     Width: =32
                     X: =0
                     Y: =0
                     ZIndex: =2
 
             galDonts As gallery.variableTemplateHeightGallery:
+                '#CopilotOverlayLabel': ="Filtered"
                 AccessibleLabel: ="Don't"
                 ItemAccessibleLabel: ="Don't"
                 Items: =BestPractices.Donts
@@ -152,14 +154,14 @@ BestPractices As CanvasComponent:
                     X: =32
                     ZIndex: =1
 
-                "Icon2_2 As 'Fluent Icon (1.0.19)'":
+                "Icon2_2 As 'Fluent Icon (1.1.34)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =32
                     IconColor: |-
                         ="#e81123"
                     IconName: ="StatusCircleErrorX"
                     IconSize: =20
-                    IconType: ='''PowerCAT.Icon.IconType'''.Icon
+                    IconType: ='PowerCAT.Icon.IconType'.Icon
                     Width: =32
                     X: =0
                     Y: =0

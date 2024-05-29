@@ -56,7 +56,7 @@ scrPersona As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_2 As 'Fluent Elevation (1.0.19)'":
+            "Elevation_2 As 'Fluent Elevation (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription_1.DesiredHeight
                 PaddingBottom: =8
@@ -82,7 +82,7 @@ scrPersona As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_4 As 'Fluent Elevation (1.0.19)'":
+            "Elevation_4 As 'Fluent Elevation (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -139,7 +139,7 @@ scrPersona As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_37 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                        "pivotAppCode_37 As 'Fluent Pivot (1.1.34)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -147,8 +147,8 @@ scrPersona As screen:
                             LayoutMinHeight: =200
                             LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet.Y+htmlCodeSnippet.Height))
-                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
-                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            RenderSize: ='PowerCAT.Pivot.RenderSize'.Large
+                            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
                             SelectedKey: ="app"
                             Theme: =varTheme.themeJSON
                             Width: =220
@@ -159,7 +159,7 @@ scrPersona As screen:
                     recSeperator As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(230, 230, 230, 1)
-                        Fill: =LightGray
+                        Fill: =Color.LightGray
                         Height: =1
                         Width: =Parent.Width
                         ZIndex: =2
@@ -169,7 +169,7 @@ scrPersona As screen:
                         AutoHeight: =true
                         BorderColor: =
                         BorderThickness: =1
-                        Color: =Black
+                        Color: =Color.Black
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =2
@@ -197,7 +197,7 @@ scrPersona As screen:
                     PaddingRight: =20
                     ZIndex: =4
 
-                    "Persona1 As 'Fluent Persona (1.0.19) Preview'":
+                    "Persona1 As 'Fluent Persona (1.1.34)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =110
                         HidePersonaDetails: =chkHidePersonaDetails.Checked
@@ -219,12 +219,22 @@ scrPersona As screen:
                     "chkHidePersonaDetails As 'Check box'":
                         AccessibleLabel: ="Allow spell check"
                         Checked: =false
+                        CheckedCheckboxBackgroundFill: =
+                        CheckedCheckboxBorderColor: =
+                        CheckmarkFill: =
+                        Color: =
                         DisplayMode: =DisplayMode.Edit
                         Height: =32
+                        HoverCheckboxBackgroundFill: =
+                        HoverCheckboxBorderColor: =
                         Label: ="Hide Persona Details"
                         LayoutMinHeight: =32
                         LayoutMinWidth: =160
                         OnChange: =
+                        OnCheck: =false
+                        OnUncheck: =false
+                        UncheckedCheckboxBackgroundFill: =
+                        UncheckedCheckboxBorderColor: =
                         Visible: =true
                         Width: =160
                         X: =42
@@ -258,10 +268,12 @@ scrPersona As screen:
                                 ZIndex: =1
 
                                 lbText As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Text"
                                     Width: =180
                                     X: =42
@@ -269,6 +281,8 @@ scrPersona As screen:
                                     ZIndex: =1
 
                                 "txtText As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -291,10 +305,12 @@ scrPersona As screen:
                                 ZIndex: =2
 
                                 lblPresence As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Presence"
                                     Width: =180
                                     X: =42
@@ -304,19 +320,19 @@ scrPersona As screen:
                                 "ddPresence As 'Combo box'.pcfdataset":
                                     AccessibleLabel: ="Constrain"
                                     DefaultSelectedItems: |-
-                                        =Table({name:"Online",key:'''PowerCAT.Persona.Presence'''.Online})
+                                        =Table({name:"Online",key:'PowerCAT.Persona.Presence'.Online})
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
                                     Items: |-
                                         =Table(
-                                            {name:"None",key:'''PowerCAT.Persona.Presence'''.None},
-                                            {name:"Offline",key:'''PowerCAT.Persona.Presence'''.Offline},
-                                            {name:"Online",key:'''PowerCAT.Persona.Presence'''.Online},
-                                            {name:"Away",key:'''PowerCAT.Persona.Presence'''.Away},
-                                            {name:"Dnd",key:'''PowerCAT.Persona.Presence'''.Dnd},
-                                            {name:"Blocked",key:'''PowerCAT.Persona.Presence'''.Blocked},
-                                            {name:"Busy",key:'''PowerCAT.Persona.Presence'''.Busy}
+                                            {name:"None",key:'PowerCAT.Persona.Presence'.None},
+                                            {name:"Offline",key:'PowerCAT.Persona.Presence'.Offline},
+                                            {name:"Online",key:'PowerCAT.Persona.Presence'.Online},
+                                            {name:"Away",key:'PowerCAT.Persona.Presence'.Away},
+                                            {name:"Dnd",key:'PowerCAT.Persona.Presence'.Dnd},
+                                            {name:"Blocked",key:'PowerCAT.Persona.Presence'.Blocked},
+                                            {name:"Busy",key:'PowerCAT.Persona.Presence'.Busy}
                                         )
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =220
@@ -345,10 +361,12 @@ scrPersona As screen:
                                 ZIndex: =3
 
                                 lblPersonaSize_1 As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Persona Size"
                                     Width: =180
                                     X: =42
@@ -358,19 +376,19 @@ scrPersona As screen:
                                 "ddPersonaSize_1 As 'Combo box'.pcfdataset":
                                     AccessibleLabel: ="Constrain"
                                     DefaultSelectedItems: |-
-                                        =Table({Name:"Size 100",key:'''PowerCAT.Persona.PersonaSize'''.Size100})
+                                        =Table({Name:"Size 100",key:'PowerCAT.Persona.PersonaSize'.Size100})
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
                                     Items: |-
-                                        =Table({Name:"Size 8",key:'''PowerCAT.Persona.PersonaSize'''.Size8},
-                                        {Name:"Size 24",key:'''PowerCAT.Persona.PersonaSize'''.Size24},
-                                        {Name:"Size 32",key:'''PowerCAT.Persona.PersonaSize'''.Size32},
-                                        {Name:"Size 48",key:'''PowerCAT.Persona.PersonaSize'''.Size48},
-                                        {Name:"Size 56",key:'''PowerCAT.Persona.PersonaSize'''.Size56},
-                                        {Name:"Size 72",key:'''PowerCAT.Persona.PersonaSize'''.Size72},
-                                        {Name:"Size 100",key:'''PowerCAT.Persona.PersonaSize'''.Size100},
-                                        {Name:"Size 120",key:'''PowerCAT.Persona.PersonaSize'''.Size120}
+                                        =Table({Name:"Size 8",key:'PowerCAT.Persona.PersonaSize'.Size8},
+                                        {Name:"Size 24",key:'PowerCAT.Persona.PersonaSize'.Size24},
+                                        {Name:"Size 32",key:'PowerCAT.Persona.PersonaSize'.Size32},
+                                        {Name:"Size 48",key:'PowerCAT.Persona.PersonaSize'.Size48},
+                                        {Name:"Size 56",key:'PowerCAT.Persona.PersonaSize'.Size56},
+                                        {Name:"Size 72",key:'PowerCAT.Persona.PersonaSize'.Size72},
+                                        {Name:"Size 100",key:'PowerCAT.Persona.PersonaSize'.Size100},
+                                        {Name:"Size 120",key:'PowerCAT.Persona.PersonaSize'.Size120}
                                         )
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =220
@@ -398,10 +416,12 @@ scrPersona As screen:
                                 ZIndex: =4
 
                                 lblImageUrl As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Image Url"
                                     Width: =180
                                     X: =42
@@ -409,6 +429,8 @@ scrPersona As screen:
                                     ZIndex: =1
 
                                 "txtImageUrl As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -439,10 +461,12 @@ scrPersona As screen:
                                 ZIndex: =1
 
                                 lblSecondaryText As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Secondary Text"
                                     Width: =180
                                     X: =42
@@ -450,6 +474,8 @@ scrPersona As screen:
                                     ZIndex: =1
 
                                 "txtSecondaryText As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -472,10 +498,12 @@ scrPersona As screen:
                                 ZIndex: =2
 
                                 lblTertiaryText As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Tertiary Text"
                                     Width: =180
                                     X: =42
@@ -483,6 +511,8 @@ scrPersona As screen:
                                     ZIndex: =1
 
                                 "txtTertiaryText As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -505,10 +535,12 @@ scrPersona As screen:
                                 ZIndex: =3
 
                                 lblOptionalText As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Optional Text"
                                     Width: =180
                                     X: =42
@@ -516,6 +548,8 @@ scrPersona As screen:
                                     ZIndex: =1
 
                                 "txtOptionalText As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -539,10 +573,12 @@ scrPersona As screen:
                                 ZIndex: =4
 
                                 lblImageInitials As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Image Initials"
                                     Width: =180
                                     X: =42
@@ -550,6 +586,8 @@ scrPersona As screen:
                                     ZIndex: =1
 
                                 "txtImageInitials As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -562,8 +600,10 @@ scrPersona As screen:
                                     ZIndex: =2
 
             lbladditionalInfo As Label:
+                Color: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
+                OnChange: =false
                 Text: =Index(currentCompSamplesCol,1).Description
                 Width: =Parent.Width * 0.5
                 X: =42

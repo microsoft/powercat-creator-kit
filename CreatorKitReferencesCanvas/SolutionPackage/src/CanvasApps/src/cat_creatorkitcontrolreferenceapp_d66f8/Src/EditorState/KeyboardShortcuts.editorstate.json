@@ -19,6 +19,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group23",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 12,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -169,6 +170,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode_28",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -310,6 +312,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "KeyboardShortcuts",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -396,6 +399,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "KeyboardShortcutsSample",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -522,6 +526,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblEmail",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -714,6 +719,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle_28",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -990,6 +996,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblFirstName",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1183,6 +1190,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblLastKeyboardshortcut",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 11,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1464,6 +1472,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblLastName",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1625,6 +1634,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "line_19",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1781,6 +1791,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode_28",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2108,6 +2119,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtEmail",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2550,6 +2562,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtFirstName",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2992,6 +3005,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "txtLastName",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [

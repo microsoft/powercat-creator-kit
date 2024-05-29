@@ -42,6 +42,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "DetailsListLayout",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -145,6 +146,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ElevationLayout",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -316,6 +318,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FluentDetailsListLayout",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -427,6 +430,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group22",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -482,6 +486,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "heading2_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -652,6 +657,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode_25",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -782,6 +788,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon1_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -857,6 +864,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "iconimage2_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -933,6 +941,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "id2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1085,6 +1094,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle_25",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1351,6 +1361,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "line_17",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1456,6 +1467,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "name3_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1582,6 +1594,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode_25",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1667,6 +1680,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "review2_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1742,6 +1756,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "score1_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1818,6 +1833,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "selectable1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1898,6 +1914,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "tag2_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1974,6 +1991,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TagBorderColor2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2055,6 +2073,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TagColor2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [

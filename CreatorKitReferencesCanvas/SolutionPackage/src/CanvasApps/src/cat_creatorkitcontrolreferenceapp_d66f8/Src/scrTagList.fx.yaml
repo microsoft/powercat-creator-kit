@@ -53,11 +53,11 @@ scrTagList As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_13 As 'Fluent Elevation (1.0.19)'":
-                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+            "Elevation2_13 As 'Fluent Elevation (1.1.34)'":
+                Depth: ='PowerCAT.Elevation.Depth'.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
-                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth4
                 PaddingBottom: =8
                 PaddingLeft: =8
                 PaddingRight: =8

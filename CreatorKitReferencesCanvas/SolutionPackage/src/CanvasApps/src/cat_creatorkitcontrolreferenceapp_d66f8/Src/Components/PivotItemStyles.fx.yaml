@@ -18,13 +18,13 @@ PivotItemStyles As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_4 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_4 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_4.Y+htmlCode_4.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -86,10 +86,20 @@ PivotItemStyles As CanvasComponent:
     "chkRenderLarge As 'Check box'":
         AccessibleLabel: ="Render large"
         Checked: =false
+        CheckedCheckboxBackgroundFill: =
+        CheckedCheckboxBorderColor: =
+        CheckmarkFill: =
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        HoverCheckboxBackgroundFill: =
+        HoverCheckboxBorderColor: =
         Label: ="Render Large"
         OnChange: =
+        OnCheck: =false
+        OnUncheck: =false
+        UncheckedCheckboxBackgroundFill: =
+        UncheckedCheckboxBorderColor: =
         Visible: =pivotAppCode_4.Selected.ItemKey="app"
         Width: =160
         X: =27
@@ -130,7 +140,7 @@ PivotItemStyles As CanvasComponent:
             Y: =96
             ZIndex: =2
 
-        "Pivot2_1 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+        "Pivot2_1 As 'Fluent Pivot (1.1.34)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =47
             Items: |-
@@ -141,8 +151,8 @@ PivotItemStyles As CanvasComponent:
                     {ItemKey:"sharedwithme",ItemDisplayName:"Shared with me",ItemCount:1,ItemIconName:"Ringer"},
                     {ItemKey:"customcolor",ItemDisplayName:"Custom Icon Color",ItemCount:10,ItemIconName:"Globe"}
                 )
-            RenderSize: =If(chkRenderLarge.Checked,'''PowerCAT.Pivot.RenderSize'''.Large,'''PowerCAT.Pivot.RenderSize'''.Normal)
-            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+            RenderSize: =If(chkRenderLarge.Checked,'PowerCAT.Pivot.RenderSize'.Large,'PowerCAT.Pivot.RenderSize'.Normal)
+            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
             SelectedKey: ="bas"
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_4.Selected.ItemKey="app"

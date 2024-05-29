@@ -73,6 +73,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "commandBar",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -165,6 +166,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CommandBarOverflowItems",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -231,6 +233,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "grpSample",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -381,6 +384,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -583,6 +587,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -888,6 +893,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelected",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1205,6 +1211,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedKey",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1515,6 +1522,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblWidth",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1786,6 +1794,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "line",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1942,6 +1951,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2145,6 +2155,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "sldWidth_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [

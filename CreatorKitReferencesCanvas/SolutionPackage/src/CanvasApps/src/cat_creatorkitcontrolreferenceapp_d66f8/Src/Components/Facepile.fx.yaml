@@ -18,13 +18,13 @@ Facepile As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_29 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_29 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_34.Y+htmlCode_34.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -94,7 +94,7 @@ Facepile As CanvasComponent:
         Y: =48
         ZIndex: =6
 
-    "Facepile1 As 'Fluent Facepile (1.0.19) Preview'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.1.34) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =58
         ImageShouldFadeIn: =chkImageShouldFadeIn.Checked
@@ -126,10 +126,19 @@ Facepile As CanvasComponent:
 
     sliderMaxDisplayPersona As Slider:
         AccessibleLabel: ="Percentage Complete Slider"
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =29
+        LineActiveColor: =
+        LineActiveHoverColor: =
+        LineInactiveColor: =
+        LineInactiveHoverColor: =
         Max: =5
         Step: =1
+        ThumbBorderColor: =
+        ThumbBorderInteractiveColor: =
+        ThumbFillColor: =
+        ThumbFillInteractiveColor: =
         Value: =3
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
         Width: =319
@@ -139,8 +148,10 @@ Facepile As CanvasComponent:
 
     lblMaxPersonaDisplayable As Label:
         AutoHeight: =true
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =29
+        OnChange: =false
         Text: |-
             ="Maximum displayable personas :"
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
@@ -152,15 +163,15 @@ Facepile As CanvasComponent:
     "ddPersonaSize As 'Combo box'.pcfdataset":
         AccessibleLabel: ="Constrain"
         DefaultSelectedItems: |-
-            =Table({Name:"Size 32",key:'''PowerCAT.Facepile.PersonaSize'''.Size32})
+            =Table({Name:"Size 32",key:'PowerCAT.Facepile.PersonaSize'.Size32})
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Items: |-
-            =Table({Name:"Size 8",key:'''PowerCAT.Facepile.PersonaSize'''.Size8},
-            {Name:"Size 24",key:'''PowerCAT.Facepile.PersonaSize'''.Size24},
-            {Name:"Size 32",key:'''PowerCAT.Facepile.PersonaSize'''.Size32},
-            {Name:"Size 48",key:'''PowerCAT.Facepile.PersonaSize'''.Size48},
-            {Name:"Size 56",key:'''PowerCAT.Facepile.PersonaSize'''.Size56})
+            =Table({Name:"Size 8",key:'PowerCAT.Facepile.PersonaSize'.Size8},
+            {Name:"Size 24",key:'PowerCAT.Facepile.PersonaSize'.Size24},
+            {Name:"Size 32",key:'PowerCAT.Facepile.PersonaSize'.Size32},
+            {Name:"Size 48",key:'PowerCAT.Facepile.PersonaSize'.Size48},
+            {Name:"Size 56",key:'PowerCAT.Facepile.PersonaSize'.Size56})
         Text: =""
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
         Width: =120
@@ -176,8 +187,10 @@ Facepile As CanvasComponent:
             ZIndex: =11
 
     lblPersonaSize As Label:
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        OnChange: =false
         Text: |-
             ="Persona Size :"
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
@@ -189,10 +202,20 @@ Facepile As CanvasComponent:
     "chkImageShouldFadeIn As 'Check box'":
         AccessibleLabel: ="Allow spell check"
         Checked: =true
+        CheckedCheckboxBackgroundFill: =
+        CheckedCheckboxBorderColor: =
+        CheckmarkFill: =
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        HoverCheckboxBackgroundFill: =
+        HoverCheckboxBorderColor: =
         Label: ="Image Should FadeIn"
         OnChange: =
+        OnCheck: =false
+        OnUncheck: =false
+        UncheckedCheckboxBackgroundFill: =
+        UncheckedCheckboxBorderColor: =
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
         Width: =160
         X: =41
@@ -202,14 +225,14 @@ Facepile As CanvasComponent:
     "ddOverflowBtnType As 'Combo box'.pcfdataset":
         AccessibleLabel: ="Constrain"
         DefaultSelectedItems: |-
-            =Table({Name:"Descriptive",key:'''PowerCAT.Facepile.OverflowButtonType'''.descriptive})
+            =Table({Name:"Descriptive",key:'PowerCAT.Facepile.OverflowButtonType'.descriptive})
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Items: |-
-            =Table({Name:"None",key:'''PowerCAT.Facepile.OverflowButtonType'''.none},
-            {Name:"Descriptive",key:'''PowerCAT.Facepile.OverflowButtonType'''.descriptive},
-            {Name:"More",key:'''PowerCAT.Facepile.OverflowButtonType'''.more},
-            {Name:"Down Arrow",key:'''PowerCAT.Facepile.OverflowButtonType'''.downArrow})
+            =Table({Name:"None",key:'PowerCAT.Facepile.OverflowButtonType'.none},
+            {Name:"Descriptive",key:'PowerCAT.Facepile.OverflowButtonType'.descriptive},
+            {Name:"More",key:'PowerCAT.Facepile.OverflowButtonType'.more},
+            {Name:"Down Arrow",key:'PowerCAT.Facepile.OverflowButtonType'.downArrow})
         Text: =""
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
         Width: =120
@@ -225,8 +248,10 @@ Facepile As CanvasComponent:
             ZIndex: =11
 
     lblOverflowBtnType As Label:
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        OnChange: =false
         Text: |-
             ="Overflow button type :"
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
@@ -238,10 +263,20 @@ Facepile As CanvasComponent:
     "chkShowAddButton As 'Check box'":
         AccessibleLabel: ="Allow spell check"
         Checked: =true
+        CheckedCheckboxBackgroundFill: =
+        CheckedCheckboxBorderColor: =
+        CheckmarkFill: =
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        HoverCheckboxBackgroundFill: =
+        HoverCheckboxBorderColor: =
         Label: ="Show Add Button"
         OnChange: =
+        OnCheck: =false
+        OnUncheck: =false
+        UncheckedCheckboxBackgroundFill: =
+        UncheckedCheckboxBorderColor: =
         Visible: =pivotAppCode_29.Selected.ItemKey="app"
         Width: =160
         X: =41

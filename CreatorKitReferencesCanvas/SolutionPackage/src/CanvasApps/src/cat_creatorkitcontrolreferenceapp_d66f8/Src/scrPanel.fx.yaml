@@ -57,11 +57,11 @@ scrPanel As screen:
             LayoutMinWidth: =250
             ZIndex: =4
 
-            "Elevation2_21 As 'Fluent Elevation (1.0.19)'":
-                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+            "Elevation2_21 As 'Fluent Elevation (1.1.34)'":
+                Depth: ='PowerCAT.Elevation.Depth'.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
-                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth4
                 PaddingBottom: =8
                 PaddingLeft: =8
                 PaddingRight: =8
@@ -116,7 +116,7 @@ scrPanel As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_32 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                    "pivotAppCode_32 As 'Fluent Pivot (1.1.34)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-
@@ -124,7 +124,7 @@ scrPanel As screen:
                         LayoutMinHeight: =200
                         LayoutMinWidth: =200
                         OnSelect: =
-                        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+                        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
                         SelectedKey: ="app"
                         Theme: =varTheme.themeJSON
                         Width: =174
@@ -173,17 +173,30 @@ scrPanel As screen:
 
                     btnOpenDialog_1 As Button:
                         AlignInContainer: =AlignInContainer.Start
+                        BorderColor: =
                         BorderStyle: =BorderStyle.Solid
                         BorderThickness: =1
-                        ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                        ButtonType: ='Button.ButtonType'.Standard
+                        DisabledBorderColor: =
+                        DisabledFillColor: =
+                        DisabledTextColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FillColor: =
                         FontWeight: =FontWeight.Bold
                         Height: =32
+                        HoverBorderColor: =
+                        HoverFillColor: =
+                        HoverTextColor: =
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
+                        OnChange: =false
                         OnSelect: |-
                             =UpdateContext({showHidePanel:true})
+                        PressedBorderColor: =
+                        PressedFillColor: =
+                        PressedTextColor: =
                         Text: ="Open Panel"
+                        TextColor: =
                         Width: =110
                         X: =40
                         Y: =40

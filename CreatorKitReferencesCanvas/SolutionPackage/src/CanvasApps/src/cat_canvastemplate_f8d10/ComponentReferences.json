@@ -4,39 +4,49 @@
     "InstanceCount": 1,
     "LibraryId": "c99e04c6-a751-4b2c-ac59-b4d3ad943f0c",
     "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
-    "LibraryVersion": "2023-07-22T03:07:03Z",
+    "LibraryVersion": "2023-08-29T03:26:12Z",
     "OriginalComponentDefinitionTemplateId": "44e7951b1fad4ad98126f8c108dd1e9f",
     "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
-    "SourceLastTimeSaved": "2023-07-22T03:07:08.406+00:00"
+    "SourceLastTimeSaved": "2023-08-29T03:26:14.776+00:00"
   },
   {
     "HasLibraryLogicalName": true,
     "InstanceCount": 1,
     "LibraryId": "c99e04c6-a751-4b2c-ac59-b4d3ad943f0c",
     "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
-    "LibraryVersion": "2023-07-22T03:07:03Z",
+    "LibraryVersion": "2023-08-29T03:26:12Z",
     "OriginalComponentDefinitionTemplateId": "2e88179d732a402184a767c94eab038b",
     "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
-    "SourceLastTimeSaved": "2023-07-22T03:07:08.406+00:00"
+    "SourceLastTimeSaved": "2023-08-29T03:26:14.776+00:00"
   },
   {
     "HasLibraryLogicalName": true,
     "InstanceCount": 1,
     "LibraryId": "c99e04c6-a751-4b2c-ac59-b4d3ad943f0c",
     "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
-    "LibraryVersion": "2023-07-22T03:07:03Z",
+    "LibraryVersion": "2023-08-29T03:26:12Z",
     "OriginalComponentDefinitionTemplateId": "6da4b2f929d240969e49e05e10e720ce",
     "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
-    "SourceLastTimeSaved": "2023-07-22T03:07:08.406+00:00"
+    "SourceLastTimeSaved": "2023-08-29T03:26:14.776+00:00"
   },
   {
     "HasLibraryLogicalName": true,
     "InstanceCount": 1,
     "LibraryId": "c99e04c6-a751-4b2c-ac59-b4d3ad943f0c",
     "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
-    "LibraryVersion": "2023-07-22T03:07:03Z",
+    "LibraryVersion": "2023-08-29T03:26:12Z",
     "OriginalComponentDefinitionTemplateId": "952d39d80fc84420b772a5058b19d909",
     "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
-    "SourceLastTimeSaved": "2023-07-22T03:07:08.406+00:00"
+    "SourceLastTimeSaved": "2023-08-29T03:26:14.776+00:00"
+  },
+  {
+    "HasLibraryLogicalName": true,
+    "InstanceCount": 2,
+    "LibraryId": "c99e04c6-a751-4b2c-ac59-b4d3ad943f0c",
+    "LibraryLogicalName": "cat_powercatcomponentlibrary_0be3a",
+    "LibraryVersion": "2023-08-29T03:26:12Z",
+    "OriginalComponentDefinitionTemplateId": "5fa30e35dad34bf5ae3f78bd0875ed3f",
+    "RefusedSourceLastTimeSaved": "0001-01-01T00:00:00",
+    "SourceLastTimeSaved": "2023-08-29T03:26:14.776+00:00"
   }
 ]

@@ -600,6 +600,88 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrDialog.Dialog_1.OnButtonSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrDialog.Dialog_1.OnButtonSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 60,
+                  "snippet": {
+                    "text": ";"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnButtonSelect",
+                "module": "scrDialog",
+                "type": "scrDialog.Dialog_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Record",
+              "Boolean"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrPanel.Panel_1.OnButtonSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrPanel.Panel_1.OnButtonSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 53,
+                  "snippet": {
+                    "text": ";"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnButtonSelect",
+                "module": "scrPanel",
+                "type": "scrPanel.Panel_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Record",
+              "Boolean"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrIncompatibleRulePropTypes-PropKind-RuleKind",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "ExpandMenu.imgExpandButton.FocusedBorderThickness"
                 }
               ],
@@ -2673,7 +2755,7 @@
               }
             }
           ],
-          "version": "1.326"
+          "version": "1.341"
         }
       }
     }

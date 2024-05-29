@@ -9,6 +9,8 @@ ProgressIndicator As CanvasComponent:
 
     "LblinputTextBox As 'Text box'":
         AccessibleLabel: ="Label input box"
+        ColorBackground: =
+        ColorText: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Label: =LblinputTextBox.Value
@@ -20,7 +22,7 @@ ProgressIndicator As CanvasComponent:
         Y: =223
         ZIndex: =1
 
-    "ResizableTextarea1_1 As 'Resizable Text Area (1.0.19)'":
+    "ResizableTextarea1_1 As 'Resizable Text Area (1.1.29)'":
         Default: =""
         DisplayMode: =DisplayMode.Edit
         Height: =61
@@ -34,8 +36,10 @@ ProgressIndicator As CanvasComponent:
         ZIndex: =2
 
     lblLabel As Label:
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        OnChange: =false
         Text: |-
             ="Description:"
         Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
@@ -45,8 +49,10 @@ ProgressIndicator As CanvasComponent:
         ZIndex: =3
 
     lblDescription As Label:
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        OnChange: =false
         Text: |-
             ="Label :"
         Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
@@ -57,10 +63,19 @@ ProgressIndicator As CanvasComponent:
 
     sliderPercentComplete As Slider:
         AccessibleLabel: ="Percentage Complete Slider"
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =29
+        LineActiveColor: =
+        LineActiveHoverColor: =
+        LineInactiveColor: =
+        LineInactiveHoverColor: =
         Max: =100
         Step: =1
+        ThumbBorderColor: =
+        ThumbBorderInteractiveColor: =
+        ThumbFillColor: =
+        ThumbFillInteractiveColor: =
         Value: =30
         Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
         Width: =319
@@ -70,8 +85,10 @@ ProgressIndicator As CanvasComponent:
 
     lblPercentComp As Label:
         AutoHeight: =true
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        OnChange: =false
         Text: |-
             ="Percentage Complete :"
         Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
@@ -80,7 +97,7 @@ ProgressIndicator As CanvasComponent:
         Y: =126
         ZIndex: =6
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.19) Preview'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.1.34)'":
         Description: =ResizableTextarea1_1.Text
         DisplayMode: =DisplayMode.Edit
         Height: =32
@@ -101,7 +118,7 @@ ProgressIndicator As CanvasComponent:
         DisplayMode: =DisplayMode.Edit
         Height: =32
         Items: |-
-            =Table({Name:"Default Indicator",key:DefaultIndicator},{Name:"Indeterminate Indicator", key:IndeterminateIndicator})
+            =Table({Name:"Default Indicator",key:'PowerCAT.ProgressIndicator.TypeofIndicator'.DefaultIndicator},{Name:"Indeterminate Indicator", key:'PowerCAT.ProgressIndicator.TypeofIndicator'.IndeterminateIndicator})
         Text: =""
         Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
         Width: =320
@@ -117,8 +134,10 @@ ProgressIndicator As CanvasComponent:
             ZIndex: =11
 
     lblTypeofIndicator As Label:
+        Color: =
         DisplayMode: =DisplayMode.Edit
         Height: =32
+        OnChange: =false
         Text: |-
             ="Type of Indicator :"
         Visible: =pivotAppCode_30.Selected.ItemKey<>"code"
@@ -138,13 +157,13 @@ ProgressIndicator As CanvasComponent:
         Y: =2
         ZIndex: =10
 
-    "pivotAppCode_30 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_30 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",350,htmlCode_29.Y+htmlCode_29.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174

@@ -18,13 +18,13 @@ ElevationSummary As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_14 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_14 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_14.Y+htmlCode_14.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Visible: =false
@@ -64,6 +64,7 @@ ElevationSummary As CanvasComponent:
         ZIndex: =11
 
         galElevations As gallery.galleryVertical:
+            '#CopilotOverlayLabel': ="Filtered"
             AccessibleLabel: ="Elevations"
             DisplayMode: =DisplayMode.View
             Height: =502
@@ -72,14 +73,14 @@ ElevationSummary As CanvasComponent:
                 =Table(
                     {
                         Level: 4,
-                        Depth: '''PowerCAT.Elevation.Depth'''.Depth4,
+                        Depth: 'PowerCAT.Elevation.Depth'.Depth4,
                         Usage: "Cards
                 Grid item thumbnails",
                         EnumValue: "'PowerCAT.Elevation.Depth'.Depth4"
                     },
                     {
                         Level: 8,
-                        Depth: '''PowerCAT.Elevation.Depth'''.Depth8,
+                        Depth: 'PowerCAT.Elevation.Depth'.Depth8,
                         Usage: "Command bars
                 Command dropdowns
                 Context menus",
@@ -87,7 +88,7 @@ ElevationSummary As CanvasComponent:
                     },
                     {
                         Level: 16,
-                        Depth: '''PowerCAT.Elevation.Depth'''.Depth16,
+                        Depth: 'PowerCAT.Elevation.Depth'.Depth16,
                         Usage: "Teaching callouts
                 Search results dropdown
                 Hover cards
@@ -96,7 +97,7 @@ ElevationSummary As CanvasComponent:
                     },
                     {
                         Level: 64,
-                        Depth: '''PowerCAT.Elevation.Depth'''.Depth64,
+                        Depth: 'PowerCAT.Elevation.Depth'.Depth64,
                         Usage: "Panels
                 Pop up dialogs",
                         EnumValue: "'PowerCAT.Elevation.Depth'.Depth64"
@@ -111,7 +112,7 @@ ElevationSummary As CanvasComponent:
             Y: =110
             ZIndex: =5
 
-            "ElevationGalleryItem As 'Fluent Elevation (1.0.19)'":
+            "ElevationGalleryItem As 'Fluent Elevation (1.1.34)'":
                 Depth: =ThisItem.Depth
                 DisplayMode: =DisplayMode.Edit
                 Height: =78

@@ -18,13 +18,13 @@ KeyboardShortcuts As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_28 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_28 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_28.Y+htmlCode_28.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -89,7 +89,7 @@ KeyboardShortcuts As CanvasComponent:
         Y: =40
         ZIndex: =19
 
-        "KeyboardShortcutsSample As 'Keyboard Shortcuts (1.0.19)'":
+        "KeyboardShortcutsSample As 'Keyboard Shortcuts (1.1.34)'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             KeyConfig: ="[""alt + f"",""alt + l"",""alt + e""]"
@@ -117,8 +117,8 @@ KeyboardShortcuts As CanvasComponent:
             Y: =220
             ZIndex: =6
 
-        "txtFirstName As 'Resizable Text Area (1.0.19)'":
-            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.None
+        "txtFirstName As 'Resizable Text Area (1.1.29)'":
+            AllowResize: ='PowerCAT.ResizableTextarea.AllowResize'.None
             BorderColor: |-
                 ="#808080"
             BorderRadius: =1
@@ -126,13 +126,13 @@ KeyboardShortcuts As CanvasComponent:
             DefaultHeight: =32
             DisplayMode: =DisplayMode.Edit
             EmptyPlaceholderText: =""
-            EnableSpellCheck: ='''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No
+            EnableSpellCheck: ='PowerCAT.ResizableTextarea.EnableSpellCheck'.No
             FocusBorderColor: =varTheme.paletteCSS.themePrimary
             FocusBorderThickness: =2
             FontColor: =varTheme.paletteCSS.neutralDark
             FontName: ="'SegoeUI', 'Segoe UI'"
             FontSize: =14
-            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+            FontSizeUnits: ='PowerCAT.ResizableTextarea.FontSizeUnits'.Px
             Height: =32
             HintText: ="First Name"
             HoverBorderColor: =varTheme.paletteCSS.neutralDark
@@ -144,7 +144,7 @@ KeyboardShortcuts As CanvasComponent:
             PaddingBottom: =4
             PaddingLeft: =8
             PaddingTop: =8
-            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+            RenderBorderStyle: ='PowerCAT.ResizableTextarea.RenderBorderStyle'.Normal
             ResizedHeight: =32
             ResizedWidth: =32
             Text: =""
@@ -167,8 +167,8 @@ KeyboardShortcuts As CanvasComponent:
             Y: =60
             ZIndex: =14
 
-        "txtLastName As 'Resizable Text Area (1.0.19)'":
-            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.None
+        "txtLastName As 'Resizable Text Area (1.1.29)'":
+            AllowResize: ='PowerCAT.ResizableTextarea.AllowResize'.None
             BorderColor: |-
                 ="#808080"
             BorderRadius: =1
@@ -176,13 +176,13 @@ KeyboardShortcuts As CanvasComponent:
             DefaultHeight: =32
             DisplayMode: =DisplayMode.Edit
             EmptyPlaceholderText: =""
-            EnableSpellCheck: ='''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No
+            EnableSpellCheck: ='PowerCAT.ResizableTextarea.EnableSpellCheck'.No
             FocusBorderColor: =varTheme.paletteCSS.themePrimary
             FocusBorderThickness: =2
             FontColor: =varTheme.paletteCSS.neutralDark
             FontName: ="'SegoeUI', 'Segoe UI'"
             FontSize: =14
-            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+            FontSizeUnits: ='PowerCAT.ResizableTextarea.FontSizeUnits'.Px
             Height: =32
             HintText: ="Last Name"
             HoverBorderColor: =varTheme.paletteCSS.neutralDark
@@ -194,7 +194,7 @@ KeyboardShortcuts As CanvasComponent:
             PaddingBottom: =4
             PaddingLeft: =8
             PaddingTop: =8
-            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+            RenderBorderStyle: ='PowerCAT.ResizableTextarea.RenderBorderStyle'.Normal
             ResizedHeight: =32
             ResizedWidth: =32
             Text: =""
@@ -217,8 +217,8 @@ KeyboardShortcuts As CanvasComponent:
             Y: =111
             ZIndex: =16
 
-        "txtEmail As 'Resizable Text Area (1.0.19)'":
-            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.None
+        "txtEmail As 'Resizable Text Area (1.1.29)'":
+            AllowResize: ='PowerCAT.ResizableTextarea.AllowResize'.None
             BorderColor: |-
                 ="#808080"
             BorderRadius: =1
@@ -226,13 +226,13 @@ KeyboardShortcuts As CanvasComponent:
             DefaultHeight: =32
             DisplayMode: =DisplayMode.Edit
             EmptyPlaceholderText: =""
-            EnableSpellCheck: ='''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No
+            EnableSpellCheck: ='PowerCAT.ResizableTextarea.EnableSpellCheck'.No
             FocusBorderColor: =varTheme.paletteCSS.themePrimary
             FocusBorderThickness: =2
             FontColor: =varTheme.paletteCSS.neutralDark
             FontName: ="'SegoeUI', 'Segoe UI'"
             FontSize: =14
-            FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+            FontSizeUnits: ='PowerCAT.ResizableTextarea.FontSizeUnits'.Px
             Height: =32
             HintText: ="Email address"
             HoverBorderColor: =varTheme.paletteCSS.neutralDark
@@ -244,7 +244,7 @@ KeyboardShortcuts As CanvasComponent:
             PaddingBottom: =4
             PaddingLeft: =8
             PaddingTop: =8
-            RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+            RenderBorderStyle: ='PowerCAT.ResizableTextarea.RenderBorderStyle'.Normal
             ResizedHeight: =32
             ResizedWidth: =32
             Text: =""

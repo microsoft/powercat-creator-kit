@@ -293,12 +293,12 @@
                 Y: =70
                 ZIndex: =1
 
-                "AutoWidthLabel1_2 As 'Auto Width Label (1.0.22)'":
+                "AutoWidthLabel1_2 As 'Auto Width Label (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =AppTheme.palette.black
                     FontWeight: ="600"
                     Height: =20
-                    LayoutMinHeight: =20
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =200
                     Text: ="Date input"
                     Width: =Self.AutoWidth
@@ -306,13 +306,13 @@
                     Y: =0
                     ZIndex: =1
 
-                "AutoWidthLabel1_3 As 'Auto Width Label (1.0.22)'":
+                "AutoWidthLabel1_3 As 'Auto Width Label (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     FontColor: |-
                         ="#ff0000"
                     FontWeight: =FontWeight.Bold
                     Height: =20
-                    LayoutMinHeight: =20
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =200
                     Text: ="*"
                     Width: =Self.AutoWidth
@@ -320,7 +320,7 @@
                     Y: =0
                     ZIndex: =2
 
-                "btnAddTaskHeader_4 As 'Fluent Icon (1.0.22)'":
+                "btnAddTaskHeader_4 As 'Fluent Icon (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =20
                     HoverFillColor: =
@@ -380,12 +380,12 @@
                 Y: =70
                 ZIndex: =1
 
-                "AutoWidthLabel1_4 As 'Auto Width Label (1.0.22)'":
+                "AutoWidthLabel1_4 As 'Auto Width Label (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =AppTheme.palette.black
                     FontWeight: ="600"
                     Height: =20
-                    LayoutMinHeight: =20
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =200
                     Text: ="Text input"
                     Width: =Self.AutoWidth
@@ -393,13 +393,13 @@
                     Y: =0
                     ZIndex: =1
 
-                "AutoWidthLabel1_5 As 'Auto Width Label (1.0.22)'":
+                "AutoWidthLabel1_5 As 'Auto Width Label (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     FontColor: |-
                         ="#ff0000"
                     FontWeight: =FontWeight.Bold
                     Height: =20
-                    LayoutMinHeight: =20
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =200
                     Text: ="*"
                     Width: =Self.AutoWidth
@@ -407,7 +407,7 @@
                     Y: =0
                     ZIndex: =2
 
-                "btnAddTaskHeader_5 As 'Fluent Icon (1.0.22)'":
+                "btnAddTaskHeader_5 As 'Fluent Icon (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =20
                     HoverFillColor: =
@@ -466,12 +466,12 @@
                 Y: =70
                 ZIndex: =1
 
-                "AutoWidthLabel1_6 As 'Auto Width Label (1.0.22)'":
+                "AutoWidthLabel1_6 As 'Auto Width Label (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =AppTheme.palette.black
                     FontWeight: ="600"
                     Height: =20
-                    LayoutMinHeight: =20
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =200
                     Text: ="Persona input"
                     Width: =Self.AutoWidth
@@ -479,13 +479,13 @@
                     Y: =0
                     ZIndex: =1
 
-                "AutoWidthLabel1_7 As 'Auto Width Label (1.0.22)'":
+                "AutoWidthLabel1_7 As 'Auto Width Label (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     FontColor: |-
                         ="#ff0000"
                     FontWeight: =FontWeight.Bold
                     Height: =20
-                    LayoutMinHeight: =20
+                    LayoutMinHeight: =200
                     LayoutMinWidth: =200
                     Text: ="*"
                     Width: =Self.AutoWidth
@@ -493,7 +493,7 @@
                     Y: =0
                     ZIndex: =2
 
-                "btnAddTaskHeader_6 As 'Fluent Icon (1.0.22)'":
+                "btnAddTaskHeader_6 As 'Fluent Icon (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =20
                     HoverFillColor: =
@@ -513,7 +513,7 @@
                     Y: =555
                     ZIndex: =3
 
-            "PeoplePicker1_1 As 'Fluent PeoplePicker (1.0.22) Preview'.pcfdataset":
+            "PeoplePicker1_1 As 'Fluent PeoplePicker (1.1.29) Preview'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =30
                 Items: =First(PreSelectedUserCollection)
@@ -589,7 +589,7 @@
         Y: =212
         ZIndex: =4
 
-    "btnAddTaskHeader As 'Fluent Icon (1.0.22)'":
+    "btnAddTaskHeader As 'Fluent Icon (1.1.29)'":
         DisplayMode: =DisplayMode.Edit
         Height: =42
         HoverFillColor: =
@@ -605,7 +605,7 @@
         Y: =511
         ZIndex: =5
 
-    "Elevation1 As 'Fluent Elevation (1.0.22)'":
+    "Elevation1 As 'Fluent Elevation (1.1.29)'":
         Depth: ='PowerCAT.Elevation.Depth'.Depth16
         DisplayMode: =DisplayMode.Edit
         Height: =143
@@ -614,7 +614,7 @@
         Y: =351
         ZIndex: =6
 
-    "Elevation1_1 As 'Fluent Elevation (1.0.22)'":
+    "Elevation1_1 As 'Fluent Elevation (1.1.29)'":
         DarkOverlay: =false
         Depth: ='PowerCAT.Elevation.Depth'.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -625,7 +625,7 @@
         Y: =505
         ZIndex: =7
 
-    "Elevation1_2 As 'Fluent Elevation (1.0.22)'":
+    "Elevation1_2 As 'Fluent Elevation (1.1.29)'":
         Depth: ='PowerCAT.Elevation.Depth'.Depth8
         DisplayMode: =DisplayMode.Edit
         Height: =119
@@ -634,7 +634,7 @@
         Y: =223
         ZIndex: =8
 
-    "Elevation1_3 As 'Fluent Elevation (1.0.22)'":
+    "Elevation1_3 As 'Fluent Elevation (1.1.29)'":
         DarkOverlay: =false
         Depth: ='PowerCAT.Elevation.Depth'.Depth4
         DisplayMode: =DisplayMode.Edit
@@ -646,7 +646,7 @@
         Y: =95
         ZIndex: =9
 
-    "picTags As 'Fluent Picker (1.0.22)'.pcfdataset":
+    "picTags As 'Fluent Picker (1.1.29)'.pcfdataset":
         BorderRadius: =0
         DisplayMode: =DisplayMode.Edit
         Error: =false
@@ -837,7 +837,7 @@
         Y: =64
         ZIndex: =17
 
-    "btnAddTaskHeader_1 As 'Fluent Icon (1.0.22)'":
+    "btnAddTaskHeader_1 As 'Fluent Icon (1.1.29)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -12181,7 +12181,7 @@
         Y: =64
         ZIndex: =23
 
-    "Breadcrumb1 As 'Fluent Breadcrumb (1.0.22)'.pcfdataset":
+    "Breadcrumb1 As 'Fluent Breadcrumb (1.1.29)'.pcfdataset":
         AccessibilityLabel: ="Fluent UI Breadcrumb"
         DisplayMode: =DisplayMode.Edit
         Height: =48
@@ -12230,7 +12230,7 @@
         Y: =91
         ZIndex: =24
 
-    "ContextMenu1 As 'Fluent Context Menu (1.0.22)'.pcfdataset":
+    "ContextMenu1 As 'Fluent Context Menu (1.1.29)'.pcfdataset":
         Chevron: =true
         DisplayMode: =DisplayMode.Edit
         Height: =41
@@ -12297,7 +12297,7 @@
         Y: =412
         ZIndex: =28
 
-    "Nav1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+    "Nav1 As 'Fluent Nav (1.1.29)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =448
         Items: |-
@@ -12394,7 +12394,7 @@
         Y: =103
         ZIndex: =29
 
-    "CommandBar1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+    "CommandBar1 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -12410,7 +12410,7 @@
         Y: =406
         ZIndex: =30
 
-    "Pivot1 As 'Fluent Pivot (1.0.22)'.pcfdataset":
+    "Pivot1 As 'Fluent Pivot (1.1.29)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =44
         Items: |-
@@ -12462,7 +12462,7 @@
         TextColor: =ColorValue(AppTheme.palette.white)
         Width: =135
         X: =1729
-        Y: =977
+        Y: =957
         ZIndex: =33
 
     btnOpenPanel As Button:
@@ -12478,10 +12478,10 @@
         TextColor: =ColorValue(AppTheme.palette.white)
         Width: =135
         X: =1580
-        Y: =977
+        Y: =957
         ZIndex: =34
 
-    "Elevation1_4 As 'Fluent Elevation (1.0.22)'":
+    "Elevation1_4 As 'Fluent Elevation (1.1.29)'":
         DarkOverlay: =false
         Depth: ='PowerCAT.Elevation.Depth'.Depth64
         DisplayMode: =DisplayMode.Edit
@@ -12492,7 +12492,7 @@
         Y: =760
         ZIndex: =35
 
-    "Calendar1 As 'Fluent Calendar (1.0.22) Preview'":
+    "Calendar1 As 'Fluent Calendar (1.1.29) Preview'":
         DayPickerVisible: =true
         DisplayMode: =DisplayMode.Edit
         Height: =239
@@ -12508,7 +12508,7 @@
         Y: =760
         ZIndex: =36
 
-    "Shimmer1 As 'Fluent Shimmer (1.0.22) Preview'.pcfdataset":
+    "Shimmer1 As 'Fluent Shimmer (1.1.29) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =205
         Items: |-
@@ -12731,7 +12731,7 @@
                 Y: =DataCardKey2_1.Y
                 ZIndex: =4
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.0.22) Preview'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.1.29) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =56
         Label: ="Title here"
@@ -12762,7 +12762,7 @@
         Y: =714
         ZIndex: =42
 
-    "Facepile1 As 'Fluent Facepile (1.0.22) Preview'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.1.29) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =68
         MaxDisplayablePersonas: =1
@@ -12785,7 +12785,7 @@
         Y: =360
         ZIndex: =44
 
-    "PeoplePicker1 As 'Fluent PeoplePicker (1.0.22) Preview'.pcfdataset":
+    "PeoplePicker1 As 'Fluent PeoplePicker (1.1.29) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =118
         Items: =PreSelectedUserCollection
@@ -12834,7 +12834,7 @@
         Y: =461
         ZIndex: =46
 
-    "SearchBox1 As 'Fluent SearchBox (1.0.22) Preview'":
+    "SearchBox1 As 'Fluent SearchBox (1.1.29) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         Theme: =AppThemeJson
@@ -12854,7 +12854,7 @@
         Y: =876
         ZIndex: =48
 
-    "Persona1 As 'Fluent Persona (1.0.22) Preview'":
+    "Persona1 As 'Fluent Persona (1.1.29) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =51
         ImageUrl: =User().Image
@@ -12889,7 +12889,7 @@
         Y: =587
         ZIndex: =51
 
-    "SpinButton1 As 'Fluent SpinButton (1.0.22) Preview'":
+    "SpinButton1 As 'Fluent SpinButton (1.1.29) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =36
         IconName: ="IncreaseIndentLegacy"
@@ -12901,7 +12901,7 @@
         Y: =985
         ZIndex: =52
 
-    "btnAddTaskHeader_2 As 'Fluent Icon (1.0.22)'":
+    "btnAddTaskHeader_2 As 'Fluent Icon (1.1.29)'":
         DisplayMode: =DisplayMode.Edit
         Height: =34
         HoverFillColor: =
@@ -12918,7 +12918,7 @@
         Y: =39
         ZIndex: =53
 
-    "Spinner1 As 'Fluent Spinner (1.0.22) Preview'":
+    "Spinner1 As 'Fluent Spinner (1.1.29) Preview'":
         DisplayMode: =DisplayMode.Edit
         Height: =51
         Label: ="Loading..."
@@ -12931,7 +12931,7 @@
         Y: =140
         ZIndex: =54
 
-    "Elevation1_5 As 'Fluent Elevation (1.0.22)'":
+    "Elevation1_5 As 'Fluent Elevation (1.1.29)'":
         DarkOverlay: =false
         Depth: ='PowerCAT.Elevation.Depth'.Depth4
         DisplayMode: =DisplayMode.Edit
@@ -12943,7 +12943,7 @@
         Y: =637
         ZIndex: =55
 
-    "SubwayNav1 As 'SubwayNav (1.0.22) Preview'.pcfdataset":
+    "SubwayNav1 As 'SubwayNav (1.1.29) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =357
         Items: |-
@@ -13001,12 +13001,12 @@
             Y: =70
             ZIndex: =1
 
-            "AutoWidthLabel1 As 'Auto Width Label (1.0.22)'":
+            "AutoWidthLabel1 As 'Auto Width Label (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =AppTheme.palette.black
                 FontWeight: ="600"
                 Height: =20
-                LayoutMinHeight: =20
+                LayoutMinHeight: =200
                 LayoutMinWidth: =200
                 Text: ="Field label"
                 Width: =Self.AutoWidth
@@ -13014,13 +13014,13 @@
                 Y: =0
                 ZIndex: =1
 
-            "AutoWidthLabel1_1 As 'Auto Width Label (1.0.22)'":
+            "AutoWidthLabel1_1 As 'Auto Width Label (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 FontColor: |-
                     ="#ff0000"
                 FontWeight: =FontWeight.Bold
                 Height: =20
-                LayoutMinHeight: =20
+                LayoutMinHeight: =200
                 LayoutMinWidth: =200
                 Text: ="*"
                 Width: =Self.AutoWidth
@@ -13028,7 +13028,7 @@
                 Y: =0
                 ZIndex: =2
 
-            "btnAddTaskHeader_3 As 'Fluent Icon (1.0.22)'":
+            "btnAddTaskHeader_3 As 'Fluent Icon (1.1.29)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =20
                 HoverFillColor: =
@@ -13061,6 +13061,9 @@
         ZIndex: =59
 
     Dialog_1 As Dialog:
+        ContentWidth: =Dialog_1.DialogWidth
+        ContentX: = Dialog_1.Width/2-Dialog_1.DialogWidth/2
+        ContentY: = Dialog_1.Height/2-Dialog_1.DialogHeight/2+DialogHeaderContainer.Height + Label3_1.Height
         Fill: =Dialog_1.OverlayColor
         Height: =1080
         OnButtonSelect: |-
@@ -13071,4 +13074,48 @@
         Visible: =showDialog
         Width: =1920
         ZIndex: =60
+
+    Label1 As label:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(51, 51, 51, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =28
+        OnSelect: |-
+            =UpdateContext({showHideMaterial:!showHideMaterial})
+        Size: =13
+        Text: ="Toggle material"
+        Underline: =true
+        X: =1729
+        Y: =1001
+        ZIndex: =61
+
+    Material_1 As Material:
+        BorderRadius: =0
+        BorderRadiusBottomLeft: =0
+        BorderRadiusBottomRight: =0
+        BorderRadiusTopLeft: =0
+        BorderRadiusTopRight: =0
+        Height: =1080
+        Visible: =showHideMaterial
+        Width: =789
+        X: =110
+        ZIndex: =62
+
+    Material_2 As Material:
+        BorderRadius: =0
+        BorderRadiusBottomLeft: =0
+        BorderRadiusBottomRight: =0
+        BorderRadiusTopLeft: =0
+        BorderRadiusTopRight: =0
+        FillColor: ="rgba(255,255,255,0.1)"
+        Height: =1080
+        Visible: =showHideMaterial
+        Width: =789
+        X: =899
+        ZIndex: =63
 

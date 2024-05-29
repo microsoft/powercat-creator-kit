@@ -23,7 +23,7 @@ DetailsListBasic As CanvasComponent:
                     Name:Mid(varLipsum,randomStart,RandBetween(4,10)) & "." & format.name,
                     Number:RandBetween(1,100000),
                     Description: Mid(varLipsum,1,RandBetween(30,Len(varLipsum))),
-                    DateModified:Text(DateAdd(Now(),RandBetween(1,30)*-1,Days)),
+                    DateModified:Text(DateAdd(Now(),RandBetween(1,30)*-1,TimeUnit.Days)),
                     Status:"Open",
                     StatusCol:"green",
                     StatusIcon:"icon:SkypeCircleCheck",
@@ -53,13 +53,13 @@ DetailsListBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_21 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_21 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_21.Y+htmlCode_21.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -282,7 +282,7 @@ DetailsListBasic As CanvasComponent:
         Y: =40
         ZIndex: =19
 
-        "FluentDetailsListBasic As 'Fluent Details List (1.0.19)'.pcfdataset":
+        "FluentDetailsListBasic As 'Fluent Details List (1.1.34)'.pcfdataset":
             AlternateRowColor: =If(chkAltRowColor.Checked,varTheme.paletteCSS.neutralLighterAlt)
             columns_Items: |-
                 =With({
@@ -315,13 +315,13 @@ DetailsListBasic As CanvasComponent:
                 )
             Compact: =chkCompact.Checked
             CurrentSortColumn: =varSortFiles
-            CurrentSortDirection: =If(varSortFilesAsc,'''PowerCAT.FluentDetailsList.CurrentSortDirection'''.Ascending,'''PowerCAT.FluentDetailsList.CurrentSortDirection'''.Descending)
+            CurrentSortDirection: =If(varSortFilesAsc,'PowerCAT.FluentDetailsList.CurrentSortDirection'.Ascending,'PowerCAT.FluentDetailsList.CurrentSortDirection'.Descending)
             DisplayMode: =DisplayMode.Edit
             HeaderVisible: =chkShowHeader.Checked
             Height: =362
             Items: |-
                 =SortByColumns(
-                    Search(colFiles,txtSearchFiles.Value,"Name"),
+                    Search(colFiles,txtSearchFiles.Value,Name),
                     varSortFiles,
                     If(varSortFilesAsc,SortOrder.Ascending,SortOrder.Descending)
                 )
@@ -329,7 +329,7 @@ DetailsListBasic As CanvasComponent:
                 =If(
                     Self.EventName = "Sort",
                     Set(varSortFiles,Self.SortEventColumn);
-                    Set(varSortFilesAsc,Self.SortEventDirection = '''PowerCAT.FluentDetailsList.SortEventDirection'''.Ascending);
+                    Set(varSortFilesAsc,Self.SortEventDirection = 'PowerCAT.FluentDetailsList.SortEventDirection'.Ascending);
                 );
                 
                 If(Self.EventName="CellAction",Notify("Cell Action " & Self.EventRowKey));
@@ -458,15 +458,15 @@ DetailsListBasic As CanvasComponent:
                 =Table(
                     {
                         Name: "None",
-                        Key: '''PowerCAT.FluentDetailsList.SelectionType'''.None
+                        Key: 'PowerCAT.FluentDetailsList.SelectionType'.None
                     },
                     {
                         Name: "Single",
-                        Key: '''PowerCAT.FluentDetailsList.SelectionType'''.Single
+                        Key: 'PowerCAT.FluentDetailsList.SelectionType'.Single
                     },
                     {
                         Name: "Multple",
-                        Key: '''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+                        Key: 'PowerCAT.FluentDetailsList.SelectionType'.Multiple
                     }
                 )
             Text: =""
@@ -500,10 +500,20 @@ DetailsListBasic As CanvasComponent:
         "chkCompact As 'Check box'":
             AccessibleLabel: ="Compact mode"
             Checked: =true
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Compact mode"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
             Width: =160
             X: =221
@@ -513,10 +523,20 @@ DetailsListBasic As CanvasComponent:
         "chkShowHeader As 'Check box'":
             AccessibleLabel: ="Show header"
             Checked: =true
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show header"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
             Width: =160
             X: =381
@@ -551,6 +571,8 @@ DetailsListBasic As CanvasComponent:
 
         "txtSearchFiles As 'Text box'":
             AccessibleLabel: ="Search files"
+            ColorBackground: =
+            ColorText: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Placeholder: ="Search files"
@@ -561,7 +583,7 @@ DetailsListBasic As CanvasComponent:
             Y: =164
             ZIndex: =13
 
-        "icoSearch_1 As 'Fluent Icon (1.0.19)'":
+        "icoSearch_1 As 'Fluent Icon (1.1.34)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit
@@ -570,10 +592,10 @@ DetailsListBasic As CanvasComponent:
             IconColor: =varTheme.paletteCSS.themePrimary
             IconName: ="Search"
             IconSize: =20
-            IconType: ='''PowerCAT.Icon.IconType'''.Icon
+            IconType: ='PowerCAT.Icon.IconType'.Icon
             InputEvent: =varSetFocusActionButton
             Text: =""
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
             Width: =25
@@ -584,10 +606,20 @@ DetailsListBasic As CanvasComponent:
         "chkAltRowColor As 'Check box'":
             AccessibleLabel: ="Alternate row color"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Alternate Row Color"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
             Width: =160
             X: =221
@@ -597,10 +629,20 @@ DetailsListBasic As CanvasComponent:
         "chkWrapDescription As 'Check box'":
             AccessibleLabel: ="Wrap description"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Wrap description"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
             Width: =160
             X: =381
@@ -610,10 +652,20 @@ DetailsListBasic As CanvasComponent:
         "chkCollapseCols As 'Check box'":
             AccessibleLabel: ="Collapse columns"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Collapse Columns"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_21.Selected.ItemKey="app"
             Width: =160
             X: =381

@@ -25,7 +25,7 @@ NavBasic As CanvasComponent:
         Y: =60
         ZIndex: =11
 
-        "navControl As 'Fluent Nav (1.0.19)'.pcfdataset":
+        "navControl As 'Fluent Nav (1.1.34)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =295
             Items: |-
@@ -48,14 +48,27 @@ NavBasic As CanvasComponent:
 
         btnSelectNews As Button:
             AccessibleLabel: ="Select news"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =32
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varNavSelected,"news")
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Select News"
+            TextColor: =
             Visible: =pivotAppCode_13.Selected.ItemKey="app"
             Width: =120
             X: =291
@@ -120,14 +133,27 @@ NavBasic As CanvasComponent:
 
         btnSelectActivity As Button:
             AccessibleLabel: ="Select activity"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =32
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varNavSelected,"activity")
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Select Activity"
+            TextColor: =
             Visible: =pivotAppCode_13.Selected.ItemKey="app"
             Width: =120
             X: =291
@@ -137,9 +163,19 @@ NavBasic As CanvasComponent:
         "chkEnableNav As 'Check box'":
             AccessibleLabel: ="Enable notes link"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Enable Notes Link"
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_13.Selected.ItemKey="app"
             Width: =160
             X: =291
@@ -149,9 +185,19 @@ NavBasic As CanvasComponent:
         "chkVisibleNav As 'Check box'":
             AccessibleLabel: ="Show news link"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show News Link"
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_13.Selected.ItemKey="app"
             Width: =160
             X: =291
@@ -161,22 +207,32 @@ NavBasic As CanvasComponent:
         "chkCustomIconColor As 'Check box'":
             AccessibleLabel: ="Custom icon color"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Custom Icon Color"
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_13.Selected.ItemKey="app"
             Width: =160
             X: =291
             Y: =138
             ZIndex: =10
 
-    "pivotAppCode_13 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_13 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_13.Y+htmlCode_13.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174

@@ -12,11 +12,11 @@ MultiHtmlSectionText As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "Elevation2_5 As 'Fluent Elevation (1.0.19)'":
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+    "Elevation2_5 As 'Fluent Elevation (1.1.34)'":
+        Depth: ='PowerCAT.Elevation.Depth'.Depth4
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height
-        HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+        HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth4
         PaddingBottom: =8
         PaddingLeft: =8
         PaddingRight: =8
@@ -27,6 +27,7 @@ MultiHtmlSectionText As CanvasComponent:
         ZIndex: =1
 
     Gallery2 As gallery.variableTemplateHeightGallery:
+        '#CopilotOverlayLabel': ="Filtered"
         AccessibleLabel: ="Information"
         Height: =Parent.Height-Self.Y
         ItemAccessibleLabel: ="Information"

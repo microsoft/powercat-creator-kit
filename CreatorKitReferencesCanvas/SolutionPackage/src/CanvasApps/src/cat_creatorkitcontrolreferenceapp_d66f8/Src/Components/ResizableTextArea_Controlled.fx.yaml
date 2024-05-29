@@ -23,13 +23,13 @@ ResizableTextArea_Controlled As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_8 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_8 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_8.Y+htmlCode_8.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -132,8 +132,8 @@ ResizableTextArea_Controlled As CanvasComponent:
             Y: =164
             ZIndex: =2
 
-        "ResizableTextarea_Default1 As 'Resizable Text Area (1.0.19)'":
-            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+        "ResizableTextarea_Default1 As 'Resizable Text Area (1.1.29)'":
+            AllowResize: ='PowerCAT.ResizableTextarea.AllowResize'.Horizontal
             Default: =varDefaultValue
             DisplayMode: =DisplayMode.Edit
             Height: =46
@@ -173,8 +173,8 @@ ResizableTextArea_Controlled As CanvasComponent:
             Y: =375
             ZIndex: =14
 
-        "ResizableTextarea_Default2 As 'Resizable Text Area (1.0.19)'":
-            AllowResize: ='''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+        "ResizableTextarea_Default2 As 'Resizable Text Area (1.1.29)'":
+            AllowResize: ='PowerCAT.ResizableTextarea.AllowResize'.Horizontal
             Default: =
             DisplayMode: =DisplayMode.Edit
             Height: =43
@@ -190,14 +190,27 @@ ResizableTextArea_Controlled As CanvasComponent:
 
         btnResetUsingEvent As Button:
             AccessibleLabel: ="Reset to default using event"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =35
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varResizableTextAreaEvent2,"ResetText" & Text(Rand()));
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Reset to default using event"
+            TextColor: =
             Visible: =pivotAppCode_8.Selected.ItemKey="app"
             Width: =142
             X: =20
@@ -206,14 +219,27 @@ ResizableTextArea_Controlled As CanvasComponent:
 
         btnResetUsingVariable As Button:
             AccessibleLabel: ="Reset to default using variable"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =35
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varDefaultValue2,"Default Value2");
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Reset to default using variable"
+            TextColor: =
             Visible: =pivotAppCode_8.Selected.ItemKey="app"
             Width: =142
             X: =20

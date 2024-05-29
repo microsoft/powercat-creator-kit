@@ -18,13 +18,13 @@ ResizableTextArea As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_6 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_6 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_6.Y+htmlCode_6.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -232,7 +232,7 @@ ResizableTextArea As CanvasComponent:
             Y: =16
             ZIndex: =1
 
-            "txtDescription As 'Resizable Text Area (1.0.19)'":
+            "txtDescription As 'Resizable Text Area (1.1.29)'":
                 AccessibilityLabel: ="Sample Resizable Textarea"
                 AllowResize: =ddResizeLimit.Selected.Key
                 BorderColor: |-
@@ -241,13 +241,13 @@ ResizableTextArea As CanvasComponent:
                 Default: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
                 DisplayMode: =DisplayMode.Edit
                 EmptyPlaceholderText: =""
-                EnableSpellCheck: =If(chkSpellCheck.Checked,'''PowerCAT.ResizableTextarea.EnableSpellCheck'''.Yes,'''PowerCAT.ResizableTextarea.EnableSpellCheck'''.No)
+                EnableSpellCheck: =If(chkSpellCheck.Checked,'PowerCAT.ResizableTextarea.EnableSpellCheck'.Yes,'PowerCAT.ResizableTextarea.EnableSpellCheck'.No)
                 FocusBorderColor: =varTheme.paletteCSS.themePrimary
                 FocusBorderThickness: =2
                 FontColor: =varTheme.paletteCSS.neutralDark
                 FontName: ="'SegoeUI', 'Segoe UI'"
                 FontSize: =14
-                FontSizeUnits: ='''PowerCAT.ResizableTextarea.FontSizeUnits'''.Px
+                FontSizeUnits: ='PowerCAT.ResizableTextarea.FontSizeUnits'.Px
                 Height: =100
                 HintText: ="Enter text"
                 HoverBorderColor: =varTheme.paletteCSS.neutralDark
@@ -256,7 +256,7 @@ ResizableTextArea As CanvasComponent:
                 MaxHeight: =400
                 MaxWidth: =Parent.Width
                 MinHeight: =60
-                RenderBorderStyle: ='''PowerCAT.ResizableTextarea.RenderBorderStyle'''.Normal
+                RenderBorderStyle: ='PowerCAT.ResizableTextarea.RenderBorderStyle'.Normal
                 ResizedHeight: =40
                 Text: =""
                 Width: =Parent.Width
@@ -274,14 +274,27 @@ ResizableTextArea As CanvasComponent:
 
             btnSetFocusOnTextArea As Button:
                 AccessibleLabel: ="Set focus on text area"
+                BorderColor: =
                 BorderRadius: =1
                 BorderStyle: =BorderStyle.Solid
                 BorderThickness: =1
-                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                ButtonType: ='Button.ButtonType'.Standard
+                DisabledBorderColor: =
+                DisabledFillColor: =
+                DisabledTextColor: =
                 DisplayMode: =DisplayMode.Edit
+                FillColor: =
                 Height: =32
+                HoverBorderColor: =
+                HoverFillColor: =
+                HoverTextColor: =
+                OnChange: =false
                 OnSelect: =Set(varEvent,"SetFocus" & Text(Rand()))
+                PressedBorderColor: =
+                PressedFillColor: =
+                PressedTextColor: =
                 Text: ="Set Focus on Text Area"
+                TextColor: =
                 Visible: =pivotAppCode_6.Selected.ItemKey="app"
                 Width: =210
                 X: =18
@@ -290,14 +303,27 @@ ResizableTextArea As CanvasComponent:
 
             btnResetSize As Button:
                 AccessibleLabel: ="Reset size"
+                BorderColor: =
                 BorderRadius: =1
                 BorderStyle: =BorderStyle.Solid
                 BorderThickness: =1
-                ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                ButtonType: ='Button.ButtonType'.Standard
+                DisabledBorderColor: =
+                DisabledFillColor: =
+                DisabledTextColor: =
                 DisplayMode: =DisplayMode.Edit
+                FillColor: =
                 Height: =32
+                HoverBorderColor: =
+                HoverFillColor: =
+                HoverTextColor: =
+                OnChange: =false
                 OnSelect: =Set(varEvent,"ResetSize" & Text(Rand()))
+                PressedBorderColor: =
+                PressedFillColor: =
+                PressedTextColor: =
                 Text: ="Reset Size"
+                TextColor: =
                 Visible: =pivotAppCode_6.Selected.ItemKey="app"
                 Width: =210
                 X: =247
@@ -341,19 +367,19 @@ ResizableTextArea As CanvasComponent:
                     =Table(
                         {
                             Name: "Both",
-                            Key: '''PowerCAT.ResizableTextarea.AllowResize'''.Both
+                            Key: 'PowerCAT.ResizableTextarea.AllowResize'.Both
                         },
                         {
                             Name: "Vertical",
-                            Key: '''PowerCAT.ResizableTextarea.AllowResize'''.Vertical
+                            Key: 'PowerCAT.ResizableTextarea.AllowResize'.Vertical
                         },
                         {
                             Name: "Horizontal",
-                            Key: '''PowerCAT.ResizableTextarea.AllowResize'''.Horizontal
+                            Key: 'PowerCAT.ResizableTextarea.AllowResize'.Horizontal
                         },
                         {
                             Name: "None",
-                            Key: '''PowerCAT.ResizableTextarea.AllowResize'''.None
+                            Key: 'PowerCAT.ResizableTextarea.AllowResize'.None
                         }
                     )
                 Text: =""
@@ -401,10 +427,20 @@ ResizableTextArea As CanvasComponent:
             "chkSpellCheck As 'Check box'":
                 AccessibleLabel: ="Allow spell check"
                 Checked: =false
+                CheckedCheckboxBackgroundFill: =
+                CheckedCheckboxBorderColor: =
+                CheckmarkFill: =
+                Color: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
+                HoverCheckboxBackgroundFill: =
+                HoverCheckboxBorderColor: =
                 Label: ="Allow Spell Check"
                 OnChange: =
+                OnCheck: =false
+                OnUncheck: =false
+                UncheckedCheckboxBackgroundFill: =
+                UncheckedCheckboxBorderColor: =
                 Visible: =pivotAppCode_6.Selected.ItemKey="app"
                 Width: =160
                 X: =440

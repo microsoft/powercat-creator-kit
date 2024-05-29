@@ -1,0 +1,372 @@
+scrDonut As screen:
+
+    stackRoot_27 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_28.Width
+        Y: =Header_29.Height
+        ZIndex: =2
+
+        lblTitle_29 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="Donut Chart"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_31 As TextPanel:
+            LayoutMinHeight: =640
+            Text: ="Donut charts are used to show proportion, which expresses a partial value in comparison to a total value. These types of charts are best to show percentage of individual parts in comparison to a whole, where the change over time is not important to visualize. They are circular statistical graphics divided into slices to illustrate numerical proportion."
+            ZIndex: =2
+
+        BestPractices_12 As BestPractices:
+            Donts: |
+                =Table(
+                    {text:"Don't overuse donuts charts. They require a lot of space on the page and using more than one next to each other dilutes the intended message."}
+                )
+            Dos: |
+                =Table(
+                    {text:"For scenarios with lots of categories, consider changing the type of graph to a stacked horizontal bar chart."},
+                    {text:"We recommend donut charts over pie charts as they are more readable."}
+                )
+            Height: =240
+            LayoutMinHeight: =640
+            Visible: =true
+            ZIndex: =3
+
+        ExampleContainer_7 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_7.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            Y: =278
+            ZIndex: =4
+
+            "Elevation_11 As 'Fluent Elevation (1.1.34)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_7 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_7.Height + If(pivotAppCode_43.Selected.ItemKey="app", ExampleContainer1_6.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_7 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_6.Height + ExampleHeader_7.PaddingTop + ExampleHeader_7.PaddingBottom+ If(pivotAppCode_43.Selected.ItemKey="code",htmlCodeSnippet_6.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_6 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_9 As label:
+                            AutoHeight: =true
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_9.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =300
+                            Size: =18
+                            Text: ="Basic DonutChart Usage"
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_43 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_6.Y+htmlCodeSnippet_6.Height))
+                            RenderSize: ='PowerCAT.Pivot.RenderSize'.Large
+                            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =varTheme.themeJSON
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_6 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =Color.LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_6 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Color.Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =240
+                        HtmlText: |-
+                            ="<pre class=""hljs_03eaa332108148c4a85fa1be93afd25d"" style=""display: block ; overflow-x: auto ; padding: 0.5em ; background: rgb(240 , 240 , 240) ; color: rgb(68 , 68 , 68)"">
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""DonutChart1"" As 'DonutChart'</span>:
+                                HideLabel: chkShowLabelsInPercentage.Checked
+                                ShowLabelsInPercentage: chkHideLabel.Checked
+                            	Item: Table(
+                                {
+                                    ItemLegend: ""Leaders"",
+                                    ItemValue: 20
+                                },
+                                {
+                                    ItemLegend: ""Team"",
+                                    ItemValue: 36
+                                },
+                                {
+                                    ItemLegend: ""Other"",
+                                    ItemValue: 54
+                                }
+                            )
+                            	
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">Show labels in percentage</span>:
+                                Checked: true
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">Hide legend</span>:
+                                Checked: true
+                            <span class=""hljs-string_2a923772fc2a45979aba5432e5c5b747"" style=""color: rgb(136 , 0 , 0)"">Show Labels In Percentage</span>
+                            :
+                               Max: 50
+                               Min: 25
+                               Default: 35
+                            
+                            </pre>"
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_43.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ExampleContainer1_6 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Max(LeftContainer_7.Height,  RightContainer_7.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    ZIndex: =4
+
+                    WrapContainer_6 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =400
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =5
+
+                        LeftContainer_7 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            Height: =340
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =500
+                            LayoutMinWidth: =350
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "DonutChart1 As 'Fluent Donut Chart (1.1.34) Preview'.pcfdataset":
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =320
+                                HideLabel: =chkHideLabel.Checked
+                                InnerRadius: =sliderDonutInnerRadius.Value
+                                Items: |-
+                                    =Table(
+                                        {
+                                            ItemLegend: "Leaders",
+                                            ItemValue: 20
+                                        },
+                                        {
+                                            ItemLegend: "Team",
+                                            ItemValue: 36
+                                        },
+                                        {
+                                            ItemLegend: "Other",
+                                            ItemValue: 54
+                                        }
+                                    )
+                                LayoutMinHeight: =350
+                                LayoutMinWidth: =350
+                                ShowLabelsInPercentage: =chkShowLabelsInPercentage.Checked
+                                Width: =Parent.Width
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        RightContainer_7 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =220
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =10
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =2
+
+                            "chkShowLabelsInPercentage As 'Check box'":
+                                AccessibleLabel: ="Allow spell check"
+                                Checked: =false
+                                CheckedCheckboxBackgroundFill: =
+                                CheckedCheckboxBorderColor: =
+                                CheckmarkFill: =
+                                Color: =
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                HoverCheckboxBackgroundFill: =
+                                HoverCheckboxBorderColor: =
+                                Label: ="Show labels in percentage"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                OnChange: =
+                                OnCheck: =false
+                                OnUncheck: =false
+                                UncheckedCheckboxBackgroundFill: =
+                                UncheckedCheckboxBorderColor: =
+                                Visible: =true
+                                Width: =220
+                                X: =42
+                                Y: =223
+                                ZIndex: =1
+
+                            "chkHideLabel As 'Check box'":
+                                AccessibleLabel: ="Allow spell check"
+                                Checked: =false
+                                CheckedCheckboxBackgroundFill: =
+                                CheckedCheckboxBorderColor: =
+                                CheckmarkFill: =
+                                Color: =
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                HoverCheckboxBackgroundFill: =
+                                HoverCheckboxBorderColor: =
+                                Label: ="Hide legend"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                OnChange: =
+                                OnCheck: =false
+                                OnUncheck: =false
+                                UncheckedCheckboxBackgroundFill: =
+                                UncheckedCheckboxBorderColor: =
+                                Visible: =true
+                                Width: =220
+                                X: =42
+                                Y: =223
+                                ZIndex: =2
+
+                            ContainerSpinBtnOutput_6 As groupContainer.horizontalAutoLayoutContainer:
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =4
+
+                                lblSelectedStep_5 As Label:
+                                    Color: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    OnChange: =false
+                                    Text: ="Inner radius"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                sliderDonutInnerRadius As slider:
+                                    AccessibleLabel: ="Width"
+                                    BorderColor: =
+                                    Default: =35
+                                    FocusedBorderColor: =
+                                    FocusedBorderThickness: =1
+                                    HandleSize: =16
+                                    Max: =50
+                                    Min: =25
+                                    RailFill: =varTheme.palette.neutralTertiaryAlt
+                                    RailThickness: =2
+                                    ValueFill: =varTheme.palette.neutralPrimary
+                                    ValueHoverFill: =varTheme.palette.themePrimary
+                                    Width: =169
+                                    X: =297
+                                    Y: =162
+                                    ZIndex: =2
+
+            lbladditionalInfo_6 As Label:
+                Color: =
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                OnChange: =false
+                Text: =Index(currentCompSamplesCol,1).Description
+                Width: =Parent.Width * 0.5
+                X: =42
+                Y: =58
+                ZIndex: =5
+
+    LeftNav_28 As LeftNav:
+        Height: =Parent.Height
+        Width: =200
+        Y: =Header_29.Height
+        ZIndex: =7
+
+    Header_29 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        ZIndex: =8
+

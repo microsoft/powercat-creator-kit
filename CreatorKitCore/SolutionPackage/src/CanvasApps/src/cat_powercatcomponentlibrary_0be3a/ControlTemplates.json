@@ -40,7 +40,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "gallery",
     "OverridableProperties": {},
-    "Version": "2.13.2"
+    "Version": "2.15.0"
   },
   "galleryTemplate": {
     "CustomGroupControlTemplateName": "",
@@ -83,7 +83,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "hostControl",
     "OverridableProperties": {},
-    "Version": "1.5.4"
+    "Version": "1.6.0"
   },
   "htmlViewer": {
     "CustomGroupControlTemplateName": "",
@@ -125,7 +125,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "image",
     "OverridableProperties": {},
-    "Version": "2.2.2"
+    "Version": "2.2.3"
   },
   "label": {
     "CustomGroupControlTemplateName": "",

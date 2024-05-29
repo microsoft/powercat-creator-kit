@@ -11278,6 +11278,12 @@ ExpandMenu As CanvasComponent:
                         }
                     )
                 , Name=IconName).Path
+    OnButtonSelect():
+        ThisProperty:
+            Default: =
+    OnExpandSelect():
+        ThisProperty:
+            Default: =
     DefaultExpandValue: =false
     Fill: =ColorValue(ExpandMenu.Theme.palette.white)
     Height: =640
@@ -11290,8 +11296,6 @@ ExpandMenu As CanvasComponent:
         {Icon: "PowerAutomateLogo", Label: "Power Automate", Screen:App.ActiveScreen, Tooltip:"Power Automate Tooltip"}, 
         {Icon: "Dataverse", Label: "Dataverse", Screen:App.ActiveScreen, Tooltip:"Dataverse Tooltip"}
         )
-    OnButtonSelect: =true
-    OnExpandSelect: =true
     OnReset: =Set(IsOpen, ExpandMenu.DefaultExpandValue)
     SelectedItem: =glExpandMenu.Selected
     Theme: |-
@@ -11327,6 +11331,7 @@ ExpandMenu As CanvasComponent:
     ZIndex: =1
 
     glExpandMenu As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
         AccessibleLabel: ="Menu"
         BorderColor: =
         Fill: =Coalesce(ExpandMenu.Fill,ColorValue(ExpandMenu.Theme.palette.white))

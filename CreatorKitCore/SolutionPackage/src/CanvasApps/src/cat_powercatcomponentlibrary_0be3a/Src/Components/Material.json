@@ -1,0 +1,153 @@
+{
+  "ComponentAllowCustomization": true,
+  "ComponentChangedSinceFileImport": true,
+  "ComponentManifest": {
+    "AllowAccessToGlobals": false,
+    "AllowCustomization": true,
+    "Description": "",
+    "Name": "Material",
+    "TemplateGuid": "5fa30e35dad34bf5ae3f78bd0875ed3f"
+  },
+  "ComponentType": "CanvasComponent",
+  "CustomGroupControlTemplateName": "",
+  "CustomProperties": [
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius",
+      "Hidden": false,
+      "Name": "BorderRadius",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Top Left",
+      "Hidden": false,
+      "Name": "BorderRadiusTopLeft",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Top Left",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Top Right",
+      "Hidden": false,
+      "Name": "BorderRadiusTopRight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Top Right",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Bottom Left",
+      "Hidden": false,
+      "Name": "BorderRadiusBottomLeft",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Bottom Left",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Radius Bottom Right",
+      "Hidden": false,
+      "Name": "BorderRadiusBottomRight",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Radius Bottom Right",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Blur",
+      "Hidden": false,
+      "Name": "Blur",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Blur",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Fill Color",
+      "Hidden": false,
+      "Name": "FillColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Fill Color rgba(#,#,#,#) format",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Color",
+      "Hidden": false,
+      "Name": "BorderColor",
+      "PropertyDataTypeKey": "String",
+      "Tooltip": "Border Color rgba(#,#,#,#) format",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Border Thickness",
+      "Hidden": false,
+      "Name": "BorderThickness",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Border Thickness",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Margin",
+      "Hidden": false,
+      "Name": "Margin",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Margin",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Shadow Blur",
+      "Hidden": false,
+      "Name": "ShadowBlur",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Shadow Blur",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Shadow X Axis",
+      "Hidden": false,
+      "Name": "ShadowXAxis",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Shadow X Axis",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Shadow Y Axis",
+      "Hidden": false,
+      "Name": "ShadowYAxis",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Shadow Y Axis",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    },
+    {
+      "Category": 0,
+      "DisplayName": "Shadow Opacity",
+      "Hidden": false,
+      "Name": "ShadowOpacity",
+      "PropertyDataTypeKey": "Number",
+      "Tooltip": "Shadow Opacity in percentage",
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+    }
+  ],
+  "FirstParty": true,
+  "Id": "http://microsoft.com/appmagic/Component",
+  "IsComponentLocked": false,
+  "IsComponentTemplate": true,
+  "IsCustomGroupControlTemplate": false,
+  "IsPcfControl": false,
+  "IsPremiumPcfControl": false,
+  "IsWidgetTemplate": false,
+  "LastModifiedTimestamp": "638518173022136950",
+  "Name": "5fa30e35dad34bf5ae3f78bd0875ed3f",
+  "OverridableProperties": {},
+  "Version": "638288588242886857"
+}

@@ -1,12 +1,11 @@
-<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/image" name="image" jsClass="AppMagic.Controls.Image" version="2.2.2" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
+<widget xmlns="http://openajax.org/metadata" spec="1.0" id="http://microsoft.com/appmagic/image" name="image" jsClass="AppMagic.Controls.Image" version="2.2.3" styleable="true" runtimeCost="1" xmlns:appMagic="http://schemas.microsoft.com/appMagic">
   <author name="Microsoft AppMagic" />
   <license type="text/html"><![CDATA[<p>TODO:  Need license text here.</p>]]></license>
   <description><![CDATA[TEXT
       Control description here.]]></description>
   <requires>
-    <require type="css" src="css/image.css" excludeOnFeatureGate="controls.reactImage" />
-    <require type="javascript" src="js/image.js" excludeOnFeatureGate="controls.reactImage" />
-    <require type="javascript" src="js/imageReactProxy.js" includeOnFeatureGate="controls.reactImage" />
+    <require type="css" src="css/image.css" />
+    <require type="javascript" src="js/image.js" />
     <require type="javascript" src="/openSource/unmodified/exif-js/exif.min.js" />
   </requires>
   <appMagic:capabilities contextualViewsEnabled="true" autoBorders="true" autoFocusedBorders="true" autoPointerViewState="true" autoDisabledViewState="true" autoBorderRadius="true" isVersionFlexible="true" supportsSetFocus="true" />
@@ -250,13 +249,13 @@
     <appMagic:includeProperty name="maximumWidth" defaultValue="1366" />
     <appMagic:includeProperty name="maximumHeight" defaultValue="768" />
   </appMagic:includeProperties>
-  <appMagic:insertMetadata>
+  <appMagic:insertMetadata isDeviceOptimized="true">
     <appMagic:category name="Media" priority="10" />
   </appMagic:insertMetadata>
   <!-- Display metadata providing property visibility, order, sections, and grouping in UI (e.g. properties panel) -->
   <appMagic:displayMetadata>
     <appMagic:section>
-      <appMagic:property name="Image" serverProvidesValue="true" computedValueType="Media" showInFloatie="true" />
+      <appMagic:property name="Image" serverProvidesValue="true" computedValueType="Media" showInFloatie="true" showInCanvasInlineActionBar="true" />
       <appMagic:property name="ImagePosition" displayType="EnumIcon" showInFloatie="true" />
       <appMagic:property name="Transparency" />
       <appMagic:property name="DisplayMode" />
@@ -340,5 +339,8 @@
   </appMagic:conversion>
   <appMagic:conversion from="2.2.1" to="2.2.2">
     <!-- KO template changes to hide image when unavailable -->
+  </appMagic:conversion>
+  <appMagic:conversion from="2.2.2" to="2.2.3">
+    <!-- Adding showInCanvasInlineActionBar flag-->
   </appMagic:conversion>
 </widget>

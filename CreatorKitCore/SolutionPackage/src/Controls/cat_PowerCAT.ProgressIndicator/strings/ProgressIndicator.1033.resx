@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-    <!--
+  <!--
     Microsoft ResX Schema
 
     Version 2.0
@@ -59,99 +59,110 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
-        <xsd:element name="root" msdata:IsDataSet="true">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
             <xsd:complexType>
-                <xsd:choice maxOccurs="unbounded">
-                    <xsd:element name="metadata">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
-                            </xsd:sequence>
-                            <xsd:attribute name="name" use="required" type="xsd:string"/>
-                            <xsd:attribute name="type" type="xsd:string"/>
-                            <xsd:attribute name="mimetype" type="xsd:string"/>
-                            <xsd:attribute ref="xml:space"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="assembly">
-                        <xsd:complexType>
-                            <xsd:attribute name="alias" type="xsd:string"/>
-                            <xsd:attribute name="name" type="xsd:string"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="data">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
-                            </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-                            <xsd:attribute ref="xml:space"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="resheader">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                            </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string" use="required"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                </xsd:choice>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>2.0</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <data name="ProgressIndicator" xml:space="preserve">
-        <value>Fluent Progress Indicator (1.1.29) Preview</value>
-    </data>
-    <data name="AccessibilityLabel" xml:space="preserve">
-        <value>Accessibility label</value>
-        <comment/>
-    </data>
-    <data name="Theme" xml:space="preserve">
-        <value>Theme</value>
-    </data>
-    <data name="IndeterminateIndicator" xml:space="preserve">
-        <value>Indeterminate Indicator</value>
-    </data>
-    <data name="DefaultIndicator" xml:space="preserve">
-        <value>Default Indicator</value>
-    </data>
-    <data name="ProgressIndicator_desc" xml:space="preserve">
-        <value>Fluent UI Progress Indicator</value>
-    </data>
-    <data name="IntervalIncrement_desc" xml:space="preserve">
-        <value>Interval Increment</value>
-    </data>
-    <data name="HideProgressBar" xml:space="preserve">
-        <value>Hide Progress Bar</value>
-    </data>
-    <data name="BarHeight" xml:space="preserve">
-        <value>Bar Height</value>
-    </data>
-    <data name="IntervalDelay_Desc" xml:space="preserve">
-        <value>Interval Delay</value>
-    </data>
-    <data name="PercentComplete" xml:space="preserve">
-        <value>Percent Complete</value>
-    </data>
-    <data name="TypeofIndicator" xml:space="preserve">
-        <value>Type of Indicator</value>
-    </data>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ProgressIndicator" xml:space="preserve">
+    <value>Fluent Progress Indicator (1.1.34)</value>
+    <comment/>
+  </data>
+  <data name="AccessibilityLabel" xml:space="preserve">
+    <value>Accessibility label</value>
+    <comment/>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment/>
+  </data>
+  <data name="IndeterminateIndicator" xml:space="preserve">
+    <value>Indeterminate Indicator</value>
+    <comment/>
+  </data>
+  <data name="DefaultIndicator" xml:space="preserve">
+    <value>Default Indicator</value>
+    <comment/>
+  </data>
+  <data name="ProgressIndicator_desc" xml:space="preserve">
+    <value>Fluent UI Progress Indicator</value>
+    <comment/>
+  </data>
+  <data name="IntervalIncrement_desc" xml:space="preserve">
+    <value>Interval Increment</value>
+    <comment/>
+  </data>
+  <data name="HideProgressBar" xml:space="preserve">
+    <value>Hide Progress Bar</value>
+    <comment/>
+  </data>
+  <data name="BarHeight" xml:space="preserve">
+    <value>Bar Height</value>
+    <comment/>
+  </data>
+  <data name="IntervalDelay_Desc" xml:space="preserve">
+    <value>Interval Delay</value>
+    <comment/>
+  </data>
+  <data name="PercentComplete" xml:space="preserve">
+    <value>Percent Complete</value>
+    <comment/>
+  </data>
+  <data name="TypeofIndicator" xml:space="preserve">
+    <value>Type of Indicator</value>
+    <comment/>
+  </data>
 </root>

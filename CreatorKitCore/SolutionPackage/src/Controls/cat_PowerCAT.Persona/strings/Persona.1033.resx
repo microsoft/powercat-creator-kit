@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <root>
-    <!--
+  <!--
     Microsoft ResX Schema
 
     Version 2.0
@@ -59,108 +59,122 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-        <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
-        <xsd:element name="root" msdata:IsDataSet="true">
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
             <xsd:complexType>
-                <xsd:choice maxOccurs="unbounded">
-                    <xsd:element name="metadata">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
-                            </xsd:sequence>
-                            <xsd:attribute name="name" use="required" type="xsd:string"/>
-                            <xsd:attribute name="type" type="xsd:string"/>
-                            <xsd:attribute name="mimetype" type="xsd:string"/>
-                            <xsd:attribute ref="xml:space"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="assembly">
-                        <xsd:complexType>
-                            <xsd:attribute name="alias" type="xsd:string"/>
-                            <xsd:attribute name="name" type="xsd:string"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="data">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
-                            </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
-                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
-                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
-                            <xsd:attribute ref="xml:space"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                    <xsd:element name="resheader">
-                        <xsd:complexType>
-                            <xsd:sequence>
-                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
-                            </xsd:sequence>
-                            <xsd:attribute name="name" type="xsd:string" use="required"/>
-                        </xsd:complexType>
-                    </xsd:element>
-                </xsd:choice>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string"/>
+              <xsd:attribute name="type" type="xsd:string"/>
+              <xsd:attribute name="mimetype" type="xsd:string"/>
+              <xsd:attribute ref="xml:space"/>
             </xsd:complexType>
-        </xsd:element>
-    </xsd:schema>
-    <resheader name="resmimetype">
-        <value>text/microsoft-resx</value>
-    </resheader>
-    <resheader name="version">
-        <value>2.0</value>
-    </resheader>
-    <resheader name="reader">
-        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <resheader name="writer">
-        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-    </resheader>
-    <data name="Persona" xml:space="preserve">
-        <value>Fluent Persona (1.1.29) Preview</value>
-    </data>
-    <data name="AccessibilityLabel" xml:space="preserve">
-        <value>Accessibility label</value>
-        <comment/>
-    </data>
-    <data name="Theme" xml:space="preserve">
-        <value>Theme</value>
-    </data>
-    <data name="PersonaSize" xml:space="preserve">
-        <value>Persona Size</value>
-    </data>
-    <data name="Persona_Desc" xml:space="preserve">
-        <value>Persona component</value>
-    </data>
-    <data name="Text" xml:space="preserve">
-        <value>Text</value>
-    </data>
-    <data name="ImageUrl" xml:space="preserve">
-        <value>Image Url</value>
-    </data>
-    <data name="Presence" xml:space="preserve">
-        <value>Presence</value>
-    </data>
-    <data name="ImageInitials" xml:space="preserve">
-        <value>Image Initials</value>
-    </data>
-    <data name="SecondaryText" xml:space="preserve">
-        <value>Secondary Text</value>
-    </data>
-    <data name="TertiaryText" xml:space="preserve">
-        <value>Tertiary Text</value>
-    </data>
-    <data name="OptionalText" xml:space="preserve">
-        <value>Optional Text</value>
-    </data>
-    <data name="ImageAlt" xml:space="preserve">
-        <value>Image Alt</value>
-    </data>
-    <data name="HidePersonaDetails" xml:space="preserve">
-        <value>Hide Persona Details</value>
-    </data>
-    <data name="PersonaInitialsColor" xml:space="preserve">
-        <value>Persona Initials Color</value>
-    </data>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string"/>
+              <xsd:attribute name="name" type="xsd:string"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+              <xsd:attribute ref="xml:space"/>
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required"/>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Persona" xml:space="preserve">
+    <value>Fluent Persona (1.1.34)</value>
+    <comment/>
+  </data>
+  <data name="AccessibilityLabel" xml:space="preserve">
+    <value>Accessibility label</value>
+    <comment/>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Theme</value>
+    <comment/>
+  </data>
+  <data name="PersonaSize" xml:space="preserve">
+    <value>Persona Size</value>
+    <comment/>
+  </data>
+  <data name="Persona_Desc" xml:space="preserve">
+    <value>Persona component</value>
+    <comment/>
+  </data>
+  <data name="Text" xml:space="preserve">
+    <value>Text</value>
+    <comment/>
+  </data>
+  <data name="ImageUrl" xml:space="preserve">
+    <value>Image Url</value>
+    <comment/>
+  </data>
+  <data name="Presence" xml:space="preserve">
+    <value>Presence</value>
+    <comment/>
+  </data>
+  <data name="ImageInitials" xml:space="preserve">
+    <value>Image Initials</value>
+    <comment/>
+  </data>
+  <data name="SecondaryText" xml:space="preserve">
+    <value>Secondary Text</value>
+    <comment/>
+  </data>
+  <data name="TertiaryText" xml:space="preserve">
+    <value>Tertiary Text</value>
+    <comment/>
+  </data>
+  <data name="OptionalText" xml:space="preserve">
+    <value>Optional Text</value>
+    <comment/>
+  </data>
+  <data name="ImageAlt" xml:space="preserve">
+    <value>Image Alt</value>
+    <comment/>
+  </data>
+  <data name="HidePersonaDetails" xml:space="preserve">
+    <value>Hide Persona Details</value>
+    <comment/>
+  </data>
+  <data name="PersonaInitialsColor" xml:space="preserve">
+    <value>Persona Initials Color</value>
+    <comment/>
+  </data>
 </root>

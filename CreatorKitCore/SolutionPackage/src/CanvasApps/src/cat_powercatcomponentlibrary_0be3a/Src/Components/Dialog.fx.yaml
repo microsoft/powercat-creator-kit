@@ -1,4 +1,10 @@
 Dialog As CanvasComponent:
+    OnButtonSelect():
+        ThisProperty:
+            Default: =
+    OnCloseSelect():
+        ThisProperty:
+            Default: =
     BorderRadius: =0
     Buttons: |-
         =Table({Label: "Cancel", ButtonType:'Button.ButtonType'.Standard, HasBorder: false }, {Label: "Save", ButtonType:'Button.ButtonType'.Primary, HasBorder: false })
@@ -11,8 +17,6 @@ Dialog As CanvasComponent:
     DialogWidth: =640
     Fill: =Dialog.OverlayColor
     Height: =900
-    OnButtonSelect: =
-    OnCloseSelect: =true
     OnReset: =
     OverlayColor: =RGBA(0, 0, 0, 0.4)
     SelectedButton: |-
@@ -181,6 +185,7 @@ Dialog As CanvasComponent:
                     ZIndex: =3
 
                 ButtonsGallery_2 As gallery.galleryHorizontal:
+                    '#CopilotOverlayLabel': ="Filtered"
                     AccessibleLabel: ="dialog buttons"
                     AlignInContainer: =AlignInContainer.End
                     BorderColor: =RGBA(0, 18, 107, 1)
@@ -212,16 +217,22 @@ Dialog As CanvasComponent:
                         ButtonType: =ThisItem.ButtonType
                         DisabledBorderColor: =If(ThisItem.ButtonType = 'Button.ButtonType'.Standard, ColorValue(Dialog.Theme.palette.neutralLighter))
                         DisabledFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.neutralLight), ColorValue(Dialog.Theme.palette.neutralLight))
+                        DisabledTextColor: =
                         DisplayMode: =DisplayMode.Edit
                         FillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themePrimary), ColorValue(Dialog.Theme.palette.white))
                         Height: =32
                         HideFromAssistiveTechnologies: =false
+                        HoverBorderColor: =
                         HoverFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDarkAlt), ColorValue(Dialog.Theme.palette.neutralQuaternary))
+                        HoverTextColor: =
                         Italic: =false
+                        OnChange: =false
                         OnSelect: =Dialog.OnButtonSelect()
                         PaddingBottom: =0
                         PaddingTop: =0
+                        PressedBorderColor: =
                         PressedFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.themeDark), ColorValue(Dialog.Theme.palette.neutralTertiary))
+                        PressedTextColor: =
                         Strikethrough: =false
                         Text: =ThisItem.Label
                         TextColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Dialog.Theme.palette.white), ColorValue(Dialog.Theme.palette.black))

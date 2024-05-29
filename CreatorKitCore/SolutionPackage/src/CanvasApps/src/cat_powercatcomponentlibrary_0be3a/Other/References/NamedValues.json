@@ -309,6 +309,46 @@
       "Kind": "Page",
       "Name": "OCV",
       "Value": "custompage:cat_ocv_f2b08"
+    },
+    {
+      "Kind": "Page",
+      "Name": "PowerChatbot",
+      "Value": "custompage:cat_powerchatbot_4070f"
+    },
+    {
+      "Kind": "Page",
+      "Name": "breadcrumb-custompage-test",
+      "Value": "custompage:cra0f_breadcrumbcustompagetest_22bd6"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Query Editor",
+      "Value": "custompage:cra0f_queryeditor_929ff"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Async services monitor",
+      "Value": "custompage:cat_asyncservicesmonitor_c015c"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Table Relationship Diagram Page",
+      "Value": "custompage:cat_tablerelationshipdiagrampage_0cf67"
+    },
+    {
+      "Kind": "Page",
+      "Name": "Page11",
+      "Value": "custompage:cat_page1_34ce8"
+    },
+    {
+      "Kind": "Page",
+      "Name": "GenFx",
+      "Value": "custompage:cat_genfx_1845b"
+    },
+    {
+      "Kind": "Page",
+      "Name": "MonacoEditorPage",
+      "Value": "custompage:cra0f_monacoeditorpage_aa0dc"
     }
   ]
 }

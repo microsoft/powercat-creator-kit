@@ -1,4 +1,13 @@
 Header As CanvasComponent:
+    OnBackSelect():
+        ThisProperty:
+            Default: =
+    OnLeftButtonSelect():
+        ThisProperty:
+            Default: =
+    OnRightButtonSelect():
+        ThisProperty:
+            Default: =
     BackButtonVisible: =false
     Color: =
     ContentWidth: =App.Width
@@ -52,10 +61,7 @@ Header As CanvasComponent:
         </g>
         </svg>")
     LeftButtonVisible: =true
-    OnBackSelect: =true
-    OnLeftButtonSelect: =true
     OnReset: =
-    OnRightButtonSelect: =true
     RightButtonImage: |-
         ="data:image/svg+xml," & 
          EncodeUrl(
@@ -163,6 +169,7 @@ Header As CanvasComponent:
                 Height: =32
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
+                OnChange: =false
                 OnSelect: =Header.OnBackSelect()
                 PaddingBottom: =0
                 PaddingTop: =0

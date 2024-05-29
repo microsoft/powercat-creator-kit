@@ -1,0 +1,52 @@
+Material As CanvasComponent:
+    Blur: =5
+    BorderColor: ="rgba(255,255,255,0.1)"
+    BorderRadius: =8
+    BorderRadiusBottomLeft: =8
+    BorderRadiusBottomRight: =8
+    BorderRadiusTopLeft: =8
+    BorderRadiusTopRight: =8
+    BorderThickness: =0
+    Fill: =RGBA(0, 0, 0, 0)
+    FillColor: ="rgba(100,100,100,0.1)"
+    Height: =640
+    Margin: =20
+    ShadowBlur: =8
+    ShadowOpacity: =28
+    ShadowXAxis: =0
+    ShadowYAxis: =0.5
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    MaterialHtml As htmlViewer:
+        BorderColor: =RGBA(0, 0, 0, 0)
+        Height: =Parent.Height
+        HtmlText: |-
+            ="<div style ='
+                margin:"& Material.Margin &"px;
+                width:" & Self.Width - Material.Margin*2 & "px; 
+                height: " & Self.Height - (Material.Margin*2) - 1 & "px;
+                background:"& Material.FillColor &";
+                backdrop-filter: blur("& Material.Blur &"px); 
+                -webkit-backdrop-filter: blur("& Material.Blur &"px);
+                border: "& Material.BorderThickness&"px solid "& Material.BorderColor&";
+                border-radius: " & Coalesce(Material.BorderRadiusTopLeft,Material.BorderRadius,0) & "px " 
+                    & Coalesce(Material.BorderRadiusTopRight,Material.BorderRadius,0) & "px " 
+                    & Coalesce(Material.BorderRadiusBottomRight,Material.BorderRadius,0) & "px " 
+                    & Coalesce(Material.BorderRadiusBottomLeft,Material.BorderRadius,0) & "px;
+                box-shadow: 
+                    "& Material.ShadowXAxis &"px 
+                    "& Material.ShadowYAxis &"px 
+                    "& Material.ShadowBlur &"px 
+                    rgba(0,0,0,0."& Material.ShadowOpacity &");
+            
+            '</div>"
+        PaddingBottom: =0
+        PaddingLeft: =0
+        PaddingRight: =0
+        PaddingTop: =0
+        Width: =Parent.Width 
+        ZIndex: =1
+

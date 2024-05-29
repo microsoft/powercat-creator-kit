@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.23063.172" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24044.222" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesMDA</UniqueName>
     <LocalizedNames>
@@ -139,7 +139,9 @@
       <RootComponent type="61" schemaName="cat_taglist_icon" behavior="0" />
       <RootComponent type="61" schemaName="cat_tagpicker_icon" behavior="0" />
       <RootComponent type="62" schemaName="cat_CreatorKitReferenceApp" behavior="0" />
+      <RootComponent type="62" schemaName="cat_TemplateApp" behavior="0" />
       <RootComponent type="80" schemaName="cat_CreatorKitReferenceApp" behavior="0" />
+      <RootComponent type="80" schemaName="cat_TemplateApp" behavior="0" />
     </RootComponents>
     <MissingDependencies>
       <MissingDependency>
@@ -211,7 +213,11 @@
         <Dependent type="300" schemaName="cr7a3_personapage_404d9" displayName="Persona Page" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.2548)" />
+        <Required type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent type="80" schemaName="cat_TemplateApp" displayName="Template App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="61" schemaName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" displayName="msdyn_/RichTextEditorControl/libs/monaco/vs/editor/contrib/suggest/browser/media/String_16x.svg" solution="msdyn_RichTextEditor (1.0.0.3382)" />
         <Dependent type="62" schemaName="cat_CreatorKitReferenceApp" />
       </MissingDependency>
       <MissingDependency>

@@ -34,6 +34,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AutoWidthLabel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -191,6 +192,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "AutoWidthLabel_Words",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -302,6 +304,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group7",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -452,6 +455,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -617,6 +621,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "icoResizeWidthIndicator",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -772,6 +777,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblAutoWidthValue",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1074,6 +1080,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1379,6 +1386,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblWords",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1660,6 +1668,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1786,6 +1795,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotline_9",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2009,6 +2019,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "sldWords",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [

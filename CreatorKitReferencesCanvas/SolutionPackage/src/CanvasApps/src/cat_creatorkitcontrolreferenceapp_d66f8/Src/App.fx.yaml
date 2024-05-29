@@ -130,7 +130,13 @@ App As appinfo:
         
             {ItemKey:"utilities",ItemDisplayName:"Utilities"},
             {ItemKey:"elevation",ItemDisplayName:"Elevation",ItemParentKey:"utilities",TargetScreen:scrElevation},
-            {ItemKey:"keyboardshortcut",ItemDisplayName:"Keyboard Shortcuts",ItemParentKey:"utilities",TargetScreen:scrKeyboardShortcut}
+            {ItemKey:"keyboardshortcut",ItemDisplayName:"Keyboard Shortcuts",ItemParentKey:"utilities",TargetScreen:scrKeyboardShortcut},
+        
+            {ItemKey:"charts",ItemDisplayName:"Charts"},
+            {ItemKey:"donutchart",ItemDisplayName:"Donut Chart",ItemParentKey:"charts",TargetScreen:scrDonut},
+            {ItemKey:"gaugechart",ItemDisplayName:"Gauge Chart",ItemParentKey:"charts",TargetScreen:scrGauge},
+            {ItemKey:"horizontalchart",ItemDisplayName:"Horizontal Chart",ItemParentKey:"charts",TargetScreen:scrHorizontalbar},
+            {ItemKey:"stackbarchart",ItemDisplayName:"Horizontal Stackbar Chart",ItemParentKey:"charts",TargetScreen:scrStackbar}
         );
         
         // Create test collections
@@ -406,13 +412,13 @@ App As appinfo:
                     ),
                     10
                 ),
-                "ItemPersonaKey",
+                ItemPersonaKey,
                 Mail,
-                "ItemPersonaName",
+                ItemPersonaName,
                 DisplayName,
-                "IsImage",
+                IsImage,
                 false,
-                "ItemPersonaImageInfo",
+                ItemPersonaImageInfo,
                 //Get base64 image data
                 Substitute(
                     JSON(
@@ -422,12 +428,20 @@ App As appinfo:
                     """",
                     ""
                 ),
-                "ItemPersonaPresence",
+                ItemPersonaPresence,
                 "Away",
-                "ItemPersonaClickable",
+                ItemPersonaClickable,
                 true
             )
         );
         //show enable PCF dialog if we find out
         //Set(ShowHideDialog,  If(!IsEmpty(Organizations), !First(Organizations).'Enable Custom Controls in canvas PowerApps feature for this organization', false));
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
 

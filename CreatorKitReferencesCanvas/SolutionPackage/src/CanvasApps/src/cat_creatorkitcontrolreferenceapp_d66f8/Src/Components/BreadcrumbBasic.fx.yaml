@@ -18,13 +18,13 @@ BreadcrumbBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_27 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_27 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_27.Y+htmlCode_27.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -125,7 +125,7 @@ BreadcrumbBasic As CanvasComponent:
         Y: =40
         ZIndex: =17
 
-        "Breadcrumb1 As 'Fluent Breadcrumb (1.0.19)'.pcfdataset":
+        "Breadcrumb1 As 'Fluent Breadcrumb (1.1.34)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =54
             InputEvent: =varBreadcrumbBasicEvent
@@ -302,14 +302,27 @@ BreadcrumbBasic As CanvasComponent:
 
         btnSetFocusBreadCrumb As Button:
             AccessibleLabel: ="Set Focus"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =32
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varBreadcrumbBasicEvent,"SetFocus" & Text(Rand()));
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Set Focus"
+            TextColor: =
             Visible: =pivotAppCode_27.Selected.ItemKey="app"
             Width: =120
             X: =35

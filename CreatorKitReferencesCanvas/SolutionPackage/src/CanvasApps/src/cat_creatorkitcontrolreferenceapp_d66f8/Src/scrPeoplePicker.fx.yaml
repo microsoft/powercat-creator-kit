@@ -8,11 +8,11 @@ scrPeoplePicker As screen:
                     Office365Users.SearchUser({top: 5}),
                     Mail <> Blank()
                 ),
-                "PersonaKey",
+                PersonaKey,
                 Mail,
-                "PersonaName",
+                PersonaName,
                 DisplayName,
-                "PersonaImgUrl",
+                PersonaImgUrl,
                 //Get base64 image data
                 Substitute(
                     JSON(
@@ -74,11 +74,11 @@ scrPeoplePicker As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_25 As 'Fluent Elevation (1.0.19)'":
-                Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+            "Elevation2_25 As 'Fluent Elevation (1.1.34)'":
+                Depth: ='PowerCAT.Elevation.Depth'.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
-                HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth4
+                HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth4
                 PaddingBottom: =8
                 PaddingLeft: =8
                 PaddingRight: =8

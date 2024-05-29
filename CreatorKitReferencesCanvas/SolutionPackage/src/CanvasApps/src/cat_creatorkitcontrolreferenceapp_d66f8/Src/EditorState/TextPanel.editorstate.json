@@ -96,6 +96,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Elevation2_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -283,6 +284,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -435,6 +437,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextPanel",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

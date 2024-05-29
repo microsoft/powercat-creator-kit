@@ -35,6 +35,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ElevationPeoplePicker_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -195,6 +196,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode_36",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -397,6 +399,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle_36",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -709,6 +712,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PeoplePicker1_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -885,6 +889,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode_36",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1011,6 +1016,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotline_23",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1120,6 +1126,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PreSelectPeoplePicker",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

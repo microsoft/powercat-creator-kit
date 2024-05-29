@@ -65,7 +65,20 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "TextColor",
+        "HoverTextColor",
+        "PressedTextColor",
+        "DisabledTextColor",
+        "FillColor",
+        "HoverFillColor",
+        "PressedFillColor",
+        "DisabledFillColor",
+        "BorderColor",
+        "HoverBorderColor",
+        "PressedBorderColor",
+        "DisabledBorderColor",
+        "OnChange"
       ],
       "DynamicProperties": [
         {
@@ -115,6 +128,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "btnSetfocusTags",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -146,6 +160,66 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "TextColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HoverTextColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "PressedTextColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DisabledTextColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "FillColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HoverFillColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "PressedFillColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DisabledFillColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HoverBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "PressedBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "DisabledBorderColor",
           "RuleProviderType": "Unknown"
         },
         {
@@ -186,6 +260,11 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnChange",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -240,7 +319,17 @@
           "InvariantPropertyName": "AccessibleLabel",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Color",
+        "CheckedCheckboxBackgroundFill",
+        "CheckedCheckboxBorderColor",
+        "UncheckedCheckboxBackgroundFill",
+        "UncheckedCheckboxBorderColor",
+        "HoverCheckboxBackgroundFill",
+        "HoverCheckboxBorderColor",
+        "CheckmarkFill",
+        "OnCheck",
+        "OnUncheck"
       ],
       "DynamicProperties": [
         {
@@ -290,6 +379,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "chkAllowFreeText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -306,6 +396,46 @@
         {
           "Category": "Data",
           "PropertyName": "AccessibleLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Color",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "CheckedCheckboxBackgroundFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "CheckedCheckboxBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "UncheckedCheckboxBackgroundFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "UncheckedCheckboxBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HoverCheckboxBackgroundFill",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "HoverCheckboxBorderColor",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "CheckmarkFill",
           "RuleProviderType": "Unknown"
         },
         {
@@ -346,6 +476,16 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnChange",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnCheck",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Behavior",
+          "PropertyName": "OnUncheck",
           "RuleProviderType": "Unknown"
         }
       ],
@@ -449,6 +589,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "CommandBarTags",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -540,7 +681,12 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex"
+        "ZIndex",
+        "RadiusTopLeft",
+        "RadiusTopRight",
+        "RadiusBottomLeft",
+        "RadiusBottomRight",
+        "DropShadow"
       ],
       "DynamicProperties": [
         {
@@ -604,6 +750,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Container6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -696,6 +843,31 @@
           "Category": "Design",
           "PropertyName": "ZIndex",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DropShadow",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
@@ -775,6 +947,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Elevation5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -927,6 +1100,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "FluentDetailsListTagsSelected",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1102,6 +1276,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode_17",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1233,6 +1408,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon3_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1314,6 +1490,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Icon6",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1466,6 +1643,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle_17",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1817,6 +1995,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelected_27",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2170,6 +2349,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSelectedTags",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2518,6 +2698,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblTags",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2749,6 +2930,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "name1_2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2830,6 +3012,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "name2_1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3094,6 +3277,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "PickerTagsSimple",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3285,6 +3469,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode_17",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3411,6 +3596,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotline_17",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3534,7 +3720,12 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex"
+        "ZIndex",
+        "RadiusTopLeft",
+        "RadiusTopRight",
+        "RadiusBottomLeft",
+        "RadiusBottomRight",
+        "DropShadow"
       ],
       "DynamicProperties": [
         {
@@ -3584,6 +3775,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "stackTagPickerLeft",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3676,6 +3868,31 @@
           "Category": "Design",
           "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DropShadow",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
@@ -3708,7 +3925,12 @@
         "LayoutOverflowX",
         "LayoutOverflowY",
         "LayoutWrap",
-        "ZIndex"
+        "ZIndex",
+        "RadiusTopLeft",
+        "RadiusTopRight",
+        "RadiusBottomLeft",
+        "RadiusBottomRight",
+        "DropShadow"
       ],
       "DynamicProperties": [
         {
@@ -3758,6 +3980,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "stackTagPickerRight",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3850,6 +4073,31 @@
           "Category": "Design",
           "PropertyName": "Fill",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DropShadow",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
@@ -3918,7 +4166,12 @@
           "InvariantPropertyName": "Visible",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "RadiusTopLeft",
+        "RadiusTopRight",
+        "RadiusBottomLeft",
+        "RadiusBottomRight",
+        "DropShadow"
       ],
       "HasDynamicProperties": false,
       "IsAutoGenerated": false,
@@ -3930,6 +4183,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "stackTagPickerRoot",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4027,6 +4281,31 @@
           "Category": "Design",
           "PropertyName": "LayoutDirection",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusTopRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomLeft",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "RadiusBottomRight",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "DropShadow",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "",
@@ -4066,6 +4345,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TagPickerBasic",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

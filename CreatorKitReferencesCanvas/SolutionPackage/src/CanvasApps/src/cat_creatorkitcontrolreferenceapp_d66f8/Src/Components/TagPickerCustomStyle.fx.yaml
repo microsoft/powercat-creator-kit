@@ -18,13 +18,13 @@ TagPickerCustomStyle As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_18 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_18 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_18.Y+htmlCode_18.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -142,7 +142,7 @@ TagPickerCustomStyle As CanvasComponent:
         Y: =40
         ZIndex: =11
 
-        "PickerTags As 'Fluent Picker (1.0.19)'.pcfdataset":
+        "PickerTags As 'Fluent Picker (1.1.34)'.pcfdataset":
             BorderRadius: =If(chkRounded.Checked,8)
             DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
             Error: =false
@@ -188,7 +188,7 @@ TagPickerCustomStyle As CanvasComponent:
                 );
             Suggestions_Items: |-
                 =Filter(
-                    Search(colTags,Self.SearchTerm,"DisplayName"),
+                    Search(colTags,Self.SearchTerm,DisplayName),
                     !(Key in colSelectedTags.Key))
             SuggestionsBackgroundColor: ="BackgroundColor"
             SuggestionsBorderColor: ="BorderColor"
@@ -213,14 +213,14 @@ TagPickerCustomStyle As CanvasComponent:
             Y: =160
             ZIndex: =6
 
-        "IconTags As 'Fluent Icon (1.0.19)'":
+        "IconTags As 'Fluent Icon (1.1.34)'":
             DisplayMode: =If(chkEnablePicker.Checked,DisplayMode.Edit,DisplayMode.Disabled)
             Height: =32
             IconName: ="Tag"
             IconSize: =24
-            IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+            IconType: ='PowerCAT.Icon.IconType'.IconButon
             OnChange: =Set(varColorTagsEvent,"SetFocus" & Text(Rand()))
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Center
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_18.Selected.ItemKey="app"
             Width: =32
@@ -231,10 +231,20 @@ TagPickerCustomStyle As CanvasComponent:
         "chkEnablePicker As 'Check box'":
             AccessibleLabel: ="Enabled"
             Checked: =true
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Enabled"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_18.Selected.ItemKey="app"
             Width: =160
             X: =52
@@ -244,10 +254,20 @@ TagPickerCustomStyle As CanvasComponent:
         "chkLargeTags As 'Check box'":
             AccessibleLabel: ="Large tags"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Large Tags"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_18.Selected.ItemKey="app"
             Width: =160
             X: =52
@@ -257,10 +277,20 @@ TagPickerCustomStyle As CanvasComponent:
         "chkRounded As 'Check box'":
             AccessibleLabel: ="Rounded tags"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Rounded Tags"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_18.Selected.ItemKey="app"
             Width: =160
             X: =176

@@ -18,13 +18,13 @@ ElevationPopup As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_16 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_16 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_16.Y+htmlCode_16.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -102,12 +102,12 @@ ElevationPopup As CanvasComponent:
             Y: =49
             ZIndex: =5
 
-        "ElevationPopupOverlay As 'Fluent Elevation (1.0.19)'":
+        "ElevationPopupOverlay As 'Fluent Elevation (1.1.34)'":
             DarkOverlay: =chkDarkPadding.Checked
-            Depth: ='''PowerCAT.Elevation.Depth'''.Depth64
+            Depth: ='PowerCAT.Elevation.Depth'.Depth64
             DisplayMode: =DisplayMode.Edit
             Height: =Parent.Height-Self.Y
-            HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth64
+            HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth64
             PaddingBottom: =64
             PaddingLeft: =64
             PaddingRight: =64
@@ -121,10 +121,20 @@ ElevationPopup As CanvasComponent:
         "chkDarkPadding As 'Check box'":
             AccessibleLabel: ="Show dark padding"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show dark padding"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_16.Selected.ItemKey="app"
             Width: =160
             X: =108
@@ -144,7 +154,7 @@ ElevationPopup As CanvasComponent:
             Y: =180
             ZIndex: =8
 
-        "CommandBarRightActions As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+        "CommandBarRightActions As 'Fluent Command Bar (1.1.34)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Items: |-
@@ -184,6 +194,7 @@ ElevationPopup As CanvasComponent:
             FontSize: =varTheme.fontSizes.l
             FontWeight: =FontWeight.Semibold
             Height: =52
+            OnChange: =false
             Text: ="Dialog Title"
             Visible: =pivotAppCode_16.Selected.ItemKey="app"
             Width: =320

@@ -18,13 +18,13 @@ PivotShowHidePivotItem As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode_3 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_3 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_3.Y+htmlCode_3.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -116,17 +116,27 @@ PivotShowHidePivotItem As CanvasComponent:
         "chkShowFirstPivot As 'Check box'":
             AccessibleLabel: ="Show first pivot item"
             Checked: =true
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show first pivot item"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_3.Selected.ItemKey="app"
             Width: =160
             X: =26
             Y: =163
             ZIndex: =8
 
-        "Pivot2 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+        "Pivot2 As 'Fluent Pivot (1.1.34)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =47
             Items: |-
@@ -136,7 +146,7 @@ PivotShowHidePivotItem As CanvasComponent:
                     {ItemKey:"bas",ItemDisplayName:"Bas"},
                     {ItemKey:"biz",ItemDisplayName:"Biz"}
                 )
-            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+            RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
             SelectedKey: ="bas"
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_3.Selected.ItemKey="app"

@@ -35,6 +35,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ElevationGalleryItem",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -118,6 +119,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "ElevationSummary",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -232,7 +234,10 @@
           "InvariantPropertyName": "Selectable",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "MaxTemplateSize",
+        "#CopilotOverlayLabel",
+        "#CopilotOverlayVisible"
       ],
       "GalleryTemplateChildName": "galleryTemplate4",
       "HasDynamicProperties": false,
@@ -245,6 +250,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galElevations",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 9,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -387,6 +393,21 @@
           "Category": "Design",
           "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayVisible",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGalleryStyle",
@@ -415,6 +436,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -451,6 +473,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Group11",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 10,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -601,6 +624,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlCode_14",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -818,6 +842,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDepthName",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1128,6 +1153,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblDepthValue",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1481,6 +1507,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblElevationUse",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1846,6 +1873,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblEnumValue",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2153,6 +2181,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblExampleTitle_14",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2487,6 +2516,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblHeader1",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 4,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -2831,6 +2861,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblHeader2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 5,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3175,6 +3206,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblHeader3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3519,6 +3551,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblHeader4",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3796,6 +3829,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "line_12",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -3963,6 +3997,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "line_13",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4137,6 +4172,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotAppCode_14",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -4268,6 +4304,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "pivotline_14",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 3,
       "PersistMetaDataIDKey": false,
       "Properties": [

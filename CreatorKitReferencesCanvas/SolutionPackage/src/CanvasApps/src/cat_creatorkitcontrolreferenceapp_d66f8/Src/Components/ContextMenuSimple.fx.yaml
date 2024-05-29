@@ -21,13 +21,13 @@ ContextMenuSimple As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_12 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_12 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_12.Y+htmlCode_12.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -170,6 +170,8 @@ ContextMenuSimple As CanvasComponent:
 
         "txtAccessibilityLower As 'Text box'":
             AccessibleLabel: ="Placeholder 2"
+            ColorBackground: =
+            ColorText: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Placeholder: ="Accessibility Test Placeholder"
@@ -180,7 +182,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =250
             ZIndex: =1
 
-        "ContextMenuStandard As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+        "ContextMenuStandard As 'Fluent Context Menu (1.1.34)'.pcfdataset":
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -204,14 +206,27 @@ ContextMenuSimple As CanvasComponent:
 
         btnSetFocusMenu As Button:
             AccessibleLabel: ="Set focus"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =35
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varSetFocusContextMenu,"SetFocus" & Text(Rand()));
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Set focus"
+            TextColor: =
             Visible: =pivotAppCode_12.Selected.ItemKey="app"
             Width: =154
             X: =431
@@ -228,15 +243,15 @@ ContextMenuSimple As CanvasComponent:
                 =Table(
                     {
                         Name: "Left",
-                        Key: '''PowerCAT.ContextMenu.TextAlignment'''.Left
+                        Key: 'PowerCAT.ContextMenu.TextAlignment'.Left
                     },
                     {
                         Name: "Center",
-                        Key: '''PowerCAT.ContextMenu.TextAlignment'''.Center
+                        Key: 'PowerCAT.ContextMenu.TextAlignment'.Center
                     },
                     {
                         Name: "Right",
-                        Key: '''PowerCAT.ContextMenu.TextAlignment'''.Right
+                        Key: 'PowerCAT.ContextMenu.TextAlignment'.Right
                     }
                 )
             Text: =""
@@ -271,17 +286,27 @@ ContextMenuSimple As CanvasComponent:
         "chkShowChevron As 'Check box'":
             AccessibleLabel: ="Show chevron"
             Checked: =true
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show Chevron"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_12.Selected.ItemKey="app"
             Width: =160
             X: =424
             Y: =60
             ZIndex: =10
 
-        "ContextMenuStyled As 'Fluent Context Menu (1.0.19)'.pcfdataset":
+        "ContextMenuStyled As 'Fluent Context Menu (1.1.34)'.pcfdataset":
             BorderColor: ="transparent"
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
@@ -405,6 +430,8 @@ ContextMenuSimple As CanvasComponent:
 
         "txtAccessibilityUpper As 'Text box'":
             AccessibleLabel: ="Placeholder 1"
+            ColorBackground: =
+            ColorText: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Placeholder: ="Accessibility Test Placeholder"

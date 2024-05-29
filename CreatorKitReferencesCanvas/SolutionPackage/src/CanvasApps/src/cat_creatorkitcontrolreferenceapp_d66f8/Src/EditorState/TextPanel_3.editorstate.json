@@ -35,6 +35,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "TextPanel_3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

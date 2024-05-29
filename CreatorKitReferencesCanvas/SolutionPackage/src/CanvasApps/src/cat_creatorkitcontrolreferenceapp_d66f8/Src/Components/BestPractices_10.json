@@ -18,7 +18,7 @@
       "Name": "Dos",
       "PropertyDataTypeKey": "Table",
       "Tooltip": "Dos",
-      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
     },
     {
       "Category": 0,
@@ -27,7 +27,7 @@
       "Name": "Donts",
       "PropertyDataTypeKey": "Table",
       "Tooltip": "Donts",
-      "Type": "{\"Version\":\"1.326\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
+      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Table\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"text\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}}"
     }
   ],
   "FirstParty": true,
@@ -38,7 +38,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638107246780471891",
+  "LastModifiedTimestamp": "638519771047256367",
   "Name": "dbd8dea9dc6a4babbf83ccc786d6e238",
   "OverridableProperties": {},
   "TemplateOriginalName": "f47fcbd5380f4e4bb93226d0ae4b8319",

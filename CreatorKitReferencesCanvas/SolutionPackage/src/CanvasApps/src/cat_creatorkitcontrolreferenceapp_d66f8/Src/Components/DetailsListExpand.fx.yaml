@@ -50,13 +50,13 @@ DetailsListExpand As CanvasComponent:
         Y: =22
         ZIndex: =1
 
-    "pivotAppCode_24 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_24 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_24.Y+htmlCode_24.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -184,7 +184,7 @@ DetailsListExpand As CanvasComponent:
         Y: =40
         ZIndex: =7
 
-        "ElevationExpand As 'Fluent Elevation (1.0.19)'":
+        "ElevationExpand As 'Fluent Elevation (1.1.34)'":
             DisplayMode: =DisplayMode.Edit
             Height: =FluentDetailsListDetailsListExpand.Height
             Visible: =pivotAppCode_24.Selected.ItemKey="app"
@@ -193,7 +193,7 @@ DetailsListExpand As CanvasComponent:
             Y: =FluentDetailsListDetailsListExpand.Y
             ZIndex: =5
 
-        "FluentDetailsListDetailsListExpand As 'Fluent Details List (1.0.19)'.pcfdataset":
+        "FluentDetailsListDetailsListExpand As 'Fluent Details List (1.1.34)'.pcfdataset":
             columns_Items: |-
                 =Table(
                     {
@@ -246,7 +246,7 @@ DetailsListExpand As CanvasComponent:
                     )
                 );
             RecordKey: ="id"
-            SelectionType: ='''PowerCAT.FluentDetailsList.SelectionType'''.Multiple
+            SelectionType: ='PowerCAT.FluentDetailsList.SelectionType'.Multiple
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_24.Selected.ItemKey="app"
             Width: =Parent.Width-Self.X*2

@@ -18,13 +18,13 @@ ElevationHover As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_15 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_15 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_15.Y+htmlCode_15.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Visible: =false
@@ -56,12 +56,12 @@ ElevationHover As CanvasComponent:
         Y: =45
         ZIndex: =4
 
-    "ElevationCard As 'Fluent Elevation (1.0.19)'":
-        Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+    "ElevationCard As 'Fluent Elevation (1.1.34)'":
+        Depth: ='PowerCAT.Elevation.Depth'.Depth4
         DisplayMode: =DisplayMode.Edit
         FillColor: =""
         Height: =85
-        HoverDepth: ='''PowerCAT.Elevation.HoverDepth'''.Depth16
+        HoverDepth: ='PowerCAT.Elevation.HoverDepth'.Depth16
         HoverFillColor: =""
         PaddingLeft: =0
         PaddingRight: =0
@@ -71,7 +71,7 @@ ElevationHover As CanvasComponent:
         Y: =205
         ZIndex: =9
 
-    "AutoWidthLabelCardTag As 'Auto Width Label (1.0.19)'":
+    "AutoWidthLabelCardTag As 'Auto Width Label (1.1.34)'":
         BorderRadius: =2
         DisplayMode: =DisplayMode.Edit
         FillColor: =varTheme.paletteCSS.neutralQuaternaryAlt
@@ -152,7 +152,7 @@ ElevationHover As CanvasComponent:
         Fill: =RGBA(0, 0, 0, 0)
         Height: =85
         HoverColor: =RGBA(0, 0, 0, 0)
-        HoverFill: =Transparent
+        HoverFill: =Color.Transparent
         OnSelect: =Notify("Get started selected");
         Text: ="Get started with Power Apps"
         Visible: =pivotAppCode_15.Selected.ItemKey="app"
@@ -183,12 +183,12 @@ ElevationHover As CanvasComponent:
             Y: =66
             ZIndex: =5
 
-        "ElevationAddTask As 'Fluent Elevation (1.0.19)'":
-            Depth: ='''PowerCAT.Elevation.Depth'''.Depth4
+        "ElevationAddTask As 'Fluent Elevation (1.1.34)'":
+            Depth: ='PowerCAT.Elevation.Depth'.Depth4
             DisplayMode: =DisplayMode.Edit
             FillColor: =""
             Height: =56
-            HoverDepth: =If(btnAddTaskHeader.DisplayMode<>DisplayMode.Disabled,'''PowerCAT.Elevation.HoverDepth'''.Depth16) // Don't hover when button disabled
+            HoverDepth: =If(btnAddTaskHeader.DisplayMode<>DisplayMode.Disabled,'PowerCAT.Elevation.HoverDepth'.Depth16) // Don't hover when button disabled
             HoverFillColor: =""
             PaddingLeft: =0
             PaddingRight: =0
@@ -198,15 +198,15 @@ ElevationHover As CanvasComponent:
             Y: =104
             ZIndex: =6
 
-        "btnAddTaskHeader As 'Fluent Icon (1.0.19)'":
+        "btnAddTaskHeader As 'Fluent Icon (1.1.34)'":
             DisplayMode: =If(chkActionEnabled.Checked,DisplayMode.Edit,DisplayMode.Disabled)
             Height: =56
             HoverFillColor: =varTheme.paletteCSS.neutralLighterAlt
             IconName: ="Add"
-            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+            IconType: ='PowerCAT.Icon.IconType'.ActionButton
             OnChange: =Notify("Add Task Selected");
             Text: ="Add task"
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_15.Selected.ItemKey="app"
             Width: =243
@@ -217,10 +217,20 @@ ElevationHover As CanvasComponent:
         "chkActionEnabled As 'Check box'":
             AccessibleLabel: ="Add task enabled"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Add task enabled"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_15.Selected.ItemKey="app"
             Width: =160
             X: =325

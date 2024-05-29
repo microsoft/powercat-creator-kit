@@ -37,13 +37,13 @@
                 Width: =200
                 ZIndex: =4
 
-                "Icon2_8 As 'Fluent Icon (1.0.22)'":
+                "Icon2_8 As 'Fluent Icon (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =50
                     IconName: ="GlobalNavButton"
                     IconSize: =16
                     LayoutMinHeight: =200
-                    LayoutMinWidth: =50
+                    LayoutMinWidth: =200
                     OnChange: |-
                         =UpdateContext({expandCollapse:!expandCollapse})
                     TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
@@ -55,9 +55,8 @@
                     Y: =0
                     ZIndex: =1
 
-                "Nav2_1 As 'Fluent Nav (1.0.22)'.pcfdataset":
+                "Nav2_1 As 'Fluent Nav (1.1.29)'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
-                    FillPortions: =1
                     Height: =966
                     Items: =NavItems
                     LayoutMinHeight: =200
@@ -93,13 +92,13 @@
                     Y: =-6
                     ZIndex: =1
 
-                    "Icon2_9 As 'Fluent Icon (1.0.22)'":
+                    "Icon2_9 As 'Fluent Icon (1.1.29)'":
                         DisplayMode: =DisplayMode.Edit
                         Height: =50
                         IconName: ="GlobalNavButton"
                         IconSize: =16
                         LayoutMinHeight: =200
-                        LayoutMinWidth: =50
+                        LayoutMinWidth: =200
                         OnChange: |-
                             =UpdateContext({expandCollapse:!expandCollapse})
                         TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
@@ -161,9 +160,8 @@
                             Text: ="Header"
                             ZIndex: =2
 
-                    "CommandBar1_1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
+                    "CommandBar1_1 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
-                        FillPortions: =1
                         Height: =Parent.Height
                         Items: |-
                             =Table(
@@ -220,7 +218,7 @@
                                 }
                             )
                         LayoutMinHeight: =200
-                        LayoutMinWidth: =120
+                        LayoutMinWidth: =200
                         OnSelect: |-
                             =Switch(Self.Selected.ItemKey,"nav",UpdateContext({expandCollapse:true}))
                         Theme: =AppThemeJson
@@ -286,7 +284,7 @@
                         Width: =Parent.Width
                         ZIndex: =2
 
-                        "DashboardPivot_1 As 'Fluent Pivot (1.0.22)'.pcfdataset":
+                        "DashboardPivot_1 As 'Fluent Pivot (1.1.29)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =42
                             Items: =PivotItems
@@ -361,13 +359,12 @@
                                 Wrap: =false
                                 ZIndex: =1
 
-                            "CommandBar2_1 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Stretch
+                            "CommandBar2_1 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =200
                                 Items: |-
                                     =Table({ItemKey:"0",ItemDisplayName:"Power Apps documentation", ItemIconName:"powerapps"},{ItemKey:"0",ItemDisplayName:"UWP docs (concepts)", ItemIconName:"windowslogo"})
-                                LayoutMinHeight: =40
+                                LayoutMinHeight: =200
                                 LayoutMinWidth: =200
                                 OnSelect: |-
                                     =Switch(Self.Selected.ItemKey,"0", Launch("https://learn.microsoft.com/power-apps/maker/canvas-apps/build-responsive-apps"), "1", Launch("https://learn.microsoft.com/windows/apps/design/layout/responsive-design") )
@@ -503,13 +500,12 @@
                                 Wrap: =false
                                 ZIndex: =1
 
-                            "CommandBar2_2 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Stretch
+                            "CommandBar2_2 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =200
                                 Items: |-
                                     =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
-                                LayoutMinHeight: =40
+                                LayoutMinHeight: =200
                                 LayoutMinWidth: =200
                                 OnSelect: |-
                                     =If(Self.Selected.ItemKey="0", Launch("https://learn.microsoft.com/windows/apps/design/layout/screen-sizes-and-breakpoints-for-responsive-design") )
@@ -640,7 +636,7 @@
                                 Width: =Parent.Width
                                 ZIndex: =1
 
-                                "Icon2_12 As 'Fluent Icon (1.0.22)'":
+                                "Icon2_12 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =56
                                     HoverFillColor: ="rgba(0,0,0,0)"
@@ -649,7 +645,7 @@
                                     IconSize: =24
                                     IconType: ='PowerCAT.Icon.IconType'.Icon
                                     LayoutMinHeight: =200
-                                    LayoutMinWidth: =50
+                                    LayoutMinWidth: =200
                                     OnChange: =
                                     TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
                                     Theme: =AppThemeJson
@@ -752,7 +748,7 @@
                                 Width: =Parent.Width
                                 ZIndex: =1
 
-                                "Icon2_11 As 'Fluent Icon (1.0.22)'":
+                                "Icon2_11 As 'Fluent Icon (1.1.29)'":
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =50
                                     HoverFillColor: ="rgba(0,0,0,0)"
@@ -761,7 +757,7 @@
                                     IconSize: =16
                                     IconType: ='PowerCAT.Icon.IconType'.Icon
                                     LayoutMinHeight: =200
-                                    LayoutMinWidth: =50
+                                    LayoutMinWidth: =200
                                     OnChange: =
                                     TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
                                     Theme: =AppThemeJson
@@ -894,13 +890,12 @@
                                 Wrap: =false
                                 ZIndex: =1
 
-                            "CommandBar2_3 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Stretch
+                            "CommandBar2_3 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =200
                                 Items: |-
                                     =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
-                                LayoutMinHeight: =40
+                                LayoutMinHeight: =200
                                 LayoutMinWidth: =200
                                 OnSelect: |-
                                     =If(Self.Selected.ItemKey="0", Launch("https://learn.microsoft.com/windows/apps/design/layout/responsive-design#reposition"))
@@ -1049,13 +1044,12 @@
                                 Wrap: =false
                                 ZIndex: =1
 
-                            "CommandBar2_6 As 'Fluent Command Bar (1.0.22)'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Stretch
+                            "CommandBar2_6 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =200
                                 Items: |-
                                     =Table({ItemKey:"0",ItemDisplayName:"Learn more", ItemIconName:"info"})
-                                LayoutMinHeight: =40
+                                LayoutMinHeight: =200
                                 LayoutMinWidth: =200
                                 OnSelect: |-
                                     =If(Self.Selected.ItemKey="0", Launch("https://learn.microsoft.com/windows/apps/design/layout/responsive-design#replace"))
@@ -1181,7 +1175,7 @@
                 TemplateSize: =App.Width / CountRows(Self.AllItems)
                 ZIndex: =2
 
-                "Icon3 As 'Fluent Icon (1.0.22)'":
+                "Icon3 As 'Fluent Icon (1.1.29)'":
                     DisplayMode: =DisplayMode.Edit
                     Height: =Parent.TemplateHeight
                     IconName: =ThisItem.ItemIconName

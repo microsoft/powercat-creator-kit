@@ -96,6 +96,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Elevation2_5",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -263,7 +264,10 @@
           "InvariantPropertyName": "Selectable",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "MaxTemplateSize",
+        "#CopilotOverlayLabel",
+        "#CopilotOverlayVisible"
       ],
       "GalleryTemplateChildName": "galleryTemplate3",
       "HasDynamicProperties": false,
@@ -276,6 +280,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Gallery2",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -418,6 +423,21 @@
           "Category": "Design",
           "PropertyName": "TabIndex",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "MaxTemplateSize",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayLabel",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "#CopilotOverlayVisible",
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultGalleryStyle",
@@ -446,6 +466,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "galleryTemplate3",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -568,6 +589,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "htmlSectionText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -789,6 +811,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblHeaderText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1086,6 +1109,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblSectionsHeader",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -1323,6 +1347,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "MultiHtmlSectionText",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

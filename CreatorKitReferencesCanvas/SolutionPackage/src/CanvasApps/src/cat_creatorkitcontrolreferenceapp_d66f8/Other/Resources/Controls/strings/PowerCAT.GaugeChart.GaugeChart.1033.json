@@ -1,0 +1,20 @@
+{
+  "GaugeChart_ChartData_Display_Key": "Chart data",
+  "GaugeChart_Chartvalue_Display_Key": "Chart value",
+  "GaugeChart_Chartvalueformat_Display_Key": "Chart value format",
+  "GaugeChart_ChartValueFormat_Fraction_Display_Key": "Fraction",
+  "GaugeChart_ChartValueFormat_Percentage_Display_Key": "Percentage",
+  "GaugeChart_Color_Display_Key": "Color",
+  "GaugeChart_Customcolors_Display_Key": "Custom Colors",
+  "GaugeChart_desc": "A radial gauge chart uses a circular arc to show how a single value progresses toward a goal or a Key Performance Indicator (KPI). ",
+  "GaugeChart_Display_Key": "Fluent Gauge Chart (1.1.34) Preview",
+  "GaugeChart_Hidelegend_Display_Key": "Hide legend",
+  "GaugeChart_HideminMax_Display_Key": "Hide min max",
+  "GaugeChart_Legend_Display_Key": "Legend",
+  "GaugeChart_Maxvalue_Display_Key": "Max value",
+  "GaugeChart_Minvalue_Display_Key": "Min value",
+  "GaugeChart_Size_Display_Key": "Size",
+  "GaugeChart_Sublabel_Display_Key": "Sub label",
+  "GaugeChart_Theme_Display_Key": "Theme",
+  "GaugeChart_Title_Display_Key": "Title"
+}

@@ -2,7 +2,7 @@ Header As CanvasComponent:
     BackButtonVisible: =false
     Color: =
     ContentWidth: =App.Width
-    Fill: =Transparent
+    Fill: =Color.Transparent
     HeaderFill: =
     Height: =68
     LeftButtonImage: |-
@@ -163,6 +163,7 @@ Header As CanvasComponent:
                 Height: =32
                 LayoutMinHeight: =32
                 LayoutMinWidth: =320
+                OnChange: =false
                 OnSelect: =Header.OnBackSelect()
                 PaddingBottom: =0
                 PaddingTop: =0
@@ -197,14 +198,13 @@ Header As CanvasComponent:
                 ZIndex: =3
 
         lblTitle_17 As label:
-            Align: =Center
+            Align: =LayoutAlignItems.Center
             BorderColor: =
-            Color: =Coalesce(Header.Color, ColorValue(Header.Theme.palette.white), White)
+            Color: =Coalesce(Header.Color, ColorValue(Header.Theme.palette.white), Color.White)
             DisabledFill: =RGBA(0,0,0,0)
-            Fill: =Transparent
+            Fill: =Color.Transparent
             FillPortions: =1
-            Font: ='Segoe UI'
-            FontWeight: =Normal
+            Font: =Font.'Segoe UI'
             Height: =50
             LayoutMinHeight: =70
             LayoutMinWidth: =300

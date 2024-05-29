@@ -102,6 +102,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "lblVersion",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -323,6 +324,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "LeftNav",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -448,6 +450,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "navMain",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
@@ -589,6 +592,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "recNavBackground",
+      "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [

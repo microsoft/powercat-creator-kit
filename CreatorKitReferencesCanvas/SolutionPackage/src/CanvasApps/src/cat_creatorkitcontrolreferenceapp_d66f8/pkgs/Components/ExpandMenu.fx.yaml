@@ -11327,6 +11327,7 @@ ExpandMenu As CanvasComponent:
     ZIndex: =1
 
     glExpandMenu As gallery.galleryVertical:
+        '#CopilotOverlayLabel': ="Filtered"
         AccessibleLabel: ="Menu"
         BorderColor: =
         Fill: =ColorValue(ExpandMenu.Theme.palette.white)
@@ -11348,7 +11349,7 @@ ExpandMenu As CanvasComponent:
             Color: =ColorValue(ExpandMenu.Theme.palette.neutralPrimary)
             DisabledFill: =RGBA(0,0,0,0)
             Fill: =RGBA(0,0,0,0)
-            Font: ='Segoe UI'
+            Font: =Font.'Segoe UI'
             HoverFill: =ColorValue(ExpandMenu.Theme.palette.neutralLight)
             OnSelect: =Select(Parent)
             PaddingBottom: =0

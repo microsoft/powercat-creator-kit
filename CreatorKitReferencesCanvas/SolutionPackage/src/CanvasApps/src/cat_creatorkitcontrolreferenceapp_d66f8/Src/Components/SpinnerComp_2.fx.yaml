@@ -1,0 +1,9 @@
+SpinnerComp_2 As CanvasComponent:
+    ComponentHeight: =varAutoHeight
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =Self.ComponentHeight
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+

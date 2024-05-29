@@ -1,0 +1,397 @@
+scrStackbar As screen:
+
+    stackRoot_30 As groupContainer.verticalAutoLayoutContainer:
+        Fill: =varTheme.palette.neutralLighterAlt
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =2*varTheme.U
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingLeft: =4*varTheme.U
+        PaddingRight: =4*varTheme.U
+        PaddingTop: =2*varTheme.U
+        Width: =Parent.Width-Self.X
+        X: =LeftNav_31.Width
+        Y: =Header_32.Height
+        ZIndex: =2
+
+        lblTitle_32 As label:
+            Color: =varTheme.palette.neutralPrimary
+            Font: =Font.'Segoe UI'
+            FontWeight: =FontWeight.Semibold
+            Height: =60
+            Size: =varTheme.fontSizes.xl
+            Text: ="HorizontalBarChart - Stacked"
+            Width: =228
+            ZIndex: =1
+
+        comDescription_34 As TextPanel:
+            LayoutMinHeight: =640
+            Text: |-
+                ="Horizontal stacked bar chart displays multiple series of data as stacked bars, with each bar representing a category. The bars are stacked alongside each other, with the length of each bar representing the value of the category of the series.
+                
+                The stacked bar chart is a 100% chart. This means the sum of all categories sums up to 100% width of the chart."
+            ZIndex: =2
+
+        BestPractices_16 As BestPractices:
+            Donts: |
+                =Table(
+                    {text:"Avoid having more than 20 bars in the chart."},
+                    {text:"The n/M variant should be used only when a value has to be compared against its target value."}
+                )
+            Dos: |
+                =Table(
+                    {text:"Use stacked horizontal bar chart if the length of labels is longer."}
+                )
+            Height: =240
+            LayoutMinHeight: =640
+            Visible: =true
+            ZIndex: =3
+
+        ExampleContainer_9 As groupContainer.manualLayoutContainer:
+            FillPortions: =0
+            Height: =ExampleRootContainer_9.Height
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            Width: =App.Width
+            Y: =278
+            ZIndex: =4
+
+            "Elevation_13 As 'Fluent Elevation (1.1.34)'":
+                DisplayMode: =DisplayMode.Edit
+                Height: =Parent.Height
+                PaddingBottom: =8
+                PaddingLeft: =8
+                PaddingRight: =8
+                PaddingTop: =8
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            ExampleRootContainer_9 As groupContainer.verticalAutoLayoutContainer:
+                Height: =ExampleHeader_9.Height + If(pivotAppCode_45.Selected.ItemKey="app", ExampleContainer1_8.Height)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =10
+                PaddingRight: =10
+                Width: =Parent.Width
+                ZIndex: =4
+
+                ExampleHeader_9 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =ContainerSubHeader_8.Height + ExampleHeader_9.PaddingTop + ExampleHeader_9.PaddingBottom+ If(pivotAppCode_45.Selected.ItemKey="code",htmlCodeSnippet_8.Height,0)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =20
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    PaddingTop: =20
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    ContainerSubHeader_8 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =50
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =1
+
+                        lblControlDescription_11 As label:
+                            AutoHeight: =true
+                            FillPortions: =1
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =lblControlDescription_11.AutoHeight
+                            LayoutMinHeight: =70
+                            LayoutMinWidth: =300
+                            Size: =18
+                            Text: ="Basic Stacked Bar Chart Usage"
+                            Width: =560
+                            ZIndex: =1
+
+                        "pivotAppCode_45 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =49
+                            Items: |-
+                                =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_8.Y+htmlCodeSnippet_8.Height))
+                            RenderSize: ='PowerCAT.Pivot.RenderSize'.Large
+                            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
+                            SelectedKey: ="app"
+                            Theme: =varTheme.themeJSON
+                            Width: =220
+                            X: =Parent.Width-Self.Width
+                            Y: =0
+                            ZIndex: =2
+
+                    recSeperator_8 As rectangle:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        BorderColor: =RGBA(230, 230, 230, 1)
+                        Fill: =Color.LightGray
+                        Height: =1
+                        Width: =Parent.Width
+                        ZIndex: =2
+
+                    htmlCodeSnippet_8 As htmlViewer:
+                        AlignInContainer: =AlignInContainer.Stretch
+                        AutoHeight: =true
+                        BorderColor: =
+                        BorderThickness: =1
+                        Color: =Color.Black
+                        DisplayMode: =DisplayMode.View
+                        Font: =Font.'Courier New'
+                        Height: =240
+                        HtmlText: |-
+                            ="<pre class=""hljs_03eaa332108148c4a85fa1be93afd25d"" style=""display: block ; overflow-x: auto ; padding: 0.5em ; background: rgb(240 , 240 , 240) ; color: rgb(68 , 68 , 68)"">
+                            
+                            <span class=""hljs-string_03eaa332108148c4a85fa1be93afd25d"" style=""color: rgb(136 , 0 , 0)"">""Stackedbar1"" As 'Stackedbar'</span>:
+                                HideLabel: chkHideLabel_1.Checked
+                                Bar Height: sliderBarHeight.Value
+                            	Item: Table(
+                                    {
+                                        ItemTitle: ""First"",
+                                        ItemLegend: ""First"",
+                                        ItemValue: 40,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: ""10/2/2024"",
+                                        ItemYPopOver: ""10%""
+                                    },
+                                    {
+                                        ItemTitle: ""Second"",
+                                        ItemLegend: ""Second"",
+                                        ItemValue: 20,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: ""20/4/2024"",
+                                        ItemYPopOver: ""20%""
+                                    },
+                                    {
+                                        ItemTitle: ""Third"",
+                                        ItemLegend: ""Third"",
+                                        ItemValue: 120,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: ""10/6/2024"",
+                                        ItemYPopOver: ""30%""
+                                    },
+                                    {
+                                        ItemTitle: ""Fourth"",
+                                        ItemLegend: ""Fourth"",
+                                        ItemValue: 90,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: ""20/4/2024"",
+                                        ItemYPopOver: ""40%""
+                                    },
+                                    {
+                                        ItemTitle: ""Fifth"",
+                                        ItemLegend: ""Fifth"",
+                                        ItemValue: 60,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: ""10/6/2024"",
+                                        ItemYPopOver: ""50%""
+                                    }
+                                )
+                            </pre>"
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =10
+                        Visible: =pivotAppCode_45.Selected.ItemKey="code"
+                        Width: =Parent.Width
+                        Y: =48
+                        ZIndex: =3
+
+                ExampleContainer1_8 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Max(LeftContainer_9.Height,  RightContainer_9.Height)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =20
+                    PaddingRight: =20
+                    ZIndex: =4
+
+                    WrapContainer_8 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =400
+                        LayoutGap: =10
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        LayoutWrap: =true
+                        ZIndex: =5
+
+                        LeftContainer_9 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Center
+                            Height: =180
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutMinHeight: =500
+                            LayoutMinWidth: =350
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =1
+
+                            "StackedBarChart1 As 'Fluent Stacked bar Chart (1.1.34) Preview'.pcfdataset":
+                                AlignInContainer: =AlignInContainer.Start
+                                BarHeight: =sliderBarHeight_1.Value
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =240
+                                HideLegend: =chkHideLabel_2.Checked
+                                Items: |-
+                                    =Table(
+                                        {
+                                            ItemTitle: "First",
+                                            ItemLegend: "First",
+                                            ItemValue: 40,
+                                            ItemTotalValue: 100,
+                                            ItemXPopOver: "10/2/2024",
+                                            ItemYPopOver: "10%"
+                                        },
+                                        {
+                                            ItemTitle: "Second",
+                                            ItemLegend: "Second",
+                                            ItemValue: 20,
+                                            ItemTotalValue: 100,
+                                            ItemXPopOver: "20/4/2024",
+                                            ItemYPopOver: "20%"
+                                        },
+                                        {
+                                            ItemTitle: "Third",
+                                            ItemLegend: "Third",
+                                            ItemValue: 120,
+                                            ItemTotalValue: 100,
+                                            ItemXPopOver: "10/6/2024",
+                                            ItemYPopOver: "30%"
+                                        },
+                                        {
+                                            ItemTitle: "Fourth",
+                                            ItemLegend: "Fourth",
+                                            ItemValue: 90,
+                                            ItemTotalValue: 100,
+                                            ItemXPopOver: "20/4/2024",
+                                            ItemYPopOver: "40%"
+                                        },
+                                        {
+                                            ItemTitle: "Fifth",
+                                            ItemLegend: "Fifth",
+                                            ItemValue: 60,
+                                            ItemTotalValue: 100,
+                                            ItemXPopOver: "10/6/2024",
+                                            ItemYPopOver: "50%"
+                                        }
+                                    )
+                                LayoutMinHeight: =180
+                                LayoutMinWidth: =350
+                                Title: ="Stacked bar"
+                                Width: =450
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                        RightContainer_9 As groupContainer.verticalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            Height: =180
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =10
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            ZIndex: =2
+
+                            "chkHideLabel_2 As 'Check box'":
+                                AccessibleLabel: ="Allow spell check"
+                                Checked: =false
+                                CheckedCheckboxBackgroundFill: =
+                                CheckedCheckboxBorderColor: =
+                                CheckmarkFill: =
+                                Color: =
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =32
+                                HoverCheckboxBackgroundFill: =
+                                HoverCheckboxBorderColor: =
+                                Label: ="Hide label"
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =160
+                                OnChange: =
+                                OnCheck: =false
+                                OnUncheck: =false
+                                UncheckedCheckboxBackgroundFill: =
+                                UncheckedCheckboxBorderColor: =
+                                Visible: =true
+                                Width: =220
+                                X: =42
+                                Y: =223
+                                ZIndex: =2
+
+                            ContainerDonutOutput_11 As groupContainer.horizontalAutoLayoutContainer:
+                                AlignInContainer: =AlignInContainer.Start
+                                FillPortions: =0
+                                Height: =40
+                                LayoutAlignItems: =LayoutAlignItems.Center
+                                LayoutMinHeight: =40
+                                LayoutMinWidth: =250
+                                LayoutMode: =LayoutMode.Auto
+                                PaddingRight: =5
+                                ZIndex: =4
+
+                                lblBarHeight_1 As Label:
+                                    Color: =
+                                    DisplayMode: =DisplayMode.Edit
+                                    Height: =32
+                                    LayoutMinHeight: =32
+                                    LayoutMinWidth: =320
+                                    OnChange: =false
+                                    Text: ="Bar height"
+                                    Width: =180
+                                    X: =42
+                                    Y: =143
+                                    ZIndex: =1
+
+                                sliderBarHeight_1 As slider:
+                                    AccessibleLabel: ="Width"
+                                    BorderColor: =
+                                    Default: =15
+                                    FocusedBorderColor: =
+                                    FocusedBorderThickness: =1
+                                    HandleSize: =16
+                                    Max: =20
+                                    Min: =5
+                                    RailFill: =varTheme.palette.neutralTertiaryAlt
+                                    RailThickness: =2
+                                    ValueFill: =varTheme.palette.neutralPrimary
+                                    ValueHoverFill: =varTheme.palette.themePrimary
+                                    Width: =169
+                                    X: =297
+                                    Y: =162
+                                    ZIndex: =2
+
+            lbladditionalInfo_8 As Label:
+                Color: =
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                OnChange: =false
+                Text: =Index(currentCompSamplesCol,1).Description
+                Width: =Parent.Width * 0.5
+                X: =42
+                Y: =58
+                ZIndex: =5
+
+    LeftNav_31 As LeftNav:
+        Height: =Parent.Height
+        Width: =200
+        Y: =Header_32.Height
+        ZIndex: =7
+
+    Header_32 As Header:
+        RightButtonVisible: =false
+        Text: ="CREATOR KIT Reference App"
+        ZIndex: =8
+

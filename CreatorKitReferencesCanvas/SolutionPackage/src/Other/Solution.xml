@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.23063.172" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24044.222" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>CreatorKitReferencesCanvas</UniqueName>
     <LocalizedNames>
@@ -110,6 +110,10 @@
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.Breadcrumb" displayName="cat_PowerCAT.Breadcrumb" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Calendar" displayName="cat_PowerCAT.Calendar" solution="Active" />
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
@@ -130,6 +134,10 @@
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.DonutChart" displayName="cat_PowerCAT.DonutChart" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Elevation" displayName="cat_PowerCAT.Elevation" solution="Active" />
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
@@ -143,6 +151,18 @@
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Facepile" displayName="cat_PowerCAT.Facepile" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.FluentDetailsList" displayName="cat_PowerCAT.FluentDetailsList" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.GaugeChart" displayName="cat_PowerCAT.GaugeChart" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.HorizontalBarChart" displayName="cat_PowerCAT.HorizontalBarChart" solution="Active" />
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>
@@ -214,6 +234,10 @@
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SearchBox" displayName="cat_PowerCAT.SearchBox" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.Shimmer" displayName="cat_PowerCAT.Shimmer" solution="Active" />
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
       </MissingDependency>
@@ -234,8 +258,16 @@
         <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.StackedBarChart" displayName="cat_PowerCAT.StackedBarChart" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
+      </MissingDependency>
+      <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.SubwayNav" displayName="cat_PowerCAT.SubwayNav" solution="Active" />
         <Dependent type="300" schemaName="cat_canvastemplate_f8d10" displayName="Canvas Template" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required type="66" schemaName="cat_PowerCAT.SubwayNav" displayName="cat_PowerCAT.SubwayNav" solution="Active" />
+        <Dependent type="300" schemaName="cat_creatorkitcontrolreferenceapp_d66f8" displayName="Creator Kit Reference App" />
       </MissingDependency>
       <MissingDependency>
         <Required type="66" schemaName="cat_PowerCAT.TagList" displayName="cat_PowerCAT.TagList" solution="Active" />

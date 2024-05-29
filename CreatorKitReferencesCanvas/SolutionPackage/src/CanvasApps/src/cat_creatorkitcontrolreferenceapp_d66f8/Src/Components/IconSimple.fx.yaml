@@ -18,13 +18,13 @@ IconSimple As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_11 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_11 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_11.Y+htmlCode_11.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -163,7 +163,7 @@ IconSimple As CanvasComponent:
         Y: =40
         ZIndex: =14
 
-        "iconStandard As 'Fluent Icon (1.0.19)'":
+        "iconStandard As 'Fluent Icon (1.1.34)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit
@@ -172,10 +172,10 @@ IconSimple As CanvasComponent:
             IconColor: =""
             IconName: =Coalesce(gridIcons.Selected.IconName, "AddFriend")
             IconSize: =32
-            IconType: ='''PowerCAT.Icon.IconType'''.Icon
+            IconType: ='PowerCAT.Icon.IconType'.Icon
             InputEvent: =varSetFocusActionButton
             Text: =""
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_11.Selected.ItemKey="app"
             Width: =32
@@ -183,17 +183,17 @@ IconSimple As CanvasComponent:
             Y: =124
             ZIndex: =5
 
-        "iconCustomColor As 'Fluent Icon (1.0.19)'":
+        "iconCustomColor As 'Fluent Icon (1.1.34)'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             HoverIconColor: =""
             IconColor: ="red"
             IconName: =Coalesce(gridIcons.Selected.IconName, "AddFriend")
             IconSize: =32
-            IconType: ='''PowerCAT.Icon.IconType'''.Icon
+            IconType: ='PowerCAT.Icon.IconType'.Icon
             InputEvent: =varSetFocusActionButton
             Text: =""
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_11.Selected.ItemKey="app"
             Width: =32
@@ -224,7 +224,7 @@ IconSimple As CanvasComponent:
             Y: =120
             ZIndex: =10
 
-        "gridIcons As 'Fluent Details List (1.0.19)'.pcfdataset":
+        "gridIcons As 'Fluent Details List (1.1.34)'.pcfdataset":
             columns_Items: |-
                 =Table(
                     {
@@ -245,7 +245,7 @@ IconSimple As CanvasComponent:
             DisplayMode: =DisplayMode.Edit
             HeaderVisible: =false
             Height: =320
-            Items: =Search(FluentIcons,txtSearchIcons.Value,"IconName")
+            Items: =Search(FluentIcons,txtSearchIcons.Value,IconName)
             PageSize: =3000
             SelectRowsOnFocus: =true
             Theme: =varTheme.themeJSON
@@ -271,6 +271,8 @@ IconSimple As CanvasComponent:
 
         "txtSearchIcons As 'Text box'":
             AccessibleLabel: ="Search icons"
+            ColorBackground: =
+            ColorText: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Placeholder: ="Search Icons"
@@ -281,7 +283,7 @@ IconSimple As CanvasComponent:
             Y: =120
             ZIndex: =12
 
-        "icoSearch As 'Fluent Icon (1.0.19)'":
+        "icoSearch As 'Fluent Icon (1.1.34)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit
@@ -290,10 +292,10 @@ IconSimple As CanvasComponent:
             IconColor: =varTheme.paletteCSS.themePrimary
             IconName: ="Search"
             IconSize: =20
-            IconType: ='''PowerCAT.Icon.IconType'''.Icon
+            IconType: ='PowerCAT.Icon.IconType'.Icon
             InputEvent: =varSetFocusActionButton
             Text: =""
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_11.Selected.ItemKey="app"
             Width: =25

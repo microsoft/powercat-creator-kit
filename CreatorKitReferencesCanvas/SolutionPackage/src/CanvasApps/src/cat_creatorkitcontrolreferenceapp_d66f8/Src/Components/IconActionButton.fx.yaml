@@ -20,13 +20,13 @@ IconActionButton As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_10 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_10 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_10.Y+htmlCode_10.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -167,7 +167,7 @@ IconActionButton As CanvasComponent:
         Y: =40
         ZIndex: =17
 
-        "iconActionButtonStandard As 'Fluent Icon (1.0.19)'":
+        "iconActionButtonStandard As 'Fluent Icon (1.1.34)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             FillColor: =If(chkFill.Checked,varTheme.paletteCSS.themePrimary)
@@ -178,7 +178,7 @@ IconActionButton As CanvasComponent:
             HoverIconColor: =""
             IconColor: =""
             IconName: ="AddFriend"
-            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+            IconType: ='PowerCAT.Icon.IconType'.ActionButton
             InputEvent: =varSetFocusActionButton
             Text: ="Create account"
             TextAlignment: =ddAlignment.Selected.Key
@@ -191,21 +191,34 @@ IconActionButton As CanvasComponent:
 
         btnSetFocusActionButton As Button:
             AccessibleLabel: ="Set focus"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =35
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varSetFocusActionButton,"SetFocus" & Text(Rand()));
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Set focus"
+            TextColor: =
             Visible: =pivotAppCode_10.Selected.ItemKey="app"
             Width: =142
             X: =441
             Y: =115
             ZIndex: =6
 
-        "iconActionButtonCustom As 'Fluent Icon (1.0.19)'":
+        "iconActionButtonCustom As 'Fluent Icon (1.1.34)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             FontColor: ="green"
@@ -215,7 +228,7 @@ IconActionButton As CanvasComponent:
             HoverIconColor: ="darkred"
             IconColor: ="red"
             IconName: ="AddFriend"
-            IconType: ='''PowerCAT.Icon.IconType'''.ActionButton
+            IconType: ='PowerCAT.Icon.IconType'.ActionButton
             InputEvent: =
             Text: ="Custom colors"
             TextAlignment: =ddAlignment.Selected.Key
@@ -226,7 +239,7 @@ IconActionButton As CanvasComponent:
             Y: =158
             ZIndex: =7
 
-        "iconButtonCustom As 'Fluent Icon (1.0.19)'":
+        "iconButtonCustom As 'Fluent Icon (1.1.34)'":
             BorderRadius: =3
             DisplayMode: =DisplayMode.Edit
             FontColor: =""
@@ -235,10 +248,10 @@ IconActionButton As CanvasComponent:
             HoverIconColor: ="darkred"
             IconColor: ="red"
             IconName: ="AddFriend"
-            IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+            IconType: ='PowerCAT.Icon.IconType'.IconButon
             InputEvent: =
             Text: ="Custom colors"
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_10.Selected.ItemKey="app"
             Width: =32
@@ -261,17 +274,17 @@ IconActionButton As CanvasComponent:
             Y: =56
             ZIndex: =9
 
-        "iconButtonStandard As 'Fluent Icon (1.0.19)'":
+        "iconButtonStandard As 'Fluent Icon (1.1.34)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             Height: =32
             HoverIconColor: =""
             IconColor: =""
             IconName: ="AddFriend"
-            IconType: ='''PowerCAT.Icon.IconType'''.IconButon
+            IconType: ='PowerCAT.Icon.IconType'.IconButon
             InputEvent: =
             Text: ="Create account"
-            TextAlignment: ='''PowerCAT.Icon.TextAlignment'''.Left
+            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Left
             Theme: =varTheme.themeJSON
             Visible: =pivotAppCode_10.Selected.ItemKey="app"
             Width: =32
@@ -282,10 +295,20 @@ IconActionButton As CanvasComponent:
         "chkShowBorder As 'Check box'":
             AccessibleLabel: ="Show border"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show Border"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_10.Selected.ItemKey="app"
             Width: =160
             X: =281
@@ -295,10 +318,20 @@ IconActionButton As CanvasComponent:
         "chkFill As 'Check box'":
             AccessibleLabel: ="Show fill"
             Checked: =false
+            CheckedCheckboxBackgroundFill: =
+            CheckedCheckboxBorderColor: =
+            CheckmarkFill: =
+            Color: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
+            HoverCheckboxBackgroundFill: =
+            HoverCheckboxBorderColor: =
             Label: ="Show Fill"
             OnChange: =
+            OnCheck: =false
+            OnUncheck: =false
+            UncheckedCheckboxBackgroundFill: =
+            UncheckedCheckboxBorderColor: =
             Visible: =pivotAppCode_10.Selected.ItemKey="app"
             Width: =160
             X: =281
@@ -315,15 +348,15 @@ IconActionButton As CanvasComponent:
                 =Table(
                     {
                         Name: "Left",
-                        Key: '''PowerCAT.Icon.TextAlignment'''.Left
+                        Key: 'PowerCAT.Icon.TextAlignment'.Left
                     },
                     {
                         Name: "Center",
-                        Key: '''PowerCAT.Icon.TextAlignment'''.Center
+                        Key: 'PowerCAT.Icon.TextAlignment'.Center
                     },
                     {
                         Name: "Right",
-                        Key: '''PowerCAT.Icon.TextAlignment'''.Right
+                        Key: 'PowerCAT.Icon.TextAlignment'.Right
                     }
                 )
             Text: =""

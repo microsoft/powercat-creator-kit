@@ -18,13 +18,13 @@ CommandBarFocus As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode_7 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+    "pivotAppCode_7 As 'Fluent Pivot (1.1.34)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
             =Table({ItemKey:"app",ItemDisplayName:"App",ItemIconName:"PowerApps2Logo"},{ItemKey:"code",ItemDisplayName:"Code",ItemIconName:"Code"})
         OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCode_7.Y+htmlCode_7.Height))
-        RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotTabs
+        RenderType: ='PowerCAT.Pivot.RenderType'.PivotTabs
         SelectedKey: ="app"
         Theme: =varTheme.themeJSON
         Width: =174
@@ -106,7 +106,7 @@ CommandBarFocus As CanvasComponent:
         Y: =40
         ZIndex: =12
 
-        "commandBar_4 As 'Fluent Command Bar (1.0.19)'.pcfdataset":
+        "commandBar_4 As 'Fluent Command Bar (1.1.34)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             InputEvent: =varEvent
@@ -141,14 +141,27 @@ CommandBarFocus As CanvasComponent:
 
         btnSetfocus As Button:
             AccessibleLabel: ="Set Focus on Command Bar"
+            BorderColor: =
             BorderRadius: =1
             BorderStyle: =BorderStyle.Solid
             BorderThickness: =1
-            ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+            ButtonType: ='Button.ButtonType'.Standard
+            DisabledBorderColor: =
+            DisabledFillColor: =
+            DisabledTextColor: =
             DisplayMode: =DisplayMode.Edit
+            FillColor: =
             Height: =32
+            HoverBorderColor: =
+            HoverFillColor: =
+            HoverTextColor: =
+            OnChange: =false
             OnSelect: =Set(varEvent,"SetFocus" & Text(Rand()))
+            PressedBorderColor: =
+            PressedFillColor: =
+            PressedTextColor: =
             Text: ="Set Focus on Command Bar"
+            TextColor: =
             Visible: =pivotAppCode_7.Selected.ItemKey="app"
             Width: =210
             X: =12
@@ -157,6 +170,8 @@ CommandBarFocus As CanvasComponent:
 
         "txtFirstTab As 'Text box'":
             AccessibleLabel: ="Textbox 1"
+            ColorBackground: =
+            ColorText: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Visible: =pivotAppCode_7.Selected.ItemKey="app"
@@ -167,6 +182,8 @@ CommandBarFocus As CanvasComponent:
 
         "txtSecondTab As 'Text box'":
             AccessibleLabel: ="Text box 2"
+            ColorBackground: =
+            ColorText: =
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Visible: =pivotAppCode_7.Selected.ItemKey="app"

@@ -92,7 +92,7 @@ scrSpinButton As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_6 As 'Fluent Elevation (1.0.19)'":
+            "Elevation_6 As 'Fluent Elevation (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription_3.DesiredHeight
                 PaddingBottom: =8
@@ -119,7 +119,7 @@ scrSpinButton As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_7 As 'Fluent Elevation (1.0.19)'":
+            "Elevation_7 As 'Fluent Elevation (1.1.34)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -176,7 +176,7 @@ scrSpinButton As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_39 As 'Fluent Pivot (1.0.19)'.pcfdataset":
+                        "pivotAppCode_39 As 'Fluent Pivot (1.1.34)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -184,8 +184,8 @@ scrSpinButton As screen:
                             LayoutMinHeight: =200
                             LayoutMinWidth: =200
                             OnSelect: =Set(varAutoHeight,If(Self.Selected.ItemKey="app",200,htmlCodeSnippet_2.Y+htmlCodeSnippet_2.Height))
-                            RenderSize: ='''PowerCAT.Pivot.RenderSize'''.Large
-                            RenderType: ='''PowerCAT.Pivot.RenderType'''.PivotLinks
+                            RenderSize: ='PowerCAT.Pivot.RenderSize'.Large
+                            RenderType: ='PowerCAT.Pivot.RenderType'.PivotLinks
                             SelectedKey: ="app"
                             Theme: =varTheme.themeJSON
                             Width: =220
@@ -196,7 +196,7 @@ scrSpinButton As screen:
                     recSeperator_2 As rectangle:
                         AlignInContainer: =AlignInContainer.Stretch
                         BorderColor: =RGBA(230, 230, 230, 1)
-                        Fill: =LightGray
+                        Fill: =Color.LightGray
                         Height: =1
                         Width: =Parent.Width
                         ZIndex: =2
@@ -206,7 +206,7 @@ scrSpinButton As screen:
                         AutoHeight: =true
                         BorderColor: =
                         BorderThickness: =1
-                        Color: =Black
+                        Color: =Color.Black
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =2
@@ -272,7 +272,7 @@ scrSpinButton As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SpinButton1 As 'Fluent SpinButton (1.0.19) Preview'":
+                            "SpinButton1 As 'Fluent SpinButton (1.1.34)'":
                                 DisplayMode: =DisplayMode.Edit
                                 Error: =chkError_1.Checked
                                 Height: =200
@@ -299,12 +299,22 @@ scrSpinButton As screen:
                             "chkError_1 As 'Check box'":
                                 AccessibleLabel: ="Allow spell check"
                                 Checked: =false
+                                CheckedCheckboxBackgroundFill: =
+                                CheckedCheckboxBorderColor: =
+                                CheckmarkFill: =
+                                Color: =
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =32
+                                HoverCheckboxBackgroundFill: =
+                                HoverCheckboxBorderColor: =
                                 Label: ="Error"
                                 LayoutMinHeight: =32
                                 LayoutMinWidth: =160
                                 OnChange: =
+                                OnCheck: =false
+                                OnUncheck: =false
+                                UncheckedCheckboxBackgroundFill: =
+                                UncheckedCheckboxBorderColor: =
                                 Visible: =true
                                 Width: =160
                                 X: =42
@@ -322,10 +332,12 @@ scrSpinButton As screen:
                                 ZIndex: =2
 
                                 lblSpinBtnLabel As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="SpinButton Label"
                                     Width: =180
                                     X: =42
@@ -333,6 +345,8 @@ scrSpinButton As screen:
                                     ZIndex: =1
 
                                 "txtSpinBtnLabel As 'Text box'":
+                                    ColorBackground: =
+                                    ColorText: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
@@ -355,10 +369,12 @@ scrSpinButton As screen:
                                 ZIndex: =3
 
                                 lblIcon_1 As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Icon Name"
                                     Width: =180
                                     X: =42
@@ -399,10 +415,12 @@ scrSpinButton As screen:
                                 ZIndex: =4
 
                                 lblSetFocus As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="Set Focus"
                                     Width: =180
                                     X: =42
@@ -411,16 +429,29 @@ scrSpinButton As screen:
 
                                 btnSetFocus_1 As Button:
                                     AccessibleLabel: ="Remove tag"
+                                    BorderColor: =
                                     BorderRadius: =1
                                     BorderStyle: =BorderStyle.Solid
                                     BorderThickness: =1
-                                    ButtonType: ='''Microsoft.CoreControls.Button.ButtonType'''.Standard
+                                    ButtonType: ='Button.ButtonType'.Standard
+                                    DisabledBorderColor: =
+                                    DisabledFillColor: =
+                                    DisabledTextColor: =
                                     DisplayMode: =DisplayMode.Edit
+                                    FillColor: =
                                     Height: =32
+                                    HoverBorderColor: =
+                                    HoverFillColor: =
+                                    HoverTextColor: =
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =96
+                                    OnChange: =false
                                     OnSelect: =Set(setSpinBtnFocus,"SetFocus"&Rand())
+                                    PressedBorderColor: =
+                                    PressedFillColor: =
+                                    PressedTextColor: =
                                     Text: ="Set Focus"
+                                    TextColor: =
                                     Visible: =true
                                     Width: =120
                                     X: =453
@@ -438,10 +469,12 @@ scrSpinButton As screen:
                                 ZIndex: =5
 
                                 lblSpinBtnOutput As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: ="SpinButton (output)"
                                     Width: =180
                                     X: =42
@@ -449,11 +482,13 @@ scrSpinButton As screen:
                                     ZIndex: =1
 
                                 lblSpinBtnValue As Label:
+                                    Color: =
                                     DisplayMode: =DisplayMode.Edit
                                     FillPortions: =1
                                     Height: =32
                                     LayoutMinHeight: =32
                                     LayoutMinWidth: =320
+                                    OnChange: =false
                                     Text: =SpinButton1.Value
                                     Width: =180
                                     X: =42
@@ -461,8 +496,10 @@ scrSpinButton As screen:
                                     ZIndex: =2
 
             lbladditionalInfo_2 As Label:
+                Color: =
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
+                OnChange: =false
                 Text: =Index(currentCompSamplesCol,1).Description
                 Width: =Parent.Width * 0.5
                 X: =42

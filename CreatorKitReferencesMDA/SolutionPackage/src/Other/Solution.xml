@@ -151,10 +151,6 @@
         <Dependent type="300" schemaName="cat_fluentuicustompagetemplate_e3ec8" displayName="Fluent UI Custom Page Template" />
       </MissingDependency>
       <MissingDependency>
-        <Required type="300" schemaName="cat_home_7b17f" displayName="Home" solution="TrafficManaged (1.0.0.11)" />
-        <Dependent type="AppElement" displayName="cat_cat_TemplateApp_canvasappid_cat_home_7b17f" id.uniquename="cat_cat_TemplateApp_canvasappid_cat_home_7b17f" />
-      </MissingDependency>
-      <MissingDependency>
         <Required type="300" schemaName="cat_powercatcomponentlibrary_0be3a" displayName="Power CAT Component Library" solution="Active" />
         <Dependent type="300" schemaName="cat_calendarpage_cb349" displayName="Calendar Page" />
       </MissingDependency>

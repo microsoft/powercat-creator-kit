@@ -27,12 +27,5 @@
       <iscustomizable>1</iscustomizable>
       <name>cat_cat_TemplateApp_canvasappid_cat_fluentuicustompagetemplate_e3ec8</name>
     </appelement>
-    <appelement uniquename="cat_cat_TemplateApp_canvasappid_cat_home_7b17f">
-      <canvasappid>
-        <name>cat_home_7b17f</name>
-      </canvasappid>
-      <iscustomizable>1</iscustomizable>
-      <name>cat_cat_TemplateApp_canvasappid_cat_home_7b17f</name>
-    </appelement>
   </appelements>
 </AppModule>

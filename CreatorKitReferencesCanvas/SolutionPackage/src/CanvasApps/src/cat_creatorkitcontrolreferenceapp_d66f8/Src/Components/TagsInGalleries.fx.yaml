@@ -18,7 +18,7 @@ TagsInGalleries As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_20 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_20 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ TagsInGalleries As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -135,7 +136,7 @@ TagsInGalleries As CanvasComponent:
             Y: =54
             ZIndex: =5
 
-            "ElevationTask As 'Fluent Elevation (1.1.34)'":
+            "ElevationTask As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =TagListInGallery.Y+TagListInGallery.AutoHeight+lblTaskName.Height+16
                 PaddingBottom: =8
@@ -160,7 +161,7 @@ TagsInGalleries As CanvasComponent:
                 Y: =TagListInGallery.Y+TagListInGallery.AutoHeight
                 ZIndex: =2
 
-            "TagListInGallery As 'Fluent Tag List (1.1.34)'.pcfdataset":
+            "TagListInGallery As 'Fluent Tag List (1.1.35)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 FontSize: =13.5
                 Height: =33

@@ -56,7 +56,7 @@ scrDialog As screen:
             LayoutMinWidth: =250
             ZIndex: =5
 
-            "Elevation2_20 As 'Fluent Elevation (1.1.34)'":
+            "Elevation2_20 As 'Fluent Elevation (1.1.35)'":
                 Depth: ='PowerCAT.Elevation.Depth'.Depth4
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
@@ -116,7 +116,7 @@ scrDialog As screen:
                         Y: =2
                         ZIndex: =1
 
-                    "pivotAppCode_31 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                    "pivotAppCode_31 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                         DisplayMode: =DisplayMode.Edit
                         Height: =49
                         Items: |-
@@ -145,6 +145,7 @@ scrDialog As screen:
                     BorderStyle: =BorderStyle.Solid
                     BorderThickness: =1
                     Color: =varTheme.palette.neutralPrimary
+                    DisabledBorderColor: =RGBA(56, 56, 56, 1)
                     DisplayMode: =DisplayMode.View
                     Font: =Font.'Courier New'
                     Height: =115

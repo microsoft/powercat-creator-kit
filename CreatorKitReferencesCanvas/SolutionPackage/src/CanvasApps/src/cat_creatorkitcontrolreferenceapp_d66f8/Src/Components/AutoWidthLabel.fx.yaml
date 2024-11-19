@@ -18,7 +18,7 @@ AutoWidthLabel As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode_9 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_9 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ AutoWidthLabel As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -97,7 +98,7 @@ AutoWidthLabel As CanvasComponent:
         Y: =40
         ZIndex: =13
 
-        "AutoWidthLabel_Words As 'Auto Width Label (1.1.34)'":
+        "AutoWidthLabel_Words As 'Auto Width Label (1.1.35)'":
             BorderRadius: =0
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
@@ -186,7 +187,7 @@ AutoWidthLabel As CanvasComponent:
             Y: =133
             ZIndex: =11
 
-        "icoResizeWidthIndicator As 'Fluent Icon (1.1.34)'":
+        "icoResizeWidthIndicator As 'Fluent Icon (1.1.35)'":
             DisplayMode: =DisplayMode.Edit
             Height: =27
             IconName: ="Emoji2"

@@ -1,0 +1,116 @@
+SmallCard As CanvasComponent:
+    DescriptionText: ="A short description about the card that spans to the second row"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =100
+    Image: =SampleImage
+    ImageFullWidth: =false
+    ImageRadius: =100
+    Screen: =App.ActiveScreen
+    TitleFontSize: =14
+    TitleText: ="Card title"
+    Width: =325
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    cCardContent_5 As groupContainer.horizontalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =16
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =If(SmallCard.ImageFullWidth, 0, 16)
+        PaddingRight: =16
+        PaddingTop: =0.00
+        Width: =Parent.Width
+        X: =1-1
+        Y: =1-1
+        ZIndex: =2
+
+        imgCardIcon_6 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =If(SmallCard.ImageFullWidth, Parent.Height, 52)
+            Image: =Coalesce(SmallCard.Image, SampleImage)
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            RadiusBottomLeft: =Self.RadiusTopLeft
+            RadiusBottomRight: =Self.RadiusTopLeft
+            RadiusTopLeft: =If(SmallCard.ImageFullWidth, 0, 8)
+            RadiusTopRight: =Self.RadiusTopLeft
+            Width: =Self.Height
+            X: =14.99
+            ZIndex: =1
+
+        cCardText_5 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            Height: =txtCardTitle_5.Height + txtCardDesc_5.Height + 4
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =100
+            LayoutMode: =LayoutMode.Auto
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =267.99
+            X: =82.46
+            ZIndex: =2
+
+            txtCardTitle_5 As Text:
+                Align: ='TextCanvas.Align'.Start
+                AutoHeight: =true
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                Font: =Font.'Segoe UI'
+                FontColor: =
+                Height: =20
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: =Coalesce(SmallCard.TitleFontSize, 16)
+                Text: =SmallCard.TitleText
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width
+                X: =0.00
+                Y: =0
+                ZIndex: =1
+
+            txtCardDesc_5 As label:
+                AlignInContainer: =AlignInContainer.Start
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: |-
+                    =ColorValue("#616161")
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FillPortions: =1
+                Font: =Font.'Segoe UI'
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =14* 0.725
+                Text: =SmallCard.DescriptionText
+                Visible: =!IsBlank(SmallCard.DescriptionText)
+                Width: =Parent.Width
+                ZIndex: =3
+
+    ButtonCanvas3 As Button:
+        AccessibleLabel: =SmallCard.TitleText
+        Appearance: ='ButtonCanvas.Appearance'.Transparent
+        BorderStyle: =""
+        BorderThickness: =
+        ContentLanguage: =
+        DisplayMode: =DisplayMode.Edit
+        FontColor: =RGBA(255, 255, 255, 0)
+        FontSize: =1
+        FontWeight: =FontWeight.Normal
+        Height: =Parent.Height
+        OnSelect: =Navigate(SmallCard.Screen)
+        Text: =
+        Width: =Parent.Width
+        X: =0
+        Y: =0
+        ZIndex: =4
+

@@ -1,0 +1,145 @@
+App As appinfo:
+    BackEnabled: =true
+    Formulas: |-
+        =/* Add formulas here */
+        
+        
+        // Displayed on top Nav; if not using delete these and the topnav controls
+        FeatureName = "Feature Name";
+        
+        Nav = Table({DisplayName:"Home", Screen:HubLandingScreen},
+                    {DisplayName:"Feature home", Screen:FeatureLandingScreen},
+                    {DisplayName:"Dashboard", Screen:DashboardScreen},
+                    {DisplayName:"List items", Screen:ListScreen},{DisplayName:"Details", Screen:FormScreen});
+        
+        /* List screen */
+        ListItems = Search(Samples, txtSearch_1.Value,Name, Description);
+        FilterItems = Table({Value:"All"},Distinct(Samples, Category));
+        
+        
+        /* Do not edit below */
+        
+        /* Responsive properties */
+        Margins = App.ActiveScreen.Width * 0.05; //Min( App.ActiveScreen.Width * 0.05, 32 );
+        
+        //* Grid calculations *//
+        
+        // Viewport presets
+        // Edit presets based on design (leave as-is for Defaults)
+        // - PARAM: numCols (Int) - Count of columns for the viewport
+        // - PARAM: gutterWidth - Width (in pixels) of the gutters for the viewport
+        viewportPresets = Table({
+            size: ScreenSize.Small,
+            numCols: 3,
+            gutterWidth: 16
+        },{
+            size: ScreenSize.Medium,
+            numCols: 6,
+            gutterWidth: 16
+        },{
+            size: ScreenSize.Large,
+            numCols: 6,
+            gutterWidth: 16
+        },{
+            size: ScreenSize.ExtraLarge,
+            numCols: 9,
+            gutterWidth: 24
+        });
+        
+        /* Do not modify below this point */
+        contentSize = Min((App.ActiveScreen.Width-(Margins*2)),1920);
+        // Number of columns determined by viewport
+        numCols = Index( viewportPresets, App.ActiveScreen.Size).numCols;
+        // Gutter width presets
+        Gutters = Index( viewportPresets, App.ActiveScreen.Size).gutterWidth;
+        // Column width is calculated for flexible layout 
+        colWidth = With({ numGutters : numCols - 1}, (Min((App.ActiveScreen.Width-(Margins*2)),1920) - (Gutters * numGutters)) / Max(numCols,1));
+        // Visual element width can be calculated to align with columns
+        itemWidth = With({ maxCols: Max(viewportPresets, numCols) }, ForAll(Sequence(numCols), {count: ThisRecord.Value, width: (colWidth * ThisRecord.Value) + (Gutters * (ThisRecord.Value-1)) }));
+        
+        
+        AppTheme = 
+            /* START THEME OBJECT */
+            {
+                palette: {
+                    themePrimary: "#0078d4",
+                    themeLighterAlt: "#eff6fc",
+                    themeLighter: "#deecf9",
+                    themeLight: "#c7e0f4",
+                    themeTertiary: "#71afe5",
+                    themeSecondary: "#2b88d8",
+                    themeDarkAlt: "#106ebe",
+                    themeDark: "#005a9e",
+                    themeDarker: "#004578",
+                    neutralLighterAlt: "#faf9f8",
+                    neutralLighter: "#f3f2f1",
+                    neutralLight: "#edebe9",
+                    neutralQuaternaryAlt: "#e1dfdd",
+                    neutralQuaternary: "#d0d0d0",
+                    neutralTertiaryAlt: "#c8c6c4",
+                    neutralTertiary: "#a19f9d",
+                    neutralSecondary: "#605e5c",
+                    neutralPrimaryAlt: "#3b3a39",
+                    neutralPrimary:"#323130",
+                    neutralDark: "#201f1e",
+                    black: "#000000",
+                    white: "#ffffff"
+                }
+            }
+            /* END THEME OBJECT */
+        ;
+        
+        Typeramp = Table(
+            { name: "Caption2", fontSize: 10, fontFamily: "SegoeUI", fontWeight: "Regular", lineHeight: 14 },
+            { name: "Caption2Strong", fontSize: 10, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 14 },
+            { name: "Caption1", fontSize: 12, fontFamily: "SegoeUI", fontWeight: "Regular", lineHeight: 18 },
+            { name: "Caption1Strong", fontSize: 12, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 18 },
+            { name: "Caption1Stronger", fontSize: 12, fontFamily: "SegoeUI", fontWeight: "Bold", lineHeight: 18 },
+            { name: "Body1", fontSize: 14, fontFamily: "SegoeUI", fontWeight: "Regular", lineHeight: 20 },
+            { name: "Body1Strong", fontSize: 14, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 20 },
+            { name: "Body1Stronger", fontSize: 14, fontFamily: "SegoeUI", fontWeight: "Bold", lineHeight: 20 },
+            { name: "Body2", fontSize: 16, fontFamily: "SegoeUI", fontWeight: "Regular", lineHeight: 22 },
+            { name: "Body2Strong", fontSize: 16, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 22 },
+            { name: "Body2Stronger", fontSize: 16, fontFamily: "SegoeUI", fontWeight: "Bold", lineHeight: 28 },
+            { name: "Subtitle1", fontSize: 20, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 28 },
+            { name: "Title3", fontSize: 24, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 34 },
+            { name: "Title2", fontSize: 28, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 40 },
+            { name: "Title1", fontSize: 32, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 46 },
+            { name: "LargeTitle", fontSize: 40, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 56 },
+            { name: "Display", fontSize: 68, fontFamily: "SegoeUI", fontWeight: "Semibold", lineHeight: 96 }
+        );
+    OnStart: |-
+        =//SAMPLE- REPLACE
+        If(IsEmpty(Samples), 
+        Collect(Samples,
+            { Name: "Toolset Y", Description: "Comprehensive toolkit for home repairs", Quantity: 5, Category: "Home Improvement", Cost: 79.95, Brand: "FixIt" },
+            { Name: "Utility Belt", Description: "Heavy-duty belt with multiple compartments for tools", Quantity: 22, Category: "Work Gear", Cost: 39.99, Brand: "ToolBeltCo" },
+            { Name: "Garden Tools Set", Description: "Essential tools for gardening enthusiasts", Quantity: 12, Category: "Gardening", Cost: 59.99, Brand: "GreenThumb" },
+            { Name: "Laser Level", Description: "Precision laser level for accurate measurements", Quantity: 14, Category: "Measuring Tools", Cost: 89.99, Brand: "PrecisionTools" },
+            { Name: "Power Drill", Description: "Heavy-duty cordless power drill", Quantity: 18, Category: "Power Tools", Cost: 129.99, Brand: "DrillMaster" },
+            { Name: "Soldering Kit", Description: "Complete soldering kit for electronic repairs", Quantity: 10, Category: "Electronic Tools", Cost: 49.99, Brand: "ElectroFix" },
+            { Name: "Wrench Set", Description: "Set of wrenches in various sizes", Quantity: 20, Category: "Mechanical Tools", Cost: 29.99, Brand: "WrenchPro" },
+            { Name: "Safety Gear", Description: "Helmet, gloves, and safety glasses", Quantity: 25, Category: "Safety Equipment", Cost: 69.99, Brand: "SafeWork" },
+            { Name: "Painting Kit", Description: "Tools for painting and decorating", Quantity: 15, Category: "Painting Tools", Cost: 89.99, Brand: "PaintMaster" },
+            { Name: "Plumbing Tools Set", Description: "Essential plumbing tools for repairs", Quantity: 10, Category: "Plumbing", Cost: 99.99, Brand: "PlumbPro" } 
+        )
+        );
+        
+        // App theme for creator kit components, surfaces, and typography
+        Set( AppThemeJson, JSON(AppTheme, JSONFormat.IndentFour));
+        
+        // Vars preserve flexible height/width
+        Set(FlexOff, 0); Set(FlexOn, 1); Set(AlignStart, AlignInContainer.Start); Set(AlignStretch, AlignInContainer.Stretch);
+        
+        Set(_featureName, FeatureName);
+        
+        ClearCollect(_typeramp, AddColumns(Typeramp, fontSizeLegacy, ThisRecord.fontSize * 0.725, fontWeightLegacy, Switch(Text(ThisRecord.fontWeight),"Bold",FontWeight.Bold,"Semibold",FontWeight.Semibold,"Regular",FontWeight.Normal)));
+    Theme: =PowerAppsTheme
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

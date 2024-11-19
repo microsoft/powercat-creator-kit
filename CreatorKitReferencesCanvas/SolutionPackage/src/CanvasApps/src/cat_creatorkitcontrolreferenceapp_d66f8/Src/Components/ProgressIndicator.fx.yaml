@@ -97,7 +97,7 @@ ProgressIndicator As CanvasComponent:
         Y: =126
         ZIndex: =6
 
-    "ProgressIndicator1 As 'Fluent Progress Indicator (1.1.34)'":
+    "ProgressIndicator1 As 'Fluent Progress Indicator (1.1.35)'":
         Description: =ResizableTextarea1_1.Text
         DisplayMode: =DisplayMode.Edit
         Height: =32
@@ -126,7 +126,7 @@ ProgressIndicator As CanvasComponent:
         Y: =173
         ZIndex: =8
 
-        Name5_9 As pcfDataField.textualColumn:
+        Name5_9 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
             FieldDisplayName: ="Name"
             FieldName: ="Name"
             FieldVariantName: ="textualColumn"
@@ -157,7 +157,7 @@ ProgressIndicator As CanvasComponent:
         Y: =2
         ZIndex: =10
 
-    "pivotAppCode_30 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_30 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -184,6 +184,7 @@ ProgressIndicator As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115

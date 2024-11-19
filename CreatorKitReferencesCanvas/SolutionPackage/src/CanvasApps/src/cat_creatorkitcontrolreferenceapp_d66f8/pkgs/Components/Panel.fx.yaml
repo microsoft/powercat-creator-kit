@@ -51,6 +51,7 @@ Panel As CanvasComponent:
     ZIndex: =4
 
     htmlShadow_4 As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =Panel.Height
         HtmlText: |-
             ="<div style=' transform: translate(-50%, -50%);position:absolute;top:"&Panel.Height/2&"px;left:"&If(Panel.PanelPosition="Left",If(

@@ -18,7 +18,7 @@ ElevationPopup As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_16 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_16 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ ElevationPopup As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -81,6 +82,7 @@ ElevationPopup As CanvasComponent:
         htmlText_10 As htmlViewer:
             AutoHeight: =true
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             HtmlText: |-
                 ="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus id velit et turpis sagittis rhoncus. Donec luctus sed lacus eget gravida. Mauris vel metus vitae augue efficitur iaculis sit amet sit amet sem. Morbi vitae dui lobortis mi cursus rhoncus ut in tellus. Quisque consectetur velit a massa blandit, ac lacinia mi fermentum. Sed congue eu sapien id tincidunt. Aenean ut nibh non magna mattis fermentum vitae a ligula. Phasellus bibendum imperdiet lacinia. Cras aliquet aliquet felis, et aliquam purus tempus sed. Nullam eleifend lacus ac arcu rutrum bibendum. Donec nec orci tortor. Sed fringilla condimentum turpis id pretium. In lectus ex, pretium id elementum euismod, tempor id justo. Cras porttitor turpis in risus placerat bibendum.
@@ -102,7 +104,7 @@ ElevationPopup As CanvasComponent:
             Y: =49
             ZIndex: =5
 
-        "ElevationPopupOverlay As 'Fluent Elevation (1.1.34)'":
+        "ElevationPopupOverlay As 'Fluent Elevation (1.1.35)'":
             DarkOverlay: =chkDarkPadding.Checked
             Depth: ='PowerCAT.Elevation.Depth'.Depth64
             DisplayMode: =DisplayMode.Edit
@@ -154,7 +156,7 @@ ElevationPopup As CanvasComponent:
             Y: =180
             ZIndex: =8
 
-        "CommandBarRightActions As 'Fluent Command Bar (1.1.34)'.pcfdataset":
+        "CommandBarRightActions As 'Fluent Command Bar (1.1.35)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             Items: |-

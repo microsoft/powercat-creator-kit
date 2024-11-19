@@ -56,7 +56,7 @@ scrHorizontalbar As screen:
             Y: =278
             ZIndex: =4
 
-            "Elevation_12 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_12 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -113,7 +113,7 @@ scrHorizontalbar As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_44 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                        "pivotAppCode_44 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -144,6 +144,7 @@ scrHorizontalbar As screen:
                         BorderColor: =
                         BorderThickness: =1
                         Color: =Color.Black
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =240
@@ -266,8 +267,7 @@ scrHorizontalbar As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "HorizontalBarChart1 As 'Fluent Horizontal bar Chart (1.1.34) Preview'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Center
+                            "HorizontalBarChart1 As 'Fluent Horizontal bar Chart (1.1.35) Preview'.pcfdataset":
                                 BarHeight: =sliderBarHeight.Value
                                 ChartDataMode: =ddHorizontalDataMode.Selected.Key
                                 DisplayMode: =DisplayMode.Edit
@@ -454,7 +454,7 @@ scrHorizontalbar As screen:
                                     Y: =261
                                     ZIndex: =2
 
-                                    Name5_12 As pcfDataField.textualColumn:
+                                    Name5_12 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                                         FieldDisplayName: ="Name"
                                         FieldName: ="Name"
                                         FieldVariantName: ="textualColumn"
@@ -517,7 +517,7 @@ scrHorizontalbar As screen:
                                     Y: =261
                                     ZIndex: =2
 
-                                    Name5_13 As pcfDataField.textualColumn:
+                                    Name5_13 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                                         FieldDisplayName: ="Name"
                                         FieldName: ="Name"
                                         FieldVariantName: ="textualColumn"

@@ -92,7 +92,7 @@ scrSearchBox As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_3 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_3 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription_2.DesiredHeight
                 PaddingBottom: =8
@@ -118,7 +118,7 @@ scrSearchBox As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_5 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_5 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -175,7 +175,7 @@ scrSearchBox As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_38 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                        "pivotAppCode_38 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -206,6 +206,7 @@ scrSearchBox As screen:
                         BorderColor: =
                         BorderThickness: =1
                         Color: =Color.Black
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =2
@@ -250,7 +251,7 @@ scrSearchBox As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SearchBox1 As 'Fluent SearchBox (1.1.34) Preview'":
+                            "SearchBox1 As 'Fluent SearchBox (1.1.35) Preview'":
                                 DisableAnimation: =chkDisableAnimation.Checked
                                 DisplayMode: =If( chkDisabledState.Checked, DisplayMode.Disabled, DisplayMode.Edit)
                                 Height: =50
@@ -265,7 +266,7 @@ scrSearchBox As screen:
                                 Y: =0
                                 ZIndex: =1
 
-                            "detailsListColors As 'Fluent Details List (1.1.34)'.pcfdataset":
+                            "detailsListColors As 'Fluent Details List (1.1.35)'.pcfdataset":
                                 columns_Items: |-
                                     =Table(
                                         {
@@ -471,7 +472,7 @@ scrSearchBox As screen:
                                     Y: =185
                                     ZIndex: =2
 
-                                    Value1 As pcfDataField.textualColumn:
+                                    Value1 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                                         FieldDisplayName: ="Value"
                                         FieldName: ="Value"
                                         FieldType: ="s"

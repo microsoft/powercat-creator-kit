@@ -20,7 +20,7 @@ IconActionButton As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_10 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_10 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -47,6 +47,7 @@ IconActionButton As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -167,7 +168,7 @@ IconActionButton As CanvasComponent:
         Y: =40
         ZIndex: =17
 
-        "iconActionButtonStandard As 'Fluent Icon (1.1.34)'":
+        "iconActionButtonStandard As 'Fluent Icon (1.1.35)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             FillColor: =If(chkFill.Checked,varTheme.paletteCSS.themePrimary)
@@ -218,7 +219,7 @@ IconActionButton As CanvasComponent:
             Y: =115
             ZIndex: =6
 
-        "iconActionButtonCustom As 'Fluent Icon (1.1.34)'":
+        "iconActionButtonCustom As 'Fluent Icon (1.1.35)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             FontColor: ="green"
@@ -239,7 +240,7 @@ IconActionButton As CanvasComponent:
             Y: =158
             ZIndex: =7
 
-        "iconButtonCustom As 'Fluent Icon (1.1.34)'":
+        "iconButtonCustom As 'Fluent Icon (1.1.35)'":
             BorderRadius: =3
             DisplayMode: =DisplayMode.Edit
             FontColor: =""
@@ -262,6 +263,7 @@ IconActionButton As CanvasComponent:
         htmlText_8 As htmlViewer:
             AutoHeight: =true
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             HtmlText: ="Icon Buttons and Action Buttons can be selected and raise the OnChange event."
             PaddingBottom: =0
@@ -274,7 +276,7 @@ IconActionButton As CanvasComponent:
             Y: =56
             ZIndex: =9
 
-        "iconButtonStandard As 'Fluent Icon (1.1.34)'":
+        "iconButtonStandard As 'Fluent Icon (1.1.35)'":
             BorderColor: =If(chkShowBorder.Checked,varTheme.paletteCSS.neutralTertiaryAlt)
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -366,7 +368,7 @@ IconActionButton As CanvasComponent:
             Y: =166
             ZIndex: =15
 
-            Name5_1 As pcfDataField.textualColumn:
+            Name5_1 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                 FieldDisplayName: ="Name"
                 FieldName: ="Name"
                 FieldVariantName: ="textualColumn"

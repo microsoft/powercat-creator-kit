@@ -58,7 +58,7 @@ scrStackbar As screen:
             Y: =278
             ZIndex: =4
 
-            "Elevation_13 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_13 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -115,7 +115,7 @@ scrStackbar As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_45 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                        "pivotAppCode_45 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -146,6 +146,7 @@ scrStackbar As screen:
                         BorderColor: =
                         BorderThickness: =1
                         Color: =Color.Black
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =240
@@ -239,8 +240,7 @@ scrStackbar As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "StackedBarChart1 As 'Fluent Stacked bar Chart (1.1.34) Preview'.pcfdataset":
-                                AlignInContainer: =AlignInContainer.Start
+                            "StackedBarChart1 As 'Fluent Stacked bar Chart (1.1.35) Preview'.pcfdataset":
                                 BarHeight: =sliderBarHeight_1.Value
                                 DisplayMode: =DisplayMode.Edit
                                 Height: =240

@@ -21,7 +21,7 @@ ContextMenuSimple As CanvasComponent:
         Y: =2
         ZIndex: =2
 
-    "pivotAppCode_12 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_12 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -48,6 +48,7 @@ ContextMenuSimple As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -182,7 +183,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =250
             ZIndex: =1
 
-        "ContextMenuStandard As 'Fluent Context Menu (1.1.34)'.pcfdataset":
+        "ContextMenuStandard As 'Fluent Context Menu (1.1.35)'.pcfdataset":
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
             Height: =32
@@ -261,7 +262,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =102
             ZIndex: =8
 
-            Name5_2 As pcfDataField.textualColumn:
+            Name5_2 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                 FieldDisplayName: ="Name"
                 FieldName: ="Name"
                 FieldVariantName: ="textualColumn"
@@ -306,7 +307,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =60
             ZIndex: =10
 
-        "ContextMenuStyled As 'Fluent Context Menu (1.1.34)'.pcfdataset":
+        "ContextMenuStyled As 'Fluent Context Menu (1.1.35)'.pcfdataset":
             BorderColor: ="transparent"
             Chevron: =chkShowChevron.Checked
             DisplayMode: =DisplayMode.Edit
@@ -352,7 +353,7 @@ ContextMenuSimple As CanvasComponent:
             Y: =143
             ZIndex: =12
 
-            DisplayName1 As pcfDataField.textualColumn:
+            DisplayName1 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                 FieldDisplayName: ="DisplayName"
                 FieldName: ="DisplayName"
                 FieldVariantName: ="textualColumn"

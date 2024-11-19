@@ -7,7 +7,7 @@
   "GaugeChart_Color_Display_Key": "Color",
   "GaugeChart_Customcolors_Display_Key": "Custom Colors",
   "GaugeChart_desc": "A radial gauge chart uses a circular arc to show how a single value progresses toward a goal or a Key Performance Indicator (KPI). ",
-  "GaugeChart_Display_Key": "Fluent Gauge Chart (1.1.34) Preview",
+  "GaugeChart_Display_Key": "Fluent Gauge Chart (1.1.35) Preview",
   "GaugeChart_Hidelegend_Display_Key": "Hide legend",
   "GaugeChart_HideminMax_Display_Key": "Hide min max",
   "GaugeChart_Legend_Display_Key": "Legend",

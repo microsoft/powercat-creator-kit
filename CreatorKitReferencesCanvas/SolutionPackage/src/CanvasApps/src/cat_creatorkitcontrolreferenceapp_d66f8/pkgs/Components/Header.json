@@ -52,7 +52,8 @@
             "InvariantPropertyName": "Visible",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
-          }
+          },
+          "Size"
         ],
         "ControlUniqueId": "515",
         "HasDynamicProperties": false,
@@ -171,9 +172,15 @@
             "InvariantScript": "true",
             "Property": "Visible",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "13",
+            "Property": "Size",
+            "RuleProviderType": "Unknown"
           }
         ],
-        "StyleName": "",
+        "StyleName": "defaultHtmlViewerStyle",
         "Template": {
           "CustomGroupControlTemplateName": "",
           "FirstParty": true,
@@ -2945,7 +2952,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638519771047240731",
+    "LastModifiedTimestamp": "638639571126628215",
     "Name": "Header",
     "Rules": [
       {
@@ -3088,7 +3095,7 @@
       "Name": "Color",
       "PropertyDataTypeKey": "Color",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3097,7 +3104,7 @@
       "Name": "Text",
       "PropertyDataTypeKey": "String",
       "Tooltip": "Text",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3106,7 +3113,7 @@
       "Name": "BackButtonVisible",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "ButtonVisible",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3115,7 +3122,7 @@
       "Name": "LeftButtonImage",
       "PropertyDataTypeKey": "Image",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Image\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3124,7 +3131,7 @@
       "Name": "LeftButtonVisible",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 2,
@@ -3133,7 +3140,7 @@
       "Name": "OnLeftButtonSelect",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3142,7 +3149,7 @@
       "Name": "RightButtonImage",
       "PropertyDataTypeKey": "String",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3151,7 +3158,7 @@
       "Name": "RightButtonVisible",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 2,
@@ -3160,7 +3167,7 @@
       "Name": "OnRightButtonSelect",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 2,
@@ -3169,7 +3176,7 @@
       "Name": "OnBackSelect",
       "PropertyDataTypeKey": "Boolean",
       "Tooltip": "On Back Select",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Boolean\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3178,7 +3185,7 @@
       "Name": "ContentWidth",
       "PropertyDataTypeKey": "Number",
       "Tooltip": "Content Width",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -3187,7 +3194,7 @@
       "Name": "Theme",
       "PropertyDataTypeKey": "Record",
       "Tooltip": "Theme",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"palette\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"black\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarkAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarker\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themePrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"white\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"palette\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"black\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarkAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarker\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themePrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"white\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
     },
     {
       "Category": 0,
@@ -3196,7 +3203,7 @@
       "Name": "HeaderFill",
       "PropertyDataTypeKey": "Color",
       "Tooltip": "The fill color of the header",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Color\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -3207,7 +3214,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638519771047240731",
+  "LastModifiedTimestamp": "638639571126628215",
   "Name": "fa1766c432584c86aab6e322559a0ad1",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

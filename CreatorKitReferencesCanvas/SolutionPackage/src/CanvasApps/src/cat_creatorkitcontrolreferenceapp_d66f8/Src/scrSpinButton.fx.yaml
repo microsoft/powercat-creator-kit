@@ -92,7 +92,7 @@ scrSpinButton As screen:
             Width: =App.Width
             ZIndex: =3
 
-            "Elevation_6 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_6 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =ComponentDescription_3.DesiredHeight
                 PaddingBottom: =8
@@ -119,7 +119,7 @@ scrSpinButton As screen:
             Width: =App.Width
             ZIndex: =4
 
-            "Elevation_7 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_7 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -176,7 +176,7 @@ scrSpinButton As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_39 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                        "pivotAppCode_39 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -207,6 +207,7 @@ scrSpinButton As screen:
                         BorderColor: =
                         BorderThickness: =1
                         Color: =Color.Black
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =2
@@ -272,7 +273,7 @@ scrSpinButton As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SpinButton1 As 'Fluent SpinButton (1.1.34)'":
+                            "SpinButton1 As 'Fluent SpinButton (1.1.35)'":
                                 DisplayMode: =DisplayMode.Edit
                                 Error: =chkError_1.Checked
                                 Height: =200
@@ -396,7 +397,7 @@ scrSpinButton As screen:
                                     Y: =185
                                     ZIndex: =2
 
-                                    Value1_1 As pcfDataField.textualColumn:
+                                    Value1_1 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                                         FieldDisplayName: ="Value"
                                         FieldName: ="Value"
                                         FieldType: ="s"

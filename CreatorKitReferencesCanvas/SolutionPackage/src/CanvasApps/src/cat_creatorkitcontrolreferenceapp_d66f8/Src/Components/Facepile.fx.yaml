@@ -18,7 +18,7 @@ Facepile As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_29 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_29 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ Facepile As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -94,7 +95,7 @@ Facepile As CanvasComponent:
         Y: =48
         ZIndex: =6
 
-    "Facepile1 As 'Fluent Facepile (1.1.34) Preview'.pcfdataset":
+    "Facepile1 As 'Fluent Facepile (1.1.35) Preview'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =58
         ImageShouldFadeIn: =chkImageShouldFadeIn.Checked
@@ -179,7 +180,7 @@ Facepile As CanvasComponent:
         Y: =214
         ZIndex: =10
 
-        Name5_4 As pcfDataField.textualColumn:
+        Name5_4 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
             FieldDisplayName: ="Name"
             FieldName: ="Name"
             FieldVariantName: ="textualColumn"
@@ -240,7 +241,7 @@ Facepile As CanvasComponent:
         Y: =256
         ZIndex: =13
 
-        Name5_5 As pcfDataField.textualColumn:
+        Name5_5 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
             FieldDisplayName: ="Name"
             FieldName: ="Name"
             FieldVariantName: ="textualColumn"

@@ -18,7 +18,7 @@
       "Name": "ComponentHeight",
       "PropertyDataTypeKey": "Number",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -29,7 +29,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638519771047262191",
+  "LastModifiedTimestamp": "638639571126651606",
   "Name": "5bd244dbd2d545319db82e5ec238ce12",
   "OverridableProperties": {},
   "TemplateOriginalName": "7c27f72aaf134bb78c3281bacb061c37",

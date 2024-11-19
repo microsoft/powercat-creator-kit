@@ -43,7 +43,7 @@
     "TemplateDisplayName": "AI Teaching popover",
     "Version": "0.0.42"
   },
-  "APICaller": {
+  "APICaller (%VERSION%)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.APICaller",
@@ -55,8 +55,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.APICaller",
     "OverridableProperties": {},
-    "TemplateDisplayName": "APICaller",
-    "Version": "0.0.22"
+    "TemplateDisplayName": "APICaller (%VERSION%)",
+    "Version": "0.0.23"
   },
   "appinfo": {
     "CustomGroupControlTemplateName": "",
@@ -391,6 +391,21 @@
     "OverridableProperties": {},
     "TemplateDisplayName": "Link",
     "Version": "0.0.40"
+  },
+  "Mermaid": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": false,
+    "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Mermaid",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": true,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": false,
+    "LastModifiedTimestamp": "0",
+    "Name": "cat_PowerCAT.Mermaid",
+    "OverridableProperties": {},
+    "TemplateDisplayName": "Mermaid",
+    "Version": "0.0.1"
   },
   "pcfDataField": {
     "CustomGroupControlTemplateName": "",

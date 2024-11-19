@@ -6,9 +6,12 @@
   <description>Based on the conversation -  conversation , generate top 3 or 4 additional suggested prompts. 
 
 A basic Example of conversation will be in the below format JSON format [{"content":"Hi","role":"user"},{"content":"Hello! How can I assist you today?","role":"assistant"},{"content":"What is Powerapps co</description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>c9130978-a081-4b35-ba17-3d8d51c771b9</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIGenerateSuggestions</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

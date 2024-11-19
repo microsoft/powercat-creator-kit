@@ -6,9 +6,12 @@
   <description>Extract categories from the following  Text 
 Response in the following format:[ "category1", "category2"]
 </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>bbd51cc4-3b91-4f54-958c-d773f856a323</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIExtractCategories</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

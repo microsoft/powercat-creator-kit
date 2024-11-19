@@ -9,9 +9,12 @@ Context:
 You are working with a  Text that may contain information such as phone numbers, email addresses, social security numbers, social media handles. Your goal is to find and replace such information with a special character for privacy protection. 
 
 Special Character: " </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>fa03a8f2-db27-4165-8a36-6f471cb5b2b7</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIRedact</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

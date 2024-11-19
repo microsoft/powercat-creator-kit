@@ -5,9 +5,12 @@
   </customapi>
   <description>Create a headline withOUT "" (quote unquote-quotes in the start and end of the headline) for the following text:  Text .
 </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>68fdf9bd-d5c3-4a44-8aa2-60183afafe0c</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIGenerateHeadline</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

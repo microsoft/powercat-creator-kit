@@ -1107,7 +1107,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 11,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/9d848634-a305-4708-8380-3e2cb83e5782-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0vonyk4r4.dt4020S0Resources0Controls0PowerCAT.FluentAIAssistant.bundle.js?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-11-11T18%3A48%3A29Z&ske=2024-11-12T19%3A03%3A29Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-11-12T19%3A03%3A29Z&sr=b&sp=r&sig=vhmH3aKExBlrTkzADPUmDm%2FEM6%2BE7O09zCTM6dgBbIk%3D",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/24675257-d1a8-4055-b425-f20c2b43d429-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App990work0c5xgrrr4.2et020S0Resources0Controls0PowerCAT.FluentAIAssistant.bundle.js?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-11-19T19%3A23%3A12Z&ske=2024-11-20T19%3A38%3A12Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-11-20T19%3A38%3A12Z&sr=b&sp=r&sig=D1CPqyGuXUzKR2MUnpM1gHrV5zGcFh3%2B01MaKGwiBY4%3D",
       "Path": "/PCFControls/cat_PowerCAT.FluentAIAssistant/PowerCAT.FluentAIAssistant.bundle.js",
       "Type": 0
     },
@@ -1121,7 +1121,7 @@
     {
       "IsControlSpecific": true,
       "LoadingOrder": 13,
-      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/9d848634-a305-4708-8380-3e2cb83e5782-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App980work0vonyk4r4.dt4020S0Resources0Controls0strings%252fPowerCAT.FluentAIAssistant.FluentAIAssistant.1033.json?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-11-11T18%3A48%3A29Z&ske=2024-11-12T19%3A03%3A29Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-11-12T19%3A03%3A29Z&sr=b&sp=r&sig=XigZfYnltufmlcuSvmsx6%2Bj95zyXtxLB5ZPc8zGWSr4%3D",
+      "ModifiedPath": "https://docserverpwaprodwus.blob.core.windows.net/24675257-d1a8-4055-b425-f20c2b43d429-1/appdynamicresources/D%253a0SvcFab0_App0PowerApps.WebAuthoringType_App990work0c5xgrrr4.2et020S0Resources0Controls0strings%252fPowerCAT.FluentAIAssistant.FluentAIAssistant.1033.json?skoid=58690ece-ec83-4ce2-9ce8-883d4d6a54ee&sktid=975f013f-7f24-47e8-a7d3-abc4752bf346&skt=2024-11-19T19%3A23%3A12Z&ske=2024-11-20T19%3A38%3A12Z&sks=b&skv=2023-01-03&sv=2023-01-03&spr=https&se=2024-11-20T19%3A38%3A12Z&sr=b&sp=r&sig=BJdS7oQocH79sF%2FwDZvTfHHxmyZX3Biv%2FNsyDlxcKgE%3D",
       "Path": "/PCFControls/cat_PowerCAT.FluentAIAssistant/strings/PowerCAT.FluentAIAssistant.FluentAIAssistant.1033.json",
       "Type": 5
     },

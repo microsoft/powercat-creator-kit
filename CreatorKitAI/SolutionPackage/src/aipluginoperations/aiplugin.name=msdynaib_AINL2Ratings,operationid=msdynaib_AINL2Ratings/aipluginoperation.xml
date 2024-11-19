@@ -10,9 +10,12 @@ Review Comment: "[ Comment ]"
 Instructions:
 1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.
 2. Return Output the sentiment classification</description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>baf4e04f-b86e-48d6-b317-c98f6b951e03</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIRating</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

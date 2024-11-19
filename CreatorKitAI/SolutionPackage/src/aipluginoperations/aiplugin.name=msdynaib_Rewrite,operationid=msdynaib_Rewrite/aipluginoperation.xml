@@ -8,9 +8,12 @@ keeping the below points into consideration. Return only the rewritten text.
 Follow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.
 
 </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>c1632d4d-7d46-4348-8bfa-d9adfbdd6c47</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIRewrite</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

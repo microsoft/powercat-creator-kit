@@ -5,9 +5,12 @@
   </customapi>
   <description>Define the  Text  clearly and concisely.
 </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>f8eeeb6c-0eac-4a9d-b502-7e4807163afa</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIDefine</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

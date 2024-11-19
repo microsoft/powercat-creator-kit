@@ -7,9 +7,12 @@
 Refer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.
 Example : 
 [{ ItemLegend: "ColumnData1", ItemCount : "ColumnData2"}, { ItemLegend: "ColumnData</description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>bd0d8682-6d05-4e2b-a9ef-c694a371f6fb</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIChart</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

@@ -1,0 +1,48 @@
+CardItem As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =24
+    IconName: ="Text"
+    Image: =SampleImage
+    Text: ="Text"
+    Url: ="Text"
+    Width: =290
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutGap: =8
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        X: =1-1
+        Y: =1-1
+        ZIndex: =1
+
+        Icon2 As Icon:
+            DisplayMode: =DisplayMode.Edit
+            Height: =24
+            Icon: ="DocumentBulletList"
+            LayoutMinHeight: =32
+            LayoutMinWidth: =32
+            Width: =24
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        LinkCanvas1 As Link:
+            Appearance: ="Default"
+            BasePaletteColor: =RGBA(189, 178, 176, 1)
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FillPortions: =FlexOn
+            Height: =22
+            LayoutMinHeight: =32
+            LayoutMinWidth: =100
+            Text: =CardItem.Text
+            URL: =CardItem.Url
+            Width: =320
+            X: =0
+            Y: =0
+            ZIndex: =3
+

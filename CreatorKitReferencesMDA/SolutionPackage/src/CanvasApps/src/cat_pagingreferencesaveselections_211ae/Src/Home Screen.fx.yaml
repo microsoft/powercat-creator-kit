@@ -1,0 +1,446 @@
+"'Home Screen' As screen":
+    Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =Set(SelectedPage,1);
+
+    RootLayoutContainer_HS As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(250, 250, 250, 1)
+        Height: =App.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =8
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        Width: =App.Width
+        ZIndex: =1
+
+        CommandContainer_HS As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =50
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =16
+            ZIndex: =3
+
+            "CommandBar1 As 'Fluent Command Bar (1.1.29)'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =50
+                Items: |-
+                    = Table(
+                        {
+                            ItemKey: "New",
+                            ItemIconName: "Add",
+                            ItemDisplayName: "New"
+                        },
+                        {
+                            ItemKey: "Edit",
+                            ItemIconName: "Edit",
+                            ItemDisplayName: "Edit",
+                            ItemVisible:!IsEmpty(DetailsList.SelectedItems)
+                        },
+                        {
+                            ItemKey: "Delete",
+                            ItemIconName: "Delete",
+                            ItemDisplayName: "Delete",
+                            ItemVisible:!IsEmpty(DetailsList.SelectedItems)
+                        },
+                        {
+                            ItemKey: "Refresh",
+                            ItemIconName: "Refresh",
+                            ItemDisplayName: "Refresh"
+                        },
+                        {
+                            ItemKey: "Info",
+                            ItemIconName: "Info",
+                            ItemDisplayName: "Learn more"
+                        }
+                    )
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                OnSelect: |-
+                    =Switch(Self.Selected.ItemKey, 
+                        "new", 
+                            Notify("New item button pressed"), // expression to execute on new 
+                        "edit", 
+                            false, // expression to execute on edit 
+                        "delete", 
+                            false, // expression to execute on delete 
+                        "refresh", 
+                            false, // expression to execute on refresh
+                        "help", 
+                            false // expression to execute on help
+                    );
+                TabIndex: =1
+                Theme: =AppThemeJson
+                Width: =600 
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+        SubheaderContainer_HS As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =70
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =48
+            PaddingRight: =48
+            ZIndex: =4
+
+            HeaderLabel As Label:
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontSize: =18
+                FontWeight: =FontWeight.Semibold
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                OnChange: =false
+                Text: ="Header title"
+                TextRole: ='Label.TextRole'.Heading1
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            "SearchBox1 As 'Fluent SearchBox (1.1.29) Preview'":
+                BorderColor: =AppTheme.palette.neutralTertiaryAlt
+                DelayOutput: =true
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                LayoutMinHeight: =200
+                LayoutMinWidth: =200
+                OnChange: |-
+                    =Set(SelectedPage,1);UpdateContext({ctxGridEvent:"LoadFirstPage" & Text(Rand())})
+                TabIndex: =2
+                Theme: =AppThemeJson
+                Width: =194
+                X: =1159
+                Y: =0
+                ZIndex: =3
+
+        ContentContainer_HS As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =48
+            PaddingRight: =49
+            PaddingTop: =16
+            ZIndex: =5
+
+            DetailsListContainer_3 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingBottom: =6
+                PaddingLeft: =16
+                PaddingRight: =16
+                PaddingTop: =16
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                X: =116
+                Y: =296
+                ZIndex: =1
+
+                "DetailsList As 'Fluent Details List (1.1.29)'.pcfdataset":
+                    AccessibilityLabel: ="List of accounts"
+                    AlignInContainer: =AlignInContainer.Stretch
+                    columns_Items: |-
+                        =Table(
+                            {
+                                ColName: "name",
+                                ColDisplayName: "Company name",
+                                ColWidth: Self.Width - 100
+                                //ColSortable:true,
+                                //ColSortBy:"name"
+                            }
+                        )
+                        
+                        /*
+                            {
+                                ColName: "",
+                                ColDisplayName: "",
+                                ColWidth: 100
+                                //,ColSortable:true
+                                //,ColSortBy:"name"
+                                //,ColIsBold:true
+                                //,ColTagColorColumn:""
+                                //,ColCellType:"image"
+                            }
+                        */
+                    Compact: =false
+                    CurrentSortColumn: ="name"
+                    CurrentSortDirection: ='PowerCAT.FluentDetailsList.CurrentSortDirection'.Ascending
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    Height: =200
+                    InputEvent: =ctxGridEvent
+                    Items: =SearchItems
+                    LargeDatasetPaging: =true
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    OnChange: |-
+                        =/* Paging */
+                        If( SelectedPage > DetailsList.PageNumber, UpdateContext({ctxGridEvent:"LoadNextPage" & Text(Rand())}));
+                        If( SelectedPage < DetailsList.PageNumber, UpdateContext({ctxGridEvent:"LoadPreviousPage" & Text(Rand())}));
+                        If( SelectedPage = DetailsList.PageNumber, UpdateContext({ShowLoader:false}));
+                    PageSize: =PageSize
+                    RaiseOnRowSelectionChangeEvent: =true
+                    RecordKey: =""
+                    SelectionAlwaysVisible: =false
+                    SelectionType: ='PowerCAT.FluentDetailsList.SelectionType'.Single
+                    TabIndex: =3
+                    Theme: =AppThemeJson
+                    Tooltip: ="Accounts list"
+                    Visible: =!ShowLoader
+                    Width: =200
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                    "'Account Name1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Account Name"
+                        FieldName: ="name"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =1
+                        ZIndex: =4
+
+                    "'Main Phone1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: ="Main Phone"
+                        FieldName: ="telephone1"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =2
+                        ZIndex: =5
+
+                    "'Address 1: City1_1' As pcfDataField.textualColumn":
+                        FieldDisplayName: |-
+                            ="Address 1: City"
+                        FieldName: ="address1_city"
+                        FieldType: ="s"
+                        FieldVariantName: ="textualColumn"
+                        Order: =3
+                        ZIndex: =6
+
+                    "'Primary Contact1_1' As pcfDataField":
+                        FieldDisplayName: ="Primary Contact"
+                        FieldName: ="primarycontactid"
+                        FieldType: ="E"
+                        FieldVariantName: ="complexTypeColumn"
+                        Order: =4
+                        ZIndex: =7
+
+                "DetailsListLoadingShimmer As 'Fluent Shimmer (1.1.29) Preview'.pcfdataset":
+                    AlignInContainer: =AlignInContainer.Stretch
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =1
+                    Height: =200
+                    Items: |-
+                        =Table({ItemType: "line"})
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    RowCount: =PageSize
+                    SpacebetweenShimmer: ='PowerCAT.Shimmer.SpacebetweenShimmer'.'30px'
+                    Visible: =ShowLoader
+                    Width: =Parent.Width - 96
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                DetailsListFooterContainer As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =50
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =24
+                    PaddingRight: =24
+                    ZIndex: =3
+
+                    CurrentRowsCountLabel As Label:
+                        Color: =ColorValue(AppTheme.palette.neutralSecondary)
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        OnChange: =false
+                        Text: ="Displaying results " & ((SelectedPage - 1) * PageSize)+1 & " - "& If(SelectedPage=Max(Pages,ItemKey), Total, ((SelectedPage) * PageSize)) & " (out of " & Total & ")"
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container7_1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =50
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =50
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        ZIndex: =2
+
+                        "FirstPageIcon As 'Fluent Icon (1.1.29)'":
+                            AccessibilityLabel: ="First page"
+                            DisplayMode: =If(DetailsList.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
+                            Height: =50
+                            IconName: ="DoubleChevronLeft"
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(SelectedPage,1);UpdateContext({ctxGridEvent:"LoadFirstPage" & Text(Rand())})
+                            TabIndex: =4
+                            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                            Theme: =AppThemeJson
+                            Tooltip: ="First page"
+                            Width: =Self.Height
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        "PrevPageIcon As 'Fluent Icon (1.1.29)'":
+                            AccessibilityLabel: ="Previous page"
+                            DisplayMode: =If(DetailsList.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
+                            Height: =50
+                            IconName: ="chevronleftmed"
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(SelectedPage,SelectedPage-1);UpdateContext({ctxGridEvent:"LoadPreviousPage" & Text(Rand())})
+                            TabIndex: =5
+                            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                            Theme: =AppThemeJson
+                            Tooltip: ="Previous page"
+                            Width: =Self.Height
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "PagesCommandBar As 'Fluent Command Bar (1.1.29)'.pcfdataset":
+                            AccessibilityLabel: ="Page selection"
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =44
+                            Items: =AddColumns(Pages,ItemEnabled,Value(ThisRecord.ItemKey)<>SelectedPage)
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnSelect: |-
+                                =Set(SelectedPage, Value(Self.Selected.ItemKey));
+                                If( SelectedPage > DetailsList.PageNumber, UpdateContext({ctxGridEvent:"LoadNextPage" & Text(Rand()), ShowLoader:true}));
+                                If( SelectedPage < DetailsList.PageNumber, 
+                                    If( (DetailsList.PageNumber - SelectedPage) < SelectedPage,UpdateContext({ctxGridEvent:"LoadPreviousPage" & Text(Rand())}), UpdateContext({ctxGridEvent:"LoadFirstPage" & Text(Rand())}));
+                                    UpdateContext({ ShowLoader:true}));
+                                If( SelectedPage = DetailsList.PageNumber, UpdateContext({ShowLoader:false}));
+                            TabIndex: =6
+                            Theme: =AppThemeJson
+                            Tooltip: ="Select page"
+                            Width: =Min(NumPages * 45, Parent.Width/2)
+                            X: =522
+                            Y: =3
+                            ZIndex: =3
+
+                            "'Account Name1' As pcfDataField.textualColumn":
+                                FieldDisplayName: ="Account Name"
+                                FieldName: ="name"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =1
+                                ZIndex: =8
+
+                            "'Main Phone1' As pcfDataField.textualColumn":
+                                FieldDisplayName: ="Main Phone"
+                                FieldName: ="telephone1"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =2
+                                ZIndex: =9
+
+                            "'Address 1: City1' As pcfDataField.textualColumn":
+                                FieldDisplayName: |-
+                                    ="Address 1: City"
+                                FieldName: ="address1_city"
+                                FieldType: ="s"
+                                FieldVariantName: ="textualColumn"
+                                Order: =3
+                                ZIndex: =10
+
+                            "'Primary Contact1' As pcfDataField":
+                                FieldDisplayName: ="Primary Contact"
+                                FieldName: ="primarycontactid"
+                                FieldType: ="E"
+                                FieldVariantName: ="complexTypeColumn"
+                                Order: =4
+                                ZIndex: =11
+
+                        "NextPageIcon As 'Fluent Icon (1.1.29)'":
+                            AccessibilityLabel: ="Next page"
+                            DisplayMode: =If(DetailsList.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
+                            Height: =50
+                            IconName: ="chevronrightmed"
+                            InputEvent: =
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(SelectedPage,SelectedPage+1);UpdateContext({ctxGridEvent:"LoadNextPage" & Text(Rand())})
+                            TabIndex: =7
+                            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                            Theme: =AppThemeJson
+                            Tooltip: ="Next page"
+                            Width: =Self.Height
+                            X: =0
+                            Y: =0
+                            ZIndex: =4
+
+                        "LastPageIcon As 'Fluent Icon (1.1.29)'":
+                            AccessibilityLabel: ="Last page"
+                            DisplayMode: =If(DetailsList.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
+                            Height: =50
+                            IconName: ="DoubleChevronRight"
+                            LayoutMinHeight: =200
+                            LayoutMinWidth: =200
+                            OnChange: |-
+                                =Set(SelectedPage,1);UpdateContext({ctxGridEvent:"LoadFirstPage" & Text(Rand())});
+                                
+                                Set(SelectedPage,Value(Max(Pages,ItemKey)));
+                                
+                                If( SelectedPage > DetailsList.PageNumber, UpdateContext({ctxGridEvent:"LoadNextPage" & Text(Rand()), ShowLoader:true}));
+                                If( SelectedPage < DetailsList.PageNumber, 
+                                    If( (DetailsList.PageNumber - SelectedPage) < SelectedPage,UpdateContext({ctxGridEvent:"LoadPreviousPage" & Text(Rand())}), UpdateContext({ctxGridEvent:"LoadFirstPage" & Text(Rand())}));
+                                    UpdateContext({ ShowLoader:true}));
+                                If( SelectedPage = DetailsList.PageNumber, UpdateContext({ShowLoader:false}));
+                            TabIndex: =8
+                            TextAlignment: ='PowerCAT.Icon.TextAlignment'.Center
+                            Theme: =AppThemeJson
+                            Tooltip: ="Last page"
+                            Width: =Self.Height
+                            X: =0
+                            Y: =0
+                            ZIndex: =5
+
+                    CurrentPageLabel As Label:
+                        Alignment: =Align.Right
+                        Color: =ColorValue(AppTheme.palette.neutralSecondary)
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        OnChange: =false
+                        Text: ="Page " & SelectedPage & " of " & Max(Pages,ItemKey)
+                        Width: =320
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+

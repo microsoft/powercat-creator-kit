@@ -1,8 +1,4 @@
 {
-  "ClientBuildDetails": {
-    "CommitHash": "941f06c8f5cf7a493289e9514c8dec5c50b61d34",
-    "IsLocalBuild": false
-  },
   "ClientPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_0X4wr8yLbBHyk18s6vEUvJS4hKVCoXc01d9kvN8oCcc=",
     "Components\\3.json": "C8_q+EbP2pgJ1ozfsOLagBdllXubvYfodcVoA78aU8Hi0E=",

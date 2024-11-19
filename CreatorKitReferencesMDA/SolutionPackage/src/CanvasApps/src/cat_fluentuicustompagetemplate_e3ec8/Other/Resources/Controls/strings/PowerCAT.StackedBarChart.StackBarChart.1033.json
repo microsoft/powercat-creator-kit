@@ -1,0 +1,13 @@
+{
+  "StackedBarChart_AccessibilityLabel_Display_Key": "Accessibility Label",
+  "StackedBarChart_BarBackgroundColor_Display_Key": "Bar background bolor",
+  "StackedBarChart_BarHeight_Display_Key": "Bar Height",
+  "StackedBarChart_ChartData_Display_Key": "Chart Data",
+  "StackedBarChart_Customcolors_Display_Key": "Custom colors",
+  "StackedBarChart_desc": "Stacked bar Chart  displays multiple series of data as stacked bars, with each bar representing a category. The bars are stacked alongside each other, with the length of each bar representing the value of the category of the series.",
+  "StackedBarChart_Display_Key": "Fluent Stacked bar Chart (1.1.39) Preview",
+  "StackedBarChart_Hidelegend_Display_Key": "Hide legend",
+  "StackedBarChart_HideTooltip_Display_Key": "Hide Tooltip",
+  "StackedBarChart_Theme_Display_Key": "Theme",
+  "StackedBarChart_Title_Display_Key": "Title"
+}

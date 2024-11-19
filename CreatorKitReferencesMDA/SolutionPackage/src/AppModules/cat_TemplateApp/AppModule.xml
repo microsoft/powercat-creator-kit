@@ -17,6 +17,22 @@
     <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
   </AppModuleRoleMaps>
   <LocalizedNames>
-    <LocalizedName description="Template App" languagecode="1033" />
+    <LocalizedName description="Fluent UI Template App" languagecode="1033" />
   </LocalizedNames>
+  <appelements>
+    <appelement uniquename="cat_cat_TemplateApp_canvasappid_cat_fluentuicustompagetemplate_e3ec8">
+      <canvasappid>
+        <name>cat_fluentuicustompagetemplate_e3ec8</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_TemplateApp_canvasappid_cat_fluentuicustompagetemplate_e3ec8</name>
+    </appelement>
+    <appelement uniquename="cat_cat_TemplateApp_canvasappid_cat_home_7b17f">
+      <canvasappid>
+        <name>cat_home_7b17f</name>
+      </canvasappid>
+      <iscustomizable>1</iscustomizable>
+      <name>cat_cat_TemplateApp_canvasappid_cat_home_7b17f</name>
+    </appelement>
+  </appelements>
 </AppModule>

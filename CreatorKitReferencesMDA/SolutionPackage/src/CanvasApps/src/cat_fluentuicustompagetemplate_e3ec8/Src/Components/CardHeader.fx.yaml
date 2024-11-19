@@ -1,0 +1,62 @@
+CardHeader As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =24
+    Image: =SampleImage
+    InfoText: ="Text"
+    Text: ="Text"
+    Width: =290
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container1 As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutGap: =8
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        X: =1-1
+        Y: =1-1
+        ZIndex: =1
+
+        Image1 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =24
+            Image: =CardHeader.Image
+            Visible: =!IsBlank(CardHeader.Image)
+            Width: =24
+            ZIndex: =1
+
+        TextCanvas1 As Text:
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FillPortions: =1
+            FontColor: =
+            Height: =24
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            Size: =16
+            Text: =CardHeader.Text
+            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =96
+            Wrap: =false
+            X: =0
+            Y: =0
+            ZIndex: =2
+
+        "InfoButtonCanvas1 As 'Information button'":
+            BasePaletteColor: =
+            Content: =CardHeader.InfoText
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =28
+            LayoutMinHeight: =32
+            LayoutMinWidth: =32
+            Visible: =!IsBlank(CardHeader.InfoText)
+            Width: =24
+            X: =0
+            Y: =0
+            ZIndex: =3
+

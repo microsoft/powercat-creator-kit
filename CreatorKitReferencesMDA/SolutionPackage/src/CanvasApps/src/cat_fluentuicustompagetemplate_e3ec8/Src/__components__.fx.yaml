@@ -1,0 +1,963 @@
+__components__ As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =UpdateContext({ init : false });
+
+    cPageHeaderMain As groupContainer.verticalAutoLayoutContainer:
+        Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+        Height: =div_1.Y + 1
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        PaddingLeft: =Margins/2
+        PaddingRight: =Margins /2
+        PaddingTop: =16
+        Width: =1366
+        ZIndex: =3
+
+        cPageHeaderTop As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =FlexOff
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =1042
+            X: =68
+            Y: =52
+            ZIndex: =1
+
+            cPageHeaderTitle As groupContainer.horizontalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                FillPortions: =FlexOn
+                Height: =cHeaderText_3.Height
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutGap: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =431
+                X: =36
+                Y: =40
+                ZIndex: =1
+
+                ButtonCanvas4_3 As Button:
+                    Appearance: ='ButtonCanvas.Appearance'.Subtle
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =32
+                    Icon: ="ArrowLeft"
+                    Layout: ='ButtonCanvas.Layout'.IconOnly
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    OnSelect: =Back()
+                    Text: =
+                    Visible: =true
+                    Width: =32
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                cHeaderText_3 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =0
+                    Height: =rDivider_PageHeader_3.Y
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =4
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width - Self.X
+                    X: =1-1
+                    Y: =1-1 
+                    ZIndex: =2
+
+                    h2Title_3 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        AlignInContainer: =AlignInContainer.Start
+                        AutoHeight: =true
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =36
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =20
+                        Text: ="Title"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =Parent.Width - Self.X * 2
+                        X: =394.49
+                        Y: =0
+                        ZIndex: =1
+
+                    Label3_5 As label:
+                        AlignInContainer: =AlignInContainer.Start
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 18, 107, 1)
+                        Color: |-
+                            =ColorValue("#424242")
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        LineHeight: =1.4
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Switch(App.ActiveScreen.Size,ScreenSize.Small,11,ScreenSize.Medium,12,14)*0.75
+                        Text: ="Subtext"
+                        VerticalAlign: =VerticalAlign.Top
+                        Visible: =!IsBlank(Self.Text)
+                        Width: =Min(600, Parent.Width)
+                        X: =394.49
+                        ZIndex: =2
+
+                    rDivider_PageHeader_3 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =1
+                        Width: =Parent.Width - Self.X * 2
+                        X: =72
+                        Y: =52
+                        ZIndex: =3
+
+            tlbRight_1 As Toolbar.pcfdataset:
+                AccessibleLabel: ="Toolbar"
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =FlexOff
+                Height: =44
+                Items: |-
+                    =Table({ItemKey:"1",ItemDisplayName:"",ItemIconName:"Circle",ItemAppearance:"Subtle",ItemIconStyle:"Subtle",ItemTooltip:"Action"},{ItemKey:"2",ItemDisplayName:"",ItemIconName:"Circle",ItemAppearance:"Subtle",ItemIconStyle:"Subtle"},{ItemKey:"3",ItemDisplayName:"",ItemIconName:"Circle",ItemDisabled: false ,ItemAppearance:"Subtle"})
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                Width: =200
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+        "tabForm As 'Tab list'.pcfdataset":
+            DisplayMode: =DisplayMode.Edit
+            Height: =38
+            Items: =["Text", "Text", "Text", "Text", "Text"]
+            LayoutMinHeight: =55
+            LayoutMinWidth: =280
+            Size: ='TabList.Size'.Small
+            Width: =280
+            X: =0
+            Y: =150
+            ZIndex: =2
+
+        cLargeToolbar As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignStretch
+            FillPortions: =FlexOff
+            Height: =tlbMain.Height
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutJustifyContent: =LayoutJustifyContent.End
+            LayoutMinHeight: =60
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            tlbMain As Toolbar.pcfdataset:
+                AccessibleLabel: ="Toolbar"
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =3
+                Height: =48
+                Items: |-
+                    =Table(
+                        {
+                            ItemKey: "1",
+                            ItemDisplayName: "Primary",
+                            ItemIconName: "Add",
+                            ItemAppearance: "Primary",
+                            ItemIconStyle: "Subtle",
+                            ItemTooltip: "Action"
+                        },
+                        {
+                            ItemKey: "2",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle"
+                        },
+                        {
+                            ItemKey: "3",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemDisabled: false,
+                            ItemAppearance: "Subtle"
+                            //,ItemIconStyle: "Filled"
+                        },
+                        {
+                            ItemKey: "4",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle"
+                        },
+                        {
+                            ItemKey: "4",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle",
+                            ItemFarItem: true
+                        }
+                    )
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =15
+
+            tlbRight_2 As Toolbar.pcfdataset:
+                AccessibleLabel: ="Toolbar"
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =FlexOn
+                Height: =44
+                Items: |-
+                    =Table(
+                        {
+                            ItemKey: "1",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle",
+                            ItemTooltip: "Action"
+                        },
+                        {
+                            ItemKey: "2",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle"
+                        },
+                        {
+                            ItemKey: "3",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemDisabled: false,
+                            ItemAppearance: "Subtle"
+                            //,ItemIconStyle: "Filled"
+                        },
+                        {
+                            ItemKey: "4",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle"
+                        },
+                        {
+                            ItemKey: "4",
+                            ItemDisplayName: "Action",
+                            ItemIconName: "Circle",
+                            ItemAppearance: "Subtle",
+                            ItemIconStyle: "Subtle",
+                            ItemFarItem: true
+                        }
+                    )
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =20
+
+        div_1 As rectangle:
+            AlignInContainer: =AlignStart
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =ColorValue(AppTheme.palette.neutralLight)
+            Height: =1
+            Width: =Parent.Width - Self.X * 2
+            X: =84
+            Y: =256
+            ZIndex: =4
+
+    cLinksCard As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =137
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =333
+        X: =519
+        Y: =316
+        ZIndex: =4
+
+        Container1_2 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =32
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =8
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            X: =1-1
+            Y: =1-1
+            ZIndex: =1
+
+            Image1_1 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =24
+                Image: =""
+                Visible: =!IsBlank(Self.Image)
+                Width: =24
+                ZIndex: =1
+
+            TextCanvas1_1 As Text:
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontColor: =
+                Height: =24
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: =16
+                Text: ="Header title"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =96
+                Wrap: =false
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            "InfoButtonCanvas1_1 As 'Information button'":
+                BasePaletteColor: =
+                Content: ="Text"
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =28
+                LayoutMinHeight: =32
+                LayoutMinWidth: =32
+                Visible: =true
+                Width: =24
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        cLinks As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =65
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =8
+            LayoutMinHeight: =65
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+            CardItem_1 As CardItem:
+                Image: =
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Text: ="Link to documentation"
+                Url: =""
+
+            CardItem_2 As CardItem:
+                Image: =
+                LayoutMinHeight: =640
+                LayoutMinWidth: =640
+                Text: ="Internal app site"
+                Url: =""
+                ZIndex: =2
+
+    cCard_0 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =rCardDivider_1.Y
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =8
+        RadiusBottomRight: =8
+        RadiusTopLeft: =8
+        RadiusTopRight: =8
+        Width: =329
+        X: =40
+        Y: =206
+        ZIndex: =5
+
+        Container1_3 As groupContainer.horizontalAutoLayoutContainer:
+            FillPortions: =0
+            Height: =32
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =8
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            X: =1-1
+            Y: =1-1
+            ZIndex: =1
+
+            Image1_2 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =24
+                Image: =""
+                Visible: =!IsBlank(Self.Image)
+                Width: =24
+                ZIndex: =1
+
+            txtCardHeader_0 As Text:
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =1
+                FontColor: =
+                Height: =24
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: =16
+                Text: ="Header title"
+                VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =96
+                Wrap: =false
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            "InfoButtonCanvas1_2 As 'Information button'":
+                BasePaletteColor: =
+                Content: ="Text"
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =28
+                LayoutMinHeight: =32
+                LayoutMinWidth: =32
+                Visible: =true
+                Width: =24
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+        cCardSection_1 As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =8
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =3
+
+        rCardDivider_1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            Fill: =RGBA(0,0,0,0)
+            Height: =1
+            Width: =Parent.Width - Self.X*2
+            X: =72
+            Y: =52
+            ZIndex: =4
+
+    cSpinner_0 As groupContainer.verticalAutoLayoutContainer:
+        Fill: |-
+            =ColorValue("#fafafa")
+        Height: =90
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =333
+        X: =519
+        Y: =206
+        ZIndex: =6
+
+        Spinner_0 As Spinner:
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =200
+            SpinnerSize: ='Spinner.SpinnerSize'.Large
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    cEvalContentCards_1 As groupContainer.verticalAutoLayoutContainer:
+        Height: =552
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =24
+        PaddingLeft: =32
+        PaddingRight: =32
+        Width: =336
+        X: =1001
+        Y: =216
+        ZIndex: =7
+
+        rSeperator_11 As rectangle:
+            AlignInContainer: =AlignInContainer.Start
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: |-
+                =ColorValue("#F3F2F1") // var(--neutrals-web-gray-20-f-3-f-2-f-1
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            Width: =Parent.Width - Self.X * 2
+            X: =40
+            Y: =40
+            ZIndex: =1
+
+        cField_Model As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =FlexOff
+            Height: =92
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =2
+
+            cAnalysisCardHeaderText_2 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =55
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =60
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                txtLabelModel As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: ="Model"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                txtSubModel As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =ColorValue(AppTheme.palette.neutralSecondary)
+                    Height: =18
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =12
+                    Text: ="The AI model used to generate optimizations"
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Top
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+            ddModel As Dropdown.pcfdataset:
+                Appearance: ='DropdownCanvas.Appearance'.Outline
+                DefaultSelectedItems: =
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =//ModelChoices
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                Label2 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Label"
+                    FieldName: ="Label"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =11
+
+        rSeperator_13 As rectangle:
+            AlignInContainer: =AlignInContainer.Start
+            BorderColor: =RGBA(166, 166, 166, 1)
+            BorderStyle: =BorderStyle.None
+            Fill: |-
+                =ColorValue("#F3F2F1") // var(--neutrals-web-gray-20-f-3-f-2-f-1
+            FocusedBorderColor: =RGBA(0, 120, 212, 1)
+            Height: =1
+            Width: =Parent.Width - Self.X * 2
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+        cField_Technique As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =FlexOff
+            Height: =92
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =4
+
+            cAnalysisCardHeaderText_3 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =55
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =60
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                txtLabelTechnique As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: ="Prompt technique"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                txtSubTechnique As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =ColorValue(AppTheme.palette.neutralSecondary)
+                    Height: =18
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =12
+                    Text: ="Indicate number of inputs to generate"
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+            ddTechnique As Dropdown.pcfdataset:
+                Appearance: ='DropdownCanvas.Appearance'.Outline
+                DefaultSelectedItems: =
+                DisplayMode: =DisplayMode.Edit
+                Height: =32
+                Items: =//TechniqueChoices
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Width: =Parent.Width
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                Label1 As PowerApps_CoreControls_DropdownCanvasTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="Label"
+                    FieldName: ="Label"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =10
+
+        cField_Temperature As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =FlexOff
+            Height: =92
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =5
+
+            cAnalysisCardHeaderText_4 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =55
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =60
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                txtLabelTemp As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: ="Temperature"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                txtSubTemp As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =ColorValue(AppTheme.palette.neutralSecondary)
+                    Height: =18
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =12
+                    Text: ="Creativity allowed in the responses"
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+            cSlider_1 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =28
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =3
+
+                sldTemp As Slider:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =FlexOn
+                    Height: =28
+                    LayoutMinHeight: =35
+                    LayoutMinWidth: =200
+                    Max: =10
+                    Min: =0
+                    Size: ='Slider.Size'.Small
+                    Value: =2
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                TextCanvas3 As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: =sldTemp.Value
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =36
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+        cFieldNumGen As groupContainer.verticalAutoLayoutContainer:
+            FillPortions: =FlexOff
+            Height: =92
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            ZIndex: =6
+
+            cAnalysisCardHeaderText_5 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =55
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMinHeight: =60
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =1
+
+                txtLabelNumResponses As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =22
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: ="Suggested responses"
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                txtSubTemp_1 As Text:
+                    AlignInContainer: =AlignInContainer.Stretch
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =ColorValue(AppTheme.palette.neutralSecondary)
+                    Height: =18
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Size: =12
+                    Text: ="Number of optimized prompts to generate"
+                    Width: =96
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+            cSlider_2 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =28
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                ZIndex: =2
+
+                sldNumResponses As Slider:
+                    AccessibleLabel: ="Number of suggested responses"
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FillPortions: =FlexOn
+                    Height: =28
+                    LayoutMinHeight: =35
+                    LayoutMinWidth: =200
+                    Max: =10
+                    Min: =1
+                    Size: ='Slider.Size'.Small
+                    Value: =5
+                    Width: =Parent.Width
+                    X: =0
+                    Y: =0
+                    ZIndex: =1
+
+                txtNumResponses As Text:
+                    Align: ='TextCanvas.Align'.Center
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =Parent.Height
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    Text: =sldNumResponses.Value
+                    Weight: ='TextCanvas.Weight'.Semibold
+                    Width: =36
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+    cEmptyState As groupContainer.verticalAutoLayoutContainer:
+        Height: =284
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =8
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Visible: =true /* Add logic to only show container when empty */
+        Width: =333
+        X: =518
+        Y: =453
+        ZIndex: =8
+
+        imgEmpty_0 As image:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =2
+            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            HoverBorderColor: =RGBA(0, 0, 0, 0)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Image: =NoResults
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedFill: =RGBA(0, 0, 0, 0)
+            ZIndex: =1
+
+        txtEmptyHeader_0 As Text:
+            Align: ='TextCanvas.Align'.Center
+            AlignInContainer: =AlignInContainer.Center
+            BorderColor: =
+            DisplayMode: =DisplayMode.Edit
+            Fill: =
+            FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+            Height: =36
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: ="Empty state"
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =250
+            Wrap: =false
+            X: =40
+            Y: =193
+            ZIndex: =2
+
+        txtEmptyBody_0 As Label:
+            AlignInContainer: =AlignInContainer.Center
+            Alignment: =Align.Center
+            AutoHeight: =true
+            Color: =ColorValue(AppTheme.palette.neutralPrimaryAlt)
+            DisplayMode: =DisplayMode.Edit
+            FontSize: =10.5
+            FontWeight: =FontWeight.Normal
+            Height: =12
+            LayoutMinHeight: =32
+            LayoutMinWidth: =320
+            OnChange: =false
+            Text: ="Try adjusting the filters or refining with simpler keywords for a broader search."
+            VerticalAlignment: =VerticalAlign.Middle
+            Width: =320
+            X: =320
+            Y: =197
+            ZIndex: =3
+
+        Container9 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.Start
+            FillPortions: =0
+            Height: =44
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =8
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width
+            ZIndex: =4
+
+            btnEmptyAction_0 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Primary
+                BasePaletteColor: =
+                BorderColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: |-
+                    =UpdateContext({ searchText: "" }); 
+                Text: ="Action"
+                Width: =132
+                X: =542
+                Y: =0
+                ZIndex: =1
+
+    "Card1_11 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+        DisplayMode: =DisplayMode.Edit
+        HeaderImage: =SampleImage1
+        Height: =Self.AutoHeight
+        Image: =
+        Items: =
+        OnSelect: |-
+            =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+            Navigate(FeatureLandingScreen)
+        Subtitle: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        Title: ="Title"
+        Width: =329
+        X: =40
+        Y: =403
+        ZIndex: =9
+
+    "Card1_17 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+        Description: |-
+            ="When giving a card a top-level click handler, it's important to ensure the same action can be done by a button or link within the Card. 
+            "
+        DisplayMode: =DisplayMode.Edit
+        HeaderImage: =
+        Height: =249
+        Image: ='Header slot 2'
+        Items: =
+        OnSelect: |-
+            =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+            Navigate(FeatureLandingScreen)
+        Subtitle: =
+        Title: ="Feature landing"
+        Width: =333
+        X: =36
+        Y: =503
+        ZIndex: =10
+

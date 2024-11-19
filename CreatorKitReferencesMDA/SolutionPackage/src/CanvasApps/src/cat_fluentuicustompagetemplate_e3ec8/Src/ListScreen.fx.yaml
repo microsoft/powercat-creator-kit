@@ -1,0 +1,902 @@
+ListScreen As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =/* Load data for this page while spinner is loading */
+        If( init <> true,
+            UpdateContext({ pageTitle: "Page title" });
+            UpdateContext({ init: true });
+        );
+
+    cAppFrame_3 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingRight: =Self.PaddingLeft
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        cTopNav_4 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =ColorValue(AppTheme.palette.neutralLighter)
+            FillPortions: =FlexOff
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =24
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =20
+            PaddingRight: =20
+            ZIndex: =1
+
+            h2Title_14 As Text:
+                Align: ='TextCanvas.Align'.Start
+                AlignInContainer: =AlignInContainer.Center
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                Height: =36
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: =18
+                Text: =_featureName
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =140
+                X: =394.49
+                Y: =0
+                ZIndex: =1
+
+            "TabList1_4 As 'Tab list'.pcfdataset":
+                DefaultSelectedItems: =LookUp(Nav, ThisRecord.Screen = App.ActiveScreen)
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =FlexOn
+                Height: =55
+                Items: =Nav
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnChange: =Navigate(Self.Selected.Screen);
+                Width: =280
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+                DisplayName1_4 As PowerApps_CoreControls_TabListTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="DisplayName"
+                    FieldName: ="DisplayName"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =5
+
+        ScreenContainer_2 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: =Margins/2
+            PaddingRight: =Margins/2
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =2
+
+            cPageHeaderMain_3 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+                FillPortions: =0
+                Height: =div_4.Y + 1
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =4
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =If(Self.X = 0, Margins, 0)
+                PaddingRight: =Self.PaddingLeft
+                PaddingTop: =16
+                Width: =1181
+                X: =92
+                Y: =40
+                ZIndex: =1
+
+                cPageHeaderTop_1 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =FlexOff
+                    Height: =75
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =1042
+                    X: =68
+                    Y: =52
+                    ZIndex: =1
+
+                    cPageHeaderTitle_3 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =FlexOn
+                        Height: =cHeaderText_6.Height
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =16
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =431
+                        X: =36
+                        Y: =40
+                        ZIndex: =1
+
+                        ButtonCanvas4_6 As Button:
+                            Appearance: ='ButtonCanvas.Appearance'.Subtle
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Icon: ="ArrowLeft"
+                            Layout: ='ButtonCanvas.Layout'.IconOnly
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            OnSelect: =Back()
+                            Text: =
+                            Visible: =true
+                            Width: =32
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        cHeaderText_6 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            FillPortions: =0
+                            Height: =rDivider_PageHeader_6.Y
+                            LayoutDirection: =LayoutDirection.Vertical
+                            LayoutGap: =4
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width - Self.X
+                            X: =1-1
+                            Y: =1-1 
+                            ZIndex: =2
+
+                            h2Title_6 As Text:
+                                Align: ='TextCanvas.Align'.Start
+                                AlignInContainer: =AlignInContainer.Start
+                                AutoHeight: =true
+                                DisplayMode: =DisplayMode.Edit
+                                Height: =36
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                Size: =20
+                                Text: ="Title"
+                                Weight: ='TextCanvas.Weight'.Semibold
+                                Width: =Parent.Width - Self.X * 2
+                                X: =394.49
+                                Y: =0
+                                ZIndex: =1
+
+                            Label3_8 As label:
+                                AlignInContainer: =AlignInContainer.Start
+                                AutoHeight: =true
+                                BorderColor: =RGBA(0, 18, 107, 1)
+                                Color: |-
+                                    =ColorValue("#424242")
+                                DisabledColor: =RGBA(166, 166, 166, 1)
+                                Font: =Font.'Segoe UI'
+                                LineHeight: =1.4
+                                PaddingBottom: =0
+                                PaddingLeft: =0
+                                PaddingRight: =0
+                                PaddingTop: =0
+                                Size: =Switch(App.ActiveScreen.Size,ScreenSize.Small,11,ScreenSize.Medium,12,14)*0.75
+                                Text: ="Subtext"
+                                VerticalAlign: =VerticalAlign.Top
+                                Visible: =!IsBlank(Self.Text)
+                                Width: =Min(600, Parent.Width)
+                                X: =394.49
+                                ZIndex: =2
+
+                            rDivider_PageHeader_6 As rectangle:
+                                BorderColor: =App.Theme.Colors.Darker40
+                                Fill: =RGBA(0,0,0,0)
+                                Height: =1
+                                Width: =Parent.Width - Self.X * 2
+                                X: =72
+                                Y: =52
+                                ZIndex: =3
+
+                    tlbRight_3 As Toolbar.pcfdataset:
+                        AccessibleLabel: ="Toolbar"
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =FlexOff
+                        Height: =44
+                        Items: |-
+                            =Table({ItemKey:"1",ItemDisplayName:"",ItemIconName:"Print",ItemAppearance:"Subtle",ItemTooltip:"Action"},{ItemKey:"2",ItemDisplayName:"",ItemIconName:"Settings",ItemAppearance:"Subtle"},{ItemKey:"3",ItemDisplayName:"",ItemIconName:"DocumentPdf",ItemDisabled: false ,ItemAppearance:"Subtle"})
+                        LayoutMinHeight: =55
+                        LayoutMinWidth: =280
+                        OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                        ItemKey2 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemKey"
+                            FieldName: ="ItemKey"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =14
+
+                        ItemIconStyle2 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemIconStyle"
+                            FieldName: ="ItemIconStyle"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =15
+
+                        ItemIconName2 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemIconName"
+                            FieldName: ="ItemIconName"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =16
+
+                        ItemDisplayName2 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemDisplayName"
+                            FieldName: ="ItemDisplayName"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =17
+
+                        ItemAppearance2 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemAppearance"
+                            FieldName: ="ItemAppearance"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =18
+
+                "tabForm_1 As 'Tab list'.pcfdataset":
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =38
+                    Items: =["All", "Tools", "Plumming"]
+                    LayoutMinHeight: =55
+                    LayoutMinWidth: =280
+                    Size: ='TabList.Size'.Small
+                    Width: =280
+                    X: =0
+                    Y: =150
+                    ZIndex: =2
+
+                cLargeToolbar_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignStretch
+                    FillPortions: =FlexOff
+                    Height: =tlbMain_1.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: =false
+                    ZIndex: =3
+
+                    tlbMain_1 As Toolbar.pcfdataset:
+                        AccessibleLabel: ="Toolbar"
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =3
+                        Height: =48
+                        Items: |-
+                            =Table(
+                                {
+                                    ItemKey: "1",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle",
+                                    ItemTooltip: "Action"
+                                },
+                                {
+                                    ItemKey: "2",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle"
+                                },
+                                {
+                                    ItemKey: "3",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemDisabled: false,
+                                    ItemAppearance: "Subtle"
+                                    //,ItemIconStyle: "Filled"
+                                },
+                                {
+                                    ItemKey: "4",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle"
+                                },
+                                {
+                                    ItemKey: "4",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle",
+                                    ItemFarItem: true
+                                }
+                            )
+                        LayoutMinHeight: =55
+                        LayoutMinWidth: =280
+                        OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    tlbRight_4 As Toolbar.pcfdataset:
+                        AccessibleLabel: ="Toolbar"
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =FlexOn
+                        Height: =44
+                        Items: |-
+                            =Table(
+                                {
+                                    ItemKey: "1",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle",
+                                    ItemTooltip: "Action"
+                                },
+                                {
+                                    ItemKey: "2",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle"
+                                },
+                                {
+                                    ItemKey: "3",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemDisabled: false,
+                                    ItemAppearance: "Subtle"
+                                    //,ItemIconStyle: "Filled"
+                                },
+                                {
+                                    ItemKey: "4",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle"
+                                },
+                                {
+                                    ItemKey: "4",
+                                    ItemDisplayName: "Action",
+                                    ItemIconName: "Circle",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Subtle",
+                                    ItemFarItem: true
+                                }
+                            )
+                        LayoutMinHeight: =55
+                        LayoutMinWidth: =280
+                        OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                        Visible: =true
+                        Width: =258
+                        X: =899
+                        Y: =0
+                        ZIndex: =2
+
+                div_4 As rectangle:
+                    AlignInContainer: =AlignStart
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Fill: =ColorValue(AppTheme.palette.neutralLight)
+                    Height: =1
+                    Width: =Parent.Width - Self.X * 2
+                    X: =84
+                    Y: =256
+                    ZIndex: =4
+
+            cBuffer_2 As groupContainer.manualLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =3
+
+            cListCard_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                DropShadow: =DropShadow.Semilight
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =0
+                Height: =Max(div_5.Y, 120)
+                LayoutAlignItems: =LayoutAlignItems.Stretch
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =0   
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingTop: =
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =Parent.Width - Self.X * 2
+                ZIndex: =4
+
+                cListToolbar_7 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    Fill: =ColorValue(AppTheme.palette.neutralLighter) //RGBA(0, 0, 0, 0)
+                    FillPortions: =0
+                    Height: =48
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    Toolbar1_6 As Toolbar.pcfdataset:
+                        AccessibleLabel: ="Toolbar"
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =FlexOn
+                        Height: =44
+                        Items: |-
+                            =Table(
+                                {
+                                    ItemKey: "new",
+                                    ItemDisplayName: "New",
+                                    ItemIconName: "Add",
+                                    ItemAppearance: "Primary",
+                                    ItemIconStyle: "Regular",
+                                    ItemTooltip: "Add new item"
+                                },
+                                {
+                                    ItemKey: "refresh",
+                                    ItemDisplayName: "Refresh",
+                                    ItemIconName: "ArrowClockwise",
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Regular"
+                                },
+                                {
+                                    ItemKey: "edit",
+                                    ItemDisplayName: "Edit",
+                                    ItemIconName: "Edit",
+                                    ItemVisible: !IsBlank(FluentDetailsList1_2.Selected),
+                                    ItemDisabled: IsBlank(FluentDetailsList1_2.Selected),
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Regular"
+                                },
+                                {
+                                    ItemKey: "delete",
+                                    ItemDisplayName: "Delete",
+                                    ItemIconName: "Delete",
+                                    ItemVisible: !IsBlank(FluentDetailsList1_2.Selected),
+                                    ItemDisabled: IsBlank(FluentDetailsList1_2.Selected),
+                                    ItemAppearance: "Subtle",
+                                    ItemIconStyle: "Regular"
+                                }
+                            )
+                        LayoutMinHeight: =55
+                        LayoutMinWidth: =280
+                        OnSelect: |-
+                            =Switch( Self.Selected.ItemKey,
+                                
+                                /* Action for Key 'new' */
+                                "new",
+                                NewForm(Form0);
+                                Set(SelectedItem, Defaults(Samples));
+                                Navigate(FormScreen);
+                                ,
+                                /* Action for 'edit' */
+                                "edit",
+                                Set(SelectedItem, FluentDetailsList1_2.Selected); EditForm(Form0);
+                                Navigate(FormScreen);
+                                ,
+                                
+                                /* Action for 'delete' */
+                                //"delete",
+                                //With({ item: DVFluentDetailsList1.Selected },
+                                //Remove(Samples, item); 
+                                // Notify($"Deleted {item.Name}")
+                                //);
+                                //,
+                                
+                                /* Action for 'info' */
+                                "refresh",
+                                UpdateContext({ showLoader: true });
+                                Notify("Refreshing table ...");
+                                UpdateContext({ showLoader: false });
+                                ,
+                                
+                                /* Default action */
+                                Notify("Unrecognized button clicked")
+                            )
+                        Width: =Parent.Width
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    Container9_10 As groupContainer.horizontalAutoLayoutContainer:
+                        Height: =40
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutJustifyContent: =LayoutJustifyContent.End
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =2
+                        PaddingRight: =2
+                        ZIndex: =2
+
+                        TextCanvas5_8 As Text:
+                            Align: ='TextCanvas.Align'.End
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingRight: =8
+                            Text: |-
+                                =With({c: CountRows(ListItems)},$"{ c } {If(c = 1, "item", "items")}")
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            X: =0
+                            Y: =0
+                            ZIndex: =1
+
+                        Icon1_8 As icon.Search:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            Color: =RGBA(0, 120, 212, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledColor: =RGBA(220, 220, 220, 1)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            Height: =32
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Icon: =If(showSearch, Icon.Cancel, Icon.Search)
+                            OnSelect: |-
+                                =UpdateContext({showSearch: !showSearch})
+                            PaddingBottom: =8
+                            PaddingLeft: =8
+                            PaddingRight: =8
+                            PaddingTop: =8
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =ColorFade(RGBA(0, 120, 212, 1), -30%)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Visible: =App.ActiveScreen.Size <= ScreenSize.Small
+                            Width: =32
+                            ZIndex: =2
+
+                        ddFilter_1 As Dropdown.pcfdataset:
+                            DefaultSelectedItems: =First(FilterItems)
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =32
+                            Items: =FilterItems
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            Width: =94
+                            X: =294
+                            Y: =0
+                            ZIndex: =3
+
+                        cSearchTeams_2 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.SetByContainer
+                            BorderColor: =ColorValue(AppTheme.palette.neutralQuaternary)
+                            BorderStyle: =BorderStyle.None
+                            DropShadow: =DropShadow.Light
+                            FillPortions: =0
+                            Height: =32
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            Visible: =App.ActiveScreen.Size > ScreenSize.Small || showSearch
+                            Width: =200
+                            ZIndex: =4
+
+                            "txtSearch_1 As 'Text input'":
+                                Appearance: ='TextInputCanvas.Appearance'.FilledLighter
+                                DisplayMode: =DisplayMode.Edit
+                                FillPortions: =1
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =100
+                                Placeholder: ="Search"
+                                TriggerOutput: ='TextInputCanvas.TriggerOutput'.Keypress
+                                Width: =320
+                                X: =0
+                                Y: =0
+                                ZIndex: =1
+
+                Spinner1 As Spinner:
+                    DisplayMode: =DisplayMode.Edit
+                    Height: =200
+                    LayoutMinHeight: =200
+                    LayoutMinWidth: =200
+                    SpinnerSize: ='Spinner.SpinnerSize'.Small
+                    Visible: =showLoader
+                    Width: =200
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                cGrid As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =Max((CountIf(ListItems,true) * 48), 200)
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    ZIndex: =3
+
+                    "FluentDetailsList1_2 As 'Fluent Details List (1.1.39)'.pcfdataset":
+                        columns_Items: |-
+                            =Table(
+                                {
+                                    ColName: "cat_name",
+                                    ColDisplayName: "Name",
+                                    ColWidth: 300,
+                                    ColSortable: false,
+                                    ColIsBold: true,
+                                    ColResizable: true,
+                                    ColCellType: "link"
+                                },{
+                                    ColName: "cat_description",
+                                    ColDisplayName: "Description",
+                                    ColWidth: 300,
+                                    ColSortable: true,
+                                    ColResizable: true,
+                                    ColShowAsSubTextOf: If(numCols <= 6, "cat_name"),
+                                    ColRowHeader:true
+                                },
+                                {
+                                    ColName: "cat_category",
+                                    ColDisplayName: "Category",
+                                    ColWidth: Self.Width - 300 - 300 - 100 - 80,
+                                    ColSortable: true,
+                                    ColResizable: true,
+                                    ColShowAsSubTextOf: If(numCols <= 6, "cat_name"),
+                                    ColRowHeader:true
+                                },
+                                {
+                                    ColName: "cat_cost",
+                                    ColDisplayName: "Cost",
+                                    ColWidth: 100,
+                                    ColSortable: true,
+                                    ColResizable: true,
+                                    ColShowAsSubTextOf: If(numCols <= 6, "cat_name"),
+                                    ColRowHeader:true,
+                                    ColIsBold:true
+                                }
+                            )
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        Height: =Parent.Height
+                        Items: =ListItems
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        RaiseOnRowSelectionChangeEvent: =true
+                        SelectionType: ='PowerCAT.FluentDetailsList.SelectionType'.None
+                        Theme: =AppThemeJson
+                        Visible: =!showLoader
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        "Sample2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Sample"
+                            FieldName: ="cat_sampleid"
+                            FieldType: ="g"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =8
+
+                        "Name2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Name"
+                            FieldName: ="cat_name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =9
+
+                        "Description2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Description"
+                            FieldName: ="cat_description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =10
+
+                        "Category2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Category"
+                            FieldName: ="cat_category"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =11
+
+                        "Brand2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Brand"
+                            FieldName: ="cat_brand"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =12
+
+                        "Quantity2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Quantity"
+                            FieldName: ="cat_quantity"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =13
+
+                        "cat_cost2 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="cat_cost"
+                            FieldName: ="cat_cost"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =19
+
+                cEmptyState_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Center
+                    FillPortions: =0
+                    Height: =314
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Visible: =IsEmpty(ListItems)
+                    Width: =333
+                    X: =469
+                    Y: =93
+                    ZIndex: =5
+
+                    Image3_2 As image:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Image: ='Empty states'
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        ZIndex: =1
+
+                    txtSubtitle1_EmptyState_1 As Text:
+                        Align: ='TextCanvas.Align'.Center
+                        AlignInContainer: =AlignInContainer.Center
+                        BorderColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        Fill: =
+                        FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                        Height: =36
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =20
+                        Text: ="Empty state"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =250
+                        Wrap: =false
+                        X: =40
+                        Y: =193
+                        ZIndex: =2
+
+                    lblBody1_EmptyState_1 As Label:
+                        AlignInContainer: =AlignInContainer.Center
+                        Alignment: =Align.Center
+                        AutoHeight: =true
+                        Color: =ColorValue(AppTheme.palette.neutralPrimaryAlt)
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =10.5
+                        FontWeight: =FontWeight.Normal
+                        Height: =12
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        OnChange: =false
+                        Text: ="Try adjusting the filters or refining with simpler keywords for a broader search."
+                        VerticalAlignment: =VerticalAlign.Middle
+                        Width: =320
+                        X: =320
+                        Y: =197
+                        ZIndex: =3
+
+                    Container9_1 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.Start
+                        FillPortions: =0
+                        Height: =44
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        ZIndex: =4
+
+                        btnEmptyActionPrimary_1 As Button:
+                            Appearance: ='ButtonCanvas.Appearance'.Secondary
+                            BasePaletteColor: =
+                            BorderColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =32
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            OnSelect: |-
+                                =UpdateContext({ searchText: "" }); 
+                            Text: ="Action"
+                            Width: =132
+                            X: =542
+                            Y: =0
+                            ZIndex: =1
+
+                div_5 As rectangle:
+                    AlignInContainer: =AlignStart
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Fill: =RGBA(0,0,0,0)
+                    Height: =2
+                    Width: =Parent.Width - Self.X * 2
+                    X: =84
+                    Y: =256
+                    ZIndex: =6
+
+    cSpinner_2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: |-
+            =ColorValue("#fafafa")
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =init <> true
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Spinner1_2 As Spinner:
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =200
+            SpinnerSize: ='Spinner.SpinnerSize'.Large
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+

@@ -10,6 +10,13 @@
       <Titles>
         <Title LCID="1033" Title="Area1" />
       </Titles>
+      <Group Id="group_726f4408" ResourceId="SitemapDesigner.NewGroup" DescriptionResourceId="SitemapDesigner.NewGroup" IntroducedVersion="7.0.0.0" IsProfile="false" ToolTipResourseId="SitemapDesigner.Unknown">
+        <SubArea Id="subarea_60461c56" VectorIcon="/WebResources/cat_home_icon" Icon="/WebResources/cat_home_icon" Client="All,Outlook,OutlookLaptopClient,OutlookWorkstationClient,Web" AvailableOffline="true" PassParams="false" Sku="All,OnPremise,Live,SPLA" Page="cat_fluentuicustompagetemplate_e3ec8">
+          <Titles>
+            <Title LCID="1033" Title="Page Template" />
+          </Titles>
+        </SubArea>
+      </Group>
     </Area>
   </SiteMap>
   <LocalizedNames>

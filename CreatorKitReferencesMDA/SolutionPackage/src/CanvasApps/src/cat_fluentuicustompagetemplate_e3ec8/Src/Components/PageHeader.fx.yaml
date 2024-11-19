@@ -1,0 +1,119 @@
+PageHeader As CanvasComponent:
+    AutoHeight: =rDivider_PageHeader.Y //If(Label3_2.Visible, Label3_2.Height) + If(LinkCanvas3.Visible, LinkCanvas3.Height) + h2DashboardTitle_1.Height
+    DescriptionText: ="Secondary text"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =PageHeader.AutoHeight
+    IconName: ="ArrowLeft"
+    LinkText: =
+    OnIconSelectNavScreen: =App.ActiveScreen
+    OnReset: =
+    TitleFontSize: =28
+    TitleText: ="Page title"
+    Width: =600
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    cPageHeader As groupContainer.horizontalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutGap: =If( !IsBlank(PageHeader.IconName), 16)
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =2
+
+        ButtonCanvas4 As Button:
+            Appearance: ='ButtonCanvas.Appearance'.Subtle
+            DisplayMode: =DisplayMode.Edit
+            Height: =32
+            Icon: =Coalesce(PageHeader.IconName, "ArrowLeft")
+            Layout: ='ButtonCanvas.Layout'.IconOnly
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            OnSelect: =If(!IsBlank(PageHeader.OnIconSelectNavScreen), Navigate(PageHeader.OnIconSelectNavScreen), Back())
+            Text: =
+            Visible: =!IsBlank(PageHeader.IconName)
+            Width: =32
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        HeaderContainer1_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            FillPortions: =0
+            Height: =Parent.Height //If(App.ActiveScreen.Size > ScreenSize.Small, Label3_2.Height + LinkCanvas3.Height) + h2DashboardTitle_1.Height
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =4
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            Width: =Parent.Width - Self.X
+            X: =1-1
+            Y: =1-1 
+            ZIndex: =2
+
+            h2DashboardTitle_1 As Text:
+                Align: ='TextCanvas.Align'.Start
+                AlignInContainer: =AlignInContainer.Start
+                AutoHeight: =true
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =36
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: =Coalesce(PageHeader.TitleFontSize, 20)
+                Text: =PageHeader.TitleText
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =Parent.Width - Self.X * 2
+                X: =394.49
+                Y: =0
+                ZIndex: =1
+
+            Label3_2 As label:
+                AlignInContainer: =AlignInContainer.Start
+                AutoHeight: =true
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: |-
+                    =ColorValue("#424242")
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Segoe UI'
+                LineHeight: =1.4
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =Switch(App.ActiveScreen.Size,ScreenSize.Small,11,ScreenSize.Medium,12,14)*0.75
+                Text: =PageHeader.DescriptionText
+                VerticalAlign: =VerticalAlign.Top
+                Visible: =!IsBlank(PageHeader.DescriptionText)
+                Width: =Min(600, Parent.Width)
+                X: =394.49
+                ZIndex: =2
+
+            LinkCanvas3 As Link:
+                Appearance: ="Default"
+                BasePaletteColor: =
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontSize: =Switch(App.ActiveScreen.Size,ScreenSize.Small,11,ScreenSize.Medium,12,14)
+                Height: =24
+                LayoutMinHeight: =32
+                LayoutMinWidth: =320
+                Text: ="Learn more"
+                Visible: =!IsBlank(PageHeader.LinkText)
+                Width: =320
+                X: =0
+                Y: =0
+                ZIndex: =4
+
+            rDivider_PageHeader As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =RGBA(0,0,0,0)
+                Height: =1
+                Width: =Parent.Width - Self.X * 2
+                X: =72
+                Y: =52
+                ZIndex: =5
+

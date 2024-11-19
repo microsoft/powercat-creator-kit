@@ -74,7 +74,7 @@
             PaddingTop: =5
             ZIndex: =1
 
-            "icoInfo_1 As 'Fluent Icon (1.1.34)'":
+            "icoInfo_1 As 'Fluent Icon (1.1.39)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 IconColor: ="Gray"
@@ -88,7 +88,7 @@
                 Y: =0
                 ZIndex: =1
 
-            "AutoWidthLabel1_1 As 'Auto Width Label (1.1.34)'":
+            "AutoWidthLabel1_1 As 'Auto Width Label (1.1.39)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 LayoutMinHeight: =200
@@ -101,7 +101,9 @@
 
             LinkCanvas1_1 As Link:
                 AlignInContainer: =AlignInContainer.Center
+                Appearance: ="Default"
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FillPortions: =1
                 FontSize: =0
@@ -170,6 +172,7 @@
 
                     txtAIPromptTilte_3 As Text:
                         AutoHeight: =false
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Font: =Font.'Segoe UI'
                         FontColor: =RGBA(33, 33, 33, 1)
@@ -188,6 +191,7 @@
                     txtAIPromptTilte_4 As Text:
                         AlignInContainer: =AlignInContainer.Center
                         AutoHeight: =false
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         Font: =Font.'Segoe UI'
                         FontColor: =RGBA(72, 163, 62, 1)
@@ -203,7 +207,7 @@
                         Y: =0
                         ZIndex: =3
 
-                "Nav1_1 As 'Fluent Nav (1.1.34)'.pcfdataset":
+                "Nav1_1 As 'Fluent Nav (1.1.39)'.pcfdataset":
                     DisplayMode: =DisplayMode.Edit
                     Height: =200
                     Items: |-
@@ -238,6 +242,7 @@
                 txtAIPromptTilte_5 As Text:
                     AlignInContainer: =AlignInContainer.Stretch
                     AutoHeight: =false
+                    BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     Font: =Font.'Segoe UI'
                     FontColor: =
@@ -296,6 +301,7 @@
                             ZIndex: =1
 
                             txtEnglishLanguage_5 As Text:
+                                BorderStyle: =""
                                 DisplayMode: =DisplayMode.Edit
                                 FontColor: =RGBA(40, 134, 222, 1)
                                 FontUnderline: =true
@@ -323,12 +329,19 @@
                                 ZIndex: =4
 
                                 btnAIPrompt As Button:
+                                    Align: =""
                                     BasePaletteColor: =
+                                    BorderStyle: =""
                                     DisplayMode: =DisplayMode.Edit
                                     FontColor: =
                                     Height: =32
+                                    Icon: =""
+                                    IconRotation: =0
+                                    IconStyle: ="Outline"
+                                    Layout: ="Icon before"
                                     OnSelect: =Clear(colChatMessages)
                                     Text: ="AI Reply"
+                                    VerticalAlign: =""
                                     Width: =140
                                     X: =0
                                     Y: =0
@@ -365,7 +378,7 @@
                         Width: =FluentAIAssistant2.Width + Self.PaddingLeft +  Self.PaddingRight
                         ZIndex: =3
 
-                        "FluentAIAssistant2 As 'FluentAI Assistance'.pcfdataset":
+                        "FluentAIAssistant2 As 'FluentAI Assistance (0.0.9)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =Parent.Height - Parent.PaddingTop - Parent.PaddingBottom
                             Items: =colChatMessages
@@ -409,7 +422,9 @@
                             ZIndex: =1
 
         Header1_1 As Header:
+            Align: =""
             BasePaletteColor: =
+            BorderStyle: =""
             DisplayMode: =DisplayMode.Edit
             FontColor: =
             Height: =0

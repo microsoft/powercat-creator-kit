@@ -23,6 +23,7 @@
       "customapi_AsyncOperations": "System Jobs",
       "customapi_BulkDeleteFailures": "Bulk Delete Failures",
       "customapi_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "customapi_plugin_CustomAPI": "Plug-ins",
       "customapi_PrincipalObjectAttributeAccesses": "Field Sharing",
       "customapi_ProcessSession": "Process Sessions",
       "customapi_serviceplanmapping": "Service Plan Mappings",
@@ -43,6 +44,7 @@
       "modifiedon": "Modified On",
       "modifiedonbehalfby": "Modified By (Delegate)",
       "msdyn_customapi_msdyn_pmbusinessruleautomationconfig_CustomApiId": "PM Business Rule Automation Configs",
+      "msdyn_formmapping_customapiid": "Form Mappings",
       "msdyn_knowledgeassetconfiguration_customapiid": "Knowledge Assets with Configurations",
       "name": "Name",
       "overriddencreatedon": "Record Created On",
@@ -98,6 +100,10 @@
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "componentstate",
         "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "componentstate",
+        "OptionSetReferenceEntityName": "Canvas Apps"
       }
     },
     "OptionSetTypeKey": "PicklistType",
@@ -264,6 +270,10 @@
       "OptionSetReferenceItem1": {
         "OptionSetReferenceColumnName": "ismanaged",
         "OptionSetReferenceEntityName": "Custom API Request Parameters"
+      },
+      "OptionSetReferenceItem2": {
+        "OptionSetReferenceColumnName": "ismanaged",
+        "OptionSetReferenceEntityName": "Canvas Apps"
       }
     },
     "OptionSetTypeKey": "BooleanType",

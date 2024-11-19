@@ -2,7 +2,7 @@
   {
     "DataBoundServiceDataSetName": "default.cds",
     "DataBoundServiceFunctionNamesKey": [
-      "Predict-202401.3.17.1"
+      "Predict-202409.5.24.1"
     ],
     "DataBoundServiceOperationGroupNameKey": "AIBuilder\\bbd51cc4-3b91-4f54-958c-d773f856a323",
     "DataBoundServiceRawMetadata": {
@@ -11,6 +11,7 @@
           "additionalContext": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "AdditionalContext",
             "Type": "string/byte"
@@ -18,6 +19,7 @@
           "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"
@@ -32,13 +34,41 @@
           "FinishReason": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Finish Reason",
             "Type": "string"
           },
+          "StructuredOutput": {
+            "Attributes": {
+              "categories": {
+                "Attributes": {
+                  "category": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "category",
+                    "Type": "string"
+                  }
+                },
+                "IsCollection": true,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": null,
+                "Type": "array"
+              }
+            },
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "",
+            "Type": "object"
+          },
           "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"

@@ -1,0 +1,105 @@
+[
+  {
+    "DataBoundServiceDataSetName": "default.cds",
+    "DataBoundServiceFunctionNamesKey": [
+      "Predict-202409.5.24.1"
+    ],
+    "DataBoundServiceOperationGroupNameKey": "AIBuilder\\b8c72681-738b-4332-a614-1b4ca101b774",
+    "DataBoundServiceRawMetadata": {
+      "Input": {
+        "Attributes": {
+          "additionalContext": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "AdditionalContext",
+            "Type": "string/byte"
+          },
+          "Fields": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Fields",
+            "Type": "string"
+          },
+          "Image": {
+            "Attributes": {
+              "base64Encoded": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Image",
+                "Type": "string/byte"
+              }
+            },
+            "IsCollection": false,
+            "RequiredAttributes": [
+              "base64Encoded"
+            ],
+            "SchemaName": null,
+            "Title": "",
+            "Type": "object"
+          }
+        },
+        "RequiredAttributes": [
+          "Fields",
+          "Image"
+        ]
+      },
+      "Output": {
+        "Attributes": {
+          "FinishReason": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Finish Reason",
+            "Type": "string"
+          },
+          "StructuredOutput": {
+            "Attributes": {
+              "Field": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Field",
+                "Type": "string"
+              },
+              "Value": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Value",
+                "Type": "string"
+              }
+            },
+            "IsCollection": true,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": null,
+            "Type": "array"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        }
+      },
+      "Source": true,
+      "TemplateName": "GptPowerPrompt"
+    },
+    "DataBoundSourceDataSourceName": "43b0dc67-68af-47ae-9a9c-9e69d396ba3e",
+    "Name": "AI Fields from Image",
+    "ServiceKind": "DataBound",
+    "Type": "ServiceInfo"
+  }
+]

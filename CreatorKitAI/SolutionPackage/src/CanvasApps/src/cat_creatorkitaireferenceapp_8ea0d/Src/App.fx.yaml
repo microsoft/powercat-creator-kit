@@ -1,7 +1,100 @@
 App As appinfo:
     BackEnabled: =true
     Formulas: |-
-        =AppTheme = {
+        =NavCollection = Table(
+            {
+                ItemKey: "AIFlowchart",
+                ItemDisplayName: "AI Flowchart",
+                Description:"",
+                examples:""
+            },
+             {
+                ItemKey: "AIImageDiff",
+                ItemDisplayName: "AI Image Diff",
+                Description:"Prompt used to detect differences between 2 images.",
+                examples:"Rental car return inspection, Retail product comparison"
+            },
+            {
+                ItemKey: "AIDescribeImage",
+                ItemDisplayName: "AI Describe Image",
+                Description:"Prompt used to descript an image.",
+                examples:"Retail Catalog Managment, alt text.."
+            },
+            {
+                ItemKey: "AIImageTextExtract",
+                ItemDisplayName: "AI Fields from Image",
+                Description:"Prompt used extract fields from image.",
+                examples:"Photo ID Scanner, Application processing, Onboarding, Registration, Receipt/Invoice scanninng..."
+            },
+            {
+                ItemKey: "AIAnomaly",
+                ItemDisplayName: "AI Anomaly",
+                Description:"Prompt used detect anomalies from image.",
+                examples:"Cost estimation, Predictive maintenance, Quality control..."
+            },
+            {
+                ItemKey: "AIQnAGenerator",
+                ItemDisplayName: "AI Generate QnA",
+                Description:""
+            },
+            {
+                ItemKey: "AIRewrite",
+                ItemDisplayName: "AI Rewrite",
+                Description:"",
+                examples:""
+            },
+            {
+                ItemKey: "AIDefine",
+                ItemDisplayName: "AI Define",
+                Description:"",
+                examples:""
+            },
+            {
+                ItemKey: "AIExtractCategories",
+                ItemDisplayName: "AI Tags",
+                Description:"",
+                examples:""
+            },
+            {
+                ItemKey: "AIGenerateHeadline",
+                ItemDisplayName: "AI Generate Headline",
+                Description:""
+            },
+            {
+                ItemKey: "AITranslate",
+                ItemDisplayName: "AI Translate",
+                Description:""
+            },
+            {
+                ItemKey: "AIRedact",
+                ItemDisplayName: "AI Redact",
+                Description:""
+            },
+            {
+                ItemKey: "AIChart",
+                ItemDisplayName: "AI Chart",
+                Description:""
+            },
+            {
+                ItemKey: "AIPalette",
+                ItemDisplayName: "AI Palette",
+                Description:""
+            },
+            {
+                ItemKey: "AIEmoji",
+                ItemDisplayName: "AI Emoji",
+                Description:""
+            },
+            {
+                ItemKey: "AIRating",
+                ItemDisplayName: "AI Rating",
+                Description:""
+            }
+        );
+        
+        
+        
+        AppTheme = {
             palette: {
                 themePrimary: ColorValue("#0078d4"),
                 themeLighterAlt: ColorValue("#eff6fc"),
@@ -28,60 +121,7 @@ App As appinfo:
             }
         };
         AppThemeJSON = JSON(AppTheme);
-        NavCollection = Table(
-            {
-                ItemKey: "AIRewrite",
-                ItemDisplayName: "AI Rewrite"
-            },
-            {
-                ItemKey: "AIDefine",
-                ItemDisplayName: "AI Define"
-            },
-            {
-                ItemKey: "AIExpand",
-                ItemDisplayName: "AI Expand"
-            },
-            {
-                ItemKey: "AIExtractCategories",
-                ItemDisplayName: "AI Tags"
-            },
-            {
-                ItemKey: "AIGenerateHeadline",
-                ItemDisplayName: "AI Generate Headline"
-            },
-            {
-                ItemKey: "AIQnAGenerator",
-                ItemDisplayName: "AI Generate QnA"
-            },
-            {
-                ItemKey: "AITranslate",
-                ItemDisplayName: "AI Translate"
-            },
-            {
-                ItemKey: "AIRedact",
-                ItemDisplayName: "AI Redact"
-            },
-            {
-                ItemKey: "AISynonyms",
-                ItemDisplayName: "AI Synonyms"
-            },
-            {
-                ItemKey: "AIChart",
-                ItemDisplayName: "AI Chart"
-            },
-            {
-                ItemKey: "AIPalette",
-                ItemDisplayName: "AI Palette"
-            },
-            {
-                ItemKey: "AIEmoji",
-                ItemDisplayName: "AI Emoji"
-            },
-            {
-                ItemKey: "AIRating",
-                ItemDisplayName: "AI Rating"
-            }
-        );
+        
         CustomAPICollection = 'Custom APIs';
         Languages = [
             "English",
@@ -201,6 +241,10 @@ App As appinfo:
         I visited Joe's Auto Repair for a routine service. The staff were friendly and the waiting area was clean and comfortable. However, I was a bit disappointed with the turnaround time as it took longer than initially promised. The pricing was reasonable, and my car seems to be running smoothly since the visit, but the lack of communication during the service process was frustrating. Overall, it was a satisfactory experience, though there's definitely room for improvement in terms of service efficiency and customer communication.",
         "I had a wonderful stay at the Seaside Resort. The staff were exceptionally friendly and went above and beyond to ensure we were comfortable. The rooms were spacious, impeccably clean, and offered breathtaking ocean views. The amenities, including the spa and pool, were top-notch. Highly recommend this hotel for a relaxing getaway!",
         "Unfortunately, our dinner experience at Bella's Bistro was disappointing. The service was slow and inattentive, and our meals arrived cold after a long wait. Additionally, the dishes lacked flavor and were not up to the standard expected given the price. We left feeling unsatisfied and unlikely to return."];
+    OnStart: |-
+        =
+        Set(CurrentAppUri, First('Canvas Apps').AppOpenUri);
+        Set(CurrentEnvironmentID, Right(Match(CurrentAppUri,"/e/.*(?=/a)").FullMatch,36));
     StartScreen: |-
         =IfError('AI Chart'.Predict(txtInputParagraph.Value).Text, If(!IsBlank(Find("QuotaExceeded",FirstError.Message))||!IsBlank(Find("EntitlementNotAvailable",FirstError.Message)),
         'NoCredit Screen'),'Home Screen')

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="FluentAIAssistant_Disp_Key" xml:space="preserve">
-    <value>FluentAI Assistance</value>
+    <value>FluentAI Assistance (0.0.9)</value>
     <comment>Name of the Output Card control.</comment>
   </data>
   <data name="FluentAIAssistant_Title_Disp_Key" xml:space="preserve">

@@ -11,6 +11,7 @@
           "additionalContext": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "AdditionalContext",
             "Type": "string/byte"
@@ -18,6 +19,7 @@
           "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"
@@ -32,6 +34,7 @@
           "FinishReason": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Finish Reason",
             "Type": "string"
@@ -39,6 +42,7 @@
           "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"

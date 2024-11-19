@@ -1,0 +1,141 @@
+[
+  {
+    "DataBoundServiceDataSetName": "default.cds",
+    "DataBoundServiceFunctionNamesKey": [
+      "Predict-202409.5.24.1"
+    ],
+    "DataBoundServiceOperationGroupNameKey": "AIBuilder\\1ed8ac15-872e-4215-9c53-5d9e4ebc7ed4",
+    "DataBoundServiceRawMetadata": {
+      "Input": {
+        "Attributes": {
+          "additionalContext": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "AdditionalContext",
+            "Type": "string/byte"
+          },
+          "Image1": {
+            "Attributes": {
+              "base64Encoded": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Image1",
+                "Type": "string/byte"
+              }
+            },
+            "IsCollection": false,
+            "RequiredAttributes": [
+              "base64Encoded"
+            ],
+            "SchemaName": null,
+            "Title": "",
+            "Type": "object"
+          },
+          "Image2": {
+            "Attributes": {
+              "base64Encoded": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Image2",
+                "Type": "string/byte"
+              }
+            },
+            "IsCollection": false,
+            "RequiredAttributes": [
+              "base64Encoded"
+            ],
+            "SchemaName": null,
+            "Title": "",
+            "Type": "object"
+          }
+        },
+        "RequiredAttributes": [
+          "Image1",
+          "Image2"
+        ]
+      },
+      "Output": {
+        "Attributes": {
+          "FinishReason": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Finish Reason",
+            "Type": "string"
+          },
+          "StructuredOutput": {
+            "Attributes": {
+              "differences": {
+                "Attributes": {
+                  "Image1": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "Image1",
+                    "Type": "string"
+                  },
+                  "Image2": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "Image2",
+                    "Type": "string"
+                  },
+                  "location": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "location",
+                    "Type": "string"
+                  },
+                  "object": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "object",
+                    "Type": "string"
+                  }
+                },
+                "IsCollection": true,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": null,
+                "Type": "array"
+              }
+            },
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "",
+            "Type": "object"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        }
+      },
+      "Source": true,
+      "TemplateName": "GptPowerPrompt"
+    },
+    "DataBoundSourceDataSourceName": "43b0dc67-68af-47ae-9a9c-9e69d396ba3e",
+    "Name": "AI Diff Image",
+    "ServiceKind": "DataBound",
+    "Type": "ServiceInfo"
+  }
+]

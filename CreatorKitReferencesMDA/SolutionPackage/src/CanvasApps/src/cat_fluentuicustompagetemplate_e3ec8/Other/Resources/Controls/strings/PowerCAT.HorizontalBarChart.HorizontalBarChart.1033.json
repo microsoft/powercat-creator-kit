@@ -1,0 +1,19 @@
+{
+  "HorizontalBarChart_AbsoluteScale_Display_Key": "Absolute Scale",
+  "HorizontalBarChart_AccessibilityLabel_Display_Key": "Accessibility Label",
+  "HorizontalBarChart_BarHeight_Display_Key": "Bar Height",
+  "HorizontalBarChart_ChartData_Display_Key": "ChartData",
+  "HorizontalBarChart_ChartDataMode_Display_Key": "Chart Data Mode",
+  "HorizontalBarChart_Customcolors_Display_Key": "Custom colors",
+  "HorizontalBarChart_Default_Display_Key": "Default",
+  "HorizontalBarChart_desc": "Horizontal stacked bar chart displays multiple series of data as stacked bars, with each bar representing a category. The bars are stacked alongside each other, with the length of each bar representing the value of the category of the series.",
+  "HorizontalBarChart_Display_Key": "Fluent Horizontal bar Chart (1.1.39) Preview",
+  "HorizontalBarChart_Fraction_Display_Key": "Fraction",
+  "HorizontalBarChart_Hidelabels_Display_Key": "Hide labels",
+  "HorizontalBarChart_HideTooltip_Display_Key": "Hide Tooltip",
+  "HorizontalBarChart_PartToWhole_Display_Key": "Part To Whole",
+  "HorizontalBarChart_Percentage_Display_Key": "Percentage",
+  "HorizontalBarChart_Theme_Display_Key": "Theme",
+  "HorizontalBarChart_Title_Display_Key": "Title",
+  "HorizontalBarChart_Variant_Display_Key": "Variant"
+}

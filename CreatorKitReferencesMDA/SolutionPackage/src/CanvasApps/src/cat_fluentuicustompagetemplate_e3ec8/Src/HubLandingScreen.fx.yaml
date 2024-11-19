@@ -1,0 +1,916 @@
+HubLandingScreen As screen:
+    Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =/* Load data for this page while spinner is loading */
+        If( init <> true,
+            // TODO: Additional Dataloading Loading here
+        
+            // Stop spinner 
+            UpdateContext({ init: true });
+        );
+
+    cAppFrameContainer As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =24
+        LayoutMode: =LayoutMode.Auto
+        PaddingRight: =0.00
+        PaddingTop: =0.00
+        Width: =Parent.Width
+        X: =0.00
+        ZIndex: =1
+
+        cContentHeader As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 0)
+            FillPortions: =0
+            Height: =160
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            PaddingRight: =0.00
+            PaddingTop: =0.00
+            Width: =1268.76
+            X: =0.00
+            Y: =16
+            ZIndex: =1
+
+            imgBanner As image:
+                BorderColor: =App.Theme.Colors.Darker40
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: |-
+                    =ColorValue("#FFFFFF")//ColorValue("#E8B0D3") //
+                Height: =Parent.Height
+                Image: ='Asset 25'
+                ImagePosition: =ImagePosition.Fill
+                Transparency: =0.85
+                Visible: =false
+                Width: =Parent.Width
+                X: =0.00
+                ZIndex: =1
+
+            htmlGradient_1 As htmlViewer:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Height: =Parent.Height+2
+                HtmlText: |
+                    =$"<div style='width:100%;height:{Self.Height-1}px; background: linear-gradient(90deg, { 
+                        AppTheme.palette.themeTertiary }11 10%, { AppTheme.palette.themePrimary }33 100%, transparent)'></div>"
+                    /* Hint: {#FFFFFF}(Hex Value) + {FF} (Alpha value) = Transparent hex 88% (X axis dist) */
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Visible: =false
+                Width: =Parent.Width
+                ZIndex: =2
+
+            cBannerMain_1 As groupContainer.horizontalAutoLayoutContainer:
+                Height: =Parent.Height
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutJustifyContent: =LayoutJustifyContent.Center
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =    
+                Width: =Parent.Width        
+                ZIndex: =4
+
+                cBannerContent_1 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    Height: =Parent.Height
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutJustifyContent: =LayoutJustifyContent.Center
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =Margins / 2
+                    PaddingRight: =Self.PaddingLeft
+                    PaddingTop: =0.00
+                    Width: =Min(Parent.Width - (App.ActiveScreen.Width * 0.05)*2, 600)
+                    X: =0.00
+                    ZIndex: =1
+
+                    h1LandingTitle_1 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =48
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        PaddingLeft: =0
+                        Size: =Switch(App.ActiveScreen.Size,ScreenSize.Small,20,ScreenSize.Medium,28,32)
+                        Text: ="Hub Landing Page"
+                        Weight: ='TextCanvas.Weight'.Bold
+                        Width: =Min(Parent.Width - (App.ActiveScreen.Width * 0.05)*2, 500)
+                        Wrap: =false
+                        X: =394.49
+                        Y: =0
+                        ZIndex: =1
+
+                    Label3_1 As label:
+                        AutoHeight: =true
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Color: |-
+                            =ColorValue("#242424")
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        Font: =Font.'Segoe UI'
+                        LineHeight: =1.4
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =Switch(App.ActiveScreen.Size,ScreenSize.Small,11,ScreenSize.Medium,12,14)*0.75
+                        Text: ="Pellentesque blandit non dolor eu imperdiet. Sed blandit ex magna, ac interdum libero consequat in."
+                        VerticalAlign: =VerticalAlign.Top
+                        Width: =Min(Parent.Width - (App.ActiveScreen.Width * 0.05)*2, 500)
+                        X: =394.49
+                        ZIndex: =2
+
+            htmlGradient_2 As htmlViewer:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                Height: =10
+                HtmlText: |
+                    =$"<div style='width:100%;height:{Self.Height-1}px; background: linear-gradient(0deg, { AppTheme.palette.neutralSecondary }11 , transparent)'></div>"
+                    /* Hint: {#FFFFFF}(Hex Value) + {FF} (Alpha value) = Transparent hex 88% (X axis dist) */
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =13
+                Visible: =false
+                Width: =Parent.Width
+                Y: =Parent.Height - Self.Height + 2
+                ZIndex: =5
+
+        cMainContainer As groupContainer.verticalAutoLayoutContainer:
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: =Margins/2
+            PaddingRight: =Margins/2
+            ZIndex: =3
+
+            Container2 As groupContainer.verticalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =Max(cBufferHub_0.Y + cBufferHub_0.Height, Parent.Height-Self.Y)
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingLeft: =2
+                PaddingRight: =2
+                Width: =
+                ZIndex: =1
+
+                cSectionHeader_1 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =28
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =8
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =1147.88
+                    X: =1.87
+                    ZIndex: =1
+
+                    TextCanvas2_2 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =28
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =20
+                        Text: ="Features"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =479.77
+                        X: =0.00
+                        Y: =0
+                        ZIndex: =1
+
+                    LinkCanvas2_2 As Link:
+                        Align: ='LinkCanvas.Align'.End
+                        Appearance: ="Default"
+                        BasePaletteColor: =
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =14
+                        Height: =22
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =320
+                        Text: ="See more"
+                        Visible: =false
+                        Width: =74.96
+                        X: =1072.91
+                        Y: =0
+                        ZIndex: =5
+
+                cCardsRow_2 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: |-
+                        =/* Responsive tip: Reference the last item in the container's vertical position and height */ Card1_13.Y + Card1_13.Height + 24
+                    LayoutGap: =16
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =2
+                    PaddingRight: =2
+                    PaddingTop: =2
+                    Width: =Parent.Width - Self.X * 2
+                    X: =1.87
+                    Y: =51
+                    ZIndex: =2
+
+                    "Card1_16 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        Description: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =
+                        Height: =Self.AutoHeight
+                        Image: =SampleThumbnail
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =200
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: =
+                        Title: ="Title"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "Card1_9 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        Description: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =
+                        Height: =Self.AutoHeight
+                        Image: =SampleThumbnail2
+                        ImagePlacement: ='PowerCAT.Card.ImagePlacement'.'Above header'
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =200
+                        OnSelect: |-
+                            =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                            Navigate(FeatureLandingScreen)
+                        Subtitle: =
+                        Title: ="Feature"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    "Card1_10 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        AlignInContainer: =AlignInContainer.Stretch
+                        Description: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =
+                        Height: =Self.AutoHeight
+                        Image: =SampleThumbnail4
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =200
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: =
+                        Title: ="Dashboard"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    "Card1_13 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        Description: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =
+                        Height: =Self.AutoHeight
+                        Image: =SampleThumbnail3
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =200
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: =
+                        Title: ="Form"
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                    cBufferLanding_3 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =FlexOn
+                        Height: =50
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =230
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Visible: =Card1_13.Y > 2 //cCardsRow.Height > cCard_3.Height + 20
+                        Width: =468.52
+                        X: =0.00
+                        ZIndex: =5
+
+                    cBufferLanding_7 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =FlexOn
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =230
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Visible: =Card1_13.Y > 2 //cCardsRow.Height > cCard_3.Height + 20
+                        Width: =468.52
+                        X: =0.00
+                        ZIndex: =6
+
+                cCardsRow As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: |-
+                        =/* Responsive tip: Reference the last item in the container's vertical position and height */ Card1_4.Y + Card1_4.Height + 24
+                    LayoutGap: =16
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =2
+                    PaddingRight: =2
+                    PaddingTop: =2
+                    Visible: =false
+                    Width: =Parent.Width - Self.X * 2
+                    X: =1.87
+                    Y: =51
+                    ZIndex: =3
+
+                    "Card1 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage1
+                        Height: =Self.AutoHeight
+                        Image: =
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: |-
+                            =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                            Navigate(FeatureLandingScreen)
+                        Subtitle: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        Title: ="Feature landing"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "Card1_1 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage7
+                        Height: =Self.AutoHeight
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        Title: ="Dashboard"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    "Card1_2 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage6
+                        Height: =Self.AutoHeight
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        Title: ="List"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    "Card1_3 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage4
+                        Height: =Self.AutoHeight
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        Title: ="Form"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                    "Card1_4 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage4
+                        Height: =Self.AutoHeight
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Subtitle: ="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                        Title: ="Cards"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+                    cBufferLanding_1 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =FlexOn
+                        Height: =50
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =230
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Visible: =Card1_4.Y > 2 //cCardsRow.Height > cCard_3.Height + 20
+                        Width: =468.52
+                        X: =0.00
+                        ZIndex: =6
+
+                    cBufferLanding_5 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =FlexOn
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =230
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Visible: =Card1_4.Y > 2 //cCardsRow.Height > cCard_3.Height + 20
+                        Width: =468.52
+                        X: =0.00
+                        ZIndex: =7
+
+                cSectionHeader_2 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =28
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =8
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =1147.88
+                    X: =1.87
+                    ZIndex: =4
+
+                    TextCanvas2_3 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =
+                        Height: =28
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =20
+                        Text: |-
+                            ="Latest
+                            "
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =479.77
+                        X: =0.00
+                        Y: =0
+                        ZIndex: =1
+
+                MainContainer1_3 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    DropShadow: =DropShadow.Semilight
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =0
+                    Height: =Max(div_8.Y, 120)
+                    LayoutAlignItems: =LayoutAlignItems.Stretch
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =0   
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingLeft: =20
+                    PaddingTop: =
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =Parent.Width - Self.X * 2
+                    ZIndex: =5
+
+                    "FluentDetailsList1 As 'Fluent Details List (1.1.39)'.pcfdataset":
+                        columns_Items: |-
+                            =Table(
+                                {
+                                    ColName: "cat_name",
+                                    ColDisplayName: "Name",
+                                    ColWidth: 300,
+                                    ColSortable: false,
+                                    ColIsBold: true,
+                                    ColResizable: true,
+                                    ColCellType: "link"
+                                },{
+                                    ColName: "cat_description",
+                                    ColDisplayName: "Description",
+                                    ColWidth: 300,
+                                    ColSortable: true,
+                                    ColResizable: true,
+                                    ColShowAsSubTextOf: If(numCols <= 6, "cat_name"),
+                                    ColRowHeader:true
+                                },
+                                {
+                                    ColName: "cat_category",
+                                    ColDisplayName: "Category",
+                                    ColWidth: Self.Width - 300 - 300 - 100 - 80,
+                                    ColSortable: true,
+                                    ColResizable: true,
+                                    ColShowAsSubTextOf: If(numCols <= 6, "cat_name"),
+                                    ColRowHeader:true
+                                },
+                                {
+                                    ColName: "cat_cost",
+                                    ColDisplayName: "Cost",
+                                    ColWidth: 100,
+                                    ColSortable: true,
+                                    ColResizable: true,
+                                    ColShowAsSubTextOf: If(numCols <= 6, "cat_name"),
+                                    ColRowHeader:true,
+                                    ColIsBold:true
+                                }
+                            )
+                        Compact: =true
+                        DisplayMode: =DisplayMode.Edit
+                        HeaderVisible: =true
+                        Height: =Max((CountIf(ListItems, true) * If(numCols<= 6, 85, 40) ), 100)
+                        Items: =ListItems
+                        LargeDatasetPaging: =false
+                        LayoutMinHeight: =200
+                        LayoutMinWidth: =200
+                        RaiseOnRowSelectionChangeEvent: =true
+                        SelectionType: ='PowerCAT.FluentDetailsList.SelectionType'.None
+                        SelectRowsOnFocus: =false
+                        Theme: =AppThemeJson
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                        "Name1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Name"
+                            FieldName: ="cat_name"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =8
+
+                        "Description1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Description"
+                            FieldName: ="cat_description"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =9
+
+                        "Category1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Category"
+                            FieldName: ="cat_category"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =10
+
+                        "Brand1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Brand"
+                            FieldName: ="cat_brand"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =11
+
+                        "Cost1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Cost"
+                            FieldName: ="cat_cost"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =12
+
+                        "Quantity1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Quantity"
+                            FieldName: ="cat_quantity"
+                            FieldType: ="n"
+                            FieldVariantName: ="textualColumn"
+                            Order: =6
+                            ZIndex: =13
+
+                        "Sample1 As 'cat_PowerCAT.FluentDetailsListTemplate_dataField'.textualColumn":
+                            FieldDisplayName: ="Sample"
+                            FieldName: ="cat_sampleid"
+                            FieldType: ="g"
+                            FieldVariantName: ="textualColumn"
+                            Order: =7
+                            ZIndex: =14
+
+                    cEmptyState_2 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =0
+                        Height: =314
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Visible: =IsEmpty(ListItems)
+                        Width: =333
+                        X: =469
+                        Y: =93
+                        ZIndex: =3
+
+                        Image3_3 As image:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledFill: =RGBA(0, 0, 0, 0)
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            Image: ='Empty states'
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            ZIndex: =1
+
+                        txtSubtitle1_EmptyState_2 As Text:
+                            Align: ='TextCanvas.Align'.Center
+                            AlignInContainer: =AlignInContainer.Center
+                            BorderColor: =
+                            DisplayMode: =DisplayMode.Edit
+                            Fill: =
+                            FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                            Height: =36
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =20
+                            Text: ="Empty state"
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =250
+                            Wrap: =false
+                            X: =40
+                            Y: =193
+                            ZIndex: =2
+
+                        lblBody1_EmptyState_2 As Label:
+                            AlignInContainer: =AlignInContainer.Center
+                            Alignment: =Align.Center
+                            AutoHeight: =true
+                            Color: =ColorValue(AppTheme.palette.neutralPrimaryAlt)
+                            DisplayMode: =DisplayMode.Edit
+                            FontSize: =10.5
+                            FontWeight: =FontWeight.Normal
+                            Height: =12
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =320
+                            OnChange: =false
+                            Text: ="Try adjusting the filters or refining with simpler keywords for a broader search."
+                            VerticalAlignment: =VerticalAlign.Middle
+                            Width: =320
+                            X: =320
+                            Y: =197
+                            ZIndex: =3
+
+                        Container9_2 As groupContainer.horizontalAutoLayoutContainer:
+                            AlignInContainer: =AlignInContainer.Start
+                            FillPortions: =0
+                            Height: =44
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutGap: =8
+                            LayoutJustifyContent: =LayoutJustifyContent.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            Width: =Parent.Width
+                            ZIndex: =4
+
+                            btnEmptyActionPrimary_2 As Button:
+                                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                                BasePaletteColor: =
+                                BorderColor: =
+                                DisplayMode: =DisplayMode.Edit
+                                FontColor: =
+                                Height: =32
+                                LayoutMinHeight: =32
+                                LayoutMinWidth: =96
+                                OnSelect: |-
+                                    =UpdateContext({ searchText: "" }); 
+                                Text: ="Action"
+                                Width: =132
+                                X: =542
+                                Y: =0
+                                ZIndex: =1
+
+                    div_8 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =2
+                        Width: =Parent.Width - Self.X * 2
+                        X: =84
+                        Y: =256
+                        ZIndex: =4
+
+                cSectionHeader_3 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =0
+                    Height: =28
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =8
+                    LayoutJustifyContent: =LayoutJustifyContent.SpaceBetween
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =0.00
+                    PaddingTop: =0.00
+                    Width: =1147.88
+                    X: =1.87
+                    ZIndex: =6
+
+                    TextCanvas2_4 As Text:
+                        Align: ='TextCanvas.Align'.Start
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        FontColor: =
+                        Height: =28
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Size: =20
+                        Text: ="Learning Resources"
+                        Weight: ='TextCanvas.Weight'.Semibold
+                        Width: =479.77
+                        X: =0.00
+                        Y: =0
+                        ZIndex: =1
+
+                cCardsRow_3 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    FillPortions: =0
+                    Height: |-
+                        =/* Responsive tip: Reference the last item in the container's vertical position and height */ Card1_18.Y + Card1_18.Height + 24
+                    LayoutGap: =16
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    LayoutWrap: =true
+                    PaddingLeft: =2
+                    PaddingRight: =2
+                    PaddingTop: =2
+                    Width: =Parent.Width - Self.X * 2
+                    X: =1.87
+                    Y: =51
+                    ZIndex: =7
+
+                    "Card1_14 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage1
+                        Height: =Self.AutoHeight
+                        Image: =
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: |-
+                            =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                            Navigate(FeatureLandingScreen)
+                        Size: ='PowerCAT.Card.Size'.Small
+                        Subtitle: ="Discover how the code review works"
+                        Title: ="Documentation"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    "Card1_15 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        Alignment: ='PowerCAT.Card.Alignment'.Vertical
+                        Description: =
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage7
+                        Height: =Self.AutoHeight
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Size: ='PowerCAT.Card.Size'.Small
+                        Subtitle: ="Create a review for your solution."
+                        Title: ="Quick Start"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =2
+
+                    "Card1_18 As 'Fluent Card (1.1.39) Preview'.pcfdataset":
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =1
+                        HeaderImage: =SampleImage4
+                        Height: =Self.AutoHeight
+                        Items: =
+                        LayoutMinHeight: =Self.AutoHeight
+                        LayoutMinWidth: =300
+                        OnSelect: =//Switch(Self.Selected.ItemKey,/* Action for Key 'mail' */"mail",Notify("Contact clicked"),/* Action for 'chat' */"chat",Notify("Chat clicked"),/* Default action */  Notify("Unrecognized button clicked"))
+                        Size: ='PowerCAT.Card.Size'.Small
+                        Subtitle: ="See the release plan"
+                        Title: ="Coming Soon"
+                        Width: =300
+                        X: =0
+                        Y: =0
+                        ZIndex: =5
+
+                    cBufferLanding_4 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =FlexOn
+                        Height: =50
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =230
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Visible: =Card1_18.Y > 2 //cCardsRow.Height > cCard_3.Height + 20
+                        Width: =468.52
+                        X: =0.00
+                        ZIndex: =6
+
+                    cBufferLanding_8 As groupContainer.verticalAutoLayoutContainer:
+                        FillPortions: =FlexOn
+                        Height: =100
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =230
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingRight: =0.00
+                        PaddingTop: =0.00
+                        Visible: =Card1_18.Y > 2 //cCardsRow.Height > cCard_3.Height + 20
+                        Width: =468.52
+                        X: =0.00
+                        ZIndex: =7
+
+                cBufferHub_0 As groupContainer.verticalAutoLayoutContainer:
+                    FillPortions: =FlexOff
+                    Height: =24
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    ZIndex: =8
+
+    cLoader As groupContainer.verticalAutoLayoutContainer:
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutJustifyContent: =LayoutJustifyContent.Center
+        LayoutMode: =LayoutMode.Auto
+        Visible: =IsBlank(AppTheme) //|| showLoader
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Spinner1_4 As Spinner:
+            DisplayMode: =DisplayMode.Edit
+            Height: =200
+            Label: ="Loading ..."
+            LabelPosition: ='Spinner.LabelPosition'.Below
+            LayoutMinHeight: =200
+            LayoutMinWidth: =200
+            Visible: =true
+            Width: =200
+            X: =0
+            Y: =0
+            ZIndex: =1
+

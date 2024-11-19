@@ -1,0 +1,767 @@
+__typeramp__ As screen:
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+
+    ScreenContainer1_12 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Center
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        ZIndex: =1
+
+        cPageHeader_6 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+            FillPortions: =0
+            Height: =rDivider_11.Y +1 /* Do not delete divider to calculate Height */
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32
+            PaddingRight: =32
+            PaddingTop: =24
+            Width: =1280
+            Y: =-21
+            ZIndex: =2
+
+            cListHeader_13 As groupContainer.horizontalAutoLayoutContainer:
+                FillPortions: =0
+                Height: =PageHeader_10.Height
+                LayoutAlignItems: =LayoutAlignItems.Center
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Width: =1280
+                ZIndex: =4
+
+                PageHeader_10 As PageHeader:
+                    DescriptionText: |-
+                        ="Typography can be used in a product to quickly establish a reading hierarchy for content.
+                        
+                        Microsoft’s typeface is Segoe UI. The type ramp is defined by Fluent design system, and is designed to accommodate various levels of written content. All Creator Kit controls are built using the Fluent type ramp. "
+                    FillPortions: =FlexOn
+                    Height: =PageHeader_10.AutoHeight
+                    IconName: =
+                    LayoutMinHeight: =640
+                    LayoutMinWidth: =640
+                    OnIconSelectNavScreen: =
+                    TitleText: ="Typeramp"
+
+                Container21_11 As groupContainer.horizontalAutoLayoutContainer:
+                    FillPortions: =FlexOn
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =12
+                    LayoutJustifyContent: =LayoutJustifyContent.End
+                    LayoutMinHeight: =60
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingRight: =16
+                    ZIndex: =5
+
+                    ButtonCanvas4_31 As Button:
+                        Align: =""
+                        BasePaletteColor: =
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =32
+                        Icon: ="Save"
+                        IconRotation: =0
+                        IconStyle: ="Outline"
+                        Layout: ="Icon before"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: =
+                        Text: ="Save"
+                        VerticalAlign: =""
+                        Visible: =false
+                        Width: =84
+                        X: =404
+                        Y: =0
+                        ZIndex: =6
+
+                    ButtonCanvas4_33 As Button:
+                        Align: =""
+                        Appearance: ='ButtonCanvas.Appearance'.Subtle
+                        BasePaletteColor: =
+                        BorderStyle: =""
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =32
+                        Icon: ="Circle"
+                        IconRotation: =0
+                        IconStyle: ="Outline"
+                        Layout: ="Icon before"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: =
+                        VerticalAlign: =""
+                        Width: =32
+                        X: =419
+                        Y: =0
+                        ZIndex: =11
+
+            "tabTyperamp As 'Tab list'.pcfdataset":
+                DisplayMode: =DisplayMode.Edit
+                Height: =34
+                Items: =["Modern", "Legacy"]
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                Size: ='TabList.Size'.Small
+                Width: =280
+                X: =0
+                Y: =150
+                ZIndex: =12
+
+            rDivider_11 As rectangle:
+                BorderColor: =App.Theme.Colors.Darker40
+                Fill: =ColorValue(AppTheme.palette.neutralLight)
+                Height: =1
+                Width: =Parent.Width - Self.X * 2
+                X: =72
+                Y: =52
+                ZIndex: =21
+
+        Container7_3 As groupContainer.verticalAutoLayoutContainer:
+            Fill: =ColorValue(AppTheme.palette.white)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =32  
+            PaddingTop: =16
+            Width: =Parent.Width
+            ZIndex: =3
+
+            Container4_7 As groupContainer.verticalAutoLayoutContainer:
+                Height: =645
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =4
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutOverflowY: =LayoutOverflow.Scroll
+                PaddingTop: =16
+                Visible: =tabTyperamp.Selected.Value = "Modern"
+                Width: =649
+                X: =9
+                ZIndex: =1
+
+                txtCaption2_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Caption2").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Caption2").fontSize
+                    Text: ="Caption 2"
+                    Weight: =LookUp(_typeramp,name="Caption2").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =47
+                    ZIndex: =2
+
+                txtCaption2Strong_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Caption2Strong").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Caption2Strong").fontSize
+                    Text: ="Caption 2 Strong"
+                    Weight: =LookUp(_typeramp,name="Caption2Strong").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =70
+                    ZIndex: =3
+
+                txtCaption1_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Caption1").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Caption1").fontSize
+                    Text: ="Caption 1"
+                    Weight: =LookUp(_typeramp,name="Caption1").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =94
+                    ZIndex: =4
+
+                txtCaption1Strong_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Caption1Strong").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Caption1Strong").fontSize
+                    Text: ="Caption 1 Strong"
+                    Weight: =LookUp(_typeramp,name="Caption1Strong").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =122
+                    ZIndex: =5
+
+                txtCaption1Stronger_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Caption1Stronger").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Caption1Stronger").fontSize
+                    Text: ="Caption 1 Stronger"
+                    Weight: =LookUp(_typeramp,name="Caption1Stronger").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =155
+                    ZIndex: =6
+
+                txtBody1_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Body1").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Body1").fontSize
+                    Text: ="Body 1"
+                    Weight: =LookUp(_typeramp,name="Body1").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =188
+                    ZIndex: =7
+
+                txtBody1Strong_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Body1Strong").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Body1Strong").fontSize
+                    Text: ="Body 1 Strong"
+                    Weight: =LookUp(_typeramp,name="Body1Strong").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =223
+                    ZIndex: =8
+
+                txtBody1Stronger_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Body1Stronger").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Body1").fontSize
+                    Text: ="Body 1 Stronger"
+                    Weight: =LookUp(_typeramp,name="Body1Stronger").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =262
+                    ZIndex: =9
+
+                txtSubtitle2_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Subtitle2Stronger").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Subtitle2Stronger").fontSize
+                    Text: ="Subtitle 2"
+                    Weight: =LookUp(_typeramp,name="Subtitle2Stronger").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =295
+                    ZIndex: =10
+
+                txtSubtitle2Stronger_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Subtitle2Stronger").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Subtitle2Stronger").fontSize
+                    Text: ="Subtitle 2 Stronger"
+                    Weight: =LookUp(_typeramp,name="Subtitle2Stronger").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =335
+                    ZIndex: =11
+
+                txtSubtitle1_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Subtitle1").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Subtitle1").fontSize
+                    Text: ="Subtitle 1"
+                    Weight: =LookUp(_typeramp,name="Subtitle1").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =377
+                    ZIndex: =12
+
+                txtTitle3_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Title3").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Title3").fontSize
+                    Text: ="Title 3"
+                    Weight: =LookUp(_typeramp,name="Title3").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =419
+                    ZIndex: =13
+
+                txtTitle2_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Title2").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Title2").fontSize
+                    Text: ="Title 2"
+                    Weight: =LookUp(_typeramp,name="Title2").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =464
+                    ZIndex: =14
+
+                txtTitle1_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Title1").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Title1").fontSize
+                    Text: ="Title 1"
+                    Weight: =LookUp(_typeramp,name="Title1").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =509
+                    ZIndex: =15
+
+                txtLargeTitle_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="LargeTitle").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="LargeTitle").fontSize
+                    Text: ="Large Title"
+                    Weight: =LookUp(_typeramp,name="LargeTitle").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =558
+                    ZIndex: =16
+
+                txtDisplay_1 As Text:
+                    BorderColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    Fill: =
+                    FontColor: =ColorValue(AppTheme.palette.neutralPrimary)
+                    Height: =LookUp(_typeramp,name="Display").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =96
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =LookUp(_typeramp,name="Display").fontSize
+                    Text: ="Display"
+                    Weight: =LookUp(_typeramp,name="Display").fontWeight
+                    Width: =250
+                    Wrap: =false
+                    X: =7
+                    Y: =617
+                    ZIndex: =17
+
+            Container4_8 As groupContainer.verticalAutoLayoutContainer:
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                Visible: =tabTyperamp.Selected.Value = "Legacy"
+                ZIndex: =2
+
+                lblCaption2_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Caption2").fontSizeLegacy
+                    FontWeight: =LookUp(_typeramp,name="Caption2").fontWeightLegacy
+                    Height: =LookUp(_typeramp,name="Caption2").lineHeight + 6
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Caption 2"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =47
+                    ZIndex: =2
+
+                lblCaption2Strong_1 As Label:
+                    Alignment: =Align.Left
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Caption2Strong").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Caption2Strong").lineHeight + 6
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Caption 2 Strong"
+                    VerticalAlignment: =VerticalAlign.Top
+                    Width: =320
+                    X: =5
+                    Y: =70
+                    ZIndex: =3
+
+                lblCaption1_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Caption1").fontSizeLegacy
+                    FontWeight: =LookUp(_typeramp,name="Caption1").fontWeightLegacy
+                    Height: =LookUp(_typeramp,name="Caption1").lineHeight + 2
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Caption 1"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =96
+                    ZIndex: =4
+
+                lblCaption1Strong_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Caption1Stronger").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Caption1Stronger").lineHeight + 6
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Caption 1 Strong"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =122
+                    ZIndex: =5
+
+                lblCaption1Stronger_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Caption1Stronger").fontSizeLegacy
+                    FontWeight: =LookUp(_typeramp,name="Caption1Stronger").fontWeightLegacy
+                    Height: =LookUp(_typeramp,name="Caption1Stronger").lineHeight + 4
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Caption 1 Stronger"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =153
+                    ZIndex: =6
+
+                lblBody1_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Body1").fontSizeLegacy
+                    FontWeight: =FontWeight.Normal
+                    Height: =LookUp(_typeramp,name="Body1").lineHeight + 8
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Body 1"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =184
+                    ZIndex: =7
+
+                lblBody1Strong_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Body1Strong").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Body1Strong").lineHeight + 6
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Body 1 Strong"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =220
+                    ZIndex: =8
+
+                lblBody1Stronger_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Body1Stronger").fontSizeLegacy
+                    FontWeight: =LookUp(_typeramp,name="Body1Stronger").fontWeightLegacy
+                    Height: =LookUp(_typeramp,name="Body1Stronger").lineHeight + 8
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Body 1 Stronger"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =260
+                    ZIndex: =9
+
+                lblSubtitle2_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Subitle2").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Subtitle2").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Subtitle 2"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =296
+                    ZIndex: =10
+
+                lblSubtitle2Stronger_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Subitle2Stronger").fontSizeLegacy
+                    FontWeight: =LookUp(_typeramp,name="Subitle2Stronger").fontWeight
+                    Height: =LookUp(_typeramp,name="Subitle2Stronger").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Subtitle 2 Stronger"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =333
+                    ZIndex: =11
+
+                lblSubtitle1_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Subitle1").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Subitle1").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Subtitle 1"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =377
+                    ZIndex: =12
+
+                lblTitle3_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Title3").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Title3").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Title 3"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =419
+                    ZIndex: =13
+
+                lblTitle2_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Title2").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Title2").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Title 2"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =464
+                    ZIndex: =14
+
+                lblTitle1_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Title1").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Title1").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Title 1"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =512
+                    ZIndex: =15
+
+                lblLargeTitle_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="LargeTitle").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="LargeTitle").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Large Title"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =561
+                    ZIndex: =16
+
+                lblDisplay_1 As Label:
+                    AutoHeight: =false
+                    Color: =ColorValue(AppTheme.palette.neutralPrimary)
+                    DisplayMode: =DisplayMode.Edit
+                    FontSize: =LookUp(_typeramp,name="Display").fontSizeLegacy
+                    FontWeight: =FontWeight.Semibold
+                    Height: =LookUp(_typeramp,name="Display").lineHeight
+                    LayoutMinHeight: =32
+                    LayoutMinWidth: =320
+                    OnChange: =false
+                    Text: ="Display"
+                    VerticalAlignment: =VerticalAlign.Middle
+                    Width: =320
+                    X: =5
+                    Y: =617
+                    ZIndex: =17
+

@@ -6,9 +6,12 @@
   <description>From the given  Text  generate questions and answers. example response: [ { Question:"What is Power Apps", Answer:"Power Apps is a low-code tool to build apps"}]
 
 </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>54b0c71e-8683-4c2f-9a60-ea59b9d43dc4</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIQnAGenerator</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

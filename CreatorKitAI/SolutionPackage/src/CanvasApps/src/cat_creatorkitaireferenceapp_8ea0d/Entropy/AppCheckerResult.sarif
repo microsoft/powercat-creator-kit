@@ -351,96 +351,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteLeftContainer_7.AddMediaButton1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteLeftContainer_7.AddMediaButton1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteLeftContainer_7.AddMediaButton1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteRightContainer_6.AddMediaButton1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteRightContainer_6.AddMediaButton1_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteRightContainer_6.AddMediaButton1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.btnImageDiff.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.btnImageDiff.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.btnImageDiff"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIRewriteContainer.AIRewriteMainContainer.AIRewriteLeftContainer.txtInputOriginalText.AccessibleLabel"
                 }
               ],
@@ -1311,6 +1221,246 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.AddMediaButton1_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.AddMediaButton1_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.AddMediaButton1_5"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.btnDetectAnomalies.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.btnDetectAnomalies.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.btnDetectAnomalies"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.Container4.ButtonCanvas1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.Container4.ButtonCanvas1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.Container4.ButtonCanvas1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIFlowchartContainer_6.AIFlowchartLeftContainer_6.txtInputOriginalText_7.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIFlowchartContainer_6.AIFlowchartLeftContainer_6.txtInputOriginalText_7.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIFlowchartContainer_6.AIFlowchartLeftContainer_6.txtInputOriginalText_7"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIFlowchartContainer_6.AIFlowchartLeftContainer_6.btnFlowchart.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIFlowchartContainer_6.AIFlowchartLeftContainer_6.btnFlowchart.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIFlowchartContainer_6.AIFlowchartLeftContainer_6.btnFlowchart"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteLeftContainer_7.AddMediaButton1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteLeftContainer_7.AddMediaButton1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteLeftContainer_7.AddMediaButton1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteRightContainer_6.AddMediaButton1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteRightContainer_6.AddMediaButton1_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.AIImageDiffSub.AIRewriteRightContainer_6.AddMediaButton1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.btnImageDiff.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.btnImageDiff.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home Screen",
+                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIImageDiffContainer.btnImageDiff"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIDescribeImageContainer.AIImageDiffSub_1.AIRewriteRightContainer_7.AddMediaButton1_3.AccessibleLabel"
                 }
               ],
@@ -1551,156 +1701,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.AddMediaButton1_5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.AddMediaButton1_5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.AddMediaButton1_5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.btnDetectAnomalies.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.btnDetectAnomalies.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIAnomalyContainer.AIImageDiffSub_3.AIRewriteRightContainer_9.btnDetectAnomalies"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.Container4.ButtonCanvas1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.Container4.ButtonCanvas1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.Container4.ButtonCanvas1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIRewriteMainContainer_6.AIRewriteLeftContainer_6.txtInputOriginalText_7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIRewriteMainContainer_6.AIRewriteLeftContainer_6.txtInputOriginalText_7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIRewriteMainContainer_6.AIRewriteLeftContainer_6.txtInputOriginalText_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIRewriteMainContainer_6.AIRewriteLeftContainer_6.btnRewrite_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIRewriteMainContainer_6.AIRewriteLeftContainer_6.btnRewrite_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Home Screen",
-                "type": "'Home Screen'.MainScreenContainer.BottomContainer2.MainContainer2.AIFlowchart.AIRewriteMainContainer_6.AIRewriteLeftContainer_6.btnRewrite_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'AIAssistant Screen'.MainScreenContainer_1.BottomContainer2_1.MainContainer2_1.AIAssistant_Container.AIRewriteMainContainer_5.AIRewriteLeftContainer_5.Container5.btnAIPrompt.AccessibleLabel"
                 }
               ],
@@ -1744,36 +1744,6 @@
                 "member": "varFlair",
                 "module": "App",
                 "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Home Screen'.flowchart"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Home Screen'.flowchart",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "flowchart",
-                "module": "Home Screen",
-                "type": "'Home Screen'"
               }
             }
           ],

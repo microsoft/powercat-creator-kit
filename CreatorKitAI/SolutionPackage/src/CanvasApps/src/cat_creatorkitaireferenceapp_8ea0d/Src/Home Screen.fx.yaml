@@ -7,6 +7,7 @@
         =Set(varTriggerAIModels, !varTriggerAIModels);
         NewForm(Form1);
         Concurrent(
+            Select(btnFlowchart);
             Select(btnImageDiff);
             Select(btnRewrite),
             Select(btnRedact),
@@ -106,7 +107,6 @@
             ZIndex: =1
 
             "icoInfo As 'Fluent Icon (1.1.39)'":
-                AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 IconColor: ="Gray"
@@ -121,7 +121,6 @@
                 ZIndex: =1
 
             "AutoWidthLabel1 As 'Auto Width Label (1.1.39)'":
-                AlignInContainer: =AlignInContainer.Center
                 DisplayMode: =DisplayMode.Edit
                 Height: =26
                 LayoutMinHeight: =200
@@ -700,7 +699,7 @@
                             =UpdateContext({showLoader:true});
                             Set(ImageDiffResultsCol,'AI Diff Image'.Predict(UploadedImage1_1.Image, UploadedImage1.Image).Text);
                             UpdateContext({showLoader:false});
-                        Text: ="Spot differences"
+                        Text: ="Find Differences"
                         VerticalAlign: =""
                         Width: =140
                         X: =0
@@ -3042,7 +3041,7 @@
                     Visible: =Nav1.Selected.ItemKey = "AIFlowchart"
                     ZIndex: =19
 
-                    AIRewriteMainContainer_6 As groupContainer.horizontalAutoLayoutContainer:
+                    AIFlowchartContainer_6 As groupContainer.horizontalAutoLayoutContainer:
                         LayoutAlignItems: =LayoutAlignItems.Stretch
                         LayoutGap: =10
                         LayoutMinHeight: =100
@@ -3054,11 +3053,11 @@
                         RadiusTopRight: =4
                         ZIndex: =2
 
-                        AIRewriteLeftContainer_6 As groupContainer.verticalAutoLayoutContainer:
+                        AIFlowchartLeftContainer_6 As groupContainer.verticalAutoLayoutContainer:
                             AlignInContainer: =AlignInContainer.SetByContainer
                             FillPortions: =0
                             LayoutDirection: =LayoutDirection.Vertical
-                            LayoutGap: =5
+                            LayoutGap: =10
                             LayoutMinHeight: =100
                             LayoutMinWidth: =250
                             LayoutMode: =LayoutMode.Auto
@@ -3096,55 +3095,23 @@
                                 Mode: ='TextInputCanvas.Mode'.Multiline
                                 TriggerOutput: ="FocusOut"
                                 Value: |-
-                                    ="Microsoft Cloud Strength Fuels First Quarter Results
+                                    ="Climate change is a complex and multifaceted issue that has far-reaching consequences for our planet. At its core, climate change refers to significant changes in global temperatures and weather patterns over time. While climate change is a natural phenomenon, human activities have accelerated its pace, leading to more severe and unpredictable impacts.
                                     
-                                    REDMOND, Wash. — October 24, 2023 — Microsoft Corp. today announced the following results for the quarter ended September 30, 2023, as compared to the corresponding period of last fiscal year:
+                                    One of the primary causes of climate change is the increase in greenhouse gases in the atmosphere. These gases, such as carbon dioxide (CO2), methane (CH4), and nitrous oxide (N2O), trap heat from the sun, creating a greenhouse effect that warms the Earth's surface. The burning of fossil fuels for energy, deforestation, and industrial processes are major contributors to the rise in greenhouse gas emissions. As a result, we are witnessing a rise in global temperatures, commonly referred to as global warming.
                                     
-                                    · Revenue was $56.5 billion and increased 13% (up 12% in constant currency)
+                                    The effects of climate change are diverse and widespread. One of the most visible impacts is the melting of polar ice caps and glaciers, which contributes to rising sea levels. This poses a significant threat to coastal communities, as higher sea levels can lead to more frequent and severe flooding. Additionally, climate change is linked to more extreme weather events, such as hurricanes, droughts, and heatwaves. These events can have devastating effects on agriculture, water supply, and human health.
                                     
-                                    · Operating income was $26.9 billion and increased 25% (up 24% in constant currency)
+                                    Another critical aspect of climate change is its impact on biodiversity. As temperatures rise and weather patterns shift, many species struggle to adapt to the changing conditions. This can lead to shifts in ecosystems, with some species becoming endangered or extinct. The loss of biodiversity can disrupt food chains and ecosystems, affecting everything from pollination of crops to the health of marine environments.
                                     
-                                    · Net income was $22.3 billion and increased 27% (up 26% in constant currency)
+                                    Addressing climate change requires a multifaceted approach. Reducing greenhouse gas emissions is crucial, which can be achieved through transitioning to renewable energy sources, improving energy efficiency, and adopting sustainable agricultural practices. Additionally, protecting and restoring forests can help absorb CO2 from the atmosphere. International cooperation and policy measures, such as the Paris Agreement, play a vital role in coordinating global efforts to combat climate change.
                                     
-                                    · Diluted earnings per share was $2.99 and increased 27% (up 26% in constant currency)
-                                    
-                                    ""With copilots, we are making the age of AI real for people and businesses everywhere,"" said Satya Nadella, chairman and chief executive officer of Microsoft. ""We are rapidly infusing AI across every layer of the tech stack and for every role and business process to drive productivity gains for our customers.""
-                                    
-                                    “Consistent execution by our sales teams and partners drove a strong start to the fiscal year with Microsoft Cloud revenue of $31.8 billion, up 24% (up 23% in constant currency) year-over-year,” said Amy Hood, executive vice president and chief financial officer of Microsoft.
-                                    
-                                    Business Highlights
-                                    
-                                    Revenue in Productivity and Business Processes was $18.6 billion and increased 13% (up 12% in constant currency), with the following business highlights:
-                                    
-                                    · Office Commercial products and cloud services revenue increased 15% (up 14% in constant currency) driven by Office 365 Commercial revenue growth of 18% (up 17% in constant currency)
-                                    
-                                    · Office Consumer products and cloud services revenue increased 3% (up 4% in constant currency) and Microsoft 365 Consumer subscribers grew to 76.7 million
-                                    
-                                    · LinkedIn revenue increased 8%
-                                    
-                                    · Dynamics products and cloud services revenue increased 22% (up 21% in constant currency) driven by Dynamics 365 revenue growth of 28% (up 26% in constant currency)
-                                    
-                                    Revenue in Intelligent Cloud was $24.3 billion and increased 19%, with the following business highlights:
-                                    
-                                    · Server products and cloud services revenue increased 21% driven by Azure and other cloud services revenue growth of 29% (up 28% in constant currency)
-                                    
-                                    Revenue in More Personal Computing was $13.7 billion and increased 3% (up 2% in constant currency), with the following business highlights:
-                                    
-                                    · Windows revenue increased 5% with Windows OEM revenue growth of 4% and Windows Commercial products and cloud services revenue growth of 8%
-                                    
-                                    · Devices revenue decreased 22%
-                                    
-                                    · Xbox content and services revenue increased 13% (up 12% in constant currency)
-                                    
-                                    · Search and news advertising revenue excluding traffic acquisition costs increased 10% (up 9% in constant currency)
-                                    
-                                    Microsoft returned $9.1 billion to shareholders in the form of share repurchases and dividends in the first quarter of fiscal year 2024. "
+                                    In conclusion, climate change is a pressing issue that demands immediate and sustained action. Its causes are deeply rooted in human activities, and its effects are already being felt across the globe. By understanding the causes and consequences of climate change, we can take informed steps to mitigate its impact and protect our planet for future generations."
                                 Width: =320
                                 X: =0
                                 Y: =0
                                 ZIndex: =2
 
-                            btnRewrite_1 As Button:
+                            btnFlowchart As Button:
                                 Align: =""
                                 AlignInContainer: =AlignInContainer.End
                                 BasePaletteColor: =
@@ -3160,11 +3127,11 @@
                                 LayoutMinWidth: =96
                                 OnSelect: |-
                                     =UpdateContext({showLoader:true, result:Blank()});
-                                    UpdateContext({flowchart:'AI Flowchart'.Predict(txtInputOriginalText_7.Value).Text});
+                                    UpdateContext({flowchart:'AI Flowchart'.Predict(txtInputOriginalText_7.Value,{AdditionalContext:Blank()}).StructuredOutput.mermaid});
                                     UpdateContext({showLoader:false});
                                 Text: ="Generate"
                                 VerticalAlign: =""
-                                Visible: =false
+                                Visible: =true
                                 Width: =96
                                 X: =0
                                 Y: =0
@@ -3210,6 +3177,18 @@
                                     PaddingTop: =20
                                     Width: =Parent.Width
                                     ZIndex: =3
+
+                                    Mermaid1 As Mermaid:
+                                        DisplayMode: =DisplayMode.Edit
+                                        FillPortions: =1
+                                        Height: =200
+                                        LayoutMinHeight: =200
+                                        LayoutMinWidth: =200
+                                        MermaidText: =flowchart
+                                        Width: =200
+                                        X: =0
+                                        Y: =0
+                                        ZIndex: =1
 
                 AIDescribeImageContainer As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -3641,7 +3620,7 @@
                                     Y: =0
                                     ZIndex: =3
 
-    APICaller1 As APICaller:
+    "APICaller1 As 'APICaller (%VERSION%)'":
         DisplayMode: =DisplayMode.Edit
         Height: =52
         RequestURL: =$"/api/data/v9.0/msdyn-aimodels"

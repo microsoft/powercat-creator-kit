@@ -10,9 +10,12 @@ You want to create a system that generates personalized email responses for cust
 
 Instructions:
 1. Use the following examples to train the model on generat</description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>479c9eaf-7889-47e7-94aa-76caea0de83f</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIPersonalizedResponse</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

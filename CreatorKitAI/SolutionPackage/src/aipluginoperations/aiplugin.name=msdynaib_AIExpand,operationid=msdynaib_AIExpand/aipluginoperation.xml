@@ -5,9 +5,12 @@
   </customapi>
   <description>Expand on the following topic  Text  in  Number of words words
 </description>
+  <isconsequential>0</isconsequential>
   <iscustomizable>1</iscustomizable>
   <msdyn_aimodel>
     <msdyn_aimodelid>99d8246e-f285-4932-8a07-6c1572eba975</msdyn_aimodelid>
   </msdyn_aimodel>
   <name>msdynaib_AIExpand</name>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
 </aipluginoperation>

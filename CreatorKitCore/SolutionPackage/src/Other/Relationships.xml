@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<EntityRelationships xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <EntityRelationship Name="business_unit_cat_sample" />
+  <EntityRelationship Name="FileAttachment_cat_Sample_cat_File" />
+  <EntityRelationship Name="lk_cat_sample_createdby" />
+  <EntityRelationship Name="lk_cat_sample_modifiedby" />
+  <EntityRelationship Name="owner_cat_sample" />
+  <EntityRelationship Name="team_cat_sample" />
+  <EntityRelationship Name="user_cat_sample" />
+</EntityRelationships>

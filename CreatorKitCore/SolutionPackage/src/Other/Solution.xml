@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.2.24044.222" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.2.24101.200" SolutionPackageVersion="9.2" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24101.200" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.24102.00194">
   <SolutionManifest>
     <UniqueName>CreatorKitCore</UniqueName>
     <LocalizedNames>
@@ -82,10 +82,12 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="1" schemaName="cat_sample" behavior="0" />
       <RootComponent type="300" schemaName="cat_powercatcomponentlibrary_0be3a" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.AutoWidthLabel" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Breadcrumb" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.Calendar" behavior="0" />
+      <RootComponent type="66" schemaName="cat_PowerCAT.Card" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.CommandBar" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.ContextMenu" behavior="0" />
       <RootComponent type="66" schemaName="cat_PowerCAT.DonutChart" behavior="0" />

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="SpinButton" xml:space="preserve">
-    <value>Fluent SpinButton (1.1.34)</value>
+    <value>Fluent SpinButton (1.1.39)</value>
     <comment/>
   </data>
   <data name="AccessibilityLabel" xml:space="preserve">

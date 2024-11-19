@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="StackedBarChart_Display_Key" xml:space="preserve">
-    <value>Fluent Stacked bar Chart (1.1.34) Preview</value>
+    <value>Fluent Stacked bar Chart (1.1.39) Preview</value>
     <comment>Name of the property that specifies Component name</comment>
   </data>
   <data name="StackedBarChart_desc" xml:space="preserve">

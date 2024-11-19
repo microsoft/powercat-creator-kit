@@ -52,6 +52,7 @@ Dialog As CanvasComponent:
     ZIndex: =3
 
     htmlShadow As htmlViewer:
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         Height: =Dialog.Height
         HtmlText: |-
             ="<div style=' transform: translate(-50%, -50%);position:absolute;top:50%;left:50%;margin:auto;box-shadow:rgba(0, 0, 0, 0.22) 0px 25.6px 57.6px 0px, rgba(0, 0, 0, 0.18) 0px 4.8px 14.4px 0px;border-radius:2px;padding:0;background-color:" & Dialog.Theme.palette.white & ";width:"& Dialog.DialogWidth &"px;height:" & Dialog.DialogHeight  &"px'></div>"

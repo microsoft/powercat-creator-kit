@@ -19,7 +19,7 @@ CommandBarOverflowItems As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -46,6 +46,7 @@ CommandBarOverflowItems As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -125,7 +126,7 @@ CommandBarOverflowItems As CanvasComponent:
             Y: =84
             ZIndex: =2
 
-        "commandBar As 'Fluent Command Bar (1.1.34)'.pcfdataset":
+        "commandBar As 'Fluent Command Bar (1.1.35)'.pcfdataset":
             AccessibilityLabel: ="Command Bar"
             DisplayMode: =DisplayMode.Edit
             Height: =32

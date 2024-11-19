@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cat_samples",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cat_sample",
+    "MaxGetRowsCount": 500,
+    "Name": "Samples",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cat_brand": "Brand",
+      "cat_category": "Category",
+      "cat_cost": "Cost",
+      "cat_description": "Description",
+      "cat_file": "File",
+      "cat_image": "Image",
+      "cat_imageid": "cat_ImageId",
+      "cat_name": "Name",
+      "cat_quantity": "Quantity",
+      "cat_sample_AsyncOperations": "System Jobs",
+      "cat_sample_BulkDeleteFailures": "Bulk Delete Failures",
+      "cat_sample_FileAttachments": "FileAttachments",
+      "cat_sample_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cat_sample_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cat_sample_ProcessSession": "Process Sessions",
+      "cat_sample_SyncErrors": "Sync Errors",
+      "cat_sampleid": "Sample",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "Samples",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "Samples (Views)",
+    "Name": "_cat_sample_views",
+    "RelatedEntityName": "Samples",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "65f77f14-34e1-4b52-8bad-f2620084f133": "Active Samples",
+      "6a73483c-55c5-4687-9098-55e2311c720e": "Sample Advanced Find View",
+      "9f88f7fd-5bb3-4f94-a621-8672f2378fcf": "Inactive Samples",
+      "b21f1f8e-6aba-4d47-b948-727753942a79": "Sample Associated View",
+      "fadaabe2-91ab-41ae-a6d1-5738ce67cf68": "Sample Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (Samples)",
+    "Name": "cat_sample_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "Samples"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "Samples",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (Samples)",
+    "Name": "cat_sample_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "Samples"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "Samples",
+    "Type": "OptionSetInfo"
+  }
+]

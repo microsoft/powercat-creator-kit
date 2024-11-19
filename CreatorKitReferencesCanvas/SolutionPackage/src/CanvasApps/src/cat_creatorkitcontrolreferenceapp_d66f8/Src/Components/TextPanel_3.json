@@ -18,7 +18,7 @@
       "Name": "Text",
       "PropertyDataTypeKey": "String",
       "Tooltip": "Text",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -27,7 +27,7 @@
       "Name": "ComponentHeight",
       "PropertyDataTypeKey": "Number",
       "Tooltip": "Component Height",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -38,7 +38,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638519771047260230",
+  "LastModifiedTimestamp": "638639571126649498",
   "Name": "cdaa3e034b01484da9a6915f5df7dbd0",
   "OverridableProperties": {},
   "TemplateOriginalName": "774387d1468a44e1ba1fdb7ed20893d6",

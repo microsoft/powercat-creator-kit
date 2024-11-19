@@ -19,31 +19,5 @@
     "dependencies": {},
     "dependents": [],
     "id": "50bca17e-e310-4216-969b-291be09647f6"
-  },
-  "fa212069-74c1-4408-b87b-9473cb6afff5": {
-    "appActions": [],
-    "connectionRef": {
-      "apiTier": "Standard",
-      "displayName": "SharePoint",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1670/1.0.1670.3526/sharepointonline/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
-      "parameterHints": {},
-      "parameterHintsV2": {}
-    },
-    "datasets": {
-      "https://powercattools.sharepoint.com/sites/TimeOffSite": {
-        "dataSources": {
-          "List": {
-            "tableName": "ec015779-54ad-4235-86a5-222a633f1d71"
-          }
-        }
-      }
-    },
-    "dataSources": [
-      "List"
-    ],
-    "dependencies": {},
-    "dependents": [],
-    "id": "fa212069-74c1-4408-b87b-9473cb6afff5"
   }
 }

@@ -1,0 +1,54 @@
+StackNumber As CanvasComponent:
+    AutoHeight: =txtCardDesc_6.Height + TextCanvas3_1.Height
+    BoldText: ="10K"
+    DescriptionText: ="Items need review"
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =StackNumber.AutoHeight
+    Width: =290
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Container2_2 As groupContainer.verticalAutoLayoutContainer:
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        Width: =Parent.Width
+        X: =1-1
+        Y: =1-1
+        ZIndex: =1
+
+        TextCanvas3_1 As Text:
+            AlignInContainer: =AlignInContainer.Stretch
+            AutoHeight: =false
+            BorderStyle: =""
+            DisplayMode: =DisplayMode.Edit
+            FontColor: =
+            Height: =46
+            LayoutMinHeight: =32
+            LayoutMinWidth: =96
+            Size: =32
+            Text: =StackNumber.BoldText
+            Weight: ='TextCanvas.Weight'.Semibold
+            Width: =96
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+        txtCardDesc_6 As label:
+            AlignInContainer: =AlignInContainer.Stretch
+            AutoHeight: =true
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: |-
+                =ColorValue("#424242")
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Segoe UI'
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =10.5
+            Text: =StackNumber.DescriptionText
+            Width: =Parent.Width
+            ZIndex: =2
+

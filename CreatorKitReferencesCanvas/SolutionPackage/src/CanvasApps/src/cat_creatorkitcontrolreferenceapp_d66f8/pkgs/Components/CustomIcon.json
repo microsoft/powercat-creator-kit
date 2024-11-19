@@ -609,7 +609,7 @@
       },
       "Theme"
     ],
-    "LastModifiedTimestamp": "638519771047249695",
+    "LastModifiedTimestamp": "638639571126637968",
     "Name": "CustomIcon",
     "Rules": [
       {
@@ -721,7 +721,7 @@
       "Name": "Name",
       "PropertyDataTypeKey": "String",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -745,7 +745,7 @@
               "ScopeVariableName": "IconName"
             },
             "Tooltip": "IconName",
-            "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+            "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
           },
           {
             "DisplayName": "GetIcon_HexColor",
@@ -760,12 +760,12 @@
               "ScopeVariableName": "HexColor"
             },
             "Tooltip": "HexColor",
-            "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+            "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
           }
         ]
       },
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -789,12 +789,12 @@
               "ScopeVariableName": "IconName"
             },
             "Tooltip": "IconName",
-            "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+            "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
           }
         ]
       },
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -803,7 +803,7 @@
       "Name": "HexColor",
       "PropertyDataTypeKey": "String",
       "Tooltip": "A custom property",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -812,7 +812,7 @@
       "Name": "Theme",
       "PropertyDataTypeKey": "Record",
       "Tooltip": "Theme",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"palette\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"black\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarkAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarker\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themePrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"white\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"palette\",\"Kind\":\"Record\",\"EnumString\":\"\",\"Type\":[{\"Name\":\"black\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralPrimaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralQuaternaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"neutralTertiaryAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDark\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarkAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeDarker\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLight\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighter\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeLighterAlt\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themePrimary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeSecondary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"themeTertiary\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]},{\"Name\":\"white\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}]}]}}"
     }
   ],
   "FirstParty": true,
@@ -823,7 +823,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638519771047249695",
+  "LastModifiedTimestamp": "638639571126637968",
   "Name": "78b3c355ff18453fbb636b1b69f6d564",
   "OverridableProperties": {},
   "SourceLibraryId": "81e5e6a9-c44c-4745-94af-8b1fdb4ee232",

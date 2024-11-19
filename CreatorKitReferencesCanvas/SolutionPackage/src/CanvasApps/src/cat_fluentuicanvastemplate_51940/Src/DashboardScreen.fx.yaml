@@ -1,0 +1,1081 @@
+"DashboardScreen As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: |-
+        =/* ⚠️ TIPS
+           When zooming in and out to test responsiveness, dashboard might render incorrectly in studio, so validate if it's working as desired in play mode before making changes to structure. If the rendering is off in studio, restart the studio.
+        */
+        
+        //If( init <> true,
+        UpdateContext({ pageTitle: "Dashboard", subText:"Monitor real-time inventory levels, track stock status across categories, and identify key trends to ensure efficient management and timely restocking." });
+        UpdateContext({ init: true });
+        //);
+
+    cAppFrame_2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
+        PaddingRight: =Self.PaddingLeft
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Parent.Width
+        ZIndex: =1
+
+        cTopNav_3 As groupContainer.horizontalAutoLayoutContainer:
+            Fill: =ColorValue(AppTheme.palette.neutralLighter)
+            FillPortions: =FlexOff
+            Height: =60
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =24
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            PaddingLeft: =20
+            PaddingRight: =20
+            ZIndex: =1
+
+            h2Title_13 As Text:
+                Align: ='TextCanvas.Align'.Start
+                AlignInContainer: =AlignInContainer.Stretch
+                AutoHeight: =true
+                DisplayMode: =DisplayMode.Edit
+                Height: =36
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                Size: =18
+                Text: =FeatureName
+                Visible: =true
+                Weight: ='TextCanvas.Weight'.Semibold
+                Width: =140
+                X: =394.49
+                Y: =0
+                ZIndex: =1
+
+            "TabList1_3 As 'Tab list'.pcfdataset":
+                DefaultSelectedItems: =LookUp(Nav, ThisRecord.Screen = App.ActiveScreen)
+                DisplayMode: =DisplayMode.Edit
+                FillPortions: =FlexOn
+                Height: =55
+                Items: =Nav
+                LayoutMinHeight: =55
+                LayoutMinWidth: =280
+                OnChange: =Navigate(Self.Selected.Screen);
+                Width: =280
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+                DisplayName1_3 As PowerApps_CoreControls_TabListTemplate_dataField.textualColumn:
+                    FieldDisplayName: ="DisplayName"
+                    FieldName: ="DisplayName"
+                    FieldType: ="s"
+                    FieldVariantName: ="textualColumn"
+                    Order: =1
+                    ZIndex: =5
+
+        ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            LayoutOverflowY: =LayoutOverflow.Scroll
+            PaddingLeft: =Margins/2
+            PaddingRight: =Margins/2
+            PaddingTop: =16
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width
+            ZIndex: =2
+
+            cPageHeaderMain_1 As groupContainer.verticalAutoLayoutContainer:
+                Fill: =ColorValue(AppTheme.palette.neutralLighterAlt)
+                FillPortions: =FlexOff
+                Height: =div_2.Y + 1
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutGap: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                PaddingRight: =0   
+                PaddingTop: =16  
+                Width: =1181
+                X: =92
+                Y: =40
+                ZIndex: =1
+
+                cPageHeaderTitle_1 As groupContainer.horizontalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    FillPortions: =FlexOff
+                    Height: =cHeaderText_4.Height
+                    LayoutAlignItems: =LayoutAlignItems.Center
+                    LayoutGap: =16
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    Width: =Parent.Width - Self.X * 2
+                    X: =36
+                    Y: =40
+                    ZIndex: =2
+
+                    ButtonCanvas4_4 As Button:
+                        Appearance: ='ButtonCanvas.Appearance'.Subtle
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Icon: ="ArrowLeft"
+                        Layout: ='ButtonCanvas.Layout'.IconOnly
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        OnSelect: =Back()
+                        Text: =
+                        Visible: =true
+                        Width: =32
+                        X: =0
+                        Y: =0
+                        ZIndex: =1
+
+                    cHeaderText_4 As groupContainer.horizontalAutoLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        FillPortions: =FlexOn
+                        Height: =rDivider_PageHeader_4.Y
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =4
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width - Self.X
+                        X: =1-1
+                        Y: =1-1 
+                        ZIndex: =2
+
+                        h2Title_4 As Text:
+                            Align: ='TextCanvas.Align'.Start
+                            AlignInContainer: =AlignInContainer.Start
+                            AutoHeight: =true
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =36
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =20
+                            Text: =pageTitle
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =Parent.Width - Self.X * 2
+                            X: =394.49
+                            Y: =0
+                            ZIndex: =1
+
+                        Label3_6 As label:
+                            AlignInContainer: =AlignInContainer.Start
+                            AutoHeight: =true
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            Color: |-
+                                =ColorValue("#424242")
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Font: =Font.'Segoe UI'
+                            LineHeight: =1.4
+                            PaddingBottom: =0
+                            PaddingLeft: =0
+                            PaddingRight: =0
+                            PaddingTop: =0
+                            Size: =Switch(App.ActiveScreen.Size,ScreenSize.Small,11,ScreenSize.Medium,12,14)*0.75
+                            Text: =subText
+                            VerticalAlign: =VerticalAlign.Top
+                            Visible: =!IsBlank(Self.Text)
+                            Width: =Min(600, Parent.Width)
+                            X: =394.49
+                            ZIndex: =2
+
+                        rDivider_PageHeader_4 As rectangle:
+                            BorderColor: =App.Theme.Colors.Darker40
+                            Fill: =RGBA(0,0,0,0)
+                            Height: =1
+                            Width: =Parent.Width - Self.X * 2
+                            X: =72
+                            Y: =52
+                            ZIndex: =3
+
+                    tlbRight_5 As Toolbar.pcfdataset:
+                        AccessibleLabel: ="Toolbar"
+                        DisplayMode: =DisplayMode.Edit
+                        FillPortions: =FlexOff
+                        Height: =44
+                        Items: |-
+                            =Table({ItemKey:"1",ItemDisplayName:"",ItemIconName:"Add",ItemAppearance:"Subtle",ItemIconStyle:"Subtle",ItemTooltip:"Action"},{ItemKey:"2",ItemDisplayName:"",ItemIconName:"New",ItemAppearance:"Subtle",ItemIconStyle:"Subtle"},{ItemKey:"3",ItemDisplayName:"",ItemIconName:"Circle",ItemDisabled: false ,ItemAppearance:"Subtle"})
+                        LayoutMinHeight: =55
+                        LayoutMinWidth: =280
+                        OnSelect: =Switch(Self.Selected.ItemKey,/* Action for Key 'new' */"new",Notify("New clicked"),/* Action for 'edit' */"edit",Notify("Edit clicked"),/* Action for 'delete' */ "delete",Notify("Delete clicked"),/* Action for 'info' */ "info",Notify("Info clicked"), /* Default action */  Notify("Unrecognized button clicked"))
+                        Visible: =true
+                        Width: =200
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                        ItemKey1 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemKey"
+                            FieldName: ="ItemKey"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =1
+                            ZIndex: =7
+
+                        ItemIconName1 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemIconName"
+                            FieldName: ="ItemIconName"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =2
+                            ZIndex: =8
+
+                        ItemDisplayName1 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemDisplayName"
+                            FieldName: ="ItemDisplayName"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =3
+                            ZIndex: =9
+
+                        ItemAppearance1 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemAppearance"
+                            FieldName: ="ItemAppearance"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =4
+                            ZIndex: =10
+
+                        ItemIconStyle1 As PowerApps_CoreControls_ToolbarTemplate_dataField.textualColumn:
+                            FieldDisplayName: ="ItemIconStyle"
+                            FieldName: ="ItemIconStyle"
+                            FieldType: ="s"
+                            FieldVariantName: ="textualColumn"
+                            Order: =5
+                            ZIndex: =11
+
+                div_2 As rectangle:
+                    AlignInContainer: =AlignStart
+                    BorderColor: =App.Theme.Colors.Darker40
+                    Fill: =ColorValue(AppTheme.palette.neutralLight)
+                    Height: =1
+                    Width: =Parent.Width - Self.X * 2
+                    X: =84
+                    Y: =256
+                    ZIndex: =5
+
+            cBuffer_1 As groupContainer.manualLayoutContainer:
+                FillPortions: =FlexOff
+                Height: =16
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                ZIndex: =2
+
+            MainContainer1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                FillPortions: =0
+                Height: =800
+                LayoutGap: =Gutters
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                LayoutWrap: =true
+                PaddingBottom: =2
+                PaddingLeft: =2
+                PaddingRight: =2
+                PaddingTop: =2
+                Width: =Min(Parent.Width - Self.X * 2, 1920)
+                ZIndex: =3
+
+                cCard_5 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =FlexOff
+                    Height: =276
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutMinHeight: =300
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =400
+                    X: =92
+                    Y: =-18
+                    ZIndex: =1
+
+                    Container1_7 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        X: =1-1
+                        Y: =1-1
+                        ZIndex: =1
+
+                        Image1_6 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =24
+                            Image: =""
+                            Visible: =!IsBlank(Self.Image)
+                            Width: =24
+                            ZIndex: =1
+
+                        TextCanvas1_6 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =FlexOn
+                            FontColor: =
+                            Height: =24
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =16
+                            Text: ="Card 1 title"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            Wrap: =false
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "InfoButtonCanvas1_6 As 'Information button'":
+                            BasePaletteColor: =
+                            Content: ="Text"
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =28
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =32
+                            Visible: =true
+                            Width: =24
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    cCardSection_5 As groupContainer.verticalAutoLayoutContainer:
+                        AlignInContainer: =AlignStretch
+                        FillPortions: =FlexOn
+                        Height: =230
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =297
+                        Y: =179
+                        ZIndex: =2
+
+                        "GaugeChart3_1 As 'Fluent Gauge Chart (1.1.39) Preview'.pcfdataset":
+                            ChartValue: =40
+                            ChartValueFormat: ='PowerCAT.GaugeChart.ChartValueFormat'.Percentage
+                            CustomColors: =true
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =148
+                            Items: |
+                                =Table(
+                                    {
+                                        ItemLegend: "Critical",
+                                        ItemSize: 15, // Indicates critical inventory status
+                                        ItemColor: "#C50F1F" // Red
+                                    },
+                                    {
+                                        ItemLegend: "Warning",
+                                        ItemSize: 35, // Indicates items that need attention but are not critical
+                                        ItemColor: "#F2610C" // Orange
+                                    },
+                                    {
+                                        ItemLegend: "No risk",
+                                        ItemSize: 50, // Indicates healthy stock levels
+                                        ItemColor: "#107C10" // Green
+                                    }
+                                )
+                            LayoutMinHeight: =400
+                            LayoutMinWidth: =400
+                            MaxValue: =100
+                            Width: =Parent.Width - Self.X * 2
+                            X: =0
+                            Y: =56
+                            ZIndex: =1
+
+                    rCardDivider_5 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =1
+                        Width: =Parent.Width - Self.X*2
+                        X: =72
+                        Y: =52
+                        ZIndex: =3
+
+                    ButtonCanvas1 As Button:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        Icon: ="Eye"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="View inventory"
+                        Width: =170
+                        X: =0
+                        Y: =0
+                        ZIndex: =4
+
+                cCard_7 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =330
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =Parent.Width - Self.X * 2
+                    X: =92
+                    Y: =-18
+                    ZIndex: =2
+
+                    Container1_9 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        X: =1-1
+                        Y: =1-1
+                        ZIndex: =1
+
+                        Image1_8 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =24
+                            Image: =""
+                            Visible: =!IsBlank(Self.Image)
+                            Width: =24
+                            ZIndex: =1
+
+                        TextCanvas1_8 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =FlexOn
+                            FontColor: =
+                            Height: =24
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =16
+                            Text: ="Card 2 title"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            Wrap: =false
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "InfoButtonCanvas1_8 As 'Information button'":
+                            BasePaletteColor: =
+                            Content: ="Text"
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =28
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =32
+                            Visible: =true
+                            Width: =24
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    cCardSection_7 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =230
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =297
+                        Y: =179
+                        ZIndex: =2
+
+                        Container4_1 As groupContainer.horizontalAutoLayoutContainer:
+                            Fill: |-
+                                =ColorValue("#FAFAFA")
+                            FillPortions: =0
+                            Height: =86
+                            LayoutAlignItems: =LayoutAlignItems.Center
+                            LayoutMinHeight: =100
+                            LayoutMinWidth: =250
+                            LayoutMode: =LayoutMode.Auto
+                            PaddingLeft: =16
+                            RadiusBottomLeft: =4
+                            RadiusBottomRight: =4
+                            RadiusTopLeft: =4
+                            RadiusTopRight: =4
+                            ZIndex: =1
+
+                            StackNumber_1 As StackNumber:
+                                BoldText: ="$2.3K USD"
+                                DescriptionText: ="Total stock value"
+                                FillPortions: =1
+                                Height: =StackNumber_1.AutoHeight
+                                LayoutMinHeight: =640
+                                LayoutMinWidth: =50
+                                Width: =140
+
+                            StackNumber_2 As StackNumber:
+                                DescriptionText: ="Total items"
+                                Height: =StackNumber_1.AutoHeight
+                                LayoutMinHeight: =640
+                                LayoutMinWidth: =50
+                                Width: =106
+                                X: =179
+                                ZIndex: =2
+
+                        "StackedBarChart1 As 'Fluent Stacked bar Chart (1.1.39) Preview'.pcfdataset":
+                            BarHeight: =12
+                            CustomColors: =true
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =64
+                            HideLegend: =false
+                            Items: |
+                                =Table(
+                                    {
+                                        ItemKey: "1",
+                                        ItemTitle: "Electronics",
+                                        ItemCallout: "Electronics Inventory",
+                                        ItemValue: 150,
+                                        ItemColor: "#00A892" // Teal
+                                    },
+                                    {
+                                        ItemKey: "2",
+                                        ItemTitle: "Office Supplies",
+                                        ItemCallout: "Office Supplies Inventory",
+                                        ItemValue: 80,
+                                        ItemColor: "#9A44FC" // Purple
+                                    },
+                                    {
+                                        ItemKey: "3",
+                                        ItemTitle: "Furniture",
+                                        ItemCallout: "Furniture Inventory",
+                                        ItemValue: 100,
+                                        ItemColor: "#3483FA" // Blue
+                                    },
+                                    {
+                                        ItemKey: "4",
+                                        ItemTitle: "Miscellaneous",
+                                        ItemCallout: "Miscellaneous Inventory",
+                                        ItemValue: 60,
+                                        ItemColor: "#EBA800" // Yellow
+                                    },
+                                    {
+                                        ItemKey: "5",
+                                        ItemTitle: "Consumables",
+                                        ItemCallout: "Consumables Inventory",
+                                        ItemValue: 120,
+                                        ItemColor: "#FF6F61" // Coral
+                                    }
+                                )
+                            LayoutMinHeight: =180
+                            LayoutMinWidth: =350
+                            Title: ="Inventory breakdown"
+                            Width: =Parent.Width - Self.X*2
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                    ButtonCanvas1_1 As Button:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Action"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    rCardDivider_7 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =1
+                        Width: =Parent.Width - Self.X*2
+                        X: =72
+                        Y: =52
+                        ZIndex: =4
+
+                cCard_9 As groupContainer.verticalAutoLayoutContainer:
+                    AlignInContainer: =AlignInContainer.Start
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    Height: =350
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =Parent.Width - Self.X * 2
+                    X: =92
+                    Y: =-18
+                    ZIndex: =3
+
+                    Container1_11 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        X: =1-1
+                        Y: =1-1
+                        ZIndex: =1
+
+                        Image1_10 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =24
+                            Image: =""
+                            Visible: =!IsBlank(Self.Image)
+                            Width: =24
+                            ZIndex: =1
+
+                        TextCanvas1_10 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =FlexOn
+                            FontColor: =
+                            Height: =24
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =16
+                            Text: ="Card 4 title"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            Wrap: =false
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "InfoButtonCanvas1_10 As 'Information button'":
+                            BasePaletteColor: =
+                            Content: ="Text"
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =28
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =32
+                            Visible: =true
+                            Width: =24
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    cCardSection_9 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =230
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutJustifyContent: =LayoutJustifyContent.Center
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =297
+                        Y: =179
+                        ZIndex: =2
+
+                        "DonutChart1 As 'Fluent Donut Chart (1.1.39) Preview'.pcfdataset":
+                            CustomColors: =true
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =220
+                            HideLabel: =false
+                            InnerRadius: =Self.Height/2.2
+                            Items: |
+                                =Table(
+                                    {
+                                        ItemLegend: "Fulfilled Orders",
+                                        ItemValue: 70,
+                                        ItemColor: "#3483FA" // Blue
+                                    },
+                                    {
+                                        ItemLegend: "Pending Orders",
+                                        ItemValue: 20,
+                                        ItemColor: "#FF6F61" // Coral
+                                    },
+                                    {
+                                        ItemLegend: "Cancelled Orders",
+                                        ItemValue: 5,
+                                        ItemColor: "#9A44FC" // Purple
+                                    },
+                                    {
+                                        ItemLegend: "Returned Orders",
+                                        ItemValue: 5,
+                                        ItemColor: "#00A892" // Teal
+                                    }
+                                )
+                            LayoutMinHeight: =350
+                            LayoutMinWidth: =350
+                            ShowLabelsInPercentage: =true
+                            Title: =
+                            Width: =Parent.Width
+                            X: =0
+                            Y: =58
+                            ZIndex: =1
+
+                    rCardDivider_9 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =1
+                        Width: =Parent.Width - Self.X*2
+                        X: =72
+                        Y: =52
+                        ZIndex: =4
+
+                cCard_10 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    FillPortions: =2
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =420
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =414
+                    X: =92
+                    Y: =467
+                    ZIndex: =4
+
+                    Container1_12 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =0
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        X: =1-1
+                        Y: =1-1
+                        ZIndex: =1
+
+                        Image1_11 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =24
+                            Image: =""
+                            Visible: =!IsBlank(Self.Image)
+                            Width: =24
+                            ZIndex: =1
+
+                        TextCanvas1_11 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =FlexOn
+                            FontColor: =
+                            Height: =24
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =16
+                            Text: ="Card 5 title"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            Wrap: =false
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "InfoButtonCanvas1_11 As 'Information button'":
+                            BasePaletteColor: =
+                            Content: ="Text"
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =28
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =32
+                            Visible: =true
+                            Width: =24
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    cCardSection_10 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =152
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutMinHeight: =40
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =297
+                        Y: =86
+                        ZIndex: =2
+
+                        "HorizontalBarChart1 As 'Fluent Horizontal bar Chart (1.1.39) Preview'.pcfdataset":
+                            BarHeight: =12
+                            ChartDataMode: ='PowerCAT.HorizontalBarChart.ChartDataMode'.Percentage
+                            CustomColors: =true
+                            DisplayMode: =DisplayMode.Edit
+                            Height: =224
+                            Items: |
+                                =Table(
+                                    {
+                                        ItemTitle: "Supplier A",
+                                        ItemLegend: "On-time Delivery Rate",
+                                        ItemValue: 85, // Percentage of on-time deliveries
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: "10/15/2024", // Last performance review date
+                                        ItemYPopOver: "85%", // On-time delivery rate
+                                        ItemColor: "#00A892" // Teal
+                                    },
+                                    {
+                                        ItemTitle: "Supplier B",
+                                        ItemLegend: "On-time Delivery Rate",
+                                        ItemValue: 75,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: "11/02/2024",
+                                        ItemYPopOver: "75%",
+                                        ItemColor: "#00A892" // Teal"#9A44FC" // Purple
+                                    },
+                                    {
+                                        ItemTitle: "Supplier C",
+                                        ItemLegend: "On-time Delivery Rate",
+                                        ItemValue: 60,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: "10/10/2024",
+                                        ItemYPopOver: "60%",
+                                        ItemColor: "#00A892" // Teal"#3483FA" // Blue
+                                    },
+                                    {
+                                        ItemTitle: "Supplier D",
+                                        ItemLegend: "On-time Delivery Rate",
+                                        ItemValue: 90,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: "09/30/2024",
+                                        ItemYPopOver: "90%",
+                                        ItemColor: "#00A892" // Teal"#EBA800" // Yellow
+                                    },
+                                    {
+                                        ItemTitle: "Supplier E",
+                                        ItemLegend: "On-time Delivery Rate",
+                                        ItemValue: 70,
+                                        ItemTotalValue: 100,
+                                        ItemXPopOver: "12/01/2024",
+                                        ItemYPopOver: "70%",
+                                        ItemColor: "#00A892" // Teal"#FF6F61" // Coral
+                                    }
+                                )
+                            LayoutMinHeight: =400
+                            LayoutMinWidth: =400
+                            Theme: =
+                            Variant: ='PowerCAT.HorizontalBarChart.Variant'.PartToWhole
+                            Width: =Parent.Width - Self.X * 2
+                            X: =0
+                            Y: =149
+                            ZIndex: =1
+
+                    ButtonCanvas1_4 As Button:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Action"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    rCardDivider_10 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =1
+                        Width: =Parent.Width - Self.X*2
+                        X: =72
+                        Y: =52
+                        ZIndex: =4
+
+                cCard_11 As groupContainer.verticalAutoLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(255, 255, 255, 1)
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =8
+                    LayoutMinHeight: =300
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =16
+                    PaddingLeft: =16
+                    PaddingRight: =16
+                    PaddingTop: =16
+                    RadiusBottomLeft: =8
+                    RadiusBottomRight: =8
+                    RadiusTopLeft: =8
+                    RadiusTopRight: =8
+                    Width: =350
+                    X: =92
+                    Y: =467
+                    ZIndex: =5
+
+                    Container1_16 As groupContainer.horizontalAutoLayoutContainer:
+                        FillPortions: =FlexOff
+                        Height: =32
+                        LayoutAlignItems: =LayoutAlignItems.Center
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =Parent.Width
+                        X: =1-1
+                        Y: =1-1
+                        ZIndex: =1
+
+                        Image1_15 As image:
+                            BorderColor: =RGBA(0, 18, 107, 1)
+                            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                            DisabledFill: =RGBA(244, 244, 244, 1)
+                            Height: =24
+                            Image: =""
+                            Visible: =!IsBlank(Self.Image)
+                            Width: =24
+                            ZIndex: =1
+
+                        TextCanvas1_15 As Text:
+                            BorderStyle: =""
+                            DisplayMode: =DisplayMode.Edit
+                            FillPortions: =FlexOn
+                            FontColor: =
+                            Height: =24
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =96
+                            Size: =16
+                            Text: ="Card 3 title"
+                            VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                            Weight: ='TextCanvas.Weight'.Semibold
+                            Width: =96
+                            Wrap: =false
+                            X: =0
+                            Y: =0
+                            ZIndex: =2
+
+                        "InfoButtonCanvas1_15 As 'Information button'":
+                            BasePaletteColor: =
+                            Content: ="Text"
+                            DisplayMode: =DisplayMode.Edit
+                            FontColor: =
+                            Height: =28
+                            LayoutMinHeight: =32
+                            LayoutMinWidth: =32
+                            Visible: =true
+                            Width: =24
+                            X: =0
+                            Y: =0
+                            ZIndex: =3
+
+                    cCardSection_14 As groupContainer.verticalAutoLayoutContainer:
+                        Height: =98
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutGap: =8
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        Width: =297
+                        Y: =83
+                        ZIndex: =2
+
+                    ButtonCanvas1_8 As Button:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =DisplayMode.Edit
+                        Height: =32
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
+                        Text: ="Action"
+                        Width: =96
+                        X: =0
+                        Y: =0
+                        ZIndex: =3
+
+                    rCardDivider_14 As rectangle:
+                        BorderColor: =App.Theme.Colors.Darker40
+                        Fill: =RGBA(0,0,0,0)
+                        Height: =1
+                        Width: =Parent.Width - Self.X*2
+                        X: =72
+                        Y: =52
+                        ZIndex: =4
+
+    cSpinner_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: |-
+            =ColorValue("#fafafa")
+        Height: =Parent.Height
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutMode: =LayoutMode.Auto
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Visible: =init <> true
+        Width: =Parent.Width
+        ZIndex: =2
+
+        Spinner1_1 As Spinner:
+            DisplayMode: =DisplayMode.Edit
+            Height: =Parent.Height
+            LayoutMinHeight: =200
+            LayoutMinWidth: =200
+            SpinnerSize: ='Spinner.SpinnerSize'.Large
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+

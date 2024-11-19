@@ -54,7 +54,7 @@ scrSubwayNav As screen:
             Width: =App.Width
             ZIndex: =5
 
-            "Elevation_8 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_8 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -111,7 +111,7 @@ scrSubwayNav As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_40 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                        "pivotAppCode_40 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -142,6 +142,7 @@ scrSubwayNav As screen:
                         BorderColor: =
                         BorderThickness: =1
                         Color: =Color.Black
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =200
@@ -226,7 +227,7 @@ scrSubwayNav As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SubwayNav1 As 'SubwayNav (1.1.34) Preview'.pcfdataset":
+                            "SubwayNav1 As 'SubwayNav (1.1.35) Preview'.pcfdataset":
                                 DisplayMode: =If(chkDisable.Checked,DisplayMode.Disabled,Edit)
                                 Height: =200
                                 ItemDisabled: =
@@ -333,7 +334,7 @@ scrSubwayNav As screen:
                                     Y: =185
                                     ZIndex: =2
 
-                                    Name1_1 As pcfDataField.textualColumn:
+                                    Name1_1 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                                         FieldDisplayName: ="Name"
                                         FieldName: ="Name"
                                         FieldType: ="s"
@@ -397,7 +398,7 @@ scrSubwayNav As screen:
             Width: =App.Width
             ZIndex: =6
 
-            "Elevation_9 As 'Fluent Elevation (1.1.34)'":
+            "Elevation_9 As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height
                 PaddingBottom: =8
@@ -454,7 +455,7 @@ scrSubwayNav As screen:
                             Width: =560
                             ZIndex: =1
 
-                        "pivotAppCode_41 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+                        "pivotAppCode_41 As 'Fluent Pivot (1.1.35)'.pcfdataset":
                             DisplayMode: =DisplayMode.Edit
                             Height: =49
                             Items: |-
@@ -485,6 +486,7 @@ scrSubwayNav As screen:
                         BorderColor: =
                         BorderThickness: =1
                         Color: =Color.Black
+                        DisabledBorderColor: =RGBA(56, 56, 56, 1)
                         DisplayMode: =DisplayMode.View
                         Font: =Font.'Courier New'
                         Height: =200
@@ -573,7 +575,7 @@ scrSubwayNav As screen:
                             LayoutMode: =LayoutMode.Auto
                             ZIndex: =1
 
-                            "SubwayNav1_1 As 'SubwayNav (1.1.34) Preview'.pcfdataset":
+                            "SubwayNav1_1 As 'SubwayNav (1.1.35) Preview'.pcfdataset":
                                 DisplayMode: =If(chkDisable_1.Checked,DisplayMode.Disabled,Edit)
                                 Height: =200
                                 ItemDisabled: =
@@ -684,7 +686,7 @@ scrSubwayNav As screen:
                                     Y: =185
                                     ZIndex: =2
 
-                                    Name1_2 As pcfDataField.textualColumn:
+                                    Name1_2 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                                         FieldDisplayName: ="Name"
                                         FieldName: ="Name"
                                         FieldType: ="s"

@@ -1,8 +1,4 @@
 {
-  "ClientBuildDetails": {
-    "CommitHash": "941f06c8f5cf7a493289e9514c8dec5c50b61d34",
-    "IsLocalBuild": false
-  },
   "ClientPerFileChecksums": {
     "AppCheckerResult.sarif": "C8_TJfrUtK/oYxbNutLl6+yLmrFPuaXjFK3sGfPcrlJBlo=",
     "Assets\\Images\\10bbc3d5-f32d-49e9-9505-b4ac5fe60ac4.svg": "C8_VRnnK3emxukLUYRXdf7mbMJ2vXwpqvMAAAYpu1eTg3Q=",

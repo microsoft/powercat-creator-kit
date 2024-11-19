@@ -19,7 +19,7 @@ DetailsListPaging As CanvasComponent:
         Y: =22
         ZIndex: =2
 
-    "pivotAppCode_26 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_26 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -47,6 +47,7 @@ DetailsListPaging As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -67,6 +68,7 @@ DetailsListPaging As CanvasComponent:
         htmlText_11 As htmlViewer:
             AutoHeight: =true
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             HtmlText: ="Manual Sorting is supported outside of the component to allow for custom connector support and local collection sorting when not connected to a Dataverse connection."
             PaddingBottom: =0
@@ -86,7 +88,7 @@ DetailsListPaging As CanvasComponent:
             Y: =120
             ZIndex: =18
 
-            "ElevationAccounts As 'Fluent Elevation (1.1.34)'":
+            "ElevationAccounts As 'Fluent Elevation (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =Parent.Height-32-16
                 Visible: =pivotAppCode_26.Selected.ItemKey="app"
@@ -95,7 +97,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =8
                 ZIndex: =1
 
-            "FluentDetailsListAccounts As 'Fluent Details List (1.1.34)'.pcfdataset":
+            "FluentDetailsListAccounts As 'Fluent Details List (1.1.35)'.pcfdataset":
                 columns_Items: |
                     =Table(
                         {ColName:"name",ColDisplayName:"Name",ColWidth:500,ColSortable:true,ColIsBold:true,ColResizable:true,ColRowHeader:true},
@@ -174,7 +176,7 @@ DetailsListPaging As CanvasComponent:
                     Order: =5
                     ZIndex: =5
 
-            "cmdAccounts As 'Fluent Command Bar (1.1.34)'.pcfdataset":
+            "cmdAccounts As 'Fluent Command Bar (1.1.35)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Items: |-
@@ -242,7 +244,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =Parent.Height-Self.Height-8
                 ZIndex: =6
 
-                "icoFirst As 'Fluent Icon (1.1.34)'":
+                "icoFirst As 'Fluent Icon (1.1.35)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Previous"
@@ -253,7 +255,7 @@ DetailsListPaging As CanvasComponent:
                     Y: =0
                     ZIndex: =1
 
-                "icoBack As 'Fluent Icon (1.1.34)'":
+                "icoBack As 'Fluent Icon (1.1.35)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasPreviousPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Back"
@@ -275,7 +277,7 @@ DetailsListPaging As CanvasComponent:
                     X: =64
                     ZIndex: =3
 
-                "icoNext As 'Fluent Icon (1.1.34)'":
+                "icoNext As 'Fluent Icon (1.1.35)'":
                     DisplayMode: =If(FluentDetailsListAccounts.HasNextPage,DisplayMode.Edit,DisplayMode.Disabled)
                     Height: =31
                     IconName: ="Forward"
@@ -300,7 +302,7 @@ DetailsListPaging As CanvasComponent:
                 Y: =100
                 ZIndex: =7
 
-            "Icon4 As 'Fluent Icon (1.1.34)'":
+            "Icon4 As 'Fluent Icon (1.1.35)'":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 IconName: ="Search"

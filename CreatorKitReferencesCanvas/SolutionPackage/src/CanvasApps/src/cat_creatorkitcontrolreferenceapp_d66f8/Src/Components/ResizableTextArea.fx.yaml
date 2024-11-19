@@ -18,7 +18,7 @@ ResizableTextArea As CanvasComponent:
         Y: =2
         ZIndex: =3
 
-    "pivotAppCode_6 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_6 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ ResizableTextArea As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -388,7 +389,7 @@ ResizableTextArea As CanvasComponent:
                 Y: =45
                 ZIndex: =5
 
-                Name5 As pcfDataField.textualColumn:
+                Name5 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                     FieldDisplayName: ="Name"
                     FieldName: ="Name"
                     FieldVariantName: ="textualColumn"
@@ -412,6 +413,7 @@ ResizableTextArea As CanvasComponent:
             htmlText_4 As htmlViewer:
                 AutoHeight: =true
                 Color: =varTheme.palette.neutralPrimary
+                DisabledBorderColor: =RGBA(56, 56, 56, 1)
                 Font: =Font.'Segoe UI'
                 HtmlText: ="The text area can be constrained vertically or horiztonally. By setting the container size to the ResizedHeight/ResizedWidth property, the subsequent elements will reflow accordingly."
                 PaddingBottom: =0

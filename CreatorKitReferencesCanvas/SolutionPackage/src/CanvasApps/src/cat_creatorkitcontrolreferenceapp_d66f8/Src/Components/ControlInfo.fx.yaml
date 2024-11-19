@@ -27,6 +27,7 @@ ControlInfo As CanvasComponent:
         htmlText_12 As htmlViewer:
             AlignInContainer: =AlignInContainer.Stretch
             AutoHeight: =true
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             HtmlText: |-
                 ="<div style=""font-weight:400"">" & ControlInfo.Description & "</div>"
@@ -36,6 +37,7 @@ ControlInfo As CanvasComponent:
             PaddingLeft: =8
             PaddingRight: =8
             PaddingTop: =8
+            Size: =11
             Width: =Parent.Width
             Y: =40
             ZIndex: =2

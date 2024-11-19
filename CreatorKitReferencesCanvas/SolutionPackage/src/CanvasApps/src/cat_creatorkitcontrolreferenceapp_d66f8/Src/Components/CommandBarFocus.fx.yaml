@@ -18,7 +18,7 @@ CommandBarFocus As CanvasComponent:
         Y: =2
         ZIndex: =4
 
-    "pivotAppCode_7 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_7 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ CommandBarFocus As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -106,7 +107,7 @@ CommandBarFocus As CanvasComponent:
         Y: =40
         ZIndex: =12
 
-        "commandBar_4 As 'Fluent Command Bar (1.1.34)'.pcfdataset":
+        "commandBar_4 As 'Fluent Command Bar (1.1.35)'.pcfdataset":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             InputEvent: =varEvent
@@ -195,6 +196,7 @@ CommandBarFocus As CanvasComponent:
         htmlText_3 As htmlViewer:
             AutoHeight: =true
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             HtmlText: |-
                 ="The tab order should flow between the first two textboxes, the command bar (arrow keys to navigate) and then the button. 

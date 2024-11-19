@@ -18,7 +18,7 @@ KeyboardShortcuts As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_28 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_28 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ KeyboardShortcuts As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -89,7 +90,7 @@ KeyboardShortcuts As CanvasComponent:
         Y: =40
         ZIndex: =19
 
-        "KeyboardShortcutsSample As 'Keyboard Shortcuts (1.1.34)'":
+        "KeyboardShortcutsSample As 'Keyboard Shortcuts (1.1.35)'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             KeyConfig: ="[""alt + f"",""alt + l"",""alt + e""]"
@@ -156,6 +157,7 @@ KeyboardShortcuts As CanvasComponent:
 
         lblFirstName As htmlViewer:
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             Height: =32
             HtmlText: |-
@@ -206,6 +208,7 @@ KeyboardShortcuts As CanvasComponent:
 
         lblLastName As htmlViewer:
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             Height: =32
             HtmlText: |-
@@ -256,6 +259,7 @@ KeyboardShortcuts As CanvasComponent:
 
         lblEmail As htmlViewer:
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             Height: =32
             HtmlText: |-

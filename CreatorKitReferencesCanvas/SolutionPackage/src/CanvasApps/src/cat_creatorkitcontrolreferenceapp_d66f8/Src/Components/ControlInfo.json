@@ -316,7 +316,7 @@
                 "RuleProviderType": "Unknown"
               }
             ],
-            "StyleName": "",
+            "StyleName": "defaultHtmlViewerStyle",
             "Template": {
               "CustomGroupControlTemplateName": "",
               "FirstParty": true,
@@ -659,7 +659,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638519771047261249",
+    "LastModifiedTimestamp": "638639571126650580",
     "Name": "ControlInfo",
     "Rules": [
       {
@@ -729,7 +729,7 @@
       "Name": "Description",
       "PropertyDataTypeKey": "String",
       "Tooltip": "Description",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"String\",\"EnumString\":\"\",\"Type\":[]}}"
     },
     {
       "Category": 0,
@@ -738,7 +738,7 @@
       "Name": "DesiredHeight",
       "PropertyDataTypeKey": "Number",
       "Tooltip": "DesiredHeight",
-      "Type": "{\"Version\":\"1.341\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
+      "Type": "{\"Version\":\"1.343\",\"Type\":{\"Name\":\"Root\",\"Kind\":\"Number\",\"EnumString\":\"\",\"Type\":[]}}"
     }
   ],
   "FirstParty": true,
@@ -749,7 +749,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638519771047261249",
+  "LastModifiedTimestamp": "638639571126650580",
   "Name": "1fe3c0f4f7614c8c95f1e6fd99981275",
   "OverridableProperties": {},
   "TemplateOriginalName": "42cb70e0d91745edb293f349994d1e71",

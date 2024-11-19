@@ -18,7 +18,7 @@ IconSimple As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_11 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_11 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ IconSimple As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -163,7 +164,7 @@ IconSimple As CanvasComponent:
         Y: =40
         ZIndex: =14
 
-        "iconStandard As 'Fluent Icon (1.1.34)'":
+        "iconStandard As 'Fluent Icon (1.1.35)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit
@@ -183,7 +184,7 @@ IconSimple As CanvasComponent:
             Y: =124
             ZIndex: =5
 
-        "iconCustomColor As 'Fluent Icon (1.1.34)'":
+        "iconCustomColor As 'Fluent Icon (1.1.35)'":
             DisplayMode: =DisplayMode.Edit
             Height: =32
             HoverIconColor: =""
@@ -204,6 +205,7 @@ IconSimple As CanvasComponent:
         htmlText_5 As htmlViewer:
             AutoHeight: =true
             Color: =varTheme.palette.neutralPrimary
+            DisabledBorderColor: =RGBA(56, 56, 56, 1)
             Font: =Font.'Segoe UI'
             HtmlText: ="Simple icons have no interaction behavior. They just display a single icon with optional color and size"
             PaddingBottom: =0
@@ -224,7 +226,7 @@ IconSimple As CanvasComponent:
             Y: =120
             ZIndex: =10
 
-        "gridIcons As 'Fluent Details List (1.1.34)'.pcfdataset":
+        "gridIcons As 'Fluent Details List (1.1.35)'.pcfdataset":
             columns_Items: |-
                 =Table(
                     {
@@ -283,7 +285,7 @@ IconSimple As CanvasComponent:
             Y: =120
             ZIndex: =12
 
-        "icoSearch As 'Fluent Icon (1.1.34)'":
+        "icoSearch As 'Fluent Icon (1.1.35)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit

@@ -239,6 +239,9 @@
             }
           ],
           "message": {
+            "arguments": [
+              "Error"
+            ],
             "id": "issue"
           },
           "properties": {
@@ -316,6 +319,9 @@
             }
           ],
           "message": {
+            "arguments": [
+              "Error"
+            ],
             "id": "issue"
           },
           "properties": {
@@ -393,6 +399,9 @@
             }
           ],
           "message": {
+            "arguments": [
+              "Error"
+            ],
             "id": "issue"
           },
           "properties": {
@@ -470,6 +479,9 @@
             }
           ],
           "message": {
+            "arguments": [
+              "Error"
+            ],
             "id": "issue"
           },
           "properties": {
@@ -587,6 +599,9 @@
             }
           ],
           "message": {
+            "arguments": [
+              "Error"
+            ],
             "id": "issue"
           },
           "properties": {
@@ -2625,7 +2640,7 @@
               "id": "app-ErrInvalidDot",
               "messageStrings": {
                 "issue": {
-                  "text": "Invalid use of '.'"
+                  "text": "The '.' operator cannot be used on {0} values."
                 }
               },
               "properties": {
@@ -2755,7 +2770,7 @@
               }
             }
           ],
-          "version": "1.341"
+          "version": "1.343"
         }
       }
     }

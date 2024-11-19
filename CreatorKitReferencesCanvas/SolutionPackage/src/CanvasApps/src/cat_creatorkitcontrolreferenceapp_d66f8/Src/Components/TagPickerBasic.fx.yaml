@@ -18,7 +18,7 @@ TagPickerBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_17 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_17 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -45,6 +45,7 @@ TagPickerBasic As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -128,7 +129,7 @@ TagPickerBasic As CanvasComponent:
         Y: =45
         ZIndex: =4
 
-    "Elevation5 As 'Fluent Elevation (1.1.34)'":
+    "Elevation5 As 'Fluent Elevation (1.1.35)'":
         DisplayMode: =DisplayMode.Edit
         Height: =Parent.Height-Self.Y
         PaddingBottom: =8
@@ -179,7 +180,7 @@ TagPickerBasic As CanvasComponent:
                 Y: =62
                 ZIndex: =1
 
-            "PickerTagsSimple As 'Fluent Picker (1.1.34)'.pcfdataset":
+            "PickerTagsSimple As 'Fluent Picker (1.1.35)'.pcfdataset":
                 AllowFreeText: =chkAllowFreeText.Checked
                 DisplayMode: =DisplayMode.Edit
                 Error: =CountRows(colSimpleTags)>=5
@@ -347,7 +348,7 @@ TagPickerBasic As CanvasComponent:
                 Y: =62
                 ZIndex: =1
 
-            "CommandBarTags As 'Fluent Command Bar (1.1.34)'.pcfdataset":
+            "CommandBarTags As 'Fluent Command Bar (1.1.35)'.pcfdataset":
                 DisplayMode: =DisplayMode.Edit
                 Height: =32
                 Items: |-
@@ -370,7 +371,7 @@ TagPickerBasic As CanvasComponent:
                 Y: =0
                 ZIndex: =2
 
-            "FluentDetailsListTagsSelected As 'Fluent Details List (1.1.34)'.pcfdataset":
+            "FluentDetailsListTagsSelected As 'Fluent Details List (1.1.35)'.pcfdataset":
                 columns_Items: |-
                     =Table({ColName:"name",ColDisplayName:"Tag",ColWidth:(Self.Width/2),ColRowHeader:true},{ColName:"icon",ColDisplayName:"Icon",ColWidth:(Self.Width/2)-100})
                 DisplayMode: =DisplayMode.Edit

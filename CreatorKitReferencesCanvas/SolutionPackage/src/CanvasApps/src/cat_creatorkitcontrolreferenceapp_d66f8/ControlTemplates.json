@@ -13,7 +13,7 @@
     "OverridableProperties": {},
     "Version": "1.0"
   },
-  "Auto Width Label (1.1.34)": {
+  "Auto Width Label (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.AutoWidthLabel",
@@ -25,8 +25,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.AutoWidthLabel",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Auto Width Label (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Auto Width Label (1.1.35)",
+    "Version": "1.1.35"
   },
   "button": {
     "CustomGroupControlTemplateName": "",
@@ -87,7 +87,7 @@
     "TemplateDisplayName": "Combo box",
     "Version": "1.5.0"
   },
-  "Fluent Breadcrumb (1.1.34)": {
+  "Fluent Breadcrumb (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Breadcrumb",
@@ -99,10 +99,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Breadcrumb",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Breadcrumb (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Breadcrumb (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Command Bar (1.1.34)": {
+  "Fluent Command Bar (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.CommandBar",
@@ -114,10 +114,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.CommandBar",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Command Bar (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Command Bar (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Context Menu (1.1.34)": {
+  "Fluent Context Menu (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.ContextMenu",
@@ -129,10 +129,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.ContextMenu",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Context Menu (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Context Menu (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Details List (1.1.34)": {
+  "Fluent Details List (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.FluentDetailsList",
@@ -144,10 +144,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.FluentDetailsList",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Details List (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Details List (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Donut Chart (1.1.34) Preview": {
+  "Fluent Donut Chart (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.DonutChart",
@@ -159,10 +159,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.DonutChart",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Donut Chart (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Donut Chart (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent Elevation (1.1.34)": {
+  "Fluent Elevation (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Elevation",
@@ -174,10 +174,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Elevation",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Elevation (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Elevation (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Facepile (1.1.34) Preview": {
+  "Fluent Facepile (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Facepile",
@@ -189,10 +189,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Facepile",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Facepile (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Facepile (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent Gauge Chart (1.1.34) Preview": {
+  "Fluent Gauge Chart (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.GaugeChart",
@@ -204,10 +204,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.GaugeChart",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Gauge Chart (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Gauge Chart (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent Horizontal bar Chart (1.1.34) Preview": {
+  "Fluent Horizontal bar Chart (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.HorizontalBarChart",
@@ -219,10 +219,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.HorizontalBarChart",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Horizontal bar Chart (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Horizontal bar Chart (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent Icon (1.1.34)": {
+  "Fluent Icon (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Icon",
@@ -234,10 +234,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Icon",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Icon (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Icon (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Nav (1.1.34)": {
+  "Fluent Nav (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Nav",
@@ -249,10 +249,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Nav",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Nav (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Nav (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent PeoplePicker (1.1.34) Preview": {
+  "Fluent PeoplePicker (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.PeoplePicker",
@@ -271,7 +271,7 @@
           "Name": "Root",
           "Type": []
         },
-        "Version": "1.341"
+        "Version": "1.343"
       },
       "SearchText": {
         "Type": {
@@ -280,7 +280,7 @@
           "Name": "Root",
           "Type": []
         },
-        "Version": "1.341"
+        "Version": "1.343"
       },
       "SelectedPeople": {
         "Type": {
@@ -289,14 +289,14 @@
           "Name": "Root",
           "Type": []
         },
-        "Version": "1.341"
+        "Version": "1.343"
       }
     },
     "PCFDynamicSchemaForIRRetrieval": {},
-    "TemplateDisplayName": "Fluent PeoplePicker (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent PeoplePicker (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent Persona (1.1.34)": {
+  "Fluent Persona (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Persona",
@@ -308,10 +308,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Persona",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Persona (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Persona (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Picker (1.1.34)": {
+  "Fluent Picker (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Picker",
@@ -323,10 +323,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Picker",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Picker (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Picker (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Pivot (1.1.34)": {
+  "Fluent Pivot (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Pivot",
@@ -338,10 +338,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Pivot",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Pivot (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Pivot (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Progress Indicator (1.1.34)": {
+  "Fluent Progress Indicator (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.ProgressIndicator",
@@ -353,10 +353,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.ProgressIndicator",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Progress Indicator (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Progress Indicator (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent SearchBox (1.1.34) Preview": {
+  "Fluent SearchBox (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.SearchBox",
@@ -368,10 +368,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.SearchBox",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent SearchBox (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent SearchBox (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent SpinButton (1.1.34)": {
+  "Fluent SpinButton (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.SpinButton",
@@ -383,10 +383,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.SpinButton",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent SpinButton (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent SpinButton (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Spinner (1.1.34)": {
+  "Fluent Spinner (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.Spinner",
@@ -398,10 +398,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.Spinner",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Spinner (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Spinner (1.1.35)",
+    "Version": "1.1.35"
   },
-  "Fluent Stacked bar Chart (1.1.34) Preview": {
+  "Fluent Stacked bar Chart (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.StackedBarChart",
@@ -413,10 +413,10 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.StackedBarChart",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Stacked bar Chart (1.1.34) Preview",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Stacked bar Chart (1.1.35) Preview",
+    "Version": "1.1.35"
   },
-  "Fluent Tag List (1.1.34)": {
+  "Fluent Tag List (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.TagList",
@@ -428,8 +428,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.TagList",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Fluent Tag List (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Fluent Tag List (1.1.35)",
+    "Version": "1.1.35"
   },
   "gallery": {
     "CustomGroupControlTemplateName": "",
@@ -544,7 +544,7 @@
     "OverridableProperties": {},
     "Version": "2.2.3"
   },
-  "Keyboard Shortcuts (1.1.34)": {
+  "Keyboard Shortcuts (1.1.35)": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.KeyboardShortcuts",
@@ -556,8 +556,8 @@
     "LastModifiedTimestamp": "0",
     "Name": "cat_PowerCAT.KeyboardShortcuts",
     "OverridableProperties": {},
-    "TemplateDisplayName": "Keyboard Shortcuts (1.1.34)",
-    "Version": "1.1.34"
+    "TemplateDisplayName": "Keyboard Shortcuts (1.1.35)",
+    "Version": "1.1.35"
   },
   "label": {
     "CustomGroupControlTemplateName": "",
@@ -588,6 +588,20 @@
     "TemplateDisplayName": "Label",
     "Version": "1.6.0"
   },
+  "Microsoft_CoreControls_ComboBoxTemplate_dataField": {
+    "CustomGroupControlTemplateName": "",
+    "FirstParty": true,
+    "Id": "http://microsoft.com/appmagic/Microsoft_CoreControls_ComboBoxTemplate_dataField",
+    "IsComponentTemplate": false,
+    "IsCustomGroupControlTemplate": false,
+    "IsPcfControl": false,
+    "IsPremiumPcfControl": false,
+    "IsWidgetTemplate": true,
+    "LastModifiedTimestamp": "0",
+    "Name": "Microsoft_CoreControls_ComboBoxTemplate_dataField",
+    "OverridableProperties": {},
+    "Version": "1.5.0"
+  },
   "pcfDataField": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": true,
@@ -600,7 +614,7 @@
     "LastModifiedTimestamp": "0",
     "Name": "pcfDataField",
     "OverridableProperties": {},
-    "Version": "1.4.0"
+    "Version": "1.5.0"
   },
   "rectangle": {
     "CustomGroupControlTemplateName": "",
@@ -674,7 +688,7 @@
     "TemplateDisplayName": "Slider",
     "Version": "1.6.1"
   },
-  "SubwayNav (1.1.34) Preview": {
+  "SubwayNav (1.1.35) Preview": {
     "CustomGroupControlTemplateName": "",
     "FirstParty": false,
     "Id": "http://microsoft.com/appmagic/powercontrol/cat_PowerCAT.SubwayNav",
@@ -689,58 +703,16 @@
       "Steps": {
         "Type": {
           "EnumString": "",
-          "Kind": "Table",
+          "Kind": "Record",
           "Name": "Root",
-          "Type": [
-            {
-              "EnumString": "",
-              "Kind": "Boolean",
-              "Name": "ItemDisabled",
-              "Type": []
-            },
-            {
-              "EnumString": "",
-              "Kind": "String",
-              "Name": "ItemKey",
-              "Type": []
-            },
-            {
-              "EnumString": "",
-              "Kind": "String",
-              "Name": "ItemLabel",
-              "Type": []
-            },
-            {
-              "EnumString": "",
-              "Kind": "String",
-              "Name": "ItemState",
-              "Type": []
-            },
-            {
-              "EnumString": "",
-              "Kind": "Boolean",
-              "Name": "ItemVisuallyDisabled",
-              "Type": []
-            },
-            {
-              "EnumString": "",
-              "Kind": "String",
-              "Name": "ParentItemKey",
-              "Type": []
-            }
-          ]
+          "Type": []
         },
-        "Version": "1.341"
+        "Version": "1.343"
       }
     },
-    "PCFDynamicSchemaForIRRetrieval": {
-      "Steps": {
-        "DynamicSchema": "{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"ItemKey\":{\"type\":\"string\"},\"ItemLabel\":{\"type\":\"string\"},\"ItemState\":{\"type\":\"string\"},\"ItemDisabled\":{\"type\":\"boolean\"},\"ItemVisuallyDisabled\":{\"type\":\"boolean\"},\"ParentItemKey\":{\"type\":\"string\"}}}}",
-        "PCFSkipValidation": false
-      }
-    },
-    "TemplateDisplayName": "SubwayNav (1.1.34) Preview",
-    "Version": "1.1.34"
+    "PCFDynamicSchemaForIRRetrieval": {},
+    "TemplateDisplayName": "SubwayNav (1.1.35) Preview",
+    "Version": "1.1.35"
   },
   "text": {
     "CustomGroupControlTemplateName": "",

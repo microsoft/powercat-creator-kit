@@ -7,7 +7,7 @@ SpinnerComp As CanvasComponent:
     Y: =0
     ZIndex: =1
 
-    "SpinnerElevation As 'Fluent Elevation (1.1.34)'":
+    "SpinnerElevation As 'Fluent Elevation (1.1.35)'":
         DisplayMode: =DisplayMode.Edit
         Height: =181
         Width: =359
@@ -49,7 +49,7 @@ SpinnerComp As CanvasComponent:
         Y: =261
         ZIndex: =2
 
-        Name5_6 As pcfDataField.textualColumn:
+        Name5_6 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
             FieldDisplayName: ="Name"
             FieldName: ="Name"
             FieldVariantName: ="textualColumn"
@@ -98,7 +98,7 @@ SpinnerComp As CanvasComponent:
         Y: =307
         ZIndex: =4
 
-        Name5_7 As pcfDataField.textualColumn:
+        Name5_7 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
             FieldDisplayName: ="Name"
             FieldName: ="Name"
             FieldVariantName: ="textualColumn"
@@ -151,7 +151,7 @@ SpinnerComp As CanvasComponent:
         Y: =352
         ZIndex: =6
 
-        Name5_8 As pcfDataField.textualColumn:
+        Name5_8 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
             FieldDisplayName: ="Name"
             FieldName: ="Name"
             FieldVariantName: ="textualColumn"
@@ -196,7 +196,7 @@ SpinnerComp As CanvasComponent:
         Y: =398
         ZIndex: =9
 
-    "Spinner1_1 As 'Fluent Spinner (1.1.34)'":
+    "Spinner1_1 As 'Fluent Spinner (1.1.35)'":
         DisplayMode: =DisplayMode.Edit
         Height: =158
         Label: =SpinnerLabelInputbox.Value
@@ -220,7 +220,7 @@ SpinnerComp As CanvasComponent:
         Y: =2
         ZIndex: =11
 
-    "pivotAppCode_35 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_35 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -247,6 +247,7 @@ SpinnerComp As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115

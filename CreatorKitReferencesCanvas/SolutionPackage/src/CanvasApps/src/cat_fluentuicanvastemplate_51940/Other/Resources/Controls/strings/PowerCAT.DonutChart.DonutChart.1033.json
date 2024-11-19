@@ -1,0 +1,18 @@
+{
+  "DonutChart": "Fluent Donut Chart (1.1.39) Preview",
+  "DonutChart_ChartData_Display_Key": "Chart data",
+  "DonutChart_Chartheight_Display_Key": "Chart height",
+  "DonutChart_Chartwidth_Display_Key": "Chart width",
+  "DonutChart_Color_Display_Key": "Item color",
+  "DonutChart_Count_Display_Key": "Item count",
+  "DonutChart_Customcolors_Display_Key": "Custom colors",
+  "DonutChart_Focuslegends_Display_Key": "Focus legends",
+  "DonutChart_Hidelabel_Display_Key": "Hide label",
+  "DonutChart_HideTooltip_Display_Key": "Hide Tooltip",
+  "DonutChart_Innerradius_Display_Key": "Inner radius",
+  "DonutChart_Legend_Display_Key": "Item legend",
+  "DonutChart_Showlabelsinpercent_Display_Key": "Show labels in percent",
+  "DonutChart_Theme_Display_Key": "Theme",
+  "DonutChart_Title_Display_Key": "Title",
+  "DonutChart_Valueinsidedonut_Display_Key": "Value inside donut"
+}

@@ -1,0 +1,16 @@
+{
+  "Name": "PowerApps_CoreControls_Icon",
+  "PcfConversions": [
+    {
+      "Action": [
+        {
+          "Name": "OnChange",
+          "Type": "remove"
+        }
+      ],
+      "From": "0.0.3",
+      "To": "0.0.4"
+    }
+  ],
+  "Version": "0.0.7"
+}

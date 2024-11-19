@@ -53,7 +53,7 @@ DetailsListBasic As CanvasComponent:
         Y: =2
         ZIndex: =1
 
-    "pivotAppCode_21 As 'Fluent Pivot (1.1.34)'.pcfdataset":
+    "pivotAppCode_21 As 'Fluent Pivot (1.1.35)'.pcfdataset":
         DisplayMode: =DisplayMode.Edit
         Height: =49
         Items: |-
@@ -80,6 +80,7 @@ DetailsListBasic As CanvasComponent:
         BorderStyle: =BorderStyle.Solid
         BorderThickness: =1
         Color: =varTheme.palette.neutralPrimary
+        DisabledBorderColor: =RGBA(56, 56, 56, 1)
         DisplayMode: =DisplayMode.View
         Font: =Font.'Courier New'
         Height: =115
@@ -282,7 +283,7 @@ DetailsListBasic As CanvasComponent:
         Y: =40
         ZIndex: =19
 
-        "FluentDetailsListBasic As 'Fluent Details List (1.1.34)'.pcfdataset":
+        "FluentDetailsListBasic As 'Fluent Details List (1.1.35)'.pcfdataset":
             AlternateRowColor: =If(chkAltRowColor.Checked,varTheme.paletteCSS.neutralLighterAlt)
             columns_Items: |-
                 =With({
@@ -476,7 +477,7 @@ DetailsListBasic As CanvasComponent:
             Y: =61
             ZIndex: =7
 
-            Name5_3 As pcfDataField.textualColumn:
+            Name5_3 As Microsoft_CoreControls_ComboBoxTemplate_dataField.textualColumn:
                 FieldDisplayName: ="Name"
                 FieldName: ="Name"
                 FieldVariantName: ="textualColumn"
@@ -583,7 +584,7 @@ DetailsListBasic As CanvasComponent:
             Y: =164
             ZIndex: =13
 
-        "icoSearch_1 As 'Fluent Icon (1.1.34)'":
+        "icoSearch_1 As 'Fluent Icon (1.1.35)'":
             BorderColor: =""
             BorderRadius: =0
             DisplayMode: =DisplayMode.Edit

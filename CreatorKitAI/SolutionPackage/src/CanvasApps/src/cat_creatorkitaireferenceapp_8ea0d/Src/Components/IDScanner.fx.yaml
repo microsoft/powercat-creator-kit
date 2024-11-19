@@ -1,0 +1,44 @@
+IDScanner As CanvasComponent:
+    Fields: |-
+        =Table({FieldName: "Name"}, {FieldName: "Age"})
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =320
+    Values: =result
+    Width: =640
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    AddMediaWithImage1_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =1
+
+        UploadedImage1_2 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =Parent.Height
+            Image: =If(IsBlank(AddMediaButton1_2.Media), IDPlaceholder, AddMediaButton1_2.Media)
+            OnSelect: |
+                =Set(result, DetectFields.Predict(Concat(IDScanner.Fields,","), AddMediaButton1_2.Media,{AdditionalContext:""}).StructuredOutput);
+            Width: =Parent.Width
+            X: =AddMediaButton1_2.X
+            Y: =AddMediaButton1_2.Y
+            ZIndex: =2
+
+        AddMediaButton1_2 As addMedia:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            ChangePictureText: ="Upload Photo ID"
+            Color: =RGBA(0, 0, 0, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height
+            OnSelect: |
+                =Set(result, DetectFields.Predict(Concat(IDScanner.Fields,","), AddMediaButton1_2.Media,{AdditionalContext:""}).StructuredOutput);
+            Size: =25
+            Text: ="Upload Photo"
+            Width: =Parent.Width
+            ZIndex: =3
+

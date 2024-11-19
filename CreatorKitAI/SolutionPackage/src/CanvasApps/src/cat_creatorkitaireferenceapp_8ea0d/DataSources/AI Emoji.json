@@ -2,7 +2,7 @@
   {
     "DataBoundServiceDataSetName": "default.cds",
     "DataBoundServiceFunctionNamesKey": [
-      "Predict-202401.3.17.1"
+      "Predict-202409.5.24.1"
     ],
     "DataBoundServiceOperationGroupNameKey": "AIBuilder\\67f6033f-559a-4251-94ee-0aca257f4cd5",
     "DataBoundServiceRawMetadata": {
@@ -11,20 +11,22 @@
           "additionalContext": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "AdditionalContext",
             "Type": "string/byte"
           },
-          "Text_f9c863e2b2664663be7": {
+          "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"
           }
         },
         "RequiredAttributes": [
-          "Text_f9c863e2b2664663be7"
+          "Text"
         ]
       },
       "Output": {
@@ -32,6 +34,7 @@
           "FinishReason": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Finish Reason",
             "Type": "string"
@@ -39,6 +42,7 @@
           "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"

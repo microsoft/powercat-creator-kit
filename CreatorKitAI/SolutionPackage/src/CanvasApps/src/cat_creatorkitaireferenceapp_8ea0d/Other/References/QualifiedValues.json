@@ -13,6 +13,18 @@
       "Values": {
         "Information": "bb1855f2-e049-482b-865a-e890f957efe9"
       }
+    },
+    {
+      "Kind": "default.cds_canvasapp_forms",
+      "Namespace": "Canvas Apps (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_cat_sample_forms",
+      "Namespace": "Samples (Forms)",
+      "Values": {
+        "Information": "803b0ad5-1e39-4c8a-9f6d-e42093110fea"
+      }
     }
   ]
 }

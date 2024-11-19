@@ -52,6 +52,7 @@
             ZIndex: =1
 
         TextCanvas3 As Text:
+            BorderStyle: =""
             DisplayMode: =DisplayMode.Edit
             Font: =Font.'Segoe UI'
             FontColor: =

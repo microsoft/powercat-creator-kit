@@ -2,7 +2,7 @@
   {
     "DataBoundServiceDataSetName": "default.cds",
     "DataBoundServiceFunctionNamesKey": [
-      "Predict-202401.3.17.1"
+      "Predict-202410.1.1.1"
     ],
     "DataBoundServiceOperationGroupNameKey": "AIBuilder\\54b0c71e-8683-4c2f-9a60-ea59b9d43dc4",
     "DataBoundServiceRawMetadata": {
@@ -11,20 +11,33 @@
           "additionalContext": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "AdditionalContext",
             "Type": "string/byte"
           },
-          "Text": {
-            "Attributes": null,
+          "File": {
+            "Attributes": {
+              "base64Encoded": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "File",
+                "Type": "string/byte"
+              }
+            },
             "IsCollection": false,
+            "RequiredAttributes": [
+              "base64Encoded"
+            ],
             "SchemaName": null,
-            "Title": "Text",
-            "Type": "string"
+            "Title": "",
+            "Type": "object"
           }
         },
         "RequiredAttributes": [
-          "Text"
+          "File"
         ]
       },
       "Output": {
@@ -32,13 +45,40 @@
           "FinishReason": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Finish Reason",
             "Type": "string"
           },
+          "StructuredOutput": {
+            "Attributes": {
+              "Answer": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Answer",
+                "Type": "string"
+              },
+              "Question": {
+                "Attributes": null,
+                "IsCollection": false,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": "Question",
+                "Type": "string"
+              }
+            },
+            "IsCollection": true,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": null,
+            "Type": "array"
+          },
           "Text": {
             "Attributes": null,
             "IsCollection": false,
+            "RequiredAttributes": null,
             "SchemaName": null,
             "Title": "Text",
             "Type": "string"

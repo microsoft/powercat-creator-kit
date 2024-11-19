@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" OrganizationVersion="9.2.24101.200" OrganizationSchemaType="Standard" CRMServerServiceabilityVersion="9.2.24102.00194">
   <Entities />
   <Roles />
   <Workflows />
@@ -20,15 +20,15 @@
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{386a380c-18d8-ee11-9079-000d3a314693}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{a512a047-caa2-ef11-8a69-7c1e5267f4d7}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{386a380c-18d8-ee11-9079-000d3a314693}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Analyze the sentiment in the text: "},{"type":"inputVariable","id":"Text_f9c863e2b2664663be7","text":"Text"},{"type":"literal","text":"  and return the corresponding fluent UI emoji. show only emoji\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>4</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{a512a047-caa2-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Analyze the sentiment in the text: "},{"type":"inputVariable","id":"Text"},{"type":"literal","text":"  and return the corresponding fluent UI emoji. show only emoji\n"}],"definitions":{"inputs":[{"id":"Text","text":"Text","type":"text"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>5</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>67f6033f-559a-4251-94ee-0aca257f4cd5_2024-03-01T22:07:10.172Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWQywrCMBBFf0VmnY0PonZXX+DGQituJa1TDdQkNFOwSP/dpCpiK7idOXNubu6QGMw2urwKOmBppVYQDBlslako1prWiiTVENxhJa0pRL0TV4QApAeAQUhUyrQitJ4Rp5Mk5xDFUivCG/UPwx7CIDLPCQRUVshgXxuPLoRFPklcgDpD48aOPubzbMbHOEpHnE84H6c47Yd48subi8J+xG9l46RRRX+q6pbodf1d75XcCWKQSyXtJUZh/Q93rzbtdvBa/3hn8wC8RHu9qQEAAA==</msdyn_modelrundataspecification>
+          <msdyn_name>67f6033f-559a-4251-94ee-0aca257f4cd5_2024-11-14T20:51:58.030Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWQzQrCMBCEX0X2nIsgHnKrPwUvFtrifbWpBmoSkg1YSt/dtFYU04vXnZmPme2gMOKSantHOgnrpFbAlwwOynjKtaa9Ikkt8A520pkG2yPeBXAABgmRlWdPwg1yKR4U28Yrg8xQIGMDvMbGCQZlawa5CAR1hZ4BVpV8ebZa0SwriSzfYLL+w92gE+vVm94Hfubp30XzLaZF0YBaKuluuUA3vPA3lY7qYpKjeKj4BA0AkaGKAQAA</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{67f6033f-559a-4251-94ee-0aca257f4cd5}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{32dd3d53-9a9a-ee11-be37-000d3a314693}</msdyn_trainedmodelaiconfigurationpareid>
@@ -52,6 +52,53 @@
       </msdyn_modelrundataspecification>
           <msdyn_type>190690000</msdyn_type>
           <msdyn_aimodelid>{67f6033f-559a-4251-94ee-0aca257f4cd5}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
+      <msdyn_aimodelid>{b8c72681-738b-4332-a614-1b4ca101b774}</msdyn_aimodelid>
+      <msdyn_name>AI Fields from Image</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{4fd1bd09-79a3-ef11-8a6a-7c1e5249a364}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{4fd1bd09-79a3-ef11-8a6a-7c1e5249a364}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Extract each text field from this "},{"type":"inputVariable","id":"Image"},{"type":"literal","text":" .\nReturn results as a value pair as follow: [{ Field:\"Name\", Value:\"Value\"}].\nFilter results by provided comma separated "},{"type":"inputVariable","id":"Fields"},{"type":"literal","text":" if provided."}],"definitions":{"inputs":[{"id":"Fields","text":"Fields","type":"text","quickTestValue":""},{"id":"Image","text":"Image","type":"document"}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"array","items":{"type":"object","properties":{"Field":{"type":"string"},"Value":{"type":"string"}},"required":["Field","Value"]}},"jsonExamples":[[{"Field":"PASSPORT","Value":"CANADA"},{"Field":"PASSEPORT","Value":"CANADA"},{"Field":"Type","Value":"P"},{"Field":"Code","Value":"CAN"},{"Field":"Passport No.","Value":"PZ123456"},{"Field":"Surname","Value":"DOE"},{"Field":"Given Names","Value":"JOHN"},{"Field":"Nationality","Value":"CANADIAN"},{"Field":"Date of Birth","Value":"01 JAN 1980"},{"Field":"Sex","Value":"M"},{"Field":"Place of Birth","Value":"TORONTO"},{"Field":"Date of Issue","Value":"01 JAN 2020"},{"Field":"Date of Expiry","Value":"01 JAN 2030"},{"Field":"Authority","Value":"PASSPORT CANADA"}]]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>b8c72681-738b-4332-a614-1b4ca101b774_2024-11-15T17:42:58.867Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWSwWrDMAyGX2Xo7Mtg7JBb2rWwywpt6V2J1c4jsY0tw0Lpu8+uMxjYgVU3W5/0/0i6wsFSvzVuRD6R88poaJ4FvGsbeG8MbzQrnqC5wpvydsDpA0eCBkBAy+xUF5h8Sm8VDdKX4PwvYGc5dscBmjMOngQcJ5uAQ+yiL3CLoiNeqCo1o7vui3qO73+76tDT68tG90aSLPmsuOxtdS//dRhDAEqpMrw2mumby65tgfxVYBeWBSIY+NHR110cs3Ax5bPSyn/uCX3adbmulH2a05VyH/33HBzJ7DS1mKHWOZwe2c79NhZOpqZ9wiFUDiR/F3yOHyL0GqbiAgAA</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{b8c72681-738b-4332-a614-1b4ca101b774}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{12c6bd06-79a3-ef11-8a6a-7c1e520a8b12}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{12c6bd06-79a3-ef11-8a6a-7c1e520a8b12}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>79924716-9be7-46ca-8bee-d57a56aa12c0</msdyn_modeldata>
+          <msdyn_name>b8c72681-738b-4332-a614-1b4ca101b774_2024-11-15T17:42:47.596Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{b8c72681-738b-4332-a614-1b4ca101b774}</msdyn_aimodelid>
           <statecode>2</statecode>
           <statuscode>6</statuscode>
           <IsCustomizable>1</IsCustomizable>
@@ -144,6 +191,100 @@
       </msdyn_modelrundataspecification>
           <msdyn_type>190690000</msdyn_type>
           <msdyn_aimodelid>{c9130978-a081-4b35-ba17-3d8d51c771b9}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
+      <msdyn_aimodelid>{04cd7bd4-6f91-4af6-8d96-46e3b07a281a}</msdyn_aimodelid>
+      <msdyn_name>AI Anomaly</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{ac77ce9a-6ba3-ef11-8a6a-7c1e520a8b12}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{ac77ce9a-6ba3-ef11-8a6a-7c1e520a8b12}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"List all the visible damages for the part in this "},{"type":"inputVariable","id":"Image"},{"type":"literal","text":" \n\nDescribe the parts that may need to be replaced\nIf there's a high chance that external damages induce identified internal damages, indicate it.\nIt may be possible that there's no damage at all."}],"definitions":{"inputs":[{"id":"Image","text":"Image","type":"document"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>04cd7bd4-6f91-4af6-8d96-46e3b07a281a_2024-11-15T16:06:46.412Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRzQrCMBCEX0X2nIsgHnqrWsGLhSret+22RtokNFuwiO9u+qOIraA5JczMfsPmBgdDyVZXJfKJKiu1Am8uYKdMzZHWHCiW3IB3g420psBmjyWBByDAZ65kXDPZVt6VmNOk79iY9hbGF0rYvX8eGaOl5SJQiU4pHft7ooDQsKuNBXgZFpZewFUXP7iJKoe7OwIwTWVvXmvFdOXxVH9keSdwVX8HOGPN/+5tusWxBw+gJ0JAJpW054jQth/1mdp26myQR3FX8QHMSFi58AEAAA==</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{04cd7bd4-6f91-4af6-8d96-46e3b07a281a}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{eb8eff93-6ba3-ef11-8a6a-7c1e520a8b12}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{eb8eff93-6ba3-ef11-8a6a-7c1e520a8b12}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>97f3daaa-f12c-4aad-bedb-9649edad5de7</msdyn_modeldata>
+          <msdyn_name>04cd7bd4-6f91-4af6-8d96-46e3b07a281a_2024-11-15T16:06:37.331Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{04cd7bd4-6f91-4af6-8d96-46e3b07a281a}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
+      <msdyn_aimodelid>{1ed8ac15-872e-4215-9c53-5d9e4ebc7ed4}</msdyn_aimodelid>
+      <msdyn_name>AI Diff Image</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{56182a8f-6ca3-ef11-8a6a-7c1e520a8b12}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{56182a8f-6ca3-ef11-8a6a-7c1e520a8b12}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Describe all differences between - "},{"type":"inputVariable","id":"Image1"},{"type":"literal","text":" and "},{"type":"inputVariable","id":"Image2"},{"type":"literal","text":" .\n"}],"definitions":{"inputs":[{"id":"Image1","text":"Image1","type":"document"},{"id":"Image2","text":"Image2","type":"document"}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"object","properties":{"differences":{"type":"array","items":{"type":"object","properties":{"object":{"type":"string"},"location":{"type":"string"},"Image1":{"type":"string"},"Image2":{"type":"string"}},"required":["object","location","Image1","Image2"]}}}},"jsonExamples":[{"differences":[{"object":"jellyfish","location":"left side","Image1":"one jellyfish","Image2":"two jellyfish"},{"object":"coral","location":"left side","Image1":"orange coral","Image2":"green coral"}]}]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>1ed8ac15-872e-4215-9c53-5d9e4ebc7ed4_2024-11-15T16:13:38.945Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACr1TvWrDMBB+lXKzl4TSwZvTJpClgSRkP0vnVMWWjHSGmtB3rxS5psQK1B2qSdJ9f+JOFzi0JDbGNsgnsk4ZDfkig61uO94bw2vNinvIL/CiXFtj/4oNQQ6QQcFsVdkxuVDeNnimRRJ47Nuw25XvJNiff61ZoqOnx7UWRpKc4gfLDHYt++BYQ15h7Wh0XF35By+pz/DpVxY5y/+PuZwXE6VUEfxsNNMHT2WLCeSnA9vuvoEHdjy3wekUx2g8GH1bZFAprdzbntCFibplba7Vh6GcoDufX3BnScakQeLP/ZGqqsiSFvE46BTWYj9HxkTjCXC4T7yiNgJDQ6acsZJg3ftJ47inGYmhHifvhjGuL+84qCr/AwAA</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{1ed8ac15-872e-4215-9c53-5d9e4ebc7ed4}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{5ffc4b8d-6ca3-ef11-8a6a-7c1e5249a364}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{5ffc4b8d-6ca3-ef11-8a6a-7c1e5249a364}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>2c251686-ed96-4120-b622-59896358222c</msdyn_modeldata>
+          <msdyn_name>1ed8ac15-872e-4215-9c53-5d9e4ebc7ed4_2024-11-15T16:13:32.009Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{1ed8ac15-872e-4215-9c53-5d9e4ebc7ed4}</msdyn_aimodelid>
           <statecode>2</statecode>
           <statuscode>6</statuscode>
           <IsCustomizable>1</IsCustomizable>
@@ -296,15 +437,15 @@
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{635ef6b4-fce1-ee11-904c-000d3a34a719}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{81cf4846-dba2-ef11-8a69-6045bddb44e4}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{635ef6b4-fce1-ee11-904c-000d3a34a719}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Task: Find and Replace\n\nContext:\nYou are working with a "},{"type":"inputVariable","id":"Text","text":"Text"},{"type":"literal","text":"that may contain information such as phone numbers, email addresses, social security numbers, social media handles. Your goal is to find and replace such information with a special character for privacy protection. \n\nSpecial Character: \""},{"type":"inputVariable","id":"Special_20character","text":"Special character"},{"type":"literal","text":"\"\n\nInstructions:\nImportant: Seach for any personal or sensitive information and replace them with Special Character mentioned above.\n1. Search for phone numbers in the text and replace them with Special Character mentioned above.\n2. Search for email addresses in the text and replace them with Special Character mentioned above.\n3. Search for social media handles in the text and replace them with Special Character mentioned above.\n4. Search for social security numbers in the text and replace them with Special Character mentioned above.\n5. Search for date of birth in the text and replace them with Special Character mentioned above.\n6. Search for addresses in the text and replace them with Special Character mentioned above.\n\n\n\n\n\n\n\n\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>28</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{81cf4846-dba2-ef11-8a69-6045bddb44e4}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Task: Find and Replace\n\nContext:\nYou are working with a "},{"type":"inputVariable","id":"Text"},{"type":"literal","text":"that may contain information such as phone numbers, email addresses, social security numbers, social media handles. Your goal is to find and replace such information with a special character for privacy protection. \n\nSpecial Character: \""},{"type":"inputVariable","id":"Special_20character"},{"type":"literal","text":"\"\n\nInstructions:\nImportant: Seach for any personal or sensitive information and replace each character with Special Character mentioned above.\n1. Search for phone numbers in the text and replace them with Special Character mentioned above.\n2. Search for email addresses in the text and replace them with 5 Special Character mentioned above.\n3. Search for social media handles in the text and replace them with Special Character mentioned above.\n4. Search for social security numbers in the text and replace them with 5 Special Character mentioned above.\n5. Search for date of birth in the text and replace them with Special Character mentioned above.\n6. Search for addresses in the text and replace them with Special 5 Character mentioned above.\n\n\nShow only text response with replaced characters"}],"definitions":{"inputs":[{"id":"Text","text":"Text","type":"text","quickTestValue":"John Doe's social security number is 12343043812 and his address is 1234 Maple Street, Anytown, USA."},{"id":"Special_20character","text":"Special character","type":"text","quickTestValue":"*"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>31</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>fa03a8f2-db27-4165-8a36-6f471cb5b2b7_2024-03-14T12:16:39.286Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWRTQvCMAyG/4rkvIOKeNjNT/CisA2vEreogdmWNgOH7L/b6WBgB7smz/u0Sd6QGsr32j5RzmQdawXxLIKDMpUkWstOCUsN8Ru27EyJ9RGfBDFwC0AEKxHL10rItQwWBYt3YLnRSuglYXAVIBGczK8CsdiKIshq06JrdLRcpP4BdYfGlweF2b/jhqXrJX089ZMylpf5NH+gxVzIhrYOmvTIuLrx8lMlIxvTXyJY2fCWuqGCGW6s2D0SQtce6j+1/3YnXXvgn80HZNwdNvABAAA=</msdyn_modelrundataspecification>
+          <msdyn_name>fa03a8f2-db27-4165-8a36-6f471cb5b2b7_2024-11-14T22:53:35.177Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRPQvCMBCG/0q5OYOKOHTzE1wUVFzlbE8NxCQkV7CU/nfbWqmYDrrmfe7hzV0Be0vJyrg78pGcl0ZDPBSw1jbjnTG81Cw5h7iAhfRWYb7BO0EMIGDK7OQ5Y/J1fKAHh1jzKmBruTKjgviCypOAQ27reF8Z9BVK0dSQqE6jQXJDhwmTC20tFHXIL2pMU/li5kZzb81pgHyK2WWdd4aeJuO3vaz824z/XVZ/i3ZZwQcuUkt/2xH6+jrfU6smjdo4GK8qPgH0eYHn5QEAAA==</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{fa03a8f2-db27-4165-8a36-6f471cb5b2b7}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{37ca8242-2dd6-ee11-9079-000d3a3146f8}</msdyn_trainedmodelaiconfigurationpareid>
@@ -382,6 +523,53 @@
       </AIConfigurations>
     </AIModel>
     <AIModel>
+      <msdyn_aimodelid>{5a2a74bf-6ff9-41e4-a747-7e21334b9d8e}</msdyn_aimodelid>
+      <msdyn_name>AI Monochromatic Colors</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{f9aa69ed-c4a2-ef11-8a69-7c1e5267f4d7}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{f9aa69ed-c4a2-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Monochromatic color palettes are based on a single color paired with various shades and tints. Like analogous palettes, monochromatic palettes can be very pleasing to look at. Generate a json list of 12 colors that are monochromatic based the primary color inspired from this"},{"type":"inputVariable","id":"Text"}],"definitions":{"inputs":[{"id":"Text","text":"Text","type":"text"}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"object","properties":{"monochromatic_palette":{"type":"array","items":{"type":"object","properties":{"color_name":{"type":"string"},"hex":{"type":"string"}},"required":["color_name","hex"]}}}},"jsonExamples":[{"monochromatic_palette":[{"color_name":"Light Blue","hex":"#ADD8E6"},{"color_name":"Sky Blue","hex":"#87CEEB"},{"color_name":"Dodger Blue","hex":"#1E90FF"},{"color_name":"Cornflower Blue","hex":"#6495ED"},{"color_name":"Medium Blue","hex":"#0000CD"},{"color_name":"Royal Blue","hex":"#4169E1"},{"color_name":"Blue","hex":"#0000FF"},{"color_name":"Medium Slate Blue","hex":"#7B68EE"},{"color_name":"Slate Blue","hex":"#6A5ACD"},{"color_name":"Dark Slate Blue","hex":"#483D8B"},{"color_name":"Navy","hex":"#000080"},{"color_name":"Midnight Blue","hex":"#191970"}]}]}},"modelParameters":{"modelType":"gpt-35-turbo","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>5a2a74bf-6ff9-41e4-a747-7e21334b9d8e_2024-11-14T20:13:43.111Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRQWvDMAyF/8rQ2ZfB2CG3dFthlwXasmtxHXXxcCxjy9BQ+t9nJ1tX6jBWH/WePutJR1g7VEvyveR39EGThepewKt1kVdE/GJZ8wDVEZ51cEYOb7JHqAAE1Mxe7yJjyPIGD1zaxqqAxnEiSwPVXpqAAjaDy/I6EewHnATIttWT54ksz7LqwnIJZh9/uQsZ8PHhh35K/CbyrYn4r0RFgL22OnQrlCGv8LprOap33/JMe0jzK44e22nScaWTqdl9osp//nvyniypzlM6qlZbJw0yJ+OZWHsvh1uAigz5rR3Va/OFNpOrw0PZkouF9/y+APYc63uUAgAA</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{5a2a74bf-6ff9-41e4-a747-7e21334b9d8e}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{e65c71e7-c4a2-ef11-8a69-7c1e5267f4d7}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{e65c71e7-c4a2-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>d6bc678f-3e0c-4d38-b03d-5d9ba84730ea</msdyn_modeldata>
+          <msdyn_name>5a2a74bf-6ff9-41e4-a747-7e21334b9d8e_2024-11-14T20:13:31.843Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{5a2a74bf-6ff9-41e4-a747-7e21334b9d8e}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
       <msdyn_aimodelid>{f8eeeb6c-0eac-4a9d-b502-7e4807163afa}</msdyn_aimodelid>
       <msdyn_name>AI Define</msdyn_name>
       <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
@@ -428,21 +616,68 @@
       </AIConfigurations>
     </AIModel>
     <AIModel>
+      <msdyn_aimodelid>{b6a6e32d-2094-4d7d-a3dc-a049653e1859}</msdyn_aimodelid>
+      <msdyn_name>AI Flowchart</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{e2883cd4-d2a2-ef11-8a69-7c1e5267f4d7}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{e2883cd4-d2a2-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Generate a Mermaid Flowchart given the following "},{"type":"inputVariable","id":"Text"},{"type":"literal","text":".\nuse flowchart LR"}],"definitions":{"inputs":[{"id":"Text","text":"Text","type":"text","quickTestValue":"Climate change is one of the most pressing challenges facing humanity today. It refers to long-term alterations in temperature, precipitation, wind patterns, and other elements of the Earth's climate system. Primarily driven by human activities, such as the burning of fossil fuels, deforestation, and industrial processes, the concentration of greenhouse gases in the atmosphere has reached unprecedented levels. This increase contributes to global warming, leading to a cascade of environmental impacts, including rising sea levels, more frequent and severe weather events, and shifts in ecosystems.\n\nThe consequences of climate change are far-reaching and disproportionately affect vulnerable populations. Developing countries, which often lack the resources to adapt to these changes, are at the forefront of experiencing droughts, floods, and food insecurity. As temperatures rise, agricultural productivity declines in many regions, threatening food supplies and livelihoods. Additionally, climate change exacerbates existing social inequalities, as marginalized communities often bear the brunt of environmental degradation and are less equipped to respond to climate-related crises.\n\nAddressing climate change requires a multifaceted approach that involves both mitigation and adaptation strategies. Mitigation efforts focus on reducing greenhouse gas emissions through renewable energy adoption, energy efficiency improvements, and reforestation initiatives. On the other hand, adaptation strategies aim to enhance resilience to climate impacts, such as building infrastructure to withstand extreme weather or developing drought-resistant crops. Collaboration among governments, businesses, and individuals is essential to create comprehensive policies that promote sustainability and protect our planet.\n\nPublic awareness and engagement are crucial in the fight against climate change. Grassroots movements, educational campaigns, and advocacy for policy changes can empower individuals and communities to take action. The shift toward a more sustainable future also hinges on innovative technologies and practices that promote environmental stewardship. By fostering a sense of responsibility and collective action, we can work towards mitigating climate change and safeguarding the planet for future generations."}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"object","properties":{"mermaid":{"type":"string"}}},"jsonExamples":[{"mermaid":"flowchart LR\nA[Climate Change] --&gt; B[Long-term alterations in climate]\nA --&gt; C[Human activities]\nC --&gt; D[Burning of fossil fuels]\nC --&gt; E[Deforestation]\nC --&gt; F[Industrial processes]\nD --&gt; G[Increased greenhouse gases]\nE --&gt; G\nF --&gt; G\nG --&gt; H[Global warming]\nH --&gt; I[Rising sea levels]\nH --&gt; J[Frequent severe weather]\nH --&gt; K[Shifts in ecosystems]\nL[Consequences] --&gt; M[Vulnerable populations affected]\nL --&gt; N[Developing countries at risk]\nL --&gt; O[Agricultural productivity declines]\nL --&gt; P[Exacerbates social inequalities]\nQ[Addressing Climate Change] --&gt; R[Mitigation strategies]\nQ --&gt; S[Adaptation strategies]\nR --&gt; T[Reduce greenhouse gas emissions]\nR --&gt; U[Renewable energy]\nR --&gt; V[Energy efficiency]\nR --&gt; W[Reforestation]\nS --&gt; X[Enhance resilience]\nS --&gt; Y[Infrastructure for extreme weather]\nS --&gt; Z[Drought-resistant crops]\nAA[Collaboration] --&gt; AB[Governments]\nAA --&gt; AC[Businesses]\nAA --&gt; AD[Individuals]\nAE[Public Awareness] --&gt; AF[Grassroots movements]\nAE --&gt; AG[Educational campaigns]\nAE --&gt; AH[Advocacy for policy changes]\nAI[Sustainable Future] --&gt; AJ[Innovative technologies]\nAI --&gt; AK[Environmental stewardship]\nAI --&gt; AL[Collective action]"}]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>b6a6e32d-2094-4d7d-a3dc-a049653e1859_2024-11-14T21:53:08.171Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRzQrCMBCEX0X2nIsgHnqrPwUvFqp4j+1WI20Skg1YSt/dtFUUI6I5Zma/zGxa2GnME2VqTgc0VigJ0ZTBRmpHmVK0liSogaiFlbC64s2W1wgRAIOYyIijI7S9vMcrhbbhlkGqyZN5BVHJK4sM9o3u5Z0nyBN0DHhRiNGzVJI+suLA8gom457cBbc4nz3oneenjv5tRN8aBQVKIYU9Z8htv8L3qWRQJ3f5w7j1+XNyBosx6bDS0ZQeL5j3b/6cvEb/n6IInQ8hCDCeG72Lh0AOAgAA</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{b6a6e32d-2094-4d7d-a3dc-a049653e1859}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{c0b2c6cd-d2a2-ef11-8a69-6045bddb44e4}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{c0b2c6cd-d2a2-ef11-8a69-6045bddb44e4}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>f11c9a1d-3ca4-4425-8dc6-ace8cb1ebabb</msdyn_modeldata>
+          <msdyn_name>b6a6e32d-2094-4d7d-a3dc-a049653e1859_2024-11-14T21:52:56.793Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{b6a6e32d-2094-4d7d-a3dc-a049653e1859}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
       <msdyn_aimodelid>{bd0d8682-6d05-4e2b-a9ef-c694a371f6fb}</msdyn_aimodelid>
       <msdyn_name>AI Chart</msdyn_name>
       <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{0a461fd2-9ce5-ee11-904c-000d3a5b7901}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{6f69ea5c-d0a2-ef11-8a69-7c1e5267f4d7}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{0a461fd2-9ce5-ee11-904c-000d3a5b7901}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Extract relevant data from the following Text "},{"type":"inputVariable","id":"Text","text":"Text"},{"type":"literal","text":" and organize into a JSON. \nRefer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.\nExample : \n[{ ItemLegend: \"ColumnData1\", ItemCount : \"ColumnData2\"}, { ItemLegend: \"ColumnData3\", ItemCount : \"ColumnData4\"}]\n\nInstruction:\n1)Example above is only for reference and should NOT be taken as it is. ItemLegend and ItemCount  has to be generated from Paragraph.\n2) ItemLegend should not be longer than 4 words\n3) ItemCount should be a number. If number is not found in the data, then do NOT mention the object\n4) ItemCount should be rounded to a whole number without decimals.\n\n\n\n\n\n\n\n\n\n\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>18</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{6f69ea5c-d0a2-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Extract relevant data from the following Text "},{"type":"inputVariable","id":"Text"},{"type":"literal","text":" and organize into a JSON. \nRefer the example below &amp; follow the instruction to generate the JSON. JSON should strictly follow the instructions provided.\nExample : \n[{ ItemLegend: \"ColumnData1\", ItemCount : \"ColumnData2\"}, { ItemLegend: \"ColumnData3\", ItemCount : \"ColumnData4\"}]\n\nInstruction:\n1)Example above is only for reference and should NOT be taken as it is. ItemLegend and ItemCount  has to be generated from Paragraph.\n2) ItemLegend should not be longer than 4 words\n3) ItemCount should be a number. If number is not found in the data, then do NOT mention the object\n4) ItemCount should be rounded to a whole number without decimals.\n\n\n\n\n\n\n\n\n\n\n"}],"definitions":{"inputs":[{"id":"Text","text":"Text","type":"text","quickTestValue":"In the current mobile market, the Galaxy Z Flip has made waves with its innovative folding screen, selling over 500,000 units since its recent launch. Meanwhile, the iPhone 13 Pro continues to be a consumer favorite, boasting sales of over 2 million units globally thanks to its advanced camera features and efficient battery life. The OnePlus 9R is not far behind, appealing to tech-savvy users with high refresh rates and fast charging, reaching sales of around 700,000 units. The Xiaomi Mi 11, known for its exceptional display and competitive pricing, has also performed well, with sales exceeding 800,000 units. Lastly, the Google Pixel 5, with its clean software and excellent photography capabilities, has sold over 600,000 units, maintaining a strong position in the market."}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"array","items":{"type":"object","properties":{"ItemLegend":{"type":"string"},"ItemCount":{"type":"number"}},"required":["ItemLegend","ItemCount"]}},"jsonExamples":[[{"ItemLegend":"Galaxy Z Flip","ItemCount":500000},{"ItemLegend":"iPhone 13 Pro","ItemCount":2000000},{"ItemLegend":"OnePlus 9R","ItemCount":700000},{"ItemLegend":"Xiaomi Mi 11","ItemCount":800000},{"ItemLegend":"Google Pixel 5","ItemCount":600000}]]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>19</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>bd0d8682-6d05-4e2b-a9ef-c694a371f6fb_2024-03-19T03:00:28.427Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWQzQrCMBCEX0X2nIsgHnKrPwUvFlrxHu1WAzUJyQYspe9uUitKW/A6+81MJi0UBq+ptg9BZ7ROagV8yeCgjKdca9orktQAb2EnnalFcxQPBA4yAsAgIbLy4gldZERZSgoZot5qRfikqTGZIAwy81aAk/XI4NSYiG6Ew/WqCAXqBl2QZwN79TejErX7hnzsXQjIPP2ZpXtismt+ytA8KmJQSSXdPUfh4m+OXWl/XQznmXd2L7oau5SVAQAA</msdyn_modelrundataspecification>
+          <msdyn_name>bd0d8682-6d05-4e2b-a9ef-c694a371f6fb_2024-11-14T21:35:30.591Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWQSwvCMBCE/4rsORdBPPRWXyCIBRXvq1010CYh2YBF/O8mrS9sEc0xM/MxsxdYG9rPtC2Rt2Sd1AqSvoC5Mp5XWvNUseQKkgtMpDMFVkssCRIAASmzlTvP5KK8oTO3bfWvgMxwIGMByQELRwI2lYnyOhDUEa4CMM9l4xlrxZ2stGV5B7P1L+4IHQ0HD/o18DPP/y7ib4taAw5SSXdaEbp4ws/UrFZ7d7kj7kL/PXtLedO0PmljSq3FKmR+Lj5nKhd0JJW3zW9aR4uojrVXHbtf0jMX1hTxuvHdAB70SzdJAgAA</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{bd0d8682-6d05-4e2b-a9ef-c694a371f6fb}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{d31522c6-23d6-ee11-9079-000d3a314693}</msdyn_trainedmodelaiconfigurationpareid>
@@ -480,15 +715,15 @@
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{0046c46c-25e0-ee11-904c-000d3a34a719}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{f02f21de-caa2-ef11-8a69-6045bddb44e4}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{0046c46c-25e0-ee11-904c-000d3a34a719}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Given a generic review comment or feedback, classify and show ratings based on sentiment and other criteria.\n\nReview Comment: \"["},{"type":"inputVariable","id":"Comment","text":"Comment"},{"type":"literal","text":"]\"\n\nInstructions:\n1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.\n2. Return Output the sentiment classification and any relevant criteria-based ratings in a JSON format, for example, [{Category: \"Installation\", Rating: 5}, {Category: \"Ease of Use\", Rating: 2}]. \n3. Do not return anything else apart from the Array format.\n4. Do not return null or blank for category or rating.\n5. Rating should always be numeric.\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>15</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{f02f21de-caa2-ef11-8a69-6045bddb44e4}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Given a generic review comment or feedback, classify and show ratings based on sentiment and other criteria.\n\nReview Comment: \"["},{"type":"inputVariable","id":"Comment"},{"type":"literal","text":"]\"\n\nInstructions:\n1. The model will analyze the sentiment of the comment and provide a rating based on the sentiment.\n2. Return Output the sentiment classification and any relevant criteria-based ratings in a JSON format, for example, [{Category: \"Installation\", Rating: 5}, {Category: \"Ease of Use\", Rating: 2}]. \n3. Do not return anything else apart from the Array format.\n4. Do not return null or blank for category or rating.\n5. Rating should always be numeric.\n\n\n\n\n\n\n\n\n\n\n\n\n\n"}],"definitions":{"inputs":[{"id":"Comment","text":"Comment","type":"text"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-35-turbo","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>16</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>baf4e04f-b86e-48d6-b317-c98f6b951e03_2024-03-12T04:03:07.984Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWQwQqCQBCGXyXmvJcgOngzS+iSoNJ9y7EWdHfZnYVEfPdcTQoVuu7/zTf7TwuZxnusTM3pisYKJSHYMjhL7ShVik6SBDUQtHAUVle8ufAaIQDhAWAQEhlxc4TWM7woBPUOXkVKEr5oORguEAaJHl8gIOOQQd5ojx64xf0u6xfIB3QMIlXXKFecU/BrKnllv6pJ0vWaxNGfcmogFu3WC+Vjh9kiBqWQwj5T5NbfdD4VD+nmE6/8s3sDVTfp0ZsBAAA=</msdyn_modelrundataspecification>
+          <msdyn_name>baf4e04f-b86e-48d6-b317-c98f6b951e03_2024-11-14T20:56:09.313Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWQQQuCQBCF/0rMeS9BdPBmltAlQaX7lGMt6O6yOwuJ+N/TTIr00vm9981700Jm6BprWyOfyTqpFQRrAUdlPKda80Gx5AaCFvbSmQqbE9YEAYCAkNnKi2dygxzpuibFc+ckCEgM93ysICixciQgb8zgyHqOukEnAItCjp5IK6bHAi6cWb7BbP2Hu0NH281E73p+4vnfXcst8vHwbEAplXT3lNANj/xNxS919ZZn8b7iE30epd2QAQAA</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{baf4e04f-b86e-48d6-b317-c98f6b951e03}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{54965d1a-7edf-ee11-904c-000d3a5b7901}</msdyn_trainedmodelaiconfigurationpareid>
@@ -526,15 +761,15 @@
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{9028f68b-70d5-ee11-9079-000d3a3146f8}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{b7c2587c-cea2-ef11-8a69-6045bddb44e4}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{9028f68b-70d5-ee11-9079-000d3a3146f8}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Extract categories from the following "},{"type":"inputVariable","id":"Text","text":"Text"},{"type":"literal","text":"\nResponse in the following format:[ \"category1\", \"category2\"]\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>6</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{b7c2587c-cea2-ef11-8a69-6045bddb44e4}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Extract categories from the following "},{"type":"inputVariable","id":"Text"},{"type":"literal","text":". Response json should look like this format { \"categories\":[{category: \"Meditation\"},{category: \"Stress\"}] }\n"}],"definitions":{"inputs":[{"id":"Text","text":"Text","type":"text","quickTestValue":"Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.\nAdditionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.\nIt can also help improve sleep quality and reduce insomnia."}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"object","properties":{"categories":{"type":"array","items":{"type":"object","properties":{"category":{"type":"string"}},"required":["category"]}}}},"jsonExamples":[{"categories":[{"category":"Meditation"},{"category":"Stress"},{"category":"Anxiety"},{"category":"Focus"},{"category":"Concentration"},{"category":"Blood Pressure"},{"category":"Compassion"},{"category":"Kindness"},{"category":"Empathy"},{"category":"Sleep Quality"},{"category":"Insomnia"}]}]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>11</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>bbd51cc4-3b91-4f54-958c-d773f856a323_2024-02-27T13:03:13.956Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWQzQrCMBCEX0X2nIsgHnKrPwUvFlrxHu1WAzUJyQYspe9uUitKW/A6+81MJi0UBq+ptg9BZ7ROagV8yeCgjKdca9orktQAb2EnnalFcxQPBA4yAsAgIbLy4gldZERZSgoZot5qRfikqTGZIAwy81aAk/XI4NSYiG6Ew/WqCAXqBl2QZwN79TejErX7hnzsXQjIPP2ZpXtismt+ytA8KmJQSSXdPUfh4m+OXWl/XQznmXd2L7oau5SVAQAA</msdyn_modelrundataspecification>
+          <msdyn_name>bbd51cc4-3b91-4f54-958c-d773f856a323_2024-11-14T21:22:03.492Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACp2RSwvCMBCE/4rsORdBPPRWX+DFghbva7tqpE1CsgFL8b/bhy9sETXHzOyXmU0JG0PJQtsceUvWSa0gGApYKuN5rTXPFUsuIChhJp3JsFhhThAACAiZrdx5JlfLMZ25a2tuBUSGKzJmEOwxcyQgLkwtbyqCOsBFAKapbD1TrbiXFXYsr2C2/smdoKPx6E6/VPzI86+N+FOjToG9VNId14SuXuH71KJRBze5Z9xV+RP2ltI2abPS1hTtTpTUb36dPEGmg7by9jMtJrQWiz8oPdaH0inyOFcGLOTwWQIAAA==</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{bbd51cc4-3b91-4f54-958c-d773f856a323}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{4a99ace6-b092-ee11-be37-000d3a314693}</msdyn_trainedmodelaiconfigurationpareid>
@@ -572,14 +807,14 @@
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{c73eada5-8301-ef11-a1fd-7c1e521a3571}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{03553935-cba2-ef11-8a69-7c1e5267f4d7}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{c73eada5-8301-ef11-a1fd-7c1e521a3571}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Rewrite the "},{"type":"inputVariable","id":"Original_20Text"},{"type":"literal","text":" \nkeeping the below points into consideration. Return only the rewritten text. \nFollow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.\n\n"},{"type":"inputVariable","id":"Rewrite_20Text_20Conditions"}],"definitions":{"inputs":[{"id":"Original_20Text","text":"Original Text","quickTestValue":"Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.\nAdditionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.\nIt can also help improve sleep quality and reduce insomnia."},{"id":"Rewrite_20Text_20Conditions","text":"Rewrite Text Conditions"}],"data":[],"output":{"formats":["text"]}}}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>6</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{03553935-cba2-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Rewrite the "},{"type":"inputVariable","id":"Original_20Text"},{"type":"literal","text":" \nkeeping the below points into consideration. Return only the rewritten text. \nFollow all the foundational guidelines of Responsible AI and do not respond to inappropriate information.\n\n"},{"type":"inputVariable","id":"Rewrite_20Text_20Conditions"}],"definitions":{"inputs":[{"id":"Original_20Text","text":"Original Text","type":"text","quickTestValue":"Meditation is a practice that has been around for centuries, and its benefits are well-documented. Studies have shown that regular meditation can help reduce stress and anxiety, improve focus and concentration, and even lower blood pressure.\nAdditionally, meditation has been shown to increase feelings of compassion, kindness, and empathy towards others.\nIt can also help improve sleep quality and reduce insomnia."},{"id":"Rewrite_20Text_20Conditions","text":"Rewrite Text Conditions","type":"text"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>7</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>c1632d4d-7d46-4348-8bfa-d9adfbdd6c47_2024-04-23T15:10:43.113Z</msdyn_name>
+          <msdyn_name>c1632d4d-7d46-4348-8bfa-d9adfbdd6c47_2024-11-14T20:58:39.206Z</msdyn_name>
           <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRMY/CMAyF/0rlOQOgE0M3OEBioVJBrMh3GM5SSKLEFVSI/05aig4RBpgyvPc+PztnWDr6nVl/QFmTD2wN5H0Fc+MqKa2VqRGWGvIzTDg4jfUCDwQ5gIKRiOefSig0cuF5zwb1ZtBb0UnSxN2QtbKCwkmchhryHepACla1a3zLSDV7uCgo6ehZqCPG59uaLTepkOI7c0vPHozvDMLtzY06BuVl+1FieQSLr/65Yww0/LrTL5FfVPLpOV+36E6XLLBjw+GvJAzN/z2nZq2adXISjxWv5g8gFQcCAAA=</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{c1632d4d-7d46-4348-8bfa-d9adfbdd6c47}</msdyn_aimodelid>
@@ -612,21 +847,68 @@
       </AIConfigurations>
     </AIModel>
     <AIModel>
+      <msdyn_aimodelid>{c08394d5-6d24-4dcf-8d39-dcf14c79046c}</msdyn_aimodelid>
+      <msdyn_name>AI Describe Image</msdyn_name>
+      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
+      <statecode>1</statecode>
+      <statuscode>1</statuscode>
+      <IsCustomizable>1</IsCustomizable>
+      <msdyn_activerunconfigurationid>{9751c3cc-6ba3-ef11-8a69-7c1e524727dd}</msdyn_activerunconfigurationid>
+      <AIConfigurations>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{9751c3cc-6ba3-ef11-8a69-7c1e524727dd}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"Describe image "},{"type":"inputVariable","id":"Image"},{"type":"literal","text":" "}],"definitions":{"inputs":[{"id":"Image","text":"Image","type":"document"}],"data":[],"output":{"formats":["text"]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_name>c08394d5-6d24-4dcf-8d39-dcf14c79046c_2024-11-15T16:08:10.597Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpWRzQrCMBCEX0X2nIsgHnqrWsGLhSret+22RtokNFuwiO9u+qOIraA5JczMfsPmBgdDyVZXJfKJKiu1Am8uYKdMzZHWHCiW3IB3g420psBmjyWBByDAZ65kXDPZVt6VmNOk79iY9hbGF0rYvX8eGaOl5SJQiU4pHft7ooDQsKuNBXgZFpZewFUXP7iJKoe7OwIwTWVvXmvFdOXxVH9keSdwVX8HOGPN/+5tusWxBw+gJ0JAJpW054jQth/1mdp26myQR3FX8QHMSFi58AEAAA==</msdyn_modelrundataspecification>
+          <msdyn_type>190690001</msdyn_type>
+          <msdyn_aimodelid>{c08394d5-6d24-4dcf-8d39-dcf14c79046c}</msdyn_aimodelid>
+          <msdyn_trainedmodelaiconfigurationpareid>{60c7a9ca-6ba3-ef11-8a69-7c1e5267f4d7}</msdyn_trainedmodelaiconfigurationpareid>
+          <statecode>2</statecode>
+          <statuscode>7</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+        <AIConfiguration>
+          <msdyn_aiconfigurationid>{60c7a9ca-6ba3-ef11-8a69-7c1e5267f4d7}</msdyn_aiconfigurationid>
+          <msdyn_databinding>{"schemaVersion":2}</msdyn_databinding>
+          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
+          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
+          <msdyn_modeldata>cc986b46-959d-4c6a-85aa-45174849a112</msdyn_modeldata>
+          <msdyn_name>c08394d5-6d24-4dcf-8d39-dcf14c79046c_2024-11-15T16:08:01.893Z</msdyn_name>
+          <msdyn_modelrundataspecification>
+        {
+          "schemaVersion": 2,
+          "input": {},
+          "output": {}
+        }
+      </msdyn_modelrundataspecification>
+          <msdyn_type>190690000</msdyn_type>
+          <msdyn_aimodelid>{c08394d5-6d24-4dcf-8d39-dcf14c79046c}</msdyn_aimodelid>
+          <statecode>2</statecode>
+          <statuscode>6</statuscode>
+          <IsCustomizable>1</IsCustomizable>
+          <msdyn_templateversion>1</msdyn_templateversion>
+        </AIConfiguration>
+      </AIConfigurations>
+    </AIModel>
+    <AIModel>
       <msdyn_aimodelid>{54b0c71e-8683-4c2f-9a60-ea59b9d43dc4}</msdyn_aimodelid>
       <msdyn_name>AI QnA Generator</msdyn_name>
       <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
       <statecode>1</statecode>
       <statuscode>1</statuscode>
       <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{4317517b-67d6-ee11-9079-000d3a3146f8}</msdyn_activerunconfigurationid>
+      <msdyn_activerunconfigurationid>{5b65817d-f7a5-ef11-8a6a-7c1e520a8b12}</msdyn_activerunconfigurationid>
       <AIConfigurations>
         <AIConfiguration>
-          <msdyn_aiconfigurationid>{4317517b-67d6-ee11-9079-000d3a3146f8}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"From the given "},{"type":"inputVariable","id":"Text","text":"Text"},{"type":"literal","text":" generate questions and answers. example response: [ { Question:\"What is Power Apps\", Answer:\"Power Apps is a low-code tool to build apps\"}]\n\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>2</msdyn_majoriterationnumber>
+          <msdyn_aiconfigurationid>{5b65817d-f7a5-ef11-8a6a-7c1e520a8b12}</msdyn_aiconfigurationid>
+          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-2","prompt":[{"type":"literal","text":"From the given  "},{"type":"inputVariable","id":"File"},{"type":"literal","text":" generate questions and answers. example response: [ { Question:\"What is Power Apps\", Answer:\"Power Apps is a low-code tool to build apps\"}]\n\n  "}],"definitions":{"inputs":[{"id":"File","text":"File","type":"document"}],"data":[],"output":{"formats":["json"],"jsonSchema":{"type":"array","items":{"type":"object","properties":{"Question":{"type":"string"},"Answer":{"type":"string"}},"required":["Question","Answer"]}},"jsonExamples":[[{"Question":"What is the order number?","Answer":"114-1043248-1519466"},{"Question":"When was the order placed?","Answer":"September 11, 2024"},{"Question":"What is the total amount of the order?","Answer":"$320.37"},{"Question":"What items were ordered?","Answer":"Rode SmartLav+ Lavalier Microphone for Smartphones, Rode SC3 3.5mm TRRS to TRS Cable Adaptor for smartLav Microphone, SIRUI P-424FS Carbon Fiber Camera Monopod Kit"},{"Question":"What is the shipping address?","Answer":"Mehdi Slaoui, 114 N 122nd st, SEATTLE, WA 98133, United States"},{"Question":"What is the payment method?","Answer":"American Express ending in 2003"},{"Question":"What is the estimated tax to be collected?","Answer":"$30.34"},{"Question":"What is the shipping speed?","Answer":"FREE Prime Delivery"},{"Question":"What is the billing address?","Answer":"Mehdi Slaoui Andaloussi, 114 N 122ND ST, SEATTLE, WA 98133-8148, United States"},{"Question":"What is the subtotal of the items?","Answer":"$367.90"}]]}},"modelParameters":{"modelType":"gpt-4","gptParameters":{"temperature":0}}}</msdyn_customconfiguration>
+          <msdyn_majoriterationnumber>6</msdyn_majoriterationnumber>
           <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>54b0c71e-8683-4c2f-9a60-ea59b9d43dc4_2024-02-28T18:30:44.559Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWQzQrCMBCEX0X2nIsgHnKrPwUvFlrxHu1WAzUJyQYspe9uUitKW/A6+81MJi0UBq+ptg9BZ7ROagV8yeCgjKdca9orktQAb2EnnalFcxQPBA4yAsAgIbLy4gldZERZSgoZot5qRfikqTGZIAwy81aAk/XI4NSYiG6Ew/WqCAXqBl2QZwN79TejErX7hnzsXQjIPP2ZpXtismt+ytA8KmJQSSXdPUfh4m+OXWl/XQznmXd2L7oau5SVAQAA</msdyn_modelrundataspecification>
+          <msdyn_name>54b0c71e-8683-4c2f-9a60-ea59b9d43dc4_2024-11-18T21:53:05.971Z</msdyn_name>
+          <msdyn_modelrundataspecification>H4sIAAAAAAAACpVRwWoDIRT8lfLOXgKlh71t2gR6aUg29O6uL61lo+J70i6h/16NSyhoIPGkzryZYd4JOofD2vqj5Hf0pK2BZiHg1bjAO2t5ZVjzBM0JXjS5UU5v8ojQAAhomb3uAyMleK1HrNL2k0u3Tf+FA8f3zYq9JHx6XJnBKlQl/2woYOM4hpYjNAc5El78lufpLgqaD/iNR4BUSmfyszWMP1yKtgXlvwP7cN0gEgPf21o9xT4bz0bdbCHgoI2mzx1KSmsqC0nowwxXxinmHzh4VDlpkphJrfdyumc524CUaimpF6SSoDX0jb5Se/4vJvL5Ay8FyNelAgAA</msdyn_modelrundataspecification>
           <msdyn_type>190690001</msdyn_type>
           <msdyn_aimodelid>{54b0c71e-8683-4c2f-9a60-ea59b9d43dc4}</msdyn_aimodelid>
           <msdyn_trainedmodelaiconfigurationpareid>{a9a755d6-3dd5-ee11-9079-000d3a314693}</msdyn_trainedmodelaiconfigurationpareid>
@@ -650,52 +932,6 @@
       </msdyn_modelrundataspecification>
           <msdyn_type>190690000</msdyn_type>
           <msdyn_aimodelid>{54b0c71e-8683-4c2f-9a60-ea59b9d43dc4}</msdyn_aimodelid>
-          <statecode>2</statecode>
-          <statuscode>6</statuscode>
-          <IsCustomizable>1</IsCustomizable>
-          <msdyn_templateversion>1</msdyn_templateversion>
-        </AIConfiguration>
-      </AIConfigurations>
-    </AIModel>
-    <AIModel>
-      <msdyn_aimodelid>{9eed9013-9df8-4d1f-a914-faf83e2bd028}</msdyn_aimodelid>
-      <msdyn_name>AI Palette</msdyn_name>
-      <msdyn_templateid>{edfdb190-3791-45d8-9a6c-8f90a37c278a}</msdyn_templateid>
-      <statecode>1</statecode>
-      <statuscode>1</statuscode>
-      <IsCustomizable>1</IsCustomizable>
-      <msdyn_activerunconfigurationid>{24a3d675-c9e1-ee11-904c-000d3a5cd2ee}</msdyn_activerunconfigurationid>
-      <AIConfigurations>
-        <AIConfiguration>
-          <msdyn_aiconfigurationid>{24a3d675-c9e1-ee11-904c-000d3a5cd2ee}</msdyn_aiconfigurationid>
-          <msdyn_customconfiguration>{"version":"GptDynamicPrompt-1","prompt":[{"type":"literal","text":"Monochromatic color palettes are based on a single color paired with various shades and tints. Like analogous palettes, monochromatic palettes can be very pleasing to look at. Generate a json list of 10 colors that are monochromatic based the primary color inspired from this"},{"type":"inputVariable","id":"param","text":"Text"},{"type":"literal","text":": Example response: { \"colors\": [ \"#FF4D02\", \"#FF6E22\", \"#AA8F01\", \"#1FB202\", \"#AFD100\"]}\n\n"}]}</msdyn_customconfiguration>
-          <msdyn_majoriterationnumber>5</msdyn_majoriterationnumber>
-          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_name>9eed9013-9df8-4d1f-a914-faf83e2bd028_2024-03-14T06:09:51.231Z</msdyn_name>
-          <msdyn_modelrundataspecification>H4sIAAAAAAAACoWQzQrCMBCEX0X2nIsgHnKrf+DFQlu8rzbVQJuEZAOW0ne3qRWhKXjdnflmZzvIjbiftG2QrsI6qRXwNYOzMp4yremoSFILvIODdKbG9oKNAA4yCIBBQmTlzZNwQYNlKWlgYL3XisSLYmMSSRik5jMBTtYLBkVrgnSHTmw3+RCgHtAzMGixiYnFHFJh7X6Ur78fCKmnP730qIiKLXeZkmdBDCqppHtmAl1459x1Grerab1wZ/8GPegkk5YBAAA=</msdyn_modelrundataspecification>
-          <msdyn_type>190690001</msdyn_type>
-          <msdyn_aimodelid>{9eed9013-9df8-4d1f-a914-faf83e2bd028}</msdyn_aimodelid>
-          <msdyn_trainedmodelaiconfigurationpareid>{e0fb1e91-a0d5-ee11-9079-000d3a314693}</msdyn_trainedmodelaiconfigurationpareid>
-          <statecode>2</statecode>
-          <statuscode>7</statuscode>
-          <IsCustomizable>1</IsCustomizable>
-          <msdyn_templateversion>1</msdyn_templateversion>
-        </AIConfiguration>
-        <AIConfiguration>
-          <msdyn_aiconfigurationid>{e0fb1e91-a0d5-ee11-9079-000d3a314693}</msdyn_aiconfigurationid>
-          <msdyn_majoriterationnumber>1</msdyn_majoriterationnumber>
-          <msdyn_minoriterationnumber>0</msdyn_minoriterationnumber>
-          <msdyn_modeldata>ab177304-c92c-4802-9f70-946306112029</msdyn_modeldata>
-          <msdyn_name>9eed9013-9df8-4d1f-a914-faf83e2bd028_2024-02-27T18:46:55.405Z</msdyn_name>
-          <msdyn_modelrundataspecification>
-        {
-          "schemaVersion": 2,
-          "input": {},
-          "output": {}
-        }
-      </msdyn_modelrundataspecification>
-          <msdyn_type>190690000</msdyn_type>
-          <msdyn_aimodelid>{9eed9013-9df8-4d1f-a914-faf83e2bd028}</msdyn_aimodelid>
           <statecode>2</statecode>
           <statuscode>6</statuscode>
           <IsCustomizable>1</IsCustomizable>

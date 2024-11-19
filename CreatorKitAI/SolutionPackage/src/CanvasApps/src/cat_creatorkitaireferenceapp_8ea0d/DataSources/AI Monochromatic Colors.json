@@ -1,0 +1,94 @@
+[
+  {
+    "DataBoundServiceDataSetName": "default.cds",
+    "DataBoundServiceFunctionNamesKey": [
+      "Predict-202409.5.24.1"
+    ],
+    "DataBoundServiceOperationGroupNameKey": "AIBuilder\\5a2a74bf-6ff9-41e4-a747-7e21334b9d8e",
+    "DataBoundServiceRawMetadata": {
+      "Input": {
+        "Attributes": {
+          "additionalContext": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "AdditionalContext",
+            "Type": "string/byte"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        },
+        "RequiredAttributes": [
+          "Text"
+        ]
+      },
+      "Output": {
+        "Attributes": {
+          "FinishReason": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Finish Reason",
+            "Type": "string"
+          },
+          "StructuredOutput": {
+            "Attributes": {
+              "monochromatic_palette": {
+                "Attributes": {
+                  "color_name": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "color_name",
+                    "Type": "string"
+                  },
+                  "hex": {
+                    "Attributes": null,
+                    "IsCollection": false,
+                    "RequiredAttributes": null,
+                    "SchemaName": null,
+                    "Title": "hex",
+                    "Type": "string"
+                  }
+                },
+                "IsCollection": true,
+                "RequiredAttributes": null,
+                "SchemaName": null,
+                "Title": null,
+                "Type": "array"
+              }
+            },
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "",
+            "Type": "object"
+          },
+          "Text": {
+            "Attributes": null,
+            "IsCollection": false,
+            "RequiredAttributes": null,
+            "SchemaName": null,
+            "Title": "Text",
+            "Type": "string"
+          }
+        }
+      },
+      "Source": true,
+      "TemplateName": "GptPowerPrompt"
+    },
+    "DataBoundSourceDataSourceName": "43b0dc67-68af-47ae-9a9c-9e69d396ba3e",
+    "Name": "AI Monochromatic Colors",
+    "ServiceKind": "DataBound",
+    "Type": "ServiceInfo"
+  }
+]
